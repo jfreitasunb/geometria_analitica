@@ -1,0 +1,47 @@
+%!TEX root = geometria_analitica.tex
+\begin{titlepage}
+\begin{center}
+\vspace*{-1.5cm}
+
+\psset{viewpoint=50 45 30 rtp2xyz,Decran=50}
+\begin{pspicture}(-4,-4)(4,5)
+% \psset{viewpoint=20 60 20 rtp2xyz,lightsrc=10 15 7,
+%    Decran=20}
+\pstVerb{
+ /gro {
+ 4 dict begin
+ /M defpoint3d
+ /a .5 def
+ /b 1 a 3 sqrt mul sub def
+ /k M norme3d a mul b add def
+ M k mulv3d
+ end
+ } def}
+ \psset{linewidth=.02,linecolor=gray}
+ \psSolid[object=cube,a=4,ngrid=18,transform=gro,hue=.5 .6]%
+\psset{unit=0.5}
+\psset{solidmemory}
+\psSolid[object=cube,a=15,action=draw,name=A,linecolor=white]%
+\psset{fontsize=200}
+\psSolid[object=plan,action=none,
+   definition=solidface,args=A 1,name=P1]
+\psProjection[object=texte,linecolor=blue,text=Analitica,plan=P1,phi=180,pos=dr]%
+\psSolid[object=plan,action=none,
+   definition=solidface,args=A 4,name=P4]
+\psProjection[object=texte,linecolor=blue,text=Geometria,plan=P4]%
+\end{pspicture}
+
+
+\vspace*{3.5cm}
+
+{\fontsize{14pt}{14pt}\selectfont
+   \textbf{Notas de Aula 2/2014}\footnote{\ccbyncsa\ Este texto est\'a licenciado sob uma \textbf{Licen\c{c}a Creative Commons Atribui\c{c}\~ao-N\~aoComercial-CompartilhaIgual 3.0 Brasil} \href{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}{\textit{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}}.}
+   }
+
+
+\vfill
+
+{\fontsize{14pt}{14pt}\selectfont\textbf{Jos\'e Ant\^onio O. Freitas}\\ Departamento de Matem\'atica\\Universidade de Bras{\'\i}lia - UnB}
+\end{center}
+\end{titlepage}
+\vspace*{-2cm}
