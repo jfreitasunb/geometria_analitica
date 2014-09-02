@@ -7,7 +7,9 @@
 \label{cha:vetores_no_espaco}
 
 Fixemos um ponto $O$ no espa\c{c}o, que ser\'a denominado como \textbf{origem}. Tomemos tr\^es retas duas a duas perpendiculares entre si e concorrentes em $O$, que ser\~ao denominados \textbf{eixos coordenados} e ser\~ao denotados por $Ox$, $Oy$ e $Oz$.
-\begin{center}
+\begin{figure}[!h]
+  \centering
+  \caption{Sistema de coordenadas tridimensionais}
   \tdplotsetmaincoords{70}{110}
   \begin{tikzpicture}[scale=2,tdplot_main_coords]
     \coordinate[label=above left:$O$] (A) at (0,0,0);
@@ -17,11 +19,13 @@ Fixemos um ponto $O$ no espa\c{c}o, que ser\'a denominado como \textbf{origem}. 
     \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
     \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
     \end{tikzpicture}
-\end{center}
+\end{figure}
 
 Projetando um ponto $P$ do espa\c{c}o ortogonalmente sobre cada um dos eixos coordenados podemos representar os pontos do espa\c{c}o por ternas ordenadas $(a,b,c)$ de n\'umeros reais.
 
-\begin{center}
+\begin{figure}[!h]
+  \centering
+  \caption{Coordenadas de um ponto no espaço tridimensional}
   \tdplotsetmaincoords{70}{110}
   \begin{tikzpicture}[scale=2,tdplot_main_coords]
     \coordinate[label=above left:$O$] (A) at (0,0,0);
@@ -32,21 +36,21 @@ Projetando um ponto $P$ do espa\c{c}o ortogonalmente sobre cada um dos eixos coo
     \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
 
     \tdplotsetcoord{P}{2}{45}{60}
-    \filldraw (P) circle (1pt) node[above right]{$P = (a, b, c)$};
+    \filldraw (P) circle (1pt) node[above right]{$P(a, b, c)$};
 
     \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$a$};
     \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$b$};
     \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$c$};
     \draw[dashed, color=red] (Pxy) -- (P);
     \end{tikzpicture}
-\end{center}
+\end{figure}
 
 Assim os pontos de $\real^3$ s\~ao descritos por
 \[
   \real^3 = \{(a,b,c)\mid a,b,c \in \real\}.
 \]
 
-Sejam $P = (x_1,y_1,z_1)$ e $Q = (x_2,y_2,z_2)$ dois pontos de $\real^3$. Tra\c{c}ando por $P$ um segmento $PS$ paralelo ao segmento $P_0Q_0$, onde $P_0 = (x_1,y_1)$ e $Q_0 = (x_2,y_2)$, obtemos que
+Sejam $P(x_1,y_1,z_1)$ e $Q(x_2,y_2,z_2)$ dois pontos de $\real^3$. Tra\c{c}ando por $P$ um segmento $PS$ paralelo ao segmento $P_0Q_0$, onde $P_0(x_1,y_1)$ e $Q_0(x_2,y_2)$, obtemos que
 \[
   d(P,Q)^2 = d(P_0,Q_0)^2 + |SQ|^2.
 \]
@@ -98,9 +102,9 @@ Agora, $|SQ| = |z_2 - z_1|$ e da{\'\i}
   \]
 \end{exemplos}
 
-Os vetores e as opera\c{c}\~ores com eles podem ser definidas utilizando-se dos eixos coordenados do espa\c{c}o. Para isso, um ponto $P$ do espa\c{c}o \'e representado em $\real^3$ por uma terna de coordenadas $P = (x_1, y_1,z_1)$, onde $x_1$, $y_1$, $z_1 \in \real$.
+Os vetores e as opera\c{c}\~ores com eles podem ser definidas utilizando-se dos eixos coordenados do espa\c{c}o. Para isso, um ponto $P$ do espa\c{c}o \'e representado em $\real^3$ por uma terna de coordenadas $P(x_1, y_1,z_1)$, onde $x_1$, $y_1$, $z_1 \in \real$.
 
-Seja $\vec{u}$ um vetor no espa\c{c}o. Sabemos que $\vec{u}$ \'e um representante de uma certa classe de equipol\^encia dos segmentos orientados $(B,C)$. Para este segmento orientado $(B,C)$ podemos encontrar um ponto $A = (x_1, y_1,z_1)$ tal que o segmento orientado $(O,A)$, onde $O = (0,0,0)$, tem o mesmo comprimento, a mesma dire\c{c}\~ao e o mesmo sentido de $(B,C)$. Assim o vetor $\vec{u}$ pode ser representado pelo segmento orientado $(O,A)$. Portanto qualquer vetor em $\real^3$ pode ser representado como um segmento com origem no ponto $(0,0,0)$ e extremidade em um ponto $(x_1,y_1,z_1)$.
+Seja $\vec{u}$ um vetor no espa\c{c}o. Sabemos que $\vec{u}$ \'e um representante de uma certa classe de equipol\^encia dos segmentos orientados $(B,C)$. Para este segmento orientado $(B,C)$ podemos encontrar um ponto $A(x_1, y_1,z_1)$ tal que o segmento orientado $(O,A)$, onde $O(0,0,0)$, tem o mesmo comprimento, a mesma dire\c{c}\~ao e o mesmo sentido de $(B,C)$. Assim o vetor $\vec{u}$ pode ser representado pelo segmento orientado $(O,A)$. Portanto qualquer vetor em $\real^3$ pode ser representado como um segmento com origem no ponto $(0,0,0)$ e extremidade em um ponto $(x_1,y_1,z_1)$.
 
 
 Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a nota\c{c}\~ao vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e da{\'\i} escrevemos
@@ -258,27 +262,29 @@ Um vetor de norma 1 \'e chamado de \textbf{vetor unit\'ario}. Dado um vetor n\~a
 \end{definicao}
 
 Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles.
-\begin{center}
-\begin{tikzpicture}
-\coordinate (A) at (0,0);
-\coordinate (X) at (4,1);
-\coordinate (Y) at (3,3.5);
+\begin{figure}[!h]
+  \centering
+  \caption{Ângulo entre vetores em $\real^3$}
+  \begin{tikzpicture}
+    \coordinate (A) at (0,0);
+    \coordinate (X) at (4,1);
+    \coordinate (Y) at (3,3.5);
 
-\draw[->,>=triangle 45] (A) -- (X)
-node[midway,below]{$\vec{v}$};
-\draw[->,>=triangle 45] (A) -- (Y)
-node[midway,above]{$\vec{u}$};
-\draw[dashed,->,>=triangle 45] (X) -- (Y)
-node[midway,above right]{$\vec{u} - \vec{v}$};
+    \draw[->,>=triangle 45] (A) -- (X)
+    node[midway,below]{$\vec{v}$};
+    \draw[->,>=triangle 45] (A) -- (Y)
+    node[midway,above]{$\vec{u}$};
+    \draw[dashed,->,>=triangle 45] (X) -- (Y)
+    node[midway,above right]{$\vec{u} - \vec{v}$};
 
-% Mark the angle XAY
-\begin{scope}
-\path[clip] (A) -- (X) -- (Y);
-\fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-\node at ($(A)+(30:7mm)$) {$\theta$};
-\end{scope}
-\end{tikzpicture}
-\end{center}
+    % Mark the angle XAY
+    \begin{scope}
+      \path[clip] (A) -- (X) -- (Y);
+      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+      \node at ($(A)+(30:7mm)$) {$\theta$};
+    \end{scope}
+  \end{tikzpicture}
+\end{figure}
 
 
 \begin{definicao}\label{produtointerno-espaco}
@@ -340,17 +346,17 @@ De modo an\'alogo ao caso para vetores no plano, temos:
   \end{enumerate}
 \end{exemplos}
 
-\begin{proposicao}
+\begin{proposicao}\label{propriedades-produto-vetorial-espaco}
   Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1,z_1)$, $\vec{v} = (x_2, y_2,z_2)$ e $\vec{w} = (x_3, y_3,z_3)$ e qualquer que seja o n\'umero real $\lambda$ temos
-  \begin{enumerate}
-    \item $\vec{u}\cdot(\vec{v} + \vec{w}) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}$
-    \item $\vec{u}\cdot(\lambda\vec{v}) = \lambda(\vec{u}\cdot\vec{v})$
+  \begin{enumerate}[label=({\roman*})]
+    \item\label{linearidade-soma-produto-vetorial-espaco} $\vec{u}\cdot(\vec{v} + \vec{w}) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}$
+    \item\label{linearidade-escalar-produto-vetorial-espaco} $\vec{u}\cdot(\lambda\vec{v}) = \lambda(\vec{u}\cdot\vec{v})$
     \item $\vec{u}\cdot\vec{v} = \vec{v}\cdot\vec{u}$
     \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\vec{u}\cdot\vec{u} > 0$.
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
-  \begin{enumerate}
+  \begin{enumerate}[label=({\roman*})]
     \item \begin{align*}
       \vec{u}\cdot(\vec{v} + \vec{w}) &= \vec{u}\cdot(x_2 + x_3, y_2 + y_3, z_2 + z_3) = x_1(x_2 + x_3) + y_1(y_2 + y_3) + z_1(z_2+z_3) \\ &= (x_1x_2 + y_1y_2 + z_1z_2) + (x_1x_3 + y_1y_3 + z_1z_3) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}
     \end{align*}
@@ -364,10 +370,10 @@ De modo an\'alogo ao caso para vetores no plano, temos:
 \end{prova}
 
 \begin{observacao}
-  \begin{enumerate}
-    \item A proprieda (a) da proposi\c{c}\~ao acima pode ser estendida para qualquer n\'umero de vetores
+  \begin{enumerate}[label=({\alph*})]
+    \item As propriedades \ref{linearidade-soma-produto-vetorial-espaco} e \ref{linearidade-escalar-produto-vetorial-espaco} da Proposi\c{c}\~ao \ref{propriedades-produto-vetorial-espaco} podem ser estendidas para qualquer n\'umero de vetores:
     \[
-      \vec{u}\cdot(\vec{v_1} + \vec{v_2} + \cdots + \vec{v_n} ) = \vec{u}\cdot\vec{v_1} + \vec{u}\cdot\vec{v_2} + \cdots + \vec{u}\cdot\vec{v_n}.
+      \vec{u}\cdot(\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} ) = \lambda_1(\vec{u}\cdot\vec{v_1}) + \lambda_2(\vec{u}\cdot\vec{v_2}) + \cdots + \lambda_n(\vec{u}\cdot\vec{v_n}).
     \]
     \item Na igualdade $\vec{u}\cdot\vec{v} = \vec{u}\cdot\vec{w}$ n\~ao podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0, 0)$, $\vec{v} = (2, 1, 1)$ e $\vec{w} = (2, -5, 3)$ temos $\vec{u}\cdot\vec{v} = \vec{u}\cdot\vec{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
     \item De $\vec{u}\cdot\vec{v} = 0$ n\~ao podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1, 1)$ e $\vec{v} = (-2, 4, 0)$ temos $\vec{u}\cdot\vec{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
@@ -493,7 +499,7 @@ Temos
 
 \begin{proposicao}
   Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$ e $\alpha \in \real$. Temos
-  \begin{enumerate}
+  \begin{enumerate}[label=({\alph*})]
     \item $\vec{u}\times\vec{v} = -\vec{v}\times\vec{u}$;
     \item $\vec{u}\times\vec{v} = 0$ se, e somente se, $\vec{u}\varparallel\vec{v}$;
     \item $\alpha(\vec{u}\times\vec{v}) = (\alpha\vec{u})\times\vec{v} = \vec{u}\times(\alpha\vec{v})$;
@@ -538,7 +544,9 @@ Temos
 \end{prova}
 
 Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
-\begin{center}
+\begin{figure}[!h]
+  \centering
+  \caption{Interpretação geométrica do produto vetorial}
   \begin{tikzpicture}
     \coordinate (A) at (0,0);
     \coordinate (X) at (4,0);
@@ -566,7 +574,7 @@ Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
       \node at ($(A)+(30:7mm)$) {$\theta$};
     \end{scope}
   \end{tikzpicture}
-\end{center}
+\end{figure}
 
 A \'area $\mathcal{A}$ desse paralelogramo \'e dado Por
 \[
@@ -635,7 +643,7 @@ Portanto
 
 \begin{proposicao}
   Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Ent\~ao
-  \begin{enumerate}
+  \begin{enumerate}[label=({\alph*})]
     \item $(\vec{u}\times\vec{v})\cdot\vec{w} = (\vec{v}\times\vec{w})\cdot\vec{u}$
     \item $(\vec{u}\times\vec{v})\cdot\vec{w} = \vec{u}\cdot(\vec{v}\times\vec{w})$
   \end{enumerate}
@@ -645,7 +653,9 @@ Portanto
 \end{prova}
 
 Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralelep{\'\i}pedo definido por $\vec{u}$, $\vec{v}$ e $\vec{w}$:
-\begin{center}
+\begin{figure}[!h]
+  \centering
+  \caption{Interpretação geométrica do produto misto}
   \tdplotsetmaincoords{60}{125}
   \begin{tikzpicture}
       [tdplot_main_coords,
@@ -679,7 +689,7 @@ Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralel
     \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](B,A,D);
     \draw ($(A)+(-0.2,0,0.6)$) node[below,font=\small] {$\theta$};
   \end{tikzpicture}
-\end{center}
+\end{figure}
 
 A altura $h$ \'e dada por
 \begin{align*}
@@ -699,7 +709,7 @@ isto \'e,
 \end{equation}
 
 \begin{exemplo}
-  Os pontos $P = (0,1,1)$, $Q = (1,0,2)$, $R = (1,-2,0)$ e $S = (-2,2,-2)$ definem um paralelep{\'\i}pedo? Em caso afirmativo, qual o seu volume?
+  Os pontos $P(0,1,1)$, $Q(1,0,2)$, $R(1,-2,0)$ e $S = (-2,2,-2)$ definem um paralelep{\'\i}pedo? Em caso afirmativo, qual o seu volume?
   \begin{solucao}
     Se os pontos $P$, $Q$, $R$ e $S$ definirem um paralelep{\'\i}pedo, seu volume dever\'a ser diferente de zero. Assim considere os vetores
     \begin{align*}
