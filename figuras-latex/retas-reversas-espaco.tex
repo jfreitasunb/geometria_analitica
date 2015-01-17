@@ -1,0 +1,38 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \definecolor{ffqqqq}{rgb}{1,0,0}
+    \definecolor{qqqqff}{rgb}{0,0,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(1,-5) rectangle (8.5,6);
+        \draw [->] (5,0) -- (5,4);
+        \draw [->] (5,0) -- (8,0);
+        \draw [->] (5,0) -- (2,-3);
+        \draw [dash pattern=on 5pt off 5pt] (5,0)-- (2,0);
+        \draw [dash pattern=on 5pt off 5pt] (5,0)-- (5,-3);
+        \draw [dash pattern=on 5pt off 5pt] (5,0)-- (7,2);
+        \draw [color=qqqqff] (1.99,-3.76)-- (6.03,4.96);
+        \draw [color=ffqqqq] (6.78,4.04)-- (6.78,-3.28);
+        \draw (2.18,-3.2) node[anchor=north west] {$r$};
+        \draw (1.88,-2.06) node[anchor=north west] {$x$};
+        \draw (7.72,-0.2) node[anchor=north west] {$y$};
+        \draw (4.58,4.14) node[anchor=north west] {$z$};
+        \draw (6.94,-2.58) node[anchor=north west] {$s$};
+    \end{tikzpicture}
+\end{document}

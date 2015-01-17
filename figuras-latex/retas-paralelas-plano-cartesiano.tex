@@ -1,0 +1,62 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}[scale=2]
+    \coordinate[label=below left:$O$] (A) at (-3,0);
+    \coordinate (W) at (-2,-1);
+    \coordinate (V) at (-2,1);
+    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+    \coordinate (F) at (-3.5,0);
+    \coordinate (G) at (-3,-0.5);
+    \coordinate (X) at (-1.5,0);
+    \coordinate (Y) at (-3,1.5);
+    % Styles
+    \tikzstyle{axes}=[]
+
+    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+      \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+      \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+    \end{scope}
+
+    \draw  (V) -- (W)
+      node[at start, right]{$x = x_0$};
+    \end{tikzpicture}
+    \begin{tikzpicture}[scale=2]
+    \coordinate[label=below left:$O$] (A) at (0,0);
+    \coordinate (W) at (-1,1);
+    \coordinate (V) at (2,1);
+    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+    \coordinate (F) at (-0.5,0);
+    \coordinate (G) at (0,-0.5);
+    \coordinate (X) at (2.5,0);
+    \coordinate (Y) at (0,1.5);
+    % Styles
+    \tikzstyle{axes}=[]
+
+    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+      \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+      \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+    \end{scope}
+
+    \draw  (V) -- (W)
+      node[at start, right]{$y = y_0$};
+    \end{tikzpicture}
+\end{document}

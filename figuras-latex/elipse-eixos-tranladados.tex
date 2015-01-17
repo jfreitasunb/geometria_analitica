@@ -1,0 +1,28 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \psset{unit=0.5cm}
+    \psset{ticksize=0pt}
+    \begin{pspicture*}(-5,-2.5)(6,6)
+        \psaxes[labels=none]{->}(0,0)(-4,-1)(5.5,5.5)[$x$,0][$y$,-180]
+        \psaxes[labels=none,linecolor=red]{->}(1,2)(-3,-2)(5,5)[$\color{red} x_1$,0][$\color{red} y_1$,-180]
+        \psplotImp[algebraic,linecolor=blue,stepFactor=0.1,linewidth=0.5pt](-4,-1)(6,7){4*x^2 - 8*x + 9*y^2 - 36*y + 4}
+    \end{pspicture*}
+\end{document}

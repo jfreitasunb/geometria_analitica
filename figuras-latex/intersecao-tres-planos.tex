@@ -1,0 +1,56 @@
+%!TEX program = xelatex
+\documentclass{standalone}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+\usetikzlibrary{fadings}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    %\hspace*{-2.5cm}
+    \definecolor{qqwwzz}{rgb}{0,0.4,0.6}
+    \definecolor{ttffqq}{rgb}{0.2,1,0}
+    \definecolor{zzttqq}{rgb}{0.6,0.2,0}
+    \definecolor{ttqqff}{rgb}{0.2,0,1}
+    \definecolor{ffqqqq}{rgb}{1,0,0}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=0.5]
+        \coordinate[label=$P$] (P) at (0.5,0);
+        \clip(-15,-14) rectangle (15,14);
+        \fill[color=zzttqq,fill=zzttqq,fill opacity=0.3] (-5.81,-11.42) -- (-4.98,8.04) -- (5.81,11.42) -- (4.98,-8.04) -- cycle;
+        \fill[color=ttffqq,fill=ttffqq,fill opacity=0.3] (-7.99,11.3) -- (-8.82,-8.16) -- (7.99,-11.3) -- (8.82,8.16) -- cycle;
+        \fill[color=qqwwzz,fill=qqwwzz,fill opacity=0.3] (-13.81,-0.12) -- (3.01,-3.26) -- (13.81,0.12) -- (-3.01,3.26) -- cycle;
+        \draw [dashed,line width=1pt,color=ttqqff] (0,0) -- (-5.4,-1.69);
+        \draw [dashed,line width=1pt,color=ttqqff] (0,0) -- (8.41,-1.57);
+        \draw [dashed,line width=1pt,color=ttqqff] (0,0) -- (0.42,9.73);
+        \draw [dashed,line width=1pt,color=ttqqff] (5.4,1.69)-- (0,0);
+        \draw [dashed,line width=1pt,color=ttqqff] (0,0)-- (-8.41,1.57);
+        \draw [dashed,line width=1pt,color=ttqqff] (0,0)-- (-0.42,-9.73);
+        \draw [color=zzttqq] (-5.81,-11.42)-- (-4.98,8.04);
+        \draw [color=zzttqq] (-4.98,8.04)-- (5.81,11.42);
+        \draw [color=zzttqq] (5.81,11.42)-- (4.98,-8.04);
+        \draw [color=zzttqq] (4.98,-8.04)-- (-5.81,-11.42);
+        \draw [color=ttffqq] (-7.99,11.3)-- (-8.82,-8.16);
+        \draw [color=ttffqq] (-8.82,-8.16)-- (7.99,-11.3);
+        \draw [color=ttffqq] (7.99,-11.3)-- (8.82,8.16);
+        \draw [color=ttffqq] (8.82,8.16)-- (-7.99,11.3);
+        \draw [color=qqwwzz] (-13.81,-0.12)-- (3.01,-3.26);
+        \draw [color=qqwwzz] (3.01,-3.26)-- (13.81,0.12);
+        \draw [color=qqwwzz] (13.81,0.12)-- (-3.01,3.26);
+        \draw [color=qqwwzz] (-3.01,3.26)-- (-13.81,-0.12);
+        \draw (9.73,1.43) node[anchor=north west] {$\pi_1$};
+        \draw (6.4,8.85) node[anchor=north west] {$\pi_2$};
+        \draw (-4.35,8.31) node[anchor=north west] {$\pi_3$};
+        \fill [color=ffqqqq] (0,0) circle (5pt);
+    \end{tikzpicture}
+\end{document}

@@ -1,0 +1,44 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \definecolor{zzttqq}{rgb}{0.6,0.2,0}
+    \definecolor{qqqqff}{rgb}{0,0,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(-4.3,-6.08) rectangle (12.58,6.3);
+        \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0,0) -- (2,4) -- (9,4) -- (7,0) -- cycle;
+        \draw [color=zzttqq] (0,0)-- (2,4);
+        \draw [color=zzttqq] (2,4)-- (9,4);
+        \draw [color=zzttqq] (9,4)-- (7,0);
+        \draw [color=zzttqq] (7,0)-- (0,0);
+
+        \coordinate[label=left:$A$] (A) at (3.36,2.52);
+        \coordinate[label=right:$B$] (B) at (5.56,3.38);
+        \coordinate[label=right:$C$] (C) at (4.06,0.86);
+        \coordinate[label=right:$D$] (D) at (6,2);
+
+        \coordinate (E) at (3.36,4.98);
+        \draw [->] (A) -- (B) node[midway,above]{$\vec{u}$};
+        \draw [->] (A) -- (C) node[midway,below]{$\vec{v}$};
+        \draw [->,color=blue] (A) -- (D) node[midway,above]{$\vec{AD}$};
+        \draw [->,color=red] (A) -- (E) node[midway,left]{$\vec{u}\times\vec{v}$};
+        \foreach \p in {A,B,C,D} \fill (\p) circle (0.5mm);
+        
+        \coordinate[label=right:$\pi$] (P) at (8,3.6);
+    \end{tikzpicture}
+\end{document}

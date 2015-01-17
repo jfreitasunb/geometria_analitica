@@ -4,11 +4,12 @@
 \documentclass[portuguese,twoside,12pt]{book}%opcao draft remove os links
 \usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
 \usepackage[brazil]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{fancybox}
 %\usepackage[section]{placeins}
 \usepackage[unicode,bookmarks=true,colorlinks]{hyperref}
 \usepackage{graphicx}
+\graphicspath{{../figuras-latex/}{../quadricas/}}
 \usepackage{makeidx}
 \usepackage{enumitem}
 \usepackage{multicol}
@@ -162,19 +163,19 @@
 
 
 \begin{document}
-\listoftodos
+%\listoftodos
 \include{capa}
 \hypersetup{linkcolor=blue}
 \tableofcontents
 \listoffigures
 \hypersetup{linkcolor=red}
-\include{vetores-no-plano}
-\include{reta-no-plano}
-\include{circunferencias-e-conicas}
-%\include{vetores-no-espaco}
-%\include{reta-e-plano-espaco}
-%\include{quadricas}
-%\include{bibliografia}
+% \include{vetores-no-plano}
+% \include{reta-no-plano}
+% \include{circunferencias-e-conicas}
+% \include{vetores-no-espaco}
+% \include{reta-e-plano-espaco}
+\include{quadricas}
+% \include{bibliografia}
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\'Indice Remissivo}

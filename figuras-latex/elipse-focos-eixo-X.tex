@@ -1,0 +1,39 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+  \pagenumbering{gobble}
+  \psset{ticksize=0pt}
+  \begin{pspicture*}(-6,-6)(6,6)
+    \psaxes[labels=none]{->}(0,0)(-5.5,-3.5)(5.5,3.5)
+    \psellipse[linecolor=blue](0,0)(5,3)
+    \rput(5.3,0.3){$A_2$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](5,0)
+    \rput(-5.3,0.3){$A_1$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](-5,0)
+    \rput(0.5,-3.3){$B_1$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](0,-3)
+    \rput(0.5,3.3){$B_2$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](0,3)
+    \rput(4,-0.4){$F_2$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](4,0)
+    \rput(-4,-0.4){$F_1$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](-4,0)
+  \end{pspicture*}
+\end{document}

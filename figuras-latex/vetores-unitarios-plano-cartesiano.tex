@@ -1,0 +1,38 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \definecolor{qqqqff}{rgb}{0,0,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \draw[->,color=black] (-3,0) -- (3,0);
+        \draw (-2.3,0) node[below] {\footnotesize $-1$};
+        \draw (2.3,0) node[below] {\footnotesize $1$};
+        \draw (0,2.2) node[left] {\footnotesize $1$};
+        \draw (0,-2.2) node[left] {\footnotesize $-1$};
+        \draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
+        \draw[->,color=black] (0,-3) -- (0,3);
+        \draw[color=black] (0.1,2.8) node [anchor=east] {$y$};
+        \draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+        \clip(-3,-3) rectangle (3,3);
+        \draw(0,0) circle (2cm);
+        \draw [->,color=qqqqff] (0,0) -- (1.45,1.37);
+        \begin{scriptsize}
+            \draw[color=qqqqff] (0.84,0.56) node {$\vec{u}$};
+        \end{scriptsize}
+    \end{tikzpicture}
+\end{document}

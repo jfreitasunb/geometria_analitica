@@ -1,0 +1,33 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \psset{ticksize=0pt}
+    \begin{pspicture*}(-4,-4)(4,4)
+        \psaxes[labels=none]{->}(0,0)(-3.5,-3.5)(3.5,3.5)
+          \psplot[algebraic,linecolor=blue
+          ]{-2.0}{2.0}{x^2}
+        \rput(0.3,1.2){$F_1$}
+        \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](0,1)
+        \psline[linestyle=dashed,linecolor=red](-3,-1)(3,-1)
+        \rput(1.5,-1.4){$r: y = -p$}
+        \rput(3.4,-0.3){$x$}
+        \rput(-0.3,3.4){$y$}
+    \end{pspicture*}
+\end{document}

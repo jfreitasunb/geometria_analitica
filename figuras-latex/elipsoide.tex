@@ -1,0 +1,36 @@
+%!TEX program = xelatex 
+\documentclass{standalone}
+\usepackage{pgfplots}
+\usepackage{units}
+\pgfplotsset{compat=1.8}% <-- moves axis labels near ticklabels
+                        % (respects tick label widths)
+\usepackage{tikz,tikz-3dplot}
+\usetikzlibrary{arrows, positioning, calc, intersections, decorations.markings}
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[%
+        width=25cm,
+        height=25cm,
+        ticks=none,
+        xmin=-11, xmax=15, ymin=-5, ymax=5, zmin=-7, zmax=7,
+        axis lines = center,
+        xlabel=$x$,ylabel=$y$,zlabel=$z$,
+        view={120}{30},
+    ]
+    \addplot3[%
+        opacity = 0.5,
+        surf,
+        z buffer = sort,
+        samples = 40,
+        variable = \u,
+        variable y = \v,
+        domain = 0:180,
+        y domain = 0:360,
+    ]
+    ({sin(u)*cos(v)}, {2*sin(u)*sin(v)}, {5*cos(u)});
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

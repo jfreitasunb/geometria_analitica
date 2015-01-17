@@ -566,17 +566,18 @@ Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ co
 \begin{figure}[!h]
 	\centering
 	\caption{Plano cartesiano}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-		\draw[->,color=black] (-1,0) -- (3,0);
-		\foreach \x in {-1,1,2}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-		\draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
-		\draw[->,color=black] (0,-1) -- (0,3);
-		\foreach \y in {-1,1,2}
-		\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-		\draw[color=black] (0.1,2.6) node [anchor=east] {$y$};
-		\clip(-1,-1) rectangle (3,3);
-	\end{tikzpicture}
+	\includegraphics{plano-cartesiano.pdf}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-1,0) -- (3,0);
+	% 	\foreach \x in {-1,1,2}
+	% 	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+	% 	\draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-1) -- (0,3);
+	% 	\foreach \y in {-1,1,2}
+	% 	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+	% 	\draw[color=black] (0.1,2.6) node [anchor=east] {$y$};
+	% 	\clip(-1,-1) rectangle (3,3);
+	% \end{tikzpicture}
 \end{figure}
 
 
@@ -584,32 +585,33 @@ Seja $P$ um ponto qualquer do plano. Por $P$ podemos tra\c{c}ar uma \'unica reta
 \begin{figure}[!h]
 	\centering
 	\caption{Coordenadas do ponto $P$}
-	\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-	\definecolor{ffqqqq}{rgb}{1,0,0}
-	\definecolor{qqqqff}{rgb}{0,0,1}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-		\draw[->,color=black] (-1,0) -- (4,0);
-		\foreach \x in {-1,1,2,3}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-		\draw[color=black] (3.68,0.08) node [anchor=north west] {$x$};
-		\draw[->,color=black] (0,-1) -- (0,4);
-		\foreach \y in {-1,1,2,3}
-		\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-		\draw[color=black] (0.1,3.6) node [anchor=east] {$y$};
-		\clip(-1,-1) rectangle (4,4);
-		\draw [dash pattern=on 2pt off 2pt,color=ffqqqq] (2.46,-1) -- (2.46,3.5);
-		\draw [dash pattern=on 2pt off 2pt,color=ffqqqq,domain=-1:4] plot(\x,{(--1.8-0*\x)/1});
-		\begin{scriptsize}
-			\fill [color=qqqqff] (2.46,1.8) circle (1.5pt);
-			\draw[color=qqqqff] (2.62,2.06) node {$P$};
-			\draw[color=ffqqqq] (2.68,3.14) node {$y'$};
-			\draw[color=ffqqqq] (-0.82,1.62) node {$x'$};
-			\fill [color=uququq] (2.46,0) circle (1.5pt);
-			\draw[color=uququq] (2.68,0.26) node {$P_x$};
-			\fill [color=uququq] (0,1.8) circle (1.5pt);
-			\draw[color=uququq] (0.22,2.06) node {$P_y$};
-		\end{scriptsize}
-	\end{tikzpicture}
+	\includegraphics{coordenadas-plano-cartesiano.pdf}
+	% \definecolor{uququq}{rgb}{0.25,0.25,0.25}
+	% \definecolor{ffqqqq}{rgb}{1,0,0}
+	% \definecolor{qqqqff}{rgb}{0,0,1}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-1,0) -- (4,0);
+	% 	\foreach \x in {-1,1,2,3}
+	% 	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+	% 	\draw[color=black] (3.68,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-1) -- (0,4);
+	% 	\foreach \y in {-1,1,2,3}
+	% 	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+	% 	\draw[color=black] (0.1,3.6) node [anchor=east] {$y$};
+	% 	\clip(-1,-1) rectangle (4,4);
+	% 	\draw [dash pattern=on 2pt off 2pt,color=ffqqqq] (2.46,-1) -- (2.46,3.5);
+	% 	\draw [dash pattern=on 2pt off 2pt,color=ffqqqq,domain=-1:4] plot(\x,{(--1.8-0*\x)/1});
+	% 	\begin{scriptsize}
+	% 		\fill [color=qqqqff] (2.46,1.8) circle (1.5pt);
+	% 		\draw[color=qqqqff] (2.62,2.06) node {$P$};
+	% 		\draw[color=ffqqqq] (2.68,3.14) node {$y'$};
+	% 		\draw[color=ffqqqq] (-0.82,1.62) node {$x'$};
+	% 		\fill [color=uququq] (2.46,0) circle (1.5pt);
+	% 		\draw[color=uququq] (2.68,0.26) node {$P_x$};
+	% 		\fill [color=uququq] (0,1.8) circle (1.5pt);
+	% 		\draw[color=uququq] (0.22,2.06) node {$P_y$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
 \end{figure}
 
 Denotaremos assim o ponto $P$ por
@@ -621,44 +623,45 @@ Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos
 \begin{figure}[!h]
 	\centering
 	\caption{Dist\^ancia entre dois pontos}
-	\definecolor{qqwuqq}{rgb}{0,0.39,0}
-	\definecolor{xdxdff}{rgb}{0.49,0.49,1}
-	\definecolor{qqqqff}{rgb}{0,0,1}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-		\draw[->,color=black] (-0.8,0) -- (5,0);
-		\foreach \x in {,1,2,3,4}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-		\draw[color=black] (4.68,0.08) node [anchor=north west] {$x$};
-		\draw[->,color=black] (0,-0.8) -- (0,5);
-		\foreach \y in {,1,2,3,4}
-		\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-		\draw[color=black] (0.1,4.6) node [anchor=east] {$y$};
-		\clip(-0.8,-0.8) rectangle (5,5);
-		\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4,1.28) -- (3.72,1.28) -- (3.72,1) -- (4,1) -- cycle; 
-		\draw (4,1)-- (4,3);
-		\draw (2,1)-- (4,1);
-		\draw (2,1)-- (4,3);
-		\draw [dash pattern=on 2pt off 2pt] (4,3)-- (0,3);
-		\draw [dash pattern=on 2pt off 2pt] (2,1)-- (0,1);
-		\draw [dash pattern=on 2pt off 2pt] (2,1)-- (2,0);
-		\draw [dash pattern=on 2pt off 2pt] (4,1)-- (4,0);
-		\begin{scriptsize}
-			\fill [color=qqqqff] (2,1) circle (1.5pt);
-			\draw[color=qqqqff] (2,1.26) node {$Q$};
-			\fill [color=qqqqff] (4,3) circle (1.5pt);
-			\draw[color=qqqqff] (4.16,3.26) node {$P$};
-			\fill [color=qqqqff] (4,1) circle (1.5pt);
-			\draw[color=qqqqff] (4.16,1) node {$S$};
-			\fill [color=qqqqff] (0,3) circle (1.5pt);
-			\draw[color=qqqqff] (-0.28,3) node {$y_1$};
-			\fill [color=qqqqff] (0,1) circle (1.5pt);
-			\draw[color=qqqqff] (-0.28,1) node {$y_2$};
-			\fill [color=qqqqff] (2,0) circle (1.5pt);
-			\draw[color=qqqqff] (2,-0.26) node {$x_2$};
-			\fill [color=qqqqff] (4,0) circle (1.5pt);
-			\draw[color=qqqqff] (4,-0.26) node {$x_1$};
-		\end{scriptsize}
-	\end{tikzpicture}
+	\includegraphics{distancia-pontos-plano-cartesiano.pdf}
+	% \definecolor{qqwuqq}{rgb}{0,0.39,0}
+	% \definecolor{xdxdff}{rgb}{0.49,0.49,1}
+	% \definecolor{qqqqff}{rgb}{0,0,1}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-0.8,0) -- (5,0);
+	% 	\foreach \x in {,1,2,3,4}
+	% 	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+	% 	\draw[color=black] (4.68,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-0.8) -- (0,5);
+	% 	\foreach \y in {,1,2,3,4}
+	% 	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+	% 	\draw[color=black] (0.1,4.6) node [anchor=east] {$y$};
+	% 	\clip(-0.8,-0.8) rectangle (5,5);
+	% 	\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4,1.28) -- (3.72,1.28) -- (3.72,1) -- (4,1) -- cycle; 
+	% 	\draw (4,1)-- (4,3);
+	% 	\draw (2,1)-- (4,1);
+	% 	\draw (2,1)-- (4,3);
+	% 	\draw [dash pattern=on 2pt off 2pt] (4,3)-- (0,3);
+	% 	\draw [dash pattern=on 2pt off 2pt] (2,1)-- (0,1);
+	% 	\draw [dash pattern=on 2pt off 2pt] (2,1)-- (2,0);
+	% 	\draw [dash pattern=on 2pt off 2pt] (4,1)-- (4,0);
+	% 	\begin{scriptsize}
+	% 		\fill [color=qqqqff] (2,1) circle (1.5pt);
+	% 		\draw[color=qqqqff] (2,1.26) node {$Q$};
+	% 		\fill [color=qqqqff] (4,3) circle (1.5pt);
+	% 		\draw[color=qqqqff] (4.16,3.26) node {$P$};
+	% 		\fill [color=qqqqff] (4,1) circle (1.5pt);
+	% 		\draw[color=qqqqff] (4.16,1) node {$S$};
+	% 		\fill [color=qqqqff] (0,3) circle (1.5pt);
+	% 		\draw[color=qqqqff] (-0.28,3) node {$y_1$};
+	% 		\fill [color=qqqqff] (0,1) circle (1.5pt);
+	% 		\draw[color=qqqqff] (-0.28,1) node {$y_2$};
+	% 		\fill [color=qqqqff] (2,0) circle (1.5pt);
+	% 		\draw[color=qqqqff] (2,-0.26) node {$x_2$};
+	% 		\fill [color=qqqqff] (4,0) circle (1.5pt);
+	% 		\draw[color=qqqqff] (4,-0.26) node {$x_1$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
 \end{figure}
 
 Assim sua hipotenusa \'e
@@ -686,29 +689,30 @@ Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano.
 \begin{figure}[!h]
 	\centering
 	\caption{Seta representando o ponto $(\alpha, \beta)$.}
-  	\begin{tikzpicture}[scale=2]%vetor no plano
-	    \coordinate[label=below left:$O$] (A) at (0,0);
-	    \coordinate (W) at (1,1);
-	    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
-	    \coordinate (F) at (-0.5,0);
-	    \coordinate (G) at (0,-0.5);
-	    \coordinate (X) at (1.5,0);
-	    \coordinate (Y) at (0,1.5);
-	    % Styles
-	    \tikzstyle{axes}=[]
+	\includegraphics{vetores-plano-cartesiano.pdf}
+ %  	\begin{tikzpicture}[scale=2]%vetor no plano
+	%     \coordinate[label=below left:$O$] (A) at (0,0);
+	%     \coordinate (W) at (1,1);
+	%     %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+	%     \coordinate (F) at (-0.5,0);
+	%     \coordinate (G) at (0,-0.5);
+	%     \coordinate (X) at (1.5,0);
+	%     \coordinate (Y) at (0,1.5);
+	%     % Styles
+	%     \tikzstyle{axes}=[]
 
-	    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
-		    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-		    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-	    \end{scope}
+	%     \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+	% 	    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+	% 	    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+	%     \end{scope}
 
-	    \draw[->,>=triangle 45] (A)--(W)
-	      node[above right]{$(\alpha, \beta)$};
-	    \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
-	      node[at start, below]{$\alpha$};
-	    \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
-	      node[at start, left]{$\beta$};
-    \end{tikzpicture}
+	%     \draw[->,>=triangle 45] (A)--(W)
+	%       node[above right]{$(\alpha, \beta)$};
+	%     \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
+	%       node[at start, below]{$\alpha$};
+	%     \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
+	%       node[at start, left]{$\beta$};
+ %    \end{tikzpicture}
 \end{figure}
 
 Assim o par ordenado $(\alpha, \beta)$ pode ser representado graficamente por um ponto ou por uma seta. Quando representamos $(\alpha, \beta)$ por uma seta, podemos associar a este para uma \textbf{dire\c{c}\~ao}, um \textbf{sentido} e um \textbf{m\'odulo}. A dire\c{c}\~ao e o sentido do par $(\alpha, \beta)$ s\~ao respectivamente, a dire\c{c}\~ao e o sentido da seta que o representa. O \textbf{m\'odulo} do par $(\alpha, \beta)$ \'e o n\'umero
@@ -726,29 +730,30 @@ Esta nota\c{c}\~ao significa que $\vec{u}$ \'e a seta com in{\'\i}cio no ponto $
 \begin{figure}[!h]
 	\centering
 	\caption{Vetor $ \vec{u} = (\alpha, \beta)$.}
-  	\begin{tikzpicture}[scale=2]%vetor no plano
-	    \coordinate[label=below left:$O$] (A) at (0,0);
-	    \coordinate (W) at (1,1);
-	    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
-	    \coordinate (F) at (-0.5,0);
-	    \coordinate (G) at (0,-0.5);
-	    \coordinate (X) at (1.5,0);
-	    \coordinate (Y) at (0,1.5);
-	    % Styles
-	    \tikzstyle{axes}=[]
+	\includegraphics{vetor-coordenadas-plano-cartesiano.pdf}
+  	% \begin{tikzpicture}[scale=2]%vetor no plano
+	  %   \coordinate[label=below left:$O$] (A) at (0,0);
+	  %   \coordinate (W) at (1,1);
+	  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+	  %   \coordinate (F) at (-0.5,0);
+	  %   \coordinate (G) at (0,-0.5);
+	  %   \coordinate (X) at (1.5,0);
+	  %   \coordinate (Y) at (0,1.5);
+	  %   % Styles
+	  %   \tikzstyle{axes}=[]
 
-	    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
-		    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-		    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-	    \end{scope}
+	  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+		 %    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+		 %    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+	  %   \end{scope}
 
-	    \draw[->,>=triangle 45,color=blue] (A)--(W)
-	      node[midway, above]{$\vec{u}$};
-	    \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
-	      node[at start, below]{$\alpha$};
-	    \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
-	      node[at start, left]{$\beta$};
-    \end{tikzpicture}
+	  %   \draw[->,>=triangle 45,color=blue] (A)--(W)
+	  %     node[midway, above]{$\vec{u}$};
+	  %   \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
+	  %     node[at start, below]{$\alpha$};
+	  %   \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
+	  %     node[at start, left]{$\beta$};
+   %  \end{tikzpicture}
 \end{figure}
 
 % Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a nota\c{c}\~ao vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e da{\'\i} escrevemos
@@ -764,33 +769,34 @@ Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ s\~ao representados grafica
 \begin{figure}[!h]
 	\centering
 	\caption{Vetores $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$.}
-	\definecolor{ffqqqq}{rgb}{1,0,0}
-	\definecolor{qqqqff}{rgb}{0,0,1}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-		\draw[->,color=black] (-1.5,0) -- (3.5,0);
-		\foreach \x in {-1,1,2,3}
-		\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-		\draw[color=black] (3.18,0.08) node [anchor=north west] {$x$};
-		\draw[->,color=black] (0,-2.5) -- (0,2.5);
-		\foreach \y in {-2,-1,1,2}
-		\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-		\draw[color=black] (0.1,2.1) node [anchor=east] {$y$};
-		\clip(-1.5,-2.5) rectangle (3.5,2.5);
-		\draw [->,color=ffqqqq] (0,0) -- (3,2);
-		\draw [->,color=qqqqff] (0,0) -- (-1,-2);
-		\draw [dash pattern=on 2pt off 2pt] (3,0)-- (3,2);
-		\draw [dash pattern=on 2pt off 2pt] (0,2)-- (3,2);
-		\draw [dash pattern=on 2pt off 2pt] (-1,0)-- (-1,-2);
-		\draw [dash pattern=on 2pt off 2pt] (-1,-2)-- (0,-2);
-		\begin{scriptsize}
-			\fill [color=qqqqff] (3,2) circle (1.5pt);
-			%\draw[color=qqqqff] (3.16,2.26) node {$A$};
-			\fill [color=qqqqff] (-1,-2) circle (1.5pt);
-			%\draw[color=qqqqff] (-1.16,-2.2) node {$B$};
-			\draw[color=ffqqqq] (1.54,1.2) node {$\vec{u}$};
-			\draw[color=qqqqff] (-0.58,-0.8) node {$\vec{v}$};
-		\end{scriptsize}
-	\end{tikzpicture}
+	\includegraphics{exemplo-vetores-plano-cartesiano.pdf}
+	% \definecolor{ffqqqq}{rgb}{1,0,0}
+	% \definecolor{qqqqff}{rgb}{0,0,1}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-1.5,0) -- (3.5,0);
+	% 	\foreach \x in {-1,1,2,3}
+	% 	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+	% 	\draw[color=black] (3.18,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-2.5) -- (0,2.5);
+	% 	\foreach \y in {-2,-1,1,2}
+	% 	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+	% 	\draw[color=black] (0.1,2.1) node [anchor=east] {$y$};
+	% 	\clip(-1.5,-2.5) rectangle (3.5,2.5);
+	% 	\draw [->,color=ffqqqq] (0,0) -- (3,2);
+	% 	\draw [->,color=qqqqff] (0,0) -- (-1,-2);
+	% 	\draw [dash pattern=on 2pt off 2pt] (3,0)-- (3,2);
+	% 	\draw [dash pattern=on 2pt off 2pt] (0,2)-- (3,2);
+	% 	\draw [dash pattern=on 2pt off 2pt] (-1,0)-- (-1,-2);
+	% 	\draw [dash pattern=on 2pt off 2pt] (-1,-2)-- (0,-2);
+	% 	\begin{scriptsize}
+	% 		\fill [color=qqqqff] (3,2) circle (1.5pt);
+	% 		%\draw[color=qqqqff] (3.16,2.26) node {$A$};
+	% 		\fill [color=qqqqff] (-1,-2) circle (1.5pt);
+	% 		%\draw[color=qqqqff] (-1.16,-2.2) node {$B$};
+	% 		\draw[color=ffqqqq] (1.54,1.2) node {$\vec{u}$};
+	% 		\draw[color=qqqqff] (-0.58,-0.8) node {$\vec{v}$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
 \end{figure}
 
 O vetor que tem in{\'\i}cio e fim no ponto $(0,0)$ \'e chamado de \textbf{vetor nulo} e ser\'a denotado por
@@ -805,48 +811,49 @@ Podemos tamb\'em representar um vetor por uma seta que n\~ao parte da origem. Po
 \begin{figure}[!h]
 	\centering
 	\caption{Vetor $\vec{AB}$}
-	\definecolor{uququq}{rgb}{0.25,0.25,0.25}
-\definecolor{ffqqqq}{rgb}{1,0,0}
-\definecolor{xdxdff}{rgb}{0.49,0.49,1}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\draw[->,color=black] (-1.3,0) -- (6.5,0);
-\foreach \x in {-1,1,2,3,4,5,6}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
-\draw[color=black] (6.18,0.08) node [anchor=north west] {$x$};
-\draw[->,color=black] (0,-1.3) -- (0,5.5);
-\foreach \y in {-1,1,2,3,4,5}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
-\draw[color=black] (0.1,5.1) node [anchor=east] {$y$};
-\clip(-1.3,-1.3) rectangle (6.5,5.5);
-\draw [->] (2.46,2.8) -- (5.63,4.07);
-\draw [->,color=ffqqqq] (0,0) -- (3.17,1.27);
-\draw [dash pattern=on 3pt off 3pt] (0,2.8)-- (2.46,2.8);
-\draw [dash pattern=on 3pt off 3pt] (0,4.07)-- (5.63,4.07);
-\draw [dash pattern=on 3pt off 3pt] (5.63,4.07)-- (5.63,0);
-\draw [dash pattern=on 3pt off 3pt] (2.46,2.8)-- (2.46,0);
-\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (0,1.27)-- (3.17,1.27);
-\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (3.17,1.27)-- (3.17,0);
-\begin{scriptsize}
-\fill [color=xdxdff] (5.63,4.07) circle (1.5pt);
-\draw[color=xdxdff] (5.8,4.32) node {$B$};
-\draw[color=black] (3.98,3.72) node {$\vec{AB}$};
-\draw[color=ffqqqq] (1.54,0.86) node {$\vec{u}$};
-\fill [color=xdxdff] (2.46,2.8) circle (1.5pt);
-\draw[color=xdxdff] (2.62,3.06) node {$A$};
-\fill [color=xdxdff] (0,2.8) circle (1.5pt);
-\draw[color=xdxdff] (-0.3,2.8) node {$y_1$};
-\fill [color=xdxdff] (0,4.07) circle (1.5pt);
-\draw[color=xdxdff] (-0.3,4.07) node {$y_2$};
-\fill [color=xdxdff] (2.46,0) circle (1.5pt);
-\draw[color=xdxdff] (2.46,-0.22) node {$x_1$};
-\fill [color=xdxdff] (5.63,0) circle (1.5pt);
-\draw[color=xdxdff] (5.63,-0.22) node {$x_2$};
-\fill [color=ffqqqq] (3.17,0) circle (1.5pt);
-\draw[color=ffqqqq] (3.2,-0.32) node {$x_2-x_1$};
-\fill [color=ffqqqq] (0,1.27) circle (1.5pt);
-\draw[color=ffqqqq] (-0.6,1.27) node {$y_2-y_1$};
-\end{scriptsize}
-\end{tikzpicture}
+	\includegraphics{vetor-AB-plano-cartesiano.pdf}
+	% \definecolor{uququq}{rgb}{0.25,0.25,0.25}
+	% \definecolor{ffqqqq}{rgb}{1,0,0}
+	% \definecolor{xdxdff}{rgb}{0.49,0.49,1}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-1.3,0) -- (6.5,0);
+	% 	\foreach \x in {-1,1,2,3,4,5,6}
+	% 	\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+	% 	\draw[color=black] (6.18,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-1.3) -- (0,5.5);
+	% 	\foreach \y in {-1,1,2,3,4,5}
+	% 	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+	% 	\draw[color=black] (0.1,5.1) node [anchor=east] {$y$};
+	% 	\clip(-1.3,-1.3) rectangle (6.5,5.5);
+	% 	\draw [->] (2.46,2.8) -- (5.63,4.07);
+	% 	\draw [->,color=ffqqqq] (0,0) -- (3.17,1.27);
+	% 	\draw [dash pattern=on 3pt off 3pt] (0,2.8)-- (2.46,2.8);
+	% 	\draw [dash pattern=on 3pt off 3pt] (0,4.07)-- (5.63,4.07);
+	% 	\draw [dash pattern=on 3pt off 3pt] (5.63,4.07)-- (5.63,0);
+	% 	\draw [dash pattern=on 3pt off 3pt] (2.46,2.8)-- (2.46,0);
+	% 	\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (0,1.27)-- (3.17,1.27);
+	% 	\draw [dash pattern=on 3pt off 3pt,color=ffqqqq] (3.17,1.27)-- (3.17,0);
+	% 	\begin{scriptsize}
+	% 		\fill [color=xdxdff] (5.63,4.07) circle (1.5pt);
+	% 		\draw[color=xdxdff] (5.8,4.32) node {$B$};
+	% 		\draw[color=black] (3.98,3.72) node {$\vec{AB}$};
+	% 		\draw[color=ffqqqq] (1.54,0.86) node {$\vec{u}$};
+	% 		\fill [color=xdxdff] (2.46,2.8) circle (1.5pt);
+	% 		\draw[color=xdxdff] (2.62,3.06) node {$A$};
+	% 		\fill [color=xdxdff] (0,2.8) circle (1.5pt);
+	% 		\draw[color=xdxdff] (-0.3,2.8) node {$y_1$};
+	% 		\fill [color=xdxdff] (0,4.07) circle (1.5pt);
+	% 		\draw[color=xdxdff] (-0.3,4.07) node {$y_2$};
+	% 		\fill [color=xdxdff] (2.46,0) circle (1.5pt);
+	% 		\draw[color=xdxdff] (2.46,-0.22) node {$x_1$};
+	% 		\fill [color=xdxdff] (5.63,0) circle (1.5pt);
+	% 		\draw[color=xdxdff] (5.63,-0.22) node {$x_2$};
+	% 		\fill [color=ffqqqq] (3.17,0) circle (1.5pt);
+	% 		\draw[color=ffqqqq] (3.2,-0.32) node {$x_2-x_1$};
+	% 		\fill [color=ffqqqq] (0,1.27) circle (1.5pt);
+	% 		\draw[color=ffqqqq] (-0.6,1.27) node {$y_2-y_1$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
 \end{figure}
 
 Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $\vec{u}$, que tem in{\'\i}cio na origem e extremidade no ponto $(x_2 - x_1, y_2 - y_1)$, t\^em o mesmo m\'odulo, dire\c{c}\~ao e sentido que $\vec{AB}$. Assim vamos representar o vetor $\vec{AB}$ pela forma que for mais conveniente.
@@ -857,42 +864,43 @@ Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $
 \begin{figure}[!h]
 	\centering
 	\caption{Vetores paralelos}
-	\definecolor{qqffqq}{rgb}{0,1,0}
-\definecolor{qqqqff}{rgb}{0,0,1}
-\definecolor{zzqqzz}{rgb}{0.6,0,0.6}
-\definecolor{wwzzqq}{rgb}{0.4,0.6,0}
-\definecolor{qqccff}{rgb}{0,0.8,1}
-\definecolor{ffqqqq}{rgb}{1,0,0}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\clip(-3.5,-4.5) rectangle (9,6);
-\draw [dash pattern=on 4pt off 4pt,color=ffqqqq,domain=-3.5:9] plot(\x,{(--2.39--2.04*\x)/2.66});
-\draw [dash pattern=on 4pt off 4pt,color=ffqqqq,domain=-3.5:9] plot(\x,{(-8.41--2.04*\x)/2.66});
-\draw [->,line width=1.6pt,color=qqccff] (1.28,1.88) -- (3.94,3.92);
-\draw [->,line width=1.2pt,color=wwzzqq] (2.82,-1) -- (6.24,1.62);
-\draw [->,line width=1.2pt,color=zzqqzz] (1.28,1.88) -- (-0.73,0.34);
-\draw [dash pattern=on 4pt off 4pt,color=qqqqff,domain=-3.5:9] plot(\x,{(--8.89-1.98*\x)/0.05});
-\draw [->,line width=1.2pt,color=qqffqq] (4.54,-1.7) -- (4.51,-0.49);
-\draw [->] (1.94,2.39) -- (3.25,3.39);
-\draw (-1.76,5.04) node[anchor=north west] {$ r\varparallel s $};
-\draw (-1.9,4.48) node[anchor=north west] {$\vec{u}\varparallel \vec{v}$};
-\draw (-1.92,3.78) node[anchor=north west] {$\vec{u}\varparallel \vec{w}$};
-\draw (-1.92,3.2) node[anchor=north west] {$\vec{u}\varparallel \vec{v_1}$};
-\draw (6.32,-0.6) node[anchor=north west] {$ t \cap s \ne \emptyset $};
-\draw (6.44,-1.32) node[anchor=north west] {$ t \cap r \ne \emptyset $};
-\draw (6.52,-2.04) node[anchor=north west] {$\vec{u_1}\nvarparallel \vec{v}$};
-\draw (6.56,-2.6) node[anchor=north west] {$\vec{u_1}\nvarparallel \vec{u}$};
-\draw (6.6,-3.04) node[anchor=north west] {$\vec{u_1}\nvarparallel \vec{w}$};
-\begin{scriptsize}
-\draw[color=ffqqqq] (-2.88,-0.9) node {$r$};
-\draw[color=ffqqqq] (-1,-4.3) node {$s$};
-\draw[color=qqccff] (3.26,3.84) node {$\vec{u}$};
-\draw[color=wwzzqq] (4.98,0.4) node {$\vec{v}$};
-\draw[color=zzqqzz] (0.44,1.04) node {$\vec{w}$};
-\draw[color=qqqqff] (4.16,5.36) node {$t$};
-\draw[color=qqffqq] (4.3,-1.14) node {$\vec{u_1}$};
-\draw[color=black] (2.86,2.76) node {$\vec{v_1}$};
-\end{scriptsize}
-\end{tikzpicture}
+	\includegraphics{vetores-paralelos-plano-cartesiano.pdf}
+	% \definecolor{qqffqq}{rgb}{0,1,0}
+	% \definecolor{qqqqff}{rgb}{0,0,1}
+	% \definecolor{zzqqzz}{rgb}{0.6,0,0.6}
+	% \definecolor{wwzzqq}{rgb}{0.4,0.6,0}
+	% \definecolor{qqccff}{rgb}{0,0.8,1}
+	% \definecolor{ffqqqq}{rgb}{1,0,0}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\clip(-3.5,-4.5) rectangle (9,6);
+	% 	\draw [dash pattern=on 4pt off 4pt,color=ffqqqq,domain=-3.5:9] plot(\x,{(--2.39--2.04*\x)/2.66});
+	% 	\draw [dash pattern=on 4pt off 4pt,color=ffqqqq,domain=-3.5:9] plot(\x,{(-8.41--2.04*\x)/2.66});
+	% 	\draw [->,line width=1.6pt,color=qqccff] (1.28,1.88) -- (3.94,3.92);
+	% 	\draw [->,line width=1.2pt,color=wwzzqq] (2.82,-1) -- (6.24,1.62);
+	% 	\draw [->,line width=1.2pt,color=zzqqzz] (1.28,1.88) -- (-0.73,0.34);
+	% 	\draw [dash pattern=on 4pt off 4pt,color=qqqqff,domain=-3.5:9] plot(\x,{(--8.89-1.98*\x)/0.05});
+	% 	\draw [->,line width=1.2pt,color=qqffqq] (4.54,-1.7) -- (4.51,-0.49);
+	% 	\draw [->] (1.94,2.39) -- (3.25,3.39);
+	% 	\draw (-1.76,5.04) node[anchor=north west] {$ r\varparallel s $};
+	% 	\draw (-1.9,4.48) node[anchor=north west] {$\vec{u}\varparallel \vec{v}$};
+	% 	\draw (-1.92,3.78) node[anchor=north west] {$\vec{u}\varparallel \vec{w}$};
+	% 	\draw (-1.92,3.2) node[anchor=north west] {$\vec{u}\varparallel \vec{v_1}$};
+	% 	\draw (6.32,-0.6) node[anchor=north west] {$ t \cap s \ne \emptyset $};
+	% 	\draw (6.44,-1.32) node[anchor=north west] {$ t \cap r \ne \emptyset $};
+	% 	\draw (6.52,-2.04) node[anchor=north west] {$\vec{u_1}\nvarparallel \vec{v}$};
+	% 	\draw (6.56,-2.6) node[anchor=north west] {$\vec{u_1}\nvarparallel \vec{u}$};
+	% 	\draw (6.6,-3.04) node[anchor=north west] {$\vec{u_1}\nvarparallel \vec{w}$};
+	% 	\begin{scriptsize}
+	% 		\draw[color=ffqqqq] (-2.88,-0.9) node {$r$};
+	% 		\draw[color=ffqqqq] (-1,-4.3) node {$s$};
+	% 		\draw[color=qqccff] (3.26,3.84) node {$\vec{u}$};
+	% 		\draw[color=wwzzqq] (4.98,0.4) node {$\vec{v}$};
+	% 		\draw[color=zzqqzz] (0.44,1.04) node {$\vec{w}$};
+	% 		\draw[color=qqqqff] (4.16,5.36) node {$t$};
+	% 		\draw[color=qqffqq] (4.3,-1.14) node {$\vec{u_1}$};
+	% 		\draw[color=black] (2.86,2.76) node {$\vec{v_1}$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
 \end{figure}
 
 \subsection{Opera\c{c}\~oes com Vetores} % (fold)
@@ -908,46 +916,47 @@ Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $
 \begin{figure}[!h]
   \centering
   \caption{Soma de vetores}
-  \begin{tikzpicture}[scale=2]%soma de vetores no plano
-    \coordinate (A) at (0,0);
-    \coordinate (V) at (0.5,1);
-    \coordinate (W) at (1,0.5);
-    \coordinate (B) at (0,1);
-    \coordinate (VW) at ($(V)+(W)$);
-    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
-    \coordinate (F) at (-1,0);
-    \coordinate (G) at (0,-1);
-    \coordinate (X) at (2,0);
-    \coordinate (Y) at (0,2);
-    % Styles
-    \tikzstyle{axes}=[]
+  \includegraphics{soma-vetores-plano-cartesiano.pdf}
+  % \begin{tikzpicture}[scale=2]%soma de vetores no plano
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (V) at (0.5,1);
+  %   \coordinate (W) at (1,0.5);
+  %   \coordinate (B) at (0,1);
+  %   \coordinate (VW) at ($(V)+(W)$);
+  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+  %   \coordinate (F) at (-1,0);
+  %   \coordinate (G) at (0,-1);
+  %   \coordinate (X) at (2,0);
+  %   \coordinate (Y) at (0,2);
+  %   % Styles
+  %   \tikzstyle{axes}=[]
 
-    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
-    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-    \end{scope}
+  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+  %   \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+  %   \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+  %   \end{scope}
 
-    \draw[->,>=triangle 45,color=blue] (A)--(V)
-      node[above]{$\vec{u}$};
-    \draw[->,>=triangle 45,color=blue] (A)--(W)
-      node[below right]{$\vec{v}$};
-    \draw[->,>=triangle 45,color=red] (A)--(VW)
-      node[below right]{$\vec{u}+\vec{v}$};
-    \draw[dashed,>=triangle 45,color=blue] (V)--(VW);
-    \draw[dashed,>=triangle 45,color=blue] (W)--(VW);
-    \draw[dashed,color=black] let \p1 = (V) in (\x1,0) -- (\x1,\y1)
-      node[at start, below]{$x_1$};
-    \draw[dashed,color=black] let \p1 = (V) in (0,\y1) -- (\x1,\y1)
-      node[at start, left]{$y_1$};
-    \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
-      node[at start, below]{$x_2$};
-    \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
-      node[at start, left]{$y_2$};
-    \draw[dashed,color=black] let \p1 = (VW) in (\x1,0) -- (\x1,\y1)
-      node[at start, below]{$x_1 + x_2$};
-    \draw[dashed,color=black] let \p1 = (VW) in (0,\y1) -- (\x1,\y1)
-      node[at start, left]{$y_1 + y_2$};
-  \end{tikzpicture}
+  %   \draw[->,>=triangle 45,color=blue] (A)--(V)
+  %     node[above]{$\vec{u}$};
+  %   \draw[->,>=triangle 45,color=blue] (A)--(W)
+  %     node[below right]{$\vec{v}$};
+  %   \draw[->,>=triangle 45,color=red] (A)--(VW)
+  %     node[below right]{$\vec{u}+\vec{v}$};
+  %   \draw[dashed,>=triangle 45,color=blue] (V)--(VW);
+  %   \draw[dashed,>=triangle 45,color=blue] (W)--(VW);
+  %   \draw[dashed,color=black] let \p1 = (V) in (\x1,0) -- (\x1,\y1)
+  %     node[at start, below]{$x_1$};
+  %   \draw[dashed,color=black] let \p1 = (V) in (0,\y1) -- (\x1,\y1)
+  %     node[at start, left]{$y_1$};
+  %   \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
+  %     node[at start, below]{$x_2$};
+  %   \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
+  %     node[at start, left]{$y_2$};
+  %   \draw[dashed,color=black] let \p1 = (VW) in (\x1,0) -- (\x1,\y1)
+  %     node[at start, below]{$x_1 + x_2$};
+  %   \draw[dashed,color=black] let \p1 = (VW) in (0,\y1) -- (\x1,\y1)
+  %     node[at start, left]{$y_1 + y_2$};
+  % \end{tikzpicture}
 \end{figure}
 
 \begin{propriedades}\label{propriedades_soma_vetores}
@@ -999,42 +1008,43 @@ Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $
 \begin{figure}[!h]
   \centering
   \caption{Multiplica\c{c}\~ao por escalar}
-  \begin{tikzpicture}[scale=2]%multiplica\c{c}\~ao por escalar no plano
-    \coordinate (A) at (0,0);
-    \coordinate (V) at (0.5,0.5);
-    \coordinate (W) at ($2*(V)$);
-    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
-    \coordinate (F) at (-1,0);
-    \coordinate (G) at (0,-1);
-    \coordinate (X) at (2,0);
-    \coordinate (Y) at (0,2);
-    % Styles
-    \tikzstyle{axes}=[]
+  \includegraphics{multiplicacao-escalar-vetores-plano-cartesiano.pdf}
+  % \begin{tikzpicture}[scale=2]%multiplica\c{c}\~ao por escalar no plano
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (V) at (0.5,0.5);
+  %   \coordinate (W) at ($2*(V)$);
+  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+  %   \coordinate (F) at (-1,0);
+  %   \coordinate (G) at (0,-1);
+  %   \coordinate (X) at (2,0);
+  %   \coordinate (Y) at (0,2);
+  %   % Styles
+  %   \tikzstyle{axes}=[]
 
-    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
-	    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-	    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-    \end{scope}
+  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+	 %    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+	 %    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+  %   \end{scope}
 
-    \draw[->,>=triangle 45,color=blue] (A)--(V)
-      node[above]{$\vec{u}$};
-    \draw[->,>=triangle 45,color=red] (A)--(W)
-      node[below right]{$\alpha \vec{u}$};
-    \draw[dashed,color=black] let \p1 = (V) in (\x1,0) -- (\x1,\y1)
-      node[at start, below]{$x_1$};
-    \draw[dashed,color=black] let \p1 = (V) in (0,\y1) -- (\x1,\y1)
-      node[at start, left]{$y_1$};
-    \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
-      node[at start, below]{$\alpha x_1$};
-    \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
-      node[at start, left]{$\alpha y_1$};
-  \end{tikzpicture}
+  %   \draw[->,>=triangle 45,color=blue] (A)--(V)
+  %     node[above]{$\vec{u}$};
+  %   \draw[->,>=triangle 45,color=red] (A)--(W)
+  %     node[below right]{$\alpha \vec{u}$};
+  %   \draw[dashed,color=black] let \p1 = (V) in (\x1,0) -- (\x1,\y1)
+  %     node[at start, below]{$x_1$};
+  %   \draw[dashed,color=black] let \p1 = (V) in (0,\y1) -- (\x1,\y1)
+  %     node[at start, left]{$y_1$};
+  %   \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
+  %     node[at start, below]{$\alpha x_1$};
+  %   \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
+  %     node[at start, left]{$\alpha y_1$};
+  % \end{tikzpicture}
 \end{figure}
 
 \begin{observacao}
 	\begin{enumerate}
-		\item Sejam $\vec{u}$ um vetor não-nulo e $\lambda \ne 0$ um escalar. Então $\vec{u} \varparallel\lambda\vec{u}$. Além disso, se $\lambda > 0$, então $\vec{u}$ e $\lambda\vec{u}$ são de mesmo sentido, e se $\lambda < 0$ então $\vec{u}$ e $\lambda\vec{u}$ são de sentidos contrários.
-		\item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  é exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma direção que $\vec{u}$, mas sentido contrário.
+		\item Sejam $\vec{u}$ um vetor n\~ao-nulo e $\lambda \ne 0$ um escalar. Ent\~ao $\vec{u} \varparallel\lambda\vec{u}$. Al\'em disso, se $\lambda > 0$, ent\~ao $\vec{u}$ e $\lambda\vec{u}$ s\~ao de mesmo sentido, e se $\lambda < 0$ ent\~ao $\vec{u}$ e $\lambda\vec{u}$ s\~ao de sentidos contr\'arios.
+		\item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  \'e exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma dire\c{c}\~ao que $\vec{u}$, mas sentido contr\'ario.
 	\end{enumerate}
 	
 \end{observacao}
@@ -1099,24 +1109,25 @@ Um vetor $\vec{u}$ tal que
 \begin{figure}[!h]
 	\centering
 	\caption{Vetores unit\'arios: $\norm{\vec{u}} = 1$}
-	\definecolor{qqqqff}{rgb}{0,0,1}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-		\draw[->,color=black] (-3,0) -- (3,0);
-		\draw (-2.3,0) node[below] {\footnotesize $-1$};
-		\draw (2.3,0) node[below] {\footnotesize $1$};
-		\draw (0,2.2) node[left] {\footnotesize $1$};
-		\draw (0,-2.2) node[left] {\footnotesize $-1$};
-		\draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
-		\draw[->,color=black] (0,-3) -- (0,3);
-		\draw[color=black] (0.1,2.8) node [anchor=east] {$y$};
-		\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-		\clip(-3,-3) rectangle (3,3);
-		\draw(0,0) circle (2cm);
-		\draw [->,color=qqqqff] (0,0) -- (1.45,1.37);
-		\begin{scriptsize}
-			\draw[color=qqqqff] (0.84,0.56) node {$\vec{u}$};
-		\end{scriptsize}
-	\end{tikzpicture}
+	\includegraphics{vetores-unitarios-plano-cartesiano.pdf}
+	% \definecolor{qqqqff}{rgb}{0,0,1}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-3,0) -- (3,0);
+	% 	\draw (-2.3,0) node[below] {\footnotesize $-1$};
+	% 	\draw (2.3,0) node[below] {\footnotesize $1$};
+	% 	\draw (0,2.2) node[left] {\footnotesize $1$};
+	% 	\draw (0,-2.2) node[left] {\footnotesize $-1$};
+	% 	\draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-3) -- (0,3);
+	% 	\draw[color=black] (0.1,2.8) node [anchor=east] {$y$};
+	% 	\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+	% 	\clip(-3,-3) rectangle (3,3);
+	% 	\draw(0,0) circle (2cm);
+	% 	\draw [->,color=qqqqff] (0,0) -- (1.45,1.37);
+	% 	\begin{scriptsize}
+	% 		\draw[color=qqqqff] (0.84,0.56) node {$\vec{u}$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
 \end{figure}
 
 Dado um vetor n\~ao nulo $\vec{u}$ o vetor
@@ -1162,25 +1173,25 @@ Dado um vetor n\~ao nulo $\vec{u}$ o vetor
 \end{prova}
 
 \begin{definicao}
-	Sejam $\vec{u}$ e $\vec{v}$ vetores não-nulos. Então $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ têm normas iguais, são de mesma direção e de mesmo sentido.
+	Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao-nulos. Ent\~ao $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ t\^em normas iguais, s\~ao de mesma dire\c{c}\~ao e de mesmo sentido.
 \end{definicao}
 
 \begin{proposicao}\label{vetores_paralelos}
   Dois vetores n\~ao nulos $\vec{u}$ e $\vec{v}$ s\~ao paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemente, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
 \end{proposicao}
 \begin{prova}
-	Se $\vec{u} = \lambda\vec{v}$, então $\vec{u}\varparallel\vec{v}$.
-	Agora, suponha que $\vec{u}$ e $\vec{v}$ são paralelos e de mesmo sentido, o caso em que têm sentidos contrários fica como exercício.
+	Se $\vec{u} = \lambda\vec{v}$, ent\~ao $\vec{u}\varparallel\vec{v}$.
+	Agora, suponha que $\vec{u}$ e $\vec{v}$ s\~ao paralelos e de mesmo sentido, o caso em que t\^em sentidos contr\'arios fica como exerc{\'\i}cio.
 
 	Seja 
 	\[
 		\lambda = \dfrac{\norm{\vec{u}}}{\norm{\vec{v}}}.
 	\]
-	Vamos mostrar que $\vec{u} = \lambda\vec{v}$. Inicialmente, sabemos que $\vec{v}$ e $\lambda\vec{v}$ são paralelos e têm o mesmo sentido pois $\lambda > 0$. Agora
+	Vamos mostrar que $\vec{u} = \lambda\vec{v}$. Inicialmente, sabemos que $\vec{v}$ e $\lambda\vec{v}$ s\~ao paralelos e t\^em o mesmo sentido pois $\lambda > 0$. Agora
 	\[
 		\norm{\lambda\vec{v}} = |\lambda|\norm{\vec{v}} = \dfrac{\norm{\vec{u}}}{\norm{\vec{v}}}\norm{\vec{v}} = \norm{\vec{u}}.
 	\]
-	Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma direção, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como queríamos.
+	Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma dire\c{c}\~ao, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como quer{\'\i}amos.
 \end{prova}
 
 \subsection{\^Angulo entre vetores e produto interno} % (fold)
@@ -1192,25 +1203,26 @@ Dado um vetor n\~ao nulo $\vec{u}$ o vetor
 \begin{figure}[!h]
   \centering
   \caption{\^Angulo entre vetores}
-  \begin{tikzpicture}
-    \coordinate (A) at (0,0);
-    \coordinate (X) at (2.5,0);
-    \coordinate (Y) at (2,2.5);
+  \includegraphics{angulo-vetores-plano-cartesiano.pdf}
+  % \begin{tikzpicture}
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (X) at (2.5,0);
+  %   \coordinate (Y) at (2,2.5);
 
-    \draw[->,>=triangle 45,color=blue] (A) -- (X)
-      node[midway,below]{$\vec{v}$};
-    \draw[->,>=triangle 45,color=blue] (A) -- (Y)
-      node[midway,above]{$\vec{u}$};
-  % \draw[dashed,->,>=triangle 45] (X) -- (Y)
-    % node[midway,above right]{$\vec{u} - \vec{v}$};
+  %   \draw[->,>=triangle 45,color=blue] (A) -- (X)
+  %     node[midway,below]{$\vec{v}$};
+  %   \draw[->,>=triangle 45,color=blue] (A) -- (Y)
+  %     node[midway,above]{$\vec{u}$};
+  % % \draw[dashed,->,>=triangle 45] (X) -- (Y)
+  %   % node[midway,above right]{$\vec{u} - \vec{v}$};
 
-    % Mark the angle XAY
-    \begin{scope}
-      \path[clip] (A) -- (X) -- (Y);
-      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      \node at ($(A)+(30:7mm)$) {$\theta$};
-    \end{scope}
-  \end{tikzpicture}
+  %   % Mark the angle XAY
+  %   \begin{scope}
+  %     \path[clip] (A) -- (X) -- (Y);
+  %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+  %     \node at ($(A)+(30:7mm)$) {$\theta$};
+  %   \end{scope}
+  % \end{tikzpicture}
 \end{figure}
 
 
@@ -1222,50 +1234,52 @@ Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles
 \begin{figure}[!h]
   \centering
   \caption{Determina\c{c}\~ao de $\theta$}
-  \begin{tikzpicture}
-    \coordinate (A) at (0,0);
-    \coordinate (X) at (3,0);
-    \coordinate (Y) at (2.5,3);
+  \includegraphics{determinacao-angulo-vetores-plano-cartesiano.pdf}
+  % \begin{tikzpicture}
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (X) at (3,0);
+  %   \coordinate (Y) at (2.5,3);
 
-    \draw[->,>=triangle 45] (A) -- (X)
-    node[midway,below]{$\vec{v}$};
-    \draw[->,>=triangle 45] (A) -- (Y)
-    node[midway,above]{$\vec{u}$};
-    \draw[dashed,->,>=triangle 45] (X) -- (Y)
-    node[midway,above right]{$\vec{u} - \vec{v}$};
+  %   \draw[->,>=triangle 45] (A) -- (X)
+  %   node[midway,below]{$\vec{v}$};
+  %   \draw[->,>=triangle 45] (A) -- (Y)
+  %   node[midway,above]{$\vec{u}$};
+  %   \draw[dashed,->,>=triangle 45] (X) -- (Y)
+  %   node[midway,above right]{$\vec{u} - \vec{v}$};
 
-    % Mark the angle XAY
-    \begin{scope}
-      \path[clip] (A) -- (X) -- (Y);
-      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      \node at ($(A)+(30:7mm)$) {$\theta$};
-    \end{scope}
-  \end{tikzpicture}
+  %   % Mark the angle XAY
+  %   \begin{scope}
+  %     \path[clip] (A) -- (X) -- (Y);
+  %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+  %     \node at ($(A)+(30:7mm)$) {$\theta$};
+  %   \end{scope}
+  % \end{tikzpicture}
 \end{figure}
 
 Aplicando a Lei dos cosssenos no tri\^angulo abaixo
 \begin{figure}[!h]
   \centering
   \caption{Lei dos cossenos}
-  \begin{tikzpicture}
-    \coordinate (A) at (0,0);
-    \coordinate (X) at (3,0);
-    \coordinate (Y) at (2.5,3);
+  \includegraphics{lei-cossenos-vetores-plano-cartesiano.pdf}
+  % \begin{tikzpicture}
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (X) at (3,0);
+  %   \coordinate (Y) at (2.5,3);
 
-    \draw (A) -- (X)
-    node[midway,below left]{$\norm{\vec{v}}$};
-    \draw(A) -- (Y)
-    node[midway,left]{$\norm{\vec{u}}$};
-    \draw(X) -- (Y)
-    node[midway,above right]{$\norm{\vec{u} - \vec{v}}$};
+  %   \draw (A) -- (X)
+  %   node[midway,below left]{$\norm{\vec{v}}$};
+  %   \draw(A) -- (Y)
+  %   node[midway,left]{$\norm{\vec{u}}$};
+  %   \draw(X) -- (Y)
+  %   node[midway,above right]{$\norm{\vec{u} - \vec{v}}$};
 
-    % Mark the angle XAY
-    \begin{scope}
-      \path[clip] (A) -- (X) -- (Y);
-      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      \node at ($(A)+(30:7mm)$) {$\theta$};
-    \end{scope}
-  \end{tikzpicture}
+  %   % Mark the angle XAY
+  %   \begin{scope}
+  %     \path[clip] (A) -- (X) -- (Y);
+  %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+  %     \node at ($(A)+(30:7mm)$) {$\theta$};
+  %   \end{scope}
+  % \end{tikzpicture}
 \end{figure}
 temos
 \begin{align}\label{equacaonorma}
@@ -1481,40 +1495,41 @@ Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores n\~ao nulos. Supon
 \begin{figure}[!h]
   \centering
   \caption{Proje\c{c}\~ao ortogonal}
-  \begin{tikzpicture}[scale=2]
-    \coordinate [label=below:$O$] (O) at (0,0);
-    \coordinate (V) at (1,2);
-    \coordinate (U) at (1.5,0);
-    %\coordinate (B) at (0,1);
-    \coordinate[label=below:$P$] (P) at ($(O)!(V)!(U)$);
-    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
-    \coordinate (F) at (-1,0);
-    \coordinate (X) at (2,0);
-    % Styles
-    \tikzstyle{axes}=[]
+  \includegraphics{projecao-vetores-plano-cartesiano.pdf}
+  % \begin{tikzpicture}[scale=2]
+  %   \coordinate [label=below:$O$] (O) at (0,0);
+  %   \coordinate (V) at (1,2);
+  %   \coordinate (U) at (1.5,0);
+  %   %\coordinate (B) at (0,1);
+  %   \coordinate[label=below:$P$] (P) at ($(O)!(V)!(U)$);
+  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+  %   \coordinate (F) at (-1,0);
+  %   \coordinate (X) at (2,0);
+  %   % Styles
+  %   \tikzstyle{axes}=[]
 
-    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
-    \draw[dashed] (F) -- (X) coordinate(x axis);
-    %\draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-    \end{scope}
+  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+  %   \draw[dashed] (F) -- (X) coordinate(x axis);
+  %   %\draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+  %   \end{scope}
 
-    \draw[->,>=triangle 45] (O)--(V)
-      node[above,midway]{$\vec{v}$};
-    \draw[->,>=triangle 45] (O)--(U)
-      node[below right]{$\vec{u}$};
-    \draw[->,>=triangle 45,blue] (O)--(P)
-      node[midway,below right]{$\vec{OP}$};
-    \draw[->,>=triangle 45,red] ($(O)!(V)!(U)$) -- (V)
-      node[midway,below right]{$\vec{v} - \vec{OP}$};
-    \draw[anchor=base,color=blue] (P.center)  ++(.15,0)  -- ++(0,0.15) -- ++(-0.15,0);
+  %   \draw[->,>=triangle 45] (O)--(V)
+  %     node[above,midway]{$\vec{v}$};
+  %   \draw[->,>=triangle 45] (O)--(U)
+  %     node[below right]{$\vec{u}$};
+  %   \draw[->,>=triangle 45,blue] (O)--(P)
+  %     node[midway,below right]{$\vec{OP}$};
+  %   \draw[->,>=triangle 45,red] ($(O)!(V)!(U)$) -- (V)
+  %     node[midway,below right]{$\vec{v} - \vec{OP}$};
+  %   \draw[anchor=base,color=blue] (P.center)  ++(.15,0)  -- ++(0,0.15) -- ++(-0.15,0);
     
-    % Mark the angle XAY
-    \begin{scope}
-    \path[clip] (O) -- (V) -- (U);
-    \fill[white, opacity=0.5, draw=black] (O) circle (2.5mm);
-    \node at ($(O)+(20:3.5mm)$) {$\theta$};
-    \end{scope}
-  \end{tikzpicture}
+  %   % Mark the angle XAY
+  %   \begin{scope}
+  %   \path[clip] (O) -- (V) -- (U);
+  %   \fill[white, opacity=0.5, draw=black] (O) circle (2.5mm);
+  %   \node at ($(O)+(20:3.5mm)$) {$\theta$};
+  %   \end{scope}
+  % \end{tikzpicture}
 \end{figure}
 
 O vetor $\vec{OP}$ \'e paralelo ao vetor $\vec{u}$ e o vetor $\vec{PA}$ \'e ortogonal ao vetor $\vec{u}$.
@@ -1555,36 +1570,37 @@ Esta constru\c{c}\~ao s\'o \'e v\'alida no caso em que o \^angulo $\theta$ entre
 \begin{figure}
   \centering
   \caption{Vetor proje\c{c}\~ao}
-  \begin{tikzpicture}
-      \coordinate[label=below:$O$] (A) at (-8,0);
-      \coordinate (X) at (-6,0);
-      \coordinate (Y) at (-8,2);
-      \coordinate[label=right:$\vec{OP}\eq \vec{0}$] (P) at (-7.5,1);
+  \includegraphics{vetores-projecao-plano-cartesiano.pdf}
+  % \begin{tikzpicture}
+  %     \coordinate[label=below:$O$] (A) at (-8,0);
+  %     \coordinate (X) at (-6,0);
+  %     \coordinate (Y) at (-8,2);
+  %     \coordinate[label=right:$\vec{OP}\eq \vec{0}$] (P) at (-7.5,1);
 
-      \draw[->,>=triangle 45] (A) -- (X)
-      node[midway,below]{$\vec{u}$};
-      \draw[->,>=triangle 45] (A) -- (Y)
-      node[midway,left]{$\vec{v}$};
-      \draw[anchor=base,color=blue] (A.center)  ++(.3,0)  -- ++(0,0.3) -- ++(-0.3,0);
+  %     \draw[->,>=triangle 45] (A) -- (X)
+  %     node[midway,below]{$\vec{u}$};
+  %     \draw[->,>=triangle 45] (A) -- (Y)
+  %     node[midway,left]{$\vec{v}$};
+  %     \draw[anchor=base,color=blue] (A.center)  ++(.3,0)  -- ++(0,0.3) -- ++(-0.3,0);
 
-      \coordinate[label=below:$O$] (B) at (-4,0);
-      \coordinate (C) at (-2.5,0);
-      \coordinate (D) at (-1,0);
+  %     \coordinate[label=below:$O$] (B) at (-4,0);
+  %     \coordinate (C) at (-2.5,0);
+  %     \coordinate (D) at (-1,0);
 
-      \draw[->,>=triangle 45] (B) -- (D)
-      node[midway,below]{$\vec{u}$};
-      \draw[->,>=triangle 45,red] (B) -- (C)
-      node[midway,above]{$\vec{v} = \vec{OP}$};
+  %     \draw[->,>=triangle 45] (B) -- (D)
+  %     node[midway,below]{$\vec{u}$};
+  %     \draw[->,>=triangle 45,red] (B) -- (C)
+  %     node[midway,above]{$\vec{v} = \vec{OP}$};
       
-      \coordinate[label=below:$O$] (B) at (2,0);
-      \coordinate (C) at (0,0);
-      \coordinate (D) at (4,0);
+  %     \coordinate[label=below:$O$] (B) at (2,0);
+  %     \coordinate (C) at (0,0);
+  %     \coordinate (D) at (4,0);
 
-      \draw[->,>=triangle 45] (B) -- (D)
-      node[midway,below]{$\vec{u}$};
-      \draw[->,>=triangle 45,color=red] (B) -- (C)
-      node[midway,above]{$\vec{v} = \vec{OP}$};
-    \end{tikzpicture}
+  %     \draw[->,>=triangle 45] (B) -- (D)
+  %     node[midway,below]{$\vec{u}$};
+  %     \draw[->,>=triangle 45,color=red] (B) -- (C)
+  %     node[midway,above]{$\vec{v} = \vec{OP}$};
+  %   \end{tikzpicture}
 \end{figure}
 n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os vetores.
 \begin{proposicao}
@@ -1620,42 +1636,43 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
   \begin{figure}[!h]
     \centering
     \caption{Possibilidades para $\lambda$}
-    \begin{tikzpicture}
-      \coordinate[label=below:$O$] (A) at (-5,0);
-      \coordinate (X) at (-2,0);
-      \coordinate (Y) at (-6.5,2.5);
-      \coordinate[label=right:$\lambda < 0$] (P) at (-4,2);
+    \includegraphics{vetores-projecao-escalar-plano-cartesiano.pdf}
+    % \begin{tikzpicture}
+    %   \coordinate[label=below:$O$] (A) at (-5,0);
+    %   \coordinate (X) at (-2,0);
+    %   \coordinate (Y) at (-6.5,2.5);
+    %   \coordinate[label=right:$\lambda < 0$] (P) at (-4,2);
 
-      \draw[->,>=triangle 45] (A) -- (X)
-      node[midway,below]{$\vec{u}$};
-      \draw[->,>=triangle 45] (A) -- (Y)
-      node[midway,left]{$\vec{v}$};
+    %   \draw[->,>=triangle 45] (A) -- (X)
+    %   node[midway,below]{$\vec{u}$};
+    %   \draw[->,>=triangle 45] (A) -- (Y)
+    %   node[midway,left]{$\vec{v}$};
 
-      % Mark the angle XAY
-      \begin{scope}
-      \path[clip] (A) -- (X) -- (Y);
-      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      \node at ($(A)+(50:7mm)$) {$\theta$};
-      \end{scope}
+    %   % Mark the angle XAY
+    %   \begin{scope}
+    %   \path[clip] (A) -- (X) -- (Y);
+    %   \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+    %   \node at ($(A)+(50:7mm)$) {$\theta$};
+    %   \end{scope}
       
-      \coordinate[label=below:$O$] (B) at (0,0);
-      \coordinate (C) at (3,0);
-      \coordinate (D) at (0,2.5);
-      \coordinate[label=below:$\lambda\eq 0$] (Q) at (1.5,2);
+    %   \coordinate[label=below:$O$] (B) at (0,0);
+    %   \coordinate (C) at (3,0);
+    %   \coordinate (D) at (0,2.5);
+    %   \coordinate[label=below:$\lambda\eq 0$] (Q) at (1.5,2);
 
-      \draw[->,>=triangle 45] (B) -- (C)
-      node[midway,below]{$\vec{u}$};
-      \draw[->,>=triangle 45] (B) -- (D)
-      node[midway,left]{$\vec{v}$};
-      \draw[anchor=base,color=blue] (B.center)  ++(.3,0)  -- ++(0,0.3) -- ++(-0.3,0);
+    %   \draw[->,>=triangle 45] (B) -- (C)
+    %   node[midway,below]{$\vec{u}$};
+    %   \draw[->,>=triangle 45] (B) -- (D)
+    %   node[midway,left]{$\vec{v}$};
+    %   \draw[anchor=base,color=blue] (B.center)  ++(.3,0)  -- ++(0,0.3) -- ++(-0.3,0);
 
-      % Mark the angle XAY
-      % \begin{scope}
-      % \path[clip] (A) -- (X) -- (Y);
-      % \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      % \node at ($(A)+(30:7mm)$) {$\theta$};
-      % \end{scope}
-      \end{tikzpicture}
+    %   % Mark the angle XAY
+    %   % \begin{scope}
+    %   % \path[clip] (A) -- (X) -- (Y);
+    %   % \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+    %   % \node at ($(A)+(30:7mm)$) {$\theta$};
+    %   % \end{scope}
+    %   \end{tikzpicture}
   \end{figure}
 \end{observacao}
 
@@ -1701,30 +1718,31 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
        \begin{figure}[!h]
         \centering
         \caption{Exemplo \ref{exemplosprojecao}, exerc{\'\i}cio \ref{exemploprojecao2}}
-         \begin{tikzpicture}[scale=2]
-            \coordinate (o) at (0,0);
-            \coordinate[label=right:$A$] (A) at (1,1);
-            \coordinate[label=left:$B$] (B) at (0,0.25);
-            \coordinate[label=above:$C$] (C) at (0.5,1.7);
-            \coordinate[label=left:$P$] (P) at ($(C)!(A)!(B)$);
-            %defini\c{c}\~ao das coordenadas dos eixos cartesianos
-            \coordinate (F) at (-0.5,0);
-            \coordinate (G) at (0,-0.5);
-            \coordinate (X) at (2,0);
-            \coordinate (Y) at (0,2);
-            % Styles
-            \tikzstyle{axes}=[]
+        \includegraphics{exemplo-vetores-projecao-plano-cartesiano.pdf}
+         % \begin{tikzpicture}[scale=2]
+         %    \coordinate (o) at (0,0);
+         %    \coordinate[label=right:$A$] (A) at (1,1);
+         %    \coordinate[label=left:$B$] (B) at (0,0.25);
+         %    \coordinate[label=above:$C$] (C) at (0.5,1.7);
+         %    \coordinate[label=left:$P$] (P) at ($(C)!(A)!(B)$);
+         %    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+         %    \coordinate (F) at (-0.5,0);
+         %    \coordinate (G) at (0,-0.5);
+         %    \coordinate (X) at (2,0);
+         %    \coordinate (Y) at (0,2);
+         %    % Styles
+         %    \tikzstyle{axes}=[]
 
-            \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
-            \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-            \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-            \end{scope}
+         %    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+         %    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+         %    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+         %    \end{scope}
 
-            \draw[blue] (B)--(A);
-            \draw[blue] (B)--(C);
-            \draw[blue] (A)--(C);
-            \draw[red,dashed] (A) -- ($(C)!(A)!(B)$);
-          \end{tikzpicture}
+         %    \draw[blue] (B)--(A);
+         %    \draw[blue] (B)--(C);
+         %    \draw[blue] (A)--(C);
+         %    \draw[red,dashed] (A) -- ($(C)!(A)!(B)$);
+         %  \end{tikzpicture}
        \end{figure}
        \begin{enumerate}
          \item Basta verificar que $\vec{AB}\perp\vec{AC}$. Assim como $\vec{AB} = (-3,-2)$ e $\vec{AC} = (-2,3)$ temos

@@ -1,0 +1,41 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}
+        \coordinate[label=right:$A$] (A) at (0,0);
+        \coordinate (U) at (-1.5,-1.5);
+        \coordinate (V) at (3,3);
+        \coordinate[label=right:$B$] (B) at (1,1);
+        \coordinate[label=right:$X$] (X) at (2,2);
+        \coordinate[label=right:$Y$] (Y) at (-1,-1);
+
+        \draw (U) -- (V)
+        node[at end,above]{$r$};
+
+        \draw[ultra thick,->,>=triangle 45,blue] (A) -- (B)
+        node[midway,above]{$\vec{u}$};
+        \draw[->,>=triangle 45,red] (A) -- (X)
+        node[at end,left,red]{$\vec{AX}$};
+        \draw[->,>=triangle 45,orange] (A) -- (Y)
+        node[at end,left,orange]{$\vec{AY}$};
+        \foreach \p in {A,B,X,Y} \fill (\p) circle (0.5mm);
+    \end{tikzpicture}  
+\end{document}

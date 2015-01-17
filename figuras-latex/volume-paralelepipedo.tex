@@ -1,0 +1,49 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \tdplotsetmaincoords{60}{125}
+    \begin{tikzpicture}[tdplot_main_coords,cube/.style={very thick,black},grid/.style={very thin,gray},axis/.style={->,blue,thick},scale=2]
+        \coordinate (A) at (2,0,0);
+        \coordinate (B) at (2,1,2);
+        \coordinate (C) at (2,1,0.5);
+        \coordinate (D) at (2,0,2);
+
+        %draw the top and bottom of the cube
+        \draw[dashed,cube] (0,0,0) -- (0,2,0);
+        \draw[dashed,cube] (0,2,0) -- (2,2,0);
+        \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,2,0) node[midway,below]{$\vec{u}$};
+        \draw[->,>=triangle 45,color=red] (2,0,0) -- (0,0,0) node[midway,left]{$\vec{v}$};
+        %\draw[cube] (0,0,0) -- (0,2,0) -- (2,2,0) -- (2,0,0) -- cycle;
+        \draw[dashed,cube] (0,1,2) -- (0,3,2) -- (2,3,2) -- (2,1,2) -- cycle;
+        \draw[dashed,color=red] (2,1,0.5) -- (2,1,2) node[midway,left]{$h$};
+        %draw the edges of the cube
+        \draw[dashed,cube] (0,0,0) -- (0,1,2);
+        \draw[dashed,cube] (0,2,0) -- (0,3,2);
+        \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,1,2) node[midway,left]{$\vec{w}$};
+        \draw[->,>=triangle 45,color=blue] (2,0,0) -- (2,0,2) node[midway,left]{$\vec{u}\times\vec{v}$};
+        \draw[dashed,cube] (2,2,0) -- (2,3,2);
+
+        \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](A,B,C);
+        \draw ($(A)+(0.2,1,1.8)$) node[below,font=\small] {$\theta$};
+
+        \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](B,A,D);
+        \draw ($(A)+(-0.2,0,0.6)$) node[below,font=\small] {$\theta$};
+    \end{tikzpicture}
+\end{document}

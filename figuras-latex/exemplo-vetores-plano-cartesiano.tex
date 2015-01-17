@@ -1,0 +1,47 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \definecolor{ffqqqq}{rgb}{1,0,0}
+    \definecolor{qqqqff}{rgb}{0,0,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \draw[->,color=black] (-1.5,0) -- (3.5,0);
+        \foreach \x in {-1,1,2,3}
+        \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+        \draw[color=black] (3.18,0.08) node [anchor=north west] {$x$};
+        \draw[->,color=black] (0,-2.5) -- (0,2.5);
+        \foreach \y in {-2,-1,1,2}
+        \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+        \draw[color=black] (0.1,2.1) node [anchor=east] {$y$};
+        \clip(-1.5,-2.5) rectangle (3.5,2.5);
+        \draw [->,color=ffqqqq] (0,0) -- (3,2);
+        \draw [->,color=qqqqff] (0,0) -- (-1,-2);
+        \draw [dash pattern=on 2pt off 2pt] (3,0)-- (3,2);
+        \draw [dash pattern=on 2pt off 2pt] (0,2)-- (3,2);
+        \draw [dash pattern=on 2pt off 2pt] (-1,0)-- (-1,-2);
+        \draw [dash pattern=on 2pt off 2pt] (-1,-2)-- (0,-2);
+        \begin{scriptsize}
+            \fill [color=qqqqff] (3,2) circle (1.5pt);
+            %\draw[color=qqqqff] (3.16,2.26) node {$A$};
+            \fill [color=qqqqff] (-1,-2) circle (1.5pt);
+            %\draw[color=qqqqff] (-1.16,-2.2) node {$B$};
+            \draw[color=ffqqqq] (1.54,1.2) node {$\vec{u}$};
+            \draw[color=qqqqff] (-0.58,-0.8) node {$\vec{v}$};
+        \end{scriptsize}
+    \end{tikzpicture}
+\end{document}

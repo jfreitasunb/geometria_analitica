@@ -1,0 +1,55 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}[scale=2]
+        \coordinate [label=below:$O$] (O) at (0,0);
+        \coordinate (V) at (1,2);
+        \coordinate (U) at (1.5,0);
+        %\coordinate (B) at (0,1);
+        \coordinate[label=below:$P$] (P) at ($(O)!(V)!(U)$);
+        %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+        \coordinate (F) at (-1,0);
+        \coordinate (X) at (2,0);
+        % Styles
+        \tikzstyle{axes}=[]
+
+        \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+            \draw[dashed] (F) -- (X) coordinate(x axis);
+            %\draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+        \end{scope}
+
+        \draw[->,>=triangle 45] (O)--(V)
+          node[above,midway]{$\vec{v}$};
+        \draw[->,>=triangle 45] (O)--(U)
+          node[below right]{$\vec{u}$};
+        \draw[->,>=triangle 45,blue] (O)--(P)
+          node[midway,below right]{$\vec{OP}$};
+        \draw[->,>=triangle 45,red] ($(O)!(V)!(U)$) -- (V)
+          node[midway,below right]{$\vec{v} - \vec{OP}$};
+        \draw[anchor=base,color=blue] (P.center)  ++(.15,0)  -- ++(0,0.15) -- ++(-0.15,0);
+        
+        % Mark the angle XAY
+        \begin{scope}
+            \path[clip] (O) -- (V) -- (U);
+            \fill[white, opacity=0.5, draw=black] (O) circle (2.5mm);
+            \node at ($(O)+(20:3.5mm)$) {$\theta$};
+        \end{scope}
+    \end{tikzpicture}
+\end{document}

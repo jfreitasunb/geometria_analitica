@@ -1,0 +1,39 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \definecolor{ffdxqq}{rgb}{1.0,0.8431372549019608,0.0}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(-6.0,-5.0) rectangle (6.0,5.0);
+        \fill[color=ffdxqq,fill=ffdxqq,fill opacity=0.1] (-1.0991194968553457,1.751698113207547) -- (5.7463471698113215,1.751698113207547) -- (1.2187999999999999,-1.2666666666666666) -- (-5.626666666666666,-1.2666666666666666) -- cycle;
+        \draw [->] (0.0,0.0) -- (0.0,3.44);
+        \draw [->] (0.0,0.0) -- (4.14,0.0);
+        \draw [->] (0.0,0.0) -- (-3.0,-2.0);
+        \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (-4.3,0.0);
+        \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (0.0,-3.0);
+        \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (3.0,2.0);
+        \draw [color=ffdxqq] (-1.0991194968553457,1.751698113207547)-- (5.7463471698113215,1.751698113207547);
+        \draw [color=ffdxqq] (5.7463471698113215,1.751698113207547)-- (1.2187999999999999,-1.2666666666666666);
+        \draw [color=ffdxqq] (1.2187999999999999,-1.2666666666666666)-- (-5.626666666666666,-1.2666666666666666);
+        \draw [color=ffdxqq] (-5.626666666666666,-1.2666666666666666)-- (-1.0991194968553457,1.751698113207547);
+        \draw (-2.696314847942755,-1.7600000000000011) node[anchor=north west] {$x$};
+        \draw (3.759212880143111,-0.060000000000001136) node[anchor=north west] {$y$};
+        \draw (-0.4772271914132387,3.659999999999999) node[anchor=north west] {$z$};
+        \draw (3.512647584973165,1.759999999999999) node[anchor=north west] {$z=0$};
+    \end{tikzpicture}
+\end{document}

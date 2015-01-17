@@ -3,157 +3,282 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
 %%Ap\'os executar pdflatex arquivo
 
-\chapter{Quádricas} % (fold)
+\chapter{Qu\'adricas} % (fold)
 \label{cha:quadricas}
+
+Em $\real^3$ estamos interessados em objetos definidos por uma equa\c{c}\~ao de segundo grau em $x$, $y$ e $z$ da forma
+\begin{equation}\label{equacao_quadrica}
+	ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
+\end{equation}
+
+O conjunto de pontos em $\real^3$ satisfazendo uma equa\c{c}\~ao da forma \eqref{equacao_quadrica} \'e chamado de uma \textbf{qu\'adrica}. Observe que pelo menos um dos n\'umeros $a$, $b$, $c$, $d$, $e$ ou $f$ deve ser n\~ao nulo.\index{Qu\'adricas}
+
+Nosso principal objetivo ser\'a tentar simplificar a equa\c{c}\~ao \eqref{equacao_quadrica} de modo que seja poss{\'\i}vel identificar que objeto tal equa\c{c}\~ao representa.
+
 
 \section{Esfera} % (fold)
 \label{sec:esfera}
 \begin{definicao}
-	\todo{Definição esfera}
+	Uma \textbf{esfera} \'e uma qu\'adrica com equa\c{c}\~ao na forma\index{Qu\'adricas!Esfera}
+	\begin{equation}\label{equacao_esfera}
+		x^2 + y^2 + z^2 = r^2.
+	\end{equation}
 \end{definicao}
 
-\begin{figure}[!h]
+\begin{figure}[h]
 	\centering
 	\caption{Esfera: $x^2 + y^2 + z^2 = r^2$}
-	\includegraphics[scale=0.8]{quadricas/esfera.pdf}
-	% \begin{pspicture}(-4,-2.25)(2,4.25)
-	% \pstThreeDCoor[xMin=-3,yMax=3]
-	% \pstThreeDSphere(0,0,0){2}
-	% %\pstThreeDDot[dotstyle=x,linecolor=red,drawCoor=true](1,-1,2)
-	% \end{pspicture}
+	\includegraphics[scale=0.7]{esfera.pdf}
 \end{figure}
 
-\begin{figure}[!h]
-	\centering
-	\caption{Contornos da esfera: $x^2 + y^2 + z^2 = r^2$}
-	\includegraphics[scale=0.8]{quadricas/esfera-contornos.pdf}
-	% \begin{pspicture}(-4,-2.25)(2,4.25)
-	% \pstThreeDCoor[xMin=-3,yMax=3]
-	% \pstThreeDSphere(0,0,0){2}
-	% %\pstThreeDDot[dotstyle=x,linecolor=red,drawCoor=true](1,-1,2)
-	% \end{pspicture}
-\end{figure}
-% section esfera (end)
-
-\section{Elipsóide} % (fold)
+\section{Elips\'oide} % (fold)
 \label{sec:elipsoide}
 \begin{definicao}
-	\todo{Definição esfera}
+	Um \textbf{elips\'oide} \'e uma qu\'adrica descrita pela equa\c{c}\~ao
+	\begin{equation}\label{equacao_elipsoide}
+		\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1
+	\end{equation}
+	onde os n\'umeros reais $a$, $b$ e $c$ s\~ao positivos e pelo menos dois deles s\~ao distintos.\index{Qu\'adricas!Elips\'oide}
 \end{definicao}
-\begin{figure}[!h]
+
+Considere o plano $\pi: z = k$. Qual a interse\c{c}\~ao de $\pi$ com o elips\'oide de equa\c{c}\~ao \eqref{equacao_elipsoide}? A interse\c{c}\~ao \'e dada pelo sistema
+\[
+	\begin{cases}
+		\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1\\
+		z = k,
+	\end{cases}
+\]
+isto \'e, pela equa\c{c}\~ao
+\begin{equation}\label{intersecao_elipsoide_planoz}
+	\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 - \dfrac{k^2}{c^2}.
+\end{equation}
+
+Se $k^2 > c^2$, ent\~ao a equa\c{c}\~ao \eqref{intersecao_elipsoide_planoz} n\~ao admite solu\c{c}\~ao pois $1 - k^2/c^2 < 0$. Assim seja $k^2 \le c^2$, isto \'e, $-c \le k \le c$. Se $k = c$, ent\~ao a interse\c{c}\~ao \'e o ponto $(0,0,c)$ e se $k = -c$ \'e o ponto $(0,0,-c)$. Ent\~ao seja $-c < k < c$ e denote $p = 1 - k^2/c^2$. Podemos reescrever \eqref{intersecao_elipsoide_planoz} como
+\begin{equation}\label{resultado_intersecao_elipsoide_planoz}
+	\dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
+\end{equation}
+
+Se $a = b$, ent\~ao a equa\c{c}\~ao \eqref{resultado_intersecao_elipsoide_planoz} \'e uma circunfer\^encia. Se $a \ne b$, ent\~ao a equa\c{c}\~ao \eqref{resultado_intersecao_elipsoide_planoz} descreve uma elipse.
+
+De modo an\'alogo, se tomarmos $\pi : x = k$ ou $\pi : y = k$, as interse\c{c}\~oes ser\~ao sempre ou conjunto vazio ou um ponto ou uma circunfer\^encia ou uma elipse.
+\begin{figure}[h]
 	\centering
-	\caption{Elipsóide: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
-	\includegraphics[scale=0.8]{quadricas/elipsoide.pdf}
-		% \psset{unit=0.7}
-	% \begin{pspicture*}(-4,-2)(4,3)
-	% 	\psset[pst-solides3d]{viewpoint=40 40 20 rtp2xyz,Decran=20}
-	% 	\psset{linewidth=0.5pt}
-	% 	\defFunction[algebraic]{ellipsoid}(u,v){cos(u)*sin(v)}{2*sin(u)*sin(v)}{cos(v)}
-	% 	\psSolid[object=surfaceparametree,
- %    		base=0 2 pi mul 0.001 2 pi mul,
- %    		hue=.3 0,incolor=yellow,
- %    		function=ellipsoid,
- %    		unit=3,ngrid=40]
-	% 	\axesIIID(6,6,4)(8,8,5)
-	% \end{pspicture*}
+	\caption{Elips\'oide: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
+	\includegraphics[scale=0.7]{elipsoide.pdf}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering
-	\caption{Contornos do elipsóide $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
-	\includegraphics[scale=0.8]{quadricas/elipsoide-contornos.pdf}
-	% \begin{pspicture}(-4,-2.25)(2,4.25)
-	% \pstThreeDCoor[xMin=-3,yMax=3]
-	% \pstThreeDSphere(0,0,0){2}
-	% %\pstThreeDDot[dotstyle=x,linecolor=red,drawCoor=true](1,-1,2)
-	% \end{pspicture}
+	\caption{Contornos do elips\'oide $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$ pelo plano $z = k$}
+	\hspace*{-2cm}
+	\includegraphics{elipsoide-contornos-eixo-z.pdf}
 \end{figure}
 
 % section elipsoide (end)
 
-\section{Parabolóide} % (fold)
+\section{Parabol\'oides} % (fold)
 \label{sec:paraboloide}
 \begin{definicao}
-	\todo[color=green]{Definição parabolóide}
+	Sejam $a$ e $b$ n\'umeros reais positivos a qu\'adrica descrita de equa\c{c}\~ao
+	\[
+		z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2},
+	\]
+	\'e chamada de:
+	\begin{enumerate}
+		\item um \textbf{parabol\'oide el{\'\i}ptico} se $a \ne b$;\index{Qu\'adricas!Parabol\'oide el{\'\i}ptico}
+		\item um \textbf{parabol\'oide de rota\c{c}\~ao} se $a = b$;\index{Qu\'adricas!Parabol\'oide de rota\c{c}\~ao}
+	\end{enumerate}
 \end{definicao}
 
-\todo[color=red!50]{Equação parabolóide elíptico}
+A interse\c{c}\~ao do parabol\'oide
+\[
+	z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2},
+\]
+com o plano $\pi: x = k$ \'e dada por
+\[
+	z = \dfrac{k^2}{a^2} + \dfrac{y^2}{b^2},
+\]
+que \'e uma par\'abola. O mesmo ocorrer\'a com o plano $\pi: y = k$.
+
+Agora a interse\c{c}\~ao com $z = k$ \'e dada forma
+\[
+	\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = k.
+\]
+
+Se $k < 0$, ent\~ao a interse\c{c}\~ao \'e vazia. Se $k = 0$, a interse\c{c}\~ao \'e o ponto $(0,0,0)$. Se $k > 0$, precisamos analisar o que ocorre com $a$ e $b$: se $a \ne b$, ent\~ao obtemos uma elipse. Se $a = b$, ent\~ao a interse\c{c}\~ao \'e uma circunfer\^encia.
+
+\begin{definicao}
+	Sejam $a$ e $b$ n\'umeros reais positivos a qu\'adrica descrita de equa\c{c}\~ao
+	\[
+		z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2},
+	\]
+	\'e chamada de um um \textbf{parabol\'oide hiperb\'olico},\index{Qu\'adricas!Parabol\'oide hiperb\'olico}
+\end{definicao}
+
+A interse\c{c}\~ao do parabol\'oide hiperb\'olico com o plano $\pi : z = k$ \'e dada por
+\[
+	\begin{cases}
+		\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = k\\
+		z = k
+	\end{cases}.
+\]
+
+Se $k = 0$, ent\~ao obtemos
+\[
+	\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = \left(\dfrac{y}{b} - \dfrac{x}{a}\right)\left(\dfrac{y}{b} + \dfrac{x}{a}\right) = 0
+\]
+que trata-se de duas retas concorrentes na origem:
+\[
+	r : \begin{cases}
+		\dfrac{y}{b} - \dfrac{x}{a} = 0\\
+		z = 0
+	\end{cases}, \quad s : \begin{cases}
+		\dfrac{y}{b} - \dfrac{x}{a} = 0\\
+		z = 0
+	\end{cases}.
+\]
+
+Se $k \ne 0$, podemos escrever
+\[
+	\dfrac{y^2}{kb^2} - \dfrac{x^2}{ka^2} = 1
+\]
+que \'e uma hip\'erbole.
+
+A interse\c{c}\~ao com o plano $\pi : y = k$ \'e dada por
+\[
+	z = \dfrac{k^2}{b^2} - \dfrac{x^2}{a^2}
+\]
+que \'e uma par\'abola. O mesmo ocorre com o plano $\pi : x = k$.
+
+
 \begin{figure}[h]
 	\centering
-	\caption{Parabolóide Elíptico}
-	% \psset{unit=0.5}
-	% \begin{pspicture*}(-6,-2.7)(6,8.5)
-	% 	\psset[pst-solides3d]{viewpoint=50 40 30 rtp2xyz,Decran=50}
-	% 	\psset{ngrid=.25 .25,linewidth=0.5pt}
-	% 	%superficie parametrica
-	% 	\defFunction[algebraic]{Paraboloid}(u,v)
- %    		{u*sin(v)}{1.5*u*cos(v)}{0.5*u^2}
-	% 	\psSolid[object=surfaceparametree,
- %    		base=0.001 pi 0.001 2 pi mul,
- %    		hue=0 .15,incolor=yellow,
- %    		function=Paraboloid]
-	% 	\axesIIID(0,0,3)(5,5,8)
-	% \end{pspicture*}
+	\caption{Parabol\'oide El{\'\i}ptico: $z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
+	\includegraphics{paraboloide_eliptico.pdf}
 \end{figure}
 
-\todo[color=blue!50]{Equação parabolóide hiperbólico}
 \begin{figure}[h]
 	\centering
-	\caption{Parabolóide Hiperbólico}
-	% \psset{unit=0.7}
-	% \psset[pst-solides3d]{viewpoint=80 30 30 rtp2xyz,Decran=50}
- %    \psset{ngrid=.5 .5,linewidth=0.1pt}
- %    \begin{pspicture*}(-4,-3.5)(4,4)
- %       \psSurface[algebraic,hue=.3 0](-4,-4)(4,4){(y^2-x^2)/4}
- %       \axesIIID(0,3,0)(10,6,6)
- %    \end{pspicture*}
+	\caption{Parabol\'oide Hiperb\'olico: $z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2}$}
+	\includegraphics{paraboloide_hiperbolico.pdf}
 \end{figure}
 % section paraboloide (end)
 
-\section{Hiperbolóide} % (fold)
+\section{Hiperbol\'oides} % (fold)
 \label{sec:hiperboloide}
 \begin{definicao}
-	\todo[color=red!80]{Definição de hiperbolóide}
+	Um \textbf{hiperbol\'oide de uma folha} \'e uma qu\'adrica descrita pela equa\c{c}\~ao
+	\[
+		\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1
+	\]
+	onde os n\'umeros reais $a$, $b$ e $c$ s\~ao positivos e pelo menos dois deles s\~ao distintos.\index{Qu\'adricas!Hiperbol\'oide de uma folha}
 \end{definicao}
 
-\todo[color=blue!50]{Equação do hiperbolóide de uma folha}
+Para o caso do hiperbol\'oide de uma folha a interse\c{c}\~ao com o plano $\pi : z = k$ \'e dada pelo sistema
+\[
+	\begin{cases}
+		\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 + \dfrac{k^2}{c^2}\\
+		z = k.
+	\end{cases}
+\]
+
+Denotando $p = 1 + k^2/c^2 > 0$ podemos escrever
+\begin{equation}\label{resultado_intersecao_hiperboloide_1_folha_planoz}
+	\dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
+\end{equation}
+
+Se $a = b$, ent\~ao a equa\c{c}\~ao \eqref{resultado_intersecao_hiperboloide_1_folha_planoz} descreve uma circunfer\^encia. Se $a \ne b$, ent\~ao a equa\c{c}\~ao \eqref{resultado_intersecao_hiperboloide_1_folha_planoz} descreve uma elipse.
+
+Agora a interser\c{c}\~ao com o plano $\pi : y = k$ \'e descrita pela equa\c{c}\~ao
+\begin{equation}\label{intersecao_hiperboloide_1_folha_planoy}
+	\dfrac{x^2}{a^2} - \dfrac{z^2}{c^2} = 1 - \dfrac{k^2}{b^2}.
+\end{equation}
+Se $k^2 = b^2$, obtemos
+\[
+	\dfrac{x^2}{a^2} - \dfrac{z^2}{c^2} = 0,	
+\]
+isto \'e,
+\[
+	\left(\dfrac{x}{a} - \dfrac{z}{c}\right)\left(\dfrac{x}{a} + \dfrac{z}{c}\right).
+\]
+Logo a interse\c{c}\~ao de $\pi$ com o hiperbol\'oide de uma folha \'e o par de retas concorrentes
+\[
+	r : \begin{cases}
+		\dfrac{x}{a} - \dfrac{z}{c} = 0\\
+		y = k
+	\end{cases}, \quad s : \begin{cases}
+		\dfrac{x}{a} + \dfrac{z}{c} = 0\\
+		y = k
+	\end{cases}.
+\]
+
+Se $k^2 \ne b^2$, ent\~ao fazendo $p = 1 - k^2/b^2$ podemos escrever a equa\c{c}\~ao \eqref{intersecao_hiperboloide_1_folha_planoy} como
+\[
+	\dfrac{x^2}{pa^2} - \dfrac{z^2}{pc^2} = 1	
+\]
+obtendo-se uma hip\'erbole.
+
+De modo an\'alogo, obtemos as mesmas interse\c{c}\~oes se considerarmos o plano $\pi : x = k$.
 \begin{figure}[h]
 	\centering
-	\caption{Hiperbolóide de uma folha}
-	% \psset{unit=0.7}
- %        \begin{pspicture*}(-4,-3)(4,3.8)
- %        \psset[pst-solides3d]{viewpoint=30 30 20 rtp2xyz,Decran=20}
- %        \psset{ngrid=.25 .25,linewidth=0.5pt}
- %        \defFunction[algebraic]{hyperboloidOne}(u,v){sqrt(1+u^2)*sin(v)}{sqrt(1+u^2)*cos(v)}{u}
- %        \psSolid[object=surfaceparametree, base=pi neg pi pi neg pi,hue=0 .3,incolor=yellow,function=hyperboloidOne]
- %        \axesIIID(1,1,1)(7,5,5)
- %    \end{pspicture*}
+	\caption{Hiperbol\'oide de uma folha: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$}
+	\includegraphics{hiperboloide_uma_folha.pdf}
 \end{figure}
 
-\todo[color=blue!70]{Equação do hiperbolóide de duas folhas}
+\begin{definicao}
+	Um \textbf{hiperbol\'oide de duas folhas} \'e uma qu\'adrica descrita pela equa\c{c}\~ao
+	\[
+		\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} - \dfrac{z^2}{c^2} = 1
+	\]
+	onde os n\'umeros reais $a$, $b$ e $c$ s\~ao positivos e pelo menos dois deles s\~ao distintos.\index{Qu\'adricas!Hiperbol\'oide de duas folhas}
+\end{definicao}
+
+A interse\c{c}\~ao do hiperbol\'oide de duas folhas com a plano $\pi: z = k$ \'e dada por
+\[
+	\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1 +  \dfrac{k^2}{c^2}.
+\]
+Denotando $p = 1 + k^2/c^2$ podemos escreve a equa\c{c}\~ao anterior como
+\[
+	\dfrac{y^2}{pb^2} - \dfrac{x^2}{pa^2} = 1
+\]
+que representa uma hip\'erbolo.
+
+A interse\c{c}\~ao com o plano $\pi: x = k$ \'e dada por
+\[
+	\dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1 +  \dfrac{k^2}{b^2}.
+\]
+e fazendo $p = 1 + k^2/b^2$ obtemos
+\[
+	\dfrac{y^2}{pb^2} - \dfrac{z^2}{pc^2} = 1
+\]
+que tamb\'em \'e uma hip\'erbolo.
+
+Agora a interse\c{c}\~ao com o plano $\pi : y = k$ \'e dada por
+\begin{equation}\label{intersecao_hiperboloide_2_folhas_planoy}
+	\dfrac{x^2}{a^2} + \dfrac{z^2}{c^2} = \dfrac{k^2}{c^2} - 1.	
+\end{equation}
+
+Se $k^2 < b^2$, ent\~ao $k^2/b^2 - 1 < 0$ e da{\'\i} a equa\c{c}\~ao \eqref{intersecao_hiperboloide_2_folhas_planoy} n\~ao admite solu\c{c}\~ao.
+
+Se $k^2 = k^2$, ent\~ao a interse\c{c}\~ao \'e ou o ponto $(0,k,0)$ ou o ponto $(0,-k,0)$.
+
+Se $k^2 > b^2$, isto \'e, $k < -b$ ou $k > b$, ent\~ao tomando $p = k^2/b^2 - 1 > 0$, podemos escrever \eqref{intersecao_hiperboloide_2_folhas_planoy} como
+\[
+	\dfrac{x^2}{pa^2} + \dfrac{z^2}{pc^2} = 1.
+\]
+Assim se $a = c$, ent\~ao obtemos uma circunfer\^encia e se $a \ne c$, ent\~ao a interse\c{c}\~ao \'e uma elipse.
+
+
+
+
+
 \begin{figure}[h]
 	\centering
-	\caption{Hiperbolóide duas folhas}
-	% \psset{unit=0.6}
-	% \begin{pspicture*}(-5.5,-4)(5.5,3.5)
-	% 	\psset[pst-solides3d]{viewpoint=60 50 30 rtp2xyz,Decran=20}
-	% 	\psset{algebraic,ngrid=.25 .25,linewidth=0.5pt}
-	% 	%superficie parametrica
-	% 	\defFunction{hyperboloidTwoN}(u,v){-2*u}{sqrt(u^2-1)*cos(v)}{sqrt(u^2-1)*sin(v)}
-	% 	\psSolid[object=surfaceparametree,base=1.001 2 pi mul 0.01 2 pi mul,hue=.3 0,incolor=yellow,function=hyperboloidTwoN]
-	% 	%superficie parametrica
-	% 	\defFunction{hyperboloidTwo}(u,v){2*u}{sqrt(u^2-1)*sin(v)}{sqrt(u^2-1)*cos(v)}
-	% 	\psSolid[object=surfaceparametree,base=1.001 2 pi mul 0.01 2 pi mul,hue=.3 0,incolor=yellow,function=hyperboloidTwo]
-	% 	\axesIIID(-2,0,0)(16,8,8)
-	% \end{pspicture*}
+	\caption{Hiperbol\'oide duas folhas: $-\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
+	\includegraphics{hiperboloide_duas_folhas.pdf}
 \end{figure}
 
 % section hiperboloide (end)
-
-
-
-
-\missingfigure{A lot of figures I have to make \ldots}
 
 
 % \begin{figure}

@@ -1,0 +1,42 @@
+%!TEX program = xelatex 
+\documentclass[preview]{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \newrgbcolor{zzttqq}{0.6 0.2 0}
+    \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+    \begin{pspicture*}(1,-0.5)(11,6)
+        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](4,4)(2,2)(8,2)(10,4)
+        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](3.9,2.55)(1.9,0.55)(7.9,0.55)(9.9,2.55)
+        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](4.03,5.25)(2.03,3.25)(8.03,3.25)(10.03,5.25)
+        \psline[linecolor=zzttqq](4,4)(2,2)
+        \psline[linecolor=zzttqq](2,2)(8,2)
+        \psline[linecolor=zzttqq](8,2)(10,4)
+        \psline[linecolor=zzttqq](10,4)(4,4)
+        \psline[linecolor=zzttqq](3.9,2.55)(1.9,0.55)
+        \psline[linecolor=zzttqq](1.9,0.55)(7.9,0.55)
+        \psline[linecolor=zzttqq](7.9,0.55)(9.9,2.55)
+        \psline[linecolor=zzttqq](9.9,2.55)(3.9,2.55)
+        \psline[linecolor=zzttqq](4.03,5.25)(2.03,3.25)
+        \psline[linecolor=zzttqq](2.03,3.25)(8.03,3.25)
+        \psline[linecolor=zzttqq](8.03,3.25)(10.03,5.25)
+        \psline[linecolor=zzttqq](10.03,5.25)(4.03,5.25)
+        \rput[tl](8.79,5){$\pi_1$}
+        \rput[tl](8.89,3.8){$\pi_2$}
+        \rput[tl](8.77,2.4){$\pi_3$}
+    \end{pspicture*}
+\end{document}

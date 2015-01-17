@@ -1,0 +1,58 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    \definecolor{qqwuqq}{rgb}{0,0.39,0}
+    \definecolor{xdxdff}{rgb}{0.49,0.49,1}
+    \definecolor{qqqqff}{rgb}{0,0,1}
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \draw[->,color=black] (-0.8,0) -- (5,0);
+        \foreach \x in {,1,2,3,4}
+        \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt);
+        \draw[color=black] (4.68,0.08) node [anchor=north west] {$x$};
+        \draw[->,color=black] (0,-0.8) -- (0,5);
+        \foreach \y in {,1,2,3,4}
+        \draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
+        \draw[color=black] (0.1,4.6) node [anchor=east] {$y$};
+        \clip(-0.8,-0.8) rectangle (5,5);
+        \draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4,1.28) -- (3.72,1.28) -- (3.72,1) -- (4,1) -- cycle; 
+        \draw (4,1)-- (4,3);
+        \draw (2,1)-- (4,1);
+        \draw (2,1)-- (4,3);
+        \draw [dash pattern=on 2pt off 2pt] (4,3)-- (0,3);
+        \draw [dash pattern=on 2pt off 2pt] (2,1)-- (0,1);
+        \draw [dash pattern=on 2pt off 2pt] (2,1)-- (2,0);
+        \draw [dash pattern=on 2pt off 2pt] (4,1)-- (4,0);
+        \begin{scriptsize}
+            \fill [color=qqqqff] (2,1) circle (1.5pt);
+            \draw[color=qqqqff] (2,1.26) node {$Q$};
+            \fill [color=qqqqff] (4,3) circle (1.5pt);
+            \draw[color=qqqqff] (4.16,3.26) node {$P$};
+            \fill [color=qqqqff] (4,1) circle (1.5pt);
+            \draw[color=qqqqff] (4.16,1) node {$S$};
+            \fill [color=qqqqff] (0,3) circle (1.5pt);
+            \draw[color=qqqqff] (-0.28,3) node {$y_1$};
+            \fill [color=qqqqff] (0,1) circle (1.5pt);
+            \draw[color=qqqqff] (-0.28,1) node {$y_2$};
+            \fill [color=qqqqff] (2,0) circle (1.5pt);
+            \draw[color=qqqqff] (2,-0.26) node {$x_2$};
+            \fill [color=qqqqff] (4,0) circle (1.5pt);
+            \draw[color=qqqqff] (4,-0.26) node {$x_1$};
+        \end{scriptsize}
+    \end{tikzpicture}
+\end{document}

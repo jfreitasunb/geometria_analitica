@@ -1,0 +1,38 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[scale=2,tdplot_main_coords]
+        \coordinate[label=above left:$O$] (A) at (0,0,0);
+
+        %constr\'oi os eixos cartesianos
+        \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+        \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
+        \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
+
+        \tdplotsetcoord{P}{2}{45}{60}
+        \filldraw (P) circle (1pt) node[above right]{$P(a, b, c)$};
+
+        \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$a$};
+        \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$b$};
+        \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$c$};
+        \draw[dashed, color=red] (Pxy) -- (P);
+    \end{tikzpicture}
+\end{document}

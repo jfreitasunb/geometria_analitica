@@ -1,0 +1,52 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}
+      \coordinate[label=below:$O$] (A) at (-8,0);
+      \coordinate (X) at (-6,0);
+      \coordinate (Y) at (-8,2);
+      \coordinate[label=right:$\vec{OP}\eq \vec{0}$] (P) at (-7.5,1);
+
+      \draw[->,>=triangle 45] (A) -- (X)
+      node[midway,below]{$\vec{u}$};
+      \draw[->,>=triangle 45] (A) -- (Y)
+      node[midway,left]{$\vec{v}$};
+      \draw[anchor=base,color=blue] (A.center)  ++(.3,0)  -- ++(0,0.3) -- ++(-0.3,0);
+
+      \coordinate[label=below:$O$] (B) at (-4,0);
+      \coordinate (C) at (-2.5,0);
+      \coordinate (D) at (-1,0);
+
+      \draw[->,>=triangle 45] (B) -- (D)
+      node[midway,below]{$\vec{u}$};
+      \draw[->,>=triangle 45,red] (B) -- (C)
+      node[midway,above]{$\vec{v} = \vec{OP}$};
+      
+      \coordinate[label=below:$O$] (B) at (2,0);
+      \coordinate (C) at (0,0);
+      \coordinate (D) at (4,0);
+
+      \draw[->,>=triangle 45] (B) -- (D)
+      node[midway,below]{$\vec{u}$};
+      \draw[->,>=triangle 45,color=red] (B) -- (C)
+      node[midway,above]{$\vec{v} = \vec{OP}$};
+    \end{tikzpicture}
+\end{document}

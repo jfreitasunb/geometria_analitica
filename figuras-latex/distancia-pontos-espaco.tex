@@ -1,0 +1,52 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \tdplotsetmaincoords{70}{110}
+    \begin{tikzpicture}[scale=2,tdplot_main_coords]
+        \coordinate[label=above left:$O$] (A) at (0,0,0);
+
+        %constr\'oi os eixos cartesianos
+        \draw[thick,->,black] (0,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+        \draw[thick,->] (0,0,0) -- (0,2.5,0) node[anchor=north east]{$y$};
+        \draw[thick,->] (0,0,0) -- (0,0,2.5) node[anchor=east]{$z$};
+
+        \tdplotsetcoord{P}{2}{45}{40}
+        \filldraw (P) circle (1pt) node[above right]{$P$};
+        \tdplotsetcoord{Q}{2.7}{50}{80}
+        \filldraw (Q) circle (1pt) node[above right]{$Q$};
+
+        \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$x_1$};
+        \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$y_1$};
+        \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$z_1$};
+        \draw[dashed, color=red] (Pxy) -- (P);
+        \draw[dashed, color=red] (Qx) -- (Qxy) node[at start,left]{$x_2$};
+        \draw[dashed, color=red] (Qy) -- (Qxy)node[at start,above]{$y_2$};
+        \draw[dashed, color=red] (Qz) -- (Q)node[at start,left]{$z_2$};
+        \draw[dashed, color=red] (Qxy) -- (Q);
+
+        \filldraw ($(Q)!(P)!(Qxy)$) circle (1pt)node[right]{$S$};
+        \draw[color=green] ($(Q)!(P)!(Qxy)$) -- (P);
+        \filldraw (Pxy) circle (1pt) node[below]{$P_0$};
+        \filldraw (Qxy) circle (1pt) node[below]{$Q_0$};
+
+        \draw[color=blue] (P) -- (Q);
+        \draw[color=green] (Pxy) -- (Qxy);
+    \end{tikzpicture}
+\end{document}

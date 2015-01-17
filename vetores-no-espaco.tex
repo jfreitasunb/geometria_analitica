@@ -10,39 +10,41 @@ Fixemos um ponto $O$ no espa\c{c}o, que ser\'a denominado como \textbf{origem}. 
 \begin{figure}[!h]
   \centering
   \caption{Sistema de coordenadas tridimensionais}
-  \tdplotsetmaincoords{70}{110}
-  \begin{tikzpicture}[scale=2,tdplot_main_coords]
-    \coordinate[label=above left:$O$] (A) at (0,0,0);
+  \includegraphics{eixos-coordenados-espaco.pdf}
+  % \tdplotsetmaincoords{70}{110}
+  % \begin{tikzpicture}[scale=2,tdplot_main_coords]
+  %   \coordinate[label=above left:$O$] (A) at (0,0,0);
     
-    %constr\'oi os eixos cartesianos
-    \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
-    \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
-    \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
-    \end{tikzpicture}
+  %   %constr\'oi os eixos cartesianos
+  %   \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+  %   \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
+  %   \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
+  %   \end{tikzpicture}
 \end{figure}
 
 Projetando um ponto $P$ do espa\c{c}o ortogonalmente sobre cada um dos eixos coordenados podemos representar os pontos do espa\c{c}o por ternas ordenadas $(a,b,c)$ de n\'umeros reais.
 
 \begin{figure}[!h]
   \centering
-  \caption{Coordenadas de um ponto no espaço tridimensional}
-  \tdplotsetmaincoords{70}{110}
-  \begin{tikzpicture}[scale=2,tdplot_main_coords]
-    \coordinate[label=above left:$O$] (A) at (0,0,0);
+  \caption{Coordenadas de um ponto no espa\c{c}o tridimensional}
+  \includegraphics{coordenadas-ponto-espaco.pdf}
+  % \tdplotsetmaincoords{70}{110}
+  % \begin{tikzpicture}[scale=2,tdplot_main_coords]
+  %   \coordinate[label=above left:$O$] (A) at (0,0,0);
     
-    %constr\'oi os eixos cartesianos
-    \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
-    \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
-    \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
+  %   %constr\'oi os eixos cartesianos
+  %   \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
+  %   \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
+  %   \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
 
-    \tdplotsetcoord{P}{2}{45}{60}
-    \filldraw (P) circle (1pt) node[above right]{$P(a, b, c)$};
+  %   \tdplotsetcoord{P}{2}{45}{60}
+  %   \filldraw (P) circle (1pt) node[above right]{$P(a, b, c)$};
 
-    \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$a$};
-    \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$b$};
-    \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$c$};
-    \draw[dashed, color=red] (Pxy) -- (P);
-    \end{tikzpicture}
+  %   \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$a$};
+  %   \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$b$};
+  %   \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$c$};
+  %   \draw[dashed, color=red] (Pxy) -- (P);
+  %   \end{tikzpicture}
 \end{figure}
 
 Assim os pontos de $\real^3$ s\~ao descritos por
@@ -56,38 +58,39 @@ Sejam $P(x_1,y_1,z_1)$ e $Q(x_2,y_2,z_2)$ dois pontos de $\real^3$. Tra\c{c}ando
 \]
 \begin{figure}
   \centering
-  \caption{Distância entre pontos em $\real^3$}
-  \tdplotsetmaincoords{70}{110}
-  \begin{tikzpicture}[scale=2,tdplot_main_coords]
-    \coordinate[label=above left:$O$] (A) at (0,0,0);
+  \caption{Dist\^ancia entre pontos em $\real^3$}
+  \includegraphics{distancia-pontos-espaco.pdf}
+  % \tdplotsetmaincoords{70}{110}
+  % \begin{tikzpicture}[scale=2,tdplot_main_coords]
+  %   \coordinate[label=above left:$O$] (A) at (0,0,0);
     
-    %constr\'oi os eixos cartesianos
-    \draw[thick,->,black] (0,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
-    \draw[thick,->] (0,0,0) -- (0,2.5,0) node[anchor=north east]{$y$};
-    \draw[thick,->] (0,0,0) -- (0,0,2.5) node[anchor=east]{$z$};
+  %   %constr\'oi os eixos cartesianos
+  %   \draw[thick,->,black] (0,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+  %   \draw[thick,->] (0,0,0) -- (0,2.5,0) node[anchor=north east]{$y$};
+  %   \draw[thick,->] (0,0,0) -- (0,0,2.5) node[anchor=east]{$z$};
 
-    \tdplotsetcoord{P}{2}{45}{40}
-    \filldraw (P) circle (1pt) node[above right]{$P$};
-    \tdplotsetcoord{Q}{2.7}{50}{80}
-    \filldraw (Q) circle (1pt) node[above right]{$Q$};
+  %   \tdplotsetcoord{P}{2}{45}{40}
+  %   \filldraw (P) circle (1pt) node[above right]{$P$};
+  %   \tdplotsetcoord{Q}{2.7}{50}{80}
+  %   \filldraw (Q) circle (1pt) node[above right]{$Q$};
 
-    \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$x_1$};
-    \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$y_1$};
-    \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$z_1$};
-    \draw[dashed, color=red] (Pxy) -- (P);
-    \draw[dashed, color=red] (Qx) -- (Qxy) node[at start,left]{$x_2$};
-    \draw[dashed, color=red] (Qy) -- (Qxy)node[at start,above]{$y_2$};
-    \draw[dashed, color=red] (Qz) -- (Q)node[at start,left]{$z_2$};
-    \draw[dashed, color=red] (Qxy) -- (Q);
+  %   \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$x_1$};
+  %   \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$y_1$};
+  %   \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$z_1$};
+  %   \draw[dashed, color=red] (Pxy) -- (P);
+  %   \draw[dashed, color=red] (Qx) -- (Qxy) node[at start,left]{$x_2$};
+  %   \draw[dashed, color=red] (Qy) -- (Qxy)node[at start,above]{$y_2$};
+  %   \draw[dashed, color=red] (Qz) -- (Q)node[at start,left]{$z_2$};
+  %   \draw[dashed, color=red] (Qxy) -- (Q);
 
-    \filldraw ($(Q)!(P)!(Qxy)$) circle (1pt)node[right]{$S$};
-    \draw[color=green] ($(Q)!(P)!(Qxy)$) -- (P);
-    \filldraw (Pxy) circle (1pt) node[below]{$P_0$};
-    \filldraw (Qxy) circle (1pt) node[below]{$Q_0$};
+  %   \filldraw ($(Q)!(P)!(Qxy)$) circle (1pt)node[right]{$S$};
+  %   \draw[color=green] ($(Q)!(P)!(Qxy)$) -- (P);
+  %   \filldraw (Pxy) circle (1pt) node[below]{$P_0$};
+  %   \filldraw (Qxy) circle (1pt) node[below]{$Q_0$};
 
-    \draw[color=blue] (P) -- (Q);
-    \draw[color=green] (Pxy) -- (Qxy);
-    \end{tikzpicture}
+  %   \draw[color=blue] (P) -- (Q);
+  %   \draw[color=green] (Pxy) -- (Qxy);
+  %   \end{tikzpicture}
 \end{figure}
 
 Agora, $|SQ| = |z_2 - z_1|$ e da{\'\i}
@@ -96,7 +99,7 @@ Agora, $|SQ| = |z_2 - z_1|$ e da{\'\i}
 \]
 
 \begin{exemplos}
-  A dist\^ancia entre os pontos $P = (2,-1,1)$ e $Q = (-3,4,2)$ \'e
+  A dist\^ancia entre os pontos $P(2,-1,1)$ e $Q(-3,4,2)$ \'e
   \[
     d(P,Q) = \sqrt{[2 - (-3)]^2 + (-1-4)^2 + (1-2)^2} = \sqrt{51}.
   \]
@@ -237,7 +240,7 @@ Um vetor de norma 1 \'e chamado de \textbf{vetor unit\'ario}. Dado um vetor n\~a
   \begin{enumerate}
     \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\norm{\vec{u}} \ne 0$.
     \item $\norm{\vec{u}} \ne 0$ se, e somente se, $\vec{u} \ne \vec{0}$.
-    \item $\norm{\alpha\vec{u}} = \mid\alpha\mid\norm{\vec{u}}$.
+    \item $\norm{\alpha\vec{u}} = |\alpha|\norm{\vec{u}}$.
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
@@ -264,26 +267,27 @@ Um vetor de norma 1 \'e chamado de \textbf{vetor unit\'ario}. Dado um vetor n\~a
 Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles.
 \begin{figure}[!h]
   \centering
-  \caption{Ângulo entre vetores em $\real^3$}
-  \begin{tikzpicture}
-    \coordinate (A) at (0,0);
-    \coordinate (X) at (4,1);
-    \coordinate (Y) at (3,3.5);
+  \caption{\^Angulo entre vetores em $\real^3$}
+  \includegraphics{angulo-vetores-espaco.pdf}
+  % \begin{tikzpicture}
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (X) at (4,1);
+  %   \coordinate (Y) at (3,3.5);
 
-    \draw[->,>=triangle 45] (A) -- (X)
-    node[midway,below]{$\vec{v}$};
-    \draw[->,>=triangle 45] (A) -- (Y)
-    node[midway,above]{$\vec{u}$};
-    \draw[dashed,->,>=triangle 45] (X) -- (Y)
-    node[midway,above right]{$\vec{u} - \vec{v}$};
+  %   \draw[->,>=triangle 45] (A) -- (X)
+  %   node[midway,below]{$\vec{v}$};
+  %   \draw[->,>=triangle 45] (A) -- (Y)
+  %   node[midway,above]{$\vec{u}$};
+  %   \draw[dashed,->,>=triangle 45] (X) -- (Y)
+  %   node[midway,above right]{$\vec{u} - \vec{v}$};
 
-    % Mark the angle XAY
-    \begin{scope}
-      \path[clip] (A) -- (X) -- (Y);
-      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      \node at ($(A)+(30:7mm)$) {$\theta$};
-    \end{scope}
-  \end{tikzpicture}
+  %   % Mark the angle XAY
+  %   \begin{scope}
+  %     \path[clip] (A) -- (X) -- (Y);
+  %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+  %     \node at ($(A)+(30:7mm)$) {$\theta$};
+  %   \end{scope}
+  % \end{tikzpicture}
 \end{figure}
 
 
@@ -404,8 +408,8 @@ Dados vetores $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$ queremos enc
 Podemos reescrever este \'ultimo sistema como
 \begin{equation}\label{sistemaprodutovetorial}
   \begin{cases}
-    a_1x + b_1y + c_1z = 0\\
-    a_2x + b_2y + c_2z = 0
+    a_1x + b_1y = -c_1z\\
+    a_2x + b_2y = -c_2z
   \end{cases}.
 \end{equation}
 Suponha que $\vec{u}$ e $\vec{v}$ n\~ao s\~ao paralelos, da{\'\i} pelo menos um dos determinantes
@@ -421,7 +425,7 @@ d_{ab} = \det \begin{pmatrix}
   b_2 & c_2
 \end{pmatrix}
 \]
-\'e diferente de zero. Suponha ent\~ao que $d_{ab} \ne 0$. Usando a Regra de Cramer, a solu\c{c}oa do sistema \eqref{sistemaprodutovetorial} \'e dada por
+\'e diferente de zero. Suponha ent\~ao que $d_{ab} \ne 0$. Usando a Regra de Cramer, a solu\c{c}\~ao do sistema \eqref{sistemaprodutovetorial} \'e dada por
 \begin{align*}
   x = \dfrac{1}{d_{ab}}\det \begin{pmatrix}
   -c_1z & b_1\\
@@ -501,7 +505,7 @@ Temos
   Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$ e $\alpha \in \real$. Temos
   \begin{enumerate}[label=({\alph*})]
     \item $\vec{u}\times\vec{v} = -\vec{v}\times\vec{u}$;
-    \item $\vec{u}\times\vec{v} = 0$ se, e somente se, $\vec{u}\varparallel\vec{v}$;
+    \item $\vec{u}\times\vec{v} = \vec{0}$ se, e somente se, $\vec{u}\varparallel\vec{v}$;
     \item $\alpha(\vec{u}\times\vec{v}) = (\alpha\vec{u})\times\vec{v} = \vec{u}\times(\alpha\vec{v})$;
     \item $\vec{u}\times(\vec{v} + \vec{w}) = \vec{u}\times\vec{v} + \vec{u}\times\vec{w}$.
   \end{enumerate}
@@ -525,7 +529,7 @@ Temos
 \end{prova}
 
 \begin{proposicao}
-  Quaisquer que sejam os vetores n\~ao nulos $\vec{u}$ e $\vec{v}$ em $\real^2$, tem-se
+  Quaisquer que sejam os vetores n\~ao nulos $\vec{u}$ e $\vec{v}$ em $\real^3$, tem-se
   \[
     \norm{\vec{u}\times\vec{v}} = \norm{\vec{u}}\norm{\vec{v}}\sin\theta
   \]
@@ -540,40 +544,41 @@ Temos
   \[
     \norm{\vec{u}\times\vec{v}} = \norm{\vec{u}}\norm{\vec{v}}\sin\theta
   \]
-  como quer{\'\i}amos.
+  pois $0 \le \theta \le \pi$.
 \end{prova}
 
 Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
 \begin{figure}[!h]
   \centering
-  \caption{Interpretação geométrica do produto vetorial}
-  \begin{tikzpicture}
-    \coordinate (A) at (0,0);
-    \coordinate (X) at (4,0);
-    \coordinate (Y) at (3,4);
-    \coordinate (W) at (0,3.5);
+  \caption{Interpreta\c{c}\~ao geom\'etrica do produto vetorial}
+  \includegraphics{area-paralelogramo.pdf}
+  % \begin{tikzpicture}
+  %   \coordinate (A) at (0,0);
+  %   \coordinate (X) at (4,0);
+  %   \coordinate (Y) at (3,4);
+  %   \coordinate (W) at (0,3.5);
 
-    \coordinate[label=right:$D$]  (D) at ($(X)+(Y)$);
+  %   \coordinate[label=right:$D$]  (D) at ($(X)+(Y)$);
 
-    \draw[color=red] ($(A)!(Y)!(X)$) -- (Y) node[midway,right]{$h$};
+  %   \draw[color=red] ($(A)!(Y)!(X)$) -- (Y) node[midway,right]{$h$};
 
-    \draw[dashed,thick,color=blue] (X)--(D);
-    \draw[dashed,thick,color=blue] (Y)--(D);
-    \draw[->,>=triangle 45] (A) -- (X)
-      node[midway,below]{$\vec{v}$};
-    \draw[->,>=triangle 45] (A) -- (Y)
-      node[midway,above]{$\vec{u}$};
-    \draw[->,>=triangle 45] (A) -- (W)
-      node[midway,left]{$\vec{u}\times\vec{v}$};
+  %   \draw[dashed,thick,color=blue] (X)--(D);
+  %   \draw[dashed,thick,color=blue] (Y)--(D);
+  %   \draw[->,>=triangle 45] (A) -- (X)
+  %     node[midway,below]{$\vec{v}$};
+  %   \draw[->,>=triangle 45] (A) -- (Y)
+  %     node[midway,above]{$\vec{u}$};
+  %   \draw[->,>=triangle 45] (A) -- (W)
+  %     node[midway,left]{$\vec{u}\times\vec{v}$};
 
 
-    % Mark the angle XAY
-    \begin{scope}
-      \path[clip] (A) -- (X) -- (Y);
-      \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-      \node at ($(A)+(30:7mm)$) {$\theta$};
-    \end{scope}
-  \end{tikzpicture}
+  %   % Mark the angle XAY
+  %   \begin{scope}
+  %     \path[clip] (A) -- (X) -- (Y);
+  %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+  %     \node at ($(A)+(30:7mm)$) {$\theta$};
+  %   \end{scope}
+  % \end{tikzpicture}
 \end{figure}
 
 A \'area $\mathcal{A}$ desse paralelogramo \'e dado Por
@@ -586,7 +591,7 @@ Neste caso $b = \norm{\vec{u}}$ e $h = \norm{\vec{v}}\sin\theta$. Logo
 \]
 Portanto o vetor $\vec{u}\times\vec{v}$ \'e tal que seu m\'odulo \'e numericamente igual \`a \'area do paralelogramo definido por $\vec{u}$ e $\vec{v}$.
 \begin{exemplo}
-  Calcule a \'area do tri\^angulo de v\'ertices $A = (3,2,0)$, $B = (0,4,3)$ e $C = (1,0,2)$.
+  Calcule a \'area do tri\^angulo de v\'ertices $A(3,2,0)$, $B(0,4,3)$ e $C(1,0,2)$.
   \begin{solucao}
     Note que a \'area do tri\^angulo \'e metade da \'area do paralelogramo. Assim seja
     \begin{align*}
@@ -655,40 +660,41 @@ Portanto
 Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralelep{\'\i}pedo definido por $\vec{u}$, $\vec{v}$ e $\vec{w}$:
 \begin{figure}[!h]
   \centering
-  \caption{Interpretação geométrica do produto misto}
-  \tdplotsetmaincoords{60}{125}
-  \begin{tikzpicture}
-      [tdplot_main_coords,
-        cube/.style={very thick,black},
-        grid/.style={very thin,gray},
-        axis/.style={->,blue,thick},scale=2]
+  \caption{Interpreta\c{c}\~ao geom\'etrica do produto misto}
+  \includegraphics{volume-paralelepipedo.pdf}
+  % \tdplotsetmaincoords{60}{125}
+  % \begin{tikzpicture}
+  %     [tdplot_main_coords,
+  %       cube/.style={very thick,black},
+  %       grid/.style={very thin,gray},
+  %       axis/.style={->,blue,thick},scale=2]
 
-    \coordinate (A) at (2,0,0);
-    \coordinate (B) at (2,1,2);
-    \coordinate (C) at (2,1,0.5);
-    \coordinate (D) at (2,0,2);
+  %   \coordinate (A) at (2,0,0);
+  %   \coordinate (B) at (2,1,2);
+  %   \coordinate (C) at (2,1,0.5);
+  %   \coordinate (D) at (2,0,2);
 
-    %draw the top and bottom of the cube
-    \draw[dashed,cube] (0,0,0) -- (0,2,0);
-    \draw[dashed,cube] (0,2,0) -- (2,2,0);
-    \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,2,0) node[midway,below]{$\vec{u}$};
-    \draw[->,>=triangle 45,color=red] (2,0,0) -- (0,0,0) node[midway,left]{$\vec{v}$};
-    %\draw[cube] (0,0,0) -- (0,2,0) -- (2,2,0) -- (2,0,0) -- cycle;
-    \draw[dashed,cube] (0,1,2) -- (0,3,2) -- (2,3,2) -- (2,1,2) -- cycle;
-    \draw[dashed,color=red] (2,1,0.5) -- (2,1,2) node[midway,left]{$h$};
-    %draw the edges of the cube
-    \draw[dashed,cube] (0,0,0) -- (0,1,2);
-    \draw[dashed,cube] (0,2,0) -- (0,3,2);
-    \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,1,2) node[midway,left]{$\vec{w}$};
-    \draw[->,>=triangle 45,color=blue] (2,0,0) -- (2,0,2) node[midway,left]{$\vec{u}\times\vec{v}$};
-    \draw[dashed,cube] (2,2,0) -- (2,3,2);
+  %   %draw the top and bottom of the cube
+  %   \draw[dashed,cube] (0,0,0) -- (0,2,0);
+  %   \draw[dashed,cube] (0,2,0) -- (2,2,0);
+  %   \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,2,0) node[midway,below]{$\vec{u}$};
+  %   \draw[->,>=triangle 45,color=red] (2,0,0) -- (0,0,0) node[midway,left]{$\vec{v}$};
+  %   %\draw[cube] (0,0,0) -- (0,2,0) -- (2,2,0) -- (2,0,0) -- cycle;
+  %   \draw[dashed,cube] (0,1,2) -- (0,3,2) -- (2,3,2) -- (2,1,2) -- cycle;
+  %   \draw[dashed,color=red] (2,1,0.5) -- (2,1,2) node[midway,left]{$h$};
+  %   %draw the edges of the cube
+  %   \draw[dashed,cube] (0,0,0) -- (0,1,2);
+  %   \draw[dashed,cube] (0,2,0) -- (0,3,2);
+  %   \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,1,2) node[midway,left]{$\vec{w}$};
+  %   \draw[->,>=triangle 45,color=blue] (2,0,0) -- (2,0,2) node[midway,left]{$\vec{u}\times\vec{v}$};
+  %   \draw[dashed,cube] (2,2,0) -- (2,3,2);
 
-    \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](A,B,C);
-    \draw ($(A)+(0.2,1,1.8)$) node[below,font=\small] {$\theta$};
+  %   \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](A,B,C);
+  %   \draw ($(A)+(0.2,1,1.8)$) node[below,font=\small] {$\theta$};
 
-    \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](B,A,D);
-    \draw ($(A)+(-0.2,0,0.6)$) node[below,font=\small] {$\theta$};
-  \end{tikzpicture}
+  %   \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](B,A,D);
+  %   \draw ($(A)+(-0.2,0,0.6)$) node[below,font=\small] {$\theta$};
+  % \end{tikzpicture}
 \end{figure}
 
 A altura $h$ \'e dada por
@@ -709,7 +715,7 @@ isto \'e,
 \end{equation}
 
 \begin{exemplo}
-  Os pontos $P(0,1,1)$, $Q(1,0,2)$, $R(1,-2,0)$ e $S = (-2,2,-2)$ definem um paralelep{\'\i}pedo? Em caso afirmativo, qual o seu volume?
+  Os pontos $P(0,1,1)$, $Q(1,0,2)$, $R(1,-2,0)$ e $S(-2,2,-2)$ definem um paralelep{\'\i}pedo? Em caso afirmativo, qual o seu volume?
   \begin{solucao}
     Se os pontos $P$, $Q$, $R$ e $S$ definirem um paralelep{\'\i}pedo, seu volume dever\'a ser diferente de zero. Assim considere os vetores
     \begin{align*}

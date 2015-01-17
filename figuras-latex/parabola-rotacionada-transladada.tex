@@ -1,0 +1,34 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \psset{unit=0.5cm}
+    \psset{ticksize=0pt}
+    \begin{pspicture*}(-6,-6)(10,10)
+        \psaxes[labels=none]{->}(0,0)(-6,-6)(9,9)[$x$,0][$y$,-180]
+        \rput{45}(0,0){
+        \psaxes[labels=none,linecolor=green]{->}(0,0)(-5,-5)(9,7)[$\color{green} x_1$,0][$\color{green} y_1$,-180]  
+        }
+        \rput{45}(0,0){
+        \psaxes[labels=none,linecolor=red]{->}(0.3535,0)(-5,-5)(7,7)[$\color{red} x_2$,150][$\color{red} y_2$,0]
+        \psline[linestyle=dashed,linecolor=orange](-0.3535,-5)(-0.3535,5)
+        }
+        \psplotImp[algebraic,linecolor=blue,stepFactor=0.1,linewidth=0.5pt](-10,-10)(10,10){x^2 - 2*x*y + y^2 - 2*x - 2*y + 1}
+    \end{pspicture*}
+\end{document}

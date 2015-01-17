@@ -1,0 +1,25 @@
+%!TEX program = xelatex 
+\documentclass[12pt]{report}
+\usepackage{pst-3dplot}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\begin{document}
+\begin{pspicture}(-.25\linewidth,-1)(.25\linewidth,4.5) 
+\pstThreeDCoor[xMax=3,yMax=3, zMax=4,IIIDticks]
+\pstThreeDLine(2,0,3)(-2,0,3)
+\pstThreeDLine(0,1,3)(0,-1,3)
+\pstThreeDPut(0,0,2){\psdot}
+\parametricplotThreeD[plotstyle=curve,yPlotpoints=20](0,360)(0,1){t cos 2 mul u mul t sin u mul u dup mul 2 add}
+\end{pspicture}
+
+
+\begin{pspicture}(-.25\linewidth
+,-1)%
+(.25\linewidth,7.5)
+\pstParaboloid[showInside=false,
+SegmentColor={[cmyk
+]{0.8,0.1,.11,0}}]{4}{5}%
+\pstThreeDCoor[xMax=3,yMax=3,
+zMax=7.5,IIIDticks]
+\end{pspicture}
+\end{document}

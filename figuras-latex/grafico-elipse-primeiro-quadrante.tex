@@ -1,0 +1,29 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+  \pagenumbering{gobble}
+  \psset{ticksize=0pt}
+  \begin{pspicture*}(-1.2,-1)(5,5)
+    \psaxes[labels=none]{->}(0,0)(-0.5,-0.7)(4.5,4)
+    \psplot[algebraic,linecolor=blue,plotpoints=20000]{0}{3.998888999}{(3/4)*sqrt(16 - x^2)}
+    \rput(-0.4,3){$b$}
+    \rput(4,-0.4){$a$}
+  \end{pspicture*}
+\end{document}

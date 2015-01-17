@@ -1,0 +1,18 @@
+%!TEX program = xelatex 
+\documentclass{standalone}
+\usepackage{pst-grad,pst-3dplot}
+
+\begin{document}
+
+\psset{unit=2.5cm}
+\begin{pspicture}(-4,-4)(4,4)
+
+\pstThreeDCoor[xMin=-3,xMax=3,yMin=-3,yMax=3,zMin=-3,zMax=3]
+\parametricplotThreeD[plotstyle=curve,drawStyle=yLines](0,180)(0,360){%
+  u sin t cos mul 1.7 mul
+  u sin t sin mul 2.5 mul
+  u cos 2.2 mul
+}
+\end{pspicture}
+
+\end{document}

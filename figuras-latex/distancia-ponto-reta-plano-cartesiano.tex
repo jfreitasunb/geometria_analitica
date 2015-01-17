@@ -1,0 +1,49 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}[scale=2]%soma de vetores no plano
+        \coordinate (D) at (-1,-1);
+        \coordinate[label=left:$r$] (B) at (2,1);
+        \coordinate (U) at ($0.25*(B)-0.25*(D)$);
+        \coordinate (V) at ($(0,0)!0.75cm!90:(U)$);
+        \draw[->,color=black] (0,0) -- (U)
+          node[at end, below]{$\vec{u}$};
+        \draw[->,orange] (0,0) -- (V)
+          node[at end, left]{$\vec{v}$};
+        \coordinate[label=below:$A$] (A) at ($(D)!.75!(B)$);
+        \coordinate[label=left:$P$] (P) at ($(A)!1cm!90:(B)$);
+        %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+        \coordinate (F) at (-0.5,0);
+        \coordinate (G) at (0,-0.5);
+        \coordinate (X) at (2,0);
+        \coordinate (Y) at (0,2);
+        % Styles
+        \tikzstyle{axes}=[]
+
+        \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+          \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+          \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+        \end{scope}
+
+        \draw[blue] (D)--(B);
+        \draw[->,red,dashed] (A) -- (P);
+    \end{tikzpicture}
+\end{document}

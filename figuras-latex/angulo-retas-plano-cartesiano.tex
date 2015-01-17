@@ -1,0 +1,48 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}
+        \coordinate (A) at (0,0);
+        \coordinate (B) at (-4,-1);
+        \coordinate (X) at (4,1);
+        \coordinate (C) at (-1.5,-1.5);
+        \coordinate (Y) at (3,3);
+        \coordinate (U) at (2,0.5);
+        \coordinate (V) at (2,2);
+
+        \draw (B) -- (X)
+        node[at end,below]{$r$};
+        \draw (C) -- (Y)
+        node[at end,above]{$s$};
+
+        \draw[->,>=triangle 45,red] (A) -- (U)
+        node[midway,below]{$\vec{u}$};
+        \draw[->,>=triangle 45,blue] (A) -- (V)
+        node[midway,above]{$\vec{v}$};
+
+        % Mark the angle XAY
+        \begin{scope}
+          \path[clip] (A) -- (X) -- (Y);
+          \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
+          \node at ($(A)+(30:7mm)$) {$\theta$};
+        \end{scope}
+    \end{tikzpicture}
+\end{document}

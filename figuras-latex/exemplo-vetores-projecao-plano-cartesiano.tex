@@ -1,0 +1,46 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+    \pagenumbering{gobble}
+    \begin{tikzpicture}[scale=2]
+        \coordinate (o) at (0,0);
+        \coordinate[label=right:$A$] (A) at (1,1);
+        \coordinate[label=left:$B$] (B) at (0,0.25);
+        \coordinate[label=above:$C$] (C) at (0.5,1.7);
+        \coordinate[label=left:$P$] (P) at ($(C)!(A)!(B)$);
+        %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+        \coordinate (F) at (-0.5,0);
+        \coordinate (G) at (0,-0.5);
+        \coordinate (X) at (2,0);
+        \coordinate (Y) at (0,2);
+        % Styles
+        \tikzstyle{axes}=[]
+
+        \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+            \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
+            \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
+        \end{scope}
+
+        \draw[blue] (B)--(A);
+        \draw[blue] (B)--(C);
+        \draw[blue] (A)--(C);
+        \draw[red,dashed] (A) -- ($(C)!(A)!(B)$);
+    \end{tikzpicture}
+\end{document}

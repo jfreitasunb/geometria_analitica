@@ -1,0 +1,39 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+
+\begin{document}
+    \pagenumbering{gobble}
+    %\hspace*{-2.5cm}
+    \definecolor{xdxdff}{rgb}{0.49,0.49,1}
+    \definecolor{zzttqq}{rgb}{0.6,0.2,0}
+    \centering
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+        \clip(3.5,-2.5) rectangle (10.5,3);
+        \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (6,2) -- (4,0) -- (8,-2) -- (10,0) -- cycle;
+        \draw [color=zzttqq] (6,2)-- (4,0);
+        \draw [color=zzttqq] (4,0)-- (8,-2);
+        \draw [color=zzttqq] (8,-2)-- (10,0);
+        \draw [color=zzttqq] (10,0)-- (6,2);
+        \draw (6.56,0.02)-- (9.66,2.47);
+        \draw [dashed] (6.56,0.02)-- (5.55,-0.78);
+        \draw (5.55,-0.78)-- (4,-2);
+        \draw (9.16,0.28) node[anchor=north west] {$\pi$};
+        \draw (9.56,2.38) node[anchor=north west] {$r$};
+        \fill [color=xdxdff] (6.56,0.02) circle (2pt);
+        \draw(6.52,0.36) node {$P_0$};
+    \end{tikzpicture}
+\end{document}

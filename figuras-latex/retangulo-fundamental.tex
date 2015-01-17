@@ -1,0 +1,45 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+ \pagenumbering{gobble}
+ \psset{ticksize=0pt}
+  \begin{pspicture*}(-3,-3)(3,3)
+    \psline[linestyle=dashed,linecolor=red](2,-1.5)(2,1.5)
+    \psline[linestyle=dashed,linecolor=red](-2,-1.5)(-2,1.5)
+    \psline[linestyle=dashed,linecolor=red](-2,1.5)(2,1.5)
+    \psline[linestyle=dashed,linecolor=red](-2,-1.5)(2,-1.5)
+    \pscustom[fillstyle=solid,fillcolor=gray!30,linestyle=none]
+    {
+      \psline(2,-1.5)(2,1.5)
+      \psline(-2,-1.5)(-2,1.5)
+      \psline(-2,1.5)(2,1.5)
+      \psline(-2,-1.5)(2,-1.5)
+    }
+    \psaxes[labels=none]{->}(0,0)(-2.2,-2.2)(2.5,2.5)[$x$,0][$y$,-45]
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](2,0)
+    \rput(2.4,0.3){$a$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](-2,0)
+    \rput(-2.4,0.3){$-a$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](0,1.5)
+    \rput(0.3,1.7){$b$}
+    \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](0,-1.5)
+    \rput(0.3,-1.7){$-b$}
+  \end{pspicture*}
+\end{document}
