@@ -1299,12 +1299,12 @@ temos
 % \end{observacao}
 
 \begin{definicao}\label{produtointerno}
-  O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{\vec{u}}{\vec{v}}$, \'e o n\'umero real tal que:\index{Vetores!Produto Escalar}
+  O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, \'e o n\'umero real tal que:\index{Vetores!Produto Escalar}
   \begin{enumerate}
-    \item Se $\vec{u}$ ou $\vec{v}$ \'e nulo, ent\~ao $\inner{\vec{u}}{\vec{v}} = 0$.
+    \item Se $\vec{u}$ ou $\vec{v}$ \'e nulo, ent\~ao $\inner{u}{v} = 0$.
     \item Se $\vec{u}$ e $\vec{v}$ n\~ao s\~ao nulos e $\theta$ \'e o \^angulo entre $\vec{u}$ e $\vec{v}$, ent\~ao
     \begin{align}\label{produto-interno}
-      \inner{\vec{u}}{\vec{v}} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
+      \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
     \end{align}
   \end{enumerate}
 \end{definicao}
@@ -1314,13 +1314,13 @@ temos
   \begin{enumerate}
     \item Se $\vec{u}$ e $\vec{v}$ n\~ao s\~ao nulos, ent\~ao
     \[
-      \cos\theta = \dfrac{\inner{\vec{u}}{\vec{v}}}{\norm{\vec{u}}\norm{\vec{v}}}.
+      \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
     \]
     \item Qualquer que seja o vetor $\vec{u}$,
     \[
-      \norm{\vec{u}} = \sqrt{\inner{\vec{u}}{\vec{u}}}.
+      \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
     \]
-    \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{\vec{u}}{\vec{v}} = 0$.
+    \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{u}{v} = 0$.
     \end{enumerate}
 \end{proposicao}
 \begin{prova}
@@ -1328,23 +1328,23 @@ temos
     \item Basta isolar $\cos\theta$ na Defini\c{c}\~ao \ref{produto-interno}.
     \item Se $\vec{u} = \vec{0}$, ent\~ao a igualdade \'e verdadeira. Se $\vec{u} \ne \vec{0}$, ent\~ao o \^angulo entre o vetor $\vec{u}$ e ele mesmo \'e $\theta = 0$, logo
     \[
-      1 = \cos\theta = \dfrac{\vec{u}\cdot\vec{u}}{\norm{\vec{u}}\norm{\vec{u}}}.
+      1 = \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{u}}}.
     \]
     Logo
     \[
-      \norm{\vec{u}} = \sqrt{\vec{u}\cdot\vec{u}}.
+      \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
     \]
-    \item Se $\vec{u}$ ou $\vec{v}$ \'e o vetor nulo, ent\~ao $\vec{u}\perp\vec{v}$ e $\vec{u}\cdot\vec{v} = 0$. Suponha $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Assim, se $\vec{u} \perp\vec{v}$, ent\~ao $\theta = \pi/2$ e da{\'\i} $\vec{u}\cdot\vec{v} = 0$. Agora, se $\vec{u}\cdot\vec{v} = 0$, ent\~ao
+    \item Se $\vec{u}$ ou $\vec{v}$ \'e o vetor nulo, ent\~ao $\vec{u}\perp\vec{v}$ e $\inner{u}{v} = 0$. Suponha $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Assim, se $\vec{u} \perp\vec{v}$, ent\~ao $\theta = \pi/2$ e da{\'\i} $\inner{u}{v} = 0$. Agora, se $\inner{u}{v} = 0$, ent\~ao
     \[
-      0 = \vec{u}\cdot\vec{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
+      0 = \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
     \]
     Logo devemos ter $\cos\theta = 0$, isto \'e, $\theta = \pi/2$. Portanto $\vec{u}\perp\vec{v}$, como quer{\'\i}amos.
   \end{enumerate}
 \end{prova}
 
-Agora, como podemos encontrar o produto interno sem necessitar de determinar o \^angulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$? Substituindo o produto interno na equa\c{c}\~ao \eqref{equacaonorma} temos
+Agora, como podemos encontrar o produto interno sem necessitar de determinar o \^angulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$\,? Substituindo o produto interno na equa\c{c}\~ao \eqref{equacaonorma} temos
 \[
-  \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\vec{u}\cdot\vec{v}
+  \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\inner{u}{v}
 \]
 isto \'e,
 \begin{align}\label{equacao-auxilar-norma}
