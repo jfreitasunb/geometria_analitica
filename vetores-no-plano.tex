@@ -859,6 +859,42 @@ Podemos tamb\'em representar um vetor por uma seta que n\~ao parte da origem. Po
 Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $\vec{u}$, que tem in{\'\i}cio na origem e extremidade no ponto $(x_2 - x_1, y_2 - y_1)$, t\^em o mesmo m\'odulo, dire\c{c}\~ao e sentido que $\vec{AB}$. Assim vamos representar o vetor $\vec{AB}$ pela forma que for mais conveniente.
 
 \begin{definicao}
+  Seja $\vec{u} = (x_1, y_1)$ um vetor. A \textbf{norma} de $\vec{u}$, denotada por $\norm{\vec{u}}$, \'e dada por
+  \[
+    \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2}.
+  \]
+\end{definicao}
+
+Um vetor $\vec{u}$ tal que
+\[
+	\norm{\vec{u}} = 1
+\]
+\'e chamado de \textbf{vetor unit\'ario}.
+\begin{figure}[!h]
+	\centering
+	\caption{Vetores unit\'arios: $\norm{\vec{u}} = 1$}
+	\includegraphics{vetores-unitarios-plano-cartesiano.pdf}
+	% \definecolor{qqqqff}{rgb}{0,0,1}
+	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	% 	\draw[->,color=black] (-3,0) -- (3,0);
+	% 	\draw (-2.3,0) node[below] {\footnotesize $-1$};
+	% 	\draw (2.3,0) node[below] {\footnotesize $1$};
+	% 	\draw (0,2.2) node[left] {\footnotesize $1$};
+	% 	\draw (0,-2.2) node[left] {\footnotesize $-1$};
+	% 	\draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
+	% 	\draw[->,color=black] (0,-3) -- (0,3);
+	% 	\draw[color=black] (0.1,2.8) node [anchor=east] {$y$};
+	% 	\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+	% 	\clip(-3,-3) rectangle (3,3);
+	% 	\draw(0,0) circle (2cm);
+	% 	\draw [->,color=qqqqff] (0,0) -- (1.45,1.37);
+	% 	\begin{scriptsize}
+	% 		\draw[color=qqqqff] (0.84,0.56) node {$\vec{u}$};
+	% 	\end{scriptsize}
+	% \end{tikzpicture}
+\end{figure}
+
+\begin{definicao}
 	Dois vetores $\vec{u}$ e $\vec{v}$ s\~ao \textbf{paralelos} (ou \textbf{colineares}) se a restas que cont\'em estes vetores s\~ao paralelas(podendo ser coincidentes).Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, escreveremos $\vec{u}\varparallel\vec{v}$. Neste caso, $\vec{u}$ e $\vec{v}$ t\^em a mesma dire\c{c}\~ao, mas podem ter sentidos contr\'arios.
 \end{definicao}
 \begin{figure}[!h]
@@ -907,7 +943,7 @@ Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $
 \label{sub:operacoes_com_vetores}
 
 \begin{definicao}
-  Sejam $\alpha \in \real$, $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Ent\~ao:
+  Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Ent\~ao:
   \[
   	\vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2).
   \]
@@ -1093,51 +1129,7 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
   \end{bmatrix}.
 \]
 
-Vimos que a norma de um vetor \'e definida como o comprimento de um segmento orientado que o represente. Com a representa\c{c}\~ao de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
-\begin{definicao}
-  Seja $\vec{u} = (x_1, y_1)$ um vetor. A \textbf{norma} de $\vec{u}$, denotada por $\norm{\vec{u}}$, \'e dada por
-  \[
-    \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2}.
-  \]
-\end{definicao}
-
-Um vetor $\vec{u}$ tal que
-\[
-	\norm{\vec{u}} = 1
-\]
-\'e chamado de \textbf{vetor unit\'ario}.
-\begin{figure}[!h]
-	\centering
-	\caption{Vetores unit\'arios: $\norm{\vec{u}} = 1$}
-	\includegraphics{vetores-unitarios-plano-cartesiano.pdf}
-	% \definecolor{qqqqff}{rgb}{0,0,1}
-	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-	% 	\draw[->,color=black] (-3,0) -- (3,0);
-	% 	\draw (-2.3,0) node[below] {\footnotesize $-1$};
-	% 	\draw (2.3,0) node[below] {\footnotesize $1$};
-	% 	\draw (0,2.2) node[left] {\footnotesize $1$};
-	% 	\draw (0,-2.2) node[left] {\footnotesize $-1$};
-	% 	\draw[color=black] (2.68,0.08) node [anchor=north west] {$x$};
-	% 	\draw[->,color=black] (0,-3) -- (0,3);
-	% 	\draw[color=black] (0.1,2.8) node [anchor=east] {$y$};
-	% 	\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-	% 	\clip(-3,-3) rectangle (3,3);
-	% 	\draw(0,0) circle (2cm);
-	% 	\draw [->,color=qqqqff] (0,0) -- (1.45,1.37);
-	% 	\begin{scriptsize}
-	% 		\draw[color=qqqqff] (0.84,0.56) node {$\vec{u}$};
-	% 	\end{scriptsize}
-	% \end{tikzpicture}
-\end{figure}
-
-Dado um vetor n\~ao nulo $\vec{u}$ o vetor
-\[
-  \vec{v} = \dfrac{\vec{u}}{\norm{\vec{u}}}
-\]
-\'e um vetor unit\'ario na dire\c{c}\~ao de $\vec{u}$ pois
-\[
-  \norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \norm{\dfrac{1}{\norm{\vec{u}}}\vec{u}} = 1.
-\]
+%Vimos que a norma de um vetor \'e definida como o comprimento de um segmento orientado que o represente. Com a representa\c{c}\~ao de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
 
 \begin{exemplos}
   Seja $\vec{u} = (-2,3)$ um vetor. Ent\~ao
@@ -1172,6 +1164,17 @@ Dado um vetor n\~ao nulo $\vec{u}$ o vetor
   \end{enumerate}
 \end{prova}
 
+\begin{observacao}
+	Dado um vetor n\~ao nulo $\vec{u}$ o vetor
+	\[
+  		\vec{v} = \dfrac{\vec{u}}{\norm{\vec{u}}}
+	\]
+	\'e um vetor unit\'ario na dire\c{c}\~ao de $\vec{u}$ pois
+	\[
+  		\norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \dfrac{1}{\norm{\vec{u}}}\norm{\vec{u}} = 1.
+	\]
+
+\end{observacao}
 \begin{definicao}
 	Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao-nulos. Ent\~ao $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ t\^em normas iguais, s\~ao de mesma dire\c{c}\~ao e de mesmo sentido.
 \end{definicao}
