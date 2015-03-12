@@ -1403,14 +1403,14 @@ Abacamos de demonstrar o seguinte teorema:
 \begin{prova}
   \begin{enumerate}[label=({\roman*})]
     \item \begin{align*}
-      \vec{u}\cdot(\vec{v} + \vec{w}) &= \vec{u}\cdot(x_2 + x_3, y_2 + y_3) = x_1(x_2 + x_3) + y_1(y_2 + y_3) \\ &= (x_1x_2 + y_1y_2) + (x_1x_3 + y_1y_3) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}
+      \langle\vec{u}, (\vec{v} + \vec{w})\rangle &= \langle\vec{u}, (x_2 + x_3, y_2 + y_3)\rangle = x_1(x_2 + x_3) + y_1(y_2 + y_3) \\ &= (x_1x_2 + y_1y_2) + (x_1x_3 + y_1y_3) = \inner{u}{v} + \inner{u}{w}
     \end{align*}
     \item \begin{align*}
-      \vec{u}\cdot(\lambda\vec{v}) = \vec{u}\cdot(\lambda x_2, \lambda y_2) = x_1(\lambda x_2) + y_1(\lambda y_2) = (\lambda x_1)y_2 + (\lambda y_1)y_2 = (\lambda\vec{u})\cdot\vec{v}\\
-      \vec{u}\cdot(\lambda\vec{v}) = \vec{u}\cdot(\lambda x_2, \lambda y_2) = x_1(\lambda x_2) + y_1(\lambda y_2) = \lambda (x_1y_2) + \lambda (y_1y_2) = \lambda(\vec{u}\cdot\vec{v})
+      \langle\vec{u}, (\lambda\vec{v})\rangle = \langle\vec{u}, (\lambda x_2, \lambda y_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) = (\lambda x_1)y_2 + (\lambda y_1)y_2 = \langle(\lambda\vec{u}),\vec{v}\rangle\\
+      \langle\vec{u},(\lambda\vec{v})\rangle = \langle\vec{u}, (\lambda x_2, \lambda y_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) = \lambda (x_1y_2) + \lambda (y_1y_2) = \lambda\inner{u}{v}
     \end{align*}
-    \item $\vec{u}\cdot\vec{v} = x_1x_2 + y_1y_2 = x_2x_1 + y_2y_1 = \vec{v}\cdot\vec{u}$
-    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $x_1 \ne 0$ ou $y_1 \ne 0$. Da{\'\i} $\vec{u}\cdot\vec{u} = x_1^2 + y_1^2 > 0$, como quer{\'\i}amos.
+    \item $\inner{u}{v} = x_1x_2 + y_1y_2 = x_2x_1 + y_2y_1 = \inner{v}{u}$
+    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $x_1 \ne 0$ ou $y_1 \ne 0$. Da{\'\i} $\inner{u}{u} = x_1^2 + y_1^2 > 0$, como quer{\'\i}amos.
   \end{enumerate}
 \end{prova}
 
@@ -1418,10 +1418,10 @@ Abacamos de demonstrar o seguinte teorema:
   \begin{enumerate}
     \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposi\c{c}\~ao \ref{propriedades-produto-interno} podem ser estendidas para qualquer n\'umero de vetores e escalares:
     \[
-      \vec{u}\cdot(\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} ) = \lambda_1\vec{u}\cdot\vec{v_1} + \lambda_2\vec{u}\cdot\vec{v_2} + \cdots + \lambda_n\vec{u}\cdot\vec{v_n}.
+      \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} )\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
     \]
-    \item Na igualdade $\vec{u}\cdot\vec{v} = \vec{u}\cdot\vec{w}$ n\~ao podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0)$, $\vec{v} = (2, 1)$ e $\vec{w} = (2, -5)$ temos $\vec{u}\cdot\vec{v} = \vec{u}\cdot\vec{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
-    \item De $\vec{u}\cdot\vec{v} = 0$ n\~ao podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\vec{u}\cdot\vec{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
+    \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ n\~ao podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0)$, $\vec{v} = (2, 1)$ e $\vec{w} = (2, -5)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
+    \item De $\inner{u}{v} = 0$ n\~ao podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
   \end{enumerate}
 \end{observacao}
 
@@ -1430,16 +1430,16 @@ Abacamos de demonstrar o seguinte teorema:
   \begin{solucao}
     Temos
     \begin{align*}
-      \cos\alpha = \dfrac{(\vec{u} + \vec{v})\cdot(\vec{u} - \vec{v})}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{\vec{u}\cdot\vec{u} - \vec{u}\cdot\vec{v} + \vec{v}\cdot\vec{u} - \vec{v}\cdot\vec{v}}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{\norm{\vec{u}}^2 - \norm{\vec{v}}^2}{\norm{\vec{u} - \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{4}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}}.
+      \cos\alpha = \dfrac{\langle(\vec{u} + \vec{v}), (\vec{u} - \vec{v})\rangle}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{\inner{u}{u} - \inner{u}{v} + \inner{v}{u} - \inner{v}{v}}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{\norm{\vec{u}}^2 - \norm{\vec{v}}^2}{\norm{\vec{u} - \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{4}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}}.
     \end{align*}
     Agora
     \begin{align*}
-      \norm{\vec{u} + \vec{v}}^2 = (\vec{u} + \vec{v})\cdot(\vec{u} + \vec{v}) = \vec{u}\cdot\vec{u} + 2\vec{u}\cdot\vec{v} + \vec{v}\cdot\vec{v} = 6 + 2\vec{u}\cdot\vec{v}\\
-      \norm{\vec{u} - \vec{v}}^2 = (\vec{u} - \vec{v})\cdot(\vec{u} - \vec{v}) = \vec{u}\cdot\vec{u} - 2\vec{u}\cdot\vec{v} + \vec{v}\cdot\vec{v} = 6 - 2\vec{u}\cdot\vec{v}.
+      \norm{\vec{u} + \vec{v}}^2 = \langle(\vec{u} + \vec{v}), (\vec{u} + \vec{v})\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = 6 + 2\inner{u}{v}\\
+      \norm{\vec{u} - \vec{v}}^2 = \langle(\vec{u} - \vec{v}), (\vec{u} - \vec{v})\rangle = \inner{u}{v} - 2\inner{u}{v} + \inner{v}{v} = 6 - 2\inner{u}{v}.
     \end{align*}
     Por outro lado temos
     \begin{align*}
-      \vec{u}\cdot\vec{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta = \sqrt{5}\cos(\pi/4) = \dfrac{\sqrt{10}}{2}
+      \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta = \sqrt{5}\cos(\pi/4) = \dfrac{\sqrt{10}}{2}
     \end{align*}
     e ent\~ao
     \begin{align*}
@@ -1457,7 +1457,7 @@ Abacamos de demonstrar o seguinte teorema:
 \begin{proposicao}\label{DesigualdadeTriangular}
   Sejam $\vec{u}$ e $\vec{v}$ vetores.
   \begin{enumerate}
-    \item $|\vec{u}\cdot\vec{v}| \le \norm{\vec{u}}\norm{\vec{v}}$ [Desigualdade de Scharwz]\index{Desigualdade de Scharwz}
+    \item $|\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}$ [Desigualdade de Scharwz]\index{Desigualdade de Scharwz}
     \item $\norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}$ [Desigualdade Triangular]\index{Desigualdade Triangular}
   \end{enumerate}
 \end{proposicao}
@@ -1473,16 +1473,16 @@ Abacamos de demonstrar o seguinte teorema:
     \]
     isto \'e,
     \[
-      |\vec{u}\cdot\vec{v}| \le \norm{\vec{u}}\norm{\vec{v}}
+      |\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}
     \]
     como quer{\'\i}amos.
     \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$, ent\~ao a desigualdade \'e verdadeira. Suponha ent\~ao que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Temos
     \begin{align*}
-      \norm{\vec{u} + \vec{v}}^2 &= (\vec{u} + \vec{v})\cdot(\vec{u} + \vec{v}) = \vec{u}\cdot\vec{u} + 2\vec{u}\cdot\vec{v} + \vec{v}\cdot\vec{v} = \norm{\vec{u}}^2 + 2\vec{u}\cdot\vec{v} + \norm{\vec{v}}^2 \\ &\le \norm{\vec{u}}^2 + 2\mid\vec{u}\cdot\vec{v}\mid + \norm{\vec{v}}^2.
+      \norm{\vec{u} + \vec{v}}^2 &= \langle(\vec{u} + \vec{v}), (\vec{u} + \vec{v})\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = \norm{\vec{u}}^2 + 2\inner{u}{v} + \norm{\vec{v}}^2 \\ &\le \norm{\vec{u}}^2 + 2\mid\inner{u}{v}\mid + \norm{\vec{v}}^2.
     \end{align*}
     Agora, usando o item (a) temos
     \begin{align*}
-      \norm{\vec{u} + \vec{v}}^2 \le \norm{\vec{u}} + 2\mid\vec{u}\cdot\vec{v}\mid \norm{\vec{v}}^2 \le \norm{\vec{u}} + 2\norm{\vec{u}}\norm{\vec{v}} + \norm{\vec{v}}^2 = (\norm{\vec{u}} + \norm{\vec{v}})^2.
+      \norm{\vec{u} + \vec{v}}^2 \le \norm{\vec{u}} + 2\mid\inner{u}{v}\mid \norm{\vec{v}}^2 \le \norm{\vec{u}} + 2\norm{\vec{u}}\norm{\vec{v}} + \norm{\vec{v}}^2 = (\norm{\vec{u}} + \norm{\vec{v}})^2.
     \end{align*}
     Portanto
     \[
