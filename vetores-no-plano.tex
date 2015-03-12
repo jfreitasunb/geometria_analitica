@@ -1348,11 +1348,11 @@ Agora, como podemos encontrar o produto interno sem necessitar de determinar o \
 \]
 isto \'e,
 \begin{align}\label{equacao-auxilar-norma}
-  \vec{u}\cdot\vec{v} = \dfrac{1}{2}(\norm{\vec{u}}^2 + \norm{\vec{v}}^2 - \norm{\vec{u} - \vec{v}}^2).
+  \inner{u}{v} = \dfrac{1}{2}(\norm{\vec{u}}^2 + \norm{\vec{v}}^2 - \norm{\vec{u} - \vec{v}}^2).
 \end{align}
 Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, ent\~ao podemos reescrever \eqref{equacao-auxilar-norma} como
 \begin{align*}
-  \vec{u}\cdot\vec{v} &= \dfrac{1}{2}(x_1^2 + y_1^2 + x_2^2 + y_2^2 - \norm{(x_1 - x_2, y_1 - y_2)}^2)\\
+  \inner{u}{v} &= \dfrac{1}{2}(x_1^2 + y_1^2 + x_2^2 + y_2^2 - \norm{(x_1 - x_2, y_1 - y_2)}^2)\\
   &= \dfrac{1}{2}[x_1^2 + y_1^2 + x_2^2 + y_2^2 - (x_1 - x_2)^2 - (y_1 - y_2)^2]\\
   &= x_1x_2 + y_1y_2.
 \end{align*}
@@ -1361,7 +1361,7 @@ Abacamos de demonstrar o seguinte teorema:
 \begin{teorema}
   O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ \'e dada por
   \[
-    \vec{u}\cdot\vec{v} = x_1x_2 + y_1y_2.
+    \inner{u}{v} = x_1x_2 + y_1y_2.
   \]
 \end{teorema}
 
@@ -1371,15 +1371,15 @@ Abacamos de demonstrar o seguinte teorema:
     \begin{solucao}
       Temos
       \begin{align*}
-        \vec{u}\cdot\vec{v} = (1, 1)\cdot(1,0) = 2 + 0 = 1\\
+        \inner{u}{v} = (1, 1)\cdot(1,0) = 2 + 0 = 1\\
         \norm{\vec{u}} = \sqrt{2},\ \norm{\vec{v}} = \sqrt{1}\\
         \cos\theta = \frac{\vec{u}\cdot\vec{v}}{\norm{\vec{u}}\norm{\vec{v}}} = \dfrac{1}{\sqrt{2}}.
       \end{align*}
       Assim, $\theta = \pi/4$.
     \end{solucao}
-    \item Encontre um vetor $\vec{u} = (x, y)$ ortogonal a $\vec{v} = (4, -1)$ e tal que $\vec{u}\cdot\vec{w} = -1$, onde $\vec{w} = (1,1)$.
+    \item Encontre um vetor $\vec{u} = (x, y)$ ortogonal a $\vec{v} = (4, -1)$ e tal que $\inner{u}{w} = -1$, onde $\vec{w} = (1,1)$.
     \begin{solucao}
-      Como $\vec{u}\cdot\vec{v} = 0$ e $\vec{u}\cdot\vec{w} = -1$ obtemos o sistema
+      Como $\inner{u}{v} = 0$ e $\inner{u}{w} = -1$ obtemos o sistema
       \[
         \begin{cases}
           4x - y = 0\\
@@ -1394,10 +1394,10 @@ Abacamos de demonstrar o seguinte teorema:
 \begin{proposicao}\label{propriedades-produto-interno}
   Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o n\'umero real $\lambda$ temos
   \begin{enumerate}[label=({\roman*})]
-    \item\label{linearidade-produto-interno} $\vec{u}\cdot(\vec{v} + \vec{w}) = \vec{u}\cdot\vec{v} + \vec{u}\cdot\vec{w}$
-    \item\label{linearidade2-produto-interno} $\vec{u}\cdot(\lambda\vec{v}) = \lambda(\vec{u}\cdot\vec{v})$
-    \item $\vec{u}\cdot\vec{v} = \vec{v}\cdot\vec{u}$
-    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\vec{u}\cdot\vec{u} > 0$.
+    \item\label{linearidade-produto-interno} $\langle \vec{u}, (\vec{v} + \vec{w}\,)\rangle = \inner{u}{v} + \inner{u}{w}$
+    \item\label{linearidade2-produto-interno} $\langle \vec{u}, (\lambda \vec{v}\,)\rangle = \lambda\inner{u}{v}$
+    \item $\inner{u}{v} = \inner{v}{u}$
+    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\inner{u}{u} > 0$.
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
