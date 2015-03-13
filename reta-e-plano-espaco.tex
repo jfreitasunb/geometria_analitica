@@ -48,7 +48,7 @@ Assim, na Figura \ref{definicao-plano} vemos que um ponto $D$ pertence ao plano 
 
 Fixe ent\~ao um ponto $P_0$ em $\real^3$ e $\vec{v}\ne \vec{0}$ um vetor. Passando por $P_0$ existe um \'unico plano $\pi$ perpendicular ao vetor $\vec{v}$. Assim um ponto $P$ do espa\c{c}o pertence ao plano $\pi$ se, e somente se, $\vec{P_0P} \perp \vec{v}$, isto \'e,
 \begin{equation}\label{equacaoplanovetorial}
-    \vec{P_0P}\cdot\vec{v} = 0.
+    \inner{P_0P}{v} = 0.
 \end{equation}
 Sejam $\vec{v} = (a,b,c)$ um vetor, $P_0(x_0, y_0, z_0)$ e $P(x, y, z)$ pontos em $\real^3$. Logo $\vec{P_0P} = (x - x_0, y - y_0, z - z_0)$ e ent\~ao da equa\c{c}\~ao \eqref{equacaoplanovetorial} obtemos
 \begin{equation}\label{equacaoplano}
@@ -64,8 +64,8 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
         \begin{solucao}
             Se $P(x,y,z)$ pertence a $\pi$, ent\~ao
             \begin{align*}
-                &\vec{P_0P}\cdot\vec{v} = 0\\
-                &(x - 1, y - 3, z + 1)\cdot(1,2,-1) = 0\\
+                &\inner{P_0P}{v} = 0\\
+                &\langle(x - 1, y - 3, z + 1), (1,2,-1)\rangle = 0\\
                 &x - 1 + (y - 3)2 + (z + 1)(-1) = 0.
             \end{align*}
             Logo a equa\c{c}\~ao do plano procurado \'e
@@ -77,8 +77,8 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
         \begin{solucao}
             Se $P(x,y,z)$ pertence a $\pi$, ent\~ao
             \begin{align*}
-                \vec{P_0P}\cdot\vec{v} = 0\\
-                (x, y, z)\cdot(0,0,1) = 0.
+                &\inner{P_0P}{v} = 0\\
+                &\langle(x, y, z), (0,0,1)\rangle = 0.
             \end{align*}
             Logo a equa\c{c}\~ao do plano procurado \'e
             \[
@@ -189,8 +189,8 @@ Dada uma equa\c{c}\~ao da forma
     \]
 onde $a$, $b$ e $c$ n\~ao s\~ao simultaneamente nulos, existe um plano $\pi$ representado por esta equa\c{c}\~ao? A resposta \'e afirmativa. Suponha que $a \ne 0$. Tome $\vec{v} = (a,b,c) \ne 0$ e $P_0(-d/a,0,0)$. A equa\c{c}\~ao do plano com vetor normal $\vec{v}$ e passando por $P_0$ \'e dada por
     \begin{align*}
-        &\vec{P_0P}\cdot\vec{v} = 0\\
-        &\left(x + \dfrac{d}{a},y,z\right)\cdot(a,b,c) = 0\\
+        &\inner{P_0P}{v} = 0\\
+        &\langle\left(x + \dfrac{d}{a},y,z\right), (a,b,c)\rangle = 0\\
         &ax + by + cz + d = 0.
     \end{align*}
 Portanto qualquer equa\c{c}\~ao da forma $ax + by + cz + d = 0$, com $a$, $b$ e $c$ n\~ao simultaneamente nulos define um plano.
@@ -228,12 +228,12 @@ Os planos $\pi_1$ e $\pi_2$ s\~ao \textbf{paralelos} se, e somente se, $\vec{v_1
         \end{center}
         Como $\vec{v_1} = -\vec{v_3}$ ent\~ao $\vec{v_1}\varparallel\vec{v_2}$. Agora $P_1(0,0,0)\in\pi_1$ e $P_2(0,2,0)\in\pi_3$. Da{\'\i}
         \[
-            \vec{P_1P_2}\cdot\vec{v_1} = (0,2,0)\cdot(2,-1,3) = -2 \ne 0.
+            \inner{P_1P_2}{v_1} = \langle(0,2,0), (2,-1,3)\rangle = -2 \ne 0.
         \]
         Logo $\pi_1$ e $\pi_3$ s\~ao paralelos e distintos.
         Agora, como $\vec{v_4} = 2\vec{v_2}$ ent\~ao $\vec{v_2}\varparallel\vec{v_4}$. Mas $P_1(3,0,0)\in\pi_2$ e $P_2(0,-3,0)\in\pi_4$. Da{\'\i}
         \[
-            \vec{P_1P_2}\cdot\vec{v_2} = (-3,-3,0)\cdot(1,-1,0) = 0.
+            \inner{P_1P_2}{v_2} = \langle(-3,-3,0), (1,-1,0)\rangle = 0.
         \]
         Logo $\pi_2 =\pi_4$.
 
@@ -330,7 +330,7 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
 \end{figure}
 \item Se os vetores diretores n\~ao s\~ao paralelos, temos duas possibilidades. Considere os pontos $P_0(x_0,y_0,z_0) \in r$ e $P_1(x_1,y_1,z_1) \in s$.
 \begin{enumerate}
-\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ est\~ao no mesmo plano, isto \'e, $\vec{P_1P_2}\cdot(\vec{u}\times\vec{v}) = 0$ ent\~ao $r$ e $s$ s\~ao concorrentes.\index{Retas!Concorrentes}
+\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ est\~ao no mesmo plano, isto \'e, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle = 0$ ent\~ao $r$ e $s$ s\~ao concorrentes.\index{Retas!Concorrentes}
 \begin{figure}[h]
     \centering
     \caption{Retas Concorrentes}
@@ -357,7 +357,7 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
     %     \draw (4.2,1.36) node {$P$};
     % \end{tikzpicture}
 \end{figure}
-\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ est\~ao planos diferentes, isto \'e, $\vec{P_1P_2}\cdot(\vec{u}\times\vec{v}) \ne 0$ ent\~ao $r$ e $s$ s\~ao chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
+\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ est\~ao planos diferentes, isto \'e, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle \ne 0$ ent\~ao $r$ e $s$ s\~ao chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
 \begin{figure}[h]
    \centering
    \caption{Retas Reversas}
