@@ -707,11 +707,11 @@ O volume do paralelep{\'\i}pedo \'e
 \]
 da{\'\i}
 \[
-  \mathcal{V} = \norm{\vec{u}\times\vec{v}}\dfrac{|(\vec{u}\times\vec{v})\cdot\vec{w}|}{\norm{\vec{u}\times\vec{v}}},
+  \mathcal{V} = \norm{\vec{u}\times\vec{v}}\dfrac{|\langle\vec{u}\times\vec{v}, \vec{w}\rangle|}{\norm{\vec{u}\times\vec{v}}},
 \]
 isto \'e,
 \begin{equation}
-  \mathcal{V} = |(\vec{u}\times\vec{v})\cdot\vec{w}|.
+  \mathcal{V} = |\langle\vec{u}\times\vec{v}, \vec{w}\rangle|.
 \end{equation}
 
 \begin{exemplo}
@@ -725,7 +725,7 @@ isto \'e,
     \end{align*}
     Assim temos
     \begin{align*}
-      (\vec{u}\times\vec{v})\cdot\vec{w} = \det \begin{bmatrix}
+      \langle\vec{u}\times\vec{v}, \vec{w}\rangle = \det \begin{bmatrix}
         1 & -1 & 1\\
         1 & -3 & -1\\
         -2 & 1 & -3
