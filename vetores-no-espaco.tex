@@ -223,7 +223,7 @@ Um vetor de norma 1 \'e chamado de \textbf{vetor unit\'ario}. Dado um vetor n\~a
 \]
 \'e um vetor unit\'ario na dire\c{c}\~ao de $\vec{u}$ pois
 \[
-  \norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \norm{\dfrac{1}{\norm{\vec{u}}}\vec{u}} = 1.
+  \norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \dfrac{1}{\norm{\vec{u}}}\norm{\vec{u}} = 1.
 \]
 
 \begin{exemplo}
@@ -292,12 +292,12 @@ Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles
 
 
 \begin{definicao}\label{produtointerno-espaco}
-  O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\vec{u}\cdot\vec{v}$, \'e o n\'umero real tal que\index{Vetores!Produto Escalar}
+  O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, \'e o n\'umero real tal que\index{Vetores!Produto Escalar}
   \begin{enumerate}
-    \item Se $\vec{u}$ ou $\vec{v}$ \'e nulo, ent\~ao $\vec{u}\cdot\vec{v} = 0$.
+    \item Se $\vec{u}$ ou $\vec{v}$ \'e nulo, ent\~ao $\inner{u}{v} = 0$.
     \item Se $\vec{u}$ e $\vec{v}$ n\~ao s\~ao nulos e $\theta$ \'e o \^angulo entre $\vec{u}$ e $\vec{v}$, ent\~ao
     \begin{align}\label{produto-interno-espaco}
-      \vec{u}\cdot\vec{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
+      \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
     \end{align}
   \end{enumerate}
 \end{definicao}
@@ -307,20 +307,20 @@ Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles
   \begin{enumerate}
     \item Se $\vec{u}$ e $\vec{v}$ n\~ao s\~ao nulos, ent\~ao
     \[
-      \cos\theta = \dfrac{\vec{u}\cdot\vec{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
+      \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
     \]
     \item Qualquer que seja o vetor $\vec{u}$,
     \[
-      \norm{\vec{u}} = \sqrt{\vec{u}\cdot\vec{u}}.
+      \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
     \]
-    \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\vec{u}\cdot\vec{v} = 0$.
+    \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{u}{v} = 0$.
     \end{enumerate}
 \end{proposicao}
 De modo an\'alogo ao caso para vetores no plano, temos:
 \begin{teorema}
   O produto interno de dois vetores $\vec{u} = (x_1, y_1,z_1)$ e $\vec{v} = (x_2, y_2,z_2)$ em $\real^3$ \'e dado por
   \[
-    \vec{u}\cdot\vec{v} = x_1x_2 + y_1y_2 + z_1z_2.
+    \inner{u}{v} = x_1x_2 + y_1y_2 + z_1z_2.
   \]
 \end{teorema}
 
@@ -330,15 +330,15 @@ De modo an\'alogo ao caso para vetores no plano, temos:
     \begin{solucao}
       Temos
       \begin{align*}
-        \vec{u}\cdot\vec{v} = (2, -3, 1)\cdot(1,1,0) = 2 - 3 + 0 = -1\\
+        \inner{u}{v} = (2, -3, 1)\cdot(1,1,0) = 2 - 3 + 0 = -1\\
         \norm{\vec{u}} = \sqrt{14},\ \norm{\vec{v}} = \sqrt{2}\\
-        \cos\theta = \frac{\vec{u}\cdot\vec{v}}{\norm{\vec{u}}\norm{\vec{v}}} = -\dfrac{1}{\sqrt{14}\sqrt{2}} = -\dfrac{1}{\sqrt{28}}.
+        \cos\theta = \frac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}} = -\dfrac{1}{\sqrt{14}\sqrt{2}} = -\dfrac{1}{\sqrt{28}}.
       \end{align*}
       Assim, $\theta = \arccos\left(-\dfrac{1}{\sqrt{28}}\right)$.
     \end{solucao}
-    \item Encontre um vetor $\vec{u} = (x, y, z)$ ortogonal a $\vec{v} = (4, -1, 2)$ e tal que $\vec{u}\cdot\vec{w} = -1$, onde $\vec{w} = (1,1,-1)$.
+    \item Encontre um vetor $\vec{u} = (x, y, z)$ ortogonal a $\vec{v} = (4, -1, 2)$ e tal que $\inner{u}{w} = -1$, onde $\vec{w} = (1,1,-1)$.
     \begin{solucao}
-      Como $\vec{u}\cdot\vec{v} = 0$ e $\vec{u}\cdot\vec{w} = -1$ obtemos o sistema
+      Como $\inner{u}{v} = 0$ e $\inner{u}{w} = -1$ obtemos o sistema
       \[
         \begin{cases}
           4x - y + 2z = 0\\

@@ -1561,7 +1561,7 @@ e ent\~ao $\norm{\vec{OP}} = \norm{\vec{v}}\cos\theta$. Mas
 \]
 e assim podemos escrever
 \[
-  \norm{\vec{OP}} = \dfrac{\vec{u}\cdot\vec{v}}{\norm{\vec{u}}}.
+  \norm{\vec{OP}} = \dfrac{\inner{u}{v}}{\norm{\vec{u}}}.
 \]
 Al\'em disso, como $\vec{OP}$ \'e paralelo \`a $\vec{u}$ e de mesmo sentido, devemos ter $\vec{OP} = \lambda\vec{u}$ com $\lambda > 0$. Da{\'\i}
 $\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e ent\~ao
@@ -1609,11 +1609,11 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
 \begin{proposicao}
   Seja $\vec{u}$ um vetor n\~ao nulo. Qualquer que seja o vetor $\vec{v}$, existe e \'e \'unica a proje\c{c}\~ao ortogonal de $\vec{v}$ sobre $\vec{u}$. Sua express\~ao em termos de $\vec{u}$ e $\vec{v}$ \'e dada por
   \[
-    \proj_{\vec{u}}\vec{v} = \dfrac{\vec{u}\cdot\vec{v}}{\norm{\vec{u}}^2}\vec{u}
+    \proj_{\vec{u}}\vec{v} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}
   \]
   e sua norma \'e dada por
   \[
-    \norm{\proj_{\vec{u}}\vec{v}} = \dfrac{\mid\vec{v}\cdot\vec{u}\mid}{\norm{\vec{u}}}.
+    \norm{\proj_{\vec{u}}\vec{v}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}.
   \]
 \end{proposicao}
 \begin{prova}
@@ -1621,15 +1621,15 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
 
   Como $\vec{p}\varparallel\vec{u}$, ent\~ao pela Proposi\c{c}\~ao \ref{vetores_paralelos} existe um escalar $\lambda$ tal que $\vec{p} = \lambda\vec{u}$. Assim qualquer vetor do tipo $\lambda\vec{u}$ \'e um candidato para ser a proje\c{c}\~ao ortogonal. Mas, para que $\vec{p}$ seja a proje\c{c}\~ao ortogonal, ele deve satisfazer $(\vec{v} - \vec{p})\perp\vec{u}$. Logo
   \begin{align*}
-    (\vec{v} - \vec{p})\perp\vec{u} \Leftrightarrow (\vec{v} - \vec{p})\cdot\vec{u} = 0 \Leftrightarrow \vec{v}\cdot\vec{u} - \lambda\vec{u}\cdot\vec{u} = 0 \Leftrightarrow \lambda = \dfrac{\vec{v}\cdot\vec{u}}{\norm{\vec{u}}^2}.
+    (\vec{v} - \vec{p})\perp\vec{u} \Leftrightarrow \langle(\vec{v} - \vec{p}), \vec{u}\rangle = 0 \Leftrightarrow \inner{v}{u} - \lambda\inner{u}{v} = 0 \Leftrightarrow \lambda = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}.
   \end{align*}
   Assim existe um \'unico $\lambda$ que satisfaz a condi\c{c}\~ao $(\vec{v} - \vec{p})\perp\vec{u}$, e da{\'\i} o vetor $\vec{p}$ \'e \'unico. Portanto
   \[
-    \proj_{\vec{u}}\vec{v} = \vec{p} = \dfrac{\vec{v}\cdot\vec{u}}{\norm{\vec{u}}^2}\vec{u}.
+    \proj_{\vec{u}}\vec{v} = \vec{p} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}.
   \]
   Al\'em disso
   \[
-    \norm{\proj_{\vec{u}}\vec{v}} = \norm{\dfrac{\vec{v}\cdot\vec{u}}{\norm{\vec{u}}^2}\vec{u}} = \dfrac{\mid\vec{v}\cdot\vec{u}}{\norm{\vec{u}}}
+    \norm{\proj_{\vec{u}}\vec{v}} = \norm{\dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}
   \]
   como quer{\'\i}amos.
 \end{prova}
@@ -1685,11 +1685,11 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
     \begin{solucao}
        Temos
        \[
-          \proj_{\vec{u}}\vec{v} = \dfrac{\vec{v}\cdot\vec{u}}{\norm{\vec{u}}^2}\vec{u}.
+          \proj_{\vec{u}}\vec{v} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}.
        \]
        Agora
        \begin{align*}
-         \vec{u}\cdot\vec{v} = 7\\
+         \inner{v}{u} = 7\\
          \norm{\vec{u}}^2 = 5
        \end{align*}
        e da{\'\i}
@@ -1698,11 +1698,11 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
        \]
        Por outro lado,
        \[
-          \proj_{\vec{v}}\vec{u} = \dfrac{\vec{u}\cdot\vec{v}}{\norm{\vec{v}}^2}\vec{v}.
+          \proj_{\vec{v}}\vec{u} = \dfrac{\inner{u}{v}}{\norm{\vec{v}}^2}\vec{v}.
        \]
-       Agora
+       Mas
        \begin{align*}
-         \vec{u}\cdot\vec{v} = \vec{v}\cdot\vec{u} = 7\\
+         \inner{u}{v} = \inner{v}{u} = 7\\
          \norm{\vec{v}}^2 = 17
        \end{align*}
        e da{\'\i}
@@ -1750,12 +1750,12 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
        \begin{enumerate}
          \item Basta verificar que $\vec{AB}\perp\vec{AC}$. Assim como $\vec{AB} = (-3,-2)$ e $\vec{AC} = (-2,3)$ temos
          \[
-            \vec{AB}\cdot\vec{AC} = (-3)(-2) + (-2)3 = 0.
+            \inner{AB}{AC} = (-3)(-2) + (-2)3 = 0.
          \]
          Logo $ABC$ \'e um tri\^angulo ret\^angulo.
          \item Temos $\vec{BA} = (3,2)$ e $\vec{BC} = (1,5)$. Da{\'\i}
          \[
-            \proj_{\vec{BC}}\vec{BA} = \dfrac{\vec{BC}\cdot\vec{BA}}{\norm{\vec{BC}}^2}\vec{BC} = \dfrac{(3,2)\cdot(1,5)}{\norm{(1,5)}^2}(1,5) = \dfrac{13}{26}(1,5).
+            \proj_{\vec{BC}}\vec{BA} = \dfrac{\inner{BC}{BA}}{\norm{\vec{BC}}^2}\vec{BC} = \dfrac{\langle (3,2), (1,5)\rangle}{\norm{(1,5)}^2}(1,5) = \dfrac{13}{26}(1,5).
          \]
          Assim $\proj_{\vec{BC}}\vec{BA} = \left(\dfrac{1}{2},\dfrac{5}{2}\right)$.
          \item Seja $P(x_1, y_1)$ o p\'e da altura do tri\^angulo $ABC$ relativo ao v\'ertice $A$. Ent\~ao
