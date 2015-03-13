@@ -612,11 +612,11 @@ Portanto o vetor $\vec{u}\times\vec{v}$ \'e tal que seu m\'odulo \'e numericamen
 
 Sejam $\vec{u}$ e $\vec{v}$ vetores de $\real^3$. Como $\vec{u}\times\vec{v}$ \'e um vetor de $\real^3$ podemos calcular seu produto interno com qualquer outro vetor $\vec{w}$ de $\real^3$. O n\'umero real
 \begin{equation}
-  (\vec{u}\times\vec{v})\cdot\vec{w}
+  \langle(\vec{u}\times\vec{v}), \vec{w}\rangle
 \end{equation}
 \'e chamado de \textbf{produto misto} dos vetores $\vec{u}$, $\vec{v}$ e $\vec{w}$.\index{Vetores no Espa\c{c}o!Produto Misto} Se $\vec{u} = (a_1,b_1,c_1)$, $\vec{v} =(a_2,b_2,c_2)$ e $\vec{w} = (a_3,b_3,c_3)$ temos
 \begin{align*}
-  (\vec{u}\times\vec{v})\cdot\vec{w} &= (b_1c_2 - c_2b_1,a_2c_1 - a_1c_2, a_1b_2 - a_2b_1)\cdot(a_3, b_3, c_3) \\ &= (b_1c_2 - b_2c_1)a_3 + (a_2c_1 - a_1c_2)b_2 + (a_1b_2 - a_2b_1)c_3.
+  \langle(\vec{u}\times\vec{v}), \vec{w}\rangle &= \langle(b_1c_2 - c_2b_1,a_2c_1 - a_1c_2, a_1b_2 - a_2b_1), (a_3, b_3, c_3)\rangle \\ &= (b_1c_2 - b_2c_1)a_3 + (a_2c_1 - a_1c_2)b_2 + (a_1b_2 - a_2b_1)c_3.
 \end{align*}
 
 Agora,
@@ -639,7 +639,7 @@ Agora,
 
 Portanto
 \begin{equation}
-  (\vec{u}\times\vec{v})\cdot\vec{w} = \det \begin{pmatrix}
+  \langle(\vec{u}\times\vec{v}), \vec{w}\rangle = \det \begin{pmatrix}
     a_1 & b_1 & c_1\\
     a_2 & b_2 & c_2\\
     a_3 & b_3 & c_3
@@ -649,8 +649,8 @@ Portanto
 \begin{proposicao}
   Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Ent\~ao
   \begin{enumerate}[label=({\alph*})]
-    \item $(\vec{u}\times\vec{v})\cdot\vec{w} = (\vec{v}\times\vec{w})\cdot\vec{u}$
-    \item $(\vec{u}\times\vec{v})\cdot\vec{w} = \vec{u}\cdot(\vec{v}\times\vec{w})$
+    \item $\langle\vec{u}\times\vec{v}, \vec{w}\rangle = \langle\vec{v}\times\vec{w}, \vec{u}\rangle$
+    \item $\langle\vec{u}\times\vec{v}, \vec{w}\rangle = \langle\vec{u}, \vec{v}\times\vec{w}\rangle$
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
@@ -699,7 +699,7 @@ Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralel
 
 A altura $h$ \'e dada por
 \begin{align*}
-  h = \norm{\vec{w}}|\cos\theta| = \norm{\vec{w}}\dfrac{|(\vec{u}\times\vec{v})\cdot\vec{w}|}{\norm{\vec{u}\times\vec{v}}\norm{\vec{w}}} = \dfrac{|(\vec{u}\times\vec{v})\cdot\vec{w}|}{\norm{\vec{u}\times\vec{v}}}.
+  h = \norm{\vec{w}}|\cos\theta| = \norm{\vec{w}}\dfrac{|\langle\vec{u}\times\vec{v}, \vec{w}\rangle|}{\norm{\vec{u}\times\vec{v}}\norm{\vec{w}}} = \dfrac{|\langle\vec{u}\times\vec{v}, \vec{w}\rangle|}{\norm{\vec{u}\times\vec{v}}}.
 \end{align*}
 O volume do paralelep{\'\i}pedo \'e
 \[
