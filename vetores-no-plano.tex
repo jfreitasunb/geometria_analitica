@@ -1359,7 +1359,7 @@ Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, ent\~ao podemos reescrever \
 
 Abacamos de demonstrar o seguinte teorema:
 \begin{teorema}
-  O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ \'e dada por
+  O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ \'e dado por
   \[
     \inner{u}{v} = x_1x_2 + y_1y_2.
   \]
@@ -1394,8 +1394,9 @@ Abacamos de demonstrar o seguinte teorema:
 \begin{proposicao}\label{propriedades-produto-interno}
   Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o n\'umero real $\lambda$ temos
   \begin{enumerate}[label=({\roman*})]
-    \item\label{linearidade-produto-interno} $\langle \vec{u}, (\vec{v} + \vec{w}\,)\rangle = \inner{u}{v} + \inner{u}{w}$
-    \item\label{linearidade2-produto-interno} $\langle \vec{u}, (\lambda \vec{v}\,)\rangle = \lambda\inner{u}{v}$
+    \item\label{linearidade-produto-interno} $\langle \vec{u}, \vec{v} + \vec{w}\rangle = \inner{u}{v} + \inner{u}{w}$
+    \item $\langle \vec{u} + \vec{v}, \vec{w}\rangle = \inner{u}{w} + \inner{v}{w}$
+    \item\label{linearidade2-produto-interno} $\langle (\lambda \vec{u}\,), \vec{v}\rangle = \langle \vec{u}, (\lambda \vec{v}\,)\rangle = \lambda\inner{u}{v}$
     \item $\inner{u}{v} = \inner{v}{u}$
     \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\inner{u}{u} > 0$.
   \end{enumerate}
@@ -1478,7 +1479,7 @@ Abacamos de demonstrar o seguinte teorema:
     como quer{\'\i}amos.
     \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$, ent\~ao a desigualdade \'e verdadeira. Suponha ent\~ao que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Temos
     \begin{align*}
-      \norm{\vec{u} + \vec{v}}^2 &= \langle(\vec{u} + \vec{v}), (\vec{u} + \vec{v})\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = \norm{\vec{u}}^2 + 2\inner{u}{v} + \norm{\vec{v}}^2 \\ &\le \norm{\vec{u}}^2 + 2\mid\inner{u}{v}\mid + \norm{\vec{v}}^2.
+      \norm{\vec{u} + \vec{v}}^2 &= \langle\vec{u} + \vec{v}, \vec{u} + \vec{v}\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = \norm{\vec{u}}^2 + 2\inner{u}{v} + \norm{\vec{v}}^2 \\ &\le \norm{\vec{u}}^2 + 2\mid\inner{u}{v}\mid + \norm{\vec{v}}^2.
     \end{align*}
     Agora, usando o item (a) temos
     \begin{align*}
