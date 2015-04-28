@@ -15,7 +15,7 @@
 
 Considere uma circunfer\^encia de centro $C(x_0,y_0)$ e raio $r$. Seja $P(x,y)$ um ponto qualquer desta circunfer\^encia e seja $\beta$ o \^angulo formado pelos vetores $\vec{CA}$ e $\vec{CP}$, onde $A(x_0 + r, y_0)$. Assim
 \[
-  \cos\beta = \dfrac{\inner{CA}{CP}}{\norma{\vec{CA}}\norm{\vec{CP}}}.
+  \cos\beta = \dfrac{\inner{CA}{CPq}}{\norma{\vec{CA}}\norm{\vec{CP}}}.
 \]
 
 Mas $\vec{CP} = (x - x_0, y - y_0)$, $\vec{CA} = (r, 0)$ e $\norm{\vec{CA}} = \norm{\vec{CP}} = r$, ent\~ao
@@ -234,6 +234,29 @@ Como os ponto $P_1$, $P_2$ e $P_3$ n\~ao s\~ao colineares, este sistema sempre p
 \section{C\^onicas} % (fold)
 \label{sec:conicas}
 
+\begin{definicao}
+  Chama-se \textbf{c\^onica} o lugar geom\'etrico dos pontos $P(x,y)$ que satisfazem uma equa\c{c}\~ao do segundo grau $g(x,y) = 0$, onde\index{C\^onicas}
+  \begin{equation}\label{equacaoconica}
+    g(x,y) = ax^2 + bxy + cy^2 + dx + ey + f.
+  \end{equation}
+\end{definicao}
+
+Na equa\c{c}\~ao \eqref{equacaoconica} pelo menos um dos n\'umeros $a$, $b$ $c$ \'e diferente de zero. Os termos $ax^2$ e $cy^2$ s\~ao os \textbf{termos quadr\'aticos}, o termo $bxy$ \'e o \textbf{termo quadr\'atico misto}, $dx$ e $ey$ s\~ao os \textbf{termos lineares} e $f$ \'e o \textbf{termo independente}. \index{C\^onica!Termos Quadr\'aticos} \index{C\^onica!Termo Quadr\'atico Misto} \index{C\^onica!Termos Lineares} \index{C\^onica!Termos Independete}
+
+A equa\c{c}\~ao \eqref{equacaoconica} pode representar:
+\begin{enumerate}
+  \item um conjunto vazio: $x^2 + y^2 = -1$;
+  \item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
+  %\item uma reta;
+  \item a reuni\~ao de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
+  \item uma circunfer\^encia: $x^2 + y^2 - 13x + y - 10 = 0$;
+  \item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
+  \item uma hip\'erbole: $3x^3 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$;
+  \item uma par\'abola: $x^2 - 2xy + y^2 -2x - 2y + 1 = 0$.
+\end{enumerate}
+
+Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio, um ponto, retas ou circunferências diremos que a cônica definida é uma \textbf{cônica degenerada}. Aqui vamos estudar as cônicas chamadas de elipse, hipérbole e parábola.
+
 \subsection{Elipse} % (fold)
 \label{sub:elipse}
 
@@ -358,7 +381,7 @@ Com isso provamos a seguinte proposi\c{c}\~ao:
   \begin{enumerate}
     \item A equa\c{c}\~ao \eqref{equacaoelipse} s\'o \'e v\'alida para elipses com focos no eixo $x$ e centro na origem. Mudan\c{c}as nos focos ou no centro, resultar\~ao em uma equa\c{c}\~ao diferente para a elipse.
     \item Se $(x,y)$ satisfaz a equa\c{c}\~ao \eqref{equacaoelipse}, ent\~ao $(-x,-y)$, $(-x,y)$ e $(x,-y)$ tamb\'em satisfazem a mesma equa\c{c}\~ao. Assim a elipse \'e sim\'etrica em rela\c{c}\~ao ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
-    \item O ponto $(x,0)$ pertence \`a elipse de equa\c{c}\~ao \eqref{equacaoelipse} se, e somente se, $x^2/a = 1$, isto \'e, $x = \pm a$. Al\'em disso, o ponto $(0,y)$ pertence \'a elipse de equa\c{c}\~ao \eqref{equacaoelipse} se, e s\'o se, $y = \pm b$. Portanto, a interse\c{c}\~ao de $E$ com o eixo $x$ s\~ao os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interse\c{c}\~ao com o eixo $y$ s\~ao os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) = \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
+    \item O ponto $(x,0)$ pertence \`a elipse de equa\c{c}\~ao \eqref{equacaoelipse} se, e somente se, $x^2/a^2 = 1$, isto \'e, $x = \pm a$. Al\'em disso, o ponto $(0,y)$ pertence \'a elipse de equa\c{c}\~ao \eqref{equacaoelipse} se, e s\'o se, $y = \pm b$. Portanto, a interse\c{c}\~ao de $E$ com o eixo $x$ s\~ao os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interse\c{c}\~ao com o eixo $y$ s\~ao os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) = \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
     \item N\~ao existe circunfer\^encia que contenha os pontos $A_1$, $A_2$, $B_1$ e $B_2$. Caso existisse, tal circunfer\^encia teria dois di\^ametros diferentes, cujos comprimento s\~ao dados pelos comprimentos dos segmente $A_1A_2$ e $B_1B_2$, o que \'e imposs{\'\i}vel. Portanto, como esses pontos pertencem a $E$, podemos afirmar que a elipse n\~ao \'e uma circunfer\^encia e nem o conjunto vazio.
   \end{enumerate}
 \end{observacao}
@@ -1074,26 +1097,6 @@ Nos demais casos temos:
 \section{Rota\c{c}\~ao e Transla\c{c}\~ao de Eixos} % (fold)
 \label{sec:rotacao_e_translacao_de_eixos}
 
-\begin{definicao}
-  Chama-se \textbf{c\^onica} o lugar geom\'etrico dos pontos $P(x,y)$ que satisfazem uma equa\c{c}\~ao do segundo grau $g(x,y) = 0$, onde\index{C\^onicas}
-  \begin{equation}\label{equacaoconica}
-    g(x,y) = ax^2 + by^2 + cxy + dx + ey + f.
-  \end{equation}
-\end{definicao}
-
-Na equa\c{c}\~ao \eqref{equacaoconica} pelo menos um dos n\'umeros $a$, $b$ $c$ \'e diferente de zero. Os termos $ax^2$ e $by^2$ s\~ao os \textbf{termos quadr\'aticos}, o termo $cxy$ \'e o \textbf{termo quadr\'atico misto}, $dx$ e $ey$ s\~ao os \textbf{termos lineares} e $f$ \'e o \textbf{termo independente}. \index{C\^onica!Termos Quadr\'aticos} \index{C\^onica!Termo Quadr\'atico Misto} \index{C\^onica!Termos Lineares} \index{C\^onica!Termos Independete}
-
-A equa\c{c}\~ao \eqref{equacaoconica} pode representar:
-\begin{enumerate}
-  \item um conjunto vazio: $x^2 + y^2 = -1$;
-  \item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
-  %\item uma reta;
-  \item a reuni\~ao de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
-  \item uma circunfer\^encia: $x^2 + y^2 - 13x + y - 10 = 0$;
-  \item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
-  \item uma hip\'erbole: $3x^3 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$;
-  \item uma par\'abola: $x^2 - 2xy + y^2 -2x - 2y + 1 = 0$.
-\end{enumerate}
 
 Para determinar a c\^onica representada pela equa\c{c}\~ao \eqref{equacaoconica} iremos utilizar transla\c{c}\~oes e rota\c{c}\~oes de eixos para simplificar sua equa\c{c}\~ao.
 
