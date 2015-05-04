@@ -1551,6 +1551,60 @@ Portanto para eliminar o termo $xy$ da equa\c{c}\~ao $g(x,y) = 0$, substitu{\'\i
 
 % subsection rotacao_de_eixos (end)
 
+\section{Rotações de Eixos: método matricial} % (fold)
+\label{sec:rotacoes_de_eixos_metodo_matricial}
+
+Considere uma cônica de equação
+\begin{equation}\label{equacao_geral_conica}
+  ax^2 + bxy + cx^2 + dx + ey + f = 0.
+\end{equation}
+
+Queremos remover o termo $xy$ da equação \eqref{equacao_geral_conica} para então usar uma translação de eixos, se necessário, e com isso identicar a cônica definida por tal equação. Para isso vamos tentar encontrar um ângulo $\theta$ tal que a equação \eqref{equacao_geral_conica} possa ser transformada numa equação da forma
+\begin{equation}\label{equacao_rotacionada_conica}
+  a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
+\end{equation}
+
+Inicialmente observe que a \eqref{equacao_geral_conica} pode ser escrita na forma
+\begin{equation}\label{equacao_matricial_conica}
+  X^tAX + KX + F = [0]
+\end{equation}
+onde
+\[
+  A = \begin{bmatrix}
+    a & b/2\\
+    b/2 & c
+  \end{bmatrix}
+, \quad K = \begin{bmatrix}
+  d & e
+\end{bmatrix}, \quad X = \begin{bmatrix}
+  x\\
+  y
+\end{bmatrix}\quad\mbox{e}\quad F = [f]
+\]
+e $t$ denota a matriz transposta. Queremos então encontrar um ângulo $\theta$ tal que a substituição
+\begin{equation}\label{substituicao_rotacao_eixos}
+  X = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}\begin{bmatrix}
+    x_1\\y_1
+  \end{bmatrix}
+\end{equation}
+transforma a equação \eqref{equacao_geral_conica} na equação \eqref{equacao_rotacionada_conica}.
+
+Sejam
+\[
+  R_\theta = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}
+\]
+que é chamada de \textbf{matriz de rotação} e
+\[
+  X_1 = \begin{bmatrix}x_1\\y_1\end{bmatrix}
+\]
+% section rotacoes_de_eixos_metodo_matricial (end)
+
 % section rotacao_e_translacao_de_eixos (end)
 
 % \section{Se\c{c}\~oes C\^onicas} % (fold)
