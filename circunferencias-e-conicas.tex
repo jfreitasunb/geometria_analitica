@@ -1621,11 +1621,11 @@ ou seja, $(R_\theta^t)^{-1} = R_\theta$.
 Agora, substituindo \eqref{substituicao_rotacao_eixos} em \eqref{equacao_geral_conica} obtemos
 \begin{align*}
   (R_\theta X_1)^t A (R_\theta X_1) + KR_\theta X_1 + F = [0]\\
-  X_1^t(R_\thetaˆt A R_\theta)X_1 + (KR_\theta)X_1 + F = [0].
+  X_1^t(R_\theta^t A R_\theta)X_1 + (KR_\theta)X_1 + F = [0].
 \end{align*}
 Note que
 \begin{align*}
-  R_\thetaˆt A R_\theta = \begin{bmatrix}
+  R_\theta^t A R_\theta = \begin{bmatrix}
     a' & b'/2\\
     b'/2 & c'
   \end{bmatrix} = B\\
@@ -1634,6 +1634,146 @@ Note que
   \end{bmatrix} = K'.
 \end{align*}
 
+Mas $I_2 = R_\theta^t R_\theta$ e daí podemos escrever
+\begin{align*}
+  B - \lambda I_2 = R_\theta^t A R_\theta - \lambda I_2 = R_\theta^t A R_\theta - R_\theta^t (\lambda I_2) R_\theta = R_\theta^t (A - \lambda I_2)R_\theta
+\end{align*}
+para todo $\lambda \in \real$. Com isso
+\begin{align*}
+  \det(B - \lambda I_2) = \det[R_\theta^t(A - \lambda I_2)R_\theta] = \det(R_\theta^t)\det(A - \lambda I_2)\det(R_\theta) = \det(A - \lambda I_2).
+\end{align*}
+
+Assim escolhendo $\theta$ tal que $b' = 0$, o que é sempre possível fazer, obtemos
+\begin{align*}
+  \det(A - \lambda I_2) = \det(B - \lambda I_2) = \det \begin{bmatrix}
+    a' - \lambda & 0\\
+    0 & c' - \lambda
+  \end{bmatrix} = (\lambda - a')(\lambda - c').
+\end{align*}
+
+Logo os coeficientes $a'$ e $c'$ são raízes da equação de segundo grau
+\begin{equation}
+  p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
+    a - \lambda & b/2\\
+    b/2 & c - \lambda
+  \end{bmatrix}.
+\end{equation}
+
+Agora para determinar o ângulo $\theta$ partimos de
+\[
+  B = R_\theta^t A R_\theta
+\]
+e multiplicamos à esquerda por $R_\theta$ obtendo
+\[
+  R_\theta B = AR_\theta.
+\]
+Daí
+\begin{align*}
+  AR_\theta = A \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix} = \begin{bmatrix}
+    A \begin{bmatrix}
+      \cos\theta \\ \sin\theta
+    \end{bmatrix} & A \begin{bmatrix}
+      -\sin\theta\\ \cos\theta
+    \end{bmatrix}
+  \end{bmatrix}
+\end{align*}
+e
+\begin{align*}
+  R_\theta B = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix} \begin{bmatrix}
+    a' & 0\\
+    0 & c'
+  \end{bmatrix} = \begin{bmatrix}
+    a' \begin{bmatrix}
+      \cos\theta \\ \sin\theta
+    \end{bmatrix} & c' \begin{bmatrix}
+      -\sin\theta\\ \cos\theta
+    \end{bmatrix}
+  \end{bmatrix}.
+\end{align*}
+
+Como $R_\theta B = AR_\theta$ então das duas últimas equação vemos que se tomarmos
+\[
+  U_1 = \begin{bmatrix}
+    \cos\theta\\
+    \sin\theta
+  \end{bmatrix}
+\]
+devemos ter
+\[
+  AU_1 = a'U_1,
+\]
+isto é,
+\begin{align*}
+  AU_1 = a'I_2 U_1\\
+  AU_1 - a'I_2 U_1 = [0]\\
+  (A - a'I_2)U_1 = [0].
+\end{align*}
+Assim $U_1$ é uma solução de norma 1 do sistema linear
+\[
+  (A - a'I_2)X = [0].
+\]
+A solução $U_2$ é obtida de $U_1$ trocando a posição das componentes de $U_1$ e depois o sinal da primeira posição.
+
+Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$. Assim temos o seguinte teorema:
+
+\begin{teorema}
+  Considere a equação
+  \[
+      ax^2 + bxy + cy^2 + dx + ey + f = 0
+  \]
+  com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não necessariamente nulos. Então mediante uma rotação da forma
+  \[
+    X = R_\theta X_1
+  \]
+  onde
+  \[
+    X = \begin{bmatrix}
+      x\\y
+    \end{bmatrix}, \quad
+    R_\theta = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}, \quad\mbox{e}\quad
+  X_1 = \begin{bmatrix}
+    x_1\\y_1
+  \end{bmatrix}
+  \]
+  a equação da cônica acima pode ser transformada em
+  \[
+    a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
+  \]
+  em que $a'$, $c'$ são raízes de
+  \[
+    p(\lambda) = \begin{bmatrix}
+      a - \lambda & b/2
+      b/2 & c - \lambda
+    \end{bmatrix}.
+  \]
+
+  Mais ainda,
+  \[
+    U_1 = \begin{bmatrix}
+      \cos\theta\\ \sin\theta
+    \end{bmatrix}
+  \]
+  é uma solução de norma 1 do sistema linear
+  \[
+    \begin{bmatrix}
+      a - a' & b/2\\
+      b/2 & c - a'
+    \end{bmatrix} \begin{bmatrix}
+      x\\y
+    \end{bmatrix} = \begin{bmatrix}
+      0\\0
+    \end{bmatrix}.
+  \]
+\end{teorema}
 % section rotacoes_de_eixos_metodo_matricial (end)
 
 % section rotacao_e_translacao_de_eixos (end)
