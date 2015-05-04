@@ -1601,8 +1601,39 @@ Sejam
 \]
 que é chamada de \textbf{matriz de rotação} e
 \[
-  X_1 = \begin{bmatrix}x_1\\y_1\end{bmatrix}
+  X_1 = \begin{bmatrix}x_1\\y_1\end{bmatrix}.
 \]
+Note que
+\[
+  R_\theta R_\theta^t = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}\begin{bmatrix}
+    \cos\theta & \sin\theta\\
+    -\sin\theta & \cos\theta
+  \end{bmatrix} = \begin{bmatrix}
+    1 & 0\\
+    0 & 1
+  \end{bmatrix} = R_\theta^t R_\theta, 
+\]
+ou seja, $(R_\theta^t)^{-1} = R_\theta$.
+
+Agora, substituindo \eqref{substituicao_rotacao_eixos} em \eqref{equacao_geral_conica} obtemos
+\begin{align*}
+  (R_\theta X_1)^t A (R_\theta X_1) + KR_\theta X_1 + F = [0]\\
+  X_1^t(R_\thetaˆt A R_\theta)X_1 + (KR_\theta)X_1 + F = [0].
+\end{align*}
+Note que
+\begin{align*}
+  R_\thetaˆt A R_\theta = \begin{bmatrix}
+    a' & b'/2\\
+    b'/2 & c'
+  \end{bmatrix} = B\\
+  KR_\theta = \begin{bmatrix}
+    d'& e'
+  \end{bmatrix} = K'.
+\end{align*}
+
 % section rotacoes_de_eixos_metodo_matricial (end)
 
 % section rotacao_e_translacao_de_eixos (end)
