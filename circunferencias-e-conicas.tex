@@ -1551,15 +1551,15 @@ Portanto para eliminar o termo $xy$ da equa\c{c}\~ao $g(x,y) = 0$, substitu{\'\i
 
 % subsection rotacao_de_eixos (end)
 
-\section{Rotações de Eixos: método matricial} % (fold)
+\section{Rota\c{c}\~oes de Eixos: m\'etodo matricial} % (fold)
 \label{sec:rotacoes_de_eixos_metodo_matricial}
 
-Considere uma cônica de equação
+Considere uma c\^onica de equa\c{c}\~ao
 \begin{equation}\label{equacao_geral_conica}
   ax^2 + bxy + cx^2 + dx + ey + f = 0.
 \end{equation}
 
-Queremos remover o termo $xy$ da equação \eqref{equacao_geral_conica} para então usar uma translação de eixos, se necessário, e com isso identicar a cônica definida por tal equação. Para isso vamos tentar encontrar um ângulo $\theta$ tal que a equação \eqref{equacao_geral_conica} possa ser transformada numa equação da forma
+Queremos remover o termo $xy$ da equa\c{c}\~ao \eqref{equacao_geral_conica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_conica} possa ser transformada numa equa\c{c}\~ao da forma
 \begin{equation}\label{equacao_rotacionada_conica}
   a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
 \end{equation}
@@ -1581,7 +1581,7 @@ onde
   y
 \end{bmatrix}\quad\mbox{e}\quad F = [f]
 \]
-e $t$ denota a matriz transposta. Queremos então encontrar um ângulo $\theta$ tal que a substituição
+e $t$ denota a matriz transposta. Queremos ent\~ao encontrar um \^angulo $\theta$ tal que a substitui\c{c}\~ao
 \begin{equation}\label{substituicao_rotacao_eixos}
   X = \begin{bmatrix}
     \cos\theta & -\sin\theta\\
@@ -1590,7 +1590,7 @@ e $t$ denota a matriz transposta. Queremos então encontrar um ângulo $\theta$ 
     x_1\\y_1
   \end{bmatrix}
 \end{equation}
-transforma a equação \eqref{equacao_geral_conica} na equação \eqref{equacao_rotacionada_conica}.
+transforma a equa\c{c}\~ao \eqref{equacao_geral_conica} na equa\c{c}\~ao \eqref{equacao_rotacionada_conica}.
 
 Sejam
 \[
@@ -1599,7 +1599,7 @@ Sejam
     \sin\theta & \cos\theta
   \end{bmatrix}
 \]
-que é chamada de \textbf{matriz de rotação} e
+que \'e chamada de \textbf{matriz de rota\c{c}\~ao} e
 \[
   X_1 = \begin{bmatrix}x_1\\y_1\end{bmatrix}.
 \]
@@ -1634,7 +1634,7 @@ Note que
   \end{bmatrix} = K'.
 \end{align*}
 
-Mas $I_2 = R_\theta^t R_\theta$ e daí podemos escrever
+Mas $I_2 = R_\theta^t R_\theta$ e da{\'\i} podemos escrever
 \begin{align*}
   B - \lambda I_2 = R_\theta^t A R_\theta - \lambda I_2 = R_\theta^t A R_\theta - R_\theta^t (\lambda I_2) R_\theta = R_\theta^t (A - \lambda I_2)R_\theta
 \end{align*}
@@ -1643,7 +1643,7 @@ para todo $\lambda \in \real$. Com isso
   \det(B - \lambda I_2) = \det[R_\theta^t(A - \lambda I_2)R_\theta] = \det(R_\theta^t)\det(A - \lambda I_2)\det(R_\theta) = \det(A - \lambda I_2).
 \end{align*}
 
-Assim escolhendo $\theta$ tal que $b' = 0$, o que é sempre possível fazer, obtemos
+Assim escolhendo $\theta$ tal que $b' = 0$, o que \'e sempre poss{\'\i}vel fazer, obtemos
 \begin{align*}
   \det(A - \lambda I_2) = \det(B - \lambda I_2) = \det \begin{bmatrix}
     a' - \lambda & 0\\
@@ -1651,7 +1651,7 @@ Assim escolhendo $\theta$ tal que $b' = 0$, o que é sempre possível fazer, obt
   \end{bmatrix} = (\lambda - a')(\lambda - c').
 \end{align*}
 
-Logo os coeficientes $a'$ e $c'$ são raízes da equação de segundo grau
+Logo os coeficientes $a'$ e $c'$ s\~ao ra{\'\i}zes da equa\c{c}\~ao de segundo grau
 \begin{equation}
   p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
     a - \lambda & b/2\\
@@ -1659,15 +1659,15 @@ Logo os coeficientes $a'$ e $c'$ são raízes da equação de segundo grau
   \end{bmatrix}.
 \end{equation}
 
-Agora para determinar o ângulo $\theta$ partimos de
+Agora para determinar o \^angulo $\theta$ partimos de
 \[
   B = R_\theta^t A R_\theta
 \]
-e multiplicamos à esquerda por $R_\theta$ obtendo
+e multiplicamos \`a esquerda por $R_\theta$ obtendo
 \[
   R_\theta B = AR_\theta.
 \]
-Daí
+Da{\'\i}
 \begin{align*}
   AR_\theta = A \begin{bmatrix}
     \cos\theta & -\sin\theta\\
@@ -1697,7 +1697,7 @@ e
   \end{bmatrix}.
 \end{align*}
 
-Como $R_\theta B = AR_\theta$ então das duas últimas equação vemos que se tomarmos
+Como $R_\theta B = AR_\theta$ ent\~ao das duas \'ultimas equa\c{c}\~ao vemos que se tomarmos
 \[
   U_1 = \begin{bmatrix}
     \cos\theta\\
@@ -1708,26 +1708,26 @@ devemos ter
 \[
   AU_1 = a'U_1,
 \]
-isto é,
+isto \'e,
 \begin{align*}
   AU_1 = a'I_2 U_1\\
   AU_1 - a'I_2 U_1 = [0]\\
   (A - a'I_2)U_1 = [0].
 \end{align*}
-Assim $U_1$ é uma solução de norma 1 do sistema linear
+Assim $U_1$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
 \[
   (A - a'I_2)X = [0].
 \]
-A solução $U_2$ é obtida de $U_1$ trocando a posição das componentes de $U_1$ e depois o sinal da primeira posição.
+A solu\c{c}\~ao $U_2$ \'e obtida de $U_1$ trocando a posi\c{c}\~ao das componentes de $U_1$ e depois o sinal da primeira posi\c{c}\~ao.
 
-Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$. Assim temos o seguinte teorema:
+Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1 U_2]$. Assim temos o seguinte teorema:
 
 \begin{teorema}
-  Considere a equação
+  Considere a equa\c{c}\~ao
   \[
       ax^2 + bxy + cy^2 + dx + ey + f = 0
   \]
-  com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não necessariamente nulos. Então mediante uma rotação da forma
+  com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ n\~ao necessariamente nulos. Ent\~ao mediante uma rota\c{c}\~ao da forma
   \[
     X = R_\theta X_1
   \]
@@ -1744,11 +1744,11 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
     x_1\\y_1
   \end{bmatrix}
   \]
-  a equação da cônica acima pode ser transformada em
+  a equa\c{c}\~ao da c\^onica acima pode ser transformada em
   \[
     a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
   \]
-  em que $a'$, $c'$ são raízes de
+  em que $a'$, $c'$ s\~ao ra{\'\i}zes de
   \[
     p(\lambda) = \begin{bmatrix}
       a - \lambda & b/2
@@ -1762,7 +1762,7 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
       \cos\theta\\ \sin\theta
     \end{bmatrix}
   \]
-  é uma solução de norma 1 do sistema linear
+  \'e uma solu\c{c}\~ao de norma 1 do sistema linear
   \[
     \begin{bmatrix}
       a - a' & b/2\\
@@ -1776,11 +1776,11 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
 \end{teorema}
 
 \begin{exemplos}
-  Identifique as cônicas:
+  Identifique as c\^onicas:
   \begin{enumerate}
     \item $52x^2 - 72xy + 73y^2 - 400 = 0$
     \begin{solucao}
-      Inicialmente podemos escrever tal equação na forma
+      Inicialmente podemos escrever tal equa\c{c}\~ao na forma
       \[
         X^t A X + KX - 400 = 0
       \]
@@ -1795,7 +1795,7 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 & 0
         \end{bmatrix}.
       \]
-      Fazendo a mudança $X = R_\theta X_1$ onde
+      Fazendo a mudan\c{c}a $X = R_\theta X_1$ onde
       \[
         X_1 = \begin{bmatrix}
           x_1 \\y_1
@@ -1804,14 +1804,14 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           \sin\theta & \cos\theta
         \end{bmatrix}
       \]
-      removeremos o termo $xy$. Para isso precisamos encontrar as raízes de
+      removeremos o termo $xy$. Para isso precisamos encontrar as ra{\'\i}zes de
       \[
         p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
           52 - \lambda & -36\\
           -36 & 73 - \lambda
         \end{bmatrix} = (52 - \lambda)(73 - \lambda) - 36^2 = \lambda^2 - 125\lambda + 2500.
       \]
-      Suas raízes são $\lambda_1 = 25$ e $\lambda_2 = 100$. Tomando $a' = 25$ e $c' = 100$ precisamos resolver o sistema
+      Suas ra{\'\i}zes s\~ao $\lambda_1 = 25$ e $\lambda_2 = 100$. Tomando $a' = 25$ e $c' = 100$ precisamos resolver o sistema
       \begin{align*}
         (A - 25I_2)X = \begin{bmatrix}
           0\\0
@@ -1825,12 +1825,12 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 \\0
         \end{bmatrix}
       \end{align*}
-      para encontrar a matrix de rotação. A solução deste sistema é $x = (4/3)y$ e para determinar a matriz precisamos escolher soluções de norma 1. Assim podemos tomar, por exemplo,
+      para encontrar a matrix de rota\c{c}\~ao. A solu\c{c}\~ao deste sistema \'e $x = (4/3)y$ e para determinar a matriz precisamos escolher solu\c{c}\~oes de norma 1. Assim podemos tomar, por exemplo,
       \begin{align*}
         U_1 = (\cos\theta, \sin\theta) = (4/5, 3/5)\\
         U_2 = (-\sin\theta, \cos\theta) = (-3/5, 4/5).
       \end{align*}
-      Daí o ângulo de rotação é $\theta = \arccos(4/5)$, a matriz de rotação é
+      Da{\'\i} o \^angulo de rota\c{c}\~ao \'e $\theta = \arccos(4/5)$, a matriz de rota\c{c}\~ao \'e
       \[
         R_\theta = \begin{bmatrix}
           4/5 & -3/5\\
@@ -1844,17 +1844,17 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 & 100
         \end{bmatrix}.
       \]
-      Com isso a equação original torna-se
+      Com isso a equa\c{c}\~ao original torna-se
       \begin{align*}
         25x_1^2 + 100y_1^2 = 400\\
         \dfrac{x_1^2}{16} + \dfrac{y_1^2}{4} = 1
       \end{align*}
-      que é uma elipse com focos no eixo $x_1$.
+      que \'e uma elipse com focos no eixo $x_1$.
     \end{solucao}
 
     \item $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$
     \begin{solucao}
-      Inicialmente podemos escrever tal equação na forma
+      Inicialmente podemos escrever tal equa\c{c}\~ao na forma
       \[
         X^t A X + KX + 1 = 0
       \]
@@ -1869,7 +1869,7 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           -2 & -2
         \end{bmatrix}.
       \]
-      Fazendo a mudança $X = R_\theta X_1$ onde
+      Fazendo a mudan\c{c}a $X = R_\theta X_1$ onde
       \[
         X_1 = \begin{bmatrix}
           x_1 \\y_1
@@ -1878,14 +1878,14 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           \sin\theta & \cos\theta
         \end{bmatrix}
       \]
-      removeremos o termo $xy$. Para isso precisamos encontrar as raízes de
+      removeremos o termo $xy$. Para isso precisamos encontrar as ra{\'\i}zes de
       \[
         p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
           1 - \lambda & -1\\
           -1 & 1 - \lambda
         \end{bmatrix} = (1 - \lambda)^2 - 1 = \lambda^2 - 2\lambda.
       \]
-      Suas raízes são $\lambda_1 = 0$ e $\lambda_2 = 2$. Tomando $a' = 0$ e $c' = 2$ precisamos resolver o sistema
+      Suas ra{\'\i}zes s\~ao $\lambda_1 = 0$ e $\lambda_2 = 2$. Tomando $a' = 0$ e $c' = 2$ precisamos resolver o sistema
       \begin{align*}
         (A - 0I_2)X = \begin{bmatrix}
           0\\0
@@ -1899,12 +1899,12 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 \\0
         \end{bmatrix}
       \end{align*}
-      para encontrar a matrix de rotação. A solução deste sistema é $x = y$ e para determinar a matriz precisamos escolher soluções de norma 1. Assim podemos tomar, por exemplo,
+      para encontrar a matrix de rota\c{c}\~ao. A solu\c{c}\~ao deste sistema \'e $x = y$ e para determinar a matriz precisamos escolher solu\c{c}\~oes de norma 1. Assim podemos tomar, por exemplo,
       \begin{align*}
         U_1 = (\cos\theta, \sin\theta) = (1/\sqrt{2}, 1/\sqrt{2})\\
         U_2 = (-\sin\theta, \cos\theta) = (-1/\sqrt{2}, 1/\sqrt{2}).
       \end{align*}
-      Daí o ângulo de rotação é $\theta = \arccos(1/\sqrt{2}) = \pi/4$, a matriz de rotação é
+      Da{\'\i} o \^angulo de rota\c{c}\~ao \'e $\theta = \arccos(1/\sqrt{2}) = \pi/4$, a matriz de rota\c{c}\~ao \'e
       \[
         R_\theta = \begin{bmatrix}
           1/\sqrt{2} & -1/\sqrt{2}\\
@@ -1918,26 +1918,26 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 & 2
         \end{bmatrix}.
       \]
-      Com isso a equação original torna-se
+      Com isso a equa\c{c}\~ao original torna-se
       \begin{align*}
         2y_1^2 - 4\sqrt{2}x_1 + 1 = 0\\
         y_1^2 = \sqrt{2}\left(x_1 - \dfrac{1}{2\sqrt{2}}\right).
       \end{align*}
-      Fazendo a mudança
+      Fazendo a mudan\c{c}a
       \begin{align*}
         x_2 = x_1 - \dfrac{1}{2\sqrt{2}}\\
         y_2 = y_1
       \end{align*}
-      obtemos a equação
+      obtemos a equa\c{c}\~ao
       \[
         y_2^2 = \sqrt{2}x_2
       \]
-      que é uma parábola com foco no eixo $x_2$ e reta diretriz $r: x_2 = -\sqrt{2}/4$.
+      que \'e uma par\'abola com foco no eixo $x_2$ e reta diretriz $r: x_2 = -\sqrt{2}/4$.
     \end{solucao}
 
-    \item $3x^2 - 10xy + 3y^2 - 12\sqrt{2}x - 12\sqrt{2}y + 32 = 0$
+    \item $3x^2 - 10xy + 3y^2 - 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$
     \begin{solucao}
-      Inicialmente podemos escrever tal equação na forma
+      Inicialmente podemos escrever tal equa\c{c}\~ao na forma
       \[
         X^t A X + KX + 1 = 0
       \]
@@ -1952,7 +1952,7 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           12\sqrt{2} & -4\sqrt{2}
         \end{bmatrix}.
       \]
-      Fazendo a mudança $X = R_\theta X_1$ onde
+      Fazendo a mudan\c{c}a $X = R_\theta X_1$ onde
       \[
         X_1 = \begin{bmatrix}
           x_1 \\y_1
@@ -1961,14 +1961,14 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           \sin\theta & \cos\theta
         \end{bmatrix}
       \]
-      removeremos o termo $xy$. Para isso precisamos encontrar as raízes de
+      removeremos o termo $xy$. Para isso precisamos encontrar as ra{\'\i}zes de
       \[
         p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
           3 - \lambda & -5\\
           -5 & 3 - \lambda
         \end{bmatrix} = (3 - \lambda)^2 - 25 = \lambda^2 - 6\lambda - 16.
       \]
-      Suas raízes são $\lambda_1 = -2$ e $\lambda_2 = 8$. Tomando $a' = -2$ e $c' = 8$ precisamos resolver o sistema
+      Suas ra{\'\i}zes s\~ao $\lambda_1 = -2$ e $\lambda_2 = 8$. Tomando $a' = -2$ e $c' = 8$ precisamos resolver o sistema
       \begin{align*}
         (A + 2I_2)X = \begin{bmatrix}
           0\\0
@@ -1982,12 +1982,12 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 \\0
         \end{bmatrix}
       \end{align*}
-      para encontrar a matrix de rotação. A solução deste sistema é $x = y$ e para determinar a matriz precisamos escolher soluções de norma 1. Assim podemos tomar, por exemplo,
+      para encontrar a matrix de rota\c{c}\~ao. A solu\c{c}\~ao deste sistema \'e $x = y$ e para determinar a matriz precisamos escolher solu\c{c}\~oes de norma 1. Assim podemos tomar, por exemplo,
       \begin{align*}
         U_1 = (\cos\theta, \sin\theta) = (1/\sqrt{2}, 1/\sqrt{2})\\
         U_2 = (-\sin\theta, \cos\theta) = (-1/\sqrt{2}, 1/\sqrt{2}).
       \end{align*}
-      Daí o ângulo de rotação é $\theta = \arccos(1/\sqrt{2}) = \pi/4$, a matriz de rotação é
+      Da{\'\i} o \^angulo de rota\c{c}\~ao \'e $\theta = \arccos(1/\sqrt{2}) = \pi/4$, a matriz de rota\c{c}\~ao \'e
       \[
         R_\theta = \begin{bmatrix}
           1/\sqrt{2} & -1/\sqrt{2}\\
@@ -2001,23 +2001,23 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
           0 & 8
         \end{bmatrix}.
       \]
-      Com isso a equação original torna-se
+      Com isso a equa\c{c}\~ao original torna-se
       \begin{align*}
         -2x_1^2 + 8y_1^2 + 8x_1 -16y_1 + 32 = 0\\
         x_1^2 - 4y_1^2 - 4x_1 + 8y_1 -16 = 0\\
         (x_1^2 - 4x_1 + 4) - 4 - 4(y_1^2 - 2y_1 + 1) + 4 - 16 = 0\\
         (x_1 - 2)^2 - 4(y_1 - 1)^2 = 16
       \end{align*}
-      Fazendo a mudança
+      Fazendo a mudan\c{c}a
       \begin{align*}
         x_2 = x_1 - 2\\
         y_2 = y_1 - 1
       \end{align*}
-      obtemos a equação
+      obtemos a equa\c{c}\~ao
       \[
         \dfrac{x_2^2}{16} - \dfrac{y_2^2}{4} = 1
       \]
-      que é uma hipérbole com focos no eixo $x_2$.
+      que \'e uma hip\'erbole com focos no eixo $x_2$.
     \end{solucao}
   \end{enumerate}
 \end{exemplos}
