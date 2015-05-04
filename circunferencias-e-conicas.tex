@@ -1774,6 +1774,85 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
     \end{bmatrix}.
   \]
 \end{teorema}
+
+\begin{exemplos}
+  Identifique as cônicas:
+  \begin{enumerate}
+    \item $52x^2 - 72xy + 73y^2 - 400 = 0$
+    \begin{solucao}
+      Inicialmente podemos escrever tal equação na forma
+      \[
+        X^t A X + KX - 400 = 0
+      \]
+      onde
+      \[
+        X = \begin{bmatrix}
+          x\\y
+        \end{bmatrix}, \quad A = \begin{bmatrix}
+          52 & -36\\
+          -36 & 73
+        \end{bmatrix},\quad K = \begin{bmatrix}
+          0 & 0
+        \end{bmatrix}.
+      \]
+      Fazendo a mudança $X = R_\theta X_1$ onde
+      \[
+        X_1 = \begin{bmatrix}
+          x_1 \\y_1
+        \end{bmatrix} \quad\mbox{e}\quad R_\theta = \begin{bmatrix}
+          \cos\theta & -\sin\theta\\
+          \sin\theta & \cos\theta
+        \end{bmatrix}
+      \]
+      removeremos o termo $xy$. Para isso precisamos encontrar as raízes de
+      \[
+        p(\lambda) = \det \begin{bmatrix}
+          52 - \lambda & -36\\
+          -36 & 73 - \lambda
+        \end{bmatrix} = (52 - \lambda)(73 - \lambda) + 36^2 = \lambda^2 - 125\lambda + 2500.
+      \]
+      Suas raízes são $\lambda_1 = 25$ e $\lambda_2 = 100$. Tomando $a' = 25$ e $c' = 100$ precisamos resolver o sistema
+      \begin{align*}
+        (A - 25I_2)X = \begin{bmatrix}
+          0\\0
+        \end{bmatrix}\\
+        \begin{bmatrix}
+          27 & -36\\
+          -36 & 48
+        \end{bmatrix} \begin{bmatrix}
+          x \\y
+        \end{bmatrix} = \begin{bmatrix}
+          0 \\0
+        \end{bmatrix}
+      \end{align*}
+      para encontrar a matrix de rotação. A solução deste sistema é $x = (4/3)y$ e para determinar a matriz precisamos escolher soluções de norma 1. Assim podemos tomar, por exemplo,
+      \begin{align*}
+        U_1 = (\cos\theta, \sin\theta) = (4/5, 3/5)\\
+        U_2 = (-\sin\theta, \cos\theta) = (-3/5, 4/5).
+      \end{align*}
+      Daí o ângulo de rotação é $\theta = \arccos(4/5)$, a matriz de rotação é
+      \[
+        R_\theta = \begin{bmatrix}
+          4/5 & -3/5\\
+          3/5 & 4/5
+        \end{bmatrix}
+      \]
+      e
+      \[
+        B = \begin{bmatrix}
+          25 & 0\\
+          0 & 100
+        \end{bmatrix}.
+      \]
+      Com isso a equação original torna-se
+      \begin{align*}
+        25x_1^2 + 100y_1^2 = 400\\
+        \dfrac{x_1^2}{16} + \dfrac{y_1^2}{4} = 1
+      \end{align*}
+      que é uma elipse com focos no eixo $x_1$.
+    \end{solucao}
+  \end{enumerate}
+\end{exemplos}
 % section rotacoes_de_eixos_metodo_matricial (end)
 
 % section rotacao_e_translacao_de_eixos (end)
