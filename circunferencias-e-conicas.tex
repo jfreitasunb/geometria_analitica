@@ -1702,7 +1702,7 @@ Como $R_\theta B = AR_\theta$ ent\~ao das duas \'ultimas equa\c{c}\~ao vemos que
   U_1 = \begin{bmatrix}
     \cos\theta\\
     \sin\theta
-  \end{bmatrix}
+  \end{bmatrix} = (\cos\theta, \sin\theta)
 \]
 devemos ter
 \[
@@ -1720,7 +1720,7 @@ Assim $U_1$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
 \]
 A solu\c{c}\~ao $U_2$ \'e obtida de $U_1$ trocando a posi\c{c}\~ao das componentes de $U_1$ e depois o sinal da primeira posi\c{c}\~ao.
 
-Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1 U_2]$. Assim temos o seguinte teorema:
+Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\ U_2]$. Assim temos o seguinte teorema:
 
 \begin{teorema}
   Considere a equa\c{c}\~ao
@@ -1750,8 +1750,8 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1 
   \]
   em que $a'$, $c'$ s\~ao ra{\'\i}zes de
   \[
-    p(\lambda) = \begin{bmatrix}
-      a - \lambda & b/2
+    p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
+      a - \lambda & b/2\\
       b/2 & c - \lambda
     \end{bmatrix}.
   \]
@@ -1805,12 +1805,12 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1 
         \end{bmatrix}
       \]
       removeremos o termo $xy$. Para isso precisamos encontrar as ra{\'\i}zes de
-      \[
-        p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
+      \begin{align*}
+        p(\lambda) &= \det (A - \lambda I_2) = \det \begin{bmatrix}
           52 - \lambda & -36\\
           -36 & 73 - \lambda
-        \end{bmatrix} = (52 - \lambda)(73 - \lambda) - 36^2 = \lambda^2 - 125\lambda + 2500.
-      \]
+        \end{bmatrix} \\ &= (52 - \lambda)(73 - \lambda) - 36^2 \\ &= \lambda^2 - 125\lambda + 2500.
+      \end{align*}
       Suas ra{\'\i}zes s\~ao $\lambda_1 = 25$ e $\lambda_2 = 100$. Tomando $a' = 25$ e $c' = 100$ precisamos resolver o sistema
       \begin{align*}
         (A - 25I_2)X = \begin{bmatrix}
@@ -1879,12 +1879,12 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1 
         \end{bmatrix}
       \]
       removeremos o termo $xy$. Para isso precisamos encontrar as ra{\'\i}zes de
-      \[
-        p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
+      \begin{align*}
+        p(\lambda) &= \det (A - \lambda I_2) = \det \begin{bmatrix}
           1 - \lambda & -1\\
           -1 & 1 - \lambda
-        \end{bmatrix} = (1 - \lambda)^2 - 1 = \lambda^2 - 2\lambda.
-      \]
+        \end{bmatrix} \\ &= (1 - \lambda)^2 - 1 = \lambda^2 - 2\lambda.
+      \end{align*}
       Suas ra{\'\i}zes s\~ao $\lambda_1 = 0$ e $\lambda_2 = 2$. Tomando $a' = 0$ e $c' = 2$ precisamos resolver o sistema
       \begin{align*}
         (A - 0I_2)X = \begin{bmatrix}
@@ -1962,12 +1962,12 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1 
         \end{bmatrix}
       \]
       removeremos o termo $xy$. Para isso precisamos encontrar as ra{\'\i}zes de
-      \[
-        p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
+      \begin{align*}
+        p(\lambda) &= \det (A - \lambda I_2) = \det \begin{bmatrix}
           3 - \lambda & -5\\
           -5 & 3 - \lambda
-        \end{bmatrix} = (3 - \lambda)^2 - 25 = \lambda^2 - 6\lambda - 16.
-      \]
+        \end{bmatrix}\\ &= (3 - \lambda)^2 - 25\\ &= \lambda^2 - 6\lambda - 16.
+      \end{align*}
       Suas ra{\'\i}zes s\~ao $\lambda_1 = -2$ e $\lambda_2 = 8$. Tomando $a' = -2$ e $c' = 8$ precisamos resolver o sistema
       \begin{align*}
         (A + 2I_2)X = \begin{bmatrix}
