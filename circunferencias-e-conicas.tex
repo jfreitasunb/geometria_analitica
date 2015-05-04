@@ -1806,7 +1806,7 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
       \]
       removeremos o termo $xy$. Para isso precisamos encontrar as raízes de
       \[
-        p(\lambda) = \det \begin{bmatrix}
+        p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
           52 - \lambda & -36\\
           -36 & 73 - \lambda
         \end{bmatrix} = (52 - \lambda)(73 - \lambda) - 36^2 = \lambda^2 - 125\lambda + 2500.
@@ -1920,7 +1920,7 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
       \]
       Com isso a equação original torna-se
       \begin{align*}
-        2y_1^2 4 4\sqrt{2}x_1 + 1 = 0\\
+        2y_1^2 - 4\sqrt{2}x_1 + 1 = 0\\
         y_1^2 = \sqrt{2}\left(x_1 - \dfrac{1}{2\sqrt{2}}\right).
       \end{align*}
       Fazendo a mudança
@@ -1932,7 +1932,92 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1 U_2]$
       \[
         y_2^2 = \sqrt{2}x_2
       \]
-      que é uma parábola com focos no eixo $x_2$ e reta diretriz $r: x_2 = -\sqrt{2}/4$.
+      que é uma parábola com foco no eixo $x_2$ e reta diretriz $r: x_2 = -\sqrt{2}/4$.
+    \end{solucao}
+
+    \item $3x^2 - 10xy + 3y^2 - 12\sqrt{2}x - 12\sqrt{2}y + 32 = 0$
+    \begin{solucao}
+      Inicialmente podemos escrever tal equação na forma
+      \[
+        X^t A X + KX + 1 = 0
+      \]
+      onde
+      \[
+        X = \begin{bmatrix}
+          x\\y
+        \end{bmatrix}, \quad A = \begin{bmatrix}
+          3 & -5\\
+          -5 & 3
+        \end{bmatrix},\quad K = \begin{bmatrix}
+          12\sqrt{2} & -4\sqrt{2}
+        \end{bmatrix}.
+      \]
+      Fazendo a mudança $X = R_\theta X_1$ onde
+      \[
+        X_1 = \begin{bmatrix}
+          x_1 \\y_1
+        \end{bmatrix} \quad\mbox{e}\quad R_\theta = \begin{bmatrix}
+          \cos\theta & -\sin\theta\\
+          \sin\theta & \cos\theta
+        \end{bmatrix}
+      \]
+      removeremos o termo $xy$. Para isso precisamos encontrar as raízes de
+      \[
+        p(\lambda) = \det (A - \lambda I_2) = \det \begin{bmatrix}
+          3 - \lambda & -5\\
+          -5 & 3 - \lambda
+        \end{bmatrix} = (3 - \lambda)^2 - 25 = \lambda^2 - 6\lambda - 16.
+      \]
+      Suas raízes são $\lambda_1 = -2$ e $\lambda_2 = 8$. Tomando $a' = -2$ e $c' = 8$ precisamos resolver o sistema
+      \begin{align*}
+        (A + 2I_2)X = \begin{bmatrix}
+          0\\0
+        \end{bmatrix}\\
+        \begin{bmatrix}
+          5 & -5\\
+          -5 & 5
+        \end{bmatrix} \begin{bmatrix}
+          x \\y
+        \end{bmatrix} = \begin{bmatrix}
+          0 \\0
+        \end{bmatrix}
+      \end{align*}
+      para encontrar a matrix de rotação. A solução deste sistema é $x = y$ e para determinar a matriz precisamos escolher soluções de norma 1. Assim podemos tomar, por exemplo,
+      \begin{align*}
+        U_1 = (\cos\theta, \sin\theta) = (1/\sqrt{2}, 1/\sqrt{2})\\
+        U_2 = (-\sin\theta, \cos\theta) = (-1/\sqrt{2}, 1/\sqrt{2}).
+      \end{align*}
+      Daí o ângulo de rotação é $\theta = \arccos(1/\sqrt{2}) = \pi/4$, a matriz de rotação é
+      \[
+        R_\theta = \begin{bmatrix}
+          1/\sqrt{2} & -1/\sqrt{2}\\
+          1/\sqrt{2} & 1/\sqrt{2}
+        \end{bmatrix}
+      \]
+      e
+      \[
+        B = \begin{bmatrix}
+          -2 & 0\\
+          0 & 8
+        \end{bmatrix}.
+      \]
+      Com isso a equação original torna-se
+      \begin{align*}
+        -2x_1^2 + 8y_1^2 + 8x_1 -16y_1 + 32 = 0\\
+        x_1^2 - 4y_1^2 - 4x_1 + 8y_1 -16 = 0\\
+        (x_1^2 - 4x_1 + 4) - 4 - 4(y_1^2 - 2y_1 + 1) + 4 - 16 = 0\\
+        (x_1 - 2)^2 - 4(y_1 - 1)^2 = 16
+      \end{align*}
+      Fazendo a mudança
+      \begin{align*}
+        x_2 = x_1 - 2\\
+        y_2 = y_1 - 1
+      \end{align*}
+      obtemos a equação
+      \[
+        \dfrac{x_2^2}{16} - \dfrac{y_2^2}{4} = 1
+      \]
+      que é uma hipérbole com focos no eixo $x_2$.
     \end{solucao}
   \end{enumerate}
 \end{exemplos}
