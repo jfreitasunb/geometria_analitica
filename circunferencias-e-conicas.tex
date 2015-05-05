@@ -2000,6 +2000,26 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\
     \end{solucao}
   \end{enumerate}
 \end{exemplos}
+
+\begin{teorema}
+  Seja $\mathcal{C}$ o conjunto dos pontos do plano que satisfazem a equação
+  \[
+    ax^2 + bxy + cy^2 + dx + ey + f = 0,
+  \]
+  com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não simultaneamente nulos. Sejam $a'$ e $c'$ raízes de
+  \[
+    p(\lambda) = \det \begin{bmatrix}
+      a - \lambda & b/2\\
+      b/2 & c - \lambda
+    \end{bmatrix}.
+  \]
+  \begin{enumerate}
+    \item Temos $a'c' = ac - b^2/4$.
+    \item Se $a'c' > 0$, então $\mathcal{C}$ é uma elipse, um ponto ou o conjunto vazio.
+    \item Se $a'c' < 0$, então $\mathcal{C}$ é uma hipérbole ou um par de retas concorrentes.
+    \item Se $a'c' = 0$, então $\mathcal{C}$ é uma parábola, um par de retas paralelas, uma reta ou o conjunto vazio.
+  \end{enumerate}
+\end{teorema}
 % section rotacoes_de_eixos_metodo_matricial (end)
 
 % section rotacao_e_translacao_de_eixos (end)
