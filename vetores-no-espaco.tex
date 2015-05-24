@@ -105,7 +105,7 @@ Agora, $|SQ| = |z_2 - z_1|$ e da{\'\i}
   \]
 \end{exemplos}
 
-Os vetores e as opera\c{c}\~ores com eles podem ser definidas utilizando-se dos eixos coordenados do espa\c{c}o. Para isso, um ponto $P$ do espa\c{c}o \'e representado em $\real^3$ por uma terna de coordenadas $P(x_1, y_1,z_1)$, onde $x_1$, $y_1$, $z_1 \in \real$.
+Os vetores e as opera\c{c}\~oes com eles podem ser definidas utilizando-se dos eixos coordenados do espa\c{c}o. Para isso, um ponto $P$ do espa\c{c}o \'e representado em $\real^3$ por uma terna de coordenadas $P(x_1, y_1,z_1)$, onde $x_1$, $y_1$, $z_1 \in \real$.
 
 Seja $\vec{u}$ um vetor no espa\c{c}o. Sabemos que $\vec{u}$ \'e um representante de uma certa classe de equipol\^encia dos segmentos orientados $(B,C)$. Para este segmento orientado $(B,C)$ podemos encontrar um ponto $A(x_1, y_1,z_1)$ tal que o segmento orientado $(O,A)$, onde $O(0,0,0)$, tem o mesmo comprimento, a mesma dire\c{c}\~ao e o mesmo sentido de $(B,C)$. Assim o vetor $\vec{u}$ pode ser representado pelo segmento orientado $(O,A)$. Portanto qualquer vetor em $\real^3$ pode ser representado como um segmento com origem no ponto $(0,0,0)$ e extremidade em um ponto $(x_1,y_1,z_1)$.
 
@@ -521,11 +521,11 @@ Temos
 \begin{proposicao}\label{normaprodutovetorial}
   Sejam $\vec{u}$ e $\vec{v}$ vetores no espa\c{c}o. Ent\~ao
   \begin{equation}
-    \norm{\vec{u}\times\vec{v}}^2 = \norm{\vec{u}}^2\norm{\vec{v}}^2 - (\vec{u}\cdot\vec{v})^2.
+    \norm{\vec{u}\times\vec{v}}^2 = \norm{\vec{u}}^2\norm{\vec{v}}^2 - \inner{u}{v}^2.
   \end{equation}
 \end{proposicao}
 \begin{prova}
-  Seja $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$. Basta calcular $\norm{\vec{u}\times\vec{v}}^2$ e $\norm{\vec{u}}^2\norm{\vec{v}}^2 - (\vec{u}\cdot\vec{v})^2$  e comparar os termos.
+  Seja $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$. Basta calcular $\norm{\vec{u}\times\vec{v}}^2$ e $\norm{\vec{u}}^2\norm{\vec{v}}^2 - \inner{u}{v}^2$  e comparar os termos.
 \end{prova}
 
 \begin{proposicao}
@@ -538,7 +538,7 @@ Temos
 \begin{prova}
   Da Proposi\c{c}\~ao \ref{normaprodutovetorial}  e usando a equa\c{c}\~ao \eqref{produto-interno-espaco} temos
   \begin{align*}
-    \norm{\vec{u}\times\vec{v}}^2 &= \norm{\vec{u}}^2\norm{\vec{v}}^2 - (\inner{u}{v})^2\\ &= \norm{\vec{u}}^2\norm{\vec{v}}^2 - (\norm{\vec{u}}\norm{\vec{v}}\cos\theta)^2\\ &= \norm{\vec{u}}^2\norm{\vec{v}}^2(1 - \cos^2\theta)\\ &= \norm{\vec{u}}^2\norm{\vec{v}}^2\sin^2\theta.
+    \norm{\vec{u}\times\vec{v}}^2 &= \norm{\vec{u}}^2\norm{\vec{v}}^2 - \inner{u}{v}^2\\ &= \norm{\vec{u}}^2\norm{\vec{v}}^2 - (\norm{\vec{u}}\norm{\vec{v}}\cos\theta)^2\\ &= \norm{\vec{u}}^2\norm{\vec{v}}^2(1 - \cos^2\theta)\\ &= \norm{\vec{u}}^2\norm{\vec{v}}^2\sin^2\theta.
   \end{align*}
   Portanto,
   \[
@@ -612,11 +612,11 @@ Portanto o vetor $\vec{u}\times\vec{v}$ \'e tal que seu m\'odulo \'e numericamen
 
 Sejam $\vec{u}$ e $\vec{v}$ vetores de $\real^3$. Como $\vec{u}\times\vec{v}$ \'e um vetor de $\real^3$ podemos calcular seu produto interno com qualquer outro vetor $\vec{w}$ de $\real^3$. O n\'umero real
 \begin{equation}
-  \langle(\vec{u}\times\vec{v}), \vec{w}\rangle
+  \langle\vec{u}\times\vec{v}, \vec{w}\rangle
 \end{equation}
 \'e chamado de \textbf{produto misto} dos vetores $\vec{u}$, $\vec{v}$ e $\vec{w}$.\index{Vetores no Espa\c{c}o!Produto Misto} Se $\vec{u} = (a_1,b_1,c_1)$, $\vec{v} =(a_2,b_2,c_2)$ e $\vec{w} = (a_3,b_3,c_3)$ temos
 \begin{align*}
-  \langle(\vec{u}\times\vec{v}), \vec{w}\rangle &= \langle(b_1c_2 - c_2b_1,a_2c_1 - a_1c_2, a_1b_2 - a_2b_1), (a_3, b_3, c_3)\rangle \\ &= (b_1c_2 - b_2c_1)a_3 + (a_2c_1 - a_1c_2)b_2 + (a_1b_2 - a_2b_1)c_3.
+  \langle\vec{u}\times\vec{v}, \vec{w}\rangle &= \langle(b_1c_2 - c_2b_1,a_2c_1 - a_1c_2, a_1b_2 - a_2b_1), (a_3, b_3, c_3)\rangle \\ &= (b_1c_2 - b_2c_1)a_3 + (a_2c_1 - a_1c_2)b_2 + (a_1b_2 - a_2b_1)c_3.
 \end{align*}
 
 Agora,
@@ -639,7 +639,7 @@ Agora,
 
 Portanto
 \begin{equation}
-  \langle(\vec{u}\times\vec{v}), \vec{w}\rangle = \det \begin{pmatrix}
+  \langle\vec{u}\times\vec{v}, \vec{w}\rangle = \det \begin{pmatrix}
     a_1 & b_1 & c_1\\
     a_2 & b_2 & c_2\\
     a_3 & b_3 & c_3
