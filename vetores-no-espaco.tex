@@ -330,7 +330,7 @@ De modo an\'alogo ao caso para vetores no plano, temos:
     \begin{solucao}
       Temos
       \begin{align*}
-        \inner{u}{v} = (2, -3, 1)\cdot(1,1,0) = 2 - 3 + 0 = -1\\
+        \inner{u}{v} = \langle(2, -3, 1), (1,1,0)\rangle = 2 - 3 + 0 = -1\\
         \norm{\vec{u}} = \sqrt{14},\ \norm{\vec{v}} = \sqrt{2}\\
         \cos\theta = \frac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}} = -\dfrac{1}{\sqrt{14}\sqrt{2}} = -\dfrac{1}{\sqrt{28}}.
       \end{align*}
@@ -377,7 +377,7 @@ De modo an\'alogo ao caso para vetores no plano, temos:
   \begin{enumerate}[label=({\alph*})]
     \item As propriedades \ref{linearidade-soma-produto-vetorial-espaco} e \ref{linearidade-escalar-produto-vetorial-espaco} da Proposi\c{c}\~ao \ref{propriedades-produto-vetorial-espaco} podem ser estendidas para qualquer n\'umero de vetores:
     \[
-      \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n})\rangle = \lambda_1(\inner{u}{v_1}) + \lambda_2(\inner{u}{v_2}) + \cdots + \lambda_n(\inner{u}{v_n}).
+      \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n})\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
     \]
     \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ n\~ao podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0, 0)$, $\vec{v} = (2, 1, 1)$ e $\vec{w} = (2, -5, 3)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
     \item De $\inner{u}{v} = 0$ n\~ao podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1, 1)$ e $\vec{v} = (-2, 4, 0)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
