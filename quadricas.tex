@@ -289,12 +289,12 @@ Assim se $a = c$, ent\~ao obtemos uma circunfer\^encia e se $a \ne c$, ent\~ao a
 
 Considere uma quádrica de equa\c{c}\~ao
 \begin{equation}\label{equacao_geral_quadrica}
-  ax^2 + bxy + cx^2 + dx + ey + f = 0.
+  ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
 \end{equation}
 
-Queremos remover o termo $xy$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_quadrica} possa ser transformada numa equa\c{c}\~ao da forma
+Queremos remover os termos $xy$, $xz$ e $yz$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_quadrica} possa ser transformada numa equa\c{c}\~ao da forma
 \begin{equation}\label{equacao_rotacionada_quadrica}
-  a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
+  a'x_1^2 + b'y_1^2 c'z_1^2 + g'x_1 + h'y_1 i'z + j = 0.
 \end{equation}
 
 Inicialmente observe que a \eqref{equacao_geral_quadrica} pode ser escrita na forma
@@ -304,15 +304,17 @@ Inicialmente observe que a \eqref{equacao_geral_quadrica} pode ser escrita na fo
 onde
 \[
   A = \begin{bmatrix}
-    a & b/2\\
-    b/2 & c
+    a & d/2 & e/2\\
+    d/2 & b & f/2\\
+    e/2 & f/2 & c
   \end{bmatrix}
 , \quad K = \begin{bmatrix}
-  d & e
+  g & h & i
 \end{bmatrix}, \quad X = \begin{bmatrix}
   x\\
-  y
-\end{bmatrix}\quad\mbox{e}\quad F = [f]
+  y\\
+  z
+\end{bmatrix}\quad\mbox{e}\quad F = [j]
 \]
 e $t$ denota a matriz transposta. Queremos ent\~ao encontrar um \^angulo $\theta$ tal que a substitui\c{c}\~ao
 \begin{equation}\label{substituicao_rotacao_de_eixos_espaco}
