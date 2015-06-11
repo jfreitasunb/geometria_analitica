@@ -287,18 +287,18 @@ Assim se $a = c$, ent\~ao obtemos uma circunfer\^encia e se $a \ne c$, ent\~ao a
 \section{Identificação de Quádricas} % (fold)
 \label{sec:identificacao_de_quadricas}
 
-Considere uma c\^onica de equa\c{c}\~ao
-\begin{equation}\label{equacao_geral_conica}
+Considere uma quádrica de equa\c{c}\~ao
+\begin{equation}\label{equacao_geral_quadrica}
   ax^2 + bxy + cx^2 + dx + ey + f = 0.
 \end{equation}
 
-Queremos remover o termo $xy$ da equa\c{c}\~ao \eqref{equacao_geral_conica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_conica} possa ser transformada numa equa\c{c}\~ao da forma
-\begin{equation}\label{equacao_rotacionada_conica}
+Queremos remover o termo $xy$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_quadrica} possa ser transformada numa equa\c{c}\~ao da forma
+\begin{equation}\label{equacao_rotacionada_quadrica}
   a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
 \end{equation}
 
-Inicialmente observe que a \eqref{equacao_geral_conica} pode ser escrita na forma
-\begin{equation}\label{equacao_matricial_conica}
+Inicialmente observe que a \eqref{equacao_geral_quadrica} pode ser escrita na forma
+\begin{equation}\label{equacao_matricial_quadrica}
   X^tAX + KX + F = [0]
 \end{equation}
 onde
@@ -315,7 +315,7 @@ onde
 \end{bmatrix}\quad\mbox{e}\quad F = [f]
 \]
 e $t$ denota a matriz transposta. Queremos ent\~ao encontrar um \^angulo $\theta$ tal que a substitui\c{c}\~ao
-\begin{equation}\label{substituicao_rotacao_eixos}
+\begin{equation}\label{substituicao_rotacao_de_eixos_espaco}
   X = \begin{bmatrix}
     \cos\theta & -\sin\theta\\
     \sin\theta & \cos\theta
@@ -323,7 +323,7 @@ e $t$ denota a matriz transposta. Queremos ent\~ao encontrar um \^angulo $\theta
     x_1\\y_1
   \end{bmatrix}
 \end{equation}
-transforma a equa\c{c}\~ao \eqref{equacao_geral_conica} na equa\c{c}\~ao \eqref{equacao_rotacionada_conica}.
+transforma a equa\c{c}\~ao \eqref{equacao_geral_quadrica} na equa\c{c}\~ao \eqref{equacao_rotacionada_quadrica}.
 
 Sejam
 \[
@@ -351,7 +351,7 @@ Note que
 \]
 ou seja, $(R_\theta^t)^{-1} = R_\theta$.
 
-Agora, substituindo \eqref{substituicao_rotacao_eixos} em \eqref{equacao_geral_conica} obtemos
+Agora, substituindo \eqref{substituicao_rotacao_de_eixos_espaco} em \eqref{equacao_geral_quadrica} obtemos
 \begin{align*}
   (R_\theta X_1)^t A (R_\theta X_1) + KR_\theta X_1 + F = [0]\\
   X_1^t(R_\theta^t A R_\theta)X_1 + (KR_\theta)X_1 + F = [0].
