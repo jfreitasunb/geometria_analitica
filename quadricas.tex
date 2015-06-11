@@ -292,7 +292,19 @@ Considere uma quádrica de equa\c{c}\~ao
   ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
 \end{equation}
 
-Queremos remover os termos $xy$, $xz$ e $yz$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_quadrica} possa ser transformada numa equa\c{c}\~ao da forma
+Queremos remover os termos $xy$, $xz$ e $yz$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar uma matriz $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ onde os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ são unitários, ortogonais e tais que a mudança
+\begin{equation}
+	\begin{pmatrix}
+		x\\
+		y\\
+		z
+	\end{pmatrix} = Q \begin{pmatrix}
+		x_1\\
+		y_1\\
+		z_1
+	\end{pmatrix}
+\end{equation}
+transforma a equa\c{c}\~ao \eqref{equacao_geral_quadrica} numa equa\c{c}\~ao da forma
 \begin{equation}\label{equacao_rotacionada_quadrica}
   a'x_1^2 + b'y_1^2 c'z_1^2 + g'x_1 + h'y_1 i'z + j = 0.
 \end{equation}
