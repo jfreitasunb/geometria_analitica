@@ -472,7 +472,7 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\
 \begin{teorema}
   Considere a equa\c{c}\~ao
   \[
-      ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
+      ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0
   \]
   com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ n\~ao necessariamente nulos. Ent\~ao mediante uma mudan\c{c}a da forma
   \[
@@ -532,6 +532,30 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\
   	\vec{U_3} = \vec{U_1} \times \vec{U_2}
   \]
 \end{teorema}
+
+\begin{teorema}
+  Seja $\mathcal{S}$ o conjunto dos pontos do plano que satisfazem a equa\c{c}\~ao
+  \[
+    ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0,
+  \]
+  com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ n\~ao simultaneamente nulos. Sejam $a'$, $b'$ e $c'$ ra{\'\i}zes de
+  \[
+    p(\lambda) = \det \begin{bmatrix}
+      a - \lambda & d/2 & e/2 \\
+      d/2 & b - \lambda & f/2\\
+      e/2 & f/2 & c - \lambda
+    \end{bmatrix}.
+  \]
+  \begin{enumerate}[label=({\roman*})]
+    \item Se $a'$, $b'$ e $c'$ tiverem o mesmo sinal, ent\~ao $\mathcal{S}$ \'e um elipsóide, um ponto ou o conjunto vazio.
+    \item Se $a'$, $b'$ e $c'$ forem não nulos e não tiverem o mesmo sinal, ent\~ao $\mathcal{S}$ \'e um hip\'erbolóide de uma folha, de duas folhas ou um cone elíptico.
+    \item Se apenas um entre $a'$, $b'$ e $c'$ for nulo, ent\~ao $\mathcal{S}$ \'e um par\'abolóide elíptico, hiperbólico, um cilíndro elíptico, hiperbólico, dois planos concorrentes, uma reta ou o conjunto vazio.
+    \item Se exatamente dois entre $a'$, $b'$ e $c'$ forem nulos, então $\mathcal{S}$ é um cilindro parabólico, um par de planos paralelos ou um plano.
+  \end{enumerate}
+\end{teorema}
+
+
+
 % section identificacao_de_quadricas (end)
 
 
