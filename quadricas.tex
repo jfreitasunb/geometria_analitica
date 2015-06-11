@@ -294,15 +294,15 @@ Considere uma quádrica de equa\c{c}\~ao
 
 Queremos remover os termos $xy$, $xz$ e $yz$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar uma matriz $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ onde os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ são unitários, ortogonais e tais que a mudança
 \begin{equation}
-	\begin{pmatrix}
+	\begin{bmatrix}
 		x\\
 		y\\
 		z
-	\end{pmatrix} = Q \begin{pmatrix}
+	\end{bmatrix} = Q \begin{bmatrix}
 		x_1\\
 		y_1\\
 		z_1
-	\end{pmatrix}
+	\end{bmatrix}
 \end{equation}
 transforma a equa\c{c}\~ao \eqref{equacao_geral_quadrica} numa equa\c{c}\~ao da forma
 \begin{equation}\label{equacao_rotacionada_quadrica}
@@ -472,53 +472,64 @@ Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\
 \begin{teorema}
   Considere a equa\c{c}\~ao
   \[
-      ax^2 + bxy + cy^2 + dx + ey + f = 0
+      ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
   \]
-  com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ n\~ao necessariamente nulos. Ent\~ao mediante uma rota\c{c}\~ao da forma
+  com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ n\~ao necessariamente nulos. Ent\~ao mediante uma mudança da forma
   \[
-    X = R_\theta X_1
+    X = Q X_1
   \]
   onde
   \[
     X = \begin{bmatrix}
-      x\\y
+      x\\y\\z
     \end{bmatrix}, \quad
-    R_\theta = \begin{bmatrix}
-    \cos\theta & -\sin\theta\\
-    \sin\theta & \cos\theta
+    Q = \begin{bmatrix}
+    	\vec{U_1} & \vec{U_2} & \vec{U_3}
   \end{bmatrix}, \quad\mbox{e}\quad
   X_1 = \begin{bmatrix}
-    x_1\\y_1
+    x_1\\y_1\\z_1
   \end{bmatrix}
   \]
-  a equa\c{c}\~ao da c\^onica acima pode ser transformada em
+  a equa\c{c}\~ao da geral da quádrica acima pode ser transformada em
   \[
-    a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
+    a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0
   \]
-  em que $a'$, $c'$ s\~ao ra{\'\i}zes de
+  em que $a'$, $b'$ e $c'$ s\~ao ra{\'\i}zes de
   \[
-    p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
-      a - \lambda & b/2\\
-      b/2 & c - \lambda
+    p(\lambda) = \det(A - \lambda I_3) = \det \begin{bmatrix}
+      a - \lambda & d/2 & e/2\\
+      d/2 & b - \lambda & f/2\\
+      e/2 & f/2 & c - \lambda
     \end{bmatrix}.
   \]
 
-  Mais ainda,
-  \[
-    U_1 = \begin{bmatrix}
-      \cos\theta\\ \sin\theta
-    \end{bmatrix}
-  \]
-  \'e uma solu\c{c}\~ao de norma 1 do sistema linear
+  Mais ainda, $\vec{U_1}$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
   \[
     \begin{bmatrix}
-      a - a' & b/2\\
-      b/2 & c - a'
+      a - a' & d/2 & e/2\\
+      d/2 & b - a' & f/2\\
+      e/2 & f/2 & c - a'
     \end{bmatrix} \begin{bmatrix}
-      x\\y
+      x\\y\\z
     \end{bmatrix} = \begin{bmatrix}
-      0\\0
-    \end{bmatrix}.
+      0\\0\\z
+    \end{bmatrix},
+  \]
+  $\vec{U_2}$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
+  \[
+    \begin{bmatrix}
+      a - b' & d/2 & e/2\\
+      d/2 & b - b' & f/2\\
+      e/2 & f/2 & c - b'
+    \end{bmatrix} \begin{bmatrix}
+      x\\y\\z
+    \end{bmatrix} = \begin{bmatrix}
+      0\\0\\z
+    \end{bmatrix},
+  \]
+  e
+  \[
+  	\vec{U_3} = \vec{U_1} \times \vec{U_2}
   \]
 \end{teorema}
 % section identificacao_de_quadricas (end)
