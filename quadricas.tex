@@ -268,10 +268,6 @@ Se $k^2 > b^2$, isto \'e, $k < -b$ ou $k > b$, ent\~ao tomando $p = k^2/b^2 - 1 
 \]
 Assim se $a = c$, ent\~ao obtemos uma circunfer\^encia e se $a \ne c$, ent\~ao a interse\c{c}\~ao \'e uma elipse.
 
-
-
-
-
 \begin{figure}[h]
 	\centering
 	\caption{Hiperbol\'oide duas folhas: $-\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
@@ -287,4 +283,231 @@ Assim se $a = c$, ent\~ao obtemos uma circunfer\^encia e se $a \ne c$, ent\~ao a
 
 % 	\parametricplotThreeD[plotstyle=curve,yPlotpoints=20](0,360)(0,1){t cos 2 mul u mul t sin u mul u dup mul 2 add}
 % \end{figure}
+
+\section{Identificação de Quádricas} % (fold)
+\label{sec:identificacao_de_quadricas}
+
+Considere uma c\^onica de equa\c{c}\~ao
+\begin{equation}\label{equacao_geral_conica}
+  ax^2 + bxy + cx^2 + dx + ey + f = 0.
+\end{equation}
+
+Queremos remover o termo $xy$ da equa\c{c}\~ao \eqref{equacao_geral_conica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar um \^angulo $\theta$ tal que a equa\c{c}\~ao \eqref{equacao_geral_conica} possa ser transformada numa equa\c{c}\~ao da forma
+\begin{equation}\label{equacao_rotacionada_conica}
+  a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
+\end{equation}
+
+Inicialmente observe que a \eqref{equacao_geral_conica} pode ser escrita na forma
+\begin{equation}\label{equacao_matricial_conica}
+  X^tAX + KX + F = [0]
+\end{equation}
+onde
+\[
+  A = \begin{bmatrix}
+    a & b/2\\
+    b/2 & c
+  \end{bmatrix}
+, \quad K = \begin{bmatrix}
+  d & e
+\end{bmatrix}, \quad X = \begin{bmatrix}
+  x\\
+  y
+\end{bmatrix}\quad\mbox{e}\quad F = [f]
+\]
+e $t$ denota a matriz transposta. Queremos ent\~ao encontrar um \^angulo $\theta$ tal que a substitui\c{c}\~ao
+\begin{equation}\label{substituicao_rotacao_eixos}
+  X = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}\begin{bmatrix}
+    x_1\\y_1
+  \end{bmatrix}
+\end{equation}
+transforma a equa\c{c}\~ao \eqref{equacao_geral_conica} na equa\c{c}\~ao \eqref{equacao_rotacionada_conica}.
+
+Sejam
+\[
+  R_\theta = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}
+\]
+que \'e chamada de \textbf{matriz de rota\c{c}\~ao} e
+\[
+  X_1 = \begin{bmatrix}x_1\\y_1\end{bmatrix}.
+\]
+Note que
+\[
+  R_\theta R_\theta^t = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}\begin{bmatrix}
+    \cos\theta & \sin\theta\\
+    -\sin\theta & \cos\theta
+  \end{bmatrix} = \begin{bmatrix}
+    1 & 0\\
+    0 & 1
+  \end{bmatrix} = R_\theta^t R_\theta, 
+\]
+ou seja, $(R_\theta^t)^{-1} = R_\theta$.
+
+Agora, substituindo \eqref{substituicao_rotacao_eixos} em \eqref{equacao_geral_conica} obtemos
+\begin{align*}
+  (R_\theta X_1)^t A (R_\theta X_1) + KR_\theta X_1 + F = [0]\\
+  X_1^t(R_\theta^t A R_\theta)X_1 + (KR_\theta)X_1 + F = [0].
+\end{align*}
+Note que
+\begin{align*}
+  R_\theta^t A R_\theta = \begin{bmatrix}
+    a' & b'/2\\
+    b'/2 & c'
+  \end{bmatrix} = B\\
+  KR_\theta = \begin{bmatrix}
+    d'& e'
+  \end{bmatrix} = K'.
+\end{align*}
+
+Mas $I_2 = R_\theta^t R_\theta$ e da{\'\i} podemos escrever
+\begin{align*}
+  B - \lambda I_2 = R_\theta^t A R_\theta - \lambda I_2 = R_\theta^t A R_\theta - R_\theta^t (\lambda I_2) R_\theta = R_\theta^t (A - \lambda I_2)R_\theta
+\end{align*}
+para todo $\lambda \in \real$. Com isso
+\begin{align*}
+  \det(B - \lambda I_2) = \det[R_\theta^t(A - \lambda I_2)R_\theta] = \det(R_\theta^t)\det(A - \lambda I_2)\det(R_\theta) = \det(A - \lambda I_2).
+\end{align*}
+
+Assim escolhendo $\theta$ tal que $b' = 0$, o que \'e sempre poss{\'\i}vel fazer, obtemos
+\begin{align*}
+  \det(A - \lambda I_2) = \det(B - \lambda I_2) = \det \begin{bmatrix}
+    a' - \lambda & 0\\
+    0 & c' - \lambda
+  \end{bmatrix} = (\lambda - a')(\lambda - c').
+\end{align*}
+
+Logo os coeficientes $a'$ e $c'$ s\~ao ra{\'\i}zes da equa\c{c}\~ao de segundo grau
+\begin{equation}
+  p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
+    a - \lambda & b/2\\
+    b/2 & c - \lambda
+  \end{bmatrix}.
+\end{equation}
+
+Agora para determinar o \^angulo $\theta$ partimos de
+\[
+  B = R_\theta^t A R_\theta
+\]
+e multiplicamos \`a esquerda por $R_\theta$ obtendo
+\[
+  R_\theta B = AR_\theta.
+\]
+Da{\'\i}
+\begin{align*}
+  AR_\theta = A \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix} = \begin{bmatrix}
+    A \begin{bmatrix}
+      \cos\theta \\ \sin\theta
+    \end{bmatrix} & A \begin{bmatrix}
+      -\sin\theta\\ \cos\theta
+    \end{bmatrix}
+  \end{bmatrix}
+\end{align*}
+e
+\begin{align*}
+  R_\theta B = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix} \begin{bmatrix}
+    a' & 0\\
+    0 & c'
+  \end{bmatrix} = \begin{bmatrix}
+    a' \begin{bmatrix}
+      \cos\theta \\ \sin\theta
+    \end{bmatrix} & c' \begin{bmatrix}
+      -\sin\theta\\ \cos\theta
+    \end{bmatrix}
+  \end{bmatrix}.
+\end{align*}
+
+Como $R_\theta B = AR_\theta$ ent\~ao das duas \'ultimas equa\c{c}\~ao vemos que se tomarmos
+\[
+  U_1 = \begin{bmatrix}
+    \cos\theta\\
+    \sin\theta
+  \end{bmatrix} = (\cos\theta, \sin\theta)
+\]
+devemos ter
+\[
+  AU_1 = a'U_1,
+\]
+isto \'e,
+\begin{align*}
+  AU_1 = a'I_2 U_1\\
+  AU_1 - a'I_2 U_1 = [0]\\
+  (A - a'I_2)U_1 = [0].
+\end{align*}
+Assim $U_1$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
+\[
+  (A - a'I_2)X = [0].
+\]
+A solu\c{c}\~ao $U_2$ \'e obtida de $U_1$ trocando a posi\c{c}\~ao das componentes de $U_1$ e depois o sinal da primeira posi\c{c}\~ao.
+
+Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\ U_2]$. Assim temos o seguinte teorema:
+
+\begin{teorema}
+  Considere a equa\c{c}\~ao
+  \[
+      ax^2 + bxy + cy^2 + dx + ey + f = 0
+  \]
+  com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ n\~ao necessariamente nulos. Ent\~ao mediante uma rota\c{c}\~ao da forma
+  \[
+    X = R_\theta X_1
+  \]
+  onde
+  \[
+    X = \begin{bmatrix}
+      x\\y
+    \end{bmatrix}, \quad
+    R_\theta = \begin{bmatrix}
+    \cos\theta & -\sin\theta\\
+    \sin\theta & \cos\theta
+  \end{bmatrix}, \quad\mbox{e}\quad
+  X_1 = \begin{bmatrix}
+    x_1\\y_1
+  \end{bmatrix}
+  \]
+  a equa\c{c}\~ao da c\^onica acima pode ser transformada em
+  \[
+    a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
+  \]
+  em que $a'$, $c'$ s\~ao ra{\'\i}zes de
+  \[
+    p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
+      a - \lambda & b/2\\
+      b/2 & c - \lambda
+    \end{bmatrix}.
+  \]
+
+  Mais ainda,
+  \[
+    U_1 = \begin{bmatrix}
+      \cos\theta\\ \sin\theta
+    \end{bmatrix}
+  \]
+  \'e uma solu\c{c}\~ao de norma 1 do sistema linear
+  \[
+    \begin{bmatrix}
+      a - a' & b/2\\
+      b/2 & c - a'
+    \end{bmatrix} \begin{bmatrix}
+      x\\y
+    \end{bmatrix} = \begin{bmatrix}
+      0\\0
+    \end{bmatrix}.
+  \]
+\end{teorema}
+% section identificacao_de_quadricas (end)
+
+
 % chapter quadricas (end)
