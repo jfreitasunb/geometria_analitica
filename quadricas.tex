@@ -417,9 +417,17 @@ Logo $\vec{U_1}$ é uma solução de norma 1 do sistema linear
 \[
   (A - a'I_3)X = [0].
 \]
-A solu\c{c}\~ao $U_2$ \'e obtida de $U_1$ trocando a posi\c{c}\~ao das componentes de $U_1$ e depois o sinal da primeira posi\c{c}\~ao.
+Analogamente, $\vec{U_2}$ é uma solução de norma 1 do sistema linear
+\[
+  (A - b'I_3)X = [0],
+\]
+que seja ortogonal a $\vec{U_1}$. O terceiro vetor $\vec{U_3}$ é obtido de forma análoga e deve ser ortogonal tanto a $\vec{U_1}$ quanto a $\vec{U_2}$, assim podemos tomar
+\[
+	\vec{U_3} = \vec{U_1}\times\vec{U_2}.
+\]
+Como $\vec{U_1}$ e $\vec{U_2}$ são de norma 1, então $\vec{U_3}$ também é de norma 1.
 
-Portanto a rota\c{c}\~ao que elemina o termo $xy$ \'e dada por $R_\theta = [U_1\ U_2]$. Assim temos o seguinte teorema:
+Portanto a mudança que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$. Assim temos o seguinte teorema:
 
 \begin{teorema}
   Considere a equa\c{c}\~ao
