@@ -378,60 +378,44 @@ Agora para determinar a matriz $Q$ começamos com a equação
 \[
   B = Q^t A Q
 \]
-e multiplicamos \`a esquerda por $R_\theta$ obtendo
+e multiplicamos \`a esquerda por $Q$ obtendo
 \[
-  R_\theta B = AR_\theta.
+  Q B = AQ.
 \]
-Da{\'\i}
-\begin{align*}
-  AR_\theta = A \begin{bmatrix}
-    \cos\theta & -\sin\theta\\
-    \sin\theta & \cos\theta
-  \end{bmatrix} = \begin{bmatrix}
-    A \begin{bmatrix}
-      \cos\theta \\ \sin\theta
-    \end{bmatrix} & A \begin{bmatrix}
-      -\sin\theta\\ \cos\theta
-    \end{bmatrix}
-  \end{bmatrix}
-\end{align*}
+Mas
+\[
+	AQ = A \begin{bmatrix}
+		\vec{U_1} & \vec{U_2} e \vec{U_3}
+	\end{bmatrix} = \begin{bmatrix}
+		A\vec{U_1} & A\vec{U_2} e A\vec{U_3}
+	\end{bmatrix}
+\]
 e
+\[
+	QB = \begin{bmatrix}
+		\vec{U_1} & \vec{U_2} e \vec{U_3}
+	\end{bmatrix}\begin{bmatrix}
+		a' & 0 & 0\\
+		0 & b' & 0\\
+		0 & 0 & c'
+	\end{bmatrix} = \begin{bmatrix}
+		a'\vec{U_1} & b'\vec{U_2} e c'\vec{U_3}
+	\end{bmatrix}.
+\]
+Da{\'\i} $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ devem satisfazer as equações
+\[
+	A\vec{U_1} = a'\vec{U_1},\quad A\vec{U_2} = b'\vec{U_2} \quad A\vec{U_3} = c'\vec{U_3}.
+\]
+
+Da primeira equação obtemos
 \begin{align*}
-  R_\theta B = \begin{bmatrix}
-    \cos\theta & -\sin\theta\\
-    \sin\theta & \cos\theta
-  \end{bmatrix} \begin{bmatrix}
-    a' & 0\\
-    0 & c'
-  \end{bmatrix} = \begin{bmatrix}
-    a' \begin{bmatrix}
-      \cos\theta \\ \sin\theta
-    \end{bmatrix} & c' \begin{bmatrix}
-      -\sin\theta\\ \cos\theta
-    \end{bmatrix}
-  \end{bmatrix}.
+	A\vec{U_1} = a'I_3\vec{U_1}\\
+	(A - a'I_3)\vec{U_1} = \vec{0}.
 \end{align*}
 
-Como $R_\theta B = AR_\theta$ ent\~ao das duas \'ultimas equa\c{c}\~ao vemos que se tomarmos
+Logo $\vec{U_1}$ é uma solução de norma 1 do sistema linear
 \[
-  U_1 = \begin{bmatrix}
-    \cos\theta\\
-    \sin\theta
-  \end{bmatrix} = (\cos\theta, \sin\theta)
-\]
-devemos ter
-\[
-  AU_1 = a'U_1,
-\]
-isto \'e,
-\begin{align*}
-  AU_1 = a'I_2 U_1\\
-  AU_1 - a'I_2 U_1 = [0]\\
-  (A - a'I_2)U_1 = [0].
-\end{align*}
-Assim $U_1$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
-\[
-  (A - a'I_2)X = [0].
+  (A - a'I_3)X = [0].
 \]
 A solu\c{c}\~ao $U_2$ \'e obtida de $U_1$ trocando a posi\c{c}\~ao das componentes de $U_1$ e depois o sinal da primeira posi\c{c}\~ao.
 
