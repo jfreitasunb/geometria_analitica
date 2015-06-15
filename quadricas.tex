@@ -328,7 +328,7 @@ onde
   z
 \end{bmatrix}\quad\mbox{e}\quad J = [j]
 \]
-e $t$ denota a matriz transposta. Queremos fazer uma substitui\c{c}\~ao da forma \eqref{substituicao_quadrica}, isto é, $X = QX'$ para com isso obter uma equação na forma
+e $t$ denota a matriz transposta. Queremos fazer uma substitui\c{c}\~ao da forma \eqref{substituicao_quadrica}, isto \'e, $X = QX'$ para com isso obter uma equa\c{c}\~ao na forma
 \[
 	X_1^tBX_1 + K'X_1 + J = 0
 \]
@@ -347,7 +347,7 @@ onde
 	\end{bmatrix}.
 \]
 
-Agora observe que a matriz $Q$ é formada por vetores unitários e ortogonais, daí $Q^tQ = I_3$ e com isso obtemos
+Agora observe que a matriz $Q$ \'e formada por vetores unit\'arios e ortogonais, da{\'\i} $Q^tQ = I_3$ e com isso obtemos
 \begin{align*}
   B - \lambda I_3 = Q^t A Q - \lambda I_3 = Q^t A Q - Q^t (Q I_3) Q = Q^t (A - \lambda I_3)Q
 \end{align*}
@@ -356,7 +356,7 @@ para todo $\lambda \in \real$. Com isso
   \det(B - \lambda I_3) = \det[Q^t(A - \lambda I_3)Q] = \det(Q^t)\det(A - \lambda I_3)\det(Q) = \det(A - \lambda I_3).
 \end{align*}
 
-Assim escolhendo a matriz $Q$ de tal forma que $d' = e' = f' = 0$, o que é sempre possível, obtemos
+Assim escolhendo a matriz $Q$ de tal forma que $d' = e' = f' = 0$, o que \'e sempre poss{\'\i}vel, obtemos
 \begin{align*}
   \det(A - \lambda I_3) = \det(B - \lambda I_3) = \det \begin{bmatrix}
     a' - \lambda & 0 & 0\\
@@ -374,7 +374,7 @@ Logo os coeficientes $a'$, $b'$ e $c'$ s\~ao ra{\'\i}zes da equa\c{c}\~ao de ter
   \end{bmatrix}.
 \end{equation}
 
-Agora para determinar a matriz $Q$ começamos com a equação
+Agora para determinar a matriz $Q$ come\c{c}amos com a equa\c{c}\~ao
 \[
   B = Q^t A Q
 \]
@@ -402,32 +402,32 @@ e
 		a'\vec{U_1} & b'\vec{U_2} e c'\vec{U_3}
 	\end{bmatrix}.
 \]
-Da{\'\i} $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ devem satisfazer as equações
+Da{\'\i} $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ devem satisfazer as equa\c{c}\~oes
 \[
 	A\vec{U_1} = a'\vec{U_1},\quad A\vec{U_2} = b'\vec{U_2} \quad A\vec{U_3} = c'\vec{U_3}.
 \]
 
-Da primeira equação obtemos
+Da primeira equa\c{c}\~ao obtemos
 \begin{align*}
 	A\vec{U_1} = a'I_3\vec{U_1}\\
 	(A - a'I_3)\vec{U_1} = \vec{0}.
 \end{align*}
 
-Logo $\vec{U_1}$ é uma solução de norma 1 do sistema linear
+Logo $\vec{U_1}$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
 \[
   (A - a'I_3)X = [0].
 \]
-Analogamente, $\vec{U_2}$ é uma solução de norma 1 do sistema linear
+Analogamente, $\vec{U_2}$ \'e uma solu\c{c}\~ao de norma 1 do sistema linear
 \[
   (A - b'I_3)X = [0],
 \]
-que seja ortogonal a $\vec{U_1}$. O terceiro vetor $\vec{U_3}$ é obtido de forma análoga e deve ser ortogonal tanto a $\vec{U_1}$ quanto a $\vec{U_2}$, assim podemos tomar
+que seja ortogonal a $\vec{U_1}$. O terceiro vetor $\vec{U_3}$ \'e obtido de forma an\'aloga e deve ser ortogonal tanto a $\vec{U_1}$ quanto a $\vec{U_2}$, assim podemos tomar
 \[
 	\vec{U_3} = \vec{U_1}\times\vec{U_2}.
 \]
-Como $\vec{U_1}$ e $\vec{U_2}$ são de norma 1, então $\vec{U_3}$ também é de norma 1.
+Como $\vec{U_1}$ e $\vec{U_2}$ s\~ao de norma 1, ent\~ao $\vec{U_3}$ tamb\'em \'e de norma 1.
 
-Portanto a mudança que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$. Assim temos o seguinte teorema:
+Portanto a mudan\c{c}a que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$. Assim temos o seguinte teorema:
 
 \begin{teorema}
   Considere a equa\c{c}\~ao
