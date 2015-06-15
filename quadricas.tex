@@ -356,25 +356,27 @@ para todo $\lambda \in \real$. Com isso
   \det(B - \lambda I_3) = \det[Q^t(A - \lambda I_3)Q] = \det(Q^t)\det(A - \lambda I_3)\det(Q) = \det(A - \lambda I_3).
 \end{align*}
 
-Assim escolhendo $\theta$ tal que $b' = 0$, o que \'e sempre poss{\'\i}vel fazer, obtemos
+Assim escolhendo a matriz $Q$ de tal forma que $d' = e' = f' = 0$, o que é sempre possível, obtemos
 \begin{align*}
-  \det(A - \lambda I_2) = \det(B - \lambda I_2) = \det \begin{bmatrix}
-    a' - \lambda & 0\\
-    0 & c' - \lambda
-  \end{bmatrix} = (\lambda - a')(\lambda - c').
+  \det(A - \lambda I_3) = \det(B - \lambda I_3) = \det \begin{bmatrix}
+    a' - \lambda & 0 & 0\\
+    0 & b' - \lambda & 0\\
+    0 & 0 & c' - \lambda
+  \end{bmatrix} = -(\lambda - a')(\lambda - b')(\lambda - c').
 \end{align*}
 
-Logo os coeficientes $a'$ e $c'$ s\~ao ra{\'\i}zes da equa\c{c}\~ao de segundo grau
+Logo os coeficientes $a'$, $b'$ e $c'$ s\~ao ra{\'\i}zes da equa\c{c}\~ao de terceiro grau
 \begin{equation}
-  p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
-    a - \lambda & b/2\\
-    b/2 & c - \lambda
+  p(\lambda) = \det(A - \lambda I_3) = \det \begin{bmatrix}
+    a - \lambda & d/2 & e/2\\
+    d/2 & b - \lambda & f/2\\
+    e/2 & f/2 & c - \lambda
   \end{bmatrix}.
 \end{equation}
 
-Agora para determinar o \^angulo $\theta$ partimos de
+Agora para determinar a matriz $Q$ começamos com a equação
 \[
-  B = R_\theta^t A R_\theta
+  B = Q^t A Q
 \]
 e multiplicamos \`a esquerda por $R_\theta$ obtendo
 \[
