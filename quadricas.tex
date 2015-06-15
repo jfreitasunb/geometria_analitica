@@ -293,7 +293,7 @@ Considere uma qu\'adrica de equa\c{c}\~ao
 \end{equation}
 
 Queremos remover os termos $xy$, $xz$ e $yz$ da equa\c{c}\~ao \eqref{equacao_geral_quadrica} para ent\~ao usar uma transla\c{c}\~ao de eixos, se necess\'ario, e com isso identicar a c\^onica definida por tal equa\c{c}\~ao. Para isso vamos tentar encontrar uma matriz $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ onde os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ s\~ao unit\'arios, ortogonais e tais que a mudan\c{c}a
-\begin{equation}
+\begin{equation}\label{substituicao_quadrica}
 	\begin{bmatrix}
 		x\\
 		y\\
@@ -326,9 +326,26 @@ onde
   x\\
   y\\
   z
-\end{bmatrix}\quad\mbox{e}\quad F = [j]
+\end{bmatrix}\quad\mbox{e}\quad J = [j]
 \]
-e $t$ denota a matriz transposta. Queremos ent\~ao encontrar um \^angulo $\theta$ tal que a substitui\c{c}\~ao
+e $t$ denota a matriz transposta. Queremos fazer uma substitui\c{c}\~ao da forma \eqref{substituicao_quadrica}, isto é, $X = QX'$ para com isso obter uma equação na forma
+\[
+	X_1^tBX_1 + K'X_1 + J = 0
+\]
+onde
+\[
+	B = \begin{bmatrix}
+		a' & d'/2 & e'/2\\
+		d'/2 & b' & f'/2\\
+		e'/2 & f'/2 & c'
+	\end{bmatrix} = Q^tAQ,\quad K' = \begin{bmatrix}
+		g' & h' & i'
+	\end{bmatrix} = KQ,\quad X = \begin{bmatrix}
+		x\\y\\z
+	\end{bmatrix},\quad X_1 = \begin{bmatrix}
+		x_1\\y_1\\z_1
+	\end{bmatrix}.
+\]
 \begin{equation}\label{substituicao_rotacao_de_eixos_espaco}
   X = \begin{bmatrix}
     \cos\theta & -\sin\theta\\
