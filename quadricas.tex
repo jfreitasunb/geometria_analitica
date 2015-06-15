@@ -276,13 +276,36 @@ Assim se $a = c$, ent\~ao obtemos uma circunfer\^encia e se $a \ne c$, ent\~ao a
 
 % section hiperboloide (end)
 
+\section{Cone Elíptico} % (fold)
+\label{sec:cone_eliptico}
 
-% \begin{figure}
-	
+\begin{definicao}
+	Um \textbf{cone elíptico} é um conjunto de pontos que satisfaz uma equação da forma
+	\begin{equation}\label{cone_eliptico}
+		z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}
+	\end{equation}
+	em que $a$ e $b$ são números reais positivos. Se $a = b$, o cone é chamado de \textbf{cone circular}.
+\end{definicao}
 
+Seja $k \ne 0$. A interseção do cone elíptico de equação \eqref{cone_eliptico} com o plano $z = k$ é a elipse de equação
+\[
+	\dfrac{x^2}{a^2k^2} + \dfrac{y^2}{b^2k^2} = 1.
+\]
+Já sua interseção com o plano $y = k$ é a hipérbole de equação
+\[
+	\dfrac{z^2}{k^2/b^2} - \dfrac{x^2}{a^2k^2/b^2} = 1
+\]
+e com o plano $x = k$ é a hipérbole de equação
+\[
+	\dfrac{z^2}{k^2/a^2} - \dfrac{y^2}{b^2k^2/a^2} = 1.
+\]
 
-% 	\parametricplotThreeD[plotstyle=curve,yPlotpoints=20](0,360)(0,1){t cos 2 mul u mul t sin u mul u dup mul 2 add}
-% \end{figure}
+As equações
+\[
+	x^2 = \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}\quad \mbox{e}\quad y^2 = \dfrac{x^2}{a^2} + \dfrac{z^2}{c^2}
+\]
+também representam cones elípticos.
+% section cone_eliptico (end)
 
 \section{Identifica\c{c}\~ao de Qu\'adricas} % (fold)
 \label{sec:identificacao_de_quadricas}
