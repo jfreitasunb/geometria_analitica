@@ -297,10 +297,10 @@ Considere duas retas $r$ e $s$ de equa\c{c}\~oes
         y = y_0 + tb\\
         z = z_0 + tc
     \end{cases}; \quad s: \begin{cases}
-        x = x_1 + sd\\
-        y = y_1 + se\\
-        z = z_1 + sf
-    \end{cases}; t,\ s \in \real.
+        x = x_1 + \alpha d\\
+        y = y_1 + \alpha e\\
+        z = z_1 + \alpha f
+    \end{cases}; t,\ \alpha \in \real.
 \]
 Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$ respectivamente.
 \begin{enumerate}
@@ -576,6 +576,18 @@ A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coorden
             \]
             Resolvendo tal sistema obtemos que $\pi_1\cap\pi_2\cap\pi_3 = \{(-3/7,-3/7,-6/7)\}$.
         \end{solucao}
+        \item $\pi_1 : x - 2y + 3z = 2$, $\pi_2 : 3x + y - 2z = 1$ e $\pi_3 : 5x - 3y + 4z = 4$
+        \begin{solucao}
+            A interse\c{c}\~ao ser\'a dada pela solu\c{c}\~ao do sitema
+            \[
+                \begin{cases}
+                    x - 2y + 3z = 2\\
+                    3x + y - 2z = 1\\
+                    5x - 3y + 4z = 4
+                \end{cases}.
+            \]
+            Resolvendo tal sistema obtemos que $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$. No entanto $\pi_i \cap \pi_j$ \'e uma reta para $i \ne j$.
+        \end{solucao}
         \item $\pi_1 : 2x + y = 1$, $\pi_2 : x - y + z = 0$
         \begin{solucao}
             A interse\c{c}\~ao ser\'a dada pela solu\c{c}\~ao do sistema
@@ -710,15 +722,7 @@ Para encontrar a interse\c{c}\~ao de uma reta $r$ com um plano $\pi$, basta reso
                     x - y + 3z = -1
                 \end{cases}
             \]
-            tem solu\c{c}\~ao dada por $x = -1 + 3z$ e $y = -2 + 6z$. Logo 
-            \[
-            r\cap\pi : \begin{cases}
-                x = -1 + 3t\\
-                y = -2 + 6t\\
-                z = t
-            \end{cases},
-            \]
-            ou seja, $r \subset \pi$.
+            tem solu\c{c}\~ao \'unica dada por $x = -3/7$ e $y = 10/7$ e $z = 2/7$. Logo $r\cap\pi = \{(-3/7, 10/7, 2/7)\}$.
         \end{solucao}
     \end{enumerate}
 \end{exemplos}

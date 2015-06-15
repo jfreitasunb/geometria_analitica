@@ -353,8 +353,8 @@ De modo an\'alogo ao caso para vetores no plano, temos:
 \begin{proposicao}\label{propriedades-produto-vetorial-espaco}
   Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1,z_1)$, $\vec{v} = (x_2, y_2,z_2)$ e $\vec{w} = (x_3, y_3,z_3)$ e qualquer que seja o n\'umero real $\lambda$ temos
   \begin{enumerate}[label=({\roman*})]
-    \item\label{linearidade-soma-produto-vetorial-espaco} $\langle\vec{u}, (\vec{v} + \vec{w})\rangle = \inner{u}{v} + \inner{u}{w}$
-    \item\label{linearidade-escalar-produto-vetorial-espaco} $\langle\vec{u}, (\lambda\vec{v})\rangle = \langle(\lambda\vec{u}), \vec{v}\rangle = \lambda\inner{u}{v}$
+    \item\label{linearidade-soma-produto-vetorial-espaco} $\langle\vec{u}, \vec{v} + \vec{w}\rangle = \inner{u}{v} + \inner{u}{w}$
+    \item\label{linearidade-escalar-produto-vetorial-espaco} $\langle\vec{u}, \lambda\vec{v}\rangle = \langle\lambda\vec{u}, \vec{v}\rangle = \lambda\inner{u}{v}$
     \item $\inner{u}{v} = \inner{v}{u}$
     \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\inner{u}{u} > 0$.
   \end{enumerate}
@@ -365,8 +365,8 @@ De modo an\'alogo ao caso para vetores no plano, temos:
       \langle\vec{u}, (\vec{v} + \vec{w})\rangle &= \langle\vec{u}, (x_2 + x_3, y_2 + y_3, z_2 + z_3)\rangle = x_1(x_2 + x_3) + y_1(y_2 + y_3) + z_1(z_2+z_3) \\ &= (x_1x_2 + y_1y_2 + z_1z_2) + (x_1x_3 + y_1y_3 + z_1z_3) = \inner{u}{v} + \inner{u}{w}
     \end{align*}
     \item \begin{align*}
-      \langle\vec{u}, (\lambda\vec{v})\rangle &= \langle\vec{u}, (\lambda x_2, \lambda y_2, \lambda z_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) + z_1(\lambda z_2)\\ &= (\lambda x_1)y_2 + (\lambda y_1)y_2 + (\lambda z_1)z_2 \\ &= \langle(\lambda\vec{u}), \vec{v}\rangle\\
-      \langle\vec{u}, (\lambda\vec{v})\rangle &= \langle\vec{u}, (\lambda x_2, \lambda y_2, \lambda z_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) + z_1(\lambda z_2)\\ &= \lambda (x_1y_2) + \lambda (y_1y_2) + \lambda(z_1z_2) \\ &= \lambda\inner{u}{v}
+      \langle\vec{u}, \lambda\vec{v}\rangle &= \langle\vec{u}, (\lambda x_2, \lambda y_2, \lambda z_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) + z_1(\lambda z_2)\\ &= (\lambda x_1)y_2 + (\lambda y_1)y_2 + (\lambda z_1)z_2 \\ &= \langle\lambda\vec{u}, \vec{v}\rangle\\
+      \langle\vec{u}, \lambda\vec{v}\rangle &= \langle\vec{u}, (\lambda x_2, \lambda y_2, \lambda z_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) + z_1(\lambda z_2)\\ &= \lambda (x_1y_2) + \lambda (y_1y_2) + \lambda(z_1z_2) \\ &= \lambda\inner{u}{v}
     \end{align*}
     \item $\inner{u}{v} = x_1x_2 + y_1y_2 + z_1z_2 = x_2x_1 + y_2y_1 + z_2z_1 = \inner{v}{u}$
     \item Se $\vec{u} \ne \vec{0}$, ent\~ao $x_1 \ne 0$ ou $y_1 \ne 0$ ou $z_1 \ne 0$. Da{\'\i} $\inner{u}{u} = x_1^2 + y_1^2 + z_1^2> 0$, como quer{\'\i}amos.
@@ -377,7 +377,7 @@ De modo an\'alogo ao caso para vetores no plano, temos:
   \begin{enumerate}[label=({\alph*})]
     \item As propriedades \ref{linearidade-soma-produto-vetorial-espaco} e \ref{linearidade-escalar-produto-vetorial-espaco} da Proposi\c{c}\~ao \ref{propriedades-produto-vetorial-espaco} podem ser estendidas para qualquer n\'umero de vetores:
     \[
-      \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n})\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
+      \langle\vec{u}, \lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n}\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
     \]
     \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ n\~ao podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0, 0)$, $\vec{v} = (2, 1, 1)$ e $\vec{w} = (2, -5, 3)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
     \item De $\inner{u}{v} = 0$ n\~ao podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1, 1)$ e $\vec{v} = (-2, 4, 0)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
