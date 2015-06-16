@@ -545,6 +545,74 @@ Portanto a mudan\c{c}a que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q =
   \end{enumerate}
 \end{teorema}
 
+\begin{exemplos}
+	Identifique as seguintes qu\'adricas:
+	\begin{enumerate}
+		\item $x^2 = 2yz$
+		\begin{solucao}
+			Inicialmente essa equa\c{c}\~ao pode ser escrita como
+			\[
+				X^tAX = 0
+			\]
+			onde
+			\[
+				X = \begin{bmatrix}
+					x\\ y\\ z
+				\end{bmatrix},\quad A = \begin{bmatrix}
+					1 & 0 & 0\\
+					0 & 0 & -1\\
+					0 & -1 & 0
+				\end{bmatrix}.
+			\]
+			Agora
+			\begin{align*}
+				p(\lambda) &= \det(A - \lambda I_3) = \det \begin{bmatrix}
+					1 - \lambda & 0 & 0\\
+					0 & -\lambda & 0\\
+					0 & -1 & -\lambda
+				\end{bmatrix}\\
+				p(\lambda) &= (1 - \lambda)\lambda^2 - (1 - \lambda)\\
+				p(\lambda) &= (1 - \lambda)(\lambda^2 - 1)
+			\end{align*}
+			cujas ra{\'\i}zes s\~ao $\lambda = 1$ e $\lambda = \pm 1$. Assim podemos tomar $a' = b' = 1$ e $c' = -1$.
+
+			Para encontrar $\vec{U_1}$ precisamos resolver o sistema
+			\begin{align*}
+				(A - I_3)X = 0\\
+				\begin{bmatrix}
+					0 & 0 & \\
+					0 & -1 & -1\\
+					0 & -1 & -1
+				\end{bmatrix} \begin{bmatrix}
+					x\\ y\\ z
+				\end{bmatrix} = \begin{bmatrix}
+					0 \\ 0\\ 0
+				\end{bmatrix}.
+			\end{align*}
+			Tal sistema possui solu\c{c}\~ao geral dada pelo conjunto
+			\[
+				\{(x, y, z) \mid y + z = 0 \in \real\} = \{(x, -z, z) \mid x, z \in \real\}.
+			\]
+			Agora note que
+			\[
+				(x, -z, z) = x(1, 0, 0) + z(0, 1, 1)
+			\]
+			e os vetores $\vec{v_1} = (1,0,0)$ e $\vec{v_2} = (0,-1,1)$ s\~ao ortogonais.
+
+			Como $a' = b'$ devemos encontrar vetores $\vec{U_1}$ e $\vec{U_2}$ solu\c{c}\~oes unit\'arias e ortogonais do sistema linear $(A -I_3)X = 0$. Assim podemos tomar
+			\begin{align*}
+				\vec{U_1} &= \dfrac{1}{\norm{\vec{v_1}}}\vec{v_1} = (1,0,0)\\
+				\vec{U_2} &= \dfrac{1}{\norm{\vec{v_2}}}\vec{v_2} = \left(0,\dfrac{-1}{\sqrt{2}},\dfrac{1}{\sqrt{2}}\right)\\
+				\vec{U_3} &= \vec{U_1}\times\vec{U_2} = \left(0,\dfrac{-1}{\sqrt{2}},\dfrac{-1}{\sqrt{2}}\right)
+			\end{align*}
+			e a mudan\c{c}a $X = QX_1$, onde $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ transforma a equa\c{c}\~ao original em
+			\[
+				x_1^2 + y_1^2 - z_1^2 = 0
+			\]
+			que representa um cone circular.
+		\end{solucao}
+	\end{enumerate}
+\end{exemplos}
 
 
 % section identificacao_de_quadricas (end)
