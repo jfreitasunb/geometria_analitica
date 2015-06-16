@@ -611,6 +611,79 @@ Portanto a mudan\c{c}a que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q =
 			\]
 			que representa um cone circular.
 		\end{solucao}
+
+		\item $7x^2 + 10y^2 + 7z^2 - 4xy + 2xz - 4yz - 6 = 0$
+		\begin{solucao}
+			Inicialmente essa equa\c{c}\~ao pode ser escrita como
+			\[
+				X^tAX - 6 = 0
+			\]
+			onde
+			\[
+				X = \begin{bmatrix}
+					x\\ y\\ z
+				\end{bmatrix},\quad A = \begin{bmatrix}
+					7 & -2 & 1\\
+					-2 & 10 & -2\\
+					1 & -2 & 7
+				\end{bmatrix}.
+			\]
+			Agora
+			\begin{align*}
+				p(\lambda) &= \det(A - \lambda I_3) = \det \begin{bmatrix}
+					7 - \lambda & -2 & 1\\
+					-2 & 10 -\lambda & -2\\
+					1 & -2 & 7 -\lambda
+				\end{bmatrix}\\
+				p(\lambda) &= (7 - \lambda)^2(10 - \lambda) + 4 + 4 - (10 - \lambda) - 4(7 - \lambda) - 4(7 - \lambda)\\
+				p(\lambda) &= (10 - \lambda)[(7 - \lambda)^2 - 1)] - 8(6 - \lambda)\\
+				p(\lambda) &= (10 - \lambda)(6 - \lambda)(8 - \lambda) - 8(6 - \lambda)\\
+				p(\lambda) &= (6 - \lambda)(\lambda^2 - 18\lambda + 72)\\
+				p(\lambda) &= (6 - \lambda)^2(12 - \lambda)
+			\end{align*}
+			cujas ra{\'\i}zes s\~ao $\lambda = 6$ e $\lambda = 12$. Assim podemos tomar $a' = b' = 6$ e $c' = 12$.
+
+			Para encontrar $\vec{U_1}$ precisamos resolver o sistema
+			\begin{align*}
+				(A - 6I_3)X &= 0\\
+				\begin{bmatrix}
+					1 & -2 & 1\\
+					-2 & 4 & -2\\
+					1 & -2 & 1
+				\end{bmatrix} \begin{bmatrix}
+					x\\ y\\ z
+				\end{bmatrix} &= \begin{bmatrix}
+					0 \\ 0\\ 0
+				\end{bmatrix}.
+			\end{align*}
+			Tal sistema possui solu\c{c}\~ao geral dada pelo conjunto
+			\[
+				\{(x, y, z) \mid x + 2y + z = 0 \in \real\} = \{(2y - z, y, z) \mid x, z \in \real\}.
+			\]
+			Agora note que
+			\[
+				(2y - z, y, z) = z(-1, 0, 1) + y(2, 1, 0)
+			\]
+			e observe que neste caso os vetores $\vec{v_1} = (-1,0,1)$ e $\vec{v_2} = (2,1,0)$ n\~ao s\~ao ortogonais. Tomando
+			\[
+				\vec{w} = \vec{v_2} - \proj_{\vec{v_1}}\vec{v_2} = (1, 1, 1)
+			\]
+			ent\~ao $\vec{w}\perp \vec{v_1}$.
+
+			Como $a' = b'$ devemos encontrar vetores $\vec{U_1}$ e $\vec{U_2}$ solu\c{c}\~oes unit\'arias e ortogonais do sistema linear $(A - 6I_3)X = 0$. Assim podemos tomar
+			\begin{align*}
+				\vec{U_1} &= \dfrac{1}{\norm{\vec{v_1}}}\vec{v_1} = \left(-\dfrac{1}{\sqrt{2}},0,\dfrac{1}{\sqrt{2}}\right)\\
+				\vec{U_2} &= \dfrac{1}{\norm{\vec{w}}}\vec{w} = \left(\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right)\\
+				\vec{U_3} &= \vec{U_1}\times\vec{U_2} = \left(-\dfrac{1}{\sqrt{6}},\dfrac{2}{\sqrt{6}},-\dfrac{1}{\sqrt{6}}\right)
+			\end{align*}
+			e a mudan\c{c}a $X = QX_1$, onde $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ transforma a equa\c{c}\~ao original em
+			\begin{align*}
+				6x_1^2 + 6y_1^2 + 12z_1^2 = 6\\
+				x_1^2 + y_1^2 + \dfrac{z_1^2}{1/2} = 1
+			\end{align*}
+			que representa um elips\'oide.
+			que representa um cone circular.
+		\end{solucao}
 	\end{enumerate}
 \end{exemplos}
 
