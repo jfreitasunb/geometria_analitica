@@ -580,7 +580,7 @@ Portanto a mudan\c{c}a que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q =
 			\begin{align*}
 				(A - I_3)X = 0\\
 				\begin{bmatrix}
-					0 & 0 & \\
+					0 & 0 & 0\\
 					0 & -1 & -1\\
 					0 & -1 & -1
 				\end{bmatrix} \begin{bmatrix}
@@ -602,8 +602,8 @@ Portanto a mudan\c{c}a que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q =
 			Como $a' = b'$ devemos encontrar vetores $\vec{U_1}$ e $\vec{U_2}$ solu\c{c}\~oes unit\'arias e ortogonais do sistema linear $(A -I_3)X = 0$. Assim podemos tomar
 			\begin{align*}
 				\vec{U_1} &= \dfrac{1}{\norm{\vec{v_1}}}\vec{v_1} = (1,0,0)\\
-				\vec{U_2} &= \dfrac{1}{\norm{\vec{v_2}}}\vec{v_2} = \left(0,\dfrac{-1}{\sqrt{2}},\dfrac{1}{\sqrt{2}}\right)\\
-				\vec{U_3} &= \vec{U_1}\times\vec{U_2} = \left(0,\dfrac{-1}{\sqrt{2}},\dfrac{-1}{\sqrt{2}}\right)
+				\vec{U_2} &= \dfrac{1}{\norm{\vec{v_2}}}\vec{v_2} = \left(0,-\dfrac{1}{\sqrt{2}},\dfrac{1}{\sqrt{2}}\right)\\
+				\vec{U_3} &= \vec{U_1}\times\vec{U_2} = \left(0,-\dfrac{1}{\sqrt{2}},-\dfrac{1}{\sqrt{2}}\right)
 			\end{align*}
 			e a mudan\c{c}a $X = QX_1$, onde $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ transforma a equa\c{c}\~ao original em
 			\[
@@ -682,7 +682,6 @@ Portanto a mudan\c{c}a que elemina os termos $xy$, $xz$ e $yz$ \'e dada por $Q =
 				x_1^2 + y_1^2 + \dfrac{z_1^2}{1/2} = 1
 			\end{align*}
 			que representa um elips\'oide.
-			que representa um cone circular.
 		\end{solucao}
 	\end{enumerate}
 \end{exemplos}
