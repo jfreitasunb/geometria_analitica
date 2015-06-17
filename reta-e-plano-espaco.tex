@@ -884,7 +884,15 @@ onde $P_1 \in \pi\cap r$.
 
 Sejam $r$ e $s$ retas. Se $r \varparallel s$ ent\~ao a dist\^ancia entre $r$ e $s$ \'e dada pela dist\^ancia entre um ponto de $r$ e a reta $s$, ou o contr\'ario. Suponha ent\~ao que $r$ e $s$ s\~ao concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
 
-Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no cao em que as retas s\~ao concorrentes). Um plano \'e o que cont\'em $r$ e \'e paralelo a $s$, que vamos chamar de $\pi_1$. O outro cont\'em $s$ e \'e paralelo a $r$, que chamaremos de $\pi_2$. Sejam $\vec{u}$ e $\vec{v}$ os vetores diretores de $r$ e $s$, respectivamente. Ent\~ao o vetor $\vec{w} = \vec{u}\times\vec{v}$ \'e normal aos planos $\pi_1$ e $\pi_2$. Assim
+Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no cao em que as retas s\~ao concorrentes). Um plano \'e o que cont\'em $r$ e \'e paralelo a $s$, que vamos chamar de $\pi_1$. O outro cont\'em $s$ e \'e paralelo a $r$, que chamaremos de $\pi_2$.
+
+\begin{figure}[!h]
+    \centering
+    \caption{Dist\^ancia entre retas reversas}
+    \includegraphics{distancia-retas-reversas-alternativa.pdf}
+\end{figure}
+
+Sejam $\vec{u}$ e $\vec{v}$ os vetores diretores de $r$ e $s$, respectivamente. Ent\~ao o vetor $\vec{w} = \vec{u}\times\vec{v}$ \'e normal aos planos $\pi_1$ e $\pi_2$. Assim
 \[
     d(r,s) = d(\pi_1,\pi_2).
 \]
@@ -898,42 +906,6 @@ onde $P \in r$ e $Q \in s$. Portanto,
 \]
 
 Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ est\~ao no mesmo plano.
-\begin{figure}[h]
-    \centering
-    \caption{Dist\^ancia entre retas reversas}
-    \includegraphics{distancia-retas-reversas.pdf}
-    % \definecolor{uququq}{rgb}{0.25,0.25,0.25}
-    % \definecolor{xdxdff}{rgb}{0.49,0.49,1}
-    % \definecolor{ffqqqq}{rgb}{1,0,0}
-    % \definecolor{qqqqff}{rgb}{0,0,1}
-    % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
-    % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-    %     \clip(4,-3) rectangle (13.8,4.5);
-    %     \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (6.6,2.26) -- (4.42,-0.64) -- (10.58,-2.26) -- (12.6,0.86) -- cycle;
-    %     \draw [color=zzttqq] (6.6,2.26)-- (4.42,-0.64);
-    %     \draw [color=zzttqq] (4.42,-0.64)-- (10.58,-2.26);
-    %     \draw [color=zzttqq] (10.58,-2.26)-- (12.6,0.86);
-    %     \draw [color=zzttqq] (12.6,0.86)-- (6.6,2.26);
-    %     \draw (10.1,-1.7) node[anchor=north west] {$\pi$};
-    %     \draw (10.86,2.9) node[anchor=north west] {$r$};
-    %     \draw [color=qqqqff] (5.15,-0.45)-- (11.87,0.67);
-    %     \draw (5.67,0.26)-- (10.35,-1.34);
-    %     \draw [color=ffqqqq] (6.56,1.57)-- (11.7,0.09);
-    %     \draw (5.93,3.9)-- (13.52,1.73);
-    %     \draw (9.12,-0.5) node[anchor=north west] {$s$};
-    %     \draw (9.68,0.4) node[anchor=north west] {$s'$};
-    %     \draw (9.42,1.2) node[anchor=north west] {$r'$};
-    %     \draw [dash pattern=on 3pt off 3pt] (8.3,3.22)-- (7.73,1.23);
-    %     \draw [dash pattern=on 3pt off 3pt] (6.5,-0.02)-- (7.73,1.23);
-    %     \draw [dash pattern=on 3pt off 3pt] (6.5,-0.02)-- (8.3,3.22);
-    %     \fill [color=uququq] (8.3,3.22) circle (1.5pt);
-    %     \draw(8.46,3.48) node {$I$};
-    %     \fill [color=uququq] (7.73,1.23) circle (1.5pt);
-    %     \draw(7.88,1.5) node[right] {$Q$};
-    %     \fill [color=uququq] (6.5,-0.02) circle (1.5pt);
-    %     \draw(6.66,0.24) node[left] {$P$};
-    % \end{tikzpicture}
-\end{figure}
 
 % O plano $\pi$ definido por $s$ e $s'$ \'e paralelo a $r$, da{\'\i} a dist\^ancia de $r$ a $\pi$ \'e constante. Esta constante \'e \textbf{a menor dist\^ancia} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ \'e um ponto qualquer de $s$ temos
 % \[
