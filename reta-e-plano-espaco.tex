@@ -882,7 +882,22 @@ onde $P_1 \in \pi\cap r$.
 \subsection{Entre retas} % (fold)
 \label{sub:entre_retas}
 
-Sejam $r$ e $s$ retas. Se $r \varparallel s$ ent\~ao a dist\^ancia entre $r$ e $s$ \'e dada pela dist\^ancia entre um ponto de $r$ e a reta $s$, ou o contr\'ario. Suponha ent\~ao que $r$ e $s$ s\~ao reversas. Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
+Sejam $r$ e $s$ retas. Se $r \varparallel s$ ent\~ao a dist\^ancia entre $r$ e $s$ \'e dada pela dist\^ancia entre um ponto de $r$ e a reta $s$, ou o contr\'ario. Suponha ent\~ao que $r$ e $s$ s\~ao concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
+
+Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no cao em que as retas s\~ao concorrentes). Um plano \'e o que cont\'em $r$ e \'e paralelo a $s$, que vamos chamar de $\pi_1$. O outro cont\'em $s$ e \'e paralelo a $r$, que chamaremos de $\pi_2$. Sejam $\vec{u}$ e $\vec{v}$ os vetores diretores de $r$ e $s$, respectivamente. Ent\~ao o vetor $\vec{w} = \vec{u}\times\vec{v}$ \'e normal aos planos $\pi_1$ e $\pi_2$. Assim
+\[
+    d(r,s) = d(\pi_1,\pi_2).
+\]
+Mas
+\[
+    d(\pi_1,\pi_2) = d(\pi_1, Q) = \dfrac{\langle\vec{PQ},\vec{w}\rangle}{\norm{\vec{w}}} = \dfrac{\langle\vec{PQ},\vec{u}\times\vec{v}}{\norm{\vec{u}\times\vec{v}}}
+\]
+onde $P \in r$ e $Q \in s$. Portanto,
+\[
+    d(r,s) = d(\pi_1, Q) = \dfrac{\langle\vec{PQ},\vec{w}\rangle}{\norm{\vec{w}}} = \dfrac{\langle\vec{PQ},\vec{u}\times\vec{v}}{\norm{\vec{u}\times\vec{v}}}.
+\]
+
+Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ est\~ao no mesmo plano.
 \begin{figure}[h]
     \centering
     \caption{Dist\^ancia entre retas reversas}
@@ -920,22 +935,22 @@ Sejam $r$ e $s$ retas. Se $r \varparallel s$ ent\~ao a dist\^ancia entre $r$ e $
     % \end{tikzpicture}
 \end{figure}
 
-O plano $\pi$ definido por $s$ e $s'$ \'e paralelo a $r$, da{\'\i} a dist\^ancia de $r$ a $\pi$ \'e constante. Esta constante \'e \textbf{a menor dist\^ancia} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ \'e um ponto qualquer de $s$ temos
-\[
-    \overline{IP}^2 = \overline{IQ}^2 + \overline{QP}^2
-\]
-pois o tri\^angulo $IQP$ \'e ret\^angulo em $Q$. Logo
-\[
-    \overline{IP}^2 \ge \overline{IQ}^2,
-\]
-ou seja,
-\[
-    \overline{IP} \ge \overline{IQ}.
-\]
-Mas $\overline{IQ}$ \'e a dist\^ancia de $\pi$ a $r$, logo segue da \'ultima desigualdade que a dist\^ancia de $\pi$ a $r$ \'e menor ou igual a dist\^ancia entre um ponto de $r$ e um ponto de $s$. Portanto
-\[
-    d(r,s) = d(r,\pi).
-\]
+% O plano $\pi$ definido por $s$ e $s'$ \'e paralelo a $r$, da{\'\i} a dist\^ancia de $r$ a $\pi$ \'e constante. Esta constante \'e \textbf{a menor dist\^ancia} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ \'e um ponto qualquer de $s$ temos
+% \[
+%     \overline{IP}^2 = \overline{IQ}^2 + \overline{QP}^2
+% \]
+% pois o tri\^angulo $IQP$ \'e ret\^angulo em $Q$. Logo
+% \[
+%     \overline{IP}^2 \ge \overline{IQ}^2,
+% \]
+% ou seja,
+% \[
+%     \overline{IP} \ge \overline{IQ}.
+% \]
+% Mas $\overline{IQ}$ \'e a dist\^ancia de $\pi$ a $r$, logo segue da \'ultima desigualdade que a dist\^ancia de $\pi$ a $r$ \'e menor ou igual a dist\^ancia entre um ponto de $r$ e um ponto de $s$. Portanto
+% \[
+%     d(r,s) = d(r,\pi).
+% \]
 
 \begin{exemplo}
     Determine a dist\^ancia entre as retas
