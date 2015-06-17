@@ -337,7 +337,7 @@ Queremos remover os termos $xy$, $xz$ e $yz$ da equa\c{c}\~ao \eqref{equacao_ger
 \end{equation}
 transforma a equa\c{c}\~ao \eqref{equacao_geral_quadrica} numa equa\c{c}\~ao da forma
 \begin{equation}\label{equacao_rotacionada_quadrica}
-  a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z + j = 0.
+  a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0.
 \end{equation}
 
 Inicialmente observe que a \eqref{equacao_geral_quadrica} pode ser escrita na forma
@@ -361,7 +361,7 @@ onde
 \]
 e $t$ denota a matriz transposta. Queremos fazer uma substitui\c{c}\~ao da forma \eqref{substituicao_quadrica}, isto \'e, $X = QX'$ para com isso obter uma equa\c{c}\~ao na forma
 \[
-	X_1^tBX_1 + K'X_1 + J = 0
+	X_1^tBX_1 + K'X_1 + J = [0]
 \]
 onde
 \[
@@ -380,7 +380,7 @@ onde
 
 Agora observe que a matriz $Q$ \'e formada por vetores unit\'arios e ortogonais, da{\'\i} $Q^tQ = I_3$ e com isso obtemos
 \begin{align*}
-  B - \lambda I_3 = Q^t A Q - \lambda I_3 = Q^t A Q - Q^t (Q I_3) Q = Q^t (A - \lambda I_3)Q
+  B - \lambda I_3 = Q^t A Q - \lambda I_3 = Q^t A Q - Q^t I_3 Q = Q^t (A - \lambda I_3)Q
 \end{align*}
 para todo $\lambda \in \real$. Com isso
 \begin{align*}
@@ -416,21 +416,21 @@ e multiplicamos \`a esquerda por $Q$ obtendo
 Mas
 \[
 	AQ = A \begin{bmatrix}
-		\vec{U_1} & \vec{U_2} e \vec{U_3}
+		\vec{U_1} & \vec{U_2} & \vec{U_3}
 	\end{bmatrix} = \begin{bmatrix}
-		A\vec{U_1} & A\vec{U_2} e A\vec{U_3}
+		A\vec{U_1} & A\vec{U_2} & A\vec{U_3}
 	\end{bmatrix}
 \]
 e
 \[
 	QB = \begin{bmatrix}
-		\vec{U_1} & \vec{U_2} e \vec{U_3}
+		\vec{U_1} & \vec{U_2} & \vec{U_3}
 	\end{bmatrix}\begin{bmatrix}
 		a' & 0 & 0\\
 		0 & b' & 0\\
 		0 & 0 & c'
 	\end{bmatrix} = \begin{bmatrix}
-		a'\vec{U_1} & b'\vec{U_2} e c'\vec{U_3}
+		a'\vec{U_1} & b'\vec{U_2} & c'\vec{U_3}
 	\end{bmatrix}.
 \]
 Da{\'\i} $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ devem satisfazer as equa\c{c}\~oes
