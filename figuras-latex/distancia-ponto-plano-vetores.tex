@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.5,-1.5) rectangle (6.5,3.5);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (0.98,1.3) -- (-0.22,-0.74) -- (5.28,-1.02) -- (6.08,1.08) -- cycle;
+\draw [color=zzttqq] (0.98,1.3)-- (-0.22,-0.74);
+\draw [color=zzttqq] (-0.22,-0.74)-- (5.28,-1.02);
+\draw [color=zzttqq] (5.28,-1.02)-- (6.08,1.08);
+\draw [color=zzttqq] (6.08,1.08)-- (0.98,1.3);
+\draw [->] (1.62,0.06) -- (4.62,2.58);
+\draw [dash pattern=on 2pt off 2pt] (4.62,2.58)-- (4.58,-0.08);
+\draw [->] (1.62,0.06) -- (1.64,1.62);
+\draw [->] (1.62,0.06) -- (1.65,2.72);
+\draw (0.14,-0.12) node[anchor=north west] {$$\pi$$};
+\begin{scriptsize}
+\fill [color=qqqqff] (4.62,2.58) circle (1.5pt);
+\draw[color=qqqqff] (4.78,2.84) node {$P$};
+\fill [color=qqqqff] (1.62,0.06) circle (1.5pt);
+\draw[color=qqqqff] (1.36,0.02) node {$Q$};
+\draw[color=black] (3,1.66) node {$PQ$};
+\draw[color=black] (1.46,0.94) node {$u$};
+\draw[color=black] (1.94,2.06) node {$proj$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
