@@ -1,0 +1,47 @@
+\Newassociation{solucao}{Solution}{ans}
+\newtheorem{exercicio}{}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\extraheadheight{0.7in}
+\firstpageheadrule
+\runningheadrule
+\lhead{
+        \begin{minipage}[c]{1.7cm}
+        \includegraphics[width=1.7cm]{unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+          {Universidade de Brasília} --
+          {Departamento de Matemática}
+\end{minipage}
+\vspace*{-0.8cm}
+}
+% \chead{Universidade de Brasília - Departamento de Matemática}
+% \rhead{}
+% \vspace*{-2cm}
+
+\extrafootheight{.5in}
+\footrule
+\lfoot{\disciplina\ - \semestre$^o$/\ano\ - Módulo \numeromodulo}
+\cfoot{}
+\rfoot{Página \thepage\ de \numpages}
+
+\newcounter{exercicios}
+\renewcommand{\theexercicios}{\arabic{exercicios}}
+
+\newenvironment{questao}[1]{
+\refstepcounter{exercicios}
+\ifx&#1&
+\else
+   \label{#1}
+\fi
+\noindent\textbf{Exercício {\theexercicios}:}
+}
+
+\newcommand{\resp}[1]{
+\noindent{\bf Exercício #1: }}
