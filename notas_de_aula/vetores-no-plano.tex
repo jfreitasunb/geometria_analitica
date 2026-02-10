@@ -1,38 +1,38 @@
 %!TEX program = xelatex
 %!TEX root = geometria_analitica.tex
-%%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
-%%Ap\'os executar pdflatex arquivo
+%%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
+%%Após executar pdflatex arquivo
 
 \chapter{Vetores} % (fold)
 \label{cha:vetores}
 
-\section{Introdu\c{c}\~ao} % (fold)
+\section{Introdução} % (fold)
 \label{sec:introducao}
 
-A Geometria Anal{\'\i}tica \'e um m\'etodo para tratar com problemas da Geometria. No caso do plano, tal m\'etodo consiste em
-associar os pontos \`a pares ordenados de n\'umeros reais, permitindo assim representar curvas do plano por equa\c{c}\~oes em duas
-vari\'aveis, de modo que a cada curva est\'a associado uma equa\c{c}\~ao, bem definida, do tipo $f(x,y) = 0$ e a cada equa\c{c}\~ao
-deste tipo associa-se uma curva bem definida no plano. Assim, as propriedades geom\'etricas das curvas podem ser
-determinadas \`a partir de informa\c{c}\~oes alg\'ebricas e anal{\'\i}ticas da equa\c{c}\~ao $f(x, y) = 0$.
+A Geometria Analítica é um método para tratar com problemas da Geometria. No caso do plano, tal método consiste em
+associar os pontos à pares ordenados de números reais, permitindo assim representar curvas do plano por equações em duas
+variáveis, de modo que a cada curva está associado uma equação, bem definida, do tipo $f(x,y) = 0$ e a cada equação
+deste tipo associa-se uma curva bem definida no plano. Assim, as propriedades geométricas das curvas podem ser
+determinadas à partir de informações algébricas e analíticas da equação $f(x, y) = 0$.
 
-Por exemplo, a equa\c{c}\~ao $5x^2 - 4xy + 8y^2 - 36 = 0$ representa uma curva em $\real^2$. Nessa forma, n\~ao podemos dizer
-exatamente qual curva est\'a equa\c{c}\~ao representa. Mas utilizando-se de resultados da \'Algebra Linear, podemos reescrever tal
-equa\c{c}\~ao com
+Por exemplo, a equação $5x^2 - 4xy + 8y^2 - 36 = 0$ representa uma curva em $\real^2$. Nessa forma, não podemos dizer
+exatamente qual curva está equação representa. Mas utilizando-se de resultados da álgebra Linear, podemos reescrever tal
+equação com
 \[
   \dfrac{x'^2}{9} + \dfrac{y'^2}{4} = 1
 \]
-que \'e uma equa\c{c}\~ao de uma elipse.
+que é uma equação de uma elipse.
 
 % section introducao (end)
 
 % \section{Vetores} % (fold)
 % \label{sec:vetores}
-% Vetores surgiram com um meio de caracterizar grandezas f{\'\i}sicas que precisam de mais do que sua magnitude para serem
-% completamente determinadas. Por exemplo, grandezas com massa, \'area e comprimento s\~ao caracterizadas simplesmente por um
-% n\'umero, tais grandezas s\~ao chamadas \textit{escalares}. No entanto, grandezas com velocidade, for\c{c}a e impulso s\'o s\~ao
-% completamente determinadas se al\'em da magnitude, conhecemos sua dire\c{c}\~ao e sentido. Tais grandezas s\~ao chamadas
-% \textit{vetorias}. Um exemplo de uma grandeza vetorias seria uma for\c{c}a de 4 N atuando sobre um corpo, de modo ascendente
-% na dire\c{c}\~ao que uma um \^angulo de $60\textdegree$ com a horizontal.
+% Vetores surgiram com um meio de caracterizar grandezas físicas que precisam de mais do que sua magnitude para serem
+% completamente determinadas. Por exemplo, grandezas com massa, área e comprimento são caracterizadas simplesmente por um
+% número, tais grandezas são chamadas \textit{escalares}. No entanto, grandezas com velocidade, força e impulso só são
+% completamente determinadas se além da magnitude, conhecemos sua direção e sentido. Tais grandezas são chamadas
+% \textit{vetorias}. Um exemplo de uma grandeza vetorias seria uma força de 4 N atuando sobre um corpo, de modo ascendente
+% na direção que uma um ângulo de $60\textdegree$ com a horizontal.
 
 % \begin{figure}
 %   \centering
@@ -54,7 +54,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %     \begin{scope}
 %         \node[M,transform shape] (M) {};
 %         % Draw axes and help lines
-%         {[axis,->]           
+%         {[axis,->]
 %             \draw (M) -- ++(2,0) node[right] {};
 %             % Indicate angle. The code is a bit awkward.
 %             \draw[solid,shorten >=0.5pt] (\down-\iangle:1.2*\arcr)
@@ -71,16 +71,16 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 
 
 % Geometricamente, vamos representar vetores por flechas no plano. Vamos adotar o seguinte ponto de vista: duas flechas
-% de mesmo comprimento, mesma dire\c{c}\~ao (isto \'e, paralelas) e mesmo sentido, caracterizam a \textit{mesma} grandeza vetorial.
-% Este fato \'e an\'alogo ao que ocorre com os n\'umeros racionais e as fra\c{c}\~oes. Por exemplo, as fra\c{c}\~oes 1/2, 2/4 e 3/6 representam
-% o mesmo n\'umero racional.
+% de mesmo comprimento, mesma direção (isto é, paralelas) e mesmo sentido, caracterizam a \textit{mesma} grandeza vetorial.
+% Este fato é análogo ao que ocorre com os números racionais e as frações. Por exemplo, as frações 1/2, 2/4 e 3/6 representam
+% o mesmo número racional.
 
-% Intuitivamente uma flecha pode ser definida com um segmento de reta para o qual se fixou uma orienta\c{c}\~ao, por isso vamos
+% Intuitivamente uma flecha pode ser definida com um segmento de reta para o qual se fixou uma orientação, por isso vamos
 % utilizar o conceito de \textit{segmento orientado} para formalizar essa ideia.
 
 % \begin{definicao}
-%   Um \textbf{segmento orientado} \'e um par ordenado $(A, B)$ de pontos do plano. O ponto $A$ \'e a chamado de \textbf{origem}
-%   do segmento orientado e $B$ \'e chamado de \textbf{extremidade}. Um segmento orientado do tipo $(A, A)$ \'e chamado de
+%   Um \textbf{segmento orientado} é um par ordenado $(A, B)$ de pontos do plano. O ponto $A$ é a chamado de \textbf{origem}
+%   do segmento orientado e $B$ é chamado de \textbf{extremidade}. Um segmento orientado do tipo $(A, A)$ é chamado de
 %   \textbf{segmento orientado nulo}.\index{Segmentos!Orientados}
 %   \begin{figure}
 %     \centering
@@ -104,7 +104,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \end{definicao}
 
 % \begin{observacao}
-%   Se $A \ne B$, ent\~ao $(A, B)$ \'e diferente de $(B, A)$.
+%   Se $A \ne B$, então $(A, B)$ é diferente de $(B, A)$.
 % \end{observacao}
 
 % \begin{figure}
@@ -123,15 +123,15 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 
 % \begin{definicao}
 %   \begin{enumerate}[label=({\roman*})]
-%     \item Os segmentos orientados $(A, B)$ e $(C, D)$ s\~ao de \textbf{mesmo comprimento} se os segmentos de reta $AB$ e
-%     $CD$ t\^em comprimentos iguais.
-%     \item Se os segmentos orientados $(A, B)$ e $(C, D)$ n\~ao s\~ao nulos, eles s\~ao de \textbf{mesma dire\c{c}\~ao} ou
-%     \textbf{paralelos}, se os segmentos de reta $AB$ e $CD$ s\~ao paralelos (aqui  inclu{\'\i}mos o caso em que $AB$ e $CD$ s\~ao
+%     \item Os segmentos orientados $(A, B)$ e $(C, D)$ são de \textbf{mesmo comprimento} se os segmentos de reta $AB$ e
+%     $CD$ têm comprimentos iguais.
+%     \item Se os segmentos orientados $(A, B)$ e $(C, D)$ não são nulos, eles são de \textbf{mesma direção} ou
+%     \textbf{paralelos}, se os segmentos de reta $AB$ e $CD$ são paralelos (aqui  incluímos o caso em que $AB$ e $CD$ são
 %     colineares).
 
 %     \begin{figure}
 %       \centering
-%       \caption{Dire\c{c}\~ao}
+%       \caption{Direção}
 %         \begin{tikzpicture}%segmentos de mesmo sentido
 %           \coordinate[label=left:$A$] (A) at (0,0);
 %           \coordinate[label=left:$B$]  (B) at (2,2);
@@ -143,7 +143,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %           \draw[dashed] (B)--(D);
 %           \foreach \p in {A,B,C,D} \fill (\p) circle (0.5mm);
 %         \end{tikzpicture}
-%         \begin{tikzpicture}%segmentos de sentido contr\'ario
+%         \begin{tikzpicture}%segmentos de sentido contrário
 %           \coordinate[label=left:$A$] (A) at (0,0);
 %           \coordinate[label=left:$B$]  (B) at (2,2);
 %           \coordinate[label=right:$C$]  (C) at (0.5,0.5);
@@ -156,9 +156,9 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 
 %     \item Suponhamos que os segmentos orientados $(A, B)$ e $(C, D)$ sejam paralelos.
 %     \begin{enumerate}[label=({\alph*})]
-%       \item No caso em que os segmentos de retas $AB$ e $CD$ s\~ao distintos, os segmentos orientados $(A, B)$ e $(C, D)$
-%       s\~ao de \textbf{mesmo sentido} se os segmentos de reta $AC$ e $BD$ tem interse\c{c}\~ao vazia. Se n\~ao, $(A, B)$ e
-%       $(C, D)$ s\~ao de \textbf{sentidos contr\'arios}.
+%       \item No caso em que os segmentos de retas $AB$ e $CD$ são distintos, os segmentos orientados $(A, B)$ e $(C, D)$
+%       são de \textbf{mesmo sentido} se os segmentos de reta $AC$ e $BD$ tem interseção vazia. Se não, $(A, B)$ e
+%       $(C, D)$ são de \textbf{sentidos contrários}.
 
 %       \begin{figure}
 %         \centering
@@ -174,7 +174,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %           \draw[dashed] (B)--(D);
 %           \foreach \p in {A,B,C,D} \fill (\p) circle (0.5mm);
 %         \end{tikzpicture}
-%         \begin{tikzpicture}%segmentos de sentido contr\'ario
+%         \begin{tikzpicture}%segmentos de sentido contrário
 %           \coordinate[label=left:$A$] (A) at (0,0);
 %           \coordinate[label=left:$B$]  (B) at (2,2);
 %           \coordinate[label=right:$D$]  (D) at (2,0);
@@ -188,9 +188,9 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %       \end{figure}
 
 %       \item No caso em que os segmentos de reta $AB$ e $CD$ coincidem, tomemos um segmento orientado $(E, F)$ de modo
-%       que o ponto $E$ n\~ao perten\c{c}a ao segmento de reta $AB$ e tal que $(E, F)$ e $(A, B)$ sejam do mesmo sentido, de
-%       acordo com o item anterior. Ent\~ao os segmentos orientados $(A, B)$ e $(C, D)$ s\~ao de \textbf{mesmo sentido} se
-%       $(E, F)$ e $(C, D)$ s\~ao de mesmo sentido. Se n\~ao, $(A, B)$ e $(C, D)$ s\~ao de \textbf{sentido contr\'ario}.
+%       que o ponto $E$ não pertença ao segmento de reta $AB$ e tal que $(E, F)$ e $(A, B)$ sejam do mesmo sentido, de
+%       acordo com o item anterior. Então os segmentos orientados $(A, B)$ e $(C, D)$ são de \textbf{mesmo sentido} se
+%       $(E, F)$ e $(C, D)$ são de mesmo sentido. Se não, $(A, B)$ e $(C, D)$ são de \textbf{sentido contrário}.
 
 %       \begin{figure}
 %         \centering
@@ -209,7 +209,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %           \draw[dashed] (D)--(F);
 %           \foreach \p in {A,B,C,D,E,F} \fill (\p) circle (0.5mm);
 %         \end{tikzpicture}
-%         \begin{tikzpicture}%segmentos de sentido contr\'ario
+%         \begin{tikzpicture}%segmentos de sentido contrário
 %           \coordinate[label=left:$A$] (A) at (0,0);
 %           \coordinate[label=left:$B$]  (B) at (2,2);
 %           \coordinate[label=left:$D$]  (D) at (0.4,0.4);
@@ -229,52 +229,52 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \end{definicao}
 
 % \begin{definicao}\label{equipolentes}
-% Os segmentos orientados $(A, B)$ e $(C, D)$ s\~ao \textbf{equipolentes} se forem ambos nulos ou ent\~ao, nenhum deles sendo nulo, se forem de mesma dire\c{c}\~ao, mesmo comprimento e mesmo sentido. Indica-se a \text{equipol\^encia} entre $(A, B)$ e $(C, D)$ por $(A, B) \sim (C, D)$.\index{Segmentos!Equipolentes}
+% Os segmentos orientados $(A, B)$ e $(C, D)$ são \textbf{equipolentes} se forem ambos nulos ou então, nenhum deles sendo nulo, se forem de mesma direção, mesmo comprimento e mesmo sentido. Indica-se a \text{equipolência} entre $(A, B)$ e $(C, D)$ por $(A, B) \sim (C, D)$.\index{Segmentos!Equipolentes}
 % \end{definicao}
 
 % \begin{observacao}
-% Segue da Defini\c{c}\~ao \ref{equipolentes} que um segmento orientado nulo s\'o \'e equipotente a ele mesmo.
+% Segue da Definição \ref{equipolentes} que um segmento orientado nulo só é equipotente a ele mesmo.
 % \end{observacao}
 
 % \begin{proposicao}
-% A rela\c{c}\~ao de equipol\^encia \'e uma rela\c{c}\~ao de equival\^encia, isto \'e, quaisquer que sejam os segmentos orientados $(A, B)$, $(C, D)$ e $(E, F)$ valem as seguintes propriedades:
+% A relação de equipolência é uma relação de equivalência, isto é, quaisquer que sejam os segmentos orientados $(A, B)$, $(C, D)$ e $(E, F)$ valem as seguintes propriedades:
 % \begin{enumerate}
 % \item $(A, B) \sim (A, B)$ [Reflexividade]
-% \item Se $(A, B) \sim (C, D)$, ent\~ao $(C, D) \sim (A, B)$. [Simetria]
-% \item Se $(A, B) \sim (C, D)$ e $(C, D) \sim (E, F)$, ent\~ao $(A, B) \sim (E, F)$. [Transitividade]
+% \item Se $(A, B) \sim (C, D)$, então $(C, D) \sim (A, B)$. [Simetria]
+% \item Se $(A, B) \sim (C, D)$ e $(C, D) \sim (E, F)$, então $(A, B) \sim (E, F)$. [Transitividade]
 % \end{enumerate}
 % \end{proposicao}
 
 % \begin{proposicao}
-% Se $(A, B) \sim (C, D)$, ent\~ao $(A, C) \sim (B, D)$.
+% Se $(A, B) \sim (C, D)$, então $(A, C) \sim (B, D)$.
 % \end{proposicao}
 
 % \begin{definicao}
-% Dado o segmento orientado $(A, B)$ a \text{classe de equipol\^encia} de $(A, B)$ \'e o conjunto de todos os segmentos orientados que s\~ao equipolentes ao segmento $(A, B)$. O segmento orientado $(A, B)$ \'e chamado de \text{representante} da classe de equipol\^encia.
+% Dado o segmento orientado $(A, B)$ a \text{classe de equipolência} de $(A, B)$ é o conjunto de todos os segmentos orientados que são equipolentes ao segmento $(A, B)$. O segmento orientado $(A, B)$ é chamado de \text{representante} da classe de equipolência.
 % \end{definicao}
 
-% Seja $(A, B)$ um segmento orientado representante de uma classe de equipol\^encia. Todos os segmentos orientados pertencentes \`a classe de equipol\^encia representada por $(A, B)$ s\~ao equipolentes entre si. O pr\'oprio $(A, B)$ \'e equipolente \`a qualquer segmento em sua classe. Mais ainda, observe que se o segmento orientado $(C, D)$ pertence \`a classe de equipol\^encia de $(A, B)$, ent\~ao $(A, B)$ pertence \`a classe de equipol\^encia do segmento orientado $(C, D)$. Na verdade, estas classes de equipol\^encia s\~ao iguais. (Por qu\^e?) Assim ``ser representante de " ou ``pertencer a" uma classe de equipol\^encia significam a mesma coisa. Portanto definimos:
+% Seja $(A, B)$ um segmento orientado representante de uma classe de equipolência. Todos os segmentos orientados pertencentes à classe de equipolência representada por $(A, B)$ são equipolentes entre si. O próprio $(A, B)$ é equipolente à qualquer segmento em sua classe. Mais ainda, observe que se o segmento orientado $(C, D)$ pertence à classe de equipolência de $(A, B)$, então $(A, B)$ pertence à classe de equipolência do segmento orientado $(C, D)$. Na verdade, estas classes de equipolência são iguais. (Por quê?) Assim ``ser representante de " ou ``pertencer a" uma classe de equipolência significam a mesma coisa. Portanto definimos:
 
 % \begin{definicao}
-% Um \text{vetor} \'e uma classe de equipol\^encia de segmentos orientados. Se $(A, B)$ \'e um segmento orientado, o vetor que tem $(A, B)$ como representante ser\'a indicado por $\vec{AB}$.  Quando n\~ao queremos destacar nenhum representante em especial, usaremos letras latinas min\'usculas com um seta ($\vec{a}$, $\vec{b}$, $\vec{x}$, $\vec{y}$, etc). O conjunto de todos os vetores ser\'a indicado por $\cp{V}^3$.\index{Vetor}
+% Um \text{vetor} é uma classe de equipolência de segmentos orientados. Se $(A, B)$ é um segmento orientado, o vetor que tem $(A, B)$ como representante será indicado por $\vec{AB}$.  Quando não queremos destacar nenhum representante em especial, usaremos letras latinas minúsculas com um seta ($\vec{a}$, $\vec{b}$, $\vec{x}$, $\vec{y}$, etc). O conjunto de todos os vetores será indicado por $\cp{V}^3$.\index{Vetor}
 % \end{definicao}
 
 % \begin{observacao}
 
 % \begin{enumerate}
-% \item Se os segmentos orientados $(A, B)$ e $(C, D)$ s\~ao \textbf{equipolentes}, ent\~ao os vetores $\vec{AB}$ e $\vec{CD}$ s\~ao \textbf{iguais}.
+% \item Se os segmentos orientados $(A, B)$ e $(C, D)$ são \textbf{equipolentes}, então os vetores $\vec{AB}$ e $\vec{CD}$ são \textbf{iguais}.
 
-% \item A equipol\^encia \'e uma rela\c{c}\~ao entre segmentos orientados. Assim dois segmentos orientados s\~ao \textbf{equipolentes} ou \textbf{n\~ao}, mas dois vetores s\~ao \textbf{iguais} ou \textbf{n\~ao}.
+% \item A equipolência é uma relação entre segmentos orientados. Assim dois segmentos orientados são \textbf{equipolentes} ou \textbf{não}, mas dois vetores são \textbf{iguais} ou \textbf{não}.
 
-% \item Quando se desenha um vetor, estamos automaticamente escolhendo um representante da classe de equipol\^encia do segmento orientado $(A, B)$.
+% \item Quando se desenha um vetor, estamos automaticamente escolhendo um representante da classe de equipolência do segmento orientado $(A, B)$.
 % \end{enumerate}
 % \end{observacao}
 
 % \begin{definicao}
 % \begin{enumerate}
-% \item O \textbf{vetor nulo} \'e o vetor que tem como representante um segmento orientado nulo. Tal vetor ser\'a indicado por $\vec{0}$.\index{Vetor!Nulo}
+% \item O \textbf{vetor nulo} é o vetor que tem como representante um segmento orientado nulo. Tal vetor será indicado por $\vec{0}$.\index{Vetor!Nulo}
 
-% \item Se $(A,B)$ \'e um segmento orientado representante de um vetor $\vec{u}$, ent\~ao o \text{vetor oposto} de $\vec{u}$, denotado por $-\vec{u}$, \'e o vetor que tem o segmento orientado $(B, A)$ como representante. Assim,\index{Vetor!Oposto}
+% \item Se $(A,B)$ é um segmento orientado representante de um vetor $\vec{u}$, então o \text{vetor oposto} de $\vec{u}$, denotado por $-\vec{u}$, é o vetor que tem o segmento orientado $(B, A)$ como representante. Assim,\index{Vetor!Oposto}
 % \[
 % -\vec{AB} = \vec{BA}.
 % \]
@@ -298,7 +298,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \end{definicao}
 
 % \begin{proposicao}
-% Seja $\vec{u}$ um vetor. Ent\~ao:
+% Seja $\vec{u}$ um vetor. Então:
 % \begin{enumerate}
 % \item $-(-\vec{u}) = \vec{u}$
 % \item $\vec{u} = -\vec{u}$ se, e somente se, $\vec{u} = \vec{0}$.
@@ -307,23 +307,23 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 
 % \begin{definicao}
 % \begin{enumerate}
-% \item Os vetores n\~ao nulos $\vec{u}$ e $\vec{v}$ s\~ao \text{paralelos} se um representante de $\vec{u}$ \'e paralelo a um representante de $\vec{v}$. Denotamos que $\vec{u}$ \'e paralelo a $\vec{v}$ por $\vec{u} \varparallel \vec{v}$. \index{Vetor!Paralelo}
+% \item Os vetores não nulos $\vec{u}$ e $\vec{v}$ são \text{paralelos} se um representante de $\vec{u}$ é paralelo a um representante de $\vec{v}$. Denotamos que $\vec{u}$ é paralelo a $\vec{v}$ por $\vec{u} \varparallel \vec{v}$. \index{Vetor!Paralelo}
 
-% \item Os vetores n\~ao nulos e paralelos $\vec{u}$ e $\vec{v}$ s\~ao de \text{mesmo sentido} se um representante de $\vec{u}$ e um representante de $\vec{v}$ s\~ao de mesmo sentido. \index{Vetor!Sentido}
+% \item Os vetores não nulos e paralelos $\vec{u}$ e $\vec{v}$ são de \text{mesmo sentido} se um representante de $\vec{u}$ e um representante de $\vec{v}$ são de mesmo sentido. \index{Vetor!Sentido}
 
-% \item Os vetores n\~ao nulos e paralelos $\vec{u}$ e $\vec{v}$ s\~ao de \textbf{sentido contr\'ario} se um representante de $\vec{u}$ e um representante de $\vec{v}$ s\~ao de sentido contr\'ario.
+% \item Os vetores não nulos e paralelos $\vec{u}$ e $\vec{v}$ são de \textbf{sentido contrário} se um representante de $\vec{u}$ e um representante de $\vec{v}$ são de sentido contrário.
 
-% \item O vetor nulo \'e paralelo a qualquer vetor.
+% \item O vetor nulo é paralelo a qualquer vetor.
 % \end{enumerate}
 % \end{definicao}
 
 % \begin{definicao}
-% A \textbf{norma} (ou \text{m\'odulo} ou \textbf{comprimento}) de um vetor \'e o comprimento de qualquer um de seus representantes. A norma de um vetor $\vec{u}$ \'e indicada por $\norm{\vec{u}}$. Um vetor \'e chamado de \textbf{unit\'ario} se sua norma \'e 1.\index{Vetor!Norma}\index{Vetor!Unit\'ario}
+% A \textbf{norma} (ou \text{módulo} ou \textbf{comprimento}) de um vetor é o comprimento de qualquer um de seus representantes. A norma de um vetor $\vec{u}$ é indicada por $\norm{\vec{u}}$. Um vetor é chamado de \textbf{unitário} se sua norma é 1.\index{Vetor!Norma}\index{Vetor!Unitário}
 % \end{definicao}
 
 % \begin{proposicao}
 % \begin{enumerate}
-% \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\norm{\vec{u}} > 0$.
+% \item Se $\vec{u} \ne \vec{0}$, então $\norm{\vec{u}} > 0$.
 
 % \item $\norm{\vec{u}} = 0$ se, e somente se, $\vec{u} = \vec{0}$.
 
@@ -332,18 +332,18 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \end{proposicao}
 
 % \begin{proposicao}
-% Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos. Ent\~ao $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ t\^em normas iguais, s\~ao de mesma dire\c{c}\~ao e de mesmo sentido.
+% Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. Então $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ têm normas iguais, são de mesma direção e de mesmo sentido.
 % \end{proposicao}
 % % section vetores (end)
 
-% \section{Opera\c{c}\~oes com vetores} % (fold)
+% \section{Operações com vetores} % (fold)
 % \label{sec:operacoes_com_vetores}
 
-% Vamos definir no conjunto de todos os vetores, $\cp{V}^3$ opera\c{c}\~oes de soma de vetores e multiplica\c{c}\~ao de um n\'umero real por um vetor.
+% Vamos definir no conjunto de todos os vetores, $\cp{V}^3$ operações de soma de vetores e multiplicação de um número real por um vetor.
 
 % \subsection{Soma de Vetores}
 % \begin{definicao}
-%   Dados vetores $\vec{u}$ e $\vec{v}$, sejam $(A, B)$ um segmento orientado representante de $\vec{u}$ e $(B, C)$ um segmento orientado representante de $\vec{v}$ com origem em $B$. O vetor \textbf{soma} de $\vec{u}$ com $\vec{v}$, denotado por $\vec{u} + \vec{v}$, \'e o vetor que tem o segmento orientando $(A, C)$ como represetante. Neste caso\index{Vetores!Soma}
+%   Dados vetores $\vec{u}$ e $\vec{v}$, sejam $(A, B)$ um segmento orientado representante de $\vec{u}$ e $(B, C)$ um segmento orientado representante de $\vec{v}$ com origem em $B$. O vetor \textbf{soma} de $\vec{u}$ com $\vec{v}$, denotado por $\vec{u} + \vec{v}$, é o vetor que tem o segmento orientando $(A, C)$ como represetante. Neste caso\index{Vetores!Soma}
 %   \[
 %     \vec{u} + \vec{v} = \vec{AC}.
 %   \]
@@ -372,7 +372,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \]
 % \end{figure}
 
-% Pode-se determinar a soma de dois vetores $\vec{u}$ e $\vec{v}$ pela \textbf{regra do paralelogramo}\index{Vetores!Regra do Paralelogramo}, que consiste em escolher representantes de $\vec{u}$ e $\vec{v}$ com a mesma origem $A$, por exemplo, $\vec{u} = \vec{AB}$ e $\vec{v} = \vec{AC}$. O vetor soma $\vec{u} + \vec{v}$ \'e obtido construindo-se o paralelogramo $ABCD$. O segmento orientado $(A, D)$ \'e um representante de $\vec{u} + \vec{v}$, como na figura abaixo.
+% Pode-se determinar a soma de dois vetores $\vec{u}$ e $\vec{v}$ pela \textbf{regra do paralelogramo}\index{Vetores!Regra do Paralelogramo}, que consiste em escolher representantes de $\vec{u}$ e $\vec{v}$ com a mesma origem $A$, por exemplo, $\vec{u} = \vec{AB}$ e $\vec{v} = \vec{AC}$. O vetor soma $\vec{u} + \vec{v}$ é obtido construindo-se o paralelogramo $ABCD$. O segmento orientado $(A, D)$ é um representante de $\vec{u} + \vec{v}$, como na figura abaixo.
 % \begin{figure}
 % \centering
 % \caption{Soma de vetores: regra do paralelogramo}
@@ -390,14 +390,14 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %     {$\vec{u}+\vec{v}$};
 %   \draw[dashed] (B)--(D) (C)--(D);
 %   \foreach \p in {A,B,C,D} \fill (\p) circle (0.5mm);
-% \end{tikzpicture}  
+% \end{tikzpicture}
 % \end{figure}
 
-% Dados os vetores $\vec{u}$ e $\vec{v}$ a soma de $\vec{u}$ com o oposto de $\vec{v}$ \'e chamada de \textbf{diferen\c{c}a}\index{Vetores!Diferen\c{c}a} entre $\vec{u}$ e $\vec{v}$, nessa ordem, e \'e indicada por $\vec{u} - \vec{v}$. Assim, usando a regra do paralelogramo
+% Dados os vetores $\vec{u}$ e $\vec{v}$ a soma de $\vec{u}$ com o oposto de $\vec{v}$ é chamada de \textbf{diferença}\index{Vetores!Diferença} entre $\vec{u}$ e $\vec{v}$, nessa ordem, e é indicada por $\vec{u} - \vec{v}$. Assim, usando a regra do paralelogramo
 % \begin{figure}
 % \centering
-% \caption{Diferen\c{c}a de vetores}
-% \begin{tikzpicture}%diferen\c{c}a de dois vetores
+% \caption{Diferença de vetores}
+% \begin{tikzpicture}%diferença de dois vetores
 %   \coordinate[label=below:$A$] (A) at (0,0);
 %   \coordinate[label=right:$B$]  (B) at (0.5,2);
 %   \coordinate[label=right:$C$]  (C) at (3,0);
@@ -421,20 +421,20 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \end{figure}
 
 % \begin{propriedades}
-%   Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades s\~ao verdadeiras:
+%   Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades são verdadeiras:
 %   \begin{itemize}
 %     \item[(A1)] $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$ [Associatividade]
 %     \item[(A2)] $\vec{u} + \vec{v} = \vec{v} + \vec{u}$ [Comutatividade]
-%     \item[(A3)] Existe um \'unico vetor que somado a $\vec{u}$ resulta no pr\'oprio vetor $\vec{u}$:
+%     \item[(A3)] Existe um único vetor que somado a $\vec{u}$ resulta no próprio vetor $\vec{u}$:
 %     \[
 %       \vec{u} + \vec{0} = \vec{0} + \vec{u} = \vec{u}.
 %     \]
-%     Tal vetor \'e o vetor nulo. [Elementro Neutro]
-%     \item[(A4)] Para cada $\vec{u}$, existe um \'unico vetor $\vec{v}$ tal que
+%     Tal vetor é o vetor nulo. [Elementro Neutro]
+%     \item[(A4)] Para cada $\vec{u}$, existe um único vetor $\vec{v}$ tal que
 %     \[
 %       \vec{u} + \vec{v} = \vec{0} = \vec{v} + \vec{u}.
 %     \]
-%     O vetor $\vec{v}$ \'e o vetor oposto de $\vec{u}$. [Elemento Oposto]
+%     O vetor $\vec{v}$ é o vetor oposto de $\vec{u}$. [Elemento Oposto]
 %   \end{itemize}
 % \end{propriedades}
 
@@ -495,17 +495,17 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %   \end{tikzpicture}
 % \end{figure}
 
-% \subsection{Multiplica\c{c}\~ao por Escalar}
+% \subsection{Multiplicação por Escalar}
 
 % \begin{definicao}
-%   Seja $\alpha$ um n\'umero real e $\vec{u}$ um vetor.
+%   Seja $\alpha$ um número real e $\vec{u}$ um vetor.
 %   \begin{enumerate}[label=({\roman*})]
-%     \item Se $\alpha = 0$ ou $\vec{u} = \vec{0}$, ent\~ao $\alpha \vec{u} = \vec{0}$;
-%     \item Se $\alpha \ne 0$ ou $\vec{u} \ne \vec{0}$, ent\~ao o vetor $\alpha \vec{u}$ caracteriza-se por:
+%     \item Se $\alpha = 0$ ou $\vec{u} = \vec{0}$, então $\alpha \vec{u} = \vec{0}$;
+%     \item Se $\alpha \ne 0$ ou $\vec{u} \ne \vec{0}$, então o vetor $\alpha \vec{u}$ caracteriza-se por:
 %     \begin{enumerate}
 %       \item $\alpha\vec{u} \varparallel \vec{u}$;
-%       \item $\alpha\vec{u}$ e $\vec{u}$ s\~ao de mesmo sentido se $\alpha > 0$, e de sentido contr\'ario se $\alpha < 0$;
-%       \item $\norm{\alpha\vec{u}} = \mid\alpha\mid\norm{\vec{u}}$.\index{Vetores!Multiplica\c{c}ao por escalar}
+%       \item $\alpha\vec{u}$ e $\vec{u}$ são de mesmo sentido se $\alpha > 0$, e de sentido contrário se $\alpha < 0$;
+%       \item $\norm{\alpha\vec{u}} = \mid\alpha\mid\norm{\vec{u}}$.\index{Vetores!Multiplicaçao por escalar}
 %     \end{enumerate}
 %   \end{enumerate}
 %   \begin{center}
@@ -526,7 +526,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 %   \end{center}
 % \end{definicao}
 
-% Usaremos o termo \textbf{escalar} para designar um \textbf{n\'umero real}. Por isso, essa opera\c{c}\~ao tamb\'em \'e chamada de \textbf{multiplica\c{c}\~ao de um vetor por um escalar} e $\alpha\vec{u}$ \'e chamado de um \textbf{m\'ultiplo escalar} de $\vec{u}$. Se $\beta$ \'e um n\'umero real n\~ao nulo, a nota\c{c}\~ao
+% Usaremos o termo \textbf{escalar} para designar um \textbf{número real}. Por isso, essa operação também é chamada de \textbf{multiplicação de um vetor por um escalar} e $\alpha\vec{u}$ é chamado de um \textbf{múltiplo escalar} de $\vec{u}$. Se $\beta$ é um número real não nulo, a notação
 % \[
 %   \dfrac{\vec{u}}{\beta},
 % \]
@@ -536,7 +536,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \]
 
 % \begin{propriedades}
-%   Quaisquer que sejam os n\'umeros reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$, $\vec{v}$ e $\vec{w}$ valem as igualdades:
+%   Quaisquer que sejam os números reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$, $\vec{v}$ e $\vec{w}$ valem as igualdades:
 %   \begin{itemize}
 %     \item[(M1)] $\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$;
 %     \item[(M2)] $(\alpha + \beta)\vec{u} = \alpha\vec{u} + \beta\vec{u}$;
@@ -555,7 +555,7 @@ que \'e uma equa\c{c}\~ao de uma elipse.
 % \end{proposicao}
 
 % \begin{proposicao}\label{vetores_paralelos}
-%   Dois vetores n\~ao nulos $\vec{u}$ e $\vec{v}$ s\~ao paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemete, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
+%   Dois vetores não nulos $\vec{u}$ e $\vec{v}$ são paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemete, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
 % \end{proposicao}
 % section operacoes_com_vetores (end)
 
@@ -581,7 +581,7 @@ Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ co
 \end{figure}
 
 
-Seja $P$ um ponto qualquer do plano. Por $P$ podemos tra\c{c}ar uma \'unica reta $x'$ paralela \`a reta $x$ e uma \'unica reta $y'$ paralela \`a reta $y$. Estas retas interceptam $x$ e $y$ em pontos $P_x$ e $P_y$, respectivamente. Seja $\alpha$ o n\'umero real correspondente a $P_x$ e $\beta$ o n\'umero real correspondente  a $P_y$. Estes dois n\'umeros determinam o ponto $P$, isto \'e, conhecendo $\alpha$ e $\beta$ podemos tra\c{c}as as retas $x'$ e $y'$. O ponto $P$ \'e a interse\c{c}\~ao destas retas. Os n\'umeros $\alpha$ e $\beta$ s\~ao chamados \textbf{abscissa} e \textbf{ordenada} do ponto $P$, respectivamente. Eles constituem as \textbf{coordenadas} de $P$.
+Seja $P$ um ponto qualquer do plano. Por $P$ podemos traçar uma única reta $x'$ paralela à reta $x$ e uma única reta $y'$ paralela à reta $y$. Estas retas interceptam $x$ e $y$ em pontos $P_x$ e $P_y$, respectivamente. Seja $\alpha$ o número real correspondente a $P_x$ e $\beta$ o número real correspondente  a $P_y$. Estes dois números determinam o ponto $P$, isto é, conhecendo $\alpha$ e $\beta$ podemos traças as retas $x'$ e $y'$. O ponto $P$ é a interseção destas retas. Os números $\alpha$ e $\beta$ são chamados \textbf{abscissa} e \textbf{ordenada} do ponto $P$, respectivamente. Eles constituem as \textbf{coordenadas} de $P$.
 \begin{figure}[!h]
 	\centering
 	\caption{Coordenadas do ponto $P$}
@@ -619,10 +619,10 @@ Denotaremos assim o ponto $P$ por
 	P(\alpha,\beta).
 \]
 
-Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos construir o tri\^angulo ret\^angulo $PQS$ como abaixo:
+Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos construir o triângulo retângulo $PQS$ como abaixo:
 \begin{figure}[!h]
 	\centering
-	\caption{Dist\^ancia entre dois pontos}
+	\caption{Distância entre dois pontos}
 	\includegraphics{distancia-pontos-plano-cartesiano.pdf}
 	% \definecolor{qqwuqq}{rgb}{0,0.39,0}
 	% \definecolor{xdxdff}{rgb}{0.49,0.49,1}
@@ -637,7 +637,7 @@ Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos
 	% 	\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt);
 	% 	\draw[color=black] (0.1,4.6) node [anchor=east] {$y$};
 	% 	\clip(-0.8,-0.8) rectangle (5,5);
-	% 	\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4,1.28) -- (3.72,1.28) -- (3.72,1) -- (4,1) -- cycle; 
+	% 	\draw[color=qqwuqq,fill=qqwuqq,fill opacity=0.1] (4,1.28) -- (3.72,1.28) -- (3.72,1) -- (4,1) -- cycle;
 	% 	\draw (4,1)-- (4,3);
 	% 	\draw (2,1)-- (4,1);
 	% 	\draw (2,1)-- (4,3);
@@ -664,25 +664,25 @@ Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos
 	% \end{tikzpicture}
 \end{figure}
 
-Assim sua hipotenusa \'e
+Assim sua hipotenusa é
 \[
 	\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
 \]
-Este n\'umero \'e chamado \textbf{dist\^ancia} de $P$ a $Q$ e \'e indicado por $d(P,Q)$, isto \'e, por defini\c{c}\~ao
+Este número é chamado \textbf{distância} de $P$ a $Q$ e é indicado por $d(P,Q)$, isto é, por definição
 \[
 	d(P,Q) = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
 \]
 
-Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ s\~ao iguais se, e somente se, $x_1 = x_2$ e $y_1 = y_2$.
+Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ são iguais se, e somente se, $x_1 = x_2$ e $y_1 = y_2$.
 
 % section plano_cartesiano (end)
 
 \section{Vetores em $\real^2$} % (fold)
 \label{sec:vetores_plano}
 
-% Os vetores e as opera\c{c}\~ores com eles podem ser definidas utilizando-se do sistema de coordenadas cartesianas. Para isso, um ponto $P$ do plano \'e representado em $\real^2$ por um par de coordenadas $P(x_1, y_1)$, onde $x_1$, $y_1 \in \real$.
+% Os vetores e as operaçõres com eles podem ser definidas utilizando-se do sistema de coordenadas cartesianas. Para isso, um ponto $P$ do plano é representado em $\real^2$ por um par de coordenadas $P(x_1, y_1)$, onde $x_1$, $y_1 \in \real$.
 
-% Seja $\vec{u}$ um vetor no plano. Sabemos que $\vec{u}$ \'e um representante de uma certa classe de equipol\^encia dos segmentos orientados $(B,C)$. Para este segmento orientado $(B,C)$ podemos encontrar um ponto $A(x_1, y_1)$ tal que o segmento orientado $(O,A)$, onde $O(0,0)$, tem o mesmo comprimento, a mesma dire\c{c}\~ao e o mesmo sentido de $(B,C)$. Assim o vetor $\vec{u}$ pode ser representado pelo segmento orientado $(O,A)$. Portanto qualquer vetor em $\real^2$ pode ser representado como um segmento com origem no ponto $(0,0)$ e extremidade em um ponto $(x_1,y_1)$.
+% Seja $\vec{u}$ um vetor no plano. Sabemos que $\vec{u}$ é um representante de uma certa classe de equipolência dos segmentos orientados $(B,C)$. Para este segmento orientado $(B,C)$ podemos encontrar um ponto $A(x_1, y_1)$ tal que o segmento orientado $(O,A)$, onde $O(0,0)$, tem o mesmo comprimento, a mesma direção e o mesmo sentido de $(B,C)$. Assim o vetor $\vec{u}$ pode ser representado pelo segmento orientado $(O,A)$. Portanto qualquer vetor em $\real^2$ pode ser representado como um segmento com origem no ponto $(0,0)$ e extremidade em um ponto $(x_1,y_1)$.
 
 Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano. Assim se $(\alpha, \beta) \ne (0,0)$ podemos associar uma seta com origem em $O(0,0)$ e extremidade em $(\alpha,\beta)$ como na figura abaixo:
 
@@ -693,7 +693,7 @@ Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano.
  %  	\begin{tikzpicture}[scale=2]%vetor no plano
 	%     \coordinate[label=below left:$O$] (A) at (0,0);
 	%     \coordinate (W) at (1,1);
-	%     %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+	%     %definição das coordenadas dos eixos cartesianos
 	%     \coordinate (F) at (-0.5,0);
 	%     \coordinate (G) at (0,-0.5);
 	%     \coordinate (X) at (1.5,0);
@@ -701,7 +701,7 @@ Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano.
 	%     % Styles
 	%     \tikzstyle{axes}=[]
 
-	%     \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+	%     \begin{scope}[style=axes]%constrói os eixos cartesianos
 	% 	    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
 	% 	    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
 	%     \end{scope}
@@ -715,18 +715,18 @@ Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano.
  %    \end{tikzpicture}
 \end{figure}
 
-Assim o par ordenado $(\alpha, \beta)$ pode ser representado graficamente por um ponto ou por uma seta. Quando representamos $(\alpha, \beta)$ por uma seta, podemos associar a este para uma \textbf{dire\c{c}\~ao}, um \textbf{sentido} e um \textbf{m\'odulo}. A dire\c{c}\~ao e o sentido do par $(\alpha, \beta)$ s\~ao respectivamente, a dire\c{c}\~ao e o sentido da seta que o representa. O \textbf{m\'odulo} do par $(\alpha, \beta)$ \'e o n\'umero
+Assim o par ordenado $(\alpha, \beta)$ pode ser representado graficamente por um ponto ou por uma seta. Quando representamos $(\alpha, \beta)$ por uma seta, podemos associar a este para uma \textbf{direção}, um \textbf{sentido} e um \textbf{módulo}. A direção e o sentido do par $(\alpha, \beta)$ são respectivamente, a direção e o sentido da seta que o representa. O \textbf{módulo} do par $(\alpha, \beta)$ é o número
 \[
 	\sqrt{\alpha^2 + \beta^2}
-\] 
-que \'e o comprimento da seta.
+\]
+que é o comprimento da seta.
 
-Em geral, um objeto ao qual podemos associar os conceitos de dire\c{c}\~ao, sentido e m\'odulo \'e chamado um \textbf{vetor}. Denotaremos um vetor de extremidade em um ponto $(\alpha, \beta)$ por
+Em geral, um objeto ao qual podemos associar os conceitos de direção, sentido e módulo é chamado um \textbf{vetor}. Denotaremos um vetor de extremidade em um ponto $(\alpha, \beta)$ por
 \[
 	\vec{u} = (\alpha, \beta).
 \]
 
-Esta nota\c{c}\~ao significa que $\vec{u}$ \'e a seta com in{\'\i}cio no ponto $O(0,0)$ e final no ponto $(\alpha, \beta)$.
+Esta notação significa que $\vec{u}$ é a seta com início no ponto $O(0,0)$ e final no ponto $(\alpha, \beta)$.
 \begin{figure}[!h]
 	\centering
 	\caption{Vetor $ \vec{u} = (\alpha, \beta)$.}
@@ -734,7 +734,7 @@ Esta nota\c{c}\~ao significa que $\vec{u}$ \'e a seta com in{\'\i}cio no ponto $
   	% \begin{tikzpicture}[scale=2]%vetor no plano
 	  %   \coordinate[label=below left:$O$] (A) at (0,0);
 	  %   \coordinate (W) at (1,1);
-	  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+	  %   %definição das coordenadas dos eixos cartesianos
 	  %   \coordinate (F) at (-0.5,0);
 	  %   \coordinate (G) at (0,-0.5);
 	  %   \coordinate (X) at (1.5,0);
@@ -742,7 +742,7 @@ Esta nota\c{c}\~ao significa que $\vec{u}$ \'e a seta com in{\'\i}cio no ponto $
 	  %   % Styles
 	  %   \tikzstyle{axes}=[]
 
-	  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+	  %   \begin{scope}[style=axes]%constrói os eixos cartesianos
 		 %    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
 		 %    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
 	  %   \end{scope}
@@ -756,16 +756,16 @@ Esta nota\c{c}\~ao significa que $\vec{u}$ \'e a seta com in{\'\i}cio no ponto $
    %  \end{tikzpicture}
 \end{figure}
 
-% Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a nota\c{c}\~ao vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e da{\'\i} escrevemos
+% Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a notação vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e daí escrevemos
 % \[
 %   \vec{u} = (x_1,y_1).
 % \]
-% As coordenadas $(x_1,y_1)$ s\~ao chamadas de \textbf{componentes} do vetor $\vec{u}$. Com essa representa\c{c}\~ao, o vetor nulo $\vec{0}$ \'e escrito como
+% As coordenadas $(x_1,y_1)$ são chamadas de \textbf{componentes} do vetor $\vec{u}$. Com essa representação, o vetor nulo $\vec{0}$ é escrito como
 % \[
 %   \vec{0} = (0,0).
 % \]
 
-Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ s\~ao representados graficamente por:
+Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ são representados graficamente por:
 \begin{figure}[!h]
 	\centering
 	\caption{Vetores $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$.}
@@ -799,12 +799,12 @@ Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ s\~ao representados grafica
 	% \end{tikzpicture}
 \end{figure}
 
-O vetor que tem in{\'\i}cio e fim no ponto $(0,0)$ \'e chamado de \textbf{vetor nulo} e ser\'a denotado por
+O vetor que tem início e fim no ponto $(0,0)$ é chamado de \textbf{vetor nulo} e será denotado por
 \[
 	\vec{O} = (0,0).
 \]
 
-Podemos tamb\'em representar um vetor por uma seta que n\~ao parte da origem. Por exemplo, os pontos $A(x_1,y_1)$ e $B(x_2,y_2)$ determinam o vetor
+Podemos também representar um vetor por uma seta que não parte da origem. Por exemplo, os pontos $A(x_1,y_1)$ e $B(x_2,y_2)$ determinam o vetor
 \[
 	\vec{AB} = (x_2 - x_1, y_2 - y_1).
 \]
@@ -856,10 +856,10 @@ Podemos tamb\'em representar um vetor por uma seta que n\~ao parte da origem. Po
 	% \end{tikzpicture}
 \end{figure}
 
-Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $\vec{u}$, que tem in{\'\i}cio na origem e extremidade no ponto $(x_2 - x_1, y_2 - y_1)$, t\^em o mesmo m\'odulo, dire\c{c}\~ao e sentido que $\vec{AB}$. Assim vamos representar o vetor $\vec{AB}$ pela forma que for mais conveniente.
+Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $\vec{u}$, que tem início na origem e extremidade no ponto $(x_2 - x_1, y_2 - y_1)$, têm o mesmo módulo, direção e sentido que $\vec{AB}$. Assim vamos representar o vetor $\vec{AB}$ pela forma que for mais conveniente.
 
 \begin{definicao}
-  Seja $\vec{u} = (x_1, y_1)$ um vetor. A \textbf{norma} de $\vec{u}$, denotada por $\norm{\vec{u}}$, \'e dada por
+  Seja $\vec{u} = (x_1, y_1)$ um vetor. A \textbf{norma} de $\vec{u}$, denotada por $\norm{\vec{u}}$, é dada por
   \[
     \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2}.
   \]
@@ -869,10 +869,10 @@ Um vetor $\vec{u}$ tal que
 \[
 	\norm{\vec{u}} = 1
 \]
-\'e chamado de \textbf{vetor unit\'ario}.
+é chamado de \textbf{vetor unitário}.
 \begin{figure}[!h]
 	\centering
-	\caption{Vetores unit\'arios: $\norm{\vec{u}} = 1$}
+	\caption{Vetores unitários: $\norm{\vec{u}} = 1$}
 	\includegraphics{vetores-unitarios-plano-cartesiano.pdf}
 	% \definecolor{qqqqff}{rgb}{0,0,1}
 	% \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -895,7 +895,7 @@ Um vetor $\vec{u}$ tal que
 \end{figure}
 
 \begin{definicao}
-	Dois vetores $\vec{u}$ e $\vec{v}$ s\~ao \textbf{paralelos} (ou \textbf{colineares}) se a restas que cont\'em estes vetores s\~ao paralelas(podendo ser coincidentes).Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, escreveremos $\vec{u}\varparallel\vec{v}$. Neste caso, $\vec{u}$ e $\vec{v}$ t\^em a mesma dire\c{c}\~ao, mas podem ter sentidos contr\'arios.
+	Dois vetores $\vec{u}$ e $\vec{v}$ são \textbf{paralelos} (ou \textbf{colineares}) se a restas que contém estes vetores são paralelas(podendo ser coincidentes).Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, escreveremos $\vec{u}\varparallel\vec{v}$. Neste caso, $\vec{u}$ e $\vec{v}$ têm a mesma direção, mas podem ter sentidos contrários.
 \end{definicao}
 \begin{figure}[!h]
 	\centering
@@ -939,11 +939,11 @@ Um vetor $\vec{u}$ tal que
 	% \end{tikzpicture}
 \end{figure}
 
-\subsection{Opera\c{c}\~oes com Vetores} % (fold)
+\subsection{Operações com Vetores} % (fold)
 \label{sub:operacoes_com_vetores}
 
 \begin{definicao}
-  Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Ent\~ao:
+  Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
   \[
   	\vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2).
   \]
@@ -959,7 +959,7 @@ Um vetor $\vec{u}$ tal que
   %   \coordinate (W) at (1,0.5);
   %   \coordinate (B) at (0,1);
   %   \coordinate (VW) at ($(V)+(W)$);
-  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+  %   %definição das coordenadas dos eixos cartesianos
   %   \coordinate (F) at (-1,0);
   %   \coordinate (G) at (0,-1);
   %   \coordinate (X) at (2,0);
@@ -967,7 +967,7 @@ Um vetor $\vec{u}$ tal que
   %   % Styles
   %   \tikzstyle{axes}=[]
 
-  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+  %   \begin{scope}[style=axes]%constrói os eixos cartesianos
   %   \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
   %   \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
   %   \end{scope}
@@ -996,20 +996,20 @@ Um vetor $\vec{u}$ tal que
 \end{figure}
 
 \begin{propriedades}\label{propriedades_soma_vetores}
-  Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades s\~ao verdadeiras:
+  Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades são verdadeiras:
   \begin{enumerate}[label=({\roman*})]
     \item $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$ [Associatividade]
     \item $\vec{u} + \vec{v} = \vec{v} + \vec{u}$ [Comutatividade]
-    \item Existe um \'unico vetor que somado a $\vec{u}$ resulta no pr\'oprio vetor $\vec{u}$:
+    \item Existe um único vetor que somado a $\vec{u}$ resulta no próprio vetor $\vec{u}$:
     \[
       \vec{u} + \vec{0} = \vec{0} + \vec{u} = \vec{u}.
     \]
-    Tal vetor \'e o vetor nulo. [Elementro Neutro]
-    \item\label{vetor_oposto} Para cada $\vec{u}$, existe um \'unico vetor $\vec{v}$ tal que
+    Tal vetor é o vetor nulo. [Elementro Neutro]
+    \item\label{vetor_oposto} Para cada $\vec{u}$, existe um único vetor $\vec{v}$ tal que
     \[
       \vec{u} + \vec{v} = \vec{0} = \vec{v} + \vec{u}.
     \]
-    O vetor $\vec{v}$ \'e o vetor oposto de $\vec{u}$. [Elemento Oposto]
+    O vetor $\vec{v}$ é o vetor oposto de $\vec{u}$. [Elemento Oposto]
   \end{enumerate}
 \end{propriedades}
 \begin{prova}
@@ -1026,16 +1026,16 @@ Um vetor $\vec{u}$ tal que
     		\vec{u} + \vec{v} = (x_1,y_1) + (-x_1,-y_1) = (0,0) = \vec{0}.
     	\]
 	\end{enumerate}
-	Portanto as propriedades s\~ao verdadeiras.
+	Portanto as propriedades são verdadeiras.
 \end{prova}
 
 \begin{definicao}
-	O vetor $\vec{v}$ do item \ref{vetor_oposto} da Defini\c{c}\~ao \ref{propriedades_soma_vetores} \'e chamado de \textbf{vetor oposto}.
+	O vetor $\vec{v}$ do item \ref{vetor_oposto} da Definição \ref{propriedades_soma_vetores} é chamado de \textbf{vetor oposto}.
 \end{definicao}
 
 
 \begin{definicao}
-  Sejam $\alpha \in \real$, $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Ent\~ao:
+  Sejam $\alpha \in \real$, $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
   \[
   	\alpha \vec{u} = (\alpha x_1, \alpha y_1).
   \]
@@ -1043,13 +1043,13 @@ Um vetor $\vec{u}$ tal que
 
 \begin{figure}[!h]
   \centering
-  \caption{Multiplica\c{c}\~ao por escalar}
+  \caption{Multiplicação por escalar}
   \includegraphics{multiplicacao-escalar-vetores-plano-cartesiano.pdf}
-  % \begin{tikzpicture}[scale=2]%multiplica\c{c}\~ao por escalar no plano
+  % \begin{tikzpicture}[scale=2]%multiplicação por escalar no plano
   %   \coordinate (A) at (0,0);
   %   \coordinate (V) at (0.5,0.5);
   %   \coordinate (W) at ($2*(V)$);
-  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+  %   %definição das coordenadas dos eixos cartesianos
   %   \coordinate (F) at (-1,0);
   %   \coordinate (G) at (0,-1);
   %   \coordinate (X) at (2,0);
@@ -1057,7 +1057,7 @@ Um vetor $\vec{u}$ tal que
   %   % Styles
   %   \tikzstyle{axes}=[]
 
-  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+  %   \begin{scope}[style=axes]%constrói os eixos cartesianos
 	 %    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
 	 %    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
   %   \end{scope}
@@ -1079,14 +1079,14 @@ Um vetor $\vec{u}$ tal que
 
 \begin{observacao}
 	\begin{enumerate}
-		\item Sejam $\vec{u}$ um vetor n\~ao-nulo e $\lambda \ne 0$ um escalar. Ent\~ao $\vec{u} \varparallel\lambda\vec{u}$. Al\'em disso, se $\lambda > 0$, ent\~ao $\vec{u}$ e $\lambda\vec{u}$ s\~ao de mesmo sentido, e se $\lambda < 0$ ent\~ao $\vec{u}$ e $\lambda\vec{u}$ s\~ao de sentidos contr\'arios.
-		\item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  \'e exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma dire\c{c}\~ao que $\vec{u}$, mas sentido contr\'ario.
+		\item Sejam $\vec{u}$ um vetor não-nulo e $\lambda \ne 0$ um escalar. Então $\vec{u} \varparallel\lambda\vec{u}$. Além disso, se $\lambda > 0$, então $\vec{u}$ e $\lambda\vec{u}$ são de mesmo sentido, e se $\lambda < 0$ então $\vec{u}$ e $\lambda\vec{u}$ são de sentidos contrários.
+		\item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  é exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma direção que $\vec{u}$, mas sentido contrário.
 	\end{enumerate}
-	
+
 \end{observacao}
 
 \begin{propriedades}
-  Quaisquer que sejam os n\'umeros reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$ valem as igualdades:
+  Quaisquer que sejam os números reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$ valem as igualdades:
   \begin{enumerate}[label=({\roman*})]
     \item $\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$;
     \item $(\alpha + \beta)\vec{u} = \alpha\vec{u} + \beta\vec{u}$;
@@ -1110,7 +1110,7 @@ Um vetor $\vec{u}$ tal que
 		\]
 		Logo $\alpha(\beta\vec{u}) = (\alpha\beta)\vec{u} = \beta(\alpha\vec{u})$.
 	\end{enumerate}
-	Portanto as propriedades s\~ao v\'alidas.
+	Portanto as propriedades são válidas.
 \end{prova}
 
 % \begin{proposicao}
@@ -1129,10 +1129,10 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
   \end{bmatrix}.
 \]
 
-%Vimos que a norma de um vetor \'e definida como o comprimento de um segmento orientado que o represente. Com a representa\c{c}\~ao de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
+%Vimos que a norma de um vetor é definida como o comprimento de um segmento orientado que o represente. Com a representação de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
 
 \begin{exemplos}
-  Seja $\vec{u} = (-2,3)$ um vetor. Ent\~ao
+  Seja $\vec{u} = (-2,3)$ um vetor. Então
   \begin{align*}
     \norm{\vec{u}} &= \sqrt{(-2)^2 + 3^2} = \sqrt{13}\\
     \vec{v} &= \dfrac{\vec{u}}{\norm{u}} = \dfrac{1}{\sqrt{13}}(-2,3) = \left(\dfrac{-2}{\sqrt{13}}, \dfrac{3}{\sqrt{13}}\right).
@@ -1146,66 +1146,66 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
 % section vetores_plano (end)
 
 \begin{proposicao}
-  Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Ent\~ao:
+  Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Então:
   \begin{enumerate}[label=({\roman*})]
-    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\norm{\vec{u}} \ne 0$.
+    \item Se $\vec{u} \ne \vec{0}$, então $\norm{\vec{u}} \ne 0$.
     \item $\norm{\vec{u}} = 0$ se, e somente se, $\vec{u} = \vec{0}$.
     \item $\norm{\alpha\vec{u}} = |\alpha|\norm{\vec{u}}$.
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
   \begin{enumerate}[label=({\roman*})]
-    \item  Se $\vec{u} \ne (0,0) = \vec{0}$, ent\~ao $x_1 \ne 0$ ou $y_1 \ne 0$. Da{\'\i}
+    \item  Se $\vec{u} \ne (0,0) = \vec{0}$, então $x_1 \ne 0$ ou $y_1 \ne 0$. Daí
     \[
       \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2} > 0.
     \]
-    \item $\norm{\vec{u}} = 0$ se, e somente se, $x_1^2 + y_1^2 = 0$, isto \'e, $x_1 = y_1 = 0$. Portanto $\vec{u} = \vec{0}$.
+    \item $\norm{\vec{u}} = 0$ se, e somente se, $x_1^2 + y_1^2 = 0$, isto é, $x_1 = y_1 = 0$. Portanto $\vec{u} = \vec{0}$.
     \item $\norm{\alpha\vec{u}} = \norm{\alpha(x_1, y_1)} = \sqrt{(\alpha x_1)^2 + (\alpha y_1)^2} = \sqrt{\alpha^2(x_1^2 + y_1^2)} = |\alpha|\norm{\vec{u}}$.
   \end{enumerate}
 \end{prova}
 
 \begin{observacao}
-	Dado um vetor n\~ao nulo $\vec{u}$ o vetor
+	Dado um vetor não nulo $\vec{u}$ o vetor
 	\[
   		\vec{v} = \dfrac{\vec{u}}{\norm{\vec{u}}}
 	\]
-	\'e um vetor unit\'ario na dire\c{c}\~ao de $\vec{u}$ pois
+	é um vetor unitário na direção de $\vec{u}$ pois
 	\[
   		\norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \dfrac{1}{\norm{\vec{u}}}\norm{\vec{u}} = 1.
 	\]
 
 \end{observacao}
 \begin{definicao}
-	Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao-nulos. Ent\~ao $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ t\^em normas iguais, s\~ao de mesma dire\c{c}\~ao e de mesmo sentido.
+	Sejam $\vec{u}$ e $\vec{v}$ vetores não-nulos. Então $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ têm normas iguais, são de mesma direção e de mesmo sentido.
 \end{definicao}
 
 \begin{proposicao}\label{vetores_paralelos}
-  Dois vetores n\~ao nulos $\vec{u}$ e $\vec{v}$ s\~ao paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemente, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
+  Dois vetores não nulos $\vec{u}$ e $\vec{v}$ são paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemente, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
 \end{proposicao}
 \begin{prova}
-	Se $\vec{u} = \lambda\vec{v}$, ent\~ao $\vec{u}\varparallel\vec{v}$.
-	Agora, suponha que $\vec{u}$ e $\vec{v}$ s\~ao paralelos e de mesmo sentido, o caso em que t\^em sentidos contr\'arios fica como exerc{\'\i}cio.
+	Se $\vec{u} = \lambda\vec{v}$, então $\vec{u}\varparallel\vec{v}$.
+	Agora, suponha que $\vec{u}$ e $\vec{v}$ são paralelos e de mesmo sentido, o caso em que têm sentidos contrários fica como exercício.
 
-	Seja 
+	Seja
 	\[
 		\lambda = \dfrac{\norm{\vec{u}}}{\norm{\vec{v}}}.
 	\]
-	Vamos mostrar que $\vec{u} = \lambda\vec{v}$. Inicialmente, sabemos que $\vec{v}$ e $\lambda\vec{v}$ s\~ao paralelos e t\^em o mesmo sentido pois $\lambda > 0$. Agora
+	Vamos mostrar que $\vec{u} = \lambda\vec{v}$. Inicialmente, sabemos que $\vec{v}$ e $\lambda\vec{v}$ são paralelos e têm o mesmo sentido pois $\lambda > 0$. Agora
 	\[
 		\norm{\lambda\vec{v}} = |\lambda|\norm{\vec{v}} = \dfrac{\norm{\vec{u}}}{\norm{\vec{v}}}\norm{\vec{v}} = \norm{\vec{u}}.
 	\]
-	Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma dire\c{c}\~ao, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como quer{\'\i}amos.
+	Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma direção, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como queríamos.
 \end{prova}
 
-\subsection{\^Angulo entre vetores e produto interno} % (fold)
+\subsection{ângulo entre vetores e produto interno} % (fold)
 \label{sub:angulo_entre_vetores_e_produto_interno}
 \begin{definicao}
-  Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos. O \textbf{\^angulo} entre $\vec{u}$ e $\vec{v}$ \'e definido pelo \^angulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ s\~ao representados com a mesma origem.\index{Vetores!\^Angulo}
+  Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
 \end{definicao}
 
 \begin{figure}[!h]
   \centering
-  \caption{\^Angulo entre vetores}
+  \caption{ângulo entre vetores}
   \includegraphics{angulo-vetores-plano-cartesiano.pdf}
   % \begin{tikzpicture}
   %   \coordinate (A) at (0,0);
@@ -1230,13 +1230,13 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
 
 
 \begin{definicao}
-  Quando o \^angulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ \'e reto, isto \'e, $\theta = \pi/2$, ou um deles \'e o vetor nulo, dizemos que os vetores $\vec{u}$ e $\vec{v}$ s\~ao \textbf{ortogonais} ou \textbf{perpendiculares} entre si. Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.\index{Vetores!Ortogonais}
+  Quando o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ é reto, isto é, $\theta = \pi/2$, ou um deles é o vetor nulo, dizemos que os vetores $\vec{u}$ e $\vec{v}$ são \textbf{ortogonais} ou \textbf{perpendiculares} entre si. Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.\index{Vetores!Ortogonais}
 \end{definicao}
 
-Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles.
+Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
 \begin{figure}[!h]
   \centering
-  \caption{Determina\c{c}\~ao de $\theta$}
+  \caption{Determinação de $\theta$}
   \includegraphics{determinacao-angulo-vetores-plano-cartesiano.pdf}
   % \begin{tikzpicture}
   %   \coordinate (A) at (0,0);
@@ -1259,7 +1259,7 @@ Sejam $\vec{u}$ e $\vec{v}$ vetores n\~ao nulos e $\theta$ o \^angulo entre eles
   % \end{tikzpicture}
 \end{figure}
 
-Aplicando a Lei dos cosssenos no tri\^angulo abaixo
+Aplicando a Lei dos cosssenos no triângulo abaixo
 \begin{figure}[!h]
   \centering
   \caption{Lei dos cossenos}
@@ -1289,20 +1289,20 @@ temos
   \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\norm{\vec{u}}\norm{\vec{v}}\cos\theta.
 \end{align}
 
-% Assim conhecendo as coordenadas dos vetores $\vec{u}$ e $\vec{v}$ podemos determinar facilmente o \^angulo entre eles. Al\'em disso, note que se $\vec{u}$ e $\vec{v}$ s\~ao vetores ortogonais, ent\~ao $\theta = \pi/2$ e ent\~ao a equa\c{c}\~ao \eqref{equacaonorma} torna-se
+% Assim conhecendo as coordenadas dos vetores $\vec{u}$ e $\vec{v}$ podemos determinar facilmente o ângulo entre eles. Além disso, note que se $\vec{u}$ e $\vec{v}$ são vetores ortogonais, então $\theta = \pi/2$ e então a equação \eqref{equacaonorma} torna-se
 % \begin{align}\label{norma-vetores-ortogonais}
 %   \norm{\vec{u} - \vec{v}} = \sqrt{\norm{\vec{u}}^2 + \norm{\vec{v}}^2}.
 % \end{align}
 
 % \begin{observacao}
-%   A equa\c{c}\~ao \eqref{norma-vetores-ortogonais} s\'o \'e v\'alida para vetores ortogonais entre si.
+%   A equação \eqref{norma-vetores-ortogonais} só é válida para vetores ortogonais entre si.
 % \end{observacao}
 
 \begin{definicao}\label{produtointerno}
-  O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, \'e o n\'umero real tal que:\index{Vetores!Produto Escalar}
+  O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que:\index{Vetores!Produto Escalar}
   \begin{enumerate}
-    \item Se $\vec{u}$ ou $\vec{v}$ \'e nulo, ent\~ao $\inner{u}{v} = 0$.
-    \item Se $\vec{u}$ e $\vec{v}$ n\~ao s\~ao nulos e $\theta$ \'e o \^angulo entre $\vec{u}$ e $\vec{v}$, ent\~ao
+    \item Se $\vec{u}$ ou $\vec{v}$ é nulo, então $\inner{u}{v} = 0$.
+    \item Se $\vec{u}$ e $\vec{v}$ não são nulos e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, então
     \begin{align}\label{produto-interno}
       \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
     \end{align}
@@ -1310,9 +1310,9 @@ temos
 \end{definicao}
 
 \begin{proposicao}
-  Sejam $\vec{u}$ e $\vec{v}$ vetores e $\theta$ o \^angulo entre $\vec{u}$ e $\vec{v}$.
+  Sejam $\vec{u}$ e $\vec{v}$ vetores e $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$.
   \begin{enumerate}
-    \item Se $\vec{u}$ e $\vec{v}$ n\~ao s\~ao nulos, ent\~ao
+    \item Se $\vec{u}$ e $\vec{v}$ não são nulos, então
     \[
       \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
     \]
@@ -1325,8 +1325,8 @@ temos
 \end{proposicao}
 \begin{prova}
   \begin{enumerate}
-    \item Basta isolar $\cos\theta$ na Defini\c{c}\~ao \ref{produto-interno}.
-    \item Se $\vec{u} = \vec{0}$, ent\~ao a igualdade \'e verdadeira. Se $\vec{u} \ne \vec{0}$, ent\~ao o \^angulo entre o vetor $\vec{u}$ e ele mesmo \'e $\theta = 0$, logo
+    \item Basta isolar $\cos\theta$ na Definição \ref{produto-interno}.
+    \item Se $\vec{u} = \vec{0}$, então a igualdade é verdadeira. Se $\vec{u} \ne \vec{0}$, então o ângulo entre o vetor $\vec{u}$ e ele mesmo é $\theta = 0$, logo
     \[
       1 = \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{u}}}.
     \]
@@ -1334,23 +1334,23 @@ temos
     \[
       \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
     \]
-    \item Se $\vec{u}$ ou $\vec{v}$ \'e o vetor nulo, ent\~ao $\vec{u}\perp\vec{v}$ e $\inner{u}{v} = 0$. Suponha $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Assim, se $\vec{u} \perp\vec{v}$, ent\~ao $\theta = \pi/2$ e da{\'\i} $\inner{u}{v} = 0$. Agora, se $\inner{u}{v} = 0$, ent\~ao
+    \item Se $\vec{u}$ ou $\vec{v}$ é o vetor nulo, então $\vec{u}\perp\vec{v}$ e $\inner{u}{v} = 0$. Suponha $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Assim, se $\vec{u} \perp\vec{v}$, então $\theta = \pi/2$ e daí $\inner{u}{v} = 0$. Agora, se $\inner{u}{v} = 0$, então
     \[
       0 = \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
     \]
-    Logo devemos ter $\cos\theta = 0$, isto \'e, $\theta = \pi/2$. Portanto $\vec{u}\perp\vec{v}$, como quer{\'\i}amos.
+    Logo devemos ter $\cos\theta = 0$, isto é, $\theta = \pi/2$. Portanto $\vec{u}\perp\vec{v}$, como queríamos.
   \end{enumerate}
 \end{prova}
 
-Agora, como podemos encontrar o produto interno sem necessitar de determinar o \^angulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$\,? Substituindo o produto interno na equa\c{c}\~ao \eqref{equacaonorma} temos
+Agora, como podemos encontrar o produto interno sem necessitar de determinar o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$\,? Substituindo o produto interno na equação \eqref{equacaonorma} temos
 \[
   \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\inner{u}{v}
 \]
-isto \'e,
+isto é,
 \begin{align}\label{equacao-auxilar-norma}
   \inner{u}{v} = \dfrac{1}{2}(\norm{\vec{u}}^2 + \norm{\vec{v}}^2 - \norm{\vec{u} - \vec{v}}^2).
 \end{align}
-Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, ent\~ao podemos reescrever \eqref{equacao-auxilar-norma} como
+Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, então podemos reescrever \eqref{equacao-auxilar-norma} como
 \begin{align*}
   \inner{u}{v} &= \dfrac{1}{2}(x_1^2 + y_1^2 + x_2^2 + y_2^2 - \norm{(x_1 - x_2, y_1 - y_2)}^2)\\
   &= \dfrac{1}{2}[x_1^2 + y_1^2 + x_2^2 + y_2^2 - (x_1 - x_2)^2 - (y_1 - y_2)^2]\\
@@ -1359,7 +1359,7 @@ Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, ent\~ao podemos reescrever \
 
 Abacamos de demonstrar o seguinte teorema:
 \begin{teorema}
-  O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ \'e dado por
+  O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ é dado por
   \[
     \inner{u}{v} = x_1x_2 + y_1y_2.
   \]
@@ -1367,7 +1367,7 @@ Abacamos de demonstrar o seguinte teorema:
 
 \begin{exemplos}
   \begin{enumerate}
-    \item Sejam $\vec{u} = (1, 1)$ e $\vec{v} = (1,0)$. Determine o \^angulo entre $\vec{u}$ e $\vec{v}$.
+    \item Sejam $\vec{u} = (1, 1)$ e $\vec{v} = (1,0)$. Determine o ângulo entre $\vec{u}$ e $\vec{v}$.
     \begin{solucao}
       Temos
       \begin{align*}
@@ -1386,19 +1386,19 @@ Abacamos de demonstrar o seguinte teorema:
           x + y = -1
         \end{cases}
       \]
-      cuja solu\c{c}\~ao \'e $x = -1/5$ e $y = -4/5$. Logo $\vec{u} = (-1/5, -4/5)$.
+      cuja solução é $x = -1/5$ e $y = -4/5$. Logo $\vec{u} = (-1/5, -4/5)$.
     \end{solucao}
   \end{enumerate}
 \end{exemplos}
 
 \begin{proposicao}\label{propriedades-produto-interno}
-  Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o n\'umero real $\lambda$ temos
+  Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o número real $\lambda$ temos
   \begin{enumerate}[label=({\roman*})]
     \item\label{linearidade-produto-interno} $\langle \vec{u}, \vec{v} + \vec{w}\rangle = \inner{u}{v} + \inner{u}{w}$
     \item $\langle \vec{u} + \vec{v}, \vec{w}\rangle = \inner{u}{w} + \inner{v}{w}$
     \item\label{linearidade2-produto-interno} $\langle (\lambda \vec{u}\,), \vec{v}\rangle = \langle \vec{u}, (\lambda \vec{v}\,)\rangle = \lambda\inner{u}{v}$
     \item $\inner{u}{v} = \inner{v}{u}$
-    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $\inner{u}{u} > 0$.
+    \item Se $\vec{u} \ne \vec{0}$, então $\inner{u}{u} > 0$.
   \end{enumerate}
 \end{proposicao}
 \begin{prova}
@@ -1411,23 +1411,23 @@ Abacamos de demonstrar o seguinte teorema:
       \langle\vec{u},(\lambda\vec{v})\rangle = \langle\vec{u}, (\lambda x_2, \lambda y_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) = \lambda (x_1y_2) + \lambda (y_1y_2) = \lambda\inner{u}{v}
     \end{align*}
     \item $\inner{u}{v} = x_1x_2 + y_1y_2 = x_2x_1 + y_2y_1 = \inner{v}{u}$
-    \item Se $\vec{u} \ne \vec{0}$, ent\~ao $x_1 \ne 0$ ou $y_1 \ne 0$. Da{\'\i} $\inner{u}{u} = x_1^2 + y_1^2 > 0$, como quer{\'\i}amos.
+    \item Se $\vec{u} \ne \vec{0}$, então $x_1 \ne 0$ ou $y_1 \ne 0$. Daí $\inner{u}{u} = x_1^2 + y_1^2 > 0$, como queríamos.
   \end{enumerate}
 \end{prova}
 
 \begin{observacao}
   \begin{enumerate}
-    \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposi\c{c}\~ao \ref{propriedades-produto-interno} podem ser estendidas para qualquer n\'umero de vetores e escalares:
+    \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposição \ref{propriedades-produto-interno} podem ser estendidas para qualquer número de vetores e escalares:
     \[
       \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} )\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
     \]
-    \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ n\~ao podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0)$, $\vec{v} = (2, 1)$ e $\vec{w} = (2, -5)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
-    \item De $\inner{u}{v} = 0$ n\~ao podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
+    \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ não podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0)$, $\vec{v} = (2, 1)$ e $\vec{w} = (2, -5)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
+    \item De $\inner{u}{v} = 0$ não podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
   \end{enumerate}
 \end{observacao}
 
 \begin{exemplos}
-  Calcule o \^angulo $\alpha$ entre $\vec{u} + \vec{v}$ e $\vec{u} - \vec{v}$, sabendo que $\norm{\vec{u}} = \sqrt{5}$, $\norm{\vec{v}} = 1$ e que o \^angulo $\theta$ entre $\vec{u}$ e $\vec{v}$ \'e $\pi/4$.
+  Calcule o ângulo $\alpha$ entre $\vec{u} + \vec{v}$ e $\vec{u} - \vec{v}$, sabendo que $\norm{\vec{u}} = \sqrt{5}$, $\norm{\vec{v}} = 1$ e que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é $\pi/4$.
   \begin{solucao}
     Temos
     \begin{align*}
@@ -1442,7 +1442,7 @@ Abacamos de demonstrar o seguinte teorema:
     \begin{align*}
       \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta = \sqrt{5}\cos(\pi/4) = \dfrac{\sqrt{10}}{2}
     \end{align*}
-    e ent\~ao
+    e então
     \begin{align*}
       \norm{\vec{u} + \vec{v}} = \sqrt{6 + \sqrt{10}}\\
       \norm{\vec{u} - \vec{v}} = \sqrt{6 - \sqrt{10}}.
@@ -1451,7 +1451,7 @@ Abacamos de demonstrar o seguinte teorema:
     \[
       \cos\theta = \dfrac{4}{\sqrt{26}}
     \]
-    e ent\~ao $\theta = \arccos\left(\dfrac{4}{\sqrt{26}}\right)$.
+    e então $\theta = \arccos\left(\dfrac{4}{\sqrt{26}}\right)$.
   \end{solucao}
 \end{exemplos}
 
@@ -1464,20 +1464,20 @@ Abacamos de demonstrar o seguinte teorema:
 \end{proposicao}
 \begin{prova}
   \begin{enumerate}
-    \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$ a desigualdade \'e verdadeira. Suponha ent\~ao que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Seja $\theta$ o \^angulo entre $\vec{u}$ e $\vec{v}$. Temos
+    \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$ a desigualdade é verdadeira. Suponha então que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Seja $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$. Temos
     \[
       0 \le |\cos\theta| \le 1
     \]
-    e multiplicando essa inequa\c{c}\~ao por $\norm{\vec{u}}\norm{\vec{v}}$ obtemos
+    e multiplicando essa inequação por $\norm{\vec{u}}\norm{\vec{v}}$ obtemos
     \[
       0 \le \norm{\vec{u}}\norm{\vec{v}}\cos\theta \le \norm{\vec{u}}\norm{\vec{v}},
     \]
-    isto \'e,
+    isto é,
     \[
       |\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}
     \]
-    como quer{\'\i}amos.
-    \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$, ent\~ao a desigualdade \'e verdadeira. Suponha ent\~ao que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Temos
+    como queríamos.
+    \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$, então a desigualdade é verdadeira. Suponha então que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Temos
     \begin{align*}
       \norm{\vec{u} + \vec{v}}^2 &= \langle\vec{u} + \vec{v}, \vec{u} + \vec{v}\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = \norm{\vec{u}}^2 + 2\inner{u}{v} + \norm{\vec{v}}^2 \\ &\le \norm{\vec{u}}^2 + 2\mid\inner{u}{v}\mid + \norm{\vec{v}}^2.
     \end{align*}
@@ -1493,12 +1493,12 @@ Abacamos de demonstrar o seguinte teorema:
 \end{prova}
 
 % subsection angulo_entre_vetores_e_produto_interno (end)
-\subsection{Proje\c{c}\~ao de Vetores} % (fold)
+\subsection{Projeção de Vetores} % (fold)
 \label{sub:projecao_de_vetores}
-Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores n\~ao nulos. Suponha que o \^angulo $\theta$ entre $\vec{u}$ e $\vec{v}$ \'e tal que $0 < \theta < \pi/2$.
+Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores não nulos. Suponha que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é tal que $0 < \theta < \pi/2$.
 \begin{figure}[!h]
   \centering
-  \caption{Proje\c{c}\~ao ortogonal}
+  \caption{Projeção ortogonal}
   \includegraphics{projecao-vetores-plano-cartesiano.pdf}
   % \begin{tikzpicture}[scale=2]
   %   \coordinate [label=below:$O$] (O) at (0,0);
@@ -1506,13 +1506,13 @@ Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores n\~ao nulos. Supon
   %   \coordinate (U) at (1.5,0);
   %   %\coordinate (B) at (0,1);
   %   \coordinate[label=below:$P$] (P) at ($(O)!(V)!(U)$);
-  %   %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+  %   %definição das coordenadas dos eixos cartesianos
   %   \coordinate (F) at (-1,0);
   %   \coordinate (X) at (2,0);
   %   % Styles
   %   \tikzstyle{axes}=[]
 
-  %   \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+  %   \begin{scope}[style=axes]%constrói os eixos cartesianos
   %   \draw[dashed] (F) -- (X) coordinate(x axis);
   %   %\draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
   %   \end{scope}
@@ -1526,7 +1526,7 @@ Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores n\~ao nulos. Supon
   %   \draw[->,>=triangle 45,red] ($(O)!(V)!(U)$) -- (V)
   %     node[midway,below right]{$\vec{v} - \vec{OP}$};
   %   \draw[anchor=base,color=blue] (P.center)  ++(.15,0)  -- ++(0,0.15) -- ++(-0.15,0);
-    
+
   %   % Mark the angle XAY
   %   \begin{scope}
   %   \path[clip] (O) -- (V) -- (U);
@@ -1536,17 +1536,17 @@ Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores n\~ao nulos. Supon
   % \end{tikzpicture}
 \end{figure}
 
-O vetor $\vec{OP}$ \'e paralelo ao vetor $\vec{u}$ e o vetor $\vec{PA}$ \'e ortogonal ao vetor $\vec{u}$.
+O vetor $\vec{OP}$ é paralelo ao vetor $\vec{u}$ e o vetor $\vec{PA}$ é ortogonal ao vetor $\vec{u}$.
 
 \begin{definicao}\label{projecao_ortogonal}
-  Seja $\vec{u}$ um vetor n\~ao nulo. Dado qualquer vetor $\vec{v}$, o vetor $\vec{OP}$ \'e chamado de \textbf{proje\c{c}\~ao ortogonal} de $\vec{v}$ sobre $\vec{u}$, e \'e indicado por $\proj_{\vec{u}}\vec{v}$ se satisfaz as seguintes condi\c{c}\~oes:\index{Vetores!Proje\c{c}\~ao ortogonal}
+  Seja $\vec{u}$ um vetor não nulo. Dado qualquer vetor $\vec{v}$, o vetor $\vec{OP}$ é chamado de \textbf{projeção ortogonal} de $\vec{v}$ sobre $\vec{u}$, e é indicado por $\proj_{\vec{u}}\vec{v}$ se satisfaz as seguintes condições:\index{Vetores!Projeção ortogonal}
   \begin{enumerate}
     \item $\vec{OP} \varparallel\vec{u}$
     \item $(\vec{v} - \vec{OP}) \perp \vec{u}$.
   \end{enumerate}
 \end{definicao}
 
-Podemos tamb\'em escrever
+Podemos também escrever
 \begin{enumerate}
   \item $\proj_{\vec{u}}\vec{v} \varparallel\vec{u}$
     \item $(\vec{v} - \proj_{\vec{u}}\vec{v}) \perp \vec{u}$.
@@ -1556,7 +1556,7 @@ No caso acima temos
 \[
   \cos\theta = \dfrac{\norm{\vec{OP}}}{\norm{\vec{v}}}
 \]
-e ent\~ao $\norm{\vec{OP}} = \norm{\vec{v}}\cos\theta$. Mas
+e então $\norm{\vec{OP}} = \norm{\vec{v}}\cos\theta$. Mas
 \[
   \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}
 \]
@@ -1564,16 +1564,16 @@ e assim podemos escrever
 \[
   \norm{\vec{OP}} = \dfrac{\inner{u}{v}}{\norm{\vec{u}}}.
 \]
-Al\'em disso, como $\vec{OP}$ \'e paralelo \`a $\vec{u}$ e de mesmo sentido, devemos ter $\vec{OP} = \lambda\vec{u}$ com $\lambda > 0$. Da{\'\i}
-$\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e ent\~ao
+Além disso, como $\vec{OP}$ é paralelo à $\vec{u}$ e de mesmo sentido, devemos ter $\vec{OP} = \lambda\vec{u}$ com $\lambda > 0$. Daí
+$\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e então
 \[
   \vec{OP} = \dfrac{\norm{OP}}{\norm{\vec{u}}^2}\vec{u}.
 \]
 
-Esta constru\c{c}\~ao s\'o \'e v\'alida no caso em que o \^angulo $\theta$ entre $\vec{u}$ e $\vec{v}$ satisfaz $0 < \theta < \pi/2$. Nos casos
+Esta construção só é válida no caso em que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ satisfaz $0 < \theta < \pi/2$. Nos casos
 \begin{figure}
   \centering
-  \caption{Vetor proje\c{c}\~ao}
+  \caption{Vetor projeção}
   \includegraphics{vetores-projecao-plano-cartesiano.pdf}
   % \begin{tikzpicture}
   %     \coordinate[label=below:$O$] (A) at (-8,0);
@@ -1595,7 +1595,7 @@ Esta constru\c{c}\~ao s\'o \'e v\'alida no caso em que o \^angulo $\theta$ entre
   %     node[midway,below]{$\vec{u}$};
   %     \draw[->,>=triangle 45,red] (B) -- (C)
   %     node[midway,above]{$\vec{v} = \vec{OP}$};
-      
+
   %     \coordinate[label=below:$O$] (B) at (2,0);
   %     \coordinate (C) at (0,0);
   %     \coordinate (D) at (4,0);
@@ -1606,37 +1606,37 @@ Esta constru\c{c}\~ao s\'o \'e v\'alida no caso em que o \^angulo $\theta$ entre
   %     node[midway,above]{$\vec{v} = \vec{OP}$};
   %   \end{tikzpicture}
 \end{figure}
-n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os vetores.
+não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
 \begin{proposicao}
-  Seja $\vec{u}$ um vetor n\~ao nulo. Qualquer que seja o vetor $\vec{v}$, existe e \'e \'unica a proje\c{c}\~ao ortogonal de $\vec{v}$ sobre $\vec{u}$. Sua express\~ao em termos de $\vec{u}$ e $\vec{v}$ \'e dada por
+  Seja $\vec{u}$ um vetor não nulo. Qualquer que seja o vetor $\vec{v}$, existe e é única a projeção ortogonal de $\vec{v}$ sobre $\vec{u}$. Sua expressão em termos de $\vec{u}$ e $\vec{v}$ é dada por
   \[
     \proj_{\vec{u}}\vec{v} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}
   \]
-  e sua norma \'e dada por
+  e sua norma é dada por
   \[
     \norm{\proj_{\vec{u}}\vec{v}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}.
   \]
 \end{proposicao}
 \begin{prova}
-  Seja $\vec{p} = \proj_{\vec{u}}\vec{v}$. Da Defini\c{c}\~ao \ref{projecao_ortogonal}, dizer que $\vec{p}$ \'e a proje\c{c}\~ao ortogonal de $\vec{v}$ sobre $\vec{u}$ significa que $\vec{p}$ \'e um vetor tal que $\vec{p}\varparallel\vec{u}$ e $(\vec{v} - \vec{p})\perp\vec{u}$.
+  Seja $\vec{p} = \proj_{\vec{u}}\vec{v}$. Da Definição \ref{projecao_ortogonal}, dizer que $\vec{p}$ é a projeção ortogonal de $\vec{v}$ sobre $\vec{u}$ significa que $\vec{p}$ é um vetor tal que $\vec{p}\varparallel\vec{u}$ e $(\vec{v} - \vec{p})\perp\vec{u}$.
 
-  Como $\vec{p}\varparallel\vec{u}$, ent\~ao pela Proposi\c{c}\~ao \ref{vetores_paralelos} existe um escalar $\lambda$ tal que $\vec{p} = \lambda\vec{u}$. Assim qualquer vetor do tipo $\lambda\vec{u}$ \'e um candidato para ser a proje\c{c}\~ao ortogonal. Mas, para que $\vec{p}$ seja a proje\c{c}\~ao ortogonal, ele deve satisfazer $(\vec{v} - \vec{p})\perp\vec{u}$. Logo
+  Como $\vec{p}\varparallel\vec{u}$, então pela Proposição \ref{vetores_paralelos} existe um escalar $\lambda$ tal que $\vec{p} = \lambda\vec{u}$. Assim qualquer vetor do tipo $\lambda\vec{u}$ é um candidato para ser a projeção ortogonal. Mas, para que $\vec{p}$ seja a projeção ortogonal, ele deve satisfazer $(\vec{v} - \vec{p})\perp\vec{u}$. Logo
   \begin{align*}
     (\vec{v} - \vec{p})\perp\vec{u} \Leftrightarrow \langle(\vec{v} - \vec{p}), \vec{u}\rangle = 0 \Leftrightarrow \inner{v}{u} - \lambda\inner{u}{v} = 0 \Leftrightarrow \lambda = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}.
   \end{align*}
-  Assim existe um \'unico $\lambda$ que satisfaz a condi\c{c}\~ao $(\vec{v} - \vec{p})\perp\vec{u}$, e da{\'\i} o vetor $\vec{p}$ \'e \'unico. Portanto
+  Assim existe um único $\lambda$ que satisfaz a condição $(\vec{v} - \vec{p})\perp\vec{u}$, e daí o vetor $\vec{p}$ é único. Portanto
   \[
     \proj_{\vec{u}}\vec{v} = \vec{p} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}.
   \]
-  Al\'em disso
+  Além disso
   \[
     \norm{\proj_{\vec{u}}\vec{v}} = \norm{\dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}
   \]
-  como quer{\'\i}amos.
+  como queríamos.
 \end{prova}
 
 \begin{observacao}
-  O escalar $\lambda$ encontrado na proposi\c{c}\~ao anterior pode ser negativo ou zero. Ele ser\'a negativo quando $\pi/2 \le \theta \le \pi$ e ser\'a zero quando $\vec{u}\perp\vec{v}$.
+  O escalar $\lambda$ encontrado na proposição anterior pode ser negativo ou zero. Ele será negativo quando $\pi/2 \le \theta \le \pi$ e será zero quando $\vec{u}\perp\vec{v}$.
   \begin{figure}[!h]
     \centering
     \caption{Possibilidades para $\lambda$}
@@ -1658,7 +1658,7 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
     %   \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
     %   \node at ($(A)+(50:7mm)$) {$\theta$};
     %   \end{scope}
-      
+
     %   \coordinate[label=below:$O$] (B) at (0,0);
     %   \coordinate (C) at (3,0);
     %   \coordinate (D) at (0,2.5);
@@ -1682,7 +1682,7 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
 
 \begin{exemplos}\label{exemplosprojecao}
   \begin{enumerate}
-    \item Encontre a proje\c{c}\~ao ortogonal do vetor $\vec{v} = (4, -1)$ sobre o vetor $\vec{u} = (2, 1)$.
+    \item Encontre a projeção ortogonal do vetor $\vec{v} = (4, -1)$ sobre o vetor $\vec{u} = (2, 1)$.
     \begin{solucao}
        Temos
        \[
@@ -1693,7 +1693,7 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
          \inner{v}{u} = 7\\
          \norm{\vec{u}}^2 = 5
        \end{align*}
-       e da{\'\i}
+       e daí
        \[
           \proj_{\vec{u}}\vec{v} = \dfrac{7}{5}(2, 1) = \left(\dfrac{14}{5}, \dfrac{7}{5}\right).
        \]
@@ -1706,22 +1706,22 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
          \inner{u}{v} = \inner{v}{u} = 7\\
          \norm{\vec{v}}^2 = 17
        \end{align*}
-       e da{\'\i}
+       e daí
        \[
           \proj_{\vec{v}}\vec{u} = \dfrac{7}{17}(4, -1) = \left(\dfrac{28}{17}, \dfrac{-7}{17}\right).
        \]
-     \end{solucao} 
-     \item Considere um tri\^angulo $ABC$ onde $A(3,3)$, $B(0,1)$ e $C(1,6)$.
+     \end{solucao}
+     \item Considere um triângulo $ABC$ onde $A(3,3)$, $B(0,1)$ e $C(1,6)$.
      \begin{enumerate}\label{exemploprojecao2}
-       \item Verifique que $ABC$ \'e um tri\^angulo ret\^angulo em $A$.
-       \item Calcule a proje\c{c}\~ao do cateto $BA$ sobre a hipotenusa $BC$.
-       \item Determine o p\'e da altura do tri\^angulo relativo ao v\'ertice $A$.
+       \item Verifique que $ABC$ é um triângulo retângulo em $A$.
+       \item Calcule a projeção do cateto $BA$ sobre a hipotenusa $BC$.
+       \item Determine o pé da altura do triângulo relativo ao vértice $A$.
      \end{enumerate}
      \begin{solucao}
-       Considere o tri\^angulo abaixo
+       Considere o triângulo abaixo
        \begin{figure}[!h]
         \centering
-        \caption{Exemplo \ref{exemplosprojecao}, exerc{\'\i}cio \ref{exemploprojecao2}}
+        \caption{Exemplo \ref{exemplosprojecao}, exercício \ref{exemploprojecao2}}
         \includegraphics{exemplo-vetores-projecao-plano-cartesiano.pdf}
          % \begin{tikzpicture}[scale=2]
          %    \coordinate (o) at (0,0);
@@ -1729,7 +1729,7 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
          %    \coordinate[label=left:$B$] (B) at (0,0.25);
          %    \coordinate[label=above:$C$] (C) at (0.5,1.7);
          %    \coordinate[label=left:$P$] (P) at ($(C)!(A)!(B)$);
-         %    %defini\c{c}\~ao das coordenadas dos eixos cartesianos
+         %    %definição das coordenadas dos eixos cartesianos
          %    \coordinate (F) at (-0.5,0);
          %    \coordinate (G) at (0,-0.5);
          %    \coordinate (X) at (2,0);
@@ -1737,7 +1737,7 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
          %    % Styles
          %    \tikzstyle{axes}=[]
 
-         %    \begin{scope}[style=axes]%constr\'oi os eixos cartesianos
+         %    \begin{scope}[style=axes]%constrói os eixos cartesianos
          %    \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
          %    \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
          %    \end{scope}
@@ -1753,13 +1753,13 @@ n\~ao podemos usar a constru\c{c}\~ao envolvendo o \^angulo $\theta$ entre os ve
          \[
             \inner{AB}{AC} = (-3)(-2) + (-2)3 = 0.
          \]
-         Logo $ABC$ \'e um tri\^angulo ret\^angulo.
-         \item Temos $\vec{BA} = (3,2)$ e $\vec{BC} = (1,5)$. Da{\'\i}
+         Logo $ABC$ é um triângulo retângulo.
+         \item Temos $\vec{BA} = (3,2)$ e $\vec{BC} = (1,5)$. Daí
          \[
             \proj_{\vec{BC}}\vec{BA} = \dfrac{\inner{BC}{BA}}{\norm{\vec{BC}}^2}\vec{BC} = \dfrac{\langle (3,2), (1,5)\rangle}{\norm{(1,5)}^2}(1,5) = \dfrac{13}{26}(1,5).
          \]
          Assim $\proj_{\vec{BC}}\vec{BA} = \left(\dfrac{1}{2},\dfrac{5}{2}\right)$.
-         \item Seja $P(x_1, y_1)$ o p\'e da altura do tri\^angulo $ABC$ relativo ao v\'ertice $A$. Ent\~ao
+         \item Seja $P(x_1, y_1)$ o pé da altura do triângulo $ABC$ relativo ao vértice $A$. Então
          \begin{align*}
            \vec{BP} = \proj_{\vec{BC}}\vec{BA}\\
            (x_1, y_1 - 1) = \left(\dfrac{1}{2}, \dfrac{5}{2}\right).
