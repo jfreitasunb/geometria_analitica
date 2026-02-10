@@ -732,17 +732,17 @@ Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver
 % section intersecoes (end)
 
 
-\section{Dist\^ancias} % (fold)
+\section{Distâncias} % (fold)
 \label{sec:distancias}
 \subsection{Entre ponto e plano} % (fold)
 \label{sub:entre_ponto_e_plano}
 Seja $P_1(x_1,y_1,z_1)$ um ponto e $\pi$ um plano de equação $ax + by + cz + d = 0$.
 \begin{figure}[!h]
     \centering
-    \caption{Dist\^ancia entre ponto e plano}
+    \caption{Distância entre ponto e plano}
     \includegraphics{distancia-ponto-plano.pdf}
 \end{figure}
-Seja $r$ a reta que contém o ponto $P_1$ é é perpendicular ao plano $\pi$. Denote por $P_2(x_2,y_2,z_2)$ a interseção de $\pi$ com $r$. O ponto $P_2$ é chamado de \textbf{projeção ortogonal} de $P_1$ sobre $\pi$. A norma do vetor $\vec{P_1P_2}$ será a dist\^ancia de $P_1$ a $\pi$, isto é,
+Seja $r$ a reta que contém o ponto $P_1$ é é perpendicular ao plano $\pi$. Denote por $P_2(x_2,y_2,z_2)$ a interseção de $\pi$ com $r$. O ponto $P_2$ é chamado de \textbf{projeção ortogonal} de $P_1$ sobre $\pi$. A norma do vetor $\vec{P_1P_2}$ será a distância de $P_1$ a $\pi$, isto é,
 \[
     d(P_1,\pi) = \norm{\vec{P_1P_2}}.
 \]
@@ -775,27 +775,27 @@ portanto
     d(P_1,\pi) = \dfrac{|ax_1 + by_1 + cz_1 + d_1|}{\sqrt{a^2 + b^2 + c^2}}.
 \]
 
-Um outro modo de determinar essa dist\^ancia é o seguinte: seja $P_0 \in \pi$. Então a dist\^ancia de $P_1$ a $\pi$ é dada pela norma da projeção ortogonal do vetor $\vec{P_0P_1}$ na direção do vetor normal do plano $\vec{u} = (a,b,c)$. Assim
+Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. Então a distância de $P_1$ a $\pi$ é dada pela norma da projeção ortogonal do vetor $\vec{P_0P_1}$ na direção do vetor normal do plano $\vec{u} = (a,b,c)$. Assim
 \[
     d(P_1,\pi) = \norm{\proj_{\vec{u}}\vec{P_0P_1}} = \dfrac{|\langle\vec{P_0P_1},\vec{u}\rangle|}{\norm{\vec{u}}}.
 \]
 
 \begin{figure}[!h]
     \centering
-    \caption{Dist\^ancia entre ponto e plano}
+    \caption{Distância entre ponto e plano}
     \includegraphics{distancia-ponto-plano-vetores.pdf}
 \end{figure}
 
 \newpage
 \begin{exemplos}
     \begin{enumerate}
-        \item A dist\^ancia entre o plano $\pi: 2x + y - z = 4$ e o ponto $P(1,1,1)$ será
+        \item A distância entre o plano $\pi: 2x + y - z = 4$ e o ponto $P(1,1,1)$ será
         \[
             d(P,\pi) = \dfrac{|2 + 1 - 1 - 4|}{\sqrt{4 + 1 + 1}} = \dfrac{2}{\sqrt{6}}.
         \]
-        \item Calcule a dist\^ancia entre $\pi_1 : 2x - 3y + z - 2 = 0$ e $\pi_2 : 4x - 6y + 2z - 5 = 0$.
+        \item Calcule a distância entre $\pi_1 : 2x - 3y + z - 2 = 0$ e $\pi_2 : 4x - 6y + 2z - 5 = 0$.
         \begin{solucao}
-            Um vetor normal de $\pi_1$ e $\vec{u} = (2,-3,1)$ e de $\pi_2$ é $\vec{v} = (4,-6,2)$. Como $\vec{u}\varparallel\vec{v}$, então $\pi_1\varparallel\pi_2$ e assim a dist\^ancia entre $\pi_1$ e $\pi_2$ é dada pela dist\^ancia de um ponto de $\pi_1$ a $\pi_2$, ou o contrário. Tomando $P_1(1,0,0)\in\pi_1$ temos
+            Um vetor normal de $\pi_1$ e $\vec{u} = (2,-3,1)$ e de $\pi_2$ é $\vec{v} = (4,-6,2)$. Como $\vec{u}\varparallel\vec{v}$, então $\pi_1\varparallel\pi_2$ e assim a distância entre $\pi_1$ e $\pi_2$ é dada pela distância de um ponto de $\pi_1$ a $\pi_2$, ou o contrário. Tomando $P_1(1,0,0)\in\pi_1$ temos
             \[
                 d(\pi_1,\pi_2) = d(P_1,\pi_2) = \dfrac{|4-5|}{\sqrt{4^2 + (-6)^2 + 2^2}} = \dfrac{1}{\sqrt{56}}.
             \]
@@ -812,7 +812,7 @@ Um outro modo de determinar essa dist\^ancia é o seguinte: seja $P_0 \in \pi$. 
 Seja $P$ um ponto e $r$ uma reta.
 \begin{figure}[h]
     \centering
-    \caption{Dist\^ancia entre ponto e reta}
+    \caption{Distância entre ponto e reta}
     \includegraphics{distancia-ponto-reta.pdf}
     % \definecolor{xdxdff}{rgb}{0.49,0.49,1}
     % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
@@ -844,7 +844,7 @@ Para determinar $d(P,r)$ primeiro construímos um plano $\pi$ passando por $P$ e
 onde $P_1 \in \pi\cap r$.
 
 \begin{exemplo}
-    Determinar a dist\^ancia do ponto $P(1,2,-1)$ \`a reta
+    Determinar a distância do ponto $P(1,2,-1)$ \`a reta
     \[
         r: \begin{cases}
             x = 1 + 2t\\
@@ -874,13 +874,13 @@ onde $P_1 \in \pi\cap r$.
 \subsection{Entre retas} % (fold)
 \label{sub:entre_retas}
 
-Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a dist\^ancia entre $r$ e $s$ é dada pela dist\^ancia entre um ponto de $r$ e a reta $s$, ou o contrário. Suponha então que $r$ e $s$ são concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
+Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a distância entre $r$ e $s$ é dada pela distância entre um ponto de $r$ e a reta $s$, ou o contrário. Suponha então que $r$ e $s$ são concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
 
 Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no cao em que as retas são concorrentes). Um plano é o que contém $r$ e é paralelo a $s$, que vamos chamar de $\pi_1$. O outro contém $s$ e é paralelo a $r$, que chamaremos de $\pi_2$.
 
 \begin{figure}[!h]
     \centering
-    \caption{Dist\^ancia entre retas reversas}
+    \caption{Distância entre retas reversas}
     \includegraphics{distancia-retas-reversas-alternativa.pdf}
 \end{figure}
 
@@ -899,11 +899,11 @@ onde $P \in r$ e $Q \in s$. Portanto,
 
 Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano.
 
-% O plano $\pi$ definido por $s$ e $s'$ é paralelo a $r$, daí a dist\^ancia de $r$ a $\pi$ é constante. Esta constante é \textbf{a menor dist\^ancia} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ é um ponto qualquer de $s$ temos
+% O plano $\pi$ definido por $s$ e $s'$ é paralelo a $r$, daí a distância de $r$ a $\pi$ é constante. Esta constante é \textbf{a menor distância} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ é um ponto qualquer de $s$ temos
 % \[
 %     \overline{IP}^2 = \overline{IQ}^2 + \overline{QP}^2
 % \]
-% pois o tri\^angulo $IQP$ é ret\^angulo em $Q$. Logo
+% pois o triângulo $IQP$ é retângulo em $Q$. Logo
 % \[
 %     \overline{IP}^2 \ge \overline{IQ}^2,
 % \]
@@ -911,13 +911,13 @@ Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\
 % \[
 %     \overline{IP} \ge \overline{IQ}.
 % \]
-% Mas $\overline{IQ}$ é a dist\^ancia de $\pi$ a $r$, logo segue da \'ultima desigualdade que a dist\^ancia de $\pi$ a $r$ é menor ou igual a dist\^ancia entre um ponto de $r$ e um ponto de $s$. Portanto
+% Mas $\overline{IQ}$ é a distância de $\pi$ a $r$, logo segue da \'ultima desigualdade que a distância de $\pi$ a $r$ é menor ou igual a distância entre um ponto de $r$ e um ponto de $s$. Portanto
 % \[
 %     d(r,s) = d(r,\pi).
 % \]
 
 \begin{exemplo}
-    Determine a dist\^ancia entre as retas
+    Determine a distância entre as retas
     \[
         r: \begin{cases}
             x = 2 + t\\
