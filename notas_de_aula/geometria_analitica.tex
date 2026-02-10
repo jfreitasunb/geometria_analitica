@@ -40,9 +40,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\def\ano{2024}
+\def\ano{2026}
 \def\semestre{1}
-
+\def\disciplina{Geometria Analítica}
 %----------------------------------------------------------------------------------------
 %   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@
     \thispagestyle{empty}
     \begin{tikzpicture}[remember picture,overlay]
         \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
-        \draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Álgebra 1\\[15pt] % Book title
+        \draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \disciplina\\[15pt] % Book title
                 {\Large Notas de Aula \semestre/\ano}\\[20pt] % Subtitle
                 {\huge José Antônio O. Freitas}\\
                 {\large \today}}}; % Author name
