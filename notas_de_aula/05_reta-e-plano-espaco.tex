@@ -1,23 +1,23 @@
 %!TEX program = xelatex
 %!TEX root = geometria_analitica.tex
-%%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o {\'\i}ndice remissivo agrupado por inicial
-%%Ap\'os executar pdflatex arquivo
+%%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
+%%Aós executar pdflatex arquivo
 
-\chapter{Reta e Plano no Espa\c{c}o} % (fold)
+\chapter{Reta e Plano no Espaço} % (fold)
 \label{cha:reta_e_plano_no_espaco}
 
-\section{Equa\c{c}\~oes do Plano} % (fold)
+\section{Equações do Plano} % (fold)
 \label{sec:equacoes_do_plano}
 
-Da Geometria Plana, sabemos que todo plano $\pi$ cont\'em pelo menos tr\^es pontos n\~ao colineares, digamos $A$, $B$ e $C$. Assim considere os vetores
+Da Geometria Plana, sabemos que todo plano $\pi$ contém pelo menos três pontos não colineares, digamos $A$, $B$ e $C$. Assim considere os vetores
 \begin{align*}
     \vec{u} = \vec{AB}\\
     \vec{v} = \vec{AC}.
 \end{align*}
-Como $\vec{u}$ e $\vec{v}$ n\~ao s\~ao paralelos, ent\~ao podemos considerar o vetor $\vec{u}\times\vec{v}\ne \vec{0}$.
+Como $\vec{u}$ e $\vec{v}$ não são paralelos, então podemos considerar o vetor $\vec{u}\times\vec{v}\ne \vec{0}$.
 \begin{figure}[!h]
     \centering
-    \caption{Equa\c{c}\~ao do plano}\label{definicao-plano}
+    \caption{Equação do plano}\label{definicao-plano}
     \includegraphics{equacao-plano.pdf}
     % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
     % \definecolor{qqqqff}{rgb}{0,0,1}
@@ -40,47 +40,47 @@ Como $\vec{u}$ e $\vec{v}$ n\~ao s\~ao paralelos, ent\~ao podemos considerar o v
     %     \draw [->,color=blue] (A) -- (D) node[midway,above]{$\vec{AD}$};
     %     \draw [->,color=red] (A) -- (E) node[midway,left]{$\vec{u}\times\vec{v}$};
     %     \foreach \p in {A,B,C,D} \fill (\p) circle (0.5mm);
-        
+
     %     \coordinate[label=right:$\pi$] (P) at (8,3.6);
     % \end{tikzpicture}
 \end{figure}
-Assim, na Figura \ref{definicao-plano} vemos que um ponto $D$ pertence ao plano $\pi$ se, e somente se, $\vec{u}\times\vec{v} \perp \vec{AD}$. Logo um plano $\pi$ \'e um conjunto de vetores perpendiculares a um dado vetor.
+Assim, na Figura \ref{definicao-plano} vemos que um ponto $D$ pertence ao plano $\pi$ se, e somente se, $\vec{u}\times\vec{v} \perp \vec{AD}$. Logo um plano $\pi$ é um conjunto de vetores perpendiculares a um dado vetor.
 
-Fixe ent\~ao um ponto $P_0$ em $\real^3$ e $\vec{v}\ne \vec{0}$ um vetor. Passando por $P_0$ existe um \'unico plano $\pi$ perpendicular ao vetor $\vec{v}$. Assim um ponto $P$ do espa\c{c}o pertence ao plano $\pi$ se, e somente se, $\vec{P_0P} \perp \vec{v}$, isto \'e,
+Fixe então um ponto $P_0$ em $\real^3$ e $\vec{v}\ne \vec{0}$ um vetor. Passando por $P_0$ existe um \'unico plano $\pi$ perpendicular ao vetor $\vec{v}$. Assim um ponto $P$ do espaço pertence ao plano $\pi$ se, e somente se, $\vec{P_0P} \perp \vec{v}$, isto é,
 \begin{equation}\label{equacaoplanovetorial}
     \inner{P_0P}{v} = 0.
 \end{equation}
-Sejam $\vec{v} = (a,b,c)$ um vetor, $P_0(x_0, y_0, z_0)$ e $P(x, y, z)$ pontos em $\real^3$. Logo $\vec{P_0P} = (x - x_0, y - y_0, z - z_0)$ e ent\~ao da equa\c{c}\~ao \eqref{equacaoplanovetorial} obtemos
+Sejam $\vec{v} = (a,b,c)$ um vetor, $P_0(x_0, y_0, z_0)$ e $P(x, y, z)$ pontos em $\real^3$. Logo $\vec{P_0P} = (x - x_0, y - y_0, z - z_0)$ e então da equação \eqref{equacaoplanovetorial} obtemos
 \begin{equation}\label{equacaoplano}
     (x - x_0)a + (y - y_0)b + (z - z_0)c = 0.
 \end{equation}
 
-A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartesiana do plano} $\pi$. O vetor $\vec{v}$ \'e chamado de \textbf{vetor normal} ao plano $\pi$.\index{Plano!Equa\c{c}\~ao Param\'etrica}\index{Plano!Vetor Normal}
+A equação \eqref{equacaoplano} é chamada de \textbf{equação cartesiana do plano} $\pi$. O vetor $\vec{v}$ é chamado de \textbf{vetor normal} ao plano $\pi$.\index{Plano!Equação Paramétrica}\index{Plano!Vetor Normal}
 
 \begin{exemplos}
-    Encontre a equa\c{c}\~ao do plano $\pi$ nas seguintes situa\c{c}\~oes:
+    Encontre a equação do plano $\pi$ nas seguintes situações:
     \begin{enumerate}
-        \item O vetor normal \'e $\vec{v} = (1,2,-1)$ e o ponto de $\pi$ \'e $P_0(1,3,-1)$.
+        \item O vetor normal é $\vec{v} = (1,2,-1)$ e o ponto de $\pi$ é $P_0(1,3,-1)$.
         \begin{solucao}
-            Se $P(x,y,z)$ pertence a $\pi$, ent\~ao
+            Se $P(x,y,z)$ pertence a $\pi$, então
             \begin{align*}
                 &\inner{P_0P}{v} = 0\\
                 &\langle(x - 1, y - 3, z + 1), (1,2,-1)\rangle = 0\\
                 &x - 1 + (y - 3)2 + (z + 1)(-1) = 0.
             \end{align*}
-            Logo a equa\c{c}\~ao do plano procurado \'e
+            Logo a equação do plano procurado é
             \[
                 x + 2y - z - 8 = 0.
             \]
         \end{solucao}
-        \item O vetor normal \'e $\vec{v} = (0,0,1)$ e $P_0(0,0,0)$.
+        \item O vetor normal é $\vec{v} = (0,0,1)$ e $P_0(0,0,0)$.
         \begin{solucao}
-            Se $P(x,y,z)$ pertence a $\pi$, ent\~ao
+            Se $P(x,y,z)$ pertence a $\pi$, então
             \begin{align*}
                 &\inner{P_0P}{v} = 0\\
                 &\langle(x, y, z), (0,0,1)\rangle = 0.
             \end{align*}
-            Logo a equa\c{c}\~ao do plano procurado \'e
+            Logo a equação do plano procurado é
             \[
                 z = 0.
             \]
@@ -108,7 +108,7 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
                 %     \draw (3.512647584973165,1.759999999999999) node[anchor=north west] {$z=0$};
                 % \end{tikzpicture}
             \end{figure}
-            Agora, se $\vec{v} = (0,1,0)$ e $P_0(0,0,0)$, ent\~ao a equa\c{c}\~ao do plano ser\'a $y = 0$.
+            Agora, se $\vec{v} = (0,1,0)$ e $P_0(0,0,0)$, então a equação do plano será $y = 0$.
             \begin{figure}[!h]
                 \centering
                 \caption{Plano $y = 0$}
@@ -133,7 +133,7 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
                 %     \draw (-0.6,4.199999999999999) node[anchor=north west] {$z$};
                 % \end{tikzpicture}
             \end{figure}
-            Agora, se $\vec{v} = (1,0,0)$ e $P_0(0,0,0)$, ent\~ao a equa\c{c}\~ao do plano ser\'a $x = 0$.
+            Agora, se $\vec{v} = (1,0,0)$ e $P_0(0,0,0)$, então a equação do plano será $x = 0$.
             \begin{figure}[!h]
                 \centering
                 \caption{Plano $x = 0$}
@@ -167,7 +167,7 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
                 \vec{u} = \vec{AB} = (2,1,3)\\
                 \vec{v} = \vec{AC} = (-1,-1,4).
             \end{align*}
-            Um vetor normal ao plano \'e dado por $\vec{w} = \vec{u}\times\vec{v}$. Assim
+            Um vetor normal ao plano é dado por $\vec{w} = \vec{u}\times\vec{v}$. Assim
             \[
                 \vec{w} = \det \begin{bmatrix}
                     \vec{i} & \vec{j} & \vec{k}\\
@@ -175,7 +175,7 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
                     -1 & -1 & 4
                 \end{bmatrix} = 4\vec{i} - 3\vec{j} - 2\vec{k} + \vec{k} + 3\vec{i} - 8\vec{j}.
             \]
-            Assim $\vec{w} = (7,-11,-1)$ e portanto a equa\c{c}\~ao do plano \'e
+            Assim $\vec{w} = (7,-11,-1)$ e portanto a equação do plano é
             \[
                 7x - 11y - z - 12 = 0.
             \]
@@ -183,42 +183,42 @@ A equa\c{c}\~ao \eqref{equacaoplano} \'e chamada de \textbf{equa\c{c}\~ao cartes
     \end{enumerate}
 \end{exemplos}
 
-Dada uma equa\c{c}\~ao da forma
+Dada uma equação da forma
     \[
         ax + by + cz + d = 0,
     \]
-onde $a$, $b$ e $c$ n\~ao s\~ao simultaneamente nulos, existe um plano $\pi$ representado por esta equa\c{c}\~ao? A resposta \'e afirmativa. Suponha que $a \ne 0$. Tome $\vec{v} = (a,b,c) \ne 0$ e $P_0(-d/a,0,0)$. A equa\c{c}\~ao do plano com vetor normal $\vec{v}$ e passando por $P_0$ \'e dada por
+onde $a$, $b$ e $c$ não são simultaneamente nulos, existe um plano $\pi$ representado por esta equação? A resposta é afirmativa. Suponha que $a \ne 0$. Tome $\vec{v} = (a,b,c) \ne 0$ e $P_0(-d/a,0,0)$. A equação do plano com vetor normal $\vec{v}$ e passando por $P_0$ é dada por
     \begin{align*}
         &\inner{P_0P}{v} = 0\\
         &\langle\left(x + \dfrac{d}{a},y,z\right), (a,b,c)\rangle = 0\\
         &ax + by + cz + d = 0.
     \end{align*}
-Portanto qualquer equa\c{c}\~ao da forma $ax + by + cz + d = 0$, com $a$, $b$ e $c$ n\~ao simultaneamente nulos define um plano.
+Portanto qualquer equação da forma $ax + by + cz + d = 0$, com $a$, $b$ e $c$ não simultaneamente nulos define um plano.
 
 Sejam $\pi_1$ e $\pi_2$ dois planos dados por
     \begin{align*}
         \pi_1 : a_1x + b_1y + c_1z + d_1 = 0\\
         \pi_2 : a_2x + b_2y + c_2z + d_2 = 0.
     \end{align*}
-onde os vetores normais de $\pi_1$ e $\pi_2$ s\~ao, respectivamente,
+onde os vetores normais de $\pi_1$ e $\pi_2$ são, respectivamente,
     \begin{align*}
         \vec{v_1} = (a_1, b_1, c_1)\\
         \vec{v_2} = (a_2, b_2, c_2).
     \end{align*}
-Os planos $\pi_1$ e $\pi_2$ s\~ao \textbf{paralelos} se, e somente se, $\vec{v_1} \varparallel\vec{v_2}$. Para que $\pi_1$ e $\pi_2$ sejam iguais devemos ter $\vec{v_1}\varparallel\vec{v_2}$  e dados $P_1\in\pi_1$ e $P_2\in\pi_2$ o vetor $\vec{P_1P_2}$ deve ser tal que $\vec{P_1P_2}\perp\vec{v_1}$ ou $\vec{P_1P_2}\perp\vec{v_2}$.
+Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} se, e somente se, $\vec{v_1} \varparallel\vec{v_2}$. Para que $\pi_1$ e $\pi_2$ sejam iguais devemos ter $\vec{v_1}\varparallel\vec{v_2}$  e dados $P_1\in\pi_1$ e $P_2\in\pi_2$ o vetor $\vec{P_1P_2}$ deve ser tal que $\vec{P_1P_2}\perp\vec{v_1}$ ou $\vec{P_1P_2}\perp\vec{v_2}$.
 
 \begin{exemplo}
-    Dados os seguintes planos, determinar quais s\~ao iguais ou paralelos dois a dois:
+    Dados os seguintes planos, determinar quais são iguais ou paralelos dois a dois:
     \begin{center}
         \begin{tabular}{cc}
-            $\pi_1 : 2x - y + 3z = 0$ & 
+            $\pi_1 : 2x - y + 3z = 0$ &
             $\pi_2 : x - y - 3 = 0$\\
             $\pi_3 : y - 2x - 3z = 2$ & $\pi_4 : 2x - 2y = 6$\\
             $\pi_5 : x = 0$.
         \end{tabular}
     \end{center}
     \begin{solucao}
-        Os vetores normais a cada plano s\~ao
+        Os vetores normais a cada plano são
         \begin{center}
             \begin{tabular}{cc}
                 $\vec{v_1} = (2, -1, 3)$ & $\vec{v_2} = (1,-1,0)$\\
@@ -226,40 +226,40 @@ Os planos $\pi_1$ e $\pi_2$ s\~ao \textbf{paralelos} se, e somente se, $\vec{v_1
                 $\vec{v_5} = (1, 0, 0)$.
             \end{tabular}
         \end{center}
-        Como $\vec{v_1} = -\vec{v_3}$ ent\~ao $\vec{v_1}\varparallel\vec{v_2}$. Agora $P_1(0,0,0)\in\pi_1$ e $P_2(0,2,0)\in\pi_3$. Da{\'\i}
+        Como $\vec{v_1} = -\vec{v_3}$ então $\vec{v_1}\varparallel\vec{v_2}$. Agora $P_1(0,0,0)\in\pi_1$ e $P_2(0,2,0)\in\pi_3$. Daí
         \[
             \inner{P_1P_2}{v_1} = \langle(0,2,0), (2,-1,3)\rangle = -2 \ne 0.
         \]
-        Logo $\pi_1$ e $\pi_3$ s\~ao paralelos e distintos.
-        Agora, como $\vec{v_4} = 2\vec{v_2}$ ent\~ao $\vec{v_2}\varparallel\vec{v_4}$. Mas $P_1(3,0,0)\in\pi_2$ e $P_2(0,-3,0)\in\pi_4$. Da{\'\i}
+        Logo $\pi_1$ e $\pi_3$ são paralelos e distintos.
+        Agora, como $\vec{v_4} = 2\vec{v_2}$ então $\vec{v_2}\varparallel\vec{v_4}$. Mas $P_1(3,0,0)\in\pi_2$ e $P_2(0,-3,0)\in\pi_4$. Daí
         \[
             \inner{P_1P_2}{v_2} = \langle(-3,-3,0), (1,-1,0)\rangle = 0.
         \]
         Logo $\pi_2 =\pi_4$.
 
-        Os demais planos n\~ao s\~ao paralelos.
+        Os demais planos não são paralelos.
     \end{solucao}
 \end{exemplo}
 
 % section equacoes_do_plano (end)
 
-\section{Equa\c{c}\~oes da Reta} % (fold)
+\section{Equações da Reta} % (fold)
 \label{sec:equacoes_da_reta}
 
-Seja $\vec{v}$ um vetor e $A$ um ponto. Sabemos que a reta $r$ passando por $A$ e paralela ao vetor $\vec{v}$ tem equa\c{c}\~ao
+Seja $\vec{v}$ um vetor e $A$ um ponto. Sabemos que a reta $r$ passando por $A$ e paralela ao vetor $\vec{v}$ tem equação
 \begin{equation}
     \vec{AP} = t\vec{v}
 \end{equation}
-onte $t \in \real$ e $P$ \'e um ponto qualquer de $r$. Sendo $A$ um ponto em $\real^3$ e $\vec{v}$ um vetor de $\real^3$ temos
+onde $t \in \real$ e $P$ é um ponto qualquer de $r$. Sendo $A$ um ponto em $\real^3$ e $\vec{v}$ um vetor de $\real^3$ temos
 \begin{align*}
     A = (x_0, y_0, z_0)\\
     \vec{v} = (a, b, c).
 \end{align*}
-Da{\'\i} um ponto $P(x, y, z)$ pertence \`a reta $r$ se, e somente se,
+Daí um ponto $P(x, y, z)$ pertence \`a reta $r$ se, e somente se,
 \[
     \vec{AP} = (x - x_0, y - y_0, z - z_0) = t(a, b, c).
 \]
-Logo $P(x, y, z)$ pertence \`a reta $r$, se e s\'o se, $P(x,y,z)$ satisfaz as equa\c{c}\~oes
+Logo $P(x, y, z)$ pertence \`a reta $r$, se e s\'o se, $P(x,y,z)$ satisfaz as equações
 \begin{equation}\label{equacoesparametricasretaespaco}
     \begin{cases}
         x = x_0 + ta\\
@@ -267,10 +267,10 @@ Logo $P(x, y, z)$ pertence \`a reta $r$, se e s\'o se, $P(x,y,z)$ satisfaz as eq
         z = z_0 + tc
     \end{cases}; \quad t \in \real.
 \end{equation}
-Tais equa\c{c}\~oes s\~ao chamadas de \textbf{equa\c{c}\~oes param\'etricas} da reta $r$. O vetor $\vec{v}$ \'e chamado de \textbf{vetor diretor} de $r$.\index{Reta!Equa\c{c}\~oes Param\'etricas}\index{Reta!Vetor Diretor}
+Tais equações são chamadas de \textbf{equações paramétricas} da reta $r$. O vetor $\vec{v}$ é chamado de \textbf{vetor diretor} de $r$.\index{Reta!Equações Paramétricas}\index{Reta!Vetor Diretor}
 
 \begin{exemplo}
-    As equa\c{c}\~oes param\'etricas da reta $r$ passando por $P_0(-3,3/2,4)$ e paralela ao vetor $\vec{v} = (-6,1,4)$ s\~ao
+    As equações paramétricas da reta $r$ passando por $P_0(-3,3/2,4)$ e paralela ao vetor $\vec{v} = (-6,1,4)$ são
     \[
         \begin{cases}
             x = -3 - 6t\\
@@ -280,17 +280,17 @@ Tais equa\c{c}\~oes s\~ao chamadas de \textbf{equa\c{c}\~oes param\'etricas} da 
     \]
 \end{exemplo}
 
-De forma an\'aloga ao casa do plano, se $\vec{v} = (a,b,c)$ \'e tal que $abc \ne 0$, ent\~ao podemos reescrever \eqref{equacoesparametricasretaespaco} como
+De forma análoga ao casa do plano, se $\vec{v} = (a,b,c)$ é tal que $abc \ne 0$, então podemos reescrever \eqref{equacoesparametricasretaespaco} como
 \[
     \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b} = \dfrac{z - z_0}{c}
 \]
-que s\~ao chamadas de \textbf{equa\c{c}\~oes na forma sim\'etrica} da reta $r$.\index{Reta!Equa\c{c}\~oes Sim\'etricas}
+que são chamadas de \textbf{equações na forma simétrica} da reta $r$.\index{Reta!Equações Simétricas}
 % section equacoes_da_reta (end)
-\section{Interse\c{c}\~oes} % (fold)
+\section{Interseções} % (fold)
 \label{sec:intersecoes}
 \subsection{Entre retas} % (fold)
 \label{sub:entre_retas}
-Considere duas retas $r$ e $s$ de equa\c{c}\~oes
+Considere duas retas $r$ e $s$ de equações
 \[
     r: \begin{cases}
         x = x_0 + ta\\
@@ -302,9 +302,9 @@ Considere duas retas $r$ e $s$ de equa\c{c}\~oes
         z = z_1 + \alpha f
     \end{cases}; t,\ \alpha \in \real.
 \]
-Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$ respectivamente.
+Os vetores diretores de $r$ e $s$ são $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$ respectivamente.
 \begin{enumerate}
-\item Se $\vec{u}\varparallel\vec{v}$, ent\~ao $r$ e $s$ s\~ao paralelas ou coincidentes. Elas ser\~ao coincidentes se, e somente se, possuirem algum ponto em comum.\index{Retas!Paralelas}
+\item Se $\vec{u}\varparallel\vec{v}$, então $r$ e $s$ são paralelas ou coincidentes. Elas serão coincidentes se, e somente se, possuírem algum ponto em comum.\index{Retas!Paralelas}
 \begin{figure}[h]
     \centering
     \caption{Retas Paralelas}
@@ -328,9 +328,9 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
     %     \draw [color=ffqqqq] (5.31,-3.81)-- (8.98,4.11);
     % \end{tikzpicture}
 \end{figure}
-\item Se os vetores diretores n\~ao s\~ao paralelos, temos duas possibilidades. Considere os pontos $P_0(x_0,y_0,z_0) \in r$ e $P_1(x_1,y_1,z_1) \in s$.
+\item Se os vetores diretores não são paralelos, temos duas possibilidades. Considere os pontos $P_0(x_0,y_0,z_0) \in r$ e $P_1(x_1,y_1,z_1) \in s$.
 \begin{enumerate}
-\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ est\~ao no mesmo plano, isto \'e, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle = 0$ ent\~ao $r$ e $s$ s\~ao concorrentes.\index{Retas!Concorrentes}
+\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle = 0$ então $r$ e $s$ são concorrentes.\index{Retas!Concorrentes}
 \begin{figure}[h]
     \centering
     \caption{Retas Concorrentes}
@@ -357,7 +357,7 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
     %     \draw (4.2,1.36) node {$P$};
     % \end{tikzpicture}
 \end{figure}
-\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ est\~ao planos diferentes, isto \'e, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle \ne 0$ ent\~ao $r$ e $s$ s\~ao chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
+\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão planos diferentes, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle \ne 0$ então $r$ e $s$ são chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
 \begin{figure}[h]
    \centering
    \caption{Retas Reversas}
@@ -381,17 +381,17 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
    %      \draw (6.94,-2.58) node[anchor=north west] {$s$};
    %  \end{tikzpicture}
 \end{figure}
-\end{enumerate} 
+\end{enumerate}
 \end{enumerate}
 
 \begin{exemplos}
-    Determine se os seguintes pares de retas s\~ao paralelas, concorrentes ou reversas:
+    Determine se os seguintes pares de retas são paralelas, concorrentes ou reversas:
     \begin{enumerate}
         \item $r: \dfrac{x - 2}{2} = y + 3 = \dfrac{z - 2}{3}$; $s:\dfrac{x}{4} = \dfrac{y+3}{2} = \dfrac{z-2}{6}$
         \begin{solucao}
-            Como $\vec{u} = (2,1,3)$ e $\vec{v} = (4,2,6)$ s\~ao vetores diretores de $r$ e $s$ respectivamente, ent\~ao $\vec{u}\varparallel\vec{v}$. Mas $P_0(0,-3,2)\in s$ e $P_0\notin r$, logo $r$ e $s$ s\~ao paralelas e distintas.
+            Como $\vec{u} = (2,1,3)$ e $\vec{v} = (4,2,6)$ são vetores diretores de $r$ e $s$ respectivamente, então $\vec{u}\varparallel\vec{v}$. Mas $P_0(0,-3,2)\in s$ e $P_0\notin r$, logo $r$ e $s$ são paralelas e distintas.
         \end{solucao}
-        \item 
+        \item
         \[
             r: \begin{cases}
                 x = 1 + 2t\\
@@ -404,13 +404,13 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
             \end{cases}
         \]
         \begin{solucao}
-            Como $\vec{u} = (2,2,1)$ e $\vec{v} = (1,1,0)$ s\~ao vetores diretores de $r$ e $s$ respectivamente, ent\~ao $r$ e $s$ s\~ao concorrentes ou reversas. Igualando as equa\c{c}\~oes de $r$ e $s$ obtemos
+            Como $\vec{u} = (2,2,1)$ e $\vec{v} = (1,1,0)$ são vetores diretores de $r$ e $s$ respectivamente, então $r$ e $s$ são concorrentes ou reversas. Igualando as equações de $r$ e $s$ obtemos
             \begin{align*}
                 1 + 2t = s\\
                 1 + 2t = s\\
                 1 + t = 0
             \end{align*}
-            donde $t = -1$ e $s = -1$. Portanto $r$ e $s$ s\~ao concorrentes e o ponto de interse\c{c}\~ao \'e $P(-1,-1,0)$.
+            donde $t = -1$ e $s = -1$. Portanto $r$ e $s$ são concorrentes e o ponto de interseção é $P(-1,-1,0)$.
         \end{solucao}
         \item
         \[
@@ -425,22 +425,22 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
             \end{cases}
         \]
         \begin{solucao}
-            Como $\vec{u} = (2,1,2)$ e $\vec{v} = (1,1,2)$ s\~ao vetores diretores de $r$ e $s$ respectivamente, ent\~ao $r$ e $s$ s\~ao concorrentes ou reversas. Igualando as equa\c{c}\~oes de $r$ e $s$ obtemos
+            Como $\vec{u} = (2,1,2)$ e $\vec{v} = (1,1,2)$ são vetores diretores de $r$ e $s$ respectivamente, então $r$ e $s$ são concorrentes ou reversas. Igualando as equações de $r$ e $s$ obtemos
             \begin{equation}\label{exemploretasreversas}
                 \begin{cases}
                     1 + 2t = 2 + s\\
                     2 + t = 1 + s\\
-                    -1 + 2t = -1 + 2s    
+                    -1 + 2t = -1 + 2s
                 \end{cases}
             \end{equation}
-            Da primeira e segunda equa\c{c}\~ao obtemos o sistema
+            Da primeira e segunda equação obtemos o sistema
             \[
                 \begin{cases}
                     2t - s = 1\\
                     t - s = -1
                 \end{cases}
             \]
-            Cuja solu\c{c}\~ao \'e $t = 2$ e $s = 3$. Substituinto esse valores na terceira equa\c{c}\~ao de \eqref{exemploretasreversas} obtemos $3 \ne 5$. Portanto $r$ e $s$ s\~ao reversas.
+            Cuja solução é $t = 2$ e $s = 3$. Substituindo esse valores na terceira equação de \eqref{exemploretasreversas} obtemos $3 \ne 5$. Portanto $r$ e $s$ são reversas.
         \end{solucao}
     \end{enumerate}
 \end{exemplos}
@@ -448,13 +448,13 @@ Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)
 
 \subsection{Entre planos} % (fold)
 \label{sub:entre_planos}
-Dados tr\^es planos $\pi_1$, $\pi_2$ e $\pi_3$ de equa\c{c}\~oes
+Dados três planos $\pi_1$, $\pi_2$ e $\pi_3$ de equações
 \begin{align*}
     \pi_1 : a_1x + b_1y + c_1z + d_1 = 0\\
     \pi_2 : a_2x + b_2y + c_2z + d_2 = 0\\
     \pi_3 : a_3x + b_3y + c_3z + d_3 = 0.
 \end{align*}
-A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coordenadas sejam as solu\c{c}\~oes do sistema forma pelas equa\c{c}\~oes de $\pi_1$, $\pi_2$ e $\pi_3$ simultaneamente, ou seja, devem ser solu\c{c}\~oes do sistema
+A interseção entre eles será constituída pelos pontos cujas coordenadas sejam as soluções do sistema forma pelas equações de $\pi_1$, $\pi_2$ e $\pi_3$ simultaneamente, ou seja, devem ser soluções do sistema
 \[
     \begin{cases}
         a_1x + b_1y + c_1z + d_1 = 0\\
@@ -562,11 +562,11 @@ A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coorden
     % \end{tikzpicture}
 \end{figure}
 \begin{exemplos}
-    Encontre a interse\c{c}\~ao entre os planos:
+    Encontre a interseção entre os planos:
     \begin{enumerate}
         \item $\pi_1 : x = y$, $\pi_2 : 2x - z = 0$ e $\pi_3 : 3x + 2y + z + 3 = 0$
         \begin{solucao}
-            A interse\c{c}\~ao ser\'a dada pela solu\c{c}\~ao do sistema
+            A interseção será dada pela solução do sistema
             \[
                 \begin{cases}
                     x - y = 0\\
@@ -578,7 +578,7 @@ A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coorden
         \end{solucao}
         \item $\pi_1 : x - 2y + 3z = 2$, $\pi_2 : 3x + y - 2z = 1$ e $\pi_3 : 5x - 3y + 4z = 4$
         \begin{solucao}
-            A interse\c{c}\~ao ser\'a dada pela solu\c{c}\~ao do sitema
+            A interseção será dada pela solução do sistema
             \[
                 \begin{cases}
                     x - 2y + 3z = 2\\
@@ -586,11 +586,11 @@ A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coorden
                     5x - 3y + 4z = 4
                 \end{cases}.
             \]
-            Resolvendo tal sistema obtemos que $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$. No entanto $\pi_i \cap \pi_j$ \'e uma reta para $i \ne j$.
+            Resolvendo tal sistema obtemos que $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$. No entanto $\pi_i \cap \pi_j$ é uma reta para $i \ne j$.
         \end{solucao}
         \item $\pi_1 : 2x + y = 1$, $\pi_2 : x - y + z = 0$
         \begin{solucao}
-            A interse\c{c}\~ao ser\'a dada pela solu\c{c}\~ao do sistema
+            A interseção será dada pela solução do sistema
             \[
                 \begin{cases}
                     2x + y = 1\\
@@ -609,7 +609,7 @@ A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coorden
                     z = 1 - 3t
                 \end{cases}; t \in \real
             \]
-            que \'e a equa\c{c}\~ao de uma reta passando pelo ponto $P_0(0,1,1)$ e com vetor diretor $\vec{v} = (1,-2,-3)$.
+            que é a equação de uma reta passando pelo ponto $P_0(0,1,1)$ e com vetor diretor $\vec{v} = (1,-2,-3)$.
         \end{solucao}
     \end{enumerate}
 \end{exemplos}
@@ -619,7 +619,7 @@ A interse\c{c}\~ao entre eles ser\'a constitu{\'\i}da pelos pontos cujas coorden
 \subsection{Entre retas e planos} % (fold)
 \label{sub:entre_retas_e_planos}
 
-Para encontrar a interse\c{c}\~ao de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equa\c{c}\~oes de $r$ e de $\pi$. Se o sistema tiver uma \'unica solu\c{c}\~ao $P_0(x_0, y_0, z_0)$, ent\~ao $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado ent\~ao $r\subset \pi$ e se o sistema for imposs{\'\i}vel ent\~ao $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
+Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equações de $r$ e de $\pi$. Se o sistema tiver uma \'unica solução $P_0(x_0, y_0, z_0)$, então $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado então $r\subset \pi$ e se o sistema for impossível então $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
 \begin{figure}[h]
     \centering
     \caption{$r\cap\pi = \{P_0\}$}
@@ -680,11 +680,11 @@ Para encontrar a interse\c{c}\~ao de uma reta $r$ com um plano $\pi$, basta reso
 \end{figure}
 
 \begin{exemplos}
-    Encontre a interse\c{c}\~ao entre a reta $r$ e o plano $\pi$ nos seguintes casos:
+    Encontre a interseção entre a reta $r$ e o plano $\pi$ nos seguintes casos:
     \begin{enumerate}
         \item $r: x = t + 1$, $y = 1$, $z = 1$ e $\pi : 2x - y = 3$.
         \begin{solucao}
-            Substituindo as equa\c{c}\~oes da reta na do plano obtemos $t = 1$. Logo $r\cap\pi = \{(2,1,1)\}$.
+            Substituindo as equações da reta na do plano obtemos $t = 1$. Logo $r\cap\pi = \{(2,1,1)\}$.
         \end{solucao}
         \item
         \[
@@ -703,7 +703,7 @@ Para encontrar a interse\c{c}\~ao de uma reta $r$ com um plano $\pi$, basta reso
                     x - 2y + z = 5
                 \end{cases}
             \]
-            n\~ao tem solu\c{c}\~ao. Logo $r\cap\pi = \emptyset$.
+            não tem solução. Logo $r\cap\pi = \emptyset$.
         \end{solucao}
         \item
         \[
@@ -722,7 +722,7 @@ Para encontrar a interse\c{c}\~ao de uma reta $r$ com um plano $\pi$, basta reso
                     x - y + 3z = -1
                 \end{cases}
             \]
-            tem solu\c{c}\~ao \'unica dada por $x = -3/7$ e $y = 10/7$ e $z = 2/7$. Logo $r\cap\pi = \{(-3/7, 10/7, 2/7)\}$.
+            tem solução \'unica dada por $x = -3/7$ e $y = 10/7$ e $z = 2/7$. Logo $r\cap\pi = \{(-3/7, 10/7, 2/7)\}$.
         \end{solucao}
     \end{enumerate}
 \end{exemplos}
@@ -732,17 +732,17 @@ Para encontrar a interse\c{c}\~ao de uma reta $r$ com um plano $\pi$, basta reso
 % section intersecoes (end)
 
 
-\section{Dist\^ancias} % (fold)
+\section{Distâncias} % (fold)
 \label{sec:distancias}
 \subsection{Entre ponto e plano} % (fold)
 \label{sub:entre_ponto_e_plano}
-Seja $P_1(x_1,y_1,z_1)$ um ponto e $\pi$ um plano de equa\c{c}\~ao $ax + by + cz + d = 0$.
+Seja $P_1(x_1,y_1,z_1)$ um ponto e $\pi$ um plano de equação $ax + by + cz + d = 0$.
 \begin{figure}[!h]
     \centering
-    \caption{Dist\^ancia entre ponto e plano}
+    \caption{Distância entre ponto e plano}
     \includegraphics{distancia-ponto-plano.pdf}
 \end{figure}
-Seja $r$ a reta que cont\'em o ponto $P_1$ \'e \'e perpendicular ao plano $\pi$. Denote por $P_2(x_2,y_2,z_2)$ a interse\c{c}\~ao de $\pi$ com $r$. O ponto $P_2$ \'e chamado de \textbf{proje\c{c}\~ao ortogonal} de $P_1$ sobre $\pi$. A norma do vetor $\vec{P_1P_2}$ ser\'a a dist\^ancia de $P_1$ a $\pi$, isto \'e,
+Seja $r$ a reta que contém o ponto $P_1$ é é perpendicular ao plano $\pi$. Denote por $P_2(x_2,y_2,z_2)$ a interseção de $\pi$ com $r$. O ponto $P_2$ é chamado de \textbf{projeção ortogonal} de $P_1$ sobre $\pi$. A norma do vetor $\vec{P_1P_2}$ será a distância de $P_1$ a $\pi$, isto é,
 \[
     d(P_1,\pi) = \norm{\vec{P_1P_2}}.
 \]
@@ -754,7 +754,7 @@ Logo
 \begin{equation}\label{equacaodistanciapontoplano}
     d(P_1,P_2) = \norm{t(a,b,c)} = |t|\sqrt{a^2 + b^2 + c^2}.
 \end{equation}
-Por outro lado, se $P(x_2, y_2, z_2)$, ent\~ao
+Por outro lado, se $P(x_2, y_2, z_2)$, então
 \[
     \vec{P_1P_2} = (x_2 - x_1, y_2 - y_1, z_2 - z_1) = t(a,b,c)
 \]
@@ -762,7 +762,7 @@ e como $P_2 \in \pi$ devemos ter
 \[
     a(x_1 + ta) + b(y_1 + tb) + c(z_1 + tc) + d = 0
 \]
-isto \'e,
+isto é,
 \begin{equation}\label{equacaoauxiliardistanciapontoplano}
     t = -\dfrac{ax_1 + by_1 + cz_1 + d_1}{a^2 + b^2 + c^2}.
 \end{equation}
@@ -775,27 +775,27 @@ portanto
     d(P_1,\pi) = \dfrac{|ax_1 + by_1 + cz_1 + d_1|}{\sqrt{a^2 + b^2 + c^2}}.
 \]
 
-Um outro modo de determinar essa dist\^ancia \'e o seguinte: seja $P_0 \in \pi$. Ent\~ao a dist\^ancia de $P_1$ a $\pi$ \'e dada pela norma da proje\c{c}\~ao ortogonal do vetor $\vec{P_0P_1}$ na dire\c{c}\~ao do vetor normal do plano $\vec{u} = (a,b,c)$. Assim
+Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. Então a distância de $P_1$ a $\pi$ é dada pela norma da projeção ortogonal do vetor $\vec{P_0P_1}$ na direção do vetor normal do plano $\vec{u} = (a,b,c)$. Assim
 \[
     d(P_1,\pi) = \norm{\proj_{\vec{u}}\vec{P_0P_1}} = \dfrac{|\langle\vec{P_0P_1},\vec{u}\rangle|}{\norm{\vec{u}}}.
 \]
 
 \begin{figure}[!h]
     \centering
-    \caption{Dist\^ancia entre ponto e plano}
+    \caption{Distância entre ponto e plano}
     \includegraphics{distancia-ponto-plano-vetores.pdf}
 \end{figure}
 
 \newpage
 \begin{exemplos}
     \begin{enumerate}
-        \item A dist\^ancia entre o plano $\pi: 2x + y - z = 4$ e o ponto $P(1,1,1)$ ser\'a
+        \item A distância entre o plano $\pi: 2x + y - z = 4$ e o ponto $P(1,1,1)$ será
         \[
             d(P,\pi) = \dfrac{|2 + 1 - 1 - 4|}{\sqrt{4 + 1 + 1}} = \dfrac{2}{\sqrt{6}}.
         \]
-        \item Calcule a dist\^ancia entre $\pi_1 : 2x - 3y + z - 2 = 0$ e $\pi_2 : 4x - 6y + 2z - 5 = 0$.
+        \item Calcule a distância entre $\pi_1 : 2x - 3y + z - 2 = 0$ e $\pi_2 : 4x - 6y + 2z - 5 = 0$.
         \begin{solucao}
-            Um vetor normal de $\pi_1$ e $\vec{u} = (2,-3,1)$ e de $\pi_2$ \'e $\vec{v} = (4,-6,2)$. Como $\vec{u}\varparallel\vec{v}$, ent\~ao $\pi_1\varparallel\pi_2$ e assim a dist\^ancia entre $\pi_1$ e $\pi_2$ \'e dada pela dist\^ancia de um ponto de $\pi_1$ a $\pi_2$, ou o contr\'ario. Tomando $P_1(1,0,0)\in\pi_1$ temos
+            Um vetor normal de $\pi_1$ e $\vec{u} = (2,-3,1)$ e de $\pi_2$ é $\vec{v} = (4,-6,2)$. Como $\vec{u}\varparallel\vec{v}$, então $\pi_1\varparallel\pi_2$ e assim a distância entre $\pi_1$ e $\pi_2$ é dada pela distância de um ponto de $\pi_1$ a $\pi_2$, ou o contrário. Tomando $P_1(1,0,0)\in\pi_1$ temos
             \[
                 d(\pi_1,\pi_2) = d(P_1,\pi_2) = \dfrac{|4-5|}{\sqrt{4^2 + (-6)^2 + 2^2}} = \dfrac{1}{\sqrt{56}}.
             \]
@@ -812,7 +812,7 @@ Um outro modo de determinar essa dist\^ancia \'e o seguinte: seja $P_0 \in \pi$.
 Seja $P$ um ponto e $r$ uma reta.
 \begin{figure}[h]
     \centering
-    \caption{Dist\^ancia entre ponto e reta}
+    \caption{Distância entre ponto e reta}
     \includegraphics{distancia-ponto-reta.pdf}
     % \definecolor{xdxdff}{rgb}{0.49,0.49,1}
     % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
@@ -837,14 +837,14 @@ Seja $P$ um ponto e $r$ uma reta.
     % \end{tikzpicture}
 \end{figure}
 
-Para determinar $d(P,r)$ primeiro constru{\'\i}mos um plano $\pi$ passando por $P$ e com vetor normal paralelo ao vetor diretor de $r$. Assim
+Para determinar $d(P,r)$ primeiro construímos um plano $\pi$ passando por $P$ e com vetor normal paralelo ao vetor diretor de $r$. Assim
 \[
     d(P,r) = d(P,P_1)
 \]
 onde $P_1 \in \pi\cap r$.
 
 \begin{exemplo}
-    Determinar a dist\^ancia do ponto $P(1,2,-1)$ \`a reta
+    Determinar a distância do ponto $P(1,2,-1)$ \`a reta
     \[
         r: \begin{cases}
             x = 1 + 2t\\
@@ -853,16 +853,16 @@ onde $P_1 \in \pi\cap r$.
         \end{cases}
     \]
     \begin{solucao}
-        Podemos tomar o vetor $\vec{u} = (2,1,-3)$ como vetor normal ao plano $\pi$ que cont\'em $P$. Da{\'\i}
+        Podemos tomar o vetor $\vec{u} = (2,1,-3)$ como vetor normal ao plano $\pi$ que contém $P$. Daí
         \begin{align*}
             \pi &: 2(x - 1) - (y - 2) + 3(z - 1) = 0\\
             \pi &: 2x - y + 3z + 3 = 0.
         \end{align*}
-        A interse\c{c}\~ao de $\pi$ com $r$ \'e dada por
+        A interseção de $\pi$ com $r$ é dada por
         \[
             2(1 + 2t) - (5 - t) + 3(-2 + 3t) = 0,
         \]
-        isto \'e, $t = 3/7$ e ent\~ao $P_1(13/7,32/7,-5/7) \in \pi\cap r$. Portanto
+        isto é, $t = 3/7$ e então $P_1(13/7,32/7,-5/7) \in \pi\cap r$. Portanto
         \[
             d(P,r) = d(P,P_1) = \sqrt{\left(1 - \dfrac{13}{7}\right)^2 + \left(2 - \dfrac{32}{7}\right)^2 + \left(-1 + \dfrac{5}{7}\right)^2} = \dfrac{2\sqrt{91}}{7}.
         \]
@@ -874,17 +874,17 @@ onde $P_1 \in \pi\cap r$.
 \subsection{Entre retas} % (fold)
 \label{sub:entre_retas}
 
-Sejam $r$ e $s$ retas. Se $r \varparallel s$ ent\~ao a dist\^ancia entre $r$ e $s$ \'e dada pela dist\^ancia entre um ponto de $r$ e a reta $s$, ou o contr\'ario. Suponha ent\~ao que $r$ e $s$ s\~ao concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
+Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a distância entre $r$ e $s$ é dada pela distância entre um ponto de $r$ e a reta $s$, ou o contrário. Suponha então que $r$ e $s$ são concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
 
-Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no cao em que as retas s\~ao concorrentes). Um plano \'e o que cont\'em $r$ e \'e paralelo a $s$, que vamos chamar de $\pi_1$. O outro cont\'em $s$ e \'e paralelo a $r$, que chamaremos de $\pi_2$.
+Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no caso em que as retas são concorrentes). Um plano é o que contém $r$ e é paralelo a $s$, que vamos chamar de $\pi_1$. O outro contém $s$ e é paralelo a $r$, que chamaremos de $\pi_2$.
 
 \begin{figure}[!h]
     \centering
-    \caption{Dist\^ancia entre retas reversas}
+    \caption{Distância entre retas reversas}
     \includegraphics{distancia-retas-reversas-alternativa.pdf}
 \end{figure}
 
-Sejam $\vec{u}$ e $\vec{v}$ os vetores diretores de $r$ e $s$, respectivamente. Ent\~ao o vetor $\vec{w} = \vec{u}\times\vec{v}$ \'e normal aos planos $\pi_1$ e $\pi_2$. Assim
+Sejam $\vec{u}$ e $\vec{v}$ os vetores diretores de $r$ e $s$, respectivamente. Então o vetor $\vec{w} = \vec{u}\times\vec{v}$ é normal aos planos $\pi_1$ e $\pi_2$. Assim
 \[
     d(r,s) = d(\pi_1,\pi_2).
 \]
@@ -897,13 +897,13 @@ onde $P \in r$ e $Q \in s$. Portanto,
     d(r,s) = d(\pi_1, Q) = \dfrac{|\langle\vec{PQ},\vec{w}\rangle|}{\norm{\vec{w}}} = \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}}.
 \]
 
-Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ est\~ao no mesmo plano.
+Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano.
 
-% O plano $\pi$ definido por $s$ e $s'$ \'e paralelo a $r$, da{\'\i} a dist\^ancia de $r$ a $\pi$ \'e constante. Esta constante \'e \textbf{a menor dist\^ancia} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ \'e um ponto qualquer de $s$ temos
+% O plano $\pi$ definido por $s$ e $s'$ é paralelo a $r$, daí a distância de $r$ a $\pi$ é constante. Esta constante é \textbf{a menor distância} entre $r$ e $s$. De fato, seja $r'$ uma reta contida em $\pi$ e paralela a $r$. Seja $I$ um ponto de $r$. Por $I$ tracemos um perpendicular a $r$ que a intercepta em um ponto $Q$. Se $P$ é um ponto qualquer de $s$ temos
 % \[
 %     \overline{IP}^2 = \overline{IQ}^2 + \overline{QP}^2
 % \]
-% pois o tri\^angulo $IQP$ \'e ret\^angulo em $Q$. Logo
+% pois o triângulo $IQP$ é retângulo em $Q$. Logo
 % \[
 %     \overline{IP}^2 \ge \overline{IQ}^2,
 % \]
@@ -911,13 +911,13 @@ Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $
 % \[
 %     \overline{IP} \ge \overline{IQ}.
 % \]
-% Mas $\overline{IQ}$ \'e a dist\^ancia de $\pi$ a $r$, logo segue da \'ultima desigualdade que a dist\^ancia de $\pi$ a $r$ \'e menor ou igual a dist\^ancia entre um ponto de $r$ e um ponto de $s$. Portanto
+% Mas $\overline{IQ}$ é a distância de $\pi$ a $r$, logo segue da \'ultima desigualdade que a distância de $\pi$ a $r$ é menor ou igual a distância entre um ponto de $r$ e um ponto de $s$. Portanto
 % \[
 %     d(r,s) = d(r,\pi).
 % \]
 
 \begin{exemplo}
-    Determine a dist\^ancia entre as retas
+    Determine a distância entre as retas
     \[
         r: \begin{cases}
             x = 2 + t\\
@@ -930,7 +930,7 @@ Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $
         \end{cases}
     \]
     \begin{solucao}
-        Os vetores diretores de $r$ e $s$ s\~ao $\vec{u} = (1,-3,2)$ e $\vec{v} = (4,-5,3)$, respectivamente. Logo $r$ e $s$ n\~ao s\~ao paralelas. 
+        Os vetores diretores de $r$ e $s$ são $\vec{u} = (1,-3,2)$ e $\vec{v} = (4,-5,3)$, respectivamente. Logo $r$ e $s$ não são paralelas.
         % Agora, o sistema
         % \[
         %     \begin{cases}
@@ -939,7 +939,7 @@ Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $
         %         1 + 2t = 4 + 3s
         %     \end{cases}
         % \]
-        % e assim $r$ e $s$ s\~ao reversas. Assim pelo ponto $(-5,6,4)$ de $s$ tracemos um reta $s'$ paralela a $r$. Da{\'\i}
+        % e assim $r$ e $s$ são reversas. Assim pelo ponto $(-5,6,4)$ de $s$ tracemos um reta $s'$ paralela a $r$. Daí
         % \[
         %     s' : \begin{cases}
         %         x = -5 + \alpha\\
@@ -951,7 +951,7 @@ Se $r \cap s \ne \emptyset$, ent\~ao $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $
         % \[
         %     \pi : x + 5y + 7z - 53 = 0.
         % \]
-        %Finalmente, seja $P(2,1,1) \in r$. Ent\~ao
+        %Finalmente, seja $P(2,1,1) \in r$. Então
         \[
             d(r,s) = = \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}} = \dfrac{|-7+25+21|}{\sqrt{1 + 5^2 + 7^2}} = \dfrac{39}{\sqrt{75}}.
         \]
