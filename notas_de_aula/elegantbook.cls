@@ -416,24 +416,26 @@
   \newcommand{\versionname}{\textbf{Versão: }}
   \newcommand{\observacaoname}{Observação}
   \newcommand{\observacoesname}{Observações}
-  \newcommand{\proofname}{Demostração}
-  \newcommand{\problemname}{Problema}
-  \newcommand{\definitionname}{Definição}
-  \newcommand{\theoremname}{Teorema}
-  \newcommand{\axiomname}{Axioma}
-  \newcommand{\postulatename}{Postulado}
-  \newcommand{\lemmaname}{Lema}
-  \newcommand{\propositionname}{Proposição}
-  \newcommand{\corollaryname}{Corolário}
-  \newcommand{\examplename}{Exemplo}
-  \newcommand{\exercisename}{Exercício}
-  \newcommand{\remarkname}{Comentário}
-  \newcommand{\assumptionname}{Assunto}
-  \newcommand{\conclusionname}{Conclusão}
-  \newcommand{\solutionname}{Soluções}
-  \newcommand{\propertyname}{Propiedade}
-  \newcommand{\introductionname}{Introdução}
-  \newcommand{\problemsetname}{Questão}
+  \newcommand{\provaname}{Demostração}
+  \newcommand{\problemaname}{Problema}
+  \newcommand{\definicaoname}{Definição}
+  \newcommand{\teoremaname}{Teorema}
+  \newcommand{\axiomaname}{Axioma}
+  \newcommand{\postuladoname}{Postulado}
+  \newcommand{\lemaname}{Lema}
+  \newcommand{\proposicaoname}{Proposição}
+  \newcommand{\corolarioname}{Corolário}
+  \newcommand{\exemploname}{Exemplo}
+  \newcommand{\exemplosname}{Exemplos}
+  \newcommand{\exercicioname}{Exercício}
+  \newcommand{\comentarioname}{Comentário}
+  \newcommand{\assuntoname}{Assunto}
+  \newcommand{\conclusaoname}{Conclusão}
+  \newcommand{\solucaoname}{Soluções}
+  \newcommand{\propriedadename}{Propiedade}
+  \newcommand{\propriedadesname}{Propiedades}
+  \newcommand{\introducaoname}{Introdução}
+  \newcommand{\questaosetname}{Questão}
   \newcommand\bioinfo[2]{\gdef\@bioinfo{\textbf{#1}: #2}}
   \newcommand{\updatename}{Atualização: }
   \newcommand{\ebibname}{Bibliografia}
@@ -614,13 +616,13 @@
   }
   % define several environment
   % we define headers like \definitionname before
-  \ELEGANT@newtheorem{theorem}{thm}{thmstyle}
-  \ELEGANT@newtheorem{definition}{def}{defstyle}
-  \ELEGANT@newtheorem{postulate}{pos}{thmstyle}
-  \ELEGANT@newtheorem{axiom}{axi}{thmstyle}
-  \ELEGANT@newtheorem{corollary}{cor}{thmstyle}
-  \ELEGANT@newtheorem{lemma}{lem}{thmstyle}
-  \ELEGANT@newtheorem{proposition}{pro}{prostyle}
+  \ELEGANT@newtheorem{teorema}{thm}{thmstyle}
+  \ELEGANT@newtheorem{definicao}{def}{defstyle}
+  \ELEGANT@newtheorem{postulado}{pos}{thmstyle}
+  \ELEGANT@newtheorem{axioma}{axi}{thmstyle}
+  \ELEGANT@newtheorem{corolario}{cor}{thmstyle}
+  \ELEGANT@newtheorem{lema}{lem}{thmstyle}
+  \ELEGANT@newtheorem{proposicao}{pro}{prostyle}
 }{\relax}
 
 
@@ -662,13 +664,13 @@
 
   % define several environment
   % we define headers like \definitionname before
-  \ELEGANT@newtheorem{theorem}{thmstyle}
-  \ELEGANT@newtheorem{definition}{defstyle}
-  \ELEGANT@newtheorem{postulate}{thmstyle}
-  \ELEGANT@newtheorem{axiom}{thmstyle}
-  \ELEGANT@newtheorem{corollary}{thmstyle}
-  \ELEGANT@newtheorem{lemma}{thmstyle}
-  \ELEGANT@newtheorem{proposition}{prostyle}
+  \ELEGANT@newtheorem{teorema}{thmstyle}
+  \ELEGANT@newtheorem{definicao}{defstyle}
+  \ELEGANT@newtheorem{postulado}{thmstyle}
+  \ELEGANT@newtheorem{axioma}{thmstyle}
+  \ELEGANT@newtheorem{corolario}{thmstyle}
+  \ELEGANT@newtheorem{lema}{thmstyle}
+  \ELEGANT@newtheorem{proposicao}{prostyle}
 }{\relax}
 
 % define an user control sequence \elegantnewtheorem
@@ -746,9 +748,13 @@
 \newcounter{exam}[chapter]
 \setcounter{exam}{0}
 \renewcommand{\theexam}{\thechapter.\arabic{exam}}
-\newenvironment{example}[1][]{
+\newenvironment{exemplo}[1][]{
   \refstepcounter{exam}
-  \par\noindent\textbf{\color{main}{\examplename} \theexam #1 }\rmfamily}{
+  \par\noindent\textbf{\color{main}{\exemploname} \theexam #1 }\rmfamily}{
+  \par\ignorespacesafterend}
+\newenvironment{exemplos}[1][]{
+  \refstepcounter{exam}
+  \par\noindent\textbf{\color{main}{\exemplosname} \theexam #1 }\rmfamily}{
   \par\ignorespacesafterend}
 
 %% Exercise with counter
@@ -766,32 +772,40 @@
 \newcounter{prob}[chapter]
 \setcounter{prob}{0}
 \renewcommand{\theprob}{\thechapter.\arabic{prob}}
-\newenvironment{problem}[1][]{
+\newenvironment{problema}[1][]{
   \refstepcounter{prob}
-  \par\noindent\textbf{\color{main}{\problemname} \theprob #1 }\rmfamily}{
+  \par\noindent\textbf{\color{main}{\problemaname} \theprob #1 }\rmfamily}{
   \par\ignorespacesafterend}
 
-\newenvironment{observacao}{
+%%Observation with counter 
+\newcounter{obs}[chapter]
+\setcounter{obs}{0}
+\renewcommand{\theobs}{\thechapter.\arabic{obs}}
+\newenvironment{observacao}[1][]{
+  \refstepcounter{obs}
   \par\noindent\makebox[-3pt][r]{
     \scriptsize\color{red!90}\quad}
-    \textbf{\color{second}\observacaoname} \citshape}{\par}
-\newenvironment{observacoes}{
+  \textbf{\color{second}{\observacaoname} \theobs #1 } \citshape}{\par}
+
+\newenvironment{observacoes}[1][]{
+  \refstepcounter{obs}
   \par\noindent\makebox[-3pt][r]{
     \scriptsize\color{red!90}\quad}
-    \textbf{\color{second}\observacoesname} \citshape}{\par}
+  \textbf{\color{second}{\observacoesname} \theobs #1 } \citshape}{\par}
 
 
-\newenvironment{proof}{
-    \par\noindent\textbf{\color{second}\proofname\;}
+\newenvironment{prova}{
+    \par\noindent\textbf{\color{second}\provaname\;}
     \color{black!90}\cfs}{
     \hfill\rule{1.2ex}{1.2ex}
     \par\vspace{0.5\baselineskip}}
 
-\newenvironment{solution}{\par\noindent\textbf{\color{main}\solutionname} \citshape}{\par}
+\newenvironment{solucao}{\par\noindent\textbf{\color{main}\solucaoname} \citshape}{\par}
 \newenvironment{remark}{\noindent\textbf{\color{second}\remarkname}}{\par}
 \newenvironment{assumption}{\par\noindent\textbf{\color{third}\assumptionname} \citshape}{\par}
-\newenvironment{conclusion}{\par\noindent\textbf{\color{third}\conclusionname} \citshape}{\par}
-\newenvironment{property}{\par\noindent\textbf{\color{third}\propertyname} \citshape}{\par}
+\newenvironment{conclusao}{\par\noindent\textbf{\color{third}\conclusaoname} \citshape}{\par}
+\newenvironment{propriedade}{\par\noindent\textbf{\color{third}\propriedadename} \citshape}{\par}
+\newenvironment{propriedades}{\par\noindent\textbf{\color{third}\propriedadesname} \citshape}{\par}
 \newenvironment{custom}[1]{\par\noindent\textbf{\color{third} #1} \citshape}{\par}
 
 \RequirePackage{multicol}
