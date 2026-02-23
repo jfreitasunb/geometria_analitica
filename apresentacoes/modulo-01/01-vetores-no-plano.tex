@@ -1,0 +1,575 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8
+\def\ano{2024}
+\def\semestre{1}
+\def\disciplina{Álgebra 1}
+\def\turma{C}
+\def\autor{José Antônio O. Freitas}
+\def\instituto{MAT-UnB}
+
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+% \mode<presentation>
+\input{../configuracoes_latex/pacotes}
+\input{../configuracoes_latex/ambientes}
+\input{../configuracoes_latex/comandos_personalizados}
+
+\title{Vetores no Plano}
+\author[\autor]{\autor}
+\institute[\instituto]{\instituto}
+\date{}
+
+\begin{document}
+    \begin{frame}
+        \maketitle
+    \end{frame}
+
+    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+
+    \begin{frame}
+        A Geometria Analítica é um método para tratar com problemas da Geometria. No caso do plano, tal método consiste em
+        associar os pontos à pares ordenados de números reais, permitindo assim representar curvas do plano por equações em duas
+        variáveis, de modo que a cada curva está associado uma equação, bem definida, do tipo $f(x,y) = 0$ e a cada equação
+        deste tipo associa-se uma curva bem definida no plano. Assim, as propriedades geométricas das curvas podem ser
+        determinadas à partir de informações algébricas e analíticas da equação $f(x, y) = 0$.
+
+    \end{frame}
+
+    \begin{frame}
+        Por exemplo, a equação $5x^2 - 4xy + 8y^2 - 36 = 0$ representa uma curva em $\real^2$. Nessa forma, não podemos dizer
+        exatamente qual curva está equação representa. Mas utilizando-se de resultados da álgebra Linear, podemos reescrever tal
+        equação com
+        \[
+          \dfrac{x'^2}{9} + \dfrac{y'^2}{4} = 1
+        \]
+        que é uma equação de uma elipse.
+    \end{frame}
+
+    \begin{frame}
+        Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ como abaixo:
+        \begin{figure}[!h]
+            \centering
+            \caption{Plano cartesiano}
+            \includegraphics{plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Seja $P$ um ponto qualquer do plano. Por $P$ podemos traçar uma única reta $x'$ paralela à reta $x$ e uma única reta $y'$ paralela à reta $y$. Estas retas interceptam $x$ e $y$ em pontos $P_x$ e $P_y$, respectivamente. Seja $\alpha$ o número real correspondente a $P_x$ e $\beta$ o número real correspondente  a $P_y$. Estes dois números determinam o ponto $P$, isto é, conhecendo $\alpha$ e $\beta$ podemos traças as retas $x'$ e $y'$. O ponto $P$ é a interseção destas retas. Os números $\alpha$ e $\beta$ são chamados \textbf{abscissa} e \textbf{ordenada} do ponto $P$, respectivamente. Eles constituem as \textbf{coordenadas} de $P$.
+        \begin{figure}[!h]
+            \centering
+            \caption{Coordenadas do ponto $P$}
+            \includegraphics{coordenadas-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+
+        Denotaremos assim o ponto $P$ por
+        \[
+            P(\alpha,\beta).
+        \]
+
+        Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos construir o triângulo retângulo $PQS$ como abaixo:
+        \begin{figure}[!h]
+            \centering
+            \caption{Distância entre dois pontos}
+            \includegraphics{distancia-pontos-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Assim sua hipotenusa é
+        \[
+            \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
+        \]
+        Este número é chamado \textbf{distância} de $P$ a $Q$ e é indicado por $d(P,Q)$, isto é, por definição
+        \[
+            d(P,Q) = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
+        \]
+
+        Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ são iguais se, e somente se, $x_1 = x_2$ e $y_1 = y_2$.
+
+        Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano. Assim se $(\alpha, \beta) \ne (0,0)$ podemos associar uma seta com origem em $O(0,0)$ e extremidade em $(\alpha,\beta)$ como na figura abaixo:
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+            \centering
+            \caption{Seta representando o ponto $(\alpha, \beta)$.}
+            \includegraphics{vetores-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Assim o par ordenado $(\alpha, \beta)$ pode ser representado graficamente por um ponto ou por uma seta. Quando representamos $(\alpha, \beta)$ por uma seta, podemos associar a este para uma \textbf{direção}, um \textbf{sentido} e um \textbf{módulo}. A direção e o sentido do par $(\alpha, \beta)$ são respectivamente, a direção e o sentido da seta que o representa. O \textbf{módulo} do par $(\alpha, \beta)$ é o número
+        \[
+            \sqrt{\alpha^2 + \beta^2}
+        \]
+        que é o comprimento da seta.
+    \end{frame}
+
+    \begin{frame}
+        Em geral, um objeto ao qual podemos associar os conceitos de direção, sentido e módulo é chamado um \textbf{vetor}. Denotaremos um vetor de extremidade em um ponto $(\alpha, \beta)$ por
+        \[
+            \vec{u} = (\alpha, \beta).
+        \]
+
+        Esta notação significa que $\vec{u}$ é a seta com início no ponto $O(0,0)$ e final no ponto $(\alpha, \beta)$.
+        \begin{figure}[!h]
+            \centering
+            \caption{Vetor $ \vec{u} = (\alpha, \beta)$.}
+            \includegraphics{vetor-coordenadas-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ são representados graficamente por:
+        \begin{figure}[!h]
+            \centering
+            \caption{Vetores $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$.}
+            \includegraphics{exemplo-vetores-plano-cartesiano.pdf}
+        \end{figure}
+
+        O vetor que tem início e fim no ponto $(0,0)$ é chamado de \textbf{vetor nulo} e será denotado por
+        \[
+            \vec{O} = (0,0).
+        \]
+    \end{frame}
+
+    \begin{frame}
+        Podemos também representar um vetor por uma seta que não parte da origem. Por exemplo, os pontos $A(x_1,y_1)$ e $B(x_2,y_2)$ determinam o vetor
+        \[
+            \vec{AB} = (x_2 - x_1, y_2 - y_1).
+        \]
+        \begin{figure}[!h]
+            \centering
+            \caption{Vetor $\vec{AB}$}
+            \includegraphics{vetor-AB-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $\vec{u}$, que tem início na origem e extremidade no ponto $(x_2 - x_1, y_2 - y_1)$, têm o mesmo módulo, direção e sentido que $\vec{AB}$. Assim vamos representar o vetor $\vec{AB}$ pela forma que for mais conveniente.
+
+        \begin{definicao}
+          Seja $\vec{u} = (x_1, y_1)$ um vetor. A \textbf{norma} de $\vec{u}$, denotada por $\norm{\vec{u}}$, é dada por
+          \[
+            \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2}.
+          \]
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        Um vetor $\vec{u}$ tal que
+        \[
+            \norm{\vec{u}} = 1
+        \]
+        é chamado de \textbf{vetor unitário}.
+        \begin{figure}[!h]
+            \centering
+            \caption{Vetores unitários: $\norm{\vec{u}} = 1$}
+            \includegraphics{vetores-unitarios-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            Dois vetores $\vec{u}$ e $\vec{v}$ são \textbf{paralelos} (ou \textbf{colineares}) se a restas que contém estes vetores são paralelas(podendo ser coincidentes).Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, escreveremos $\vec{u}\varparallel\vec{v}$. Neste caso, $\vec{u}$ e $\vec{v}$ têm a mesma direção, mas podem ter sentidos contrários.
+        \end{definicao}
+    \end{frame}
+
+    % \begin{frame}
+    %     \begin{figure}[!h]
+    %         \centering
+    %         \caption{Vetores paralelos}
+    %         \includegraphics{vetores-paralelos-plano-cartesiano.pdf}
+    %     \end{figure}
+    % \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+          Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
+          \[
+              \vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2).
+          \]
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+          \centering
+          \caption{Soma de vetores}
+          \includegraphics{soma-vetores-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \begin{propriedades}\label{propriedades_soma_vetores}
+          Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades são verdadeiras:
+          \begin{enumerate}[label=({\roman*})]
+            \item $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$ [Associatividade]
+            \item $\vec{u} + \vec{v} = \vec{v} + \vec{u}$ [Comutatividade]
+            \item Existe um único vetor que somado a $\vec{u}$ resulta no próprio vetor $\vec{u}$:
+            \[
+              \vec{u} + \vec{0} = \vec{0} + \vec{u} = \vec{u}.
+            \]
+            Tal vetor é o vetor nulo. [Elemento Neutro]
+            \item\label{vetor_oposto} Para cada $\vec{u}$, existe um único vetor $\vec{v}$ tal que
+            \[
+              \vec{u} + \vec{v} = \vec{0} = \vec{v} + \vec{u}.
+            \]
+            O vetor $\vec{v}$ é o vetor oposto de $\vec{u}$. [Elemento Oposto]
+          \end{enumerate}
+        \end{propriedades}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            O vetor $\vec{v}$ do item \ref{vetor_oposto} da Definição \ref{propriedades_soma_vetores} é chamado de \textbf{vetor oposto}.
+        \end{definicao}
+
+
+        \begin{definicao}
+          Sejam $\alpha \in \real$, $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
+          \[
+              \alpha \vec{u} = (\alpha x_1, \alpha y_1).
+          \]
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+          \centering
+          \caption{Multiplicação por escalar}
+          \includegraphics{multiplicacao-escalar-vetores-plano-cartesiano.pdf}
+        \end{figure}
+\end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+            \begin{enumerate}[label=({\roman*})]
+                \item Sejam $\vec{u}$ um vetor não-nulo e $\lambda \ne 0$ um escalar. Então $\vec{u} \varparallel\lambda\vec{u}$. Além disso, se $\lambda > 0$, então $\vec{u}$ e $\lambda\vec{u}$ são de mesmo sentido, e se $\lambda < 0$ então $\vec{u}$ e $\lambda\vec{u}$ são de sentidos contrários.
+                \item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  é exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma direção que $\vec{u}$, mas sentido contrário.
+            \end{enumerate}
+        \end{observacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{propriedades}
+          Quaisquer que sejam os números reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$ valem as igualdades:
+          \begin{enumerate}[label=({\roman*})]
+            \item $\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$;
+            \item $(\alpha + \beta)\vec{u} = \alpha\vec{u} + \beta\vec{u}$;
+            \item $1\vec{u} = \vec{u}$;
+            \item $\alpha(\beta\vec{u}) = (\alpha\beta)\vec{u} = \beta(\alpha\vec{u})$.
+          \end{enumerate}
+        \end{propriedades}
+    \end{frame}
+
+    \begin{frame}
+        Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1)$ de forma matricial. Para isso escrevemos as componentes de $\vec{u}$ como uma matriz de 1 coluna e duas linhas
+        \[
+          \vec{u} = \begin{bmatrix}
+            x_1\\y_1
+          \end{bmatrix}.
+        \]
+
+        \begin{exemplos}
+          Seja $\vec{u} = (-2,3)$ um vetor. Então
+          \begin{align*}
+            \norm{\vec{u}} &= \sqrt{(-2)^2 + 3^2} = \sqrt{13}\\
+            \vec{v} &= \dfrac{\vec{u}}{\norm{u}} = \dfrac{1}{\sqrt{13}}(-2,3) = \left(\dfrac{-2}{\sqrt{13}}, \dfrac{3}{\sqrt{13}}\right).
+          \end{align*}
+        \end{exemplos}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+          Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Então:
+          \begin{enumerate}[label=({\roman*})]
+            \item Se $\vec{u} \ne \vec{0}$, então $\norm{\vec{u}} \ne 0$.
+            \item $\norm{\vec{u}} = 0$ se, e somente se, $\vec{u} = \vec{0}$.
+            \item $\norm{\alpha\vec{u}} = |\alpha|\norm{\vec{u}}$.
+          \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+            Dado um vetor não nulo $\vec{u}$ o vetor
+            \[
+                  \vec{v} = \dfrac{\vec{u}}{\norm{\vec{u}}}
+            \]
+            é um vetor unitário na direção de $\vec{u}$ pois
+            \[
+                  \norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \dfrac{1}{\norm{\vec{u}}}\norm{\vec{u}} = 1.
+            \]
+
+        \end{observacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            Sejam $\vec{u}$ e $\vec{v}$ vetores não-nulos. Então $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ têm normas iguais, são de mesma direção e de mesmo sentido.
+        \end{definicao}
+
+        \begin{proposicao}\label{vetores_paralelos}
+          Dois vetores não nulos $\vec{u}$ e $\vec{v}$ são paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemente, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+          Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[!h]
+          \centering
+          \caption{ângulo entre vetores}
+          \includegraphics{angulo-vetores-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+          Quando o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ é reto, isto é, $\theta = \pi/2$, ou um deles é o vetor nulo, dizemos que os vetores $\vec{u}$ e $\vec{v}$ são \textbf{ortogonais} ou \textbf{perpendiculares} entre si. Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.\index{Vetores!Ortogonais}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
+        \begin{figure}[!h]
+          \centering
+          \caption{Determinação de $\theta$}
+          \includegraphics{determinacao-angulo-vetores-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Aplicando a Lei dos cossenos no triângulo abaixo
+        \begin{figure}[!h]
+          \centering
+          \caption{Lei dos cossenos}
+          \includegraphics{lei-cossenos-vetores-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        temos
+        \begin{align}\label{equacaonorma}
+          \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\norm{\vec{u}}\norm{\vec{v}}\cos\theta.
+        \end{align}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}\label{produtointerno}
+          O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que:\index{Vetores!Produto Escalar}
+          \begin{enumerate}[label=({\roman*})]
+            \item Se $\vec{u}$ ou $\vec{v}$ é nulo, então $\inner{u}{v} = 0$.
+            \item Se $\vec{u}$ e $\vec{v}$ não são nulos e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, então
+            \begin{align}\label{produto-interno}
+              \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
+            \end{align}
+          \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+          Sejam $\vec{u}$ e $\vec{v}$ vetores e $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$.
+          \begin{enumerate}[label=({\roman*})]
+            \item Se $\vec{u}$ e $\vec{v}$ não são nulos, então
+            \[
+              \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
+            \]
+            \item Qualquer que seja o vetor $\vec{u}$,
+            \[
+              \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
+            \]
+            \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{u}{v} = 0$.
+            \end{enumerate}
+        \end{proposicao}
+   \end{frame}
+
+    \begin{frame}
+        Agora, como podemos encontrar o produto interno sem necessitar de determinar o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$\,? Substituindo o produto interno na equação \eqref{equacaonorma} temos
+        \[
+          \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\inner{u}{v}
+        \]
+        isto é,
+        \begin{align}\label{equacao-auxilar-norma}
+          \inner{u}{v} = \dfrac{1}{2}(\norm{\vec{u}}^2 + \norm{\vec{v}}^2 - \norm{\vec{u} - \vec{v}}^2).
+        \end{align}
+        Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, então podemos reescrever \eqref{equacao-auxilar-norma} como
+        \begin{align*}
+          \inner{u}{v} &= \dfrac{1}{2}(x_1^2 + y_1^2 + x_2^2 + y_2^2 - \norm{(x_1 - x_2, y_1 - y_2)}^2)\\
+          &= \dfrac{1}{2}[x_1^2 + y_1^2 + x_2^2 + y_2^2 - (x_1 - x_2)^2 - (y_1 - y_2)^2]\\
+          &= x_1x_2 + y_1y_2.
+        \end{align*}
+    \end{frame}
+
+    \begin{frame}
+        Acabamos de demonstrar o seguinte teorema:
+        \begin{teorema}
+          O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ é dado por
+          \[
+            \inner{u}{v} = x_1x_2 + y_1y_2.
+          \]
+        \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+        \begin{exemplos}
+          \begin{enumerate}[label=({\roman*})]
+            \item Sejam $\vec{u} = (1, 1)$ e $\vec{v} = (1,0)$. Determine o ângulo entre $\vec{u}$ e $\vec{v}$.
+            \item Encontre um vetor $\vec{u} = (x, y)$ ortogonal a $\vec{v} = (4, -1)$ e tal que $\inner{u}{w} = -1$, onde $\vec{w} = (1,1)$.
+          \end{enumerate}
+        \end{exemplos}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}\label{propriedades-produto-interno}
+          Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o número real $\lambda$ temos
+          \begin{enumerate}[label=({\roman*})]
+            \item\label{linearidade-produto-interno} $\langle \vec{u}, \vec{v} + \vec{w}\rangle = \inner{u}{v} + \inner{u}{w}$
+            \item $\langle \vec{u} + \vec{v}, \vec{w}\rangle = \inner{u}{w} + \inner{v}{w}$
+            \item\label{linearidade2-produto-interno} $\langle (\lambda \vec{u}\,), \vec{v}\rangle = \langle \vec{u}, (\lambda \vec{v}\,)\rangle = \lambda\inner{u}{v}$
+            \item $\inner{u}{v} = \inner{v}{u}$
+            \item Se $\vec{u} \ne \vec{0}$, então $\inner{u}{u} > 0$.
+          \end{enumerate}
+        \end{proposicao}
+   \end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+          \begin{enumerate}[label=({\roman*})]
+            \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposição \ref{propriedades-produto-interno} podem ser estendidas para qualquer número de vetores e escalares:
+            \[
+              \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} )\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
+            \]
+            \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ não podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0)$, $\vec{v} = (2, 1)$ e $\vec{w} = (2, -5)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
+            \item De $\inner{u}{v} = 0$ não podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
+          \end{enumerate}
+        \end{observacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{exemplos}
+          Calcule o ângulo $\alpha$ entre $\vec{u} + \vec{v}$ e $\vec{u} - \vec{v}$, sabendo que $\norm{\vec{u}} = \sqrt{5}$, $\norm{\vec{v}} = 1$ e que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é $\pi/4$.
+        \end{exemplos}
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}\label{DesigualdadeTriangular}
+          Sejam $\vec{u}$ e $\vec{v}$ vetores.
+          \begin{enumerate}[label=({\roman*})]
+            \item $|\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}$ [Desigualdade de Scharwz]\index{Desigualdade de Scharwz}
+            \item $\norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}$ [Desigualdade Triangular]\index{Desigualdade Triangular}
+          \end{enumerate}
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+
+
+        Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores não nulos. Suponha que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é tal que $0 < \theta < \pi/2$.
+        \begin{figure}[!h]
+          \centering
+          \caption{Projeção ortogonal}
+          \includegraphics{projecao-vetores-plano-cartesiano.pdf}
+        \end{figure}
+
+        O vetor $\vec{OP}$ é paralelo ao vetor $\vec{u}$ e o vetor $\vec{PA}$ é ortogonal ao vetor $\vec{u}$.
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}\label{projecao_ortogonal}
+          Seja $\vec{u}$ um vetor não nulo. Dado qualquer vetor $\vec{v}$, o vetor $\vec{OP}$ é chamado de \textbf{projeção ortogonal} de $\vec{v}$ sobre $\vec{u}$, e é indicado por $\proj_{\vec{u}}\vec{v}$ se satisfaz as seguintes condições:\index{Vetores!Projeção ortogonal}
+          \begin{enumerate}[label=({\roman*})]
+            \item $\vec{OP} \varparallel\vec{u}$
+            \item $(\vec{v} - \vec{OP}) \perp \vec{u}$.
+          \end{enumerate}
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        Podemos também escrever
+        \begin{enumerate}[label=({\roman*})]
+          \item $\proj_{\vec{u}}\vec{v} \varparallel\vec{u}$
+            \item $(\vec{v} - \proj_{\vec{u}}\vec{v}) \perp \vec{u}$.
+        \end{enumerate}
+
+        No caso acima temos
+        \[
+          \cos\theta = \dfrac{\norm{\vec{OP}}}{\norm{\vec{v}}}
+        \]
+        e então $\norm{\vec{OP}} = \norm{\vec{v}}\cos\theta$. Mas
+        \[
+          \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}
+        \]
+        e assim podemos escrever
+        \[
+          \norm{\vec{OP}} = \dfrac{\inner{u}{v}}{\norm{\vec{u}}}.
+        \]
+    \end{frame}
+
+    \begin{frame}
+        Além disso, como $\vec{OP}$ é paralelo à $\vec{u}$ e de mesmo sentido, devemos ter $\vec{OP} = \lambda\vec{u}$ com $\lambda > 0$. Daí
+        $\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e então
+        \[
+          \vec{OP} = \dfrac{\norm{OP}}{\norm{\vec{u}}^2}\vec{u}.
+        \]
+    \end{frame}
+
+    \begin{frame}
+        Esta construção só é válida no caso em que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ satisfaz $0 < \theta < \pi/2$. Nos casos
+        \begin{figure}
+          \centering
+          \caption{Vetor projeção}
+          \includegraphics{vetores-projecao-plano-cartesiano.pdf}
+        \end{figure}
+        não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
+    \end{frame}
+
+    \begin{frame}
+        \begin{proposicao}
+          Seja $\vec{u}$ um vetor não nulo. Qualquer que seja o vetor $\vec{v}$, existe e é única a projeção ortogonal de $\vec{v}$ sobre $\vec{u}$. Sua expressão em termos de $\vec{u}$ e $\vec{v}$ é dada por
+          \[
+            \proj_{\vec{u}}\vec{v} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}
+          \]
+          e sua norma é dada por
+          \[
+            \norm{\proj_{\vec{u}}\vec{v}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}.
+          \]
+        \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{observacao}
+          O escalar $\lambda$ encontrado na proposição anterior pode ser negativo ou zero. Ele será negativo quando $\pi/2 \le \theta \le \pi$ e será zero quando $\vec{u}\perp\vec{v}$.
+          \begin{figure}[!h]
+            \centering
+            \caption{Possibilidades para $\lambda$}
+            \includegraphics{vetores-projecao-escalar-plano-cartesiano.pdf}
+          \end{figure}
+        \end{observacao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{exemplos}\label{exemplosprojecao}
+          \begin{enumerate}[label=({\roman*})]
+            \item Encontre a projeção ortogonal do vetor $\vec{v} = (4, -1)$ sobre o vetor $\vec{u} = (2, 1)$.
+             \item Considere um triângulo $ABC$ onde $A(3,3)$, $B(0,1)$ e $C(1,6)$.
+             \begin{enumerate}[label=({\roman*})]\label{exemploprojecao2}
+               \item Verifique que $ABC$ é um triângulo retângulo em $A$.
+               \item Calcule a projeção do cateto $BA$ sobre a hipotenusa $BC$.
+               \item Determine o pé da altura do triângulo relativo ao vértice $A$.
+             \end{enumerate}
+          \end{enumerate}
+        \end{exemplos}
+    \end{frame}
+\end{document}
