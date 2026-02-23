@@ -196,43 +196,32 @@
         \end{definicao}
 \end{frame}
 
-    \begin{frame}
-
-
-        \begin{figure}[!h]
-            \centering
-            \caption{Vetores paralelos}
-            \includegraphics{vetores-paralelos-plano-cartesiano.pdf}
-        \end{figure}
-\end{frame}
+    % \begin{frame}
+    %     \begin{figure}[!h]
+    %         \centering
+    %         \caption{Vetores paralelos}
+    %         \includegraphics{vetores-paralelos-plano-cartesiano.pdf}
+    %     \end{figure}
+    % \end{frame}
 
     \begin{frame}
-
-
-        % \subsection{Operações com Vetores} % (fold)
-        % \label{sub:operacoes_com_vetores}
-
         \begin{definicao}
           Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
           \[
               \vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2).
           \]
         \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{figure}[!h]
           \centering
           \caption{Soma de vetores}
           \includegraphics{soma-vetores-plano-cartesiano.pdf}
         \end{figure}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{propriedades}\label{propriedades_soma_vetores}
           Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades são verdadeiras:
           \begin{enumerate}[label=({\roman*})]
@@ -250,13 +239,9 @@
             O vetor $\vec{v}$ é o vetor oposto de $\vec{u}$. [Elemento Oposto]
           \end{enumerate}
         \end{propriedades}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
-
-
         \begin{definicao}
             O vetor $\vec{v}$ do item \ref{vetor_oposto} da Definição \ref{propriedades_soma_vetores} é chamado de \textbf{vetor oposto}.
         \end{definicao}
@@ -268,12 +253,9 @@
               \alpha \vec{u} = (\alpha x_1, \alpha y_1).
           \]
         \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
-
         \begin{figure}[!h]
           \centering
           \caption{Multiplicação por escalar}
@@ -288,12 +270,9 @@
                 \item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  é exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma direção que $\vec{u}$, mas sentido contrário.
             \end{enumerate}
         \end{observacao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
-
         \begin{propriedades}
           Quaisquer que sejam os números reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$ valem as igualdades:
           \begin{enumerate}[label=({\roman*})]
@@ -303,30 +282,9 @@
             \item $\alpha(\beta\vec{u}) = (\alpha\beta)\vec{u} = \beta(\alpha\vec{u})$.
           \end{enumerate}
         \end{propriedades}
-        \begin{prova}
-            Sejam $\vec{u} = (x_1,y_1)$ e $\vec{v} = (x_2,y_2)$. Temos:
-            \begin{enumerate}[label=({\roman*})]
-                \item $\alpha(\vec{u} + \vec{v}) = \alpha(x_1+x_2,y_1+y_2) = (\alpha(x_1+x_2),\alpha(y_1+y_2)) = (\alpha x_1,\alpha y_1) + (\alpha x_2,\alpha y_2) =  \alpha\vec{u} + \alpha\vec{v}$.
-                \item $(\alpha + \beta)\vec{u} = ((\alpha+\beta)x_1,(\alpha+\beta)y_1) = (\alpha x_1 + \beta x_1, \alpha y_1 + \beta y_1) = (\alpha x_1,\alpha y_1) + (\beta x_1,\beta y_1) = \alpha\vec{u} + \beta\vec{u}$.
-                \item $1\vec{u} = 1(x_1,y_1) = (x_1,y_1) = \vec{u}$.
-                \item Primeiro temos:
-                \[
-                    \alpha(\beta\vec{u}) = \alpha(\beta x_1,\beta y_1) = (\alpha(\beta x_1),\alpha(\beta y_1)) = ((\alpha\beta)x_1,(\alpha\beta)y_1) = (\alpha\beta)\vec{u}.
-                \]
-                Agora,
-                \[
-                    (\alpha\beta)\vec{u} =     ((\alpha\beta)x_1,(\alpha\beta)y_1) = ((\beta\alpha)x_1,(\beta\alpha)y_1) = (\beta(\alpha x_1),\beta(\alpha y_1)) = \beta(\alpha\vec{u}).
-                \]
-                Logo $\alpha(\beta\vec{u}) = (\alpha\beta)\vec{u} = \beta(\alpha\vec{u})$.
-            \end{enumerate}
-            Portanto as propriedades são válidas.
-        \end{prova}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
-
         Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1)$ de forma matricial. Para isso escrevemos as componentes de $\vec{u}$ como uma matriz de 1 coluna e duas linhas
         \[
           \vec{u} = \begin{bmatrix}
@@ -341,14 +299,9 @@
             \vec{v} &= \dfrac{\vec{u}}{\norm{u}} = \dfrac{1}{\sqrt{13}}(-2,3) = \left(\dfrac{-2}{\sqrt{13}}, \dfrac{3}{\sqrt{13}}\right).
           \end{align*}
         \end{exemplos}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
-
-
-
         \begin{proposicao}
           Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Então:
           \begin{enumerate}[label=({\roman*})]
@@ -357,22 +310,9 @@
             \item $\norm{\alpha\vec{u}} = |\alpha|\norm{\vec{u}}$.
           \end{enumerate}
         \end{proposicao}
-        \begin{prova}
-          \begin{enumerate}[label=({\roman*})]
-            \item  Se $\vec{u} \ne (0,0) = \vec{0}$, então $x_1 \ne 0$ ou $y_1 \ne 0$. Daí
-            \[
-              \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2} > 0.
-            \]
-            \item $\norm{\vec{u}} = 0$ se, e somente se, $x_1^2 + y_1^2 = 0$, isto é, $x_1 = y_1 = 0$. Portanto $\vec{u} = \vec{0}$.
-            \item $\norm{\alpha\vec{u}} = \norm{\alpha(x_1, y_1)} = \sqrt{(\alpha x_1)^2 + (\alpha y_1)^2} = \sqrt{\alpha^2(x_1^2 + y_1^2)} = |\alpha|\norm{\vec{u}}$.
-          \end{enumerate}
-        \end{prova}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
-
         \begin{observacao}
             Dado um vetor não nulo $\vec{u}$ o vetor
             \[
@@ -384,11 +324,9 @@
             \]
 
         \end{observacao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{definicao}
             Sejam $\vec{u}$ e $\vec{v}$ vetores não-nulos. Então $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ têm normas iguais, são de mesma direção e de mesmo sentido.
         \end{definicao}
@@ -396,73 +334,54 @@
         \begin{proposicao}\label{vetores_paralelos}
           Dois vetores não nulos $\vec{u}$ e $\vec{v}$ são paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemente, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
         \end{proposicao}
-        \begin{prova}
-            Se $\vec{u} = \lambda\vec{v}$, então $\vec{u}\varparallel\vec{v}$.
-            Agora, suponha que $\vec{u}$ e $\vec{v}$ são paralelos e de mesmo sentido, o caso em que têm sentidos contrários fica como exercício.
-
-            Seja
-            \[
-                \lambda = \dfrac{\norm{\vec{u}}}{\norm{\vec{v}}}.
-            \]
-            Vamos mostrar que $\vec{u} = \lambda\vec{v}$. Inicialmente, sabemos que $\vec{v}$ e $\lambda\vec{v}$ são paralelos e têm o mesmo sentido pois $\lambda > 0$. Agora
-            \[
-                \norm{\lambda\vec{v}} = |\lambda|\norm{\vec{v}} = \dfrac{\norm{\vec{u}}}{\norm{\vec{v}}}\norm{\vec{v}} = \norm{\vec{u}}.
-            \]
-            Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma direção, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como queríamos.
-        \end{prova}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
         \begin{definicao}
           Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
         \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
         \begin{figure}[!h]
           \centering
           \caption{ângulo entre vetores}
           \includegraphics{angulo-vetores-plano-cartesiano.pdf}
         \end{figure}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{definicao}
           Quando o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ é reto, isto é, $\theta = \pi/2$, ou um deles é o vetor nulo, dizemos que os vetores $\vec{u}$ e $\vec{v}$ são \textbf{ortogonais} ou \textbf{perpendiculares} entre si. Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.\index{Vetores!Ortogonais}
         \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
         Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
         \begin{figure}[!h]
           \centering
           \caption{Determinação de $\theta$}
           \includegraphics{determinacao-angulo-vetores-plano-cartesiano.pdf}
         \end{figure}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
         Aplicando a Lei dos cossenos no triângulo abaixo
         \begin{figure}[!h]
           \centering
           \caption{Lei dos cossenos}
           \includegraphics{lei-cossenos-vetores-plano-cartesiano.pdf}
         \end{figure}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
         temos
         \begin{align}\label{equacaonorma}
           \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\norm{\vec{u}}\norm{\vec{v}}\cos\theta.
         \end{align}
+    \end{frame}
 
+    \begin{frame}
         \begin{definicao}\label{produtointerno}
           O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que:\index{Vetores!Produto Escalar}
           \begin{enumerate}[label=({\roman*})]
@@ -473,10 +392,9 @@
             \end{align}
           \end{enumerate}
         \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
         \begin{proposicao}
           Sejam $\vec{u}$ e $\vec{v}$ vetores e $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$.
           \begin{enumerate}[label=({\roman*})]
@@ -491,29 +409,9 @@
             \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{u}{v} = 0$.
             \end{enumerate}
         \end{proposicao}
-        \begin{prova}
-          \begin{enumerate}[label=({\roman*})]
-            \item Basta isolar $\cos\theta$ na Definição \ref{produto-interno}.
-            \item Se $\vec{u} = \vec{0}$, então a igualdade é verdadeira. Se $\vec{u} \ne \vec{0}$, então o ângulo entre o vetor $\vec{u}$ e ele mesmo é $\theta = 0$, logo
-            \[
-              1 = \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{u}}}.
-            \]
-            Logo
-            \[
-              \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
-            \]
-            \item Se $\vec{u}$ ou $\vec{v}$ é o vetor nulo, então $\vec{u}\perp\vec{v}$ e $\inner{u}{v} = 0$. Suponha $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Assim, se $\vec{u} \perp\vec{v}$, então $\theta = \pi/2$ e daí $\inner{u}{v} = 0$. Agora, se $\inner{u}{v} = 0$, então
-            \[
-              0 = \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
-            \]
-            Logo devemos ter $\cos\theta = 0$, isto é, $\theta = \pi/2$. Portanto $\vec{u}\perp\vec{v}$, como queríamos.
-          \end{enumerate}
-        \end{prova}
-\end{frame}
+   \end{frame}
 
     \begin{frame}
-
-
         Agora, como podemos encontrar o produto interno sem necessitar de determinar o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$\,? Substituindo o produto interno na equação \eqref{equacaonorma} temos
         \[
           \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\inner{u}{v}
@@ -528,11 +426,9 @@
           &= \dfrac{1}{2}[x_1^2 + y_1^2 + x_2^2 + y_2^2 - (x_1 - x_2)^2 - (y_1 - y_2)^2]\\
           &= x_1x_2 + y_1y_2.
         \end{align*}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         Acabamos de demonstrar o seguinte teorema:
         \begin{teorema}
           O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ é dado por
@@ -540,41 +436,18 @@
             \inner{u}{v} = x_1x_2 + y_1y_2.
           \]
         \end{teorema}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{exemplos}
           \begin{enumerate}[label=({\roman*})]
             \item Sejam $\vec{u} = (1, 1)$ e $\vec{v} = (1,0)$. Determine o ângulo entre $\vec{u}$ e $\vec{v}$.
-            \begin{solucao}
-              Temos
-              \begin{align*}
-                \inner{u}{v} = \langle (1, 1), (1,0)\rangle = 2 + 0 = 1\\
-                \norm{\vec{u}} = \sqrt{2},\ \norm{\vec{v}} = \sqrt{1}\\
-                \cos\theta = \frac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}} = \dfrac{1}{\sqrt{2}}.
-              \end{align*}
-              Assim, $\theta = \pi/4$.
-            \end{solucao}
             \item Encontre um vetor $\vec{u} = (x, y)$ ortogonal a $\vec{v} = (4, -1)$ e tal que $\inner{u}{w} = -1$, onde $\vec{w} = (1,1)$.
-            \begin{solucao}
-              Como $\inner{u}{v} = 0$ e $\inner{u}{w} = -1$ obtemos o sistema
-              \[
-                \begin{cases}
-                  4x - y = 0\\
-                  x + y = -1
-                \end{cases}
-              \]
-              cuja solução é $x = -1/5$ e $y = -4/5$. Logo $\vec{u} = (-1/5, -4/5)$.
-            \end{solucao}
           \end{enumerate}
         \end{exemplos}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{proposicao}\label{propriedades-produto-interno}
           Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o número real $\lambda$ temos
           \begin{enumerate}[label=({\roman*})]
@@ -585,24 +458,9 @@
             \item Se $\vec{u} \ne \vec{0}$, então $\inner{u}{u} > 0$.
           \end{enumerate}
         \end{proposicao}
-        \begin{prova}
-          \begin{enumerate}[label=({\roman*})]
-            \item \begin{align*}
-              \langle\vec{u}, (\vec{v} + \vec{w})\rangle &= \langle\vec{u}, (x_2 + x_3, y_2 + y_3)\rangle = x_1(x_2 + x_3) + y_1(y_2 + y_3) \\ &= (x_1x_2 + y_1y_2) + (x_1x_3 + y_1y_3) = \inner{u}{v} + \inner{u}{w}
-            \end{align*}
-            \item \begin{align*}
-              \langle\vec{u}, (\lambda\vec{v})\rangle = \langle\vec{u}, (\lambda x_2, \lambda y_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) = (\lambda x_1)y_2 + (\lambda y_1)y_2 = \langle(\lambda\vec{u}),\vec{v}\rangle\\
-              \langle\vec{u},(\lambda\vec{v})\rangle = \langle\vec{u}, (\lambda x_2, \lambda y_2)\rangle = x_1(\lambda x_2) + y_1(\lambda y_2) = \lambda (x_1y_2) + \lambda (y_1y_2) = \lambda\inner{u}{v}
-            \end{align*}
-            \item $\inner{u}{v} = x_1x_2 + y_1y_2 = x_2x_1 + y_2y_1 = \inner{v}{u}$
-            \item Se $\vec{u} \ne \vec{0}$, então $x_1 \ne 0$ ou $y_1 \ne 0$. Daí $\inner{u}{u} = x_1^2 + y_1^2 > 0$, como queríamos.
-          \end{enumerate}
-        \end{prova}
-\end{frame}
+   \end{frame}
 
     \begin{frame}
-
-
         \begin{observacao}
           \begin{enumerate}[label=({\roman*})]
             \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposição \ref{propriedades-produto-interno} podem ser estendidas para qualquer número de vetores e escalares:
@@ -613,44 +471,15 @@
             \item De $\inner{u}{v} = 0$ não podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
           \end{enumerate}
         \end{observacao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{exemplos}
           Calcule o ângulo $\alpha$ entre $\vec{u} + \vec{v}$ e $\vec{u} - \vec{v}$, sabendo que $\norm{\vec{u}} = \sqrt{5}$, $\norm{\vec{v}} = 1$ e que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é $\pi/4$.
-          \begin{solucao}
-            Temos
-            \begin{align*}
-              \cos\alpha = \dfrac{\langle(\vec{u} + \vec{v}), (\vec{u} - \vec{v})\rangle}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{\inner{u}{u} - \inner{u}{v} + \inner{v}{u} - \inner{v}{v}}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{\norm{\vec{u}}^2 - \norm{\vec{v}}^2}{\norm{\vec{u} - \vec{v}}\norm{\vec{u} - \vec{v}}} = \dfrac{4}{\norm{\vec{u} + \vec{v}}\norm{\vec{u} - \vec{v}}}.
-            \end{align*}
-            Agora
-            \begin{align*}
-              \norm{\vec{u} + \vec{v}}^2 = \langle(\vec{u} + \vec{v}), (\vec{u} + \vec{v})\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = 6 + 2\inner{u}{v}\\
-              \norm{\vec{u} - \vec{v}}^2 = \langle(\vec{u} - \vec{v}), (\vec{u} - \vec{v})\rangle = \inner{u}{v} - 2\inner{u}{v} + \inner{v}{v} = 6 - 2\inner{u}{v}.
-            \end{align*}
-            Por outro lado temos
-            \begin{align*}
-              \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta = \sqrt{5}\cos(\pi/4) = \dfrac{\sqrt{10}}{2}
-            \end{align*}
-            e então
-            \begin{align*}
-              \norm{\vec{u} + \vec{v}} = \sqrt{6 + \sqrt{10}}\\
-              \norm{\vec{u} - \vec{v}} = \sqrt{6 - \sqrt{10}}.
-            \end{align*}
-            Portanto
-            \[
-              \cos\theta = \dfrac{4}{\sqrt{26}}
-            \]
-            e então $\theta = \arccos\left(\dfrac{4}{\sqrt{26}}\right)$.
-          \end{solucao}
         \end{exemplos}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{proposicao}\label{DesigualdadeTriangular}
           Sejam $\vec{u}$ e $\vec{v}$ vetores.
           \begin{enumerate}[label=({\roman*})]
@@ -658,36 +487,7 @@
             \item $\norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}$ [Desigualdade Triangular]\index{Desigualdade Triangular}
           \end{enumerate}
         \end{proposicao}
-        \begin{prova}
-          \begin{enumerate}[label=({\roman*})]
-            \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$ a desigualdade é verdadeira. Suponha então que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Seja $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$. Temos
-            \[
-              0 \le |\cos\theta| \le 1
-            \]
-            e multiplicando essa inequação por $\norm{\vec{u}}\norm{\vec{v}}$ obtemos
-            \[
-              0 \le \norm{\vec{u}}\norm{\vec{v}}\cos\theta \le \norm{\vec{u}}\norm{\vec{v}},
-            \]
-            isto é,
-            \[
-              |\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}
-            \]
-            como queríamos.
-            \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$, então a desigualdade é verdadeira. Suponha então que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Temos
-            \begin{align*}
-              \norm{\vec{u} + \vec{v}}^2 &= \langle\vec{u} + \vec{v}, \vec{u} + \vec{v}\rangle = \inner{u}{v} + 2\inner{u}{v} + \inner{v}{v} = \norm{\vec{u}}^2 + 2\inner{u}{v} + \norm{\vec{v}}^2 \\ &\le \norm{\vec{u}}^2 + 2\mid\inner{u}{v}\mid + \norm{\vec{v}}^2.
-            \end{align*}
-            Agora, usando o item (a) temos
-            \begin{align*}
-              \norm{\vec{u} + \vec{v}}^2 \le \norm{\vec{u}} + 2\mid\inner{u}{v}\mid \norm{\vec{v}}^2 \le \norm{\vec{u}} + 2\norm{\vec{u}}\norm{\vec{v}} + \norm{\vec{v}}^2 = (\norm{\vec{u}} + \norm{\vec{v}})^2.
-            \end{align*}
-            Portanto
-            \[
-              \norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}.
-            \]
-          \end{enumerate}
-        \end{prova}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
 
@@ -700,7 +500,9 @@
         \end{figure}
 
         O vetor $\vec{OP}$ é paralelo ao vetor $\vec{u}$ e o vetor $\vec{PA}$ é ortogonal ao vetor $\vec{u}$.
+    \end{frame}
 
+    \begin{frame}
         \begin{definicao}\label{projecao_ortogonal}
           Seja $\vec{u}$ um vetor não nulo. Dado qualquer vetor $\vec{v}$, o vetor $\vec{OP}$ é chamado de \textbf{projeção ortogonal} de $\vec{v}$ sobre $\vec{u}$, e é indicado por $\proj_{\vec{u}}\vec{v}$ se satisfaz as seguintes condições:\index{Vetores!Projeção ortogonal}
           \begin{enumerate}[label=({\roman*})]
@@ -708,11 +510,9 @@
             \item $(\vec{v} - \vec{OP}) \perp \vec{u}$.
           \end{enumerate}
         \end{definicao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         Podemos também escrever
         \begin{enumerate}[label=({\roman*})]
           \item $\proj_{\vec{u}}\vec{v} \varparallel\vec{u}$
@@ -731,16 +531,17 @@
         \[
           \norm{\vec{OP}} = \dfrac{\inner{u}{v}}{\norm{\vec{u}}}.
         \]
+    \end{frame}
+
+    \begin{frame}
         Além disso, como $\vec{OP}$ é paralelo à $\vec{u}$ e de mesmo sentido, devemos ter $\vec{OP} = \lambda\vec{u}$ com $\lambda > 0$. Daí
         $\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e então
         \[
           \vec{OP} = \dfrac{\norm{OP}}{\norm{\vec{u}}^2}\vec{u}.
         \]
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         Esta construção só é válida no caso em que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ satisfaz $0 < \theta < \pi/2$. Nos casos
         \begin{figure}
           \centering
@@ -748,11 +549,9 @@
           \includegraphics{vetores-projecao-plano-cartesiano.pdf}
         \end{figure}
         não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{proposicao}
           Seja $\vec{u}$ um vetor não nulo. Qualquer que seja o vetor $\vec{v}$, existe e é única a projeção ortogonal de $\vec{v}$ sobre $\vec{u}$. Sua expressão em termos de $\vec{u}$ e $\vec{v}$ é dada por
           \[
@@ -763,28 +562,9 @@
             \norm{\proj_{\vec{u}}\vec{v}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}.
           \]
         \end{proposicao}
-        \begin{prova}
-          Seja $\vec{p} = \proj_{\vec{u}}\vec{v}$. Da Definição \ref{projecao_ortogonal}, dizer que $\vec{p}$ é a projeção ortogonal de $\vec{v}$ sobre $\vec{u}$ significa que $\vec{p}$ é um vetor tal que $\vec{p}\varparallel\vec{u}$ e $(\vec{v} - \vec{p})\perp\vec{u}$.
-
-          Como $\vec{p}\varparallel\vec{u}$, então pela Proposição \ref{vetores_paralelos} existe um escalar $\lambda$ tal que $\vec{p} = \lambda\vec{u}$. Assim qualquer vetor do tipo $\lambda\vec{u}$ é um candidato para ser a projeção ortogonal. Mas, para que $\vec{p}$ seja a projeção ortogonal, ele deve satisfazer $(\vec{v} - \vec{p})\perp\vec{u}$. Logo
-          \begin{align*}
-            (\vec{v} - \vec{p})\perp\vec{u} \Leftrightarrow \langle(\vec{v} - \vec{p}), \vec{u}\rangle = 0 \Leftrightarrow \inner{v}{u} - \lambda\inner{u}{v} = 0 \Leftrightarrow \lambda = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}.
-          \end{align*}
-          Assim existe um único $\lambda$ que satisfaz a condição $(\vec{v} - \vec{p})\perp\vec{u}$, e daí o vetor $\vec{p}$ é único. Portanto
-          \[
-            \proj_{\vec{u}}\vec{v} = \vec{p} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}.
-          \]
-          Além disso
-          \[
-            \norm{\proj_{\vec{u}}\vec{v}} = \norm{\dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}
-          \]
-          como queríamos.
-        \end{prova}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{observacao}
           O escalar $\lambda$ encontrado na proposição anterior pode ser negativo ou zero. Ele será negativo quando $\pi/2 \le \theta \le \pi$ e será zero quando $\vec{u}\perp\vec{v}$.
           \begin{figure}[!h]
@@ -793,74 +573,18 @@
             \includegraphics{vetores-projecao-escalar-plano-cartesiano.pdf}
           \end{figure}
         \end{observacao}
-\end{frame}
+    \end{frame}
 
     \begin{frame}
-
-
         \begin{exemplos}\label{exemplosprojecao}
           \begin{enumerate}[label=({\roman*})]
             \item Encontre a projeção ortogonal do vetor $\vec{v} = (4, -1)$ sobre o vetor $\vec{u} = (2, 1)$.
-            \begin{solucao}
-               Temos
-               \[
-                  \proj_{\vec{u}}\vec{v} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}.
-               \]
-               Agora
-               \begin{align*}
-                 \inner{v}{u} = 7\\
-                 \norm{\vec{u}}^2 = 5
-               \end{align*}
-               e daí
-               \[
-                  \proj_{\vec{u}}\vec{v} = \dfrac{7}{5}(2, 1) = \left(\dfrac{14}{5}, \dfrac{7}{5}\right).
-               \]
-               Por outro lado,
-               \[
-                  \proj_{\vec{v}}\vec{u} = \dfrac{\inner{u}{v}}{\norm{\vec{v}}^2}\vec{v}.
-               \]
-               Mas
-               \begin{align*}
-                 \inner{u}{v} = \inner{v}{u} = 7\\
-                 \norm{\vec{v}}^2 = 17
-               \end{align*}
-               e daí
-               \[
-                  \proj_{\vec{v}}\vec{u} = \dfrac{7}{17}(4, -1) = \left(\dfrac{28}{17}, \dfrac{-7}{17}\right).
-               \]
-             \end{solucao}
              \item Considere um triângulo $ABC$ onde $A(3,3)$, $B(0,1)$ e $C(1,6)$.
              \begin{enumerate}[label=({\roman*})]\label{exemploprojecao2}
                \item Verifique que $ABC$ é um triângulo retângulo em $A$.
                \item Calcule a projeção do cateto $BA$ sobre a hipotenusa $BC$.
                \item Determine o pé da altura do triângulo relativo ao vértice $A$.
              \end{enumerate}
-             \begin{solucao}
-               Considere o triângulo abaixo
-               \begin{figure}[!h]
-                \centering
-                \caption{Exemplo \ref{exemplosprojecao}, exercício \ref{exemploprojecao2}}
-                \includegraphics{exemplo-vetores-projecao-plano-cartesiano.pdf}
-               \end{figure}
-               \begin{enumerate}[label=({\roman*})]
-                 \item Basta verificar que $\vec{AB}\perp\vec{AC}$. Assim como $\vec{AB} = (-3,-2)$ e $\vec{AC} = (-2,3)$ temos
-                 \[
-                    \inner{AB}{AC} = (-3)(-2) + (-2)3 = 0.
-                 \]
-                 Logo $ABC$ é um triângulo retângulo.
-                 \item Temos $\vec{BA} = (3,2)$ e $\vec{BC} = (1,5)$. Daí
-                 \[
-                    \proj_{\vec{BC}}\vec{BA} = \dfrac{\inner{BC}{BA}}{\norm{\vec{BC}}^2}\vec{BC} = \dfrac{\langle (3,2), (1,5)\rangle}{\norm{(1,5)}^2}(1,5) = \dfrac{13}{26}(1,5).
-                 \]
-                 Assim $\proj_{\vec{BC}}\vec{BA} = \left(\dfrac{1}{2},\dfrac{5}{2}\right)$.
-                 \item Seja $P(x_1, y_1)$ o pé da altura do triângulo $ABC$ relativo ao vértice $A$. Então
-                 \begin{align*}
-                   \vec{BP} = \proj_{\vec{BC}}\vec{BA}\\
-                   (x_1, y_1 - 1) = \left(\dfrac{1}{2}, \dfrac{5}{2}\right).
-                 \end{align*}
-                 Logo $P\left(\dfrac{1}{2},\dfrac{7}{2}\right)$.
-               \end{enumerate}
-             \end{solucao}
           \end{enumerate}
         \end{exemplos}
     \end{frame}
