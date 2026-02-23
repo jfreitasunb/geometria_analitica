@@ -604,7 +604,7 @@
 
 
         \begin{observacao}
-          \begin{enumerate}
+          \begin{enumerate}[label=({\roman*})]
             \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposição \ref{propriedades-produto-interno} podem ser estendidas para qualquer número de vetores e escalares:
             \[
               \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} )\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
@@ -653,13 +653,13 @@
 
         \begin{proposicao}\label{DesigualdadeTriangular}
           Sejam $\vec{u}$ e $\vec{v}$ vetores.
-          \begin{enumerate}
+          \begin{enumerate}[label=({\roman*})]
             \item $|\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}$ [Desigualdade de Scharwz]\index{Desigualdade de Scharwz}
             \item $\norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}$ [Desigualdade Triangular]\index{Desigualdade Triangular}
           \end{enumerate}
         \end{proposicao}
         \begin{prova}
-          \begin{enumerate}
+          \begin{enumerate}[label=({\roman*})]
             \item Se $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$ a desigualdade é verdadeira. Suponha então que $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$. Seja $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$. Temos
             \[
               0 \le |\cos\theta| \le 1
@@ -703,7 +703,7 @@
 
         \begin{definicao}\label{projecao_ortogonal}
           Seja $\vec{u}$ um vetor não nulo. Dado qualquer vetor $\vec{v}$, o vetor $\vec{OP}$ é chamado de \textbf{projeção ortogonal} de $\vec{v}$ sobre $\vec{u}$, e é indicado por $\proj_{\vec{u}}\vec{v}$ se satisfaz as seguintes condições:\index{Vetores!Projeção ortogonal}
-          \begin{enumerate}
+          \begin{enumerate}[label=({\roman*})]
             \item $\vec{OP} \varparallel\vec{u}$
             \item $(\vec{v} - \vec{OP}) \perp \vec{u}$.
           \end{enumerate}
@@ -714,7 +714,7 @@
 
 
         Podemos também escrever
-        \begin{enumerate}
+        \begin{enumerate}[label=({\roman*})]
           \item $\proj_{\vec{u}}\vec{v} \varparallel\vec{u}$
             \item $(\vec{v} - \proj_{\vec{u}}\vec{v}) \perp \vec{u}$.
         \end{enumerate}
@@ -799,7 +799,7 @@
 
 
         \begin{exemplos}\label{exemplosprojecao}
-          \begin{enumerate}
+          \begin{enumerate}[label=({\roman*})]
             \item Encontre a projeção ortogonal do vetor $\vec{v} = (4, -1)$ sobre o vetor $\vec{u} = (2, 1)$.
             \begin{solucao}
                Temos
@@ -830,7 +830,7 @@
                \]
              \end{solucao}
              \item Considere um triângulo $ABC$ onde $A(3,3)$, $B(0,1)$ e $C(1,6)$.
-             \begin{enumerate}\label{exemploprojecao2}
+             \begin{enumerate}[label=({\roman*})]\label{exemploprojecao2}
                \item Verifique que $ABC$ é um triângulo retângulo em $A$.
                \item Calcule a projeção do cateto $BA$ sobre a hipotenusa $BC$.
                \item Determine o pé da altura do triângulo relativo ao vértice $A$.
@@ -842,7 +842,7 @@
                 \caption{Exemplo \ref{exemplosprojecao}, exercício \ref{exemploprojecao2}}
                 \includegraphics{exemplo-vetores-projecao-plano-cartesiano.pdf}
                \end{figure}
-               \begin{enumerate}
+               \begin{enumerate}[label=({\roman*})]
                  \item Basta verificar que $\vec{AB}\perp\vec{AC}$. Assim como $\vec{AB} = (-3,-2)$ e $\vec{AC} = (-2,3)$ temos
                  \[
                     \inner{AB}{AC} = (-3)(-2) + (-2)3 = 0.
