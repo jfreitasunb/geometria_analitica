@@ -36,23 +36,26 @@
       O conjunto de pontos em $\real^3$ satisfazendo uma equação da forma \eqref{equacao_quadrica} é chamado de uma \textbf{quádrica}. Observe que pelo menos um dos números $a$, $b$, $c$, $d$, $e$ ou $f$ deve ser não nulo.\index{Quádricas}
 
       Nosso principal objetivo será tentar simplificar a equação \eqref{equacao_quadrica} de modo que seja possível identificar que objeto tal equação representa.
+    \end{frame}
 
-
-      \section{Esfera} % (fold)
-      \label{sec:esfera}
+    \begin{frame}
       \begin{definicao}
           Uma \textbf{esfera} é uma quádrica com equação na forma\index{Quádricas!Esfera}
           \begin{equation}\label{equacao_esfera}
               x^2 + y^2 + z^2 = r^2.
           \end{equation}
       \end{definicao}
+    \end{frame}
 
+    \begin{frame}
       \begin{figure}[!h]
           \centering
           \caption{Esfera: $x^2 + y^2 + z^2 = r^2$}
           \includegraphics[scale=0.7]{esfera.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       \section{Elipsoide} % (fold)
       \label{sec:elipsoide}
       \begin{definicao}
@@ -62,13 +65,17 @@
           \end{equation}
           onde os números reais $a$, $b$ e $c$ são positivos e pelo menos dois deles são distintos.\index{Quádricas!Elipsóide}
       \end{definicao}
+    \end{frame}
 
+    \begin{frame}
       \begin{figure}[h]
           \centering
           \caption{Elipsoide: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
           \includegraphics[scale=0.7]{elipsoide.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       Considere o plano $\pi: z = k$. Qual a interseção de $\pi$ com o elipsoide de equação \eqref{equacao_elipsoide}? A interseção é dada pelo sistema
       \[
           \begin{cases}
@@ -80,12 +87,16 @@
       \begin{equation}\label{intersecao_elipsoide_planoz}
           \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 - \dfrac{k^2}{c^2}.
       \end{equation}
+    \end{frame}
 
+    \begin{frame}
       Se $k^2 > c^2$, então a equação \eqref{intersecao_elipsoide_planoz} não admite solução pois $1 - k^2/c^2 < 0$. Assim seja $k^2 \le c^2$, isto é, $-c \le k \le c$. Se $k = c$, então a interseção é o ponto $(0,0,c)$ e se $k = -c$ é o ponto $(0,0,-c)$. Então seja $-c < k < c$ e denote $p = 1 - k^2/c^2$. Podemos reescrever \eqref{intersecao_elipsoide_planoz} como
       \begin{equation}\label{resultado_intersecao_elipsoide_planoz}
           \dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
       \end{equation}
+    \end{frame}
 
+    \begin{frame}
       Se $a = b$, então a equação \eqref{resultado_intersecao_elipsoide_planoz} é uma circunferência. Se $a \ne b$, então a equação \eqref{resultado_intersecao_elipsoide_planoz} descreve uma elipse.
 
       De modo análogo, se tomarmos $\pi : x = k$ ou $\pi : y = k$, as interseções serão sempre ou conjunto vazio ou um ponto ou uma circunferência ou uma elipse.
@@ -98,7 +109,9 @@
       % \end{figure}
 
       % section elipsoide (end)
+    \end{frame}
 
+    \begin{frame}
       \section{Paraboloides} % (fold)
       \label{sec:paraboloide}
       \begin{definicao}
@@ -112,19 +125,25 @@
               \item um \textbf{paraboloide de rotação} se $a = b$;\index{Quádricas!Parabolóide de rotação}
           \end{enumerate}
       \end{definicao}
+    \end{frame}
 
+    \begin{frame}
       \begin{figure}[!h]
           \centering
           \caption{Paraboloide Elíptico: $z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
           \includegraphics[scale=0.5]{paraboloide_eliptico.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       \begin{figure}[!h]
           \centering
           \caption{Paraboloide Hiperbólico: $z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2}$}
           \includegraphics[scale=0.5]{paraboloide_hiperbolico.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       A interseção do paraboloide
       \[
           z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2},
@@ -134,14 +153,18 @@
           z = \dfrac{k^2}{a^2} + \dfrac{y^2}{b^2},
       \]
       que é uma parábola. O mesmo ocorrerá com o plano $\pi: y = k$.
+    \end{frame}
 
+    \begin{frame}
       Agora a interseção com $z = k$ é dada forma
       \[
           \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = k.
       \]
 
       Se $k < 0$, então a interseção é vazia. Se $k = 0$, a interseção é o ponto $(0,0,0)$. Se $k > 0$, precisamos analisar o que ocorre com $a$ e $b$: se $a \ne b$, então obtemos uma elipse. Se $a = b$, então a interseção é uma circunferência.
+    \end{frame}
 
+    \begin{frame}
       \begin{definicao}
           Sejam $a$ e $b$ números reais positivos. A quádrica descrita pela equação
           \[
@@ -149,7 +172,9 @@
           \]
           é chamada de um um \textbf{paraboloide hiperbólico}.\index{Quádricas!Parabolóide hiperbólico}
       \end{definicao}
+    \end{frame}
 
+    \begin{frame}
       A interseção do paraboloide hiperbólico com o plano $\pi : z = k$ é dada por
       \[
           \begin{cases}
@@ -172,7 +197,9 @@
               z = 0
           \end{cases}.
       \]
+    \end{frame}
 
+    \begin{frame}
       Se $k \ne 0$, podemos escrever
       \[
           \dfrac{y^2}{kb^2} - \dfrac{x^2}{ka^2} = 1
@@ -184,7 +211,9 @@
           z = \dfrac{k^2}{b^2} - \dfrac{x^2}{a^2}
       \]
       que é uma parábola. O mesmo ocorre com o plano $\pi : x = k$.
+    \end{frame}
 
+    \begin{frame}
       % section paraboloide (end)
 
       \section{Hiperboloides} % (fold)
@@ -196,13 +225,17 @@
           \]
           onde os números reais $a$, $b$ e $c$ são positivos e pelo menos dois deles são distintos.\index{Quádricas!Hiperbolóide de uma folha}
       \end{definicao}
+    \end{frame}
 
+    \begin{frame}
       \begin{figure}[!h]
           \centering
           \caption{Hiperboloide de uma folha: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$}
           \includegraphics[scale=0.5]{hiperboloide_uma_folha.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       Para o caso do hiperboloide de uma folha a interseção com o plano $\pi : z = k$ é dada pelo sistema
       \[
           \begin{cases}
@@ -215,7 +248,9 @@
       \begin{equation}\label{resultado_intersecao_hiperboloide_1_folha_planoz}
           \dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
       \end{equation}
+    \end{frame}
 
+    \begin{frame}
       Se $a = b$, então a equação \eqref{resultado_intersecao_hiperboloide_1_folha_planoz} descreve uma circunferência. Se $a \ne b$, então a equação \eqref{resultado_intersecao_hiperboloide_1_folha_planoz} descreve uma elipse.
 
       Agora a interseção com o plano $\pi : y = k$ é descrita pela equação
@@ -230,6 +265,9 @@
       \[
           \left(\dfrac{x}{a} - \dfrac{z}{c}\right)\left(\dfrac{x}{a} + \dfrac{z}{c}\right).
       \]
+    \end{frame}
+
+    \begin{frame}
       Logo a interseção de $\pi$ com o hiperboloide de uma folha é o par de retas concorrentes
       \[
           r : \begin{cases}
@@ -248,7 +286,9 @@
       obtendo-se uma hipérbole.
 
       De modo análogo, obtemos as mesmas interseções se considerarmos o plano $\pi : x = k$.
+    \end{frame}
 
+    \begin{frame}
       \begin{definicao}
           Um \textbf{hiperboloide de duas folhas} é uma quádrica descrita pela equação
           \[
@@ -256,13 +296,17 @@
           \]
           onde os números reais $a$, $b$ e $c$ são positivos e pelo menos dois deles são distintos.\index{Quádricas!Hiperbolóide de duas folhas}
       \end{definicao}
+    \end{frame}
 
+    \begin{frame}
       \begin{figure}[!h]
           \centering
           \caption{Hiperboloide duas folhas: $\dfrac{z^2}{c^2} - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$}
           \includegraphics[scale=0.5]{hiperboloide_duas_folhas.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       A interseção do hiperboloide de duas folhas com a plano $\pi: y = k$ é dada por
       \[
           \dfrac{z^2}{c^2} - \dfrac{x^2}{a^2} = 1 +  \dfrac{k^2}{b^2}.
@@ -272,7 +316,9 @@
           \dfrac{z^2}{pc^2} - \dfrac{x^2}{pa^2} = 1
       \]
       que representa uma hipérbole.
+    \end{frame}
 
+    \begin{frame}
       A interseção com o plano $\pi: x = k$ é dada por
       \[
           \dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} = 1 +  \dfrac{k^2}{a^2}.
@@ -282,7 +328,9 @@
           \dfrac{z^2}{pc^2} - \dfrac{y^2}{pb^2} = 1
       \]
       que também é uma hipérbole.
+    \end{frame}
 
+    \begin{frame}
       Agora a interseção com o plano $\pi : z = k$ é dada por
       \begin{equation}\label{intersecao_hiperboloide_2_folhas_planoy}
           \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{k^2}{c^2} - 1.
@@ -297,7 +345,9 @@
           \dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
       \]
       Assim se $a = b$, então obtemos uma circunferência e se $a \ne b$, então a interseção é uma elipse.
+    \end{frame}
 
+    \begin{frame}
       % section hiperboloide (end)
 
       \section{Cone Elíptico} % (fold)
@@ -310,13 +360,16 @@
           \end{equation}
           em que $a$ e $b$ são números reais positivos. Se $a = b$, o cone é chamado de \textbf{cone circular}.
       \end{definicao}
+    \end{frame}
 
-      \begin{figure}[!hp]
+    \begin{frame}      \begin{figure}[!hp]
           \centering
           \caption{Cone elíptico: $z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
           \includegraphics[scale=1]{cone_eliptico.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       Seja $k \ne 0$. A interseção do cone elíptico de equação \eqref{cone_eliptico} com o plano $\pi : z = k$ é a elipse de equação
       \[
           \dfrac{x^2}{a^2k^2} + \dfrac{y^2}{b^2k^2} = 1.
@@ -329,12 +382,17 @@
       \[
           \dfrac{z^2}{k^2/a^2} - \dfrac{y^2}{b^2k^2/a^2} = 1.
       \]
+    \end{frame}
 
+    \begin{frame}
       As equações
       \[
           x^2 = \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}\quad \mbox{e}\quad y^2 = \dfrac{x^2}{a^2} + \dfrac{z^2}{c^2}
       \]
       também representam cones elípticos.
+    \end{frame}
+
+    \begin{frame}
       % section cone_eliptico (end)
 
       \section{Identificação de Quádricas} % (fold)
@@ -345,7 +403,12 @@
         ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
       \end{equation}
 
-      Queremos remover os termos $xy$, $xz$ e $yz$ da equação \eqref{equacao_geral_quadrica} para então usar uma translação de eixos, se necessário, e com isso identificar a quádrica definida por tal equação. Para isso vamos tentar encontrar uma matriz $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ onde os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ são unitários, ortogonais e tais que a mudança
+      Queremos remover os termos $xy$, $xz$ e $yz$ da equação \eqref{equacao_geral_quadrica} para então usar uma translação de eixos, se necessário, e com isso identificar a quádrica definida por tal equação.
+
+    \end{frame}
+
+    \begin{frame}
+      Para isso vamos tentar encontrar uma matriz $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ onde os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ são unitários, ortogonais e tais que a mudança
       \begin{equation}\label{substituicao_quadrica}
           \begin{bmatrix}
               x\\
@@ -361,7 +424,9 @@
       \begin{equation}\label{equacao_rotacionada_quadrica}
         a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0.
       \end{equation}
+    \end{frame}
 
+    \begin{frame}
       Inicialmente observe que a \eqref{equacao_geral_quadrica} pode ser escrita na forma
       \begin{equation}\label{equacao_matricial_quadrica}
         X^tAX + KX + J = [0]
@@ -381,7 +446,12 @@
         z
       \end{bmatrix}\quad\mbox{e}\quad J = [j]
       \]
-      e $t$ denota a matriz transposta. Queremos fazer uma substituição da forma \eqref{substituicao_quadrica}, isto é, $X = QX'$ para com isso obter uma equação na forma
+      e $t$ denota a matriz transposta.
+
+    \end{frame}
+
+    \begin{frame}
+      Queremos fazer uma substituição da forma \eqref{substituicao_quadrica}, isto é, $X = QX'$ para com isso obter uma equação na forma
       \[
           X_1^tBX_1 + K'X_1 + J = [0]
       \]
@@ -399,7 +469,9 @@
               x_1\\y_1\\z_1
           \end{bmatrix}.
       \]
+    \end{frame}
 
+    \begin{frame}
       Agora observe que a matriz $Q$ é formada por vetores unitários e ortogonais, daí $Q^tQ = I_3$ e com isso obtemos
       \begin{align*}
         B - \lambda I_3 = Q^t A Q - \lambda I_3 = Q^t A Q - Q^t I_3 Q = Q^t (A - \lambda I_3)Q
@@ -408,7 +480,9 @@
       \begin{align*}
         \det(B - \lambda I_3) = \det[Q^t(A - \lambda I_3)Q] = \det(Q^t)\det(A - \lambda I_3)\det(Q) = \det(A - \lambda I_3).
       \end{align*}
+    \end{frame}
 
+    \begin{frame}
       Assim escolhendo a matriz $Q$ de tal forma que $d' = e' = f' = 0$, o que é sempre possível, obtemos
       \begin{align*}
         \det(A - \lambda I_3) = \det(B - \lambda I_3) = \det \begin{bmatrix}
@@ -417,7 +491,9 @@
           0 & 0 & c' - \lambda
         \end{bmatrix} = -(\lambda - a')(\lambda - b')(\lambda - c').
       \end{align*}
+    \end{frame}
 
+    \begin{frame}
       Logo os coeficientes $a'$, $b'$ e $c'$ são raízes da equação de terceiro grau
       \begin{equation}
         p(\lambda) = \det(A - \lambda I_3) = \det \begin{bmatrix}
@@ -426,7 +502,9 @@
           e/2 & f/2 & c - \lambda
         \end{bmatrix}.
       \end{equation}
+    \end{frame}
 
+    \begin{frame}
       Agora para determinar a matriz $Q$ começamos com a equação
       \[
         B = Q^t A Q
@@ -435,6 +513,9 @@
       \[
         Q B = AQ.
       \]
+    \end{frame}
+
+    \begin{frame}
       Mas
       \[
           AQ = A \begin{bmatrix}
@@ -455,6 +536,9 @@
               a'\vec{U_1} & b'\vec{U_2} & c'\vec{U_3}
           \end{bmatrix}.
       \]
+    \end{frame}
+
+    \begin{frame}
       Daí $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ devem satisfazer as equações
       \[
           A\vec{U_1} = a'\vec{U_1},\quad A\vec{U_2} = b'\vec{U_2} \quad A\vec{U_3} = c'\vec{U_3}.
@@ -470,6 +554,9 @@
       \[
         (A - a'I_3)X = [0].
       \]
+    \end{frame}
+
+    \begin{frame}
       Analogamente, $\vec{U_2}$ é uma solução de norma 1 do sistema linear
       \[
         (A - b'I_3)X = [0],
@@ -478,10 +565,15 @@
       \[
           \vec{U_3} = \vec{U_1}\times\vec{U_2}.
       \]
+    \end{frame}
+
+    \begin{frame}
       Como $\vec{U_1}$ e $\vec{U_2}$ são de norma 1, então $\vec{U_3}$ também é de norma 1.
 
       Portanto a mudança que elemina os termos $xy$, $xz$ e $yz$ é dada por $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$. Assim temos o seguinte teorema:
+    \end{frame}
 
+    \begin{frame}
       \begin{teorema}
         Considere a equação
         \[
@@ -507,6 +599,11 @@
         \[
           a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0
         \]
+      \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+      \begin{teorema}
         em que $a'$, $b'$ e $c'$ são raízes de
         \[
           p(\lambda) = \det(A - \lambda I_3) = \det \begin{bmatrix}
@@ -528,6 +625,11 @@
             0\\0\\0
           \end{bmatrix},
         \]
+      \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+      \begin{teorema}
         $\vec{U_2}$ é uma solução de norma 1 do sistema linear
         \[
           \begin{bmatrix}
@@ -545,13 +647,21 @@
             \vec{U_3} = \vec{U_1} \times \vec{U_2}
         \]
       \end{teorema}
+    \end{frame}
 
+    \begin{frame}
       \begin{teorema}
         Seja $\mathcal{S}$ o conjunto dos pontos do espaço que satisfazem a equação
         \[
           ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0,
         \]
-        com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ não simultaneamente nulos. Sejam $a'$, $b'$ e $c'$ raízes de
+        com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ não simultaneamente nulos. 
+      \end{teorema}
+    \end{frame}
+
+    \begin{frame}
+      \begin{teorema}
+        Sejam $a'$, $b'$ e $c'$ raízes de
         \[
           p(\lambda) = \det \begin{bmatrix}
             a - \lambda & d/2 & e/2 \\
@@ -566,145 +676,14 @@
           \item Se exatamente dois entre $a'$, $b'$ e $c'$ forem nulos, então $\mathcal{S}$ é um cilindro parabólico, um par de planos paralelos ou um plano.
         \end{enumerate}
       \end{teorema}
+    \end{frame}
 
+    \begin{frame}
       \begin{exemplos}
           Identifique as seguintes quádricas:
           \begin{enumerate}[label=({\roman*})]
               \item $x^2 = 2yz$
-              \begin{solucao}
-                  Inicialmente essa equação pode ser escrita como
-                  \[
-                      X^tAX = 0
-                  \]
-                  onde
-                  \[
-                      X = \begin{bmatrix}
-                          x\\ y\\ z
-                      \end{bmatrix},\quad A = \begin{bmatrix}
-                          1 & 0 & 0\\
-                          0 & 0 & -1\\
-                          0 & -1 & 0
-                      \end{bmatrix}.
-                  \]
-                  Agora
-                  \begin{align*}
-                      p(\lambda) &= \det(A - \lambda I_3) = \det \begin{bmatrix}
-                          1 - \lambda & 0 & 0\\
-                          0 & -\lambda & 0\\
-                          0 & -1 & -\lambda
-                      \end{bmatrix}\\
-                      p(\lambda) &= (1 - \lambda)\lambda^2 - (1 - \lambda)\\
-                      p(\lambda) &= (1 - \lambda)(\lambda^2 - 1)
-                  \end{align*}
-                  cujas raízes são $\lambda = 1$ e $\lambda = \pm 1$. Assim podemos tomar $a' = b' = 1$ e $c' = -1$.
-
-                  Para encontrar $\vec{U_1}$ precisamos resolver o sistema
-                  \begin{align*}
-                      (A - I_3)X = 0\\
-                      \begin{bmatrix}
-                          0 & 0 & 0\\
-                          0 & -1 & -1\\
-                          0 & -1 & -1
-                      \end{bmatrix} \begin{bmatrix}
-                          x\\ y\\ z
-                      \end{bmatrix} = \begin{bmatrix}
-                          0 \\ 0\\ 0
-                      \end{bmatrix}.
-                  \end{align*}
-                  Tal sistema possui solução geral dada pelo conjunto
-                  \[
-                      \{(x, y, z) \mid y + z = 0 \in \real\} = \{(x, -z, z) \mid x, z \in \real\}.
-                  \]
-                  Agora note que
-                  \[
-                      (x, -z, z) = x(1, 0, 0) + z(0, 1, 1)
-                  \]
-                  e os vetores $\vec{v_1} = (1,0,0)$ e $\vec{v_2} = (0,-1,1)$ são ortogonais.
-
-                  Como $a' = b'$ devemos encontrar vetores $\vec{U_1}$ e $\vec{U_2}$ soluções unitárias e ortogonais do sistema linear $(A -I_3)X = 0$. Assim podemos tomar
-                  \begin{align*}
-                      \vec{U_1} &= \dfrac{1}{\norm{\vec{v_1}}}\vec{v_1} = (1,0,0)\\
-                      \vec{U_2} &= \dfrac{1}{\norm{\vec{v_2}}}\vec{v_2} = \left(0,-\dfrac{1}{\sqrt{2}},\dfrac{1}{\sqrt{2}}\right)\\
-                      \vec{U_3} &= \vec{U_1}\times\vec{U_2} = \left(0,-\dfrac{1}{\sqrt{2}},-\dfrac{1}{\sqrt{2}}\right)
-                  \end{align*}
-                  e com  isso a mudança $X = QX_1$, onde $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ transforma a equação original em
-                  \[
-                      x_1^2 + y_1^2 - z_1^2 = 0
-                  \]
-                  que representa um cone circular.
-              \end{solucao}
-
               \item $7x^2 + 10y^2 + 7z^2 - 4xy + 2xz - 4yz - 6 = 0$
-              \begin{solucao}
-                  Inicialmente essa equação pode ser escrita como
-                  \[
-                      X^tAX - 6 = 0
-                  \]
-                  onde
-                  \[
-                      X = \begin{bmatrix}
-                          x\\ y\\ z
-                      \end{bmatrix},\quad A = \begin{bmatrix}
-                          7 & -2 & 1\\
-                          -2 & 10 & -2\\
-                          1 & -2 & 7
-                      \end{bmatrix}.
-                  \]
-                  Agora
-                  \begin{align*}
-                      p(\lambda) &= \det(A - \lambda I_3) = \det \begin{bmatrix}
-                          7 - \lambda & -2 & 1\\
-                          -2 & 10 -\lambda & -2\\
-                          1 & -2 & 7 -\lambda
-                      \end{bmatrix}\\
-                      p(\lambda) &= (7 - \lambda)^2(10 - \lambda) + 4 + 4 - (10 - \lambda) - 4(7 - \lambda) - 4(7 - \lambda)\\
-                      p(\lambda) &= (10 - \lambda)[(7 - \lambda)^2 - 1)] - 8(6 - \lambda)\\
-                      p(\lambda) &= (10 - \lambda)(6 - \lambda)(8 - \lambda) - 8(6 - \lambda)\\
-                      p(\lambda) &= (6 - \lambda)(\lambda^2 - 18\lambda + 72)\\
-                      p(\lambda) &= (6 - \lambda)^2(12 - \lambda)
-                  \end{align*}
-                  cujas raízes são $\lambda = 6$ e $\lambda = 12$. Assim podemos tomar $a' = b' = 6$ e $c' = 12$.
-
-                  Para encontrar $\vec{U_1}$ precisamos resolver o sistema
-                  \begin{align*}
-                      (A - 6I_3)X &= 0\\
-                      \begin{bmatrix}
-                          1 & -2 & 1\\
-                          -2 & 4 & -2\\
-                          1 & -2 & 1
-                      \end{bmatrix} \begin{bmatrix}
-                          x\\ y\\ z
-                      \end{bmatrix} &= \begin{bmatrix}
-                          0 \\ 0\\ 0
-                      \end{bmatrix}.
-                  \end{align*}
-                  Tal sistema possui solução geral dada pelo conjunto
-                  \[
-                      \{(x, y, z) \mid x + 2y + z = 0 \in \real\} = \{(2y - z, y, z) \mid x, z \in \real\}.
-                  \]
-                  Agora note que
-                  \[
-                      (2y - z, y, z) = z(-1, 0, 1) + y(2, 1, 0)
-                  \]
-                  e observe que neste caso os vetores $\vec{v_1} = (-1,0,1)$ e $\vec{v_2} = (2,1,0)$ não são ortogonais. Tomando
-                  \[
-                      \vec{w} = \vec{v_2} - \proj_{\vec{v_1}}\vec{v_2} = (1, 1, 1)
-                  \]
-                  então $\vec{w}\perp \vec{v_1}$.
-
-                  Como $a' = b'$ devemos encontrar vetores $\vec{U_1}$ e $\vec{U_2}$ soluções unitárias e ortogonais do sistema linear $(A - 6I_3)X = 0$. Assim podemos tomar
-                  \begin{align*}
-                      \vec{U_1} &= \dfrac{1}{\norm{\vec{v_1}}}\vec{v_1} = \left(-\dfrac{1}{\sqrt{2}},0,\dfrac{1}{\sqrt{2}}\right)\\
-                      \vec{U_2} &= \dfrac{1}{\norm{\vec{w}}}\vec{w} = \left(\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}},\dfrac{1}{\sqrt{3}}\right)\\
-                      \vec{U_3} &= \vec{U_1}\times\vec{U_2} = \left(-\dfrac{1}{\sqrt{6}},\dfrac{2}{\sqrt{6}},-\dfrac{1}{\sqrt{6}}\right)
-                  \end{align*}
-                  e com isso a mudança $X = QX_1$, onde $Q = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ transforma a equação original em
-                  \begin{align*}
-                      6x_1^2 + 6y_1^2 + 12z_1^2 = 6\\
-                      x_1^2 + y_1^2 + \dfrac{z_1^2}{1/2} = 1
-                  \end{align*}
-                  que representa um elipsoide.
-              \end{solucao}
           \end{enumerate}
       \end{exemplos}
     \end{frame}
