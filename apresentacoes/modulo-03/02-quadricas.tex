@@ -431,40 +431,40 @@
           X_1^tBX_1 + K'X_1 + J = [0]
       \]
       onde
-      \[
-          B = \begin{bmatrix}
+      \begin{align*}
+        B &= \begin{bmatrix}
               a' & d'/2 & e'/2\\
               d'/2 & b' & f'/2\\
               e'/2 & f'/2 & c'
-          \end{bmatrix} = Q^tAQ,\quad K' = \begin{bmatrix}
+              \end{bmatrix} = Q^tAQ, \\ K' &= \begin{bmatrix}
               g' & h' & i'
-          \end{bmatrix} = KQ,\quad X = \begin{bmatrix}
+              \end{bmatrix} = KQ,\\ X &= \begin{bmatrix}
               x\\y\\z
-          \end{bmatrix},\quad X_1 = \begin{bmatrix}
+          \end{bmatrix}, X_1 = \begin{bmatrix}
               x_1\\y_1\\z_1
           \end{bmatrix}.
-      \]
+        \end{align*}
     \end{frame}
 
     \begin{frame}
       Agora observe que a matriz $Q$ é formada por vetores unitários e ortogonais, daí $Q^tQ = I_3$ e com isso obtemos
       \begin{align*}
-        B - \lambda I_3 = Q^t A Q - \lambda I_3 = Q^t A Q - Q^t I_3 Q = Q^t (A - \lambda I_3)Q
+        B - \lambda I_3 &= Q^t A Q - \lambda I_3 \\ &= Q^t A Q - Q^t I_3 Q \\ &= Q^t (A - \lambda I_3)Q
       \end{align*}
       para todo $\lambda \in \real$. Com isso
       \begin{align*}
-        \det(B - \lambda I_3) = \det[Q^t(A - \lambda I_3)Q] = \det(Q^t)\det(A - \lambda I_3)\det(Q) = \det(A - \lambda I_3).
+        \det(B - \lambda I_3) &= \det[Q^t(A - \lambda I_3)Q] \\ &= \det(Q^t)\det(A - \lambda I_3)\det(Q) \\ &= \det(A - \lambda I_3).
       \end{align*}
     \end{frame}
 
     \begin{frame}
       Assim escolhendo a matriz $Q$ de tal forma que $d' = e' = f' = 0$, o que é sempre possível, obtemos
       \begin{align*}
-        \det(A - \lambda I_3) = \det(B - \lambda I_3) = \det \begin{bmatrix}
+        \det(A - \lambda I_3) &= \det(B - \lambda I_3) \\ &= \det \begin{bmatrix}
           a' - \lambda & 0 & 0\\
           0 & b' - \lambda & 0\\
           0 & 0 & c' - \lambda
-        \end{bmatrix} = -(\lambda - a')(\lambda - b')(\lambda - c').
+        \end{bmatrix} \\ &= -(\lambda - a')(\lambda - b')(\lambda - c').
       \end{align*}
     \end{frame}
 
