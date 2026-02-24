@@ -29,13 +29,22 @@
 
     \begin{frame}
       Fixemos um ponto $O$ no espaço, que será denominado como \textbf{origem}. Tomemos três retas duas a duas perpendiculares entre si e concorrentes em $O$, que serão denominados \textbf{eixos coordenados} e serão denotados por $Ox$, $Oy$ e $Oz$.
+    \end{frame}
+
+    \begin{frame}
+
       \begin{figure}[!h]
         \centering
         \caption{Sistema de coordenadas tridimensionais}
         \includegraphics{eixos-coordenados-espaco.pdf}
       \end{figure}
+    \end{frame}
 
+    \begin{frame}
       Projetando um ponto $P$ do espaço ortogonalmente sobre cada um dos eixos coordenados podemos representar os pontos do espaço por ternas ordenadas $(a,b,c)$ de números reais.
+    \end{frame}
+
+    \begin{frame}
 
       \begin{figure}[!h]
         \centering
@@ -59,16 +68,26 @@
         %   \draw[dashed, color=red] (Pxy) -- (P);
         %   \end{tikzpicture}
       \end{figure}
+    \end{frame}
+
+    \begin{frame}
 
       Assim os pontos de $\real^3$ são descritos por
       \[
         \real^3 = \{(a,b,c)\mid a,b,c \in \real\}.
       \]
+    \end{frame}
+
+    \begin{frame}
 
       Sejam $P(x_1,y_1,z_1)$ e $Q(x_2,y_2,z_2)$ dois pontos de $\real^3$. Traçando por $P$ um segmento $PS$ paralelo ao segmento $P_0Q_0$, onde $P_0(x_1,y_1)$ e $Q_0(x_2,y_2)$, obtemos que
       \[
         d(P,Q)^2 = d(P_0,Q_0)^2 + |SQ|^2.
       \]
+    \end{frame}
+
+    \begin{frame}
+
       \begin{figure}
         \centering
         \caption{Distância entre pontos em $\real^3$}
@@ -105,11 +124,17 @@
         %   \draw[color=green] (Pxy) -- (Qxy);
         %   \end{tikzpicture}
       \end{figure}
+    \end{frame}
+
+    \begin{frame}
 
       Agora, $|SQ| = |z_2 - z_1|$ e daí
       \[
         D(P,Q) = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (z_1 - z_2)^2}.
       \]
+    \end{frame}
+
+    \begin{frame}
 
       \begin{exemplos}
         A distância entre os pontos $P(2,-1,1)$ e $Q(-3,4,2)$ é
@@ -117,11 +142,17 @@
           d(P,Q) = \sqrt{[2 - (-3)]^2 + (-1-4)^2 + (1-2)^2} = \sqrt{51}.
         \]
       \end{exemplos}
+    \end{frame}
+
+    \begin{frame}
 
       Os vetores e as operações com eles podem ser definidas utilizando-se dos eixos coordenados do espaço. Para isso, um ponto $P$ do espaço é representado em $\real^3$ por uma terna de coordenadas $P(x_1, y_1,z_1)$, onde $x_1$, $y_1$, $z_1 \in \real$.
 
       Seja $\vec{u}$ um vetor no espaço. Sabemos que $\vec{u}$ é um representante de uma certa classe de equipolência dos segmentos orientados $(B,C)$. Para este segmento orientado $(B,C)$ podemos encontrar um ponto $A(x_1, y_1,z_1)$ tal que o segmento orientado $(O,A)$, onde $O(0,0,0)$, tem o mesmo comprimento, a mesma direção e o mesmo sentido de $(B,C)$. Assim o vetor $\vec{u}$ pode ser representado pelo segmento orientado $(O,A)$. Portanto qualquer vetor em $\real^3$ pode ser representado como um segmento com origem no ponto $(0,0,0)$ e extremidade em um ponto $(x_1,y_1,z_1)$.
 
+    \end{frame}
+
+    \begin{frame}
 
       Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a notação vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e daí escrevemos
       \[
@@ -131,15 +162,21 @@
       \[
         \vec{0} = (0,0,0).
       \]
+    \end{frame}
+
+    \begin{frame}
 
       Desse modo, podemos reescrever a definição de soma e produto por escalar da seguinte forma:
       \begin{definicao}
         Sejam $\alpha \in \real$, $\vec{u} = (x_1, y_1,z_1)$ e $\vec{v} = (x_2, y_2,z_2)$. Então:
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item $\vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2,z_1 + z_2)$;
           \item $\alpha \vec{u} = (\alpha x_1, \alpha y_1, \alpha z_1)$.
         \end{enumerate}
       \end{definicao}
+    \end{frame}
+
+    \begin{frame}
 
       % \begin{center}
       %   \begin{tikzpicture}[scale=2]%soma de vetores no plano
@@ -221,6 +258,9 @@
           x_1\\y_1\\z_1
         \end{bmatrix}.
       \]
+    \end{frame}
+
+    \begin{frame}
 
       Vimos que a norma de um vetor é definida como o comprimento de um segmento orientado que o represente. Com a representação de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
       \begin{definicao}
@@ -229,6 +269,9 @@
           \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2 + z_1^2}.
         \]
       \end{definicao}
+    \end{frame}
+
+    \begin{frame}
 
       Um vetor de norma 1 é chamado de \textbf{vetor unitário}. Dado um vetor não nulo $\vec{u}$ o vetor
       \[
@@ -238,6 +281,9 @@
       \[
         \norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \dfrac{1}{\norm{\vec{u}}}\norm{\vec{u}} = 1.
       \]
+    \end{frame}
+
+    \begin{frame}
 
       \begin{exemplo}
         Seja $\vec{u} = (-2,3,2)$ um vetor. Então
@@ -247,17 +293,20 @@
         \end{align*}
       \end{exemplo}
       % section vetores_plano (end)
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}
         Sejam $\vec{u} = (x_1, y_1,z_1)$ um vetor em $\real^3$ e $\alpha \in \real$. Então:
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item Se $\vec{u} \ne \vec{0}$, então $\norm{\vec{u}} \ne 0$.
           \item $\norm{\vec{u}} \ne 0$ se, e somente se, $\vec{u} \ne \vec{0}$.
           \item $\norm{\alpha\vec{u}} = |\alpha|\norm{\vec{u}}$.
         \end{enumerate}
       \end{proposicao}
       \begin{prova}
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item  Se $\vec{u} \ne (0,0,0) = \vec{0}$, então $x_1 \ne 0$ ou $y_1 \ne 0$ ou $z_1 \ne 0$. Daí
           \[
             \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2 + z_1^2} > 0.
@@ -266,6 +315,9 @@
           \item $\norm{\alpha\vec{u}} = \norm{\alpha(x_1, y_1, \alpha z_1)} = \sqrt{(\alpha x_1)^2 + (\alpha y_1)^2 + (\alpha z_1)^2} = \sqrt{\alpha^2(x_1^2 + y_1^2 + z_1^2)} = |\alpha|\norm{\vec{u}}$.
         \end{enumerate}
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       \subsection{ângulo entre vetores e produto interno no espaço} % (fold)
       \label{sub:angulo_entre_vetores_e_produto_interno_no_espaco}
@@ -276,6 +328,9 @@
       \begin{definicao}
         Quando o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ é reto, isto é, $\theta = \pi/2$, ou um deles é o vetor nulo, dizemos que os vetores $\vec{u}$ e $\vec{v}$ são \textbf{ortogonais} ou \textbf{perpendiculares} entre si. Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.\index{Vetores!Ortogonais}
       \end{definicao}
+    \end{frame}
+
+    \begin{frame}
 
       Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
       \begin{figure}[!h]
@@ -302,11 +357,14 @@
         %   \end{scope}
         % \end{tikzpicture}
       \end{figure}
+    \end{frame}
+
+    \begin{frame}
 
 
       \begin{definicao}\label{produtointerno-espaco}
         O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que\index{Vetores!Produto Escalar}
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item Se $\vec{u}$ ou $\vec{v}$ é nulo, então $\inner{u}{v} = 0$.
           \item Se $\vec{u}$ e $\vec{v}$ não são nulos e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, então
           \begin{align}\label{produto-interno-espaco}
@@ -314,10 +372,13 @@
           \end{align}
         \end{enumerate}
       \end{definicao}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}
         Sejam $\vec{u}$ e $\vec{v}$ vetores e $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$.
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item Se $\vec{u}$ e $\vec{v}$ não são nulos, então
           \[
             \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
@@ -329,6 +390,10 @@
           \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{u}{v} = 0$.
           \end{enumerate}
       \end{proposicao}
+    \end{frame}
+
+    \begin{frame}
+
       De modo análogo ao caso para vetores no plano, temos:
       \begin{teorema}
         O produto interno de dois vetores $\vec{u} = (x_1, y_1,z_1)$ e $\vec{v} = (x_2, y_2,z_2)$ em $\real^3$ é dado por
@@ -336,9 +401,12 @@
           \inner{u}{v} = x_1x_2 + y_1y_2 + z_1z_2.
         \]
       \end{teorema}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{exemplos}
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item Sejam $\vec{u} = (2, -3, 1)$ e $\vec{v} = (1,1, 0)$. Determine o ângulo entre $\vec{u}$ e $\vec{v}$.
           \begin{solucao}
             Temos
@@ -362,6 +430,9 @@
           \end{solucao}
         \end{enumerate}
       \end{exemplos}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}\label{propriedades-produto-vetorial-espaco}
         Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1,z_1)$, $\vec{v} = (x_2, y_2,z_2)$ e $\vec{w} = (x_3, y_3,z_3)$ e qualquer que seja o número real $\lambda$ temos
@@ -385,6 +456,9 @@
           \item Se $\vec{u} \ne \vec{0}$, então $x_1 \ne 0$ ou $y_1 \ne 0$ ou $z_1 \ne 0$. Daí $\inner{u}{u} = x_1^2 + y_1^2 + z_1^2> 0$, como queríamos.
         \end{enumerate}
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{observacao}
         \begin{enumerate}[label=({\alph*})]
@@ -396,9 +470,12 @@
           \item De $\inner{u}{v} = 0$ não podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1, 1)$ e $\vec{v} = (-2, 4, 0)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
         \end{enumerate}
       \end{observacao}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}Sejam $\vec{u}$ e $\vec{v}$ vetores.
-        \begin{enumerate}
+        \begin{enumerate}[label=({\arabic*})]
           \item $\mid\inner{u}{v}\mid \le \norm{\vec{u}}\norm{\vec{v}}$ [Desigualdade de Scharwz]\index{Desigualdade de Scharwz}
           \item $\norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}$ [Desigualdade Triangular]\index{Desigualdade Triangular}
         \end{enumerate}
@@ -406,6 +483,9 @@
       \begin{prova}
         Análoga \`a prova da Proposição \ref{DesigualdadeTriangular}.
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       % subsection angulo_entre_vetores_e_produto_interno_no_espaco (end)
 
@@ -425,6 +505,10 @@
           a_2x + b_2y = -c_2z
         \end{cases}.
       \end{equation}
+    \end{frame}
+
+    \begin{frame}
+
       Suponha que $\vec{u}$ e $\vec{v}$ não são paralelos, daí pelo menos um dos determinantes
       \[
       d_{ab} = \det \begin{pmatrix}
@@ -448,6 +532,10 @@
         c_2 & b_2
       \end{pmatrix} = \dfrac{z(b_1c_2 - c_1b_2)}{d_{ab}}.
       \end{align*}
+    \end{frame}
+
+    \begin{frame}
+
       Analogamente, obtemos
       \[
         y = \dfrac{z(c_1a_2 - a_1c_2)}{d_{ab}}.
@@ -460,6 +548,10 @@
       \begin{equation}\label{produtovetorial}
         \vec{w} = (b_1c_2 - b_2c_1, a_2c_1 - a_1c_2, a_1b_2 - b_1a_2).
       \end{equation}
+    \end{frame}
+
+    \begin{frame}
+
       O vetor $\vec{w}$ dado por \eqref{produtovetorial} é chamado de \textbf{produto vetorial} de $\vec{u}$ por $\vec{v}$ e é denotado por $\vec{u}\times\vec{v}$.\index{Vetores no Espaço!Produto Vetorial}
 
       Um método alternativo para determinar o vetor $\vec{w}$ é o seguinte: denote por
@@ -472,6 +564,9 @@
       \[
         \vec{u} = (a_1,b_1,c_1) = a_1(1,0,0) + b_1(0,1,0) + c_1(0,0,1) = a_1\vec{i} + b_1\vec{j} + c_1\vec{k}.
       \]
+    \end{frame}
+
+    \begin{frame}
 
       Dados vetores $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$, seja $\vec{w}$ o produto vetorial de $\vec{u}$ e $\vec{v}$. Considere o determinante
       \[
@@ -489,6 +584,9 @@
           a_2 & b_2 & c_2
         \end{bmatrix} &= b_1c_2\vec{i} + c_1a_2\vec{j} + a_1b_2\vec{k} - b_1a_2\vec{k} - c_1b_2\vec{i} - a_1c_2\vec{j}\\ &= (b_1c_2 - c_1b_2)\vec{i} + (c_1a_2 - c_2a_1)\vec{j} + (a_1b_2 - a_2b_1)\vec{k} \\ &= (b_1c_2 - c_1b_2, c_1a_2 - c_2a_1, a_1b_2 - a_2b_1) = \vec{w}.
       \end{align*}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{exemplo}
         Sejam $\vec{u} = (-1,2,4)$ e $\vec{v} = (1,3,5)$. Determine $\vec{u}\times\vec{v}$ e $\vec{v}\times\vec{u}$.
@@ -513,6 +611,9 @@
           Portanto $\vec{v}\times\vec{u} = (2,-9,5) = -\vec{u}\times\vec{v}$.
         \end{solucao}
       \end{exemplo}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}
         Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$ e $\alpha \in \real$. Temos
@@ -526,10 +627,16 @@
       \begin{prova}
         Seguem diretamente das propriedades do determinante.
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{observacao}
         O sentido de $\vec{u}\times\vec{v}$ é dado pela regra da mão direita: se o ângulo entre $\vec{u}$ e $\vec{v}$ é $\theta$, giramos o vetor $\vec{u}$ de um ângulo $\theta$ até que coincida com o vetor $\vec{v}$ e acompanhamos o movimento com os dedos da mão direita, então o polegar vai apontar no sentido de $\vec{u}\times\vec{v}$.
       \end{observacao}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}\label{normaprodutovetorial}
         Sejam $\vec{u}$ e $\vec{v}$ vetores no espaço. Então
@@ -540,6 +647,9 @@
       \begin{prova}
         Seja $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$. Basta calcular $\norm{\vec{u}\times\vec{v}}^2$ e $\norm{\vec{u}}^2\norm{\vec{v}}^2 - \inner{u}{v}^2$  e comparar os termos.
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}
         Quaisquer que sejam os vetores não nulos $\vec{u}$ e $\vec{v}$ em $\real^3$, tem-se
@@ -559,6 +669,9 @@
         \]
         pois $0 \le \theta \le \pi$.
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
       \begin{figure}[!h]
@@ -598,6 +711,11 @@
       \[
         \mathcal{A} = bh.
       \]
+      
+    \end{frame}
+
+    \begin{frame}
+
       Neste caso $b = \norm{\vec{u}}$ e $h = \norm{\vec{v}}\sin\theta$. Logo
       \[
         \mathcal{A} = \norm{\vec{u}}\norm{\vec{v}}\sin\theta = \norm{\vec{u}\times\vec{v}}.
@@ -619,6 +737,9 @@
         \end{solucao}
       \end{exemplo}
       % subsection produto_vetorial (end)
+    \end{frame}
+
+    \begin{frame}
 
       \subsection{Produto Misto} % (fold)
       \label{sub:produto_misto}
@@ -631,6 +752,9 @@
       \begin{align*}
         \langle\vec{u}\times\vec{v}, \vec{w}\rangle &= \langle(b_1c_2 - c_2b_1,a_2c_1 - a_1c_2, a_1b_2 - a_2b_1), (a_3, b_3, c_3)\rangle \\ &= (b_1c_2 - b_2c_1)a_3 + (a_2c_1 - a_1c_2)b_2 + (a_1b_2 - a_2b_1)c_3.
       \end{align*}
+    \end{frame}
+
+    \begin{frame}
 
       Agora,
       \begin{align*}
@@ -658,6 +782,9 @@
           a_3 & b_3 & c_3
         \end{pmatrix}.
       \end{equation}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{proposicao}
         Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Então
@@ -669,6 +796,9 @@
       \begin{prova}
         Segue diretamente das propriedades de determinantes.
       \end{prova}
+    \end{frame}
+
+    \begin{frame}
 
       Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralelepípedo definido por $\vec{u}$, $\vec{v}$ e $\vec{w}$:
       \begin{figure}[!h]
@@ -709,6 +839,9 @@
         %   \draw ($(A)+(-0.2,0,0.6)$) node[below,font=\small] {$\theta$};
         % \end{tikzpicture}
       \end{figure}
+    \end{frame}
+
+    \begin{frame}
 
       A altura $h$ é dada por
       \begin{align*}
@@ -726,6 +859,9 @@
       \begin{equation}
         \mathcal{V} = |\langle\vec{u}\times\vec{v}, \vec{w}\rangle|.
       \end{equation}
+    \end{frame}
+
+    \begin{frame}
 
       \begin{exemplo}
         Os pontos $P(0,1,1)$, $Q(1,0,2)$, $R(1,-2,0)$ e $S(-2,2,-2)$ definem um paralelepípedo? Em caso afirmativo, qual o seu volume?
