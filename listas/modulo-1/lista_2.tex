@@ -1,0 +1,280 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8
+\def\numeromodulo{1}
+\def\numerolista{1}
+
+\documentclass[12pt]{exam}
+
+\input{../configuracoes_listas/variaveis_listas}
+\input{../configuracoes_listas/pacotes}
+\input{../configuracoes_listas/configuracoes_paginas}
+\input{../configuracoes_listas/comandos_personalizados}
+
+\begin{document}
+
+    \Opensolutionfile{ans}[ans1]
+
+    \begin{center}
+        {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
+            $\numerolista^a$ Lista de Exercícios -- Módulo \numeromodulo\\ Vetores em $\real^2$}\\ \vspace{9pt} Prof. José Antônio O. Freitas
+    \end{center}
+
+    \hrule
+
+    \vspace{.6cm}
+
+    \questao{} Escreva as equa\c{c}\~oes da reta que e fa\c{c}a um esbo\c{c}o, nos seguintes casos:
+        \begin{enumerate}[label=({\alph*})]
+            \item cont\'em o ponto $(-1,1)$ e tem dire\c{c}\~ao do vetor $\vec{u} = (2,3)$.
+            \item cont\'em os pontos $A(3,2)$ e $B(-3,1)$.
+            \item cont\'em o ponto $(1,-1)$ e tem vetor diretor $\vec{u} = (3,1)$.
+            \item cont\'em o ponto $(1,0)$ e tem vetor diretor $\vec{u} = (1,1)$.
+            \item cont\'em o ponto $(1,3)$ e tem vetor diretor $\vec{u} = (0,2)$.
+        \end{enumerate}
+        \begin{solucao}
+            \begin{enumerate}[label=({\alph*})]
+                \item Equa\c{c}\~ao param\'etrica: $x = -1 + 2\lambda$, $y = 1 + 3\lambda$. Equa\c{c}\~ao sim\'etrica: $\dfrac{x + 1}{2} = \dfrac{
+                    y - 1}{3}$. Equa\c{c}\~ao cartesiana: $2y - 3x = 5$.
+                \item Equa\c{c}\~ao param\'etrica: $x = 3 - 6\lambda$, $y = 2 - \lambda$. Equa\c{c}\~ao sim\'etrica: $\dfrac{x - 3}{6} = y - 2$. Equa\c{c}\~ao cartesiana: $6y - x = 0$.
+                \item Equa\c{c}\~ao param\'etrica: $x = 1 + 3\lambda$, $y = -1 + \lambda$. Equa\c{c}\~ao sim\'etrica: $\dfrac{x - 1}{3} = y + 1$. Equa\c{c}\~ao cartesiana: $3y - x = -2$.
+                \item Equa\c{c}\~ao param\'etrica: $x = 1 + \alpha$, $y = \alpha$. Equa\c{c}\~ao sim\'etrica: $x - 1 = y$. Equa\c{c}\~ao cartesiana: $y - x = -1$.
+                \item Equa\c{c}\~ao param\'etrica: $x = 1$, $y = 3 + 2\alpha$. Equa\c{c}\~ao sim\'etrica: n\~ao \'e poss{\'\i}vel. Equa\c{c}\~ao cartesiana: $x = 2$.
+            \end{enumerate}
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Dados os vetores $\vec{u} = (1,5)$ e $\vec{v} = (4,1)$, escreva as equa\c{c}\~oes param\'etricas e cartesianas das retas que cont\^em as diagonais do paralelogramo definido por $\vec{u}$ e $\vec{v}$. Fa\c{c}a um esbo\c{c}o da reta.
+        \begin{solucao}
+            Equa\c{c}\~oes param\'etricas:
+            \[
+            r: \begin{cases}
+                x = 5\lambda\\
+                y = 6\lambda
+            \end{cases}, \qquad
+            s: \begin{cases}
+                x = 1 - 3\beta\\
+                y = 5 + 4\beta
+            \end{cases}\quad\mbox{ou}\quad s: \begin{cases}
+                x = 4 - 3\beta\\
+                y = 1 + 4\beta
+            \end{cases}
+            \]
+            Equa\c{c}\~oes cartesianas: $r: 6x -y = 0$ e $s: 4x + 3y = 19$.
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Escreva as equa\c{c}\~oes param\'etricas da reta que cont\'em o ponto $(1,2)$ e faz com a reta $y = -2x + 4$ um \^angulo de $60\degree$.
+        \begin{solucao}
+            \[
+            \begin{cases}
+                x = 1 + \lambda\\
+                y = 2 + \dfrac{8 + 5\sqrt{3}}{11}\lambda
+            \end{cases}\quad\mbox{ou}\quad
+            \begin{cases}
+                x = 1 + \lambda\\
+                y = 2 + \dfrac{8 - 5\sqrt{3}}{11}\lambda
+            \end{cases}
+            \]
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Seja um paralelogramo de v\'ertices $A$, $B$, $C$ e $D$, onde $A = (1, 3)$, $B = (4,-1)$ e $C = (1,1)$. Calcule a equa\c{c}\~ao da reta $r$ que passa por $D$, sabendo-se que $r$ \'e paralela \`a diagonal que n\~ao passa por $D$.
+        \begin{solucao}
+            $x + y - 6 = 0$
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Sejam duas retas $r$ e $s$ representadas respectivamente pelas equa\c{c}\~oes param\'etricas
+        \[
+        r: \begin{cases}
+            x = at + x_0\\
+            y = bt + y_0
+        \end{cases} \qquad
+        s : \begin{cases}
+            x = \alpha t + x_1\\
+            y = \beta t + y_1
+        \end{cases}
+        \]
+        onde $t \in \real$.
+        \begin{enumerate}[label=({\alph*})]
+            \item Mostre que $r$ e $s$ s\~ao paralelas se, e somente se,
+            \[
+            \det \begin{bmatrix}
+                a & b\\
+                \alpha & \beta
+            \end{bmatrix} = 0.
+            \]
+
+            \item Sejam $P(x_0, y_0) \in r$ e $Q(x_1, y_1) \in s$. Mostre que $r = s$ se, e somente se,
+            \[
+            \det \begin{bmatrix}
+                a & b\\
+                \alpha & \beta
+            \end{bmatrix} = 0
+            \quad \mbox{e} \quad
+            \det \begin{bmatrix}
+                a & b\\
+                x_1 - x_0 & y_1 - y_0
+            \end{bmatrix} = 0.
+            \]
+        \end{enumerate}
+
+    \vesp{.3cm}
+
+    \questao{} Complementando o exerc{\'\i}cio anterior, mostre que $r = s$ se, e somente se, uma das igualdades abaixo for verdadeira:
+        \begin{enumerate}[label=({\alph*})]
+            \item $
+            \det \begin{bmatrix}
+                a & b\\
+                \alpha & \beta
+            \end{bmatrix} = \det \begin{bmatrix}
+                x_1 - x_0 & y_1 - y_0\\
+                \alpha & \beta
+            \end{bmatrix} = 0.
+            $
+
+            \item $
+            \det \begin{bmatrix}
+                a & b\\
+                x_1 - x_0 & y_1 - y_0
+            \end{bmatrix} =  \det \begin{bmatrix}
+                x_1 - x_0 & y_1 - y_0\\
+                \alpha & \beta
+            \end{bmatrix} = 0.
+            $
+        \end{enumerate}
+
+    \vesp{.3cm}
+
+    \questao{} Determine a proje\c{c}\~ao ortogonal do ponto $P(2,4)$ sobre a reta
+        \[
+        \begin{cases}
+            x = 1 + 2t\\
+            y = -1 + 3t
+        \end{cases}.
+        \]
+        \begin{solucao}
+            O ponto tem coordenadas $(47/13, 38/13)$.
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Dados o ponto $P(2, -1)$ e a reta $r$ de equa\c{c}\~ao $y = 3x - 5$, escreva uma equa\c{c}\~ao da reta que cont\'em o ponto $P$ e:
+        \begin{enumerate}[label=({\alph*})]
+            \item seja paralela \`a reta $r$. Esboce as retas.
+            \item seja perpendicular \`a reta $r$. Esboce as retas.
+        \end{enumerate}
+        \begin{solucao}
+            \begin{enumerate}[label=({\alph*})]
+                \item $y = 3x - 7$
+                \item $y = -x/3 - 1/3$
+            \end{enumerate}
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Dado o ponto $A(2,3)$, ache o vetor $\vec{AP}$, onde $P$ \'e o p\'e da perpendicular baixada \`a reta $y = 5x + 3$.
+        \begin{solucao}
+            $P\left(-\dfrac{25}{13},\dfrac{5}{13}\right)$
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Determine o \^angulo entre as retas
+        \begin{enumerate}[label=({\alph*})]
+            \item $r: 2x + 3y = 1$ e $s: x = \dfrac{y - 8}{-5}$
+            \item $r: x + y + 1 = 0$ e $s: \begin{cases} x = 1 - 2t\\y = 2 + 5t\end{cases}$
+            \item $r: \begin{cases} x = t + 3\\y = 3 - t\end{cases}$ e $s: y = 0$
+            \item $r: \begin{cases} x = 1\\y = t\sqrt{3} + 8\end{cases}$ e $s: \begin{cases} x = 1 - t\\y = -t\sqrt{3}\end{cases}$
+        \end{enumerate}
+        \begin{solucao}
+            \begin{enumerate}[label=({\alph*})]
+                \item $\pi/4$
+                \item $\arccos\left(\dfrac{5\sqrt{58}}{58}\right)$
+                \item $\pi/4$
+                \item $5\pi/6$
+            \end{enumerate}
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Calcule $d(P,r)$, onde:
+        \begin{enumerate}[label=({\alph*})]
+            \item $r : 2x - y + 3 =0$  e $P(1,-1)$
+            \item $r : \begin{cases}x = 3t\\y = 1 - 2t\end{cases}$  e $P$ \'e a origem.
+            \item $r : \begin{cases}x = 1\\y = 1 - 2t\end{cases}$  e $P(0,1)$.
+        \end{enumerate}
+        \begin{solucao}
+            \begin{enumerate}[label=({\alph*})]
+                \item $d(P,r) = 6/\sqrt{5}$
+                \item $d(P,r) = 3/\sqrt{13}$
+                \item $d(P,r) = 1$
+            \end{enumerate}
+        \end{solucao}
+
+    \vesp{.3cm}
+    \questao{} Mostre que se a dist\^ancia entre o ponto $P(a,b)$ e a origem \'e $c$, ent\~ao a reta definida por $P$ e pelo ponto $A(-c, 0)$ \'e perpendicular \`a reta definida por $P$ e pelo ponto $B(c, 0)$.
+
+    \vesp{.3cm}
+
+    \questao{} Determine a dist\^ancia entre as retas $r$ e $s$:
+        \begin{enumerate}[label=({\alph*})]
+            \item $r: 2x - y = 6$ e $s: 2x -y = -1$
+            \item $r: y = x + 3$ e $s: 3x - 3y + 4 = 0$
+            \item $r: \begin{cases}x = 2 - t\\y = t\end{cases}$ e $s: x + y = 3$
+            \item $r: \begin{cases}x = 1 - 3t\\y = 1 - 6t\end{cases}$ e $s: \begin{cases}x = t\\y = 2t + 3\end{cases}$
+        \end{enumerate}
+        \begin{solucao}
+            \begin{enumerate}[label=({\alph*})]
+                \item $d(r,s) = \dfrac{7\sqrt{5}}{5}$
+                \item $d(r,s) = \dfrac{5}{3\sqrt{2}}$
+                \item $d(r,s) = \dfrac{\sqrt{2}}{2}$
+                \item $d(r,s) = \dfrac{4}{\sqrt{5}}$
+            \end{enumerate}
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \questao{} Mostre que duas retas $r: ax + by + c = 0$ e $s : \alpha x + \beta y + \delta = 0$ ser\~ao paralelas se, e somente se, $\vec{u} = (a, b)$ e $\vec{v} = (\alpha, \beta)$ forem paralelos.
+
+    \vesp{.3cm}
+
+    \questao{} Determine o comprimento do segmento $OP$ da figura abaixo, sabendo que $OADB$ \'e um ret\^angulo.
+        \begin{center}
+            \begin{tikzpicture}
+                \coordinate[label=left:$O$] (O) at (0,0);
+                \coordinate[label=right:$A$]  (A) at (3,0);
+                \coordinate[label=left:$B$]  (B) at (0,5);
+                \coordinate[label=right:$C$]  (C) at (3,4);
+                \coordinate[label=right:$D$]  (D) at (3,5);
+                \draw (O)--(A) node[midway,above]{$3$};
+                \draw (A)--(C) node[midway,right]{$4$};
+                \draw (C)--(D) node[midway,left]{$1$};
+                \draw (D)--(B);
+                \draw (B)--(O);
+                \draw[name path=OC] (O)--(C);
+                \draw[name path=BA] (B)--(A);
+                \path[name intersections={of=OC and BA,by=P}];
+                \node[fill=red,inner sep=1pt,label=0:$P$] at (P) {};
+            \end{tikzpicture}
+        \end{center}
+        \begin{solucao}
+            $\dfrac{25}{9}$
+        \end{solucao}
+
+    \vesp{.3cm}
+
+    \newpage
+    \Closesolutionfile{ans}
+    \hrule
+    \begin{center}
+        {\large\bf RESPOSTAS}
+    \end{center}
+    \hrule
+    \input{ans1}
+
+\end{document}
