@@ -1,0 +1,50 @@
+%!TEX program = xelatex 
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetkzobj{all}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+
+\begin{document}
+  \pagenumbering{gobble}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{zzttqq}{rgb}{0.6,0.2,0.0}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.0}
+  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+  \clip(0.8,-1.6) rectangle (9.0,6.0);
+  \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (5.0,0.0) -- (7.38,1.4) -- (7.357564434701785,4.161140461006965) -- (4.95512886940357,5.522280922013929) -- (2.5751288694035703,4.122280922013929) -- (2.597564434701784,1.361140461006965) -- cycle;
+  \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (2.597564434701784,1.361140461006965) -- (7.38,1.4) -- (4.95512886940357,5.522280922013929) -- cycle;
+  \draw [color=zzttqq] (5.0,0.0)-- (7.38,1.4);
+  \draw [color=zzttqq] (7.38,1.4)-- (7.357564434701785,4.161140461006965);
+  \draw [color=zzttqq] (7.357564434701785,4.161140461006965)-- (4.95512886940357,5.522280922013929);
+  \draw [color=zzttqq] (4.95512886940357,5.522280922013929)-- (2.5751288694035703,4.122280922013929);
+  \draw [color=zzttqq] (2.5751288694035703,4.122280922013929)-- (2.597564434701784,1.361140461006965);
+  \draw [color=zzttqq] (2.597564434701784,1.361140461006965)-- (5.0,0.0);
+  \draw [color=zzttqq] (2.597564434701784,1.361140461006965)-- (7.38,1.4);
+  \draw [color=zzttqq] (7.38,1.4)-- (4.95512886940357,5.522280922013929);
+  \draw [color=zzttqq] (4.95512886940357,5.522280922013929)-- (2.597564434701784,1.361140461006965);
+  \draw (1.550315309286238,4.702906359720992)-- (7.38,1.4);
+  \draw (2.597564434701784,1.361140461006965)-- (8.551060578660653,4.863197016276888);
+  \draw (4.95512886940357,5.522280922013929)-- (5.010724912935551,-1.319912855036576);
+  \begin{scriptsize}
+  \draw[color=uuuuuu] (4.95,5.7) node {$\vec{v_2}$};
+  \draw[color=uuuuuu] (2.65,1.45) node[left] {$\vec{v_3}$};
+  \draw[color=xdxdff] (1.7,4.9) node {$\vec{v_2} + \vec{v_3}$};
+  \draw[color=xdxdff] (8.4,5) node {$\vec{v_1} + \vec{v_2}$};
+  \draw[color=uuuuuu] (7.52,1.45) node {$\vec{v_1}$};
+  \draw[color=xdxdff] (5,-1.04) node[right] {$\vec{v_3} + \vec{v_1}$};
+  \end{scriptsize}
+  \end{tikzpicture}
+\end{document}

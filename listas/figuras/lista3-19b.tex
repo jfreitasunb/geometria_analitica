@@ -1,0 +1,20 @@
+%!TEX program = xelatex
+% !TEX encoding = ISO-8859-1
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{tikz,ifthen,circuitikz,siunitx,pstricks,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetikzlibrary{scopes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{through,calc,backgrounds,intersections}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\begin{document}
+	\psset{unit=0.5cm}
+	\begin{pspicture*}(-8,-8)(13,13)
+	  \psaxes[labels=none]{->}(0,0)(-8.5,-7.5)(8.5,7.5)
+	  \psplot[algebraic,linestyle=dashed,linecolor=red]{-13}{13}{-1.1*x+2.2}
+	  \psplot[algebraic,linestyle=dashed,linecolor=red]{-13}{13}{-0.35*x+1.4}
+	  \psplotImp[algebraic,linecolor=blue,stepFactor=0.1,linewidth=0.5pt](-12,-12)(12,12){3*x^2 + 12*x*y + 8*y^2 - 18*x - 28*y + 11}
+	\end{pspicture*}
+\end{document}

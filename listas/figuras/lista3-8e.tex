@@ -1,0 +1,18 @@
+%!TEX program = xelatex
+% !TEX encoding = ISO-8859-1
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{tikz,ifthen,circuitikz,siunitx,pstricks,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetikzlibrary{scopes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{through,calc,backgrounds,intersections}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\begin{document}
+	\psset{ticksize=0pt}
+	\begin{pspicture*}(-5,-5)(5,5)
+        \psaxes[labels=none]{->}(0,0)(-4.5,-4)(4.5,4)
+        \psellipse[linecolor=blue](0,0)(4,3)
+    \end{pspicture*}
+\end{document}

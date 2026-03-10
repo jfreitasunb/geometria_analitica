@@ -1,0 +1,19 @@
+%!TEX program = xelatex
+% !TEX encoding = ISO-8859-1
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{tikz,ifthen,circuitikz,siunitx,pstricks,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetikzlibrary{scopes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{through,calc,backgrounds,intersections}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+
+\begin{document}
+	\begin{pspicture*}(-6,-6)(6,6)
+	  \psaxes{->}(0,0)(-5.5,-5.5)(5.5,5.5)
+	  \psplot[algebraic,linestyle=dashed,linecolor=red]{-6}{6}{-0.22*x}
+	  \psplot[algebraic,linestyle=dashed,linecolor=red]{-6}{6}{4*x}
+	  \psplotImp[algebraic,linecolor=blue,stepFactor=0.1,linewidth=0.5pt](-7,-7)(7,7){x^2 - y^2 + 4*x*y - 6}
+	\end{pspicture*}
+\end{document}
