@@ -28,15 +28,6 @@
     \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
     \begin{frame}
-        Por exemplo, a equação $5x^2 - 4xy + 8y^2 - 36 = 0$ representa uma curva em $\real^2$. Nessa forma, não podemos dizer exatamente qual curva esta equação
-        representa. Mas utilizando-se de ferramentas da Álgebra Linear, podemos reescrever tal equação como
-        \[
-          \dfrac{x'^2}{9} + \dfrac{y'^2}{4} = 1
-        \]
-        que é uma equação de uma elipse.
-    \end{frame}
-
-    \begin{frame}
         Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ como abaixo:
         \begin{figure}[!h]
             \centering
@@ -46,7 +37,23 @@
     \end{frame}
 
     \begin{frame}
-        Seja $P$ um ponto qualquer do plano. Por $P$ podemos traçar uma única reta $x'$ paralela à reta $x$ e uma única reta $y'$ paralela à reta $y$. Estas retas interceptam $x$ e $y$ em pontos $P_x$ e $P_y$, respectivamente. Seja $\alpha$ o número real correspondente a $P_x$ e $\beta$ o número real correspondente  a $P_y$. Estes dois números determinam o ponto $P$, isto é, conhecendo $\alpha$ e $\beta$ podemos traças as retas $x'$ e $y'$. O ponto $P$ é a interseção destas retas. Os números $\alpha$ e $\beta$ são chamados \textbf{abscissa} e \textbf{ordenada} do ponto $P$, respectivamente. Eles constituem as \textbf{coordenadas} de $P$.
+        Seja $P$ um ponto qualquer do plano.\pause 
+
+        Por $P$ podemos traçar uma única reta $r$ paralela à reta $x$.\pause
+
+        E uma única reta $s$ paralela à reta $y$.\pause 
+
+        Estas retas interceptam $x$ e $y$ em pontos $P_x$ \pause e $P_y$, respectivamente.\pause
+
+        Denote por $\alpha$ o número real correspondente a $P_x$ \pause e por $\beta$ o número real correspondente a $P_y$.\pause
+
+        Estes dois números determinam o ponto $P$, \pause isto é, \pause conhecendo $\alpha$ e $\beta$ \pause podemos traças as retas $r$ e $s$.\pause 
+
+        O ponto $P$ é a interseção destas retas.\pause 
+
+        Os números $\alpha$ e $\beta$ \pause são chamados \textbf{abscissa} \pause e \textbf{ordenada} do ponto $P$, \pause respectivamente.\pause
+
+        Eles formam as \textbf{coordenadas} de $P$.
     \end{frame}
 
     \begin{frame}
@@ -68,30 +75,29 @@
     \begin{frame}
 
 
-        Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos construir o triângulo retângulo $PQS$ como abaixo:
+        Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. \pause 
+
+        A partir de $P$ e $Q$ podemos construir o triângulo retângulo $PQS$ \pause como abaixo:
         \begin{figure}[!h]
             \centering
             \caption{Distância entre dois pontos}
             \includegraphics{distancia-pontos-plano-cartesiano.pdf}
-        \end{figure}
+        \end{figure}\pause
     \end{frame}
 
     \begin{frame}
-        Assim sua hipotenusa é
-        \[
-            \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
-        \]
         Este número é chamado \textbf{distância} de $P$ a $Q$ e é indicado por $d(P,Q)$, isto é, por definição
         \[
-            d(P,Q) = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.
+            d(P,Q) = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2}.\pause
         \]
 
-        Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ são iguais se, e somente se, $x_1 = x_2$ e $y_1 = y_2$.
+        Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ \pause são iguais \pause se, e somente se, $x_1 = x_2$ \pause e $y_1 = y_2$.
 
-        Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano. Assim se $(\alpha, \beta) \ne (0,0)$ podemos associar uma seta com origem em $O(0,0)$ e extremidade em $(\alpha,\beta)$ como na figura abaixo:
     \end{frame}
 
     \begin{frame}
+        Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano. Assim se $(\alpha, \beta) \ne (0,0)$ podemos associar uma seta com origem em $O(0,0)$ e extremidade em $(\alpha,\beta)$ como na figura abaixo:
+
         \begin{figure}[!h]
             \centering
             \caption{Seta representando o ponto $(\alpha, \beta)$.}
