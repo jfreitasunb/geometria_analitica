@@ -96,7 +96,11 @@
     \end{frame}
 
     \begin{frame}
-        Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano. Assim se $(\alpha, \beta) \ne (0,0)$ podemos associar uma seta com origem em $O(0,0)$ e extremidade em $(\alpha,\beta)$ como na figura abaixo:
+        Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano.\pause
+        \vspace{.3cm}
+
+        Assim se $(\alpha, \beta) \ne (0,0)$ \pause podemos associar uma seta \pause com início no ponto $O(0,0)$ \pause e final no ponto $(\alpha,\beta)$
+        \pause como na figura abaixo:\pause
 
         \begin{figure}[!h]
             \centering
@@ -106,24 +110,35 @@
     \end{frame}
 
     \begin{frame}
-        Assim o par ordenado $(\alpha, \beta)$ pode ser representado graficamente por um ponto ou por uma seta. Quando representamos $(\alpha, \beta)$ por uma seta, podemos associar a este para uma \textbf{direção}, um \textbf{sentido} e um \textbf{módulo}. A direção e o sentido do par $(\alpha, \beta)$ são respectivamente, a direção e o sentido da seta que o representa. O \textbf{módulo} do par $(\alpha, \beta)$ é o número
+        Assim o par ordenado $(\alpha, \beta)$ pode ser representado graficamente por um ponto ou por uma seta. \pause
+
+        \vspace{.3cm}
+
+        Quando representamos $(\alpha, \beta)$ por uma seta, \pause podemos associar a este para uma \textbf{direção}, \pause dada por uma reta passado por essa
+        seta, \pause um \textbf{sentido} \pause, dado pela ponta da seta \pause e um \textbf{módulo},\pause que definiremos a seguir.\\
+
+        \vspace{.3cm}
+
+        O \textbf{módulo} do par $(\alpha, \beta)$ \pause será a distância do ponto $(\alpha, \beta)$ \pause até o ponto $O(0, 0)$ \pause e é dada por\pause
         \[
-            \sqrt{\alpha^2 + \beta^2}
+            \sqrt{(\alpha - 0)^2 + (\beta - 0)^2} = \pause \sqrt{\alpha^2 + \beta^2}\pause
         \]
         que é o comprimento da seta.
     \end{frame}
 
     \begin{frame}
-        Em geral, um objeto ao qual podemos associar os conceitos de direção, sentido e módulo é chamado um \textbf{vetor}. Denotaremos um vetor de extremidade em um ponto $(\alpha, \beta)$ por
+        Em geral, um objeto ao qual podemos associar os conceitos de direção, \pause sentido \pause e módulo \pause é chamado de \textbf{vetor}.\pause\\
+
+        \vspace{.3cm}
+        
+        Denotaremos um vetor de extremidade em um ponto $(\alpha, \beta)$ \pause por
         \[
             \vec{u} = (\alpha, \beta).
         \]
     \end{frame}
 
     \begin{frame}
-
-
-        Esta notação significa que $\vec{u}$ é a seta com início no ponto $O(0,0)$ e final no ponto $(\alpha, \beta)$.
+        Esta notação significa que $\vec{u}$ é a seta com início no ponto $O(0,0)$ \pause e final no ponto $(\alpha, \beta)$.\pause
         \begin{figure}[!h]
             \centering
             \caption{Vetor $ \vec{u} = (\alpha, \beta)$.}
@@ -132,7 +147,7 @@
     \end{frame}
 
     \begin{frame}
-        Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ são representados graficamente por:
+        Por exemplo, $\vec{u} = (3,2)$ \pause e $\vec{v} = (-1,-2)$ \pause são representados graficamente por:\pause
         \begin{figure}[!h]
             \centering
             \caption{Vetores $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$.}
@@ -141,23 +156,21 @@
     \end{frame}
 
     \begin{frame}
-
-
-        O vetor que tem início e fim no ponto $(0,0)$ é chamado de \textbf{vetor nulo} e será denotado por
+        O vetor que tem início e fim no ponto $(0,0)$ \pause é chamado de \textbf{vetor nulo} \pause e será denotado por\pause
         \[
             \vec{O} = (0,0).
         \]
     \end{frame}
 
     \begin{frame}
-        Podemos também representar um vetor por uma seta que não parte da origem. Por exemplo, os pontos $A(x_1,y_1)$ e $B(x_2,y_2)$ determinam o vetor
+        Podemos também representar um vetor por uma seta que não parte da origem. \pause Por exemplo, os pontos $A(x_1,y_1)$ e $B(x_2,y_2)$ determinam o
+        vetor\pause
         \[
             \vec{AB} = (x_2 - x_1, y_2 - y_1).
         \]
     \end{frame}
 
     \begin{frame}
-
         \begin{figure}[!h]
             \centering
             \caption{Vetor $\vec{AB}$}
@@ -166,25 +179,31 @@
     \end{frame}
 
     \begin{frame}
-        Assim a seta que representa o vetor $\vec{AB}$ e a seta que representa o vetor $\vec{u}$, que tem início na origem e extremidade no ponto $(x_2 - x_1, y_2 - y_1)$, têm o mesmo módulo, direção e sentido que $\vec{AB}$. Assim vamos representar o vetor $\vec{AB}$ pela forma que for mais conveniente.
+        Assim a seta que representa o vetor $\vec{AB}$ \pause e a seta que representa o vetor $\vec{u}$, \pause que tem início na origem \pause e extremidade no
+        ponto $(x_2 - x_1, y_2 - y_1)$, \pause têm o mesmo módulo, \pause direção \pause e sentido que $\vec{AB}$.\pause\\
+
+        \vspace{.3cm}
+
+        Assim vamos representar o vetor $\vec{AB}$ \pause pela forma que for mais conveniente.
     \end{frame}
 
     \begin{frame}
 
         \begin{definicao}
-          Seja $\vec{u} = (x_1, y_1)$ um vetor. A \textbf{norma} de $\vec{u}$, denotada por $\norm{\vec{u}}$, é dada por
+            Seja $\vec{u} = (x_1, y_1)$ um vetor. \pause A \textbf{norma} ou \textbf{módulo} de $\vec{u}$, \pause denotada por $\norm{\vec{u}}$, \pause é dada
+            por\pause
           \[
-            \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2}.
+            \norm{\vec{u}} = \pause \sqrt{x_1^2 + y_1^2}.
           \]
         \end{definicao}
     \end{frame}
 
     \begin{frame}
-        Um vetor $\vec{u}$ tal que
+        Um vetor $\vec{u}$ \pause tal que
         \[
-            \norm{\vec{u}} = 1
+            \norm{\vec{u}} = 1\pause
         \]
-        é chamado de \textbf{vetor unitário}.
+        é chamado de \pause \textbf{vetor unitário}.\pause
         \begin{figure}[!h]
             \centering
             \caption{Vetores unitários: $\norm{\vec{u}} = 1$}
@@ -194,23 +213,25 @@
 
     \begin{frame}
         \begin{definicao}
-            Dois vetores $\vec{u}$ e $\vec{v}$ são \textbf{paralelos} (ou \textbf{colineares}) se a restas que contém estes vetores são paralelas(podendo ser coincidentes).Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, escreveremos $\vec{u}\varparallel\vec{v}$. Neste caso, $\vec{u}$ e $\vec{v}$ têm a mesma direção, mas podem ter sentidos contrários.
+            Dois vetores $\vec{u}$ \pause e $\vec{v}$ \pause são \textbf{paralelos} \pause (ou \textbf{colineares}) \pause se as retas que contém estes vetores
+            \pause são paralelas (podendo ser coincidentes). \pause Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, \pause escreveremos $\vec{u}\varparallel\vec{v}$.
+            \pause Neste caso, $\vec{u}$ e $\vec{v}$ \pause têm a mesma direção, mas podem ter sentidos contrários.
         \end{definicao}
     \end{frame}
 
-    % \begin{frame}
-    %     \begin{figure}[!h]
-    %         \centering
-    %         \caption{Vetores paralelos}
-    %         \includegraphics{vetores-paralelos-plano-cartesiano.pdf}
-    %     \end{figure}
-    % \end{frame}
+    \begin{frame}
+        \begin{figure}[!h]
+            \centering
+            \caption{Vetores paralelos}
+            \includegraphics[scale=0.8]{vetores-paralelos-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
 
     \begin{frame}
         \begin{definicao}
-          Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
+          Sejam $\vec{u} = (x_1, y_1)$ \pause e $\vec{v} = (x_2, y_2)$ \pause vetores. \pause Então:\pause
           \[
-              \vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2).
+              \vec{u} + \vec{v} = \pause (x_1 + x_2, \pause y_1 + y_2).
           \]
         \end{definicao}
     \end{frame}
@@ -224,35 +245,35 @@
     \end{frame}
 
     \begin{frame}
-        \begin{propriedades}\label{propriedades_soma_vetores}
-          Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores quaisquer. As seguintes propriedades são verdadeiras:
+        \begin{propriedades}
+          Sejam $\vec{u}$, \pause $\vec{v}$ \pause e $\vec{w}$ \pause vetores quaisquer. \pause As seguintes propriedades são verdadeiras:\pause
           \begin{enumerate}[label=({\roman*})]
-            \item $(\vec{u} + \vec{v}) + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$ [Associatividade]
-            \item $\vec{u} + \vec{v} = \vec{v} + \vec{u}$ [Comutatividade]
-            \item Existe um único vetor que somado a $\vec{u}$ resulta no próprio vetor $\vec{u}$:
+            \item $(\vec{u} + \vec{v}) \pause + \vec{w} \pause = \vec{u} + \pause (\vec{v} + \vec{w})$ \pause (Associatividade da soma)\pause
+            \item $\vec{u} + \pause \vec{v} = \pause \vec{v} + \vec{u}$ \pause (Comutatividade da soma)\pause
+            \item Existe um único vetor $\vec{w}$ \pause que somado a $\vec{u}$ \pause resulta no próprio vetor $\vec{u}$:\pause
             \[
-              \vec{u} + \vec{0} = \vec{0} + \vec{u} = \vec{u}.
+              \vec{u} + \vec{w} \pause = \vec{w} + \vec{u} \pause = \vec{u}.\pause
             \]
-            Tal vetor é o vetor nulo. [Elemento Neutro]
-            \item\label{vetor_oposto} Para cada $\vec{u}$, existe um único vetor $\vec{v}$ tal que
+            Tal vetor $\vec{w}$ é o vetor nulo $\vec{0}$. \pause (Elemento Neutro da soma)\pause
+            \item Para cada $\vec{u}$, \pause existe um único vetor $\vec{v}$ \pause tal que\pause
             \[
-              \vec{u} + \vec{v} = \vec{0} = \vec{v} + \vec{u}.
+              \vec{u} + \vec{v} \pause = \vec{0} \pause = \vec{v} + \vec{u}.\pause
             \]
-            O vetor $\vec{v}$ é o vetor oposto de $\vec{u}$. [Elemento Oposto]
           \end{enumerate}
         \end{propriedades}
     \end{frame}
 
     \begin{frame}
         \begin{definicao}
-            O vetor $\vec{v}$ do item \ref{vetor_oposto} da Definição \ref{propriedades_soma_vetores} é chamado de \textbf{vetor oposto}.
+            O vetor $\vec{v}$ do item \textit{(iv)} \pause da definição anterior \pause é chamado de \textbf{vetor oposto}.
         \end{definicao}
+    \end{frame}
 
-
+    \begin{frame}
         \begin{definicao}
-          Sejam $\alpha \in \real$, $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
+          Sejam $\alpha \in \real$ e \pause $\vec{u} = (x_1, y_1)$ \pause um vetor. \pause Então:\pause
           \[
-              \alpha \vec{u} = (\alpha x_1, \alpha y_1).
+              \alpha \vec{u} \pause = (\alpha x_1, \pause \alpha y_1).
           \]
         \end{definicao}
     \end{frame}
@@ -268,50 +289,29 @@
     \begin{frame}
         \begin{observacao}
             \begin{enumerate}[label=({\roman*})]
-                \item Sejam $\vec{u}$ um vetor não-nulo e $\lambda \ne 0$ um escalar. Então $\vec{u} \varparallel\lambda\vec{u}$. Além disso, se $\lambda > 0$, então $\vec{u}$ e $\lambda\vec{u}$ são de mesmo sentido, e se $\lambda < 0$ então $\vec{u}$ e $\lambda\vec{u}$ são de sentidos contrários.
-                \item Quando $\lambda = -1$, o vetor $-\vec{u} = (-x_1,-y_1)$  é exatamente o vetor oposto de $\vec{u}$. Note que $-\vec{u}$ tem a mesma direção que $\vec{u}$, mas sentido contrário.
+                \item Sejam $\vec{u}$ um vetor não-nulo \pause e $\lambda \ne 0$ \pause um escalar. \pause Então $\vec{u} \varparallel \lambda\vec{u}$. \pause
+                    Além disso, \pause  se $\lambda > 0$, \pause então $\vec{u}$ e $\lambda\vec{u}$ têm o mesmo sentido, \pause e se $\lambda < 0$, \pause
+                    então $\vec{u}$ e $\lambda\vec{u}$ têm sentidos contrários.\pause
+
+                    \vspace{.3cm}
+
+                \item Quando $\lambda = -1$, \pause o vetor $-\vec{u} = (-x_1,-y_1)$ \pause é exatamente o vetor oposto de $\vec{u}$. \pause Note que $-\vec{u}$
+                    \pause tem a mesma direção que $\vec{u}$, \pause mas sentido contrário.
             \end{enumerate}
         \end{observacao}
     \end{frame}
 
     \begin{frame}
         \begin{propriedades}
-          Quaisquer que sejam os números reais $\alpha$ e $\beta$ e quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$ valem as igualdades:
+          Quaisquer que sejam os números reais $\alpha$ \pause e $\beta$ \pause e quaisquer que sejam os vetores $\vec{u}$ \pause e $\vec{v}$ \pause valem as
+          igualdades:\pause
           \begin{enumerate}[label=({\roman*})]
-            \item $\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$;
-            \item $(\alpha + \beta)\vec{u} = \alpha\vec{u} + \beta\vec{u}$;
-            \item $1\vec{u} = \vec{u}$;
-            \item $\alpha(\beta\vec{u}) = (\alpha\beta)\vec{u} = \beta(\alpha\vec{u})$.
+            \item $\alpha \pause (\vec{u} + \vec{v}) \pause = \alpha\vec{u} \pause + \alpha\vec{v}$;\pause
+            \item $(\alpha + \beta)\pause \vec{u} =\pause \alpha\vec{u} \pause + \beta\vec{u}$;\pause
+            \item $1\vec{u} \pause = \vec{u}$;\pause
+            \item $\alpha \pause (\beta\pause \vec{u}) \pause = (\alpha\beta)\pause \vec{u} = \beta\pause (\alpha\vec{u})$.
           \end{enumerate}
         \end{propriedades}
-    \end{frame}
-
-    \begin{frame}
-        Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1)$ de forma matricial. Para isso escrevemos as componentes de $\vec{u}$ como uma matriz de 1 coluna e duas linhas
-        \[
-          \vec{u} = \begin{bmatrix}
-            x_1\\y_1
-          \end{bmatrix}.
-        \]
-
-        \begin{exemplos}
-          Seja $\vec{u} = (-2,3)$ um vetor. Então
-          \begin{align*}
-            \norm{\vec{u}} &= \sqrt{(-2)^2 + 3^2} = \sqrt{13}\\
-            \vec{v} &= \dfrac{\vec{u}}{\norm{u}} = \dfrac{1}{\sqrt{13}}(-2,3) = \left(\dfrac{-2}{\sqrt{13}}, \dfrac{3}{\sqrt{13}}\right).
-          \end{align*}
-        \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}
-          Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Então:
-          \begin{enumerate}[label=({\roman*})]
-            \item Se $\vec{u} \ne \vec{0}$, então $\norm{\vec{u}} \ne 0$.
-            \item $\norm{\vec{u}} = 0$ se, e somente se, $\vec{u} = \vec{0}$.
-            \item $\norm{\alpha\vec{u}} = |\alpha|\norm{\vec{u}}$.
-          \end{enumerate}
-        \end{proposicao}
     \end{frame}
 
     \begin{frame}
