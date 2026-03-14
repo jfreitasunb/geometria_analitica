@@ -95,6 +95,9 @@
 
 \RequirePackage{setspace}
 
+\RequirePackage{makeidx}
+\makeindex
+
 \RequirePackage{ccicons}
 
 \RequirePackage{csquotes}
@@ -349,7 +352,7 @@
 
 \RequirePackage{graphicx}
 %\RequirePackage{enumerate}
-\RequirePackage{amsmath,mathrsfs,amsfonts,amssymb,pxfonts}
+\RequirePackage{amsmath,mathrsfs,amsfonts,amssymb}
 % \providecommand\qed{}
 % \renewcommand{\qed}{\hfill\ensuremath{\square}}
 \RequirePackage{booktabs}
@@ -361,6 +364,9 @@
 \RequirePackage[center,pagestyles]{titlesec}
 \RequirePackage[title,titletoc,header]{appendix}
 
+\RequirePackage{cases}
+
+\RequirePackage{gensymb}
 
 \RequirePackage[
   backend=\ELEGANT@bibend,
@@ -777,7 +783,7 @@
   \par\noindent\textbf{\color{main}{\problemaname} \theprob #1 }\rmfamily}{
   \par\ignorespacesafterend}
 
-%%Observation with counter 
+%%Observation with counter
 \newcounter{obs}[chapter]
 \setcounter{obs}{0}
 \renewcommand{\theobs}{\thechapter.\arabic{obs}}
