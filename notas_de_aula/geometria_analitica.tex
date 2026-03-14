@@ -1,134 +1,135 @@
-%!TEX program = xelatex
-%!TEX encoding = UTF-8
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The Legrand Orange Book
-% LaTeX Template
-% Version 2.3 (8/8/17)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+\documentclass[11pt,bibtex]{elegantbook}
 
-% Compiling this template:
-% This template uses biber for its bibliography and makeindex for its index.
-% When you first open the template, compile it from the command line with the
-% commands below to make sure your LaTeX distribution is configured correctly:
-%
+%Para gerar índice remissivo
+
 % 1) pdflatex main
 % 2) makeindex main.idx -s StyleInd.ist
 % 3) biber main
 % 4) pdflatex main x 2
-%
-% After this, when you wish to update the bibliography/index use the appropriate
-% command above and make sure to compile with pdflatex several times
-% afterwards to propagate your changes to the document.
-%
-% This template also uses a number of packages which may need to be
-% updated to the newest versions for the template to compile. It is strongly
-% recommended you update your LaTeX distribution if you have any
-% compilation errors.
-%
-% Important note:
-% Chapter heading images should have a 2:1 width:height ratio,
-% e.g. 920px width and 460px height.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%--------------------------------------------------------------------------------------
+%   Comandos Pessoais
+%--------------------------------------------------------------------------------------
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\rac}{\mathbb{Q}}
+\newcommand{\dom}{{\rm dom\,}}
+\newcommand{\im}{{\rm Im\,}}
+\newcommand{\aut}{{\rm Aut\,}}
+\newcommand{\cp}[1]{\mathbb{#1}}
+\newcommand{\sub}{\subseteq}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\lap}[1]{\mathcal{L}\left\{#1\right\}}
+\newcommand{\lapi}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
+\newcommand{\se}[1]{\displaystyle\sum_{n = 1}^\infty{#1}}
+\newcommand{\dlim}[2]{\displaystyle\lim_{#1\rightarrow #2}}
+\newcommand{\slim}{\displaystyle\lim_{n \rightarrow \infty}}
+\newcommand{\seq}[1]{\{{#1_n\}}}
+\newcommand{\seg}[1]{\displaystyle\sum_{n = 1}^\infty{#1_n}}
+\newcommand{\sei}[2]{\displaystyle\sum_{#1}^\infty{#2}}
+\newcommand{\sepc}[3]{\displaystyle\sum_{#1}^\infty{#2(x - #3)^n}}
+\newcommand{\imp}[3]{\displaystyle\int_{#1}^{+\infty}{#3}{d #2}}
+\newcommand{\dint}[4]{\displaystyle\int_{#1}^{#2}{#4}{d#3}}
+\newcommand{\inti}[2]{\displaystyle\int{#1}{d#2}}
+\newcommand{\norma}[1]{\left\lVert#1\right\rVert}
+\newcommand{\flim}[1]{\displaystyle\lim_{#1\rightarrow \infty}}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+\newcommand\T{\rule{0pt}{2.6ex}}
+
+\newcommand{\elipse}[2]{\dfrac{x^2}{#1} + \dfrac{y^2}{#2} = 1}
+\newcommand{\inner}[2]{\langle \vec{#1}, \vec{#2} \rangle}
+\newcommand{\proj}{{\rm proj}}
+\newcommand{\eq}{=}
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\integer}{\mathbb{Z}}
+\renewcommand{\sin}{{\rm sen\,}}
+\renewcommand{\tan}{{\rm tg\,}}
+\renewcommand{\csc}{{\rm cossec\,}}
+\renewcommand{\cot}{{\rm cotg\,}}
+\renewcommand{\sinh}{{\rm senh\,}}
+
+\newcommand{\varparallel}{\mathbin{\!/\mkern-5mu/\!}}
+
+\title{Geometria Analítica}
+\subtitle{Notas de aula}
+\author{José Antônio O. Freitas}
+\institute{UnB}
+\date{\today{}}
 
 \def\ano{2026}
 \def\semestre{1}
 \def\disciplina{Geometria Analítica}
+\definecolor{ocre}{RGB}{243,102,25}
+
+%\logo{logo-blue.png}
+\cover{background.pdf}
+
+% modify the color in the middle of titlepage
+\definecolor{customcolor}{RGB}{32,178,170}
+\colorlet{coverlinecolor}{customcolor}
+\usepackage{cprotect}
+
+\addbibresource[location=local]{reference.bib} % bib
+
+\begin{document}
+%\maketitle
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
+    \draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \disciplina\\[15pt]
+            {\Large Notas de Aula \semestre/\ano}\\[20pt]
+            {\huge José Antônio O. Freitas}\\
+            {\large \today}}};
+
+\end{tikzpicture}
+\vfill
+\endgroup
+
+%--------------------------------------------------------------------------------------
+%   COPYRIGHT PAGE
+%--------------------------------------------------------------------------------------
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+\noindent \ccbyncsa\ Este texto está licenciado sob uma \textbf{Licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 3.0 Brasil} \href{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}{\textit{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}}\\
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\include{01_vetores-no-plano}
+\include{02_reta-no-plano}
+\include{03_circunferencias-e-conicas}
+\include{04_vetores-no-espaco}
+\include{05_reta-e-plano-espaco}
+\include{06_quadricas}
+\include{07_bibliografia}
+
+\nocite{*}
+
+\printbibliography[heading=bibintoc, title=\ebibname]
 
 %----------------------------------------------------------------------------------------
-%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%   INDEX
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,fleqn,usenames,dvipsnames]{book} % Default font size and left-justified equations
+\cleardoublepage
+\phantomsection
+\setlength{\columnsep}{0.75cm}
+\addcontentsline{toc}{chapter}{Índice Remissivo}
+\printindex
+\appendix
 
-    %----------------------------------------------------------------------------------------
-
-    \input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
-
-    \tikzset{
-        >=stealth,
-        bullet/.style={
-            fill=black,
-            circle,
-            minimum width=1pt,
-            inner sep=1pt
-        }
-    }
-    \begin{document}
-
-    %----------------------------------------------------------------------------------------
-    %   TITLE PAGE
-    %----------------------------------------------------------------------------------------
-
-    \begingroup
-    \thispagestyle{empty}
-    \begin{tikzpicture}[remember picture,overlay]
-        \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background}};
-        \draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering \disciplina\\[15pt] % Book title
-                {\Large Notas de Aula \semestre/\ano}\\[20pt] % Subtitle
-                {\huge José Antônio O. Freitas}\\
-                {\large \today}}}; % Author name
-
-    \end{tikzpicture}
-    \vfill
-    \endgroup
-
-    %----------------------------------------------------------------------------------------
-    %   COPYRIGHT PAGE
-    %----------------------------------------------------------------------------------------
-
-    \newpage
-    ~\vfill
-    \thispagestyle{empty}
-
-    \noindent \ccbyncsa\ Este texto está licenciado sob uma \textbf{Licença Creative Commons Atribuição-NãoComercial-CompartilhaIgual 3.0 Brasil} \href{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}{\textit{http://creativecommons.org/licenses/by-nc-sa/3.0/br/deed.pt\_BR}}\\ % Copyright notice
-
-    %----------------------------------------------------------------------------------------
-    %   TABLE OF CONTENTS
-    %----------------------------------------------------------------------------------------
-
-    \usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
-
-    \chapterimage{chapter_head_1.pdf} % Table of contents heading image
-
-    \pagestyle{empty} % No headers
-
-    \tableofcontents % Print the table of contents itself
-
-    \cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
-
-    \pagestyle{fancy} % Print headers again
-    \include{01_vetores-no-plano}
-    \include{02_reta-no-plano}
-    \include{03_circunferencias-e-conicas}
-    \include{04_vetores-no-espaco}
-    \include{05_reta-e-plano-espaco}
-    \include{06_quadricas}
-    \include{07_bibliografia}
-    %----------------------------------------------------------------------------------------
-    %   BIBLIOGRAPHY
-    %----------------------------------------------------------------------------------------
-
-
-    %----------------------------------------------------------------------------------------
-    %   INDEX
-    %----------------------------------------------------------------------------------------
-
-    \cleardoublepage
-    \phantomsection
-    \setlength{\columnsep}{0.75cm}
-    \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}}
-    \printindex
-
-    %----------------------------------------------------------------------------------------
-
-    \end{document}
+\end{document}
