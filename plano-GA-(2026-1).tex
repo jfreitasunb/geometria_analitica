@@ -1,0 +1,197 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8
+\def\ano{2026}
+\def\semestre{1}
+\def\numerosemanas{16}
+\def\disciplina{Geometria Analítica para Matemática}
+\def\turma{1}
+\def\nome{José Antônio O. Freitas}
+\def\email{jfreitas@unb.br}
+
+\documentclass[12pt]{exam}
+
+%\usepackage[leqno]{amsmath}
+%\usepackage{makeidx,graphics}
+\usepackage{graphicx}
+\graphicspath{{/home/jfreitas/OneDrive/UnB/imagens-latex/}{D:/Dropbox/imagens-latex/}}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext}
+%\usepackage{color}
+%\usepackage[latin1]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\newcommand{\real}{\mathbb{R}}
+
+%\DeclareGraphicsRule{jpg}{*[}{}{`jpeg2eps #1.jpg}
+%\input{seteps}
+%\input{setbmp-dvips}
+
+\setlength{\topmargin}{-1.0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textheight}{10.1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\baselineskip}{12mm}
+
+\begin{document}
+    \extraheadheight{0.7in}
+    \firstpageheadrule
+    \runningheadrule
+    \lhead{
+        \begin{minipage}[c]{1.7cm}
+            \includegraphics[width=1.7cm]{unb.pdf}
+        \end{minipage}%
+        \hspace{0pt}
+        \begin{minipage}[c]{4in}
+            {Universidade de Brasília}\\
+            {Departamento de Matemática}
+        \end{minipage}
+        \vspace*{-0.8cm}
+    }
+    \extrafootheight{.5in}
+    \footrule
+    \lfoot{\disciplina\ - Turma \turma\ - \semestre$^o$/\ano}
+    \cfoot{}
+    \rfoot{Página \thepage\ de \numpages}
+
+    \begin{center}
+        {\large\bf Plano de Ensino -- \semestre$^{o}$/\ano} \\
+        {\large\bf \disciplina\ -- Turma \turma}\\
+    \end{center}
+    \hrule
+
+    \begin{flushleft}
+        Prof.: \nome\\
+        email: \href{mailto:{\email}}{\email}
+    \end{flushleft}
+    \hrule
+    \bigskip \bigskip
+    \noindent {\bf{PROGRAMA:}} 18 semanas dividas em 3 m\'{o}dulos.
+    \begin{itemize}
+    \item Vetores em $\real^2$: O conjunto $\real^2$. Igualdade e soma de pares ordenados. Multiplica\c{c}\~ao por escalar. Interpreta\c{c}\~ao geom\'etrica das opera\c{c}\~oes. Produto por Escalar em $\real^2$. Produto escalar de dois vetores. M\'odulo de um vetor. Dist\^ancia entre dois pontos. Paralelismo e ortogonalidade. \^Angulo entre dois vetores. \'Area de um tri\^angulo e alinhamento de tr\^es pontos.
+
+    \item Estudo da reta em $\real^2$. Equa\c{c}\~ao da reta. Posi\c{c}\~oes relativas e interse\c{c}\~oes de retas. Ponto e reta. Dist\^ancia. Inequa\c{c}\~oes e Regi\~oes. Circunfer\^encia em $\real^2$. A equa\c{c}\~ao da circunfer\^encia. A circunfer\^encia definida por tr\^es pontos. Posi\c{c}\~oes relativas. Interse\c{c}\~oes e regi\~oes. As c\^onicas em $\real^2$. Lugares geom\'etricos. Par\'abola. Elipse e Hip\'erbole.
+
+    \item Vetores em $\real^3$.  O conjunto $\real^3$. Soma  e multiplica\c{c}\~ao por escalar. Produto Escalar em $\real^3$. Produto vetorial. Produto misto e suas interpreta\c{c}\~oes geom\'etricas. Equa\c{c}\~oes da reta e do plano. Posi\c{c}\~oes relativas, interse\c{c}\~oes e regi\~oes. As qu\'adricas em $\real^3$. Lugares geom\'etricos. Esfera. Cilindro. Parabol\'oide. Elips\'oide. Hiperbol\'oide. Inequa\c{c}\~oes e regi\~oes. Reconhecimento de qu\'adricas.
+    \end{itemize}
+
+    \noindent {\bf{BIBLIOGRAFIA:}}
+    \begin{itemize}
+
+    \item {\it Geometria Anal{\'\i}tica: um tratamento vetorial}, Boulos, P.; Camargo, I.; 3$^a$ Edi\c{c}\~ao, S\~ao Paulo: Prentice Hall, 2005.
+
+    \item {\it Geometria Anal{\'\i}tica},  Santos, F. J.; Ferreira, S. F.; 1$^{a}$ Edi{\c c}{\~a}o, Bookman, Companhia Editora, 2009.
+
+    \item {\it \'Algebra Linear e Geometria Anal{\'\i}tica}, Machado, A. S.; 2$^a$ Edi{\c c}{\~a}o, Atual Editora, 1980.
+
+    \item {\it Geometria Anal{\'\i}tica}, Reis, G. L.; Silva, V. V; 2$^a$ Edi\c{c}\~ao, Rio de Janeiro: LTC, 2013.
+
+    \item {\it Geometria Anal{\'\i}tica}, Steinbruch, A.; Winterle, P.; $1^a$ Edi{\c c}{\~a}o, S\~ao Paulo: McGraw-Hill, 1987.
+
+    \item {\it Matrizes, Vetores e Geometria Anal{\'\i}tica}, Santos, R.;  UFMG, 2012, Dispon{\'i}­vel em \url{http://www.mat.ufmg.br/~regi}
+
+    \end{itemize}
+
+    \noindent {\bf{SISTEMA DE AVALIA\c{C}\~{A}O:}} O curso \'{e} dividido em tr\^{e}s
+    m\'{o}dulos e em cada um ser{\'a} realizada uma prova, as quais s\~{a}o atribu\'{\i}das as notas $P_1$, $P_2$ e $P_3$, nas datas detalhadas a seguir.
+
+    \begin{center}
+        \begin{tabular}{c|c|c}
+            \hline\hline
+            \hspace{1cm}{\bf Prova}\hspace{1cm} & \hspace{3cm}{\bf Data}\hspace{3cm} & \hspace{1.7cm}{\bf Hor\'{a}rio}\hspace{1.7cm} \\
+            \hline\hline
+            $P_1$ & 23/04/26 (quinta-feira) \phantom{x} & 16:00 - 18:00 \\
+            \hline
+            $P_2$ & 02/06/26 (terça-feira) \phantom{x} & 16:00 - 18:00 \\
+            \hline
+            $P_3$ & 07/07/26 (terça-feira) \phantom{x} & 16:00 - 18:00 \\
+            \hline\hline
+        \end{tabular}
+    \end{center}
+
+    {\bf \noindent Nota Final:} A partir das notas das provas mencionadas neste texto, a nota final ($NF$) de cada estudante \'{e} dada
+    por
+    \vspace{-0.15cm}
+    \[
+    NF = \frac{ P_1 + P_2 + 2P_3}{4}
+    \]
+    e ser\'{a} considerado aprovado o estudante que obtiver $NF \geq 5,00$.
+
+    {\bf \noindent Men\c{c}\~{a}o Final:} ser\'{a} obtida da $NF$ de
+    acordo com as normas da UnB.
+    \begin{center}
+        \begin{tabular}{c|c}
+            \hline\hline
+            \hspace{1cm}{Nota}\hspace{1cm} & \hspace{0.25cm}{Men\c{c}\~{a}o}\hspace{0.25cm}\\
+            \hline\hline
+            9,00 a 10,0 & SS \\
+            \hline
+            7,00 a 8,99 & MS \\
+            \hline
+            5,00 a 6,99 & MM \\
+            \hline
+            3,00 a 4,99 & MI \\
+            \hline
+            0,00 a 2,99  & II \\
+            \hline\hline
+        \end{tabular}
+    \end{center}
+    Receber{\'a} a men{\c c}{\~a}o {\bf SR} quem estiver reprovado por faltar mais de 25\%
+    das aulas.
+
+    \vspace{0.5cm}
+    \noindent {\bf{PÁGINA DA TURMA:}} A página da disciplina está disponível no endereço
+    \begin{center}
+        \href{https://moodle.mat.unb.br/course/view.php?id=65}{https://moodle.mat.unb.br}
+    \end{center}
+
+
+    \begin{itemize}
+        \item Toda a comunicação oficial do curso, inclusive a divulgação de
+        notas e gabaritos, se dará através do {\em Fórum de Notícias} do
+        \textbf{MoodleMAT}.
+        \item No {\em Fórum de Debates} do \textbf{MoodleMAT} poderão ser
+        postadas dúvidas que serão respondidas on-line pelos seus
+        colegas, pelo monitor dessa turma ou pelo professor.
+    \end{itemize}
+
+    \noindent {\bf{OBSERVAÇÕES IMPORTANTES:}}
+
+    \begin{enumerate}[label={\arabic*})]
+        \item As provas serão individuais e sem qualquer tipo de
+        auxílio (calculadora, livros etc.), sendo vedado o empréstimo de
+        qualquer material entre os alunos durante as avaliações. As
+        tentativas de fraude serão reprimidas com máximo rigor.
+
+        \item É vedado o uso de telefones celulares e quaisquer dispositivos
+        eletrônicos pessoais durante a realização das atividades do curso
+        em sala de aula.
+
+        \item Será exigido documento de identificação dos estudantes nos
+        dias de provas e testes.
+
+        \item A ausência acarretará nota zero em qualquer uma das
+        avaliações.
+
+        \item A critério do professor, as datas das provas poderão
+        ser alteradas.
+
+        \item A lista de presença será passada apenas uma vez
+        durante cada aula e está sujeita a confirmação oral. O
+        estudante deve assiná-la de forma legí­vel. É proibido assinar
+        com suas iniciais e é proibido assinar por outra pessoa.
+
+        \item Haverá avaliação quanto à clareza, apresentação e formalização na  resolução das questões de
+        cada prova. A nota do aluno poderá ser alterada em razão da
+        inobservância desses parâmetros.
+
+    \end{enumerate}
+\end{document}
