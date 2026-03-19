@@ -1,0 +1,41 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8
+\def\ano{2026}
+\def\semestre{1}
+\def\disciplina{Geometria Analítica}
+\def\turma{1}
+\def\autor{José Antônio O. Freitas}
+\def\instituto{MAT-UnB}
+
+\documentclass{beamer}
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+% \mode<presentation>
+\input{configuracoes_latex/pacotes}
+\input{configuracoes_latex/ambientes}
+\input{configuracoes_latex/comandos_personalizados}
+
+\title{Plano de Ensino}
+\author[\autor]{\autor}
+\institute[\instituto]{\instituto}
+\date{}
+
+\begin{document}
+    \begin{frame}
+        \maketitle
+    \end{frame}
+
+    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+
+    \begin{frame}
+        \begin{itemize}
+            \item Curso divido em 3 módulos;
+            \item Principais tópicos:
+            \begin{itemize}
+                \item Objetos geométricos no plano cartesiano
+                \item Objetos geométricos no espaço
+                \item Reconhecimento de objetos no plano e espaço
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+\end{document}
