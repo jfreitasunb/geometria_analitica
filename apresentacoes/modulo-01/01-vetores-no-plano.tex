@@ -211,22 +211,7 @@
         \end{figure}
     \end{frame}
 
-    \begin{frame}
-        \begin{definicao}
-            Dois vetores $\vec{u}$ \pause e $\vec{v}$ \pause são \textbf{paralelos} \pause (ou \textbf{colineares}) \pause se as retas que contém estes vetores
-            \pause são paralelas (podendo ser coincidentes). \pause Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, \pause escreveremos $\vec{u}\varparallel\vec{v}$.
-            \pause Neste caso, $\vec{u}$ e $\vec{v}$ \pause têm a mesma direção, mas podem ter sentidos contrários.
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{figure}[!h]
-            \centering
-            \caption{Vetores paralelos}
-            \includegraphics[scale=0.8]{vetores-paralelos-plano-cartesiano.pdf}
-        \end{figure}
-    \end{frame}
-
+    
     \begin{frame}
         \begin{definicao}
           Sejam $\vec{u} = (x_1, y_1)$ \pause e $\vec{v} = (x_2, y_2)$ \pause vetores. \pause Então:\pause
@@ -289,7 +274,7 @@
     \begin{frame}
         \begin{observacao}
             \begin{enumerate}[label=({\roman*})]
-                \item Sejam $\vec{u}$ um vetor não-nulo \pause e $\lambda \ne 0$ \pause um escalar. \pause Então $\vec{u} \varparallel \lambda\vec{u}$. \pause
+                \item Sejam $\vec{u}$ um vetor não-nulo \pause e $\lambda \ne 0$ \pause um escalar. \pause 
                     Além disso, \pause  se $\lambda > 0$, \pause então $\vec{u}$ e $\lambda\vec{u}$ têm o mesmo sentido, \pause e se $\lambda < 0$, \pause
                     então $\vec{u}$ e $\lambda\vec{u}$ têm sentidos contrários.\pause
 
@@ -300,6 +285,15 @@
             \end{enumerate}
         \end{observacao}
     \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            Sejam $\vec{u}$ e $\vec{v}$ vetores não-nulos. \pause Então $\vec{u} = \vec{v}$ \pause se, e somente se, \pause $\vec{u}$ e $\vec{v}$ têm normas
+            iguais, \pause são de mesma direção \pause e de mesmo sentido.
+        \end{definicao}
+    \end{frame}
+
+
 
     \begin{frame}
         \begin{propriedades}
@@ -316,31 +310,41 @@
 
     \begin{frame}
         \begin{observacao}
-            Dado um vetor não nulo $\vec{u}$ o vetor
+            Dado um vetor não nulo $\vec{u}$ \pause o vetor
             \[
-                  \vec{v} = \dfrac{\vec{u}}{\norm{\vec{u}}}
+                  \vec{v} = \pause \dfrac{\vec{u}}{\norm{\vec{u}}}\pause
             \]
-            é um vetor unitário na direção de $\vec{u}$ pois
-            \[
-                  \norm{\vec{v}} = \norm{\dfrac{\vec{u}}{\norm{\vec{u}}}} = \dfrac{1}{\norm{\vec{u}}}\norm{\vec{u}} = 1.
-            \]
-
+            tem a mesma direção de $\vec{u}$ \pause e é unitário.
         \end{observacao}
+    \end{frame}
+    
+    \begin{frame}
+        \begin{definicao}
+            Dois vetores $\vec{u}$ \pause e $\vec{v}$ \pause são \textbf{paralelos} \pause (ou \textbf{colineares}) \pause se as retas que contém estes vetores
+            \pause são paralelas (podendo ser coincidentes). \pause Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, \pause escreveremos $\vec{u}\varparallel\vec{v}$.
+            \pause Neste caso, $\vec{u}$ e $\vec{v}$ \pause têm a mesma direção, mas podem ter sentidos contrários.\pause
+        \end{definicao}
     \end{frame}
 
     \begin{frame}
-        \begin{definicao}
-            Sejam $\vec{u}$ e $\vec{v}$ vetores não-nulos. Então $\vec{u} = \vec{v}$ se, e somente se, $\vec{u}$ e $\vec{v}$ têm normas iguais, são de mesma direção e de mesmo sentido.
-        \end{definicao}
+        \begin{figure}[!h]
+            \centering
+            \caption{Vetores paralelos}
+            \includegraphics[scale=0.8]{vetores-paralelos-plano-cartesiano.pdf}
+        \end{figure}
+    \end{frame}
 
-        \begin{proposicao}\label{vetores_paralelos}
-          Dois vetores não nulos $\vec{u}$ e $\vec{v}$ são paralelos se, e somente se, existe um escalar $\lambda$ tal que $\vec{u} = \lambda\vec{v}$ (consequentemente, $\lambda \ne 0$ e assim $\vec{v} = \vec{u}/\lambda$).
+    \begin{frame}
+          \begin{proposicao}\label{vetores_paralelos}
+          Dois vetores não nulos $\vec{u}$ e $\vec{v}$ \pause são paralelos \pause se, e somente se, \pause existe um escalar $\lambda$ \pause tal que $\vec{u}
+          = \lambda\vec{v}$ \pause (consequentemente, $\lambda \ne 0$ \pause e assim $\vec{v} = \vec{u}/\lambda$).
         \end{proposicao}
     \end{frame}
 
     \begin{frame}
         \begin{definicao}
-          Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
+          Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. \pause O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ \pause é definido pelo ângulo $\theta$ \pause
+          determinado por $\vec{u}$ e $\vec{v}$ \pause e que satisfaz $0 \le \theta \le \pi$, \pause quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.
         \end{definicao}
     \end{frame}
 
@@ -354,86 +358,45 @@
 
     \begin{frame}
         \begin{definicao}
-          Quando o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ é reto, isto é, $\theta = \pi/2$, ou um deles é o vetor nulo, dizemos que os vetores $\vec{u}$ e $\vec{v}$ são \textbf{ortogonais} ou \textbf{perpendiculares} entre si. Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.\index{Vetores!Ortogonais}
+          Quando o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$ \pause é reto, isto é, $\theta = \pi/2$, \pause ou um deles é o vetor nulo, \pause
+          dizemos que os vetores $\vec{u}$ e $\vec{v}$ \pause são \textbf{ortogonais} \pause ou \textbf{perpendiculares} entre si. \pause Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.
         \end{definicao}
     \end{frame}
 
-    \begin{frame}
-        Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
-        \begin{figure}[!h]
-          \centering
-          \caption{Determinação de $\theta$}
-          \includegraphics{determinacao-angulo-vetores-plano-cartesiano.pdf}
-        \end{figure}
-    \end{frame}
-
-    \begin{frame}
-        Aplicando a Lei dos cossenos no triângulo abaixo
-        \begin{figure}[!h]
-          \centering
-          \caption{Lei dos cossenos}
-          \includegraphics{lei-cossenos-vetores-plano-cartesiano.pdf}
-        \end{figure}
-    \end{frame}
-
-    \begin{frame}
-        temos
-        \begin{align}\label{equacaonorma}
-          \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\norm{\vec{u}}\norm{\vec{v}}\cos\theta.
-        \end{align}
-    \end{frame}
-
-    \begin{frame}
+   \begin{frame}
         \begin{definicao}\label{produtointerno}
-          O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que:\index{Vetores!Produto Escalar}
+          O \textbf{produto escalar} \pause ou \textbf{produto interno} \pause dos vetores $\vec{u}$ e $\vec{v}$, \pause indicado por $\inner{u}{v}$, \pause é o
+          número real tal que:\pause
           \begin{enumerate}[label=({\roman*})]
-            \item Se $\vec{u}$ ou $\vec{v}$ é nulo, então $\inner{u}{v} = 0$.
-            \item Se $\vec{u}$ e $\vec{v}$ não são nulos e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, então
-            \begin{align}\label{produto-interno}
+            \item Se $\vec{u}$ ou $\vec{v}$ é nulo, \pause então $\inner{u}{v} = 0$.\pause
+            \item Se $\vec{u}$ e $\vec{v}$ não são nulos \pause e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, \pause então\pause
+            \begin{align*}
               \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
-            \end{align}
+            \end{align*}
           \end{enumerate}
         \end{definicao}
     \end{frame}
 
     \begin{frame}
         \begin{proposicao}
-          Sejam $\vec{u}$ e $\vec{v}$ vetores e $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$.
+          Sejam $\vec{u}$ e $\vec{v}$ vetores \pause e $\theta$ o ângulo entre $\vec{u}$ e $\vec{v}$.\pause
           \begin{enumerate}[label=({\roman*})]
-            \item Se $\vec{u}$ e $\vec{v}$ não são nulos, então
+            \item Se $\vec{u}$ e $\vec{v}$ não são nulos, \pause então\pause
             \[
-              \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
+              \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.\pause
             \]
-            \item Qualquer que seja o vetor $\vec{u}$,
+            \item Qualquer que seja o vetor $\vec{u}$,\pause
             \[
-              \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
+              \norm{\vec{u}} = \sqrt{\inner{u}{u}}.\pause
             \]
-            \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, $\vec{u}\perp\vec{v}$ se, e somente se, $\inner{u}{v} = 0$.
+            \item Quaisquer que sejam os vetores $\vec{u}$ e $\vec{v}$, \pause $\vec{u}\perp\vec{v}$ \pause se, e somente se, $\inner{u}{v} = 0$.\pause
             \end{enumerate}
         \end{proposicao}
    \end{frame}
 
     \begin{frame}
-        Agora, como podemos encontrar o produto interno sem necessitar de determinar o ângulo $\theta$ entre dois vetores $\vec{u}$ e $\vec{v}$\,? Substituindo o produto interno na equação \eqref{equacaonorma} temos
-        \[
-          \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\inner{u}{v}
-        \]
-        isto é,
-        \begin{align}\label{equacao-auxilar-norma}
-          \inner{u}{v} = \dfrac{1}{2}(\norm{\vec{u}}^2 + \norm{\vec{v}}^2 - \norm{\vec{u} - \vec{v}}^2).
-        \end{align}
-        Se $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$, então podemos reescrever \eqref{equacao-auxilar-norma} como
-        \begin{align*}
-          \inner{u}{v} &= \dfrac{1}{2}(x_1^2 + y_1^2 + x_2^2 + y_2^2 - \norm{(x_1 - x_2, y_1 - y_2)}^2)\\
-          &= \dfrac{1}{2}[x_1^2 + y_1^2 + x_2^2 + y_2^2 - (x_1 - x_2)^2 - (y_1 - y_2)^2]\\
-          &= x_1x_2 + y_1y_2.
-        \end{align*}
-    \end{frame}
-
-    \begin{frame}
-        Acabamos de demonstrar o seguinte teorema:
         \begin{teorema}
-          O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ em $\real^2$ é dado por
+          O produto interno de dois vetores $\vec{u} = (x_1, y_1)$ \pause e $\vec{v} = (x_2, y_2)$ \pause em $\real^2$ é dado por\pause
           \[
             \inner{u}{v} = x_1x_2 + y_1y_2.
           \]
@@ -441,23 +404,15 @@
     \end{frame}
 
     \begin{frame}
-        \begin{exemplos}
+        \begin{proposicao}
+          Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, \pause $\vec{v} = (x_2, y_2)$ \pause e $\vec{w} = (x_3, y_3)$ \pause e qualquer que seja o
+          número real $\lambda$ \pause temos\pause
           \begin{enumerate}[label=({\roman*})]
-            \item Sejam $\vec{u} = (1, 1)$ e $\vec{v} = (1,0)$. Determine o ângulo entre $\vec{u}$ e $\vec{v}$.
-            \item Encontre um vetor $\vec{u} = (x, y)$ ortogonal a $\vec{v} = (4, -1)$ e tal que $\inner{u}{w} = -1$, onde $\vec{w} = (1,1)$.
-          \end{enumerate}
-        \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}\label{propriedades-produto-interno}
-          Quaisquer que sejam os vetores $\vec{u} = (x_1, y_1)$, $\vec{v} = (x_2, y_2)$ e $\vec{w} = (x_3, y_3)$ e qualquer que seja o número real $\lambda$ temos
-          \begin{enumerate}[label=({\roman*})]
-            \item\label{linearidade-produto-interno} $\langle \vec{u}, \vec{v} + \vec{w}\rangle = \inner{u}{v} + \inner{u}{w}$
-            \item $\langle \vec{u} + \vec{v}, \vec{w}\rangle = \inner{u}{w} + \inner{v}{w}$
-            \item\label{linearidade2-produto-interno} $\langle (\lambda \vec{u}\,), \vec{v}\rangle = \langle \vec{u}, (\lambda \vec{v}\,)\rangle = \lambda\inner{u}{v}$
-            \item $\inner{u}{v} = \inner{v}{u}$
-            \item Se $\vec{u} \ne \vec{0}$, então $\inner{u}{u} > 0$.
+            \item $\langle \vec{u}, \pause \vec{v} + \vec{w}\rangle \pause = \inner{u}{v} \pause + \inner{u}{w}$\pause
+            \item $\langle \vec{u} + \vec{v}, \pause \vec{w}\rangle \pause = \inner{u}{w} \pause + \inner{v}{w}$\pause
+            \item $\langle (\lambda \vec{u}\,), \vec{v}\rangle \pause = \langle \vec{u}, (\lambda \vec{v}\,)\rangle \pause = \lambda\inner{u}{v}$\pause
+            \item $\inner{u}{v} = \pause \inner{v}{u}$\pause
+            \item Se $\vec{u} \ne \vec{0}$, \pause então $\inner{u}{u} > 0$.
           \end{enumerate}
         \end{proposicao}
    \end{frame}
@@ -465,82 +420,59 @@
     \begin{frame}
         \begin{observacao}
           \begin{enumerate}[label=({\roman*})]
-            \item As propriedades \ref{linearidade-produto-interno} e \ref{linearidade2-produto-interno} Proposição \ref{propriedades-produto-interno} podem ser estendidas para qualquer número de vetores e escalares:
+            \item As propriedades do produto interno \pause podem ser estendidas para qualquer número de vetores \pause e escalares:\pause
             \[
-              \langle\vec{u}, (\lambda_1\vec{v_1} + \lambda_2\vec{v_2} + \cdots + \lambda_n\vec{v_n} )\rangle = \lambda_1\inner{u}{v_1} + \lambda_2\inner{u}{v_2} + \cdots + \lambda_n\inner{u}{v_n}.
+              \langle\vec{u}, \pause (\lambda_1\vec{v_1} + \pause \lambda_2\vec{v_2} \pause + \cdots + \pause \lambda_n\vec{v_n} )\rangle \pause =
+              \lambda_1\inner{u}{v_1} \pause + \lambda_2\inner{u}{v_2} \pause + \cdots + \pause \lambda_n\inner{u}{v_n}.\pause
             \]
-            \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ não podemos concluir que $\vec{v} = \vec{w}$. Por exemplo, para $\vec{u} = (1, 0)$, $\vec{v} = (2, 1)$ e $\vec{w} = (2, -5)$ temos $\inner{u}{v} = \inner{u}{w}$ e no entanto $\vec{v} \ne \vec{w}$. Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.
-            \item De $\inner{u}{v} = 0$ não podemos concluir que $\vec{u} = \vec{0}$ ou $\vec{v} = \vec{0}$. Por exemplo, para $\vec{u} = (2, 1)$ e $\vec{v} = (-2, 4)$ temos $\inner{u}{v} = 0$ e no entanto $\vec{u} \ne \vec{0}$ e $\vec{v} \ne \vec{0}$.
+            \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ \pause não podemos concluir que $\vec{v} = \vec{w}$. \pause Por exemplo, para $\vec{u} = (1, 0)$,
+                \pause $\vec{v} = (2, 1)$ \pause e $\vec{w} = (2, -5)$ \pause temos $\inner{u}{v} = \inner{u}{w}$ \pause e no entanto $\vec{v} \ne \vec{w}$.
+                \pause Mas podemos concluir que $\vec{u}\perp(\vec{v} - \vec{w})$.\pause
+            \item De $\inner{u}{v} = 0$ \pause não podemos concluir que $\vec{u} = \vec{0}$ \pause ou $\vec{v} = \vec{0}$. \pause Por exemplo, para $\vec{u} =
+                (2, 1)$ \pause e $\vec{v} = (-2, 4)$ \pause temos $\inner{u}{v} = 0$ \pause e no entanto $\vec{u} \ne \vec{0}$ \pause e $\vec{v} \ne \vec{0}$.
           \end{enumerate}
         \end{observacao}
     \end{frame}
 
     \begin{frame}
-        \begin{exemplos}
-          Calcule o ângulo $\alpha$ entre $\vec{u} + \vec{v}$ e $\vec{u} - \vec{v}$, sabendo que $\norm{\vec{u}} = \sqrt{5}$, $\norm{\vec{v}} = 1$ e que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é $\pi/4$.
-        \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-        \begin{proposicao}\label{DesigualdadeTriangular}
-          Sejam $\vec{u}$ e $\vec{v}$ vetores.
+        \begin{proposicao}
+          Sejam $\vec{u}$ e $\vec{v}$ vetores.\pause
           \begin{enumerate}[label=({\roman*})]
-            \item $|\inner{u}{v}| \le \norm{\vec{u}}\norm{\vec{v}}$ [Desigualdade de Scharwz]\index{Desigualdade de Scharwz}
-            \item $\norm{\vec{u} + \vec{v}} \le \norm{\vec{u}} + \norm{\vec{v}}$ [Desigualdade Triangular]\index{Desigualdade Triangular}
+            \item $|\inner{u}{v}| \pause \le \norm{\vec{u}}\pause \norm{\vec{v}}$ \pause (Desigualdade de Scharwz)\pause
+            \item $\norm{\vec{u} + \vec{v}} \pause \le \norm{\vec{u}} + \pause \norm{\vec{v}}$ \pause (Desigualdade Triangular)
           \end{enumerate}
         \end{proposicao}
     \end{frame}
 
     \begin{frame}
-
-
-        Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores não nulos. Suponha que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é tal que $0 < \theta < \pi/2$.
+        Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores não nulos. \pause Suponha que o ângulo $\theta$ \pause entre $\vec{u}$ e $\vec{v}$ \pause
+        é tal que $0 < \theta < \pi/2$.\pause
         \begin{figure}[!h]
           \centering
           \caption{Projeção ortogonal}
-          \includegraphics{projecao-vetores-plano-cartesiano.pdf}
+          \includegraphics{projecao-vetores-plano-cartesiano.pdf}\pause
         \end{figure}
 
-        O vetor $\vec{OP}$ é paralelo ao vetor $\vec{u}$ e o vetor $\vec{PA}$ é ortogonal ao vetor $\vec{u}$.
+        O vetor $\vec{OP}$ \pause é paralelo ao vetor $\vec{u}$ \pause e o vetor $\vec{PA}$ \pause é ortogonal ao vetor $\vec{u}$.\pause
     \end{frame}
 
     \begin{frame}
-        \begin{definicao}\label{projecao_ortogonal}
-          Seja $\vec{u}$ um vetor não nulo. Dado qualquer vetor $\vec{v}$, o vetor $\vec{OP}$ é chamado de \textbf{projeção ortogonal} de $\vec{v}$ sobre $\vec{u}$, e é indicado por $\proj_{\vec{u}}\vec{v}$ se satisfaz as seguintes condições:\index{Vetores!Projeção ortogonal}
+        \begin{definicao}
+          Seja $\vec{u}$ um vetor não nulo. \pause Dado qualquer vetor $\vec{v}$, \pause o vetor $\vec{OP}$ \pause é chamado de \textbf{projeção ortogonal}
+          \pause de $\vec{v}$ sobre $\vec{u}$, \pause e é indicado por $\proj_{\vec{u}}\vec{v}$ \pause se satisfaz as seguintes condições:\pause
           \begin{enumerate}[label=({\roman*})]
-            \item $\vec{OP} \varparallel\vec{u}$
+            \item $\vec{OP} \varparallel\vec{u}$\pause
             \item $(\vec{v} - \vec{OP}) \perp \vec{u}$.
           \end{enumerate}
         \end{definicao}
     \end{frame}
 
     \begin{frame}
-        Podemos também escrever
+        Podemos também escrever\pause
         \begin{enumerate}[label=({\roman*})]
-          \item $\proj_{\vec{u}}\vec{v} \varparallel\vec{u}$
-            \item $(\vec{v} - \proj_{\vec{u}}\vec{v}) \perp \vec{u}$.
+          \item $\proj_{\vec{u}}\vec{v} \varparallel\vec{u}$\pause
+          \item $(\vec{v} - \proj_{\vec{u}}\vec{v}) \perp \vec{u}$.\pause
         \end{enumerate}
-
-        No caso acima temos
-        \[
-          \cos\theta = \dfrac{\norm{\vec{OP}}}{\norm{\vec{v}}}
-        \]
-        e então $\norm{\vec{OP}} = \norm{\vec{v}}\cos\theta$. Mas
-        \[
-          \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}
-        \]
-        e assim podemos escrever
-        \[
-          \norm{\vec{OP}} = \dfrac{\inner{u}{v}}{\norm{\vec{u}}}.
-        \]
-    \end{frame}
-
-    \begin{frame}
-        Além disso, como $\vec{OP}$ é paralelo à $\vec{u}$ e de mesmo sentido, devemos ter $\vec{OP} = \lambda\vec{u}$ com $\lambda > 0$. Daí
-        $\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e então
-        \[
-          \vec{OP} = \dfrac{\norm{OP}}{\norm{\vec{u}}^2}\vec{u}.
-        \]
     \end{frame}
 
     \begin{frame}
@@ -555,39 +487,27 @@
 
     \begin{frame}
         \begin{proposicao}
-          Seja $\vec{u}$ um vetor não nulo. Qualquer que seja o vetor $\vec{v}$, existe e é única a projeção ortogonal de $\vec{v}$ sobre $\vec{u}$. Sua expressão em termos de $\vec{u}$ e $\vec{v}$ é dada por
+          Seja $\vec{u}$ um vetor não nulo. \pause Qualquer que seja o vetor $\vec{v}$, \pause existe e é única \pause a projeção ortogonal de $\vec{v}$ sobre
+          $\vec{u}$. \pause Sua expressão em termos de $\vec{u}$ e $\vec{v}$ \pause é dada por\pause
           \[
-            \proj_{\vec{u}}\vec{v} = \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}
+            \proj_{\vec{u}}\vec{v} = \pause \dfrac{\inner{v}{u}}{\norm{\vec{u}}^2}\vec{u}\pause
           \]
-          e sua norma é dada por
+          e sua norma é dada por\pause
           \[
-            \norm{\proj_{\vec{u}}\vec{v}} = \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}.
+            \norm{\proj_{\vec{u}}\vec{v}} = \pause \dfrac{\mid\inner{v}{u}\mid}{\norm{\vec{u}}}.\pause
           \]
         \end{proposicao}
     \end{frame}
 
     \begin{frame}
         \begin{observacao}
-          O escalar $\lambda$ encontrado na proposição anterior pode ser negativo ou zero. Ele será negativo quando $\pi/2 \le \theta \le \pi$ e será zero quando $\vec{u}\perp\vec{v}$.
+          O escalar $\lambda$ encontrado na proposição anterior \pause pode ser negativo ou zero. \pause Ele será negativo quando $\pi/2 \le \theta \le \pi$
+          \pause e será zero quando $\vec{u}\perp\vec{v}$.\pause
           \begin{figure}[!h]
             \centering
             \caption{Possibilidades para $\lambda$}
-            \includegraphics{vetores-projecao-escalar-plano-cartesiano.pdf}
+            \includegraphics{vetores-projecao-escalar-plano-cartesiano.pdf}\pause
           \end{figure}
         \end{observacao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{exemplos}\label{exemplosprojecao}
-          \begin{enumerate}[label=({\roman*})]
-            \item Encontre a projeção ortogonal do vetor $\vec{v} = (4, -1)$ sobre o vetor $\vec{u} = (2, 1)$.
-             \item Considere um triângulo $ABC$ onde $A(3,3)$, $B(0,1)$ e $C(1,6)$.
-             \begin{enumerate}[label=({\roman*})]\label{exemploprojecao2}
-               \item Verifique que $ABC$ é um triângulo retângulo em $A$.
-               \item Calcule a projeção do cateto $BA$ sobre a hipotenusa $BC$.
-               \item Determine o pé da altura do triângulo relativo ao vértice $A$.
-             \end{enumerate}
-          \end{enumerate}
-        \end{exemplos}
     \end{frame}
 \end{document}
