@@ -9,7 +9,7 @@
 % \usepackage[latin1]{inputenc}
 \usepackage{graphicx}
 \graphicspath{{/home/jfreitas/GitHub/geometria_analitica/apresentacoes/logo}{/home/jfreitas/GitHub/geometria_analitica/notas_de_aula/figuras-latex}{C:/Users/jfreitas/GitHub/geometria_analitica/apresentacoes/logo}}
-\usepackage{enumitem}
+%\usepackage{enumitem}
 \usepackage{multicol}
 \usepackage{answers}
 \usepackage{qrcode}
@@ -27,3 +27,58 @@
 \renewcommand{\qedsymbol}{$\blacksquare$}
 
 \setbeamertemplate{itemize items}[ball]
+
+%Altera o rodapé
+
+% \setbeamertemplate{footline}
+% {
+%   \leavevmode%
+%   \hbox{%
+%   \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+%     \usebeamerfont{author in head/foot}%
+%     \insertsectionnavigationhorizontal{.7\paperwidth}{}{}%
+%   \end{beamercolorbox}%
+%   \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%     \usebeamerfont{date in head/foot}
+%     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+%   \end{beamercolorbox}}%
+%   \vskip0pt%
+% }
+
+%Remove botões de navegação
+\beamertemplatenavigationsymbolsempty
+
+%Cores
+\definecolor{LMUGreen}{RGB}{0,136,58}
+\definecolor{Black}{RGB}{35,35,35}
+\definecolor{White}{RGB}{255,255,255}
+\definecolor{Darkgrey}{RGB}{98,100,104}
+\definecolor{Middlegrey}{RGB}{192,193,195}
+\definecolor{Lightgrey}{RGB}{230,230,231}
+\definecolor{Superlightgrey}{RGB}{245,245,245}
+
+\setbeamercolor{item projected}{bg=LMUGreen,fg=White}
+
+\setbeamercolor{section in toc}{fg=Black,bg=White}
+\setbeamercolor{alerted text}{fg=LMUGreen}
+\setbeamercolor*{palette primary}{fg=LMUGreen,bg=Lightgrey}
+\setbeamercolor*{palette secondary}{fg=LMUGreen,bg=Lightgrey}
+\setbeamercolor*{palette tertiary}{bg=LMUGreen,fg=White}
+\setbeamercolor*{palette quaternary}{fg=LMUGreen,bg=Black}
+
+\setbeamercolor*{sidebar}{fg=LMUGreen,bg=Lightgrey}
+
+\setbeamercolor*{palette sidebar primary}{fg=LMUGreen}
+\setbeamercolor*{palette sidebar secondary}{fg=White}
+\setbeamercolor*{palette sidebar tertiary}{fg=LMUGreen}
+\setbeamercolor*{palette sidebar quaternary}{fg=Lightgrey}
+
+\setbeamercolor{titlelike}{parent=palette primary,fg=LMUGreen}
+\setbeamercolor{frametitle}{bg=Lightgrey, fg=LMUGreen}
+\setbeamercolor{frametitle right}{bg=Middlegrey}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\setbeamercolor*{bibliography entry author}{fg=LMUGreen}
+\setbeamercolor*{bibliography entry note}{fg=LMUGreen!80!white}
