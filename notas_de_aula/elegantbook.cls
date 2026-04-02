@@ -437,7 +437,8 @@
   \newcommand{\comentarioname}{Comentário}
   \newcommand{\assuntoname}{Assunto}
   \newcommand{\conclusaoname}{Conclusão}
-  \newcommand{\solucaoname}{Soluções}
+  \newcommand{\solucaoname}{Solução}
+  \newcommand{\solucoesname}{Soluções}
   \newcommand{\propriedadename}{Propiedade}
   \newcommand{\propriedadesname}{Propiedades}
   \newcommand{\introducaoname}{Introdução}
@@ -807,6 +808,7 @@
     \par\vspace{0.5\baselineskip}}
 
 \newenvironment{solucao}{\par\noindent\textbf{\color{main}\solucaoname} \citshape}{\par}
+\newenvironment{solucao}{\par\noindent\textbf{\color{main}\solucoesname} \citshape}{\par}
 \newenvironment{remark}{\noindent\textbf{\color{second}\remarkname}}{\par}
 \newenvironment{assumption}{\par\noindent\textbf{\color{third}\assumptionname} \citshape}{\par}
 \newenvironment{conclusao}{\par\noindent\textbf{\color{third}\conclusaoname} \citshape}{\par}
