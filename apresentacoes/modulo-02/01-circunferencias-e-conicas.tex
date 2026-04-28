@@ -21,1310 +21,484 @@
 \date{}
 
 \begin{document}
-    \begin{frame}
-        \maketitle
-    \end{frame}
-
-    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
-
-    \begin{frame}
-      \begin{definicao}
-        A circunferência é o conjunto dos pontos do plano que estão a uma mesma distância (denominada \textbf{raio}) de um dado ponto do plano (chamado \textbf{centro}).\index{Circunferência}
-      \end{definicao}
-
-      Considere uma circunferência de centro $C(x_0,y_0)$ e raio $r$. Seja $P(x,y)$ um ponto qualquer desta circunferência e seja $\beta$ o ângulo formado pelos vetores $\vec{CA}$ e $\vec{CP}$, onde $A(x_0 + r, y_0)$. Assim
-      \[
-        \cos\beta = \dfrac{\inner{CA}{CPq}}{\norma{\vec{CA}}\norm{\vec{CP}}}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Mas $\vec{CP} = (x - x_0, y - y_0)$, $\vec{CA} = (r, 0)$ e $\norm{\vec{CA}} = \norm{\vec{CP}} = r$, então
-      \[
-        \cos\beta = \dfrac{(x - x_0)r}{r^2} = \dfrac{x - x_0}{r},
-      \]
-      isto é,
-      \begin{equation}\label{equacaoparametricaX}
-        x = x_0 + r\cos\beta
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Agora, para os vetores $\vec{CP}$ e $\vec{CB}$, onde $B(x_0, y_0 + r)$ temos $\vec{CP} = (x - x_0, y - y_0)$, $\vec{CB} = (0, r)$ e $\norm{\vec{CA}} = \norm{\vec{CB}} = r$, então
-      \begin{equation}\label{equacaoinicialY}
-        \cos\alpha = \dfrac{y - y_0}{r}.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[h]
-        \centering
-        \caption{Circunferência}\label{circunferencia}
-        \includegraphics[scale=0.8]{circunferencia.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Na Figura \ref{circunferencia}, considere o pé da perpendicular ao segmento $CA$ passando por $P$ e denote esse ponto por $E$. Agora, considere o pé da perpendicular ao segmento $CB$ passando por $P$ e denote esse ponto por $D$. Então os segmentos $CD$ e $EP$ têm o mesmo comprimento $k$. Daí
-      \begin{equation}\label{equacaosenocosseno}
-        \cos\alpha = \dfrac{k}{r} = \sin\beta.
-      \end{equation}
-
-      Substituindo \eqref{equacaosenocosseno} em \eqref{equacaoinicialY} obtemos:
-      \[
-        \sin\beta = \dfrac{y - y_0}{r},
-      \]
-      isto é,
-      \begin{equation}\label{equacaoparametricaY}
-         y = y_0 + r\sin\beta.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Por outro lado, se um ponto $P(x, y)$ satisfaz as equações \eqref{equacaoparametricaX} e \eqref{equacaoparametricaY}, então
-      \[
-        d(P,C) = \sqrt{(x - x_0)^2 + (y - y_0)^2} = \sqrt{r^2\cos^2\beta + r^2\sin^2\beta} = r
-      \]
-      e então o ponto $P$ pertence á circunferência de centro $C(x_0,y_0)$ e raio $r$.
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-        As equações
-        \[
-          \begin{cases}
-            x = x_0 + r\cos\beta\\
-            y = y_0 + r\sin\beta,
-          \end{cases}
-          \beta \in [0,2\pi]
-        \]
-        são chamadas \textbf{equações paramétricas} da circunferência de centro $C(x_0, y_0)$ e raio $r$.\index{Circunferência!Equações Paramétricas}
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      Seja $C$ uma circunferência com equações paramétricas
-      \[
-          \begin{cases}
-            x = x_0 + r\cos\beta\\
-            y = y_0 + r\sin\beta,
-          \end{cases}
-          \beta \in [0,2\pi].
-      \]
-
-      Podemos escrever
-      \begin{align*}
-        x - x_0 = r\cos\beta\\
-        y - y_0 = r\sin\beta.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Elevando ao quadrado ambos os lados
-      \begin{align*}
-        (x - x_0)^2 = r^2\cos^2\beta\\
-        (y - y_0)^2 = r^2\sin^2\beta
-      \end{align*}
-      e somando obtemos
-      \begin{equation}
-        (x - x_0)^2 + (y - y_0)^2 = r^2
-      \end{equation}
-      que é a \textbf{equação cartesiana} da circunferência de centro $(x_0,y_0)$ e raio $r$.\index{Circunferência!Equação Cartesiana}
-      Podemos reescrever essa equação como
-      \[
-        x^2 + y^2 - 2x_0x - 2y_0y + x_0^2 + y_0^2 - r^2 = 0.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Fazendo
-      \[
-        -2x_0 = a,\quad -2y_0 = b,\quad x_0^2 + y_0^2 - r^2 = c
-      \]
-      obtemos
-      \begin{equation}\label{equacaoalternativacircunferencia}
-        x^2 + y^2 + ax + by + c = 0.
-      \end{equation}
-
-      Sejam $P_1(x_1,y_1)$, $P_2(x_2,y_2)$ e $P_3(x_3,y_3)$ três pontos não colineares, isto é, os vetores $\vec{P_1P_2}$ e $\vec{P_1P_3}$ não são paralelos. Nessa situação é possível obter uma circunferência contendo estes três pontos.
-    \end{frame}
-
-    \begin{frame}
-      Para isso considere a equação \eqref{equacaoalternativacircunferencia}. Para que $P_1$, $P_2$ e $P_3$ pertençam a uma circunferência $C$ devemos ter:
-      \begin{align*}
-        x_1^2 + y_1^2 + ax_1 + by_1 + c = 0\\
-        x_2^2 + y_2^2 + ax_2 + by_2 + c = 0\\
-        x_3^2 + y_3^2 + ax_3 + by_3 + c = 0.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Daí para encontrar a circunferência desejada, basta determinar os valores de $a$, $b$ e $c$. Ou seja, precisamos resolver o sistema
-      \[
-        \begin{cases}
-          ax_1 + by_1 + c = -(x_1^2 + y_1^2)\\
-          ax_2 + by_2 + c = -(x_2^2 + y_2^2)\\
-          ax_3 + by_3 + c = -(x_3^2 + y_3^2).
-        \end{cases}
-      \]
-
-      Como os ponto $P_1$, $P_2$ e $P_3$ não são colineares, este sistema sempre possui solução única.
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-        \begin{enumerate}[label=({\arabic*})]
-          \item Escreva a equação cartesiana da circunferência passando pelos pontos $A(1,1)$, $B(1,-2)$ e $C(2,3)$.
-          \item Encontre a equação da circunferência que passa pelos pontos $P_1(1,-1)$, $P_2(0,1)$ e $P_3(1,0)$.
-         \item Encontre a equação da circunferência que passa pelos pontos $P_1(1,3)$, $P_2(3,-5)$ e $P_3(2,-1)$.
-       \end{enumerate}
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-        Chama-se \textbf{cônica} o lugar geométrico dos pontos $P(x,y)$ que satisfazem uma equação do segundo grau $g(x,y) = 0$, onde\index{Cônicas}
-        \begin{equation}\label{equacaoconica}
-          g(x,y) = ax^2 + bxy + cy^2 + dx + ey + f.
-        \end{equation}
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      Na equação \eqref{equacaoconica} pelo menos um dos números $a$, $b$ $c$ é diferente de zero. Os termos $ax^2$ e $cy^2$ são os \textbf{termos quadráticos}, o termo $bxy$ é o \textbf{termo quadrático misto}, $dx$ e $ey$ são os \textbf{termos lineares} e $f$ é o \textbf{termo independente}. \index{Cônica!Termos Quadráticos} \index{Cônica!Termo Quadrático Misto} \index{Cônica!Termos Lineares} \index{Cônica!Termos Independete}
-    \end{frame}
-
-    \begin{frame}
-      A equação \eqref{equacaoconica} pode representar:
-      \begin{enumerate}[label=({\arabic*})]
-        \item um conjunto vazio: $x^2 + y^2 = -1$;
-        \item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
-        \item a reunião de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
-        \item uma circunferência: $x^2 + y^2 - 13x + y - 10 = 0$;
-        \item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
-        \item uma hipérbole: $3x^2 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$;
-        \item uma parábola: $x^2 - 2xy + y^2 -2x - 2y + 1 = 0$.
-      \end{enumerate}
-    \end{frame}
-
-    \begin{frame}
-      Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio, um ponto, retas ou circunferências diremos que a cônica definida é uma \textbf{cônica degenerada}. Aqui vamos estudar as cônicas chamadas de elipse, hipérbole e parábola.
-    \end{frame}
-
-    \begin{frame}
-     \begin{definicao}
-        Sejam $F_1$ e $F_2$ pontos distintos do plano, $2c$ a distância entre $F_1$ e $F_2$ e $a$ um número real tal que $a > c$. O lugar geométrico $\mathcal{E}$ dos pontos $P$ tais que
-        \begin{equation}\label{definicaoelipse}
-          d(P,F_1) + d(P,F_2) = 2a
-        \end{equation}
-        chama-se \textbf{elipse}. Cada um dos pontos $F_1$ e $F_2$ é chamado \textbf{foco} da elipse. O segmento $F_1F_2$ é chamado \textbf{segmento focal}, seu ponto médio é o \textbf{centro} da elipse e $2c$ é chamado \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ chama-se \textbf{reta focal}.\index{Elipse} \index{Elipse!Focos} \index{Elipse!Centro} \index{Elipse!Reta Focal}
-     \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      Para obter a equação que descreve uma elipse vamos fixar os focos $F_1$ e $F_2$ como sendo $F_1(-c,0)$ e $F_2(c,0)$. Assim o centro dessa elipse estará na origem do plano cartesiano. Assim, seja $P(x,y)$ um ponto pertencente á elipse de focos $F_1$ e $F_2$. Então
-      \begin{equation}
-        d(P,F_1) + d(P,F_2) = 2a,
-      \end{equation}
-      isto é,
-      \begin{equation}
-        d(P,F_1) = 2a -  d(P,F_2).
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Assim,
-      \[
-        \sqrt{(x + c)^2 + y^2} = 2a - \sqrt{(x - c)^2 + y^2}
-      \]
-      e elevando ao quadrado ambos os membros dessa igualdade obtemos
-      \[
-        a\sqrt{(x - c)^2 + y^2} = a^2 - cx.
-      \]
-      Elevando novamente ao quadrado e simplificando
-      \[
-        (a^2 - c^2)x^2 + a^2y^2 = a^2(a^2 - c^2).
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Fazendo $b^2 = a^2 - c^2$, podemos escrever
-      \[
-        b^2x^2 + a^2y^2 = a^2b^2.
-      \]
-      Finalmente, dividindo por $a^2b^2$ obtemos
-      \begin{equation}\label{equacaoelipse}
-        \elipse{a^2}{b^2}.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Observe que
-      \begin{align}
-        a^2 = b^2 + c^2\\
-        a > b > 0\\
-        a > c > 0.
-      \end{align}
-
-      Assim todo ponto pertencente a elipse de focos $F_1(-c,0)$ e $F_2(c,0)$, deve satisfazer a equação
-      \[
-        \elipse{a^2}{b^2}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Por outro lado, seja $Q(\alpha,\beta)$ um ponto tal que
-      \[
-        \dfrac{\alpha^2}{a^2} + \dfrac{\beta^2}{b^2} = 1.
-      \]
-      Então $\beta^2 = b^2 - (b^2/a^2)\alpha^2$ e daí
-      \begin{align*}
-        d^2(Q,F_1) &= (\alpha + c)^2 + \beta^2\\
-      &= \alpha^2 + 2c\alpha + c^2 + b^2 - \dfrac{b^2}{a^2}\alpha^2\\
-      &= \left(\dfrac{c}{a}\alpha + a\right)^2.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Analogamente,
-      \begin{equation*}
-        d^2(Q,F_2) = \left(\dfrac{c}{a}\alpha - a\right)^2.
-      \end{equation*}
-      Assim
-      \begin{align}
-        d(Q,F_1) &= \left|\dfrac{c}{a}\alpha + a\right|\label{distanciaP1}\\
-        d(Q,F_2) &= \left|\dfrac{c}{a}\alpha - a\right|\label{distanciaP2}.
-      \end{align}
-
-      Como
-      \[
-        \dfrac{\alpha^2}{a^2} + \dfrac{\beta^2}{b^2} = 1.
-      \]
-      então $\alpha^2/a^2 \le 1$, isto é, $\mid\alpha\mid\le a$.
-    \end{frame}
-
-    \begin{frame}
-      Mas $c/a > 0$, daí
-      \[
-        \dfrac{c}{a}\mid\alpha\mid \le c < a
-      \]
-      logo
-      \[
-        -a < \dfrac{c\alpha}{a} < a.
-      \]
-      Portanto,
-      \begin{align*}
-        \dfrac{c}{a}\alpha + a > 0\\
-        \dfrac{c}{a}\alpha - a < 0.
-      \end{align*}
-      Desse modo podemos escrever \eqref{distanciaP1} e \eqref{distanciaP2} como
-      \begin{align*}
-        d^2(Q,F_1) &= \dfrac{c}{a}\alpha + a\\
-        d^2(Q,F_2) &= a - \dfrac{c}{a}\alpha.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Assim
-      \[
-        d(Q,F_1) + d(Q,F_2) = 2a
-      \]
-      e então o ponto $Q(\alpha,\beta)$ pertence á elipse de focos $F_1(-c,0)$ e $F_2(c,0)$.
-
-      Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da elipse. A equação \eqref{equacaoelipse} é chamada de \textbf{equação reduzida da elipse} de centro $O(0,0)$ e focos no eixo $x$. Indicamos tal elipse por\index{Elipse!Parâmetros Geométricos} \index{Elipse!Equação Reduzida}
-      \[
-        \mathcal{E}: \elipse{a^2}{b^2}.
-      \]
-
-      Com isso provamos a seguinte proposição:
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        Um ponto $P(x,y)$ é um ponto da elipse de equação reduzida
-        \[
-          \elipse{a^2}{b^2}
-        \]
-        se, e somente se, as distâncias de $P$ aos focos $F_1$ e $F_2$ são
-        \begin{align*}
-          d^2(P,F_1) &= \dfrac{c}{a}\alpha + a\\
-          d^2(P,F_2) &= a - \dfrac{c}{a}\alpha.
-        \end{align*}
-      \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-      \begin{observacao}
-        \begin{enumerate}[label=({\arabic*})]
-          \item A equação \eqref{equacaoelipse} s\'o é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro, resultarão em uma equação diferente para a elipse.
-          \item Se $(x,y)$ satisfaz a equação \eqref{equacaoelipse}, então $(-x,-y)$, $(-x,y)$ e $(x,-y)$ também satisfazem a mesma equação. Assim a elipse é simétrica em relação ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
-          \seti
-        \end{enumerate}
-      \end{observacao}
-    \end{frame}
-    \begin{frame}
-      \begin{observacao}
-        \begin{enumerate}[label=({\arabic*})]
-          \conti
-          \item O ponto $(x,0)$ pertence á elipse de equação \eqref{equacaoelipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$. Além disso, o ponto $(0,y)$ pertence á elipse de equação \eqref{equacaoelipse} se, e s\'o se, $y = \pm b$. Portanto, a interseção de $E$ com o eixo $x$ são os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interseção com o eixo $y$ são os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) = \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
-          \item Não existe circunferência que contenha os pontos $A_1$, $A_2$, $B_1$ e $B_2$. Caso existisse, tal circunferência teria dois diâmetros diferentes, cujos comprimento são dados pelos comprimentos dos segmente $A_1A_2$ e $B_1B_2$, o que é impossível. Portanto, como esses pontos pertencem a $E$, podemos afirmar que a elipse não é uma circunferência e nem o conjunto vazio.
-        \end{enumerate}
-      \end{observacao}
-    \end{frame}
-
-    \begin{frame}
-
-      Na equação \eqref{equacaoelipse}, fazendo $y \ge 0$ podemos escrever
-      \[
-        y = \dfrac{b}{a}\sqrt{a^2 - x^2},\quad x \in [0,a].
-      \]
-      Tal equação é uma função em $x$, contínua, decrescente e com concavidade para baixo em todo seu domínio. Assim seu gráfico é dado pela Figura \ref{GraficoprimeiroquadranteElipse}.
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[h]
-        \centering
-        \caption{Gráfico da função $y = \dfrac{b}{a}\sqrt{a^2 - x^2}$}
-        \label{GraficoprimeiroquadranteElipse}
-        \vspace{-1cm}
-        \includegraphics{grafico-elipse-primeiro-quadrante.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      E como a elipse é simétrica, sua forma é dada pela Figura \ref{FormageralElipse}.
-      \begin{figure}[h]
-        \centering
-        \caption{Elipse com focos no eixo $x$ e centro na origem: $\elipse{a^2}{b^2}$}
-        \label{FormageralElipse}
-        \vspace{-3.3cm}
-        \includegraphics[scale=1]{elipse-focos-eixo-X.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-        Os pontos $A_1$ e $A_2$ em que a reta focal intercepta a elipse e os pontos $B_1$ e $B_2$ em que a mediatriz do segmento focal intercepta a elipse são chamados de \textbf{vértices}. Os segmentos $A_1A_2$ e $B_1B_2$ são chamados de \textbf{eixo maior} e \textbf{eixo menor} da elipse, respectivamente.\index{Elipse!Vértice} \index{Elipse!Eixo Maior} \index{Elipse!Eixo Menor}
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-        \begin{enumerate}[label=({\arabic*})]
-          \item A equação
-          \[
-            \elipse{9}{4}
-          \]
-          representa uma elipse onde $a = 3$, $b = 2$. Os focos são $F_1(-c,0)$ e $F_2(c,0)$ onde, $a^2 = b^2 + c^2$. Daí, $c = \sqrt{5}$. Logo $F_1(-\sqrt{5},0)$ e $F_2(\sqrt{5},0)$. Os vértices são $A_1(-3,0)$, $A_2(3,0)$, $B_1(0,-2)$ e $B_2(0,2)$.
-          \item Encontre a equação da elipse cujos focos são $F_1(-3,0)$ e $F_2(0,4)$ e cujo eixo maior mede 7.
-        \end{enumerate}
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        Uma equação da forma
-        \begin{equation}\label{equacaoelipsequasegeral}
-          \elipse{p}{q}
-        \end{equation}
-        descreve uma elipse se, e somente se, os números reais $p$ e $q$ são distintos e positivos.
-      \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-      \begin{corolario}
-        Sejam $O$ a origem do plano cartesiano, $p$ e $q$ números reais distintos e positivos. Seja $E$ a elipse de equação \eqref{equacaoelipsequasegeral} e parâmetros geométricos $a$ e $b$.
-        \begin{enumerate}[label=({\arabic*})]
-          \item Se $p > q$, então $a^2 = p$, $b^2 = q$ e $E$ tem centro $O$ e focos no eixo $x$.
-          \item Se $q > p$, então $a^2 = q$, $b^2 = p$ e $E$ tem centro $O$ e focos no eixo $y$.
-        \end{enumerate}
-      \end{corolario}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[h]
-        \centering
-        \caption{Elipse com focos no eixo $y$ e centro na origem: $\elipse{a^2}{b^2}$}
-        \vspace{-1.5cm}
-        \includegraphics[scale=0.95]{elipse-focos-eixo-Y.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-        Para as equações dadas, encontre os focos, vértices e o comprimento do eixo maior e menor da elipse dada.
-        \begin{enumerate}[label=({\arabic*})]
-          \item $16x^2 + y^2 = 1$
-          \item $25x^2 + 169y^2 = 9$
-        \end{enumerate}
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      Considere a elipse de equação reduzida
-      \[
-        \mathcal{E}: \elipse{a^2}{b^2},\quad a > b.
-      \]
-      Temos
-      \begin{align*}
-        \dfrac{x^2}{a^2} \le 1 \Leftrightarrow -a \le x \le a\\
-        \dfrac{y^2}{b^2} \le 1 \Leftrightarrow -b \le x \le b.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Portanto os pontos de $\mathcal{E}$ estão dentro do retângulo
-      \begin{figure}[!h]
-        \centering
-        \caption{Retângulo fundamental}
-        \includegraphics{retangulo-fundamental.pdf}
-      \end{figure}
-
-      Esse retângulo é chamado de \textbf{retângulo fundamental} da elipse $\mathcal{E}$.\index{Elipse!Retângulo Fundamental}
-    \end{frame}
-
-    \begin{frame}
-      Agora, como $a > b$, então
-      \[
-        \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2} \le \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} \le \dfrac{x^2}{b^2} + \dfrac{y^2}{b^2}.
-      \]
-      Assim, todo ponto $P(x,y)$ de $E$ satisfaz
-      \[
-        \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2} \le 1 \le \dfrac{x^2}{b^2} + \dfrac{y^2}{b^2}.
-      \]
-      e daí $b^2 \le x^2 + y^2 \le a^2$, ou seja, $b \le d(P,O) \le a$.
-    \end{frame}
-
-    \begin{frame}
-      Portanto a elipse está contida entre as circunferências de raio $a$ e $b$. Essa região é chamada de \textbf{coroa fundamental} da elipse.\index{Elipse!Coroa Fundamental}
-      \begin{figure}[!h]
-        \centering
-        \caption{Coroa Fundamental}
-        \includegraphics{coroa-fundamental.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Logo os pontos da elipse estão na região compreendida entre o retângulo fundamental e a coroa fundamental.
-      \begin{figure}[!h]
-        \centering
-        \caption{Região onde se encontram os pontos de uma elipse}
-        \includegraphics{regiao-fundamental.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Assim observe que se $b/a$ estiver pr\'oximo de 1, então o retângulo fundamental será pr\'oximo de um quadrado e daí a forma da elipse se aproximará de um circunferência. Por outro lado, quanto mais pr\'oximo de 0 estiver $b/a$, mas alongada será a elipse. Mas, sabemos que
-      \[
-        a^2 = b^2 + c^2
-      \]
-      daí
-      \[
-        \left(\dfrac{b}{a}\right)^2 + \left(\dfrac{c}{a}\right)^2 = 1.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Dessa equação vemos que se $b/a \to 1$, então $c/a \to 0$ e daí os focos de $\mathcal{E}$ estão ``mais pr\'oximos'' de seu centro do que de seus vértices e desse modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/a \to 0$, então $c/a \to 1$ e assim os focos de $\mathcal{E}$ estão ``mais pr\'oximos'' dos vértices do que do centro de $\mathcal{E}$ e desse modo a elipse será mais alongada.  Portanto o quociente $c/a$ mede o quanto os focos de $\mathcal{E}$ estão ``fora do centro''. A essa razão damos o nome de \textbf{excentricidade} (\textit{ex centrum}) da elipse e representamos por\index{Elipse!Excentricidade}
-      \[
-        e = \dfrac{c}{a}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-        Sejam $F_1$ e $F_2$ pontos distintos do plano tais que sua distância seja $2c$. Considere um número real $a$ tal que $0 < a < c$. O lugar geométrico $\mathcal{H}$ dos pontos $P(x,y)$ tais que
-        \begin{equation}\label{equacaohiperbole}
-          | d(P,F) - d(P,F_2)| = 2a
-        \end{equation}
-        chama-se \textbf{hipérbole}. Os pontos $F_1$ e $F_2$ são chamados \textbf{focos} da hipérbole, o segmento $F_1F_2$ é chamado \textbf{segmento focal}, o ponto médio do segmento $F_1F_2$ é chamada de \textbf{centro} da hipérbole e o número $2c$ é chamado de \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ é chamada \textbf{reta focal}.\index{Hipérbole} \index{Hipérbole!Focos} \index{Hipérbole!Segmento Focal} \index{Hipérbole!Centro} \index{Hipérbole!Distância Focal} \index{Hipérbole!Reta Focal}
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      Vamos fixar $F_1(-c,0)$ e $F_2(c,0)$. Assim um ponto $P(x,y)$ pertence á hipérbole $\mathcal{H}$ de focos $F_1$ e $F_2$ se
-      \begin{align*}
-        &| d(P,F_1) - d(P,F_2) | = 2a\\
-        &d(P,F_1) - d(P,F_2) = \pm 2a\\
-        &d(P,F_1) = \pm 2a + d(P,F_2)\\
-        &\left[\sqrt{(x + c)^2 + y^2}\right]^2 = \left[\pm 2a + \sqrt{(x - c)^2 + y^2}\right]^2\\
-        &(cx - a^2)^2 = \left[\pm a\sqrt{(x - c)^2 + y^2}\right]^2\\
-        &(c^2 - a^2)x^2 - a^2y^2 = a^2(c^2 - a^2).
-      \end{align*}
-      Fazendo $b^2 = c^2 - a^2$ e dividindo por $a^2b^2$ obtemos
-      \begin{equation}
-        \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Como no caso da elipse, também temos as relações
-      \begin{align}
-        c^2 = a^2 + b^2\\
-        c > b > 0\label{pitagorashiperbole}\\
-        c > a > 0.
-      \end{align}
-      Portanto, se um ponto $P(x,y)$ pertence á hipérbole $\mathcal{H}$, então ele satisfaz a equação \eqref{equacaohiperbole}.
-    \end{frame}
-
-    \begin{frame}
-      Agora, dado um ponto $A(\alpha,\beta)$ que satisfaz a equação \eqref{equacaohiperbole}, queremos mostrar que $A$ pertence á hipérbole $\mathcal{H}$. Temos
-      \begin{align}
-        \dfrac{\alpha^2}{a^2} - \dfrac{\beta^2}{b^2} = 1\nonumber\\
-        \beta^2 = \dfrac{b^2}{a^2}\alpha^2 - b^2.\label{equacaoauxiliarhiperbole}
-      \end{align}
-      Usando \eqref{pitagorashiperbole} e \eqref{equacaoauxiliarhiperbole}:
-      \begin{align*}
-        d^2(P,F_1) &= (\alpha + c)^2 + \beta^2\\
-        &= \alpha^2 + 2\alpha c + cˆ2 + \dfrac{b^2}{a^2}\alpha^2 - b^2
-      \end{align*}
-      donde
-      \[
-        d^2(A,F_1) = \left(\dfrac{c}{a}\alpha + a\right)^2.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Do mesmo modo, obtemos
-      \[
-        d^2(A,F_2) = \left(\dfrac{c}{a}\alpha - a\right)^2.
-      \]
-      Assim
-      \begin{align}
-        d(A,F_1) = \left|\dfrac{c}{a}\alpha + a\right|\\
-        d(A,F_2) = \left|\dfrac{c}{a}\alpha - a\right|.
-      \end{align}
-
-      Mas
-      \[
-        \dfrac{\alpha^2}{a^2} - \dfrac{\beta^2}{b^2} = 1
-      \]
-      assim
-      \begin{equation}\label{pontohiperbole}
-        \alpha^2/a^2 \ge 1,
-      \end{equation}
-      isto é, $\alpha \le -a$ ou $\alpha \ge a$.
-    \end{frame}
-
-    \begin{frame}
-      Temos então dois casos para analisar:
-      \begin{enumerate}[label=({\arabic*})]
-        \item Se $\alpha \le -a$, então
-        \[
-          \dfrac{c}{a}\alpha \le -c < -a.
-        \]
-        Portanto, $(c/a)\alpha + a < 0$ e $(c/a)\alpha - a < 0$, donde
-        \begin{align*}
-          d(A,F_1) = -\dfrac{c}{a}\alpha - a\\
-          d(A,F_2) = -\dfrac{c}{a}\alpha + a.
-        \end{align*}
-        e então
-        \[
-          | d(P,F_1) - d(P,F_2)| = |-2a| = 2a.
-        \]
-        \seti
-      \end{enumerate}
-    \end{frame}
-
-    \begin{frame}
-       \begin{enumerate}[label=({\arabic*})]
-          \conti
-          \item Se $\alpha \ge -a$, então
-            \[
-              \dfrac{c}{a}\alpha \le c > a.
-            \]
-            Portanto, $(c/a)\alpha + a > 0$ e $(c/a)\alpha - a > 0$, donde
-            \begin{align*}
-            d(A,F_1) = \dfrac{c}{a}\alpha + a\\
-            d(A,F_2) = \dfrac{c}{a}\alpha - a.
-          \end{align*}
-          e então
-          \[
-            | d(P,F_1) - d(P,F_2)| = |2a| = 2a.
-          \]
-      \end{enumerate}
-    \end{frame}
-
-    \begin{frame}
-      Portanto, se $A(\alpha,\beta)$ satisfaz a equação \eqref{equacaohiperbole}, então $A$ pertence á hipérbole de focos $F_1(-c,0)$ e $F_2(c,0)$. Assim provamos a seguinte proposição:
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        Um ponto $P(x, y)$ é um ponto da hipérbole
-        \[
-          \mathcal{H}:\ \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
-        \]
-        se, e somente se, as distâncias de $P$ aos focos são:
-        \begin{align*}
-          d(A,F_1) = \left|\dfrac{c}{a}\alpha + a\right|\\
-          d(A,F_2) = \left|\dfrac{c}{a}\alpha - a\right|.
-        \end{align*}
-      \end{proposicao}
-
-      Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da hipérbole $\mathcal{H}$ e a equação
-      \[
-        \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
-      \]
-      é chamada de \textbf{equação reduzida} da hipérbole.\index{Hipérbole!Parâmetros Geométricos} \index{Hipérbole!Equação Reduzida}
-    \end{frame}
-
-    \begin{frame}
-      \begin{observacao}
-        Seja $\mathcal{H} : \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ uma hipérbole de focos no eixo $x$.
-        \begin{enumerate}[label=({\arabic*})]
-          \item Nenhum ponto $P(x,y)$ de $\mathcal{H}$ é tal que $-a < x < a$, pois caso contrário teríamos $x^2 < a^2$ o que contradiz a inequação \eqref{pontohiperbole}. Para a ordenada $y$ não há restrição, isto é, qualquer que seja $y$ existe $x$ tal que $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$. Assim a hipérbole não é limitada.
-          \item Se $(x,y)$ pertence a $H$, então $(-x,-y)$, $(x,-y)$ e $(-x,y)$ também pertencem a $\mathcal{H}$. Logo a hipérbole é simétrica em relação ao eixo $x$, ao eixo $y$  e em relação á origem do plano cartesiano.
-          \seti
-        \end{enumerate}
-      \end{observacao}
-
-    \end{frame}
-
-    \begin{frame}
-      \begin{observacao}
-        \begin{enumerate}[label=({\arabic*})]
-          \conti
-          \item O ponto $(x,0)$ pertence á hipérbole $\mathcal{H}$ se, e s\'o se, $x = \pm a$. Por isso a interseção de $\mathcal{H}$ com a reta focal são os pontos $A_1(-a,0)$ e $A_2(a,0)$, chamados de \textbf{vértices} de $\mathcal{H}$.\index{Hipérbole!Vértices}
-        \end{enumerate}
-      \end{observacao}
-    \end{frame}
-
-    \begin{frame}
-      Considere a hipérbole $\mathcal{H}$ de equação reduzida
-      \[
-        \mathcal{H} : \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
-      \]
-      com focos $F_1(-c,0)$ e $F_2(c,0)$. Dada uma reta $r$ de equação $y = mx$, quais as condições sobre $a$, $b$, $c$ e $m$ para que a reta $r$ intercepte $\mathcal{H}$?
-
-      Seja $P(x_0,y_0)$ um ponto de interseção entre $r$ e $\mathcal{H}$. Então temos
-      \begin{align*}
-        \dfrac{x_0^2}{a^2} - \dfrac{y_0^2}{b^2} = 1\\
-        y_0 = mx_0,
-      \end{align*}
-      isto é,
-      \[
-        \dfrac{x_0^2}{a^2} - \dfrac{m^2x_0^2}{b^2} = 1.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Resolvendo em $x_0$ obtemos
-      \begin{equation}\label{intersecaohiperbolereta}
-      x_0 = \pm \dfrac{ab}{\sqrt{b^2 - a^2m^2}} = \pm \dfrac{b}{\sqrt{\dfrac{b^2}{a^2} - m^2}}.
-      \end{equation}
-      Assim
-      \[
-        b^2 - a^2m^2 > 0 \Leftrightarrow m^2 < \dfrac{b^2}{a^2}.
-      \]
-      Como $a$ e $b$ são positivos
-      \[
-        -\dfrac{b}{a} < m < \dfrac{b}{a}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Logo a reta $y = mx$ intercepta a hipérbole $\mathcal{H}$ se, e s\'o se, seu coeficiente angular está entre $-b/a$ e $b/a$. Portanto as retas
-      \[
-        y = -\dfrac{b}{a}x \quad \mbox{e}\quad y = \dfrac{b}{a}x
-      \]
-      não interceptam a hipérbole $\mathcal{H}$. Tais retas são chamadas de \textbf{assíntotas da hipérbole}. Mais ainda, da equação \eqref{intersecaohiperbolereta} quando $m \to b/a$, o ponto $x_0$ tende para mais ou menos infinito. Logo os pontos da hipérbole se aproximam das assíntotas a medida que $x$ se afasta da origem.\index{Hipérbole!Assíntotas}
-    \end{frame}
-
-    \begin{frame}
-      Como no caso da elipse, utilizando a simetria e as assíntotas da hipérbole, podemos mostrar a partir da equação
-      \[
-        y = \dfrac{b}{a}\sqrt{x^2 - a^2}, \quad x \ge a
-      \]
-      que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]
-        \centering
-        \caption{Hipérbole $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$  com assíntotas $y = -\dfrac{b}{a}x$ e $y = \dfrac{b}{a}x$}
-        \label{FormageralHiperbole}
-        \includegraphics[scale=0.6]{hiperbole-focos-eixo-X.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        Um equação da forma
-        \begin{equation}\label{hiperbolegeral}
-          \dfrac{x^2}{p} + \dfrac{y^2}{q} = 1
-        \end{equation}
-        descreve uma hipérbole se, e somente se, os números reais $p$ e $q$ são de sinal contrário.
-      \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-      \begin{corolario}
-        Sejam $p$ e $q$ números reais de sinal contrário e $\mathcal{H}$ a hipérbole de equação \eqref{hiperbolegeral} e parâmetros geométricos $a$ e $b$.
-        \begin{enumerate}[label=({\arabic*})]
-          \item Se $p > 0$ e $q < 0$, então $a^2 = p$ e $b^2 = -q$, $\mathcal{H}$ tem centro na origem, focos no eixo $x$ e assíntotas dadas por $y = \pm(b/a)x$.
-          \item Se $p < 0$ e $q > 0$, então $a^2 = q$ e $b^2 = -p$, $\mathcal{H}$ tem centro na origem, focos no eixo $y$ e assíntotas dadas por $x = \pm(a/b)y$.
-        \end{enumerate}
-      \end{corolario}
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-        \begin{enumerate}[label=({\arabic*})]
-          \item Encontre a equação da hipérbole cujos vértices são $(-15,0)$ e $(15,0)$ e as assíntotas têm equações $5y - 4x = 0$ e $5y + 4x = 0$.
-         \item Encontre a equação da hipérbole de focos $F_1(0,-\sqrt{20})$ e $F_1(0,\sqrt{20})$ e tal que $a = 2$.
-       \end{enumerate}
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[h]
-        \centering
-        \caption{Hipérbole $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$ com assíntotas $x = -\dfrac{a}{b}y$ e $x = \dfrac{a}{b}y$}
-        \includegraphics[scale=0.6]{hiperbole-focos-eixo-Y.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-        Seja $r$ uma reta e $F$ um ponto que não pertence a $r$. O lugar geométrico $\mathcal{P}$ dos pontos equidistantes de $F$ e $r$ chama-se \textbf{parábola}. O ponto $F$ é chamado de \textbf{foco da parábola} e $r$ de \textbf{reta diretriz}.\index{Parábola} \index{Parábola!Focos} A reta contendo o foco $F$ e perpendicular á reta diretriz é chamada de \textbf{reta focal}.\index{Parábola!Reta diretriz}\index{Parábola!Reta focal}
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      Vamos fixar $F(p,0)$ e $r: x = -p$, onde $p > 0$. Assim um ponto $A(x,y)$ pertence á parábola de foco $F$ e reta diretriz $r$ se, e somente se,
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]%parábola
-        \centering
-        \caption{Definição da Parábola}
-        \includegraphics{parabola.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \[
-        d(A,r) = d(A,F).
-      \]
-      Mas
-      \begin{align*}
-        d(A,r) = |x + p|\\
-        d(A,F) = \sqrt{(x - p)^2 + y^2}.
-      \end{align*}
-      Logo $A$ pertence á parábola $\mathcal{P}$ se, e somente se,
-      \begin{align*}
-        (|x + p|)^2 = (x - p)^2 + y^2\\
-        x^2 + 2px + p^2 = x^2 - 2px + p^2 + y^2.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Portanto $A(x,y)$ pertence á parábola $\mathcal{P}$ se, e somente se,
-      \begin{equation}\label{equacaoparabola}
-        y^2 = 4px
-      \end{equation}
-
-      A equação \eqref{equacaoparabola} é chamada de \textbf{equação reduzida} da parábola $\mathcal{P}$. Indica-se\index{Parábola!Equação reduzida}
-      \[
-        \mathcal{P}:\ y^2 = 4px.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      \begin{observacao}
-        \begin{enumerate}[label=({\arabic*})]
-          \item Se $(x,y)$ satisfaz a equação \eqref{equacaoparabola}, então $x \ge 0$, isto é, nenhum ponto de $\mathcal{P}$ tem abscissa negativa. Já para a ordenada $y$, não existem restrições. Logo a parábola não é limitada.
-          \item Se $(x,y)$ pertence a $\mathcal{P}$, então $(x,-y)$ também pertence a $\mathcal{P}$. Logo a parábola é simétrica em relação ao eixo $x$.
-          \item O único ponto de interseção de $\mathcal{P}$ com os eixos coordenados é o ponto $(0,0)$. Tal ponto é chamado de \textbf{vértice} da parábola.\index{Parábola!Vértice}
-        \end{enumerate}
-      \end{observacao}
-    \end{frame}
-
-    \begin{frame}
-      Na equação \eqref{equacaoparabola} podemos isolar $x$ e escrever
-      \[
-        x = \dfrac{y^2}{4p}
-      \]
-      obtendo assim $x$ como uma função de $y$. Logo o gráfico da parábola $\mathcal{P}$ é:
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]%parábola
-        \centering
-        \caption{Parábola $\mathcal{P}: y^2 = 4px$ e reta diretriz $r: x = -p$, $p > 0$}
-        \vspace{-0.5cm}
-        \includegraphics{parabola-foco-eixo-X-positivo.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Agora, se a diretriz de $\mathcal{P}$ tem equação $r: x = p$ e o foco é o ponto $F(-p,0)$, com $p > 0$, obtemos a equação
-      \[
-        y^2 = -4px.
-      \]
-      Neste caso, o gráfico da parábola é dado pela Figura \ref{FormageralParabola}.
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]%parábola
-        \centering
-        \caption{Parábola $\mathcal{P}: y^2 = -4px$ e reta diretriz $r: x = p$, $p > 0$}
-        \label{FormageralParabola}
-        \includegraphics{parabola-foco-eixo-X-negativo.pdf}
-     \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Nos demais casos temos:
-      \begin{figure}[!h]%parábola
-        \centering
-        \caption{Parábola $\mathcal{P}: x^2 = -4py$ e reta diretriz $r: y = p$, $p > 0$}
-        \includegraphics[scale=0.8]{parabola-foco-eixo-Y-negativo.pdf}
-     \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]%parábola
-        \centering
-        \caption{Parábola $\mathcal{P}: x^2 = 4py$ e reta diretriz $r: y = -p$, $p > 0$}
-        \includegraphics[scale=0.8]{parabola-foco-eixo-Y-positivo.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        As equações $y^2 = qx$ e $x^2 = qy$ descrevem uma parábola se, e somente se, $q \ne 0$.
-      \end{proposicao}
-    \end{frame}
-
-    \begin{frame}
-       Para determinar a cônica representada pela equação
-        \[
-          g(x, y) = ax^2 + bxy + cy^2 + dx + ey + f = 0
-        \]
-        iremos utilizar translações e rotações de eixos para simplificar sua equação.
-    \end{frame}
-
-    \begin{frame}
-      Considere a seguinte cônica
-      \begin{equation}\label{conicaexemplo}
-        x^2 + 2y^2 - 4x - 4y - 1 = 0.
-      \end{equation}
-      Podemos escrever
-      \begin{align*}
-        &(x^2 - 4x + 4) - 4 + 2(y^2 - 2y + 1 - 1) - 1 = 0\\
-        &(x - 2)^2 - 4 + 2(y - 1)^2 - 2 - 1 = 0\\
-        &(x - 2)^2 + 2(y - 1)^2 = 7.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Fazendo a mudança
-      \begin{align}
-        x - 2 = x_1\label{mudancaX}\\
-        y - 1 = y_1\label{mudancaY}
-      \end{align}
-      obtemos
-      \[
-        \dfrac{x_1^2}{7} + \dfrac{y_1^2}{\dfrac{7}{2}} = 1
-      \]
-      que representa uma elipse com focos no eixo $x_1$.
-    \end{frame}
-
-    \begin{frame}
-      O efeito das equações \eqref{mudancaX} e \eqref{mudancaY} foi o de mudar o centro da elipse de equação \eqref{conicaexemplo} que estava no ponto $(2,1)$ no sistema original para o ponto $(0,0)$ considerando os eixos coordenados $x_1$ e $y_1$.
-    \end{frame}
-
-    \begin{frame}
-      Utilizando-se as equações \eqref{mudancaX} e \eqref{mudancaY} podemos facilmente escrever as coordenadas de um ponto $P$ qualquer, tanto em relação ao sistema de eixos coordenados $x$ e $y$, quanto ao sistema de eixos coordenados $x_1$ e $y_1$. Por exemplo, o ponto $P$ de coordenadas $P = (4,0)$, em relação ao sistema $xy$, terá coordenadas $(2,-1)$ em relação ao sistema de eixos $x_1y_1$. As mudanças introduzidas pelas equações \eqref{mudancaX} e \eqref{mudancaY} são chamadas de \textbf{translações de eixos}.
-    \end{frame}
-
-    \begin{frame}
-      De modo geral, se $(x,y)$ são as coordenadas de um ponto $P$ em relação ao ponto $(0,0)$, então as coordenadas de $P$ em relação aos eixos $x_1$ e $y_1$, centrados no ponto $(\alpha,\beta)$ são dadas por\index{Translação de Eixos}
-      \begin{align}
-        x_1 = x - \alpha\label{mudancaXgeral}\\
-        y_1 = y - \beta\label{mudancaYgeral}.
-      \end{align}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]
-        \centering
-        \caption{Translação de eixos}
-        \vspace{-0.5cm}
-        \includegraphics{translacao-eixos.pdf}
-     \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      As mudanças introduzidas pelas equações \eqref{mudancaXgeral} e \eqref{mudancaYgeral} permitem remover os termos lineares da equação \eqref{equacaoconica}.
-
-      \begin{exemplos}
-        Identifique as cônicas:
-        \begin{enumerate}[label=({\arabic*})]
-          \item $4x^2 - 8x + 9y^2 - 36y + 4 = 0$
-          \item $x^2 - 2y^2 - 6x - 8y - 1 = 0$
-          \item $x^2 - y^2 + 2x - 6y - 8 = 0$
-       \end{enumerate}
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      Considere o sistema cartesiano com centro em $(0,0)$. Sejam $\vec{e_1} = (1,0)$ e $\vec{e_2} = (0,1)$. Para qualquer vetor $\vec{P} = (x,y)$ podemos escrever
-      \begin{align}\label{equacaoxy}
-        \vec{P} = (x,y) = (x,0) + (0,y) = x(1,0) + y(0,1) = x\vec{e_1} + y\vec{e_2}.
-      \end{align}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]
-        \centering
-        \caption{Rotação de eixos: vetores $\vec{e_1}$ e $\vec{e_2}$}
-        \includegraphics{rotacao-eixos-vetores-base.pdf}
-     \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Agora, efetuando-se uma rotação no sentido anti-horário nos eixos $x$ e $y$ de um ângulo $\theta$, obtemos novos eixos coordenados $x_1$ e $y_1$. Tome vetores unitários $\vec{u_1}$ e $\vec{u_1}$ nos eixos $x_1$ e $y_1$. Em relação aos eixos originais podemos escrever
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}[!h]
-        \centering
-        \caption{Rotação dos eixos por um ângulo $\theta$}
-        \includegraphics{rotacao-eixos.pdf}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{align*}
-        &\vec{u_1} = (\cos\theta,\sin\theta) = \cos\theta\vec{e_1} + \sin\theta\vec{e_2}\\
-        &\vec{u_2} = (-\sin\theta,\cos\theta) = -\sin\theta\vec{e_1} + \cos\theta\vec{e_2}.
-      \end{align*}
-      Mas, os vetores $\vec{u_1}$ e $\vec{u_2}$ são unitários e ortogonais, assim podemos escrever o vetor $\vec{P}$ como combinação de escalares nos eixos rotacionados, isto é,
-      \begin{equation}\label{equacaox1y1}
-        \vec{P} = x_1\vec{u_1} + y_1\vec{u_2}.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Daí de \eqref{equacaoxy} e \eqref{equacaox1y1} obtemos
-      \[
-        x\vec{e_1} + y\vec{e_2} = x_1\vec{u_1} + y_1\vec{u_2}
-      \]
-      e substituindo $\vec{u_1}$ e $\vec{u_2}$
-      \[
-        x\vec{e_1} + y\vec{e_2} = (x_1\cos\theta - y_1\sin\theta)\vec{e_1} + (x_1\sin\theta + y_1\cos\theta)\vec{e_2}.
-      \]
-      Logo
-      \begin{align}
-        &x = x_1\cos\theta - y_1\sin\theta\label{rotacaoX}\\
-        &y = x_1\sin\theta + y_1\cos\theta\label{rotacaoY}
-      \end{align}
-      e então isolando $x_1$ e $y_1$
-      \begin{align*}
-        &x_1 = x\cos\theta + y\sin\theta\\
-        &y_1 = -x\sin\theta + y\cos\theta.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-        Seja $P$ o ponto $P(6,4)$. Efetuando-se uma rotação de um ângulo de $\theta = \pi/3$ radianos nos eixos, as coordenadas de $P$ em relação aos novos eixos são
-          \begin{align*}
-            x_1 = 6\cos(\pi/3) + 4\sin(\pi/3) = 3 + 2\sqrt{3}\\
-            y_1 = -6\sin(\pi/3) + 4\cos(\pi/3) = 2 - 3\sqrt{3}.
-          \end{align*}
-          Daí no novo sistema $P(3 + 2\sqrt{3}, 2 - 3\sqrt{3})$.
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      Considere uma cônica de equação
-      \begin{equation}\label{equacao_geral_conica}
-        ax^2 + bxy + cx^2 + dx + ey + f = 0.
-      \end{equation}
-
-      Queremos remover o termo $xy$ da equação \eqref{equacao_geral_conica} para então usar uma translação de eixos, se necessário, e com isso identificar a cônica definida por tal equação. Para isso vamos tentar encontrar um ângulo $\theta$ tal que a equação \eqref{equacao_geral_conica} possa ser transformada numa equação da forma
-      \begin{equation}\label{equacao_rotacionada_conica}
-        a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Inicialmente observe que a \eqref{equacao_geral_conica} pode ser escrita na forma
-      \begin{equation}\label{equacao_matricial_conica}
-        X^tAX + KX + F = [0]
-      \end{equation}
-      onde
-      \[
-        A = \begin{bmatrix}
-          a & b/2\\
-          b/2 & c
-        \end{bmatrix}
-      , \quad K = \begin{bmatrix}
-        d & e
-      \end{bmatrix}, \quad X = \begin{bmatrix}
-        x\\
-        y
-      \end{bmatrix}\quad\mbox{e}\quad F = [f]
-      \]
-      e $t$ denota a matriz transposta. Queremos então encontrar um ângulo $\theta$ tal que a substituição
-      \begin{equation}\label{substituicao_rotacao_eixos}
-        X = \begin{bmatrix}
-          \cos\theta & -\sin\theta\\
-          \sin\theta & \cos\theta
-        \end{bmatrix}\begin{bmatrix}
-          x_1\\y_1
-        \end{bmatrix}
-      \end{equation}
-      transforma a equação \eqref{equacao_geral_conica} na equação \eqref{equacao_rotacionada_conica}.
-    \end{frame}
-
-    \begin{frame}
-      Sejam
-      \[
-        R_\theta = \begin{bmatrix}
-          \cos\theta & -\sin\theta\\
-          \sin\theta & \cos\theta
-        \end{bmatrix}
-      \]
-      que é chamada de \textbf{matriz de rotação} e
-      \[
-        X_1 = \begin{bmatrix}x_1\\y_1\end{bmatrix}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Note que
-      \[
-        R_\theta R_\theta^t = \begin{bmatrix}
-          \cos\theta & -\sin\theta\\
-          \sin\theta & \cos\theta
-        \end{bmatrix}\begin{bmatrix}
-          \cos\theta & \sin\theta\\
-          -\sin\theta & \cos\theta
-        \end{bmatrix} = \begin{bmatrix}
-          1 & 0\\
-          0 & 1
-        \end{bmatrix} = R_\theta^t R_\theta,
-      \]
-      ou seja, $(R_\theta^t)^{-1} = R_\theta$.
-    \end{frame}
-
-    \begin{frame}
-      Agora, substituindo \eqref{substituicao_rotacao_eixos} em \eqref{equacao_geral_conica} obtemos
-      \begin{align*}
-        (R_\theta X_1)^t A (R_\theta X_1) + KR_\theta X_1 + F = [0]\\
-        X_1^t(R_\theta^t A R_\theta)X_1 + (KR_\theta)X_1 + F = [0].
-      \end{align*}
-      Note que
-      \begin{align*}
-        R_\theta^t A R_\theta = \begin{bmatrix}
-          a' & b'/2\\
-          b'/2 & c'
-        \end{bmatrix} = B\\
-        KR_\theta = \begin{bmatrix}
-          d'& e'
-        \end{bmatrix} = K'.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Mas $I_2 = R_\theta^t R_\theta$ e daí podemos escrever
-      \begin{align*}
-        B - \lambda I_2 &= R_\theta^t A R_\theta - \lambda I_2 \\ &= R_\theta^t A R_\theta - R_\theta^t (\lambda I_2) R_\theta \\ &= R_\theta^t (A - \lambda I_2)R_\theta
-      \end{align*}
-      para todo $\lambda \in \real$. Com isso
-      \begin{align*}
-        \det(B - \lambda I_2) &= \det[R_\theta^t(A - \lambda I_2)R_\theta] \\ &= \det(R_\theta^t)\det(A - \lambda I_2)\det(R_\theta) \\ &= \det(A - \lambda I_2).
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Assim escolhendo $\theta$ tal que $b' = 0$, o que é sempre possível fazer, obtemos
-      \begin{align*}
-        \det(A - \lambda I_2) = \det(B - \lambda I_2) = \det \begin{bmatrix}
-          a' - \lambda & 0\\
-          0 & c' - \lambda
-        \end{bmatrix} = (\lambda - a')(\lambda - c').
-      \end{align*}
-
-      Logo os coeficientes $a'$ e $c'$ são raízes da equação de segundo grau
-      \begin{equation}
-        p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
-          a - \lambda & b/2\\
-          b/2 & c - \lambda
-        \end{bmatrix}.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Agora para determinar o ângulo $\theta$ partimos de
-      \[
-        B = R_\theta^t A R_\theta
-      \]
-      e multiplicamos á esquerda por $R_\theta$ obtendo
-      \[
-        R_\theta B = AR_\theta.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Daí
-      \begin{align*}
-        AR_\theta = A \begin{bmatrix}
-          \cos\theta & -\sin\theta\\
-          \sin\theta & \cos\theta
-        \end{bmatrix} = \begin{bmatrix}
-          A \begin{bmatrix}
-            \cos\theta \\ \sin\theta
-          \end{bmatrix} & A \begin{bmatrix}
-            -\sin\theta\\ \cos\theta
-          \end{bmatrix}
-        \end{bmatrix}
-      \end{align*}
-      e
-      \begin{align*}
-        R_\theta B = \begin{bmatrix}
-          \cos\theta & -\sin\theta\\
-          \sin\theta & \cos\theta
-        \end{bmatrix} \begin{bmatrix}
-          a' & 0\\
-          0 & c'
-        \end{bmatrix} = \begin{bmatrix}
-          a' \begin{bmatrix}
-            \cos\theta \\ \sin\theta
-          \end{bmatrix} & c' \begin{bmatrix}
-            -\sin\theta\\ \cos\theta
-          \end{bmatrix}
-        \end{bmatrix}.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Como $R_\theta B = AR_\theta$ então das duas últimas equação vemos que se tomarmos
-      \[
-        U_1 = \begin{bmatrix}
-          \cos\theta\\
-          \sin\theta
-        \end{bmatrix} = (\cos\theta, \sin\theta)
-      \]
-      devemos ter
-      \[
-        AU_1 = a'U_1,
-      \]
-      isto é,
-      \begin{align*}
-        AU_1 = a'I_2 U_1\\
-        AU_1 - a'I_2 U_1 = [0]\\
-        (A - a'I_2)U_1 = [0].
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Assim $U_1$ é uma solução de norma 1 do sistema linear
-      \[
-        (A - a'I_2)X = [0].
-      \]
-      A solução $U_2$ é obtida de $U_1$ trocando a posição das componentes de $U_1$ e depois o sinal da primeira posição.
-
-      Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1\ U_2]$. Assim temos o seguinte teorema:
-    \end{frame}
-
-    \begin{frame}
-      \begin{teorema}
-        Considere a equação
-        \[
-            ax^2 + bxy + cy^2 + dx + ey + f = 0
-        \]
-        com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não necessariamente nulos. Então mediante uma rotação da forma
-        \[
-          X = R_\theta X_1
-        \]
-        onde
-        \[
-          X = \begin{bmatrix}
-            x\\y
-          \end{bmatrix}, \quad
-          R_\theta = \begin{bmatrix}
-          \cos\theta & -\sin\theta\\
-          \sin\theta & \cos\theta
-        \end{bmatrix}, \quad\mbox{e}\quad
-        X_1 = \begin{bmatrix}
-          x_1\\y_1
-        \end{bmatrix}
-        \]
-      \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-      \begin{teorema}
-        a equação da cônica acima pode ser transformada em
-        \[
-          a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
-        \]
-        em que $a'$, $c'$ são raízes de
-        \[
-          p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
-            a - \lambda & b/2\\
-            b/2 & c - \lambda
-          \end{bmatrix}.
-        \]
-
-        Mais ainda,
-        \[
-          U_1 = \begin{bmatrix}
-            \cos\theta\\ \sin\theta
-          \end{bmatrix}
-        \]
-        é uma solução de norma 1 do sistema linear
-        \[
-          \begin{bmatrix}
-            a - a' & b/2\\
-            b/2 & c - a'
-          \end{bmatrix} \begin{bmatrix}
-            x\\y
-          \end{bmatrix} = \begin{bmatrix}
-            0\\0
-          \end{bmatrix}.
-        \]
-      \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-        Identifique as cônicas:
-        \begin{enumerate}[label=({\arabic*})]
-          \item $52x^2 - 72xy + 73y^2 - 400 = 0$
-          
-          \item $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$
-         
-          \item $3x^2 - 10xy + 3y^2 - 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$
-        \end{enumerate}
-      \end{exemplos}
-    \end{frame}
-
-    \begin{frame}
-      \begin{teorema}
-        Seja $\mathcal{C}$ o conjunto dos pontos do plano que satisfazem a equação
-        \[
-          ax^2 + bxy + cy^2 + dx + ey + f = 0,
-        \]
-        com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não simultaneamente nulos. Sejam $a'$ e $c'$ raízes de
-        \[
-          p(\lambda) = \det \begin{bmatrix}
-            a - \lambda & b/2\\
-            b/2 & c - \lambda
-          \end{bmatrix}.
-        \]
-        \begin{enumerate}[label=({\roman*})]
-          \item Temos $a'c' = ac - b^2/4$.
-          \item Se $a'c' > 0$, então $\mathcal{C}$ é uma elipse, um ponto ou o conjunto vazio.
-          \item Se $a'c' < 0$, então $\mathcal{C}$ é uma hipérbole ou um par de retas concorrentes.
-          \item Se $a'c' = 0$, então $\mathcal{C}$ é uma parábola, um par de retas paralelas, uma reta ou o conjunto vazio.
-        \end{enumerate}
-      \end{teorema}
-    \end{frame}
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+
+\begin{frame}
+	\begin{definicao}
+		A circunferência é o conjunto dos pontos do plano que estão a uma mesma distância (denominada \textbf{raio}) de um dado ponto do plano (chamado \textbf{centro}).\index{Circunferência}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[h]
+		\centering
+		\caption{Circunferência}\label{circunferencia}
+		\includegraphics[scale=0.8]{circunferencia.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		As equações
+		\[
+			\begin{cases}
+				x = x_0 + r\cos\beta \\
+				y = y_0 + r\sin\beta,
+			\end{cases}
+			\beta \in [0,2\pi]
+		\]
+		são chamadas \textbf{equações paramétricas} da circunferência de centro $C(x_0, y_0)$ e raio $r$.\index{Circunferência!Equações Paramétricas}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Chama-se \textbf{cônica} o lugar geométrico dos pontos $P(x,y)$ que satisfazem uma equação do segundo grau $g(x,y) = 0$, onde\index{Cônicas}
+		\begin{equation}\label{equacaoconica}
+			g(x,y) = ax^2 + bxy + cy^2 + dx + ey + f.
+		\end{equation}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	Na equação \eqref{equacaoconica} pelo menos um dos números $a$, $b$ $c$ é diferente de zero. Os termos $ax^2$ e $cy^2$ são os \textbf{termos quadráticos}, o termo $bxy$ é o \textbf{termo quadrático misto}, $dx$ e $ey$ são os \textbf{termos lineares} e $f$ é o \textbf{termo independente}. \index{Cônica!Termos Quadráticos} \index{Cônica!Termo Quadrático Misto} \index{Cônica!Termos Lineares} \index{Cônica!Termos Independete}
+\end{frame}
+
+\begin{frame}
+	A equação \eqref{equacaoconica} pode representar:
+	\begin{enumerate}[label=({\arabic*})]
+		\item um conjunto vazio: $x^2 + y^2 = -1$;
+		\item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
+		\item a reunião de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
+		\item uma circunferência: $x^2 + y^2 - 13x + y - 10 = 0$;
+		\item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
+		\item uma hipérbole: $3x^2 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$;
+		\item uma parábola: $x^2 - 2xy + y^2 -2x - 2y + 1 = 0$.
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio, um ponto, retas ou circunferências diremos que a cônica definida é uma \textbf{cônica degenerada}. Aqui vamos estudar as cônicas chamadas de elipse, hipérbole e parábola.
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Sejam $F_1$ e $F_2$ pontos distintos do plano, $2c$ a distância entre $F_1$ e $F_2$ e $a$ um número real tal que $a > c$. O lugar geométrico $\mathcal{E}$ dos pontos $P$ tais que
+		\begin{equation}\label{definicaoelipse}
+			d(P,F_1) + d(P,F_2) = 2a
+		\end{equation}
+		chama-se \textbf{elipse}. Cada um dos pontos $F_1$ e $F_2$ é chamado \textbf{foco} da elipse. O segmento $F_1F_2$ é chamado \textbf{segmento focal}, seu ponto médio é o \textbf{centro} da elipse e $2c$ é chamado \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ chama-se \textbf{reta focal}.\index{Elipse} \index{Elipse!Focos} \index{Elipse!Centro} \index{Elipse!Reta Focal}
+	\end{definicao}
+\end{frame}
+
+
+\begin{frame}
+	\begin{proposicao}
+		Um ponto $P(x,y)$ é um ponto da elipse de equação reduzida
+		\[
+			\elipse{a^2}{b^2}
+		\]
+		se, e somente se, as distâncias de $P$ aos focos $F_1$ e $F_2$ são
+		\begin{align*}
+			d^2(P,F_1) & = \dfrac{c}{a}\alpha + a  \\
+			d^2(P,F_2) & = a - \dfrac{c}{a}\alpha.
+		\end{align*}
+	\end{proposicao}
+\end{frame}
+
+\begin{frame}
+	\begin{observacao}
+		\begin{enumerate}[label=({\arabic*})]
+			\item A equação \eqref{equacaoelipse} s\'o é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro, resultarão em uma equação diferente para a elipse.
+			\item Se $(x,y)$ satisfaz a equação \eqref{equacaoelipse}, então $(-x,-y)$, $(-x,y)$ e $(x,-y)$ também satisfazem a mesma equação. Assim a elipse é simétrica em relação ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
+			      \seti
+		\end{enumerate}
+	\end{observacao}
+\end{frame}
+\begin{frame}
+	\begin{observacao}
+		\begin{enumerate}[label=({\arabic*})]
+			\conti
+			\item O ponto $(x,0)$ pertence á elipse de equação \eqref{equacaoelipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$. Além disso, o ponto $(0,y)$ pertence á elipse de equação \eqref{equacaoelipse} se, e s\'o se, $y = \pm b$. Portanto, a interseção de $E$ com o eixo $x$ são os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interseção com o eixo $y$ são os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) = \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
+			\item Não existe circunferência que contenha os pontos $A_1$, $A_2$, $B_1$ e $B_2$. Caso existisse, tal circunferência teria dois diâmetros diferentes, cujos comprimento são dados pelos comprimentos dos segmente $A_1A_2$ e $B_1B_2$, o que é impossível. Portanto, como esses pontos pertencem a $E$, podemos afirmar que a elipse não é uma circunferência e nem o conjunto vazio.
+		\end{enumerate}
+	\end{observacao}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[h]
+		\centering
+		\caption{Gráfico da função $y = \dfrac{b}{a}\sqrt{a^2 - x^2}$}
+		\label{GraficoprimeiroquadranteElipse}
+		\vspace{-1cm}
+		\includegraphics{grafico-elipse-primeiro-quadrante.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[h]
+		\centering
+		\caption{Elipse com focos no eixo $x$ e centro na origem: $\elipse{a^2}{b^2}$}
+		\label{FormageralElipse}
+		\vspace{-3.3cm}
+		\includegraphics[scale=1]{elipse-focos-eixo-X.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Os pontos $A_1$ e $A_2$ em que a reta focal intercepta a elipse e os pontos $B_1$ e $B_2$ em que a mediatriz do segmento focal intercepta a elipse são chamados de \textbf{vértices}. Os segmentos $A_1A_2$ e $B_1B_2$ são chamados de \textbf{eixo maior} e \textbf{eixo menor} da elipse, respectivamente.\index{Elipse!Vértice} \index{Elipse!Eixo Maior} \index{Elipse!Eixo Menor}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{proposicao}
+		Uma equação da forma
+		\begin{equation}\label{equacaoelipsequasegeral}
+			\elipse{p}{q}
+		\end{equation}
+		descreve uma elipse se, e somente se, os números reais $p$ e $q$ são distintos e positivos.
+	\end{proposicao}
+\end{frame}
+
+\begin{frame}
+	\begin{corolario}
+		Sejam $O$ a origem do plano cartesiano, $p$ e $q$ números reais distintos e positivos. Seja $E$ a elipse de equação \eqref{equacaoelipsequasegeral} e parâmetros geométricos $a$ e $b$.
+		\begin{enumerate}[label=({\arabic*})]
+			\item Se $p > q$, então $a^2 = p$, $b^2 = q$ e $E$ tem centro $O$ e focos no eixo $x$.
+			\item Se $q > p$, então $a^2 = q$, $b^2 = p$ e $E$ tem centro $O$ e focos no eixo $y$.
+		\end{enumerate}
+	\end{corolario}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[h]
+		\centering
+		\caption{Elipse com focos no eixo $y$ e centro na origem: $\elipse{a^2}{b^2}$}
+		\vspace{-1.5cm}
+		\includegraphics[scale=0.95]{elipse-focos-eixo-Y.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Retângulo fundamental}
+		\includegraphics{retangulo-fundamental.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Coroa Fundamental}
+		\includegraphics{coroa-fundamental.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Região onde se encontram os pontos de uma elipse}
+		\includegraphics{regiao-fundamental.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Sejam $F_1$ e $F_2$ pontos distintos do plano tais que sua distância seja $2c$. Considere um número real $a$ tal que $0 < a < c$. O lugar geométrico $\mathcal{H}$ dos pontos $P(x,y)$ tais que
+		\begin{equation}\label{equacaohiperbole}
+			| d(P,F) - d(P,F_2)| = 2a
+		\end{equation}
+		chama-se \textbf{hipérbole}. Os pontos $F_1$ e $F_2$ são chamados \textbf{focos} da hipérbole, o segmento $F_1F_2$ é chamado \textbf{segmento focal}, o ponto médio do segmento $F_1F_2$ é chamada de \textbf{centro} da hipérbole e o número $2c$ é chamado de \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ é chamada \textbf{reta focal}.\index{Hipérbole} \index{Hipérbole!Focos} \index{Hipérbole!Segmento Focal} \index{Hipérbole!Centro} \index{Hipérbole!Distância Focal} \index{Hipérbole!Reta Focal}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{proposicao}
+		Um ponto $P(x, y)$ é um ponto da hipérbole
+		\[
+			\mathcal{H}:\ \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
+		\]
+		se, e somente se, as distâncias de $P$ aos focos são:
+		\begin{align*}
+			d(A,F_1) = \left|\dfrac{c}{a}\alpha + a\right| \\
+			d(A,F_2) = \left|\dfrac{c}{a}\alpha - a\right|.
+		\end{align*}
+	\end{proposicao}
+
+	Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da hipérbole $\mathcal{H}$ e a equação
+	\[
+		\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
+	\]
+	é chamada de \textbf{equação reduzida} da hipérbole.\index{Hipérbole!Parâmetros Geométricos} \index{Hipérbole!Equação Reduzida}
+\end{frame}
+
+\begin{frame}
+	\begin{observacao}
+		Seja $\mathcal{H} : \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ uma hipérbole de focos no eixo $x$.
+		\begin{enumerate}[label=({\arabic*})]
+			\item Nenhum ponto $P(x,y)$ de $\mathcal{H}$ é tal que $-a < x < a$, pois caso contrário teríamos $x^2 < a^2$ o que contradiz a inequação \eqref{pontohiperbole}. Para a ordenada $y$ não há restrição, isto é, qualquer que seja $y$ existe $x$ tal que $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$. Assim a hipérbole não é limitada.
+			\item Se $(x,y)$ pertence a $H$, então $(-x,-y)$, $(x,-y)$ e $(-x,y)$ também pertencem a $\mathcal{H}$. Logo a hipérbole é simétrica em relação ao eixo $x$, ao eixo $y$  e em relação á origem do plano cartesiano.
+			      \seti
+		\end{enumerate}
+	\end{observacao}
+
+\end{frame}
+
+\begin{frame}
+	\begin{observacao}
+		\begin{enumerate}[label=({\arabic*})]
+			\conti
+			\item O ponto $(x,0)$ pertence á hipérbole $\mathcal{H}$ se, e s\'o se, $x = \pm a$. Por isso a interseção de $\mathcal{H}$ com a reta focal são os pontos $A_1(-a,0)$ e $A_2(a,0)$, chamados de \textbf{vértices} de $\mathcal{H}$.\index{Hipérbole!Vértices}
+		\end{enumerate}
+	\end{observacao}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Hipérbole $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$  com assíntotas $y = -\dfrac{b}{a}x$ e $y = \dfrac{b}{a}x$}
+		\label{FormageralHiperbole}
+		\includegraphics[scale=0.6]{hiperbole-focos-eixo-X.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{proposicao}
+		Um equação da forma
+		\begin{equation}\label{hiperbolegeral}
+			\dfrac{x^2}{p} + \dfrac{y^2}{q} = 1
+		\end{equation}
+		descreve uma hipérbole se, e somente se, os números reais $p$ e $q$ são de sinal contrário.
+	\end{proposicao}
+\end{frame}
+
+\begin{frame}
+	\begin{corolario}
+		Sejam $p$ e $q$ números reais de sinal contrário e $\mathcal{H}$ a hipérbole de equação \eqref{hiperbolegeral} e parâmetros geométricos $a$ e $b$.
+		\begin{enumerate}[label=({\arabic*})]
+			\item Se $p > 0$ e $q < 0$, então $a^2 = p$ e $b^2 = -q$, $\mathcal{H}$ tem centro na origem, focos no eixo $x$ e assíntotas dadas por $y = \pm(b/a)x$.
+			\item Se $p < 0$ e $q > 0$, então $a^2 = q$ e $b^2 = -p$, $\mathcal{H}$ tem centro na origem, focos no eixo $y$ e assíntotas dadas por $x = \pm(a/b)y$.
+		\end{enumerate}
+	\end{corolario}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[h]
+		\centering
+		\caption{Hipérbole $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$ com assíntotas $x = -\dfrac{a}{b}y$ e $x = \dfrac{a}{b}y$}
+		\includegraphics[scale=0.6]{hiperbole-focos-eixo-Y.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{definicao}
+		Seja $r$ uma reta e $F$ um ponto que não pertence a $r$. O lugar geométrico $\mathcal{P}$ dos pontos equidistantes de $F$ e $r$ chama-se \textbf{parábola}. O ponto $F$ é chamado de \textbf{foco da parábola} e $r$ de \textbf{reta diretriz}.\index{Parábola} \index{Parábola!Focos} A reta contendo o foco $F$ e perpendicular á reta diretriz é chamada de \textbf{reta focal}.\index{Parábola!Reta diretriz}\index{Parábola!Reta focal}
+	\end{definicao}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]%parábola
+		\centering
+		\caption{Definição da Parábola}
+		\includegraphics{parabola.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{observacao}
+		\begin{enumerate}[label=({\arabic*})]
+			\item Se $(x,y)$ satisfaz a equação \eqref{equacaoparabola}, então $x \ge 0$, isto é, nenhum ponto de $\mathcal{P}$ tem abscissa negativa. Já para a ordenada $y$, não existem restrições. Logo a parábola não é limitada.
+			\item Se $(x,y)$ pertence a $\mathcal{P}$, então $(x,-y)$ também pertence a $\mathcal{P}$. Logo a parábola é simétrica em relação ao eixo $x$.
+			\item O único ponto de interseção de $\mathcal{P}$ com os eixos coordenados é o ponto $(0,0)$. Tal ponto é chamado de \textbf{vértice} da parábola.\index{Parábola!Vértice}
+		\end{enumerate}
+	\end{observacao}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]%parábola
+		\centering
+		\caption{Parábola $\mathcal{P}: y^2 = 4px$ e reta diretriz $r: x = -p$, $p > 0$}
+		\vspace{-0.5cm}
+		\includegraphics{parabola-foco-eixo-X-positivo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]%parábola
+		\centering
+		\caption{Parábola $\mathcal{P}: y^2 = -4px$ e reta diretriz $r: x = p$, $p > 0$}
+		\label{FormageralParabola}
+		\includegraphics{parabola-foco-eixo-X-negativo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]%parábola
+		\centering
+		\caption{Parábola $\mathcal{P}: x^2 = -4py$ e reta diretriz $r: y = p$, $p > 0$}
+		\includegraphics[scale=0.8]{parabola-foco-eixo-Y-negativo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]%parábola
+		\centering
+		\caption{Parábola $\mathcal{P}: x^2 = 4py$ e reta diretriz $r: y = -p$, $p > 0$}
+		\includegraphics[scale=0.8]{parabola-foco-eixo-Y-positivo.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{proposicao}
+		As equações $y^2 = qx$ e $x^2 = qy$ descrevem uma parábola se, e somente se, $q \ne 0$.
+	\end{proposicao}
+\end{frame}
+
+\begin{frame}
+	Para determinar a cônica representada pela equação
+	\[
+		g(x, y) = ax^2 + bxy + cy^2 + dx + ey + f = 0
+	\]
+	iremos utilizar translações e rotações de eixos para simplificar sua equação.
+\end{frame}
+
+\begin{frame}
+	De modo geral, se $(x,y)$ são as coordenadas de um ponto $P$ em relação ao ponto $(0,0)$, então as coordenadas de $P$ em relação aos eixos $x_1$ e $y_1$, centrados no ponto $(\alpha,\beta)$ são dadas por\index{Translação de Eixos}
+	\begin{align}
+		x_1 = x - \alpha\label{mudancaXgeral} \\
+		y_1 = y - \beta\label{mudancaYgeral}.
+	\end{align}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Translação de eixos}
+		\vspace{-0.5cm}
+		\includegraphics{translacao-eixos.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	Considere o sistema cartesiano com centro em $(0,0)$. Sejam $\vec{e_1} = (1,0)$ e $\vec{e_2} = (0,1)$. Para qualquer vetor $\vec{P} = (x,y)$ podemos escrever
+	\begin{align}\label{equacaoxy}
+		\vec{P} = (x,y) = (x,0) + (0,y) = x(1,0) + y(0,1) = x\vec{e_1} + y\vec{e_2}.
+	\end{align}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Rotação de eixos: vetores $\vec{e_1}$ e $\vec{e_2}$}
+		\includegraphics{rotacao-eixos-vetores-base.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}[!h]
+		\centering
+		\caption{Rotação dos eixos por um ângulo $\theta$}
+		\includegraphics{rotacao-eixos.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	Considere uma cônica de equação
+	\begin{equation}\label{equacao_geral_conica}
+		ax^2 + bxy + cx^2 + dx + ey + f = 0.
+	\end{equation}
+
+	Queremos remover o termo $xy$ da equação \eqref{equacao_geral_conica} para então usar uma translação de eixos, se necessário, e com isso identificar a cônica definida por tal equação. Para isso vamos tentar encontrar um ângulo $\theta$ tal que a equação \eqref{equacao_geral_conica} possa ser transformada numa equação da forma
+	\begin{equation}\label{equacao_rotacionada_conica}
+		a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
+	\end{equation}
+\end{frame}
+
+\begin{frame}
+	\begin{teorema}
+		Considere a equação
+		\[
+			ax^2 + bxy + cy^2 + dx + ey + f = 0
+		\]
+		com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não necessariamente nulos. Então mediante uma rotação da forma
+		\[
+			X = R_\theta X_1
+		\]
+		onde
+		\[
+			X = \begin{bmatrix}
+				x \\y
+			\end{bmatrix}, \quad
+			R_\theta = \begin{bmatrix}
+				\cos\theta & -\sin\theta \\
+				\sin\theta & \cos\theta
+			\end{bmatrix}, \quad\mbox{e}\quad
+			X_1 = \begin{bmatrix}
+				x_1 \\y_1
+			\end{bmatrix}
+		\]
+	\end{teorema}
+\end{frame}
+
+\begin{frame}
+	\begin{teorema}
+		a equação da cônica acima pode ser transformada em
+		\[
+			a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
+		\]
+		em que $a'$, $c'$ são raízes de
+		\[
+			p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
+				a - \lambda & b/2         \\
+				b/2         & c - \lambda
+			\end{bmatrix}.
+		\]
+
+		Mais ainda,
+		\[
+			U_1 = \begin{bmatrix}
+				\cos\theta \\ \sin\theta
+			\end{bmatrix}
+		\]
+		é uma solução de norma 1 do sistema linear
+		\[
+			\begin{bmatrix}
+				a - a' & b/2    \\
+				b/2    & c - a'
+			\end{bmatrix} \begin{bmatrix}
+				x \\y
+			\end{bmatrix} = \begin{bmatrix}
+				0 \\0
+			\end{bmatrix}.
+		\]
+	\end{teorema}
+\end{frame}
+
+\begin{frame}
+	\begin{teorema}
+		Seja $\mathcal{C}$ o conjunto dos pontos do plano que satisfazem a equação
+		\[
+			ax^2 + bxy + cy^2 + dx + ey + f = 0,
+		\]
+		com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não simultaneamente nulos. Sejam $a'$ e $c'$ raízes de
+		\[
+			p(\lambda) = \det \begin{bmatrix}
+				a - \lambda & b/2         \\
+				b/2         & c - \lambda
+			\end{bmatrix}.
+		\]
+		\begin{enumerate}[label=({\roman*})]
+			\item Temos $a'c' = ac - b^2/4$.
+			\item Se $a'c' > 0$, então $\mathcal{C}$ é uma elipse, um ponto ou o conjunto vazio.
+			\item Se $a'c' < 0$, então $\mathcal{C}$ é uma hipérbole ou um par de retas concorrentes.
+			\item Se $a'c' = 0$, então $\mathcal{C}$ é uma parábola, um par de retas paralelas, uma reta ou o conjunto vazio.
+		\end{enumerate}
+	\end{teorema}
+\end{frame}
 \end{document}
