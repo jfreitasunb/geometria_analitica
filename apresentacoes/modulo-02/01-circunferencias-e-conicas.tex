@@ -1,9 +1,9 @@
 %!TEX program = xelatex
 %!TEX encoding = UTF-8
-\def\ano{2024}
+\def\ano{2026}
 \def\semestre{1}
-\def\disciplina{Álgebra 1}
-\def\turma{C}
+\def\disciplina{Geometria Analítica}
+\def\turma{1}
 \def\autor{José Antônio O. Freitas}
 \def\instituto{MAT-UnB}
 
@@ -58,41 +58,47 @@
 
 \begin{frame}
 	\begin{definicao}
-		Chama-se \textbf{cônica} o lugar geométrico dos pontos $P(x,y)$ que satisfazem uma equação do segundo grau $g(x,y) = 0$, onde\index{Cônicas}
+		Chama-se \textbf{cônica} \pause o lugar geométrico(conjunto) \pause dos pontos $P(x,y)$ \pause que satisfazem uma equação do segundo grau $g(x,y) = 0$,
+		\pause onde\index{Cônicas}
 		\begin{equation}\label{equacaoconica}
-			g(x,y) = ax^2 + bxy + cy^2 + dx + ey + f.
+			g(x,y) = ax^2 + bxy + cy^2 + dx + ey + f.\pause
 		\end{equation}
 	\end{definicao}
 \end{frame}
 
 \begin{frame}
-	Na equação \eqref{equacaoconica} pelo menos um dos números $a$, $b$ $c$ é diferente de zero. Os termos $ax^2$ e $cy^2$ são os \textbf{termos quadráticos}, o termo $bxy$ é o \textbf{termo quadrático misto}, $dx$ e $ey$ são os \textbf{termos lineares} e $f$ é o \textbf{termo independente}. \index{Cônica!Termos Quadráticos} \index{Cônica!Termo Quadrático Misto} \index{Cônica!Termos Lineares} \index{Cônica!Termos Independete}
+	Na equação \eqref{equacaoconica} pelo menos um dos números $a$, $b$ ou $c$ \pause é diferente de zero. \pause Os termos $ax^2$ e $cy^2$ são os
+	\textbf{termos quadráticos}, \pause o termo $bxy$ é o \textbf{termo quadrático misto}, \pause $dx$ e $ey$ são os \textbf{termos lineares} \pause e $f$ é o
+	\textbf{termo independente}.
 \end{frame}
 
 \begin{frame}
-	A equação \eqref{equacaoconica} pode representar:
+	A equação \eqref{equacaoconica} pode representar:\pause
 	\begin{enumerate}[label=({\arabic*})]
-		\item um conjunto vazio: $x^2 + y^2 = -1$;
-		\item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
-		\item a reunião de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
-		\item uma circunferência: $x^2 + y^2 - 13x + y - 10 = 0$;
-		\item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
-		\item uma hipérbole: $3x^2 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$;
-		\item uma parábola: $x^2 - 2xy + y^2 -2x - 2y + 1 = 0$.
+		\item um conjunto vazio: $x^2 + y^2 = -1$;\pause
+		\item um conjunto formado por um ponto: $x^2 + y^2 = 0$;\pause
+		\item a reunião de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;\pause
+		\item uma circunferência: $x^2 + y^2 - 13x + y - 10 = 0$;\pause
+		\item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;\pause
+		\item uma hipérbole: $3x^2 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$;\pause
+		\item uma parábola: $x^2 - 2xy + y^2 -2x - 2y + 1 = 0$.\pause
 	\end{enumerate}
 \end{frame}
 
 \begin{frame}
-	Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio, um ponto, retas ou circunferências diremos que a cônica definida é uma \textbf{cônica degenerada}. Aqui vamos estudar as cônicas chamadas de elipse, hipérbole e parábola.
+	Nos casos em que a equação \eqref{equacaoconica} representar \pause um conjunto vazio, \pause um ponto, \pause retas ou circunferências \pause diremos que a
+	cônica definida é uma \textbf{cônica degenerada}. \pause Aqui vamos estudar as cônicas chamadas de elipse, \pause hipérbole \pause e parábola.
 \end{frame}
 
 \begin{frame}
 	\begin{definicao}
-		Sejam $F_1$ e $F_2$ pontos distintos do plano, $2c$ a distância entre $F_1$ e $F_2$ e $a$ um número real tal que $a > c$. O lugar geométrico $\mathcal{E}$ dos pontos $P$ tais que
+		Sejam $F_1$ e $F_2$ pontos distintos do plano, \pause $2c$ a distância entre $F_1$ e $F_2$ \pause e $a$ um número real \pause tal que $a > c$. \pause O
+		lugar geométrico $\mathcal{E}$ \pause dos pontos $P$ tais que\pause
 		\begin{equation}\label{definicaoelipse}
-			d(P,F_1) + d(P,F_2) = 2a
+			d(P,F_1) \pause + d(P,F_2) \pause = 2a\pause
 		\end{equation}
-		chama-se \textbf{elipse}. Cada um dos pontos $F_1$ e $F_2$ é chamado \textbf{foco} da elipse. O segmento $F_1F_2$ é chamado \textbf{segmento focal}, seu ponto médio é o \textbf{centro} da elipse e $2c$ é chamado \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ chama-se \textbf{reta focal}.\index{Elipse} \index{Elipse!Focos} \index{Elipse!Centro} \index{Elipse!Reta Focal}
+		chama-se \textbf{elipse}. \pause Cada um dos pontos $F_1$ e $F_2$ é chamado \textbf{foco} da elipse. \pause O segmento $F_1F_2$ é chamado
+		\textbf{segmento focal}, \pause seu ponto médio é o \textbf{centro} da elipse \pause e $2c$ é chamado \textbf{distância focal}. \pause A reta passando por $F_1$ e $F_2$ chama-se \textbf{reta focal}.
 	\end{definicao}
 \end{frame}
 
@@ -100,10 +106,10 @@
 \begin{frame}
 	\begin{proposicao}
 		Um ponto $P(x,y)$ é um ponto da elipse de equação reduzida
-		\[
+		\begin{align}\label{equacaoelipse}
 			\elipse{a^2}{b^2}
-		\]
-		se, e somente se, as distâncias de $P$ aos focos $F_1$ e $F_2$ são
+		\end{align}\pause
+		se, e somente se, \pause as distâncias de $P$ aos focos $F_1$ e $F_2$ são\pause
 		\begin{align*}
 			d^2(P,F_1) & = \dfrac{c}{a}\alpha + a  \\
 			d^2(P,F_2) & = a - \dfrac{c}{a}\alpha.
@@ -114,8 +120,11 @@
 \begin{frame}
 	\begin{observacao}
 		\begin{enumerate}[label=({\arabic*})]
-			\item A equação \eqref{equacaoelipse} s\'o é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro, resultarão em uma equação diferente para a elipse.
-			\item Se $(x,y)$ satisfaz a equação \eqref{equacaoelipse}, então $(-x,-y)$, $(-x,y)$ e $(x,-y)$ também satisfazem a mesma equação. Assim a elipse é simétrica em relação ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
+			\item A equação \eqref{equacaoelipse} só é válida para elipses com focos no eixo $x$ e centro na origem. \pause Mudanças nos focos ou no centro,
+			      \pause resultarão em uma equação diferente para a elipse.\pause
+
+			\item Se $(x,y)$ satisfaz a equação \eqref{equacaoelipse}, \pause então $(-x,-y)$, \pause $(-x,y)$ \pause e $(x,-y)$ \pause também satisfazem a
+			      mesma equação. \pause Assim a elipse é simétrica em relação ao eixo $x$, \pause ao eixo $y$ \pause e ao centro do plano cartesiano.
 			      \seti
 		\end{enumerate}
 	\end{observacao}
@@ -124,20 +133,17 @@
 	\begin{observacao}
 		\begin{enumerate}[label=({\arabic*})]
 			\conti
-			\item O ponto $(x,0)$ pertence á elipse de equação \eqref{equacaoelipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$. Além disso, o ponto $(0,y)$ pertence á elipse de equação \eqref{equacaoelipse} se, e s\'o se, $y = \pm b$. Portanto, a interseção de $E$ com o eixo $x$ são os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interseção com o eixo $y$ são os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) = \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
-			\item Não existe circunferência que contenha os pontos $A_1$, $A_2$, $B_1$ e $B_2$. Caso existisse, tal circunferência teria dois diâmetros diferentes, cujos comprimento são dados pelos comprimentos dos segmente $A_1A_2$ e $B_1B_2$, o que é impossível. Portanto, como esses pontos pertencem a $E$, podemos afirmar que a elipse não é uma circunferência e nem o conjunto vazio.
+			\item O ponto $(x,0)$ pertence à elipse de equação \eqref{equacaoelipse} \pause se, e somente se, \pause $x^2/a^2 = 1$, \pause isto é, $x = \pm a$.
+			      \pause Além disso, o ponto $(0,y)$ pertence à elipse de equação \eqref{equacaoelipse} \pause se, e só se, $y = \pm b$. \pause Portanto, a
+			      interseção de $\mathcal{E}$ com o eixo $x$ \pause são os pontos $A_1(-a,0)$ e $A_2(a,0)$ \pause e a interseção com o eixo $y$ \pause são os
+			      pontos $B_1(0,-b)$ e $B_2(0,b)$. \pause Note que $d(B_j,F_i) = \sqrt{c^2 + b^2} = a$, \pause para $i$, $j = 1$, 2.\pause
+
+			\item Não existe circunferência que contenha os pontos $A_1$, $A_2$, \pause $B_1$ e $B_2$. \pause Caso existisse, \pause tal circunferência teria
+			      dois diâmetros diferentes, \pause cujos comprimento são dados pelos comprimentos dos segmentod $A_1A_2$ \pause e $B_1B_2$, \pause o que é
+			      impossível. \pause Portanto, como esses pontos pertencem a $\mathcal{E}$, \pause podemos afirmar que a elipse não é uma circunferência \pause e
+			      nem o conjunto vazio.
 		\end{enumerate}
 	\end{observacao}
-\end{frame}
-
-\begin{frame}
-	\begin{figure}[h]
-		\centering
-		\caption{Gráfico da função $y = \dfrac{b}{a}\sqrt{a^2 - x^2}$}
-		\label{GraficoprimeiroquadranteElipse}
-		\vspace{-1cm}
-		\includegraphics{grafico-elipse-primeiro-quadrante.pdf}
-	\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -152,7 +158,9 @@
 
 \begin{frame}
 	\begin{definicao}
-		Os pontos $A_1$ e $A_2$ em que a reta focal intercepta a elipse e os pontos $B_1$ e $B_2$ em que a mediatriz do segmento focal intercepta a elipse são chamados de \textbf{vértices}. Os segmentos $A_1A_2$ e $B_1B_2$ são chamados de \textbf{eixo maior} e \textbf{eixo menor} da elipse, respectivamente.\index{Elipse!Vértice} \index{Elipse!Eixo Maior} \index{Elipse!Eixo Menor}
+		Os pontos $A_1$ e $A_2$ \pause em que a reta focal intercepta a elipse \pause e os pontos $B_1$ e $B_2$ \pause em que a mediatriz do segmento focal
+		intercepta a elipse \pause são chamados de \textbf{vértices}. \pause Os segmentos $A_1A_2$ \pause e $B_1B_2$ \pause são chamados de \textbf{eixo maior}
+		\pause e \textbf{eixo menor} \pause da elipse, respectivamente.
 	\end{definicao}
 \end{frame}
 
