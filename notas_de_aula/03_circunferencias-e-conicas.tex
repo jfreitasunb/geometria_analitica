@@ -256,14 +256,27 @@ Assim,
 	\sqrt{(x + c)^2 + y^2} = 2a - \sqrt{(x - c)^2 + y^2}
 \]
 e elevando ao quadrado ambos os membros dessa igualdade obtemos
-\[
-	a\sqrt{(x - c)^2 + y^2} = a^2 - cx.
-\]
-Elevando novamente ao quadrado e simplificando
-\[
-	(a^2 - c^2)x^2 + a^2y^2 = a^2(a^2 - c^2).
-\]
-Fazendo $b^2 = a^2 - c^2$, podemos escrever
+\begin{align*}
+	(\sqrt{(x + c)^2 + y^2})^2 & = (2a - \sqrt{(x - c)^2 + y^2})^2                         \\
+	(x + c)^2 + y^2            & = 4a^2 - 4a\sqrt{(x - c)^2 + y^2} + (x - c)^2 + y^2       \\
+	x^2 + 2cx + c^2 + y^2      & = 4a^2 - 4a\sqrt{(x - c)^2 + y^2} + x^2 - 2cx + c^2 + y^2 \\
+	4a\sqrt{(x - c)^2 + y^2}   & = 4a^2 - 4cx                                              \\
+	a\sqrt{(x - c)^2 + y^2}    & = a^2 - cx.
+\end{align*}
+Elevando novamente ao quadrado
+\begin{align*}
+	(a\sqrt{(x - c)^2 + y^2})^2       & = (a^2 - cx)^2          \\
+	a^2[(x - c)^2 + y^2]              & = a^4 - 2a^2cx + c^2x^2 \\
+	a^2(x^2 - 2cx + c^2 + y^2)        & = a^4 - 2a^2cx + c^2x^2 \\
+	a^2x^2 - 2a^2cx + a^2c^2 + a^2y^2 & = a^4 - 2a^2cx + c^2x^2 \\
+	a^2x^2 - c^2x^2 + a^2y^2          & = a^4 - a^2c^2          \\
+	(a^2 - c^2)x^2 + a^2y^2           & = a^2(a^2 - c^2).
+\end{align*}
+Fazendo
+\begin{equation}\label{relacaoauxiliarelipse}
+	b^2 = a^2 - c^2,
+\end{equation}
+podemos escrever
 \[
 	b^2x^2 + a^2y^2 = a^2b^2.
 \]
@@ -290,12 +303,21 @@ Por outro lado, seja $Q(\alpha,\beta)$ um ponto tal que
 \]
 Então $\beta^2 = b^2 - (b^2/a^2)\alpha^2$ e daí
 \begin{align*}
-	d^2(Q,F_1) & = (\alpha + c)^2 + \beta^2                                   \\
-	           & = \alpha^2 + 2c\alpha + c^2 + b^2 - \dfrac{b^2}{a^2}\alpha^2 \\
+	d^2(Q,F_1) & = (\alpha + c)^2 + \beta^2                                    \\
+	           & = \alpha^2 + 2c\alpha + c^2 + b^2 - \dfrac{b^2}{a^2}\alpha^2.
+\end{align*}
+
+Usando a relação \eqref{relacaoauxiliarelipse} podemos escrever
+\begin{align*}
+	d^2(Q,F_1) & = \alpha^2 + 2c\alpha + a^2 - \dfrac{b^2}{a^2}\alpha^2       \\
+	           & = \dfrac{a^2\alpha^2 + 2a^2c\alpha + a^4 - b^2\alpha^2}{a^2} \\
+	           & = \dfrac{(a^2 - b^2)\alpha^2 + 2a^2c\alpha + a^4}{a^2}       \\
+	           & = \dfrac{c^2\alpha^2 + 2a^2c\alpha + a^4}{a^2}               \\
+	           & = \dfrac{c^2\alpha^2}{a^2} + 2c\alpha + a^2                  \\
 	           & = \left(\dfrac{c}{a}\alpha + a\right)^2.
 \end{align*}
 
-Analogamente,
+Analogamente, podemos mostrar que:
 \begin{equation*}
 	d^2(Q,F_2) = \left(\dfrac{c}{a}\alpha - a\right)^2.
 \end{equation*}
@@ -568,14 +590,32 @@ modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/
 
 Vamos fixar $F_1(-c,0)$ e $F_2(c,0)$. Assim um ponto $P(x,y)$ pertence á hipérbole $\mathcal{H}$ de focos $F_1$ e $F_2$ se
 \begin{align*}
-	 & | d(P,F_1) - d(P,F_2) | = 2a                                                           \\
-	 & d(P,F_1) - d(P,F_2) = \pm 2a                                                           \\
-	 & d(P,F_1) = \pm 2a + d(P,F_2)                                                           \\
-	 & \left[\sqrt{(x + c)^2 + y^2}\right]^2 = \left[\pm 2a + \sqrt{(x - c)^2 + y^2}\right]^2 \\
-	 & (cx - a^2)^2 = \left[\pm a\sqrt{(x - c)^2 + y^2}\right]^2                              \\
-	 & (c^2 - a^2)x^2 - a^2y^2 = a^2(c^2 - a^2).
+	 & | d(P,F_1) - d(P,F_2) | = 2a \\
+	 & d(P,F_1) - d(P,F_2) = \pm 2a \\
+	 & d(P,F_1) = \pm 2a + d(P,F_2) \\
 \end{align*}
-Fazendo $b^2 = c^2 - a^2$ e dividindo por $a^2b^2$ obtemos
+Elevando ambos os lados ao quadrado:
+\begin{align*}
+	\left[\sqrt{(x + c)^2 + y^2}\right]^2 & = \left[\pm 2a + \sqrt{(x - c)^2 + y^2}\right]^2            \\
+	(x + c)^2 + y^2                       & = 4a^2 \pm 4a\sqrt{(x - c)^2 + y^2} + (x - c)^2 + y^2       \\
+	x^2 + 2cx + c^2 + y^2                 & = 4a^2 \pm 4a\sqrt{(x - c)^2 + y^2} + x^2 - 2cx + c^2 + y^2 \\
+	4cx - 4a^2                            & = \pm 4a\sqrt{(x - c)^2 + y^2}                              \\
+	cx - a^2                              & = \pm a\sqrt{(x - c)^2 + y^2}                               \\
+\end{align*}
+Elevando novamente ao quadrado
+\begin{align*}
+	(cx - a^2)^2             & = \left[\pm a\sqrt{(x - c)^2 + y^2}\right]^2 \\
+	c^2x^2 - 2a^2cx + a^4    & = a^2[(x - c)^2 + y^2]                       \\
+	c^2x^2 - 2a^2cx + a^4    & = a^2[x^2 - 2cx + c^2 + y^2]                 \\
+	c^2x^2 - 2a^2cx + a^4    & = a^2x^2 - 2a^2cx + a^2c^2 + a^2y^2          \\
+	c^2x^2 - a^2x^2 - a^2y^2 & = a^2c^2 - a^4                               \\
+	(c^2 - a^2)x^2 - a^2y^2  & = a^2(c^2 - a^2).
+\end{align*}
+Fazendo
+\begin{equation}\label{relacaoauxiliarhiperbole}
+	b^2 = c^2 - a^2
+\end{equation}
+e dividindo por $a^2b^2$ obtemos
 \begin{equation}
 	\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
 \end{equation}
@@ -594,13 +634,16 @@ Agora, dado um ponto $A(\alpha,\beta)$ que satisfaz a equação \eqref{equacaohi
 \end{align}
 Usando \eqref{pitagorashiperbole} e \eqref{equacaoauxiliarhiperbole}:
 \begin{align*}
-	d^2(P,F_1) & = (\alpha + c)^2 + \beta^2                                    \\
-	           & = \alpha^2 + 2\alpha c + c^2 + \dfrac{b^2}{a^2}\alpha^2 - b^2
+	d^2(P,F_1) & = (\alpha + c)^2 + \beta^2                                                \\
+	           & = \alpha^2 + 2\alpha c + c^2 + \dfrac{b^2}{a^2}\alpha^2 - b^2             \\
+	           & = \dfrac{a^2\alpha^2 + 2a^2\alpha c + a^2c^2 + b^2\alpha^2 - a^2b^2}{a^2} \\
+	           & = \dfrac{(a^2 + b^2)\alpha^2 + 2a^2\alpha c + a^2(c^2 - b^2)}{a^2}.
 \end{align*}
-donde
-\[
-	d^2(A,F_1) = \left(\dfrac{c}{a}\alpha + a\right)^2.
-\]
+Usando \eqref{relacaoauxiliarhiperbole} podemos escrever
+\begin{align*}
+	d^2(A,F_1) & = \dfrac{c^2\alpha^2 + 2a^2\alpha c + a^4}{a^2} \\
+	           & = \left(\dfrac{c}{a}\alpha + a\right)^2.
+\end{align*}
 Do mesmo modo, obtemos
 \[
 	d^2(A,F_2) = \left(\dfrac{c}{a}\alpha - a\right)^2.
