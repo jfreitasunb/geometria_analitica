@@ -583,7 +583,7 @@ modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/
 \begin{definicao}
 	Sejam $F_1$ e $F_2$ pontos distintos do plano tais que sua distância seja $2c$. Considere um número real $a$ tal que $0 < a < c$. O lugar geométrico $\mathcal{H}$ dos pontos $P(x,y)$ tais que
 	\begin{equation}\label{equacaohiperbole}
-		| d(P,F) - d(P,F_2)| = 2a
+		| d(P,F_1) - d(P,F_2)| = 2a
 	\end{equation}
 	chama-se \textbf{hipérbole}. Os pontos $F_1$ e $F_2$ são chamados \textbf{focos} da hipérbole, o segmento $F_1F_2$ é chamado \textbf{segmento focal}, o ponto médio do segmento $F_1F_2$ é chamada de \textbf{centro} da hipérbole e o número $2c$ é chamado de \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ é chamada \textbf{reta focal}.\index{Hipérbole} \index{Hipérbole!Focos} \index{Hipérbole!Segmento Focal} \index{Hipérbole!Centro} \index{Hipérbole!Distância Focal} \index{Hipérbole!Reta Focal}
 \end{definicao}
@@ -714,10 +714,12 @@ Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da hi
 \begin{observacao}
 	Seja $\mathcal{H} : \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ uma hipérbole de focos no eixo $x$.
 	\begin{enumerate}
-		\item Nenhum ponto $P(x,y)$ de $\mathcal{H}$ é tal que $-a < x < a$, pois caso contrário teríamos $x^2 < a^2$ o que contradiz a inequação \eqref{pontohiperbole}. Para a ordenada $y$ não há restrição, isto é, qualquer que seja $y$ existe $x$ tal que $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$. Assim a hipérbole não é limitada.
-		\item Se $(x,y)$ pertence a $H$, então $(-x,-y)$, $(x,-y)$ e $(-x,y)$ também pertencem a $\mathcal{H}$. Logo a hipérbole é simétrica em relação ao eixo
+		\item Nenhum ponto $P(x,y)$ de $\mathcal{H}$ é tal que $-a < x < a$, pois caso contrário teríamos $x^2 < a^2$ o que contradiz a inequação \eqref{pontohiperbole}.
+		      Para a ordenada $y$ não há restrição, isto é, qualquer que seja $y$ existe $x$ tal que $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$. Assim a hipérbole não é limitada.
+		\item Se $(x,y)$ pertence a $H$, então $(-x,y)$, $(x,-y)$ e $(-x,-y)$ também pertencem a $\mathcal{H}$. Logo a hipérbole é simétrica em relação ao eixo
 		      $x$, ao eixo $y$  e em relação à origem do plano cartesiano.
-		\item O ponto $(x,0)$ pertence à hipérbole $\mathcal{H}$ se, e só se, $x = \pm a$. Por isso a interseção de $\mathcal{H}$ com a reta focal são os pontos $A_1(-a,0)$ e $A_2(a,0)$, chamados de \textbf{vértices} de $\mathcal{H}$.\index{Hipérbole!Vértices}
+		\item O ponto $(x,0)$ pertence à hipérbole $\mathcal{H}$ se, e só se, $x = \pm a$. Por isso a interseção de $\mathcal{H}$ com a reta focal são os
+		      pontos $A_1(-a,0)$ e $A_2(a,0)$, chamados de \textbf{vértices} de $\mathcal{H}$.\index{Hipérbole!Vértices}
 	\end{enumerate}
 \end{observacao}
 
