@@ -548,7 +548,7 @@ Assim, todo ponto $P(x,y)$ de $\mathcal{E}$ satisfaz
 	\dfrac{x^2}{a^2} + \dfrac{y^2}{a^2} \le 1 \le \dfrac{x^2}{b^2} + \dfrac{y^2}{b^2}
 \]
 e com isso $b^2 \le x^2 + y^2 \le a^2$, ou seja, $b \le d(P,O) \le a$. Portanto a elipse está contida entre as circunferências de raio $a$ e $b$. Essa região é chamada de \textbf{coroa fundamental} da elipse.\index{Elipse!Coroa Fundamental}
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\caption{Coroa Fundamental}
 	\includegraphics[scale=0.9]{coroa-fundamental.pdf}
@@ -582,7 +582,7 @@ modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/
 
 \begin{definicao}
 	Sejam $F_1$ e $F_2$ pontos distintos do plano tais que sua distância seja $2c$. Considere um número real $a$ tal que $0 < a < c$. O lugar geométrico $\mathcal{H}$ dos pontos $P(x,y)$ tais que
-	\begin{equation}\label{equacaohiperbole}
+	\begin{equation}\label{definicaocaohiperbole}
 		| d(P,F_1) - d(P,F_2)| = 2a
 	\end{equation}
 	chama-se \textbf{hipérbole}. Os pontos $F_1$ e $F_2$ são chamados \textbf{focos} da hipérbole, o segmento $F_1F_2$ é chamado \textbf{segmento focal}, o ponto médio do segmento $F_1F_2$ é chamada de \textbf{centro} da hipérbole e o número $2c$ é chamado de \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ é chamada \textbf{reta focal}.\index{Hipérbole} \index{Hipérbole!Focos} \index{Hipérbole!Segmento Focal} \index{Hipérbole!Centro} \index{Hipérbole!Distância Focal} \index{Hipérbole!Reta Focal}
@@ -616,7 +616,7 @@ Fazendo
 	b^2 = c^2 - a^2
 \end{equation}
 e dividindo por $a^2b^2$ obtemos
-\begin{equation}
+\begin{equation}\label{equacaohiperbole}
 	\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
 \end{equation}
 Como no caso da elipse, também temos as relações
@@ -677,9 +677,9 @@ isto é, $\alpha \le -a$ ou $\alpha \ge a$. Temos então dois casos para analisa
 	      \[
 		      | d(P,F_1) - d(P,F_2)| = |-2a| = 2a.
 	      \]
-	\item Se $\alpha \ge -a$, então
+	\item Se $\alpha \ge a$, então
 	      \[
-		      \dfrac{c}{a}\alpha \le c > a.
+		      \dfrac{c}{a}\alpha \ge c > a.
 	      \]
 	      Portanto, $(c/a)\alpha + a > 0$ e $(c/a)\alpha - a > 0$, donde
 	      \begin{align*}
@@ -761,11 +761,11 @@ Como no caso da elipse, utilizando a simetria e as assíntotas da hipérbole, po
 	y = \dfrac{b}{a}\sqrt{x^2 - a^2}, \quad x \ge a
 \]
 que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\caption{Hipérbole $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$  com assíntotas $y = -\dfrac{b}{a}x$ e $y = \dfrac{b}{a}x$}
 	\label{FormageralHiperbole}
-	\includegraphics{hiperbole-focos-eixo-X.pdf}
+	\includegraphics[scale=0.65]{hiperbole-focos-eixo-X.pdf}
 \end{figure}
 
 \begin{proposicao}
@@ -892,7 +892,7 @@ Na equação \eqref{equacaoparabola} podemos isolar $x$ e escrever
 \]
 obtendo assim $x$ como uma função de $y$. Logo o gráfico da parábola $\mathcal{P}$ é:
 
-\begin{figure}[!h]%parábola
+\begin{figure}[H]%parábola
 	\centering
 	\caption{Parábola $\mathcal{P}: y^2 = 4px$ e reta diretriz $r: x = -p$, $p > 0$}
 	\includegraphics{parabola-foco-eixo-X-positivo.pdf}
