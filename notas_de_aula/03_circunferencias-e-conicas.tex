@@ -691,7 +691,8 @@ isto é, $\alpha \le -a$ ou $\alpha \ge a$. Temos então dois casos para analisa
 		      | d(P,F_1) - d(P,F_2)| = |2a| = 2a.
 	      \]
 \end{enumerate}
-Portanto, se $A(\alpha,\beta)$ satisfaz a equação \eqref{equacaohiperbole}, então $A$ pertence à hipérbole de focos $F_1(-c,0)$ e $F_2(c,0)$. Assim provamos a seguinte proposição:
+Portanto, se $A(\alpha,\beta)$ satisfaz a equação \eqref{equacaohiperbole}, então $A$ pertence à hipérbole de focos $F_1(-c,0)$ e $F_2(c,0)$. Assim provamos a
+seguinte proposição:
 
 \begin{proposicao}
 	Um ponto $P(x, y)$ é um ponto da hipérbole
@@ -700,8 +701,8 @@ Portanto, se $A(\alpha,\beta)$ satisfaz a equação \eqref{equacaohiperbole}, en
 	\]
 	se, e somente se, as distâncias de $P$ aos focos são:
 	\begin{align*}
-		d(A,F_1) = \left|\dfrac{c}{a}\alpha + a\right| \\
-		d(A,F_2) = \left|\dfrac{c}{a}\alpha - a\right|.
+		d(P,F_1) = \left|\dfrac{c}{a}\alpha + a\right| \\
+		d(P,F_2) = \left|\dfrac{c}{a}\alpha - a\right|.
 	\end{align*}
 \end{proposicao}
 
@@ -754,7 +755,9 @@ Logo a reta $y = mx$ intercepta a hipérbole $\mathcal{H}$ se, e só se, seu coe
 \[
 	y = -\dfrac{b}{a}x \quad \mbox{e}\quad y = \dfrac{b}{a}x
 \]
-não interceptam a hipérbole $\mathcal{H}$. Tais retas são chamadas de \textbf{assíntotas da hipérbole}. Mais ainda, da equação \eqref{intersecaohiperbolereta} quando $m \to b/a$, o ponto $x_0$ tende para mais ou menos infinito. Logo os pontos da hipérbole se aproximam das assíntotas a medida que $x$ se afasta da origem.\index{Hipérbole!Assíntotas}
+não interceptam a hipérbole $\mathcal{H}$. Tais retas são chamadas de \textbf{assíntotas da hipérbole}. Mais ainda, da equação \eqref{intersecaohiperbolereta}
+quando $m \to b/a$, o ponto $x_0$ tende para mais ou menos infinito. Logo os pontos da hipérbole se aproximam das assíntotas a medida que $x$ se afasta da origem.
+\index{Hipérbole!Assíntotas}
 
 Como no caso da elipse, utilizando a simetria e as assíntotas da hipérbole, podemos mostrar a partir da equação
 \[
@@ -797,7 +800,7 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
 				      \dfrac{x^2}{225} - \dfrac{y^2}{144} = 1.
 			      \]
 		      \end{solucao}
-		\item Encontre a equação da hipérbole de focos $F_1(0,-\sqrt{20})$ e $F_1(0,\sqrt{20})$ e tal que $a = 2$.
+		\item Encontre a equação da hipérbole de focos $F_1(0,-\sqrt{20})$ e $F_2(0,\sqrt{20})$ e tal que $a = 2$.
 		      \begin{solucao}
 			      Como os focos não estão no eixo $x$, vamos usar a equação \eqref{equacaohiperbole}:
 			      \begin{align*}
@@ -830,7 +833,7 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
 %   \]
 % \end{observacao}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\caption{Hipérbole $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$ com assíntotas $x = -\dfrac{a}{b}y$ e $x = \dfrac{a}{b}y$}
 	\includegraphics{hiperbole-focos-eixo-Y.pdf}
@@ -844,17 +847,19 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
 \label{sub:parabolas}
 
 \begin{definicao}
-	Seja $r$ uma reta e $F$ um ponto que não pertence a $r$. O lugar geométrico $\mathcal{P}$ dos pontos equidistantes de $F$ e $r$ chama-se \textbf{parábola}. O ponto $F$ é chamado de \textbf{foco da parábola} e $r$ de \textbf{reta diretriz}.\index{Parábola} \index{Parábola!Focos} A reta contendo o foco $F$ e perpendicular á reta diretriz é chamada de \textbf{reta focal}.\index{Parábola!Reta diretriz}\index{Parábola!Reta focal}
+	Seja $r$ uma reta e $F$ um ponto que não pertence a $r$. O lugar geométrico $\mathcal{P}$ dos pontos equidistantes de $F$ e $r$ chama-se \textbf{parábola}.
+	O ponto $F$ é chamado de \textbf{foco da parábola} e $r$ de \textbf{reta diretriz}.\index{Parábola} \index{Parábola!Focos} A reta contendo o foco $F$ e
+	perpendicular á reta diretriz é chamada de \textbf{reta focal}.\index{Parábola!Reta diretriz}\index{Parábola!Reta focal}
 \end{definicao}
 
-
-Vamos fixar $F(p,0)$ e $r: x = -p$, onde $p > 0$. Assim um ponto $A(x,y)$ pertence à parábola de foco $F$ e reta diretriz $r$ se, e somente se,
-\begin{figure}[!h]%parábola
+Vamos fixar $F(p,0)$ e $r: x = -p$, onde $p > 0$.
+\begin{figure}[H]%parábola
 	\centering
 	\caption{Definição da Parábola}
-	\includegraphics{parabola.pdf}
+	\includegraphics[scale=0.7]{parabola.pdf}
 \end{figure}
 
+Assim um ponto $A(x,y)$ pertence à parábola de foco $F$ e reta diretriz $r$ se, e somente se,
 \[
 	d(A,r) = d(A,F).
 \]
