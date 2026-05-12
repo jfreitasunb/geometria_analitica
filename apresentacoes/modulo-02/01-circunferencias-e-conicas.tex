@@ -383,15 +383,16 @@
 \end{frame}
 
 \begin{frame}
-	Para determinar a cônica representada pela equação
+	Considere uma cônica de equação
 	\[
-		g(x, y) = ax^2 + bxy + cy^2 + dx + ey + f = 0
+		g(x, y) = ax^2 + bxy + cy^2 + dx + ey + f = 0.\pause
 	\]
-	iremos utilizar translações e rotações de eixos para simplificar sua equação.
+	Como podemos simplificar essa equação de modo a identificar a cônica que ela representa?
 \end{frame}
 
 \begin{frame}
-	De modo geral, se $(x,y)$ são as coordenadas de um ponto $P$ em relação ao ponto $(0,0)$, então as coordenadas de $P$ em relação aos eixos $x_1$ e $y_1$, centrados no ponto $(\alpha,\beta)$ são dadas por\index{Translação de Eixos}
+	De modo geral, se $(x,y)$ são as coordenadas de um ponto $P$ \pause em relação ao ponto $(0,0)$, \pause então as coordenadas de $P$ em relação aos eixos
+	$x_1$ \pause e $y_1$, \pause centrados no ponto $(\alpha,\beta)$ \pause são dadas por
 	\begin{align}
 		x_1 = x - \alpha\label{mudancaXgeral} \\
 		y_1 = y - \beta\label{mudancaYgeral}.
@@ -405,13 +406,6 @@
 		\vspace{-0.5cm}
 		\includegraphics{translacao-eixos.pdf}
 	\end{figure}
-\end{frame}
-
-\begin{frame}
-	Considere o sistema cartesiano com centro em $(0,0)$. Sejam $\vec{e_1} = (1,0)$ e $\vec{e_2} = (0,1)$. Para qualquer vetor $\vec{P} = (x,y)$ podemos escrever
-	\begin{align}\label{equacaoxy}
-		\vec{P} = (x,y) = (x,0) + (0,y) = x(1,0) + y(0,1) = x\vec{e_1} + y\vec{e_2}.
-	\end{align}
 \end{frame}
 
 \begin{frame}
@@ -446,11 +440,11 @@
 	\begin{teorema}
 		Considere a equação
 		\[
-			ax^2 + bxy + cy^2 + dx + ey + f = 0
+			ax^2 + bxy + cy^2 + dx + ey + f = 0\pause
 		\]
-		com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não necessariamente nulos. Então mediante uma rotação da forma
+		com $a$, $b$, $c$, $d$, $e$, $f \in \real$, \pause sendo $a$, $b$ e $c$ \pause não necessariamente nulos. \pause Então mediante uma rotação da forma
 		\[
-			X = R_\theta X_1
+			X = R_\theta X_1\pause
 		\]
 		onde
 		\[
@@ -470,25 +464,25 @@
 
 \begin{frame}
 	\begin{teorema}
-		a equação da cônica acima pode ser transformada em
+		a equação da cônica acima pode ser transformada em\pause
 		\[
 			a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f = 0
-		\]
-		em que $a'$, $c'$ são raízes de
+		\]\pause
+		em que $a'$, $c'$ são raízes de\pause
 		\[
 			p(\lambda) = \det(A - \lambda I_2) = \det \begin{bmatrix}
 				a - \lambda & b/2         \\
 				b/2         & c - \lambda
 			\end{bmatrix}.
-		\]
+		\]\pause
 
 		Mais ainda,
 		\[
 			U_1 = \begin{bmatrix}
 				\cos\theta \\ \sin\theta
 			\end{bmatrix}
-		\]
-		é uma solução de norma 1 do sistema linear
+		\]\pause
+		é uma solução de norma 1 do sistema linear\pause
 		\[
 			\begin{bmatrix}
 				a - a' & b/2    \\
@@ -504,22 +498,22 @@
 
 \begin{frame}
 	\begin{teorema}
-		Seja $\mathcal{C}$ o conjunto dos pontos do plano que satisfazem a equação
+		Seja $\mathcal{C}$ o conjunto dos pontos do plano \pause que satisfazem a equação\pause
 		\[
 			ax^2 + bxy + cy^2 + dx + ey + f = 0,
-		\]
-		com $a$, $b$, $c$, $d$, $e$, $f \in \real$, sendo $a$, $b$ e $c$ não simultaneamente nulos. Sejam $a'$ e $c'$ raízes de
+		\]\pause
+		com $a$, $b$, $c$, $d$, $e$, $f \in \real$, \pause sendo $a$, $b$ e $c$ \pause não simultaneamente nulos. \pause Sejam $a'$ e $c'$ raízes de\pause
 		\[
 			p(\lambda) = \det \begin{bmatrix}
 				a - \lambda & b/2         \\
 				b/2         & c - \lambda
 			\end{bmatrix}.
-		\]
+		\]\pause
 		\begin{enumerate}[label=({\roman*})]
-			\item Temos $a'c' = ac - b^2/4$.
-			\item Se $a'c' > 0$, então $\mathcal{C}$ é uma elipse, um ponto ou o conjunto vazio.
-			\item Se $a'c' < 0$, então $\mathcal{C}$ é uma hipérbole ou um par de retas concorrentes.
-			\item Se $a'c' = 0$, então $\mathcal{C}$ é uma parábola, um par de retas paralelas, uma reta ou o conjunto vazio.
+			\item Temos $a'c' = ac - b^2/4$.\pause
+			\item Se $a'c' > 0$, \pause então $\mathcal{C}$ é uma elipse, \pause um ponto \pause  ou o conjunto vazio.\pause
+			\item Se $a'c' < 0$, \pause então $\mathcal{C}$ é uma hipérbole \pause ou um par de retas concorrentes.\pause
+			\item Se $a'c' = 0$, \pause então $\mathcal{C}$ é uma parábola, \pause um par de retas paralelas, \pause uma reta \pause ou o conjunto vazio.
 		\end{enumerate}
 	\end{teorema}
 \end{frame}
