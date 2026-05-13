@@ -859,24 +859,47 @@ Vamos fixar $F(p,0)$ e $r: x = -p$, onde $p > 0$.
 	\includegraphics[scale=0.7]{parabola.pdf}
 \end{figure}
 
-Assim um ponto $A(x,y)$ pertence à parábola de foco $F$ e reta diretriz $r$ se, e somente se,
+Assim seja $A(x,y)$ um ponto pertence à parábola de foco $F$ e reta diretriz $r$. Então
 \[
 	d(A,r) = d(A,F).
 \]
 Mas
 \begin{align*}
 	d(A,r) = |x + p| \\
-	d(A,F) = \sqrt{(x - p)^2 + y^2}.
+	d(A,F) = \sqrt{(x - p)^2 + y^2}
 \end{align*}
-Logo $A$ pertence à parábola $\mathcal{P}$ se, e somente se,
+e com isso
 \begin{align*}
 	(|x + p|)^2 = (x - p)^2 + y^2 \\
 	x^2 + 2px + p^2 = x^2 - 2px + p^2 + y^2.
 \end{align*}
-Portanto $A(x,y)$ pertence à parábola $\mathcal{P}$ se, e somente se,
-\begin{equation}\label{equacaoparabola}
+Portanto se $A(x,y)$ pertence à parábola $\mathcal{P}$, então
+\begin{equation}
 	y^2 = 4px
 \end{equation}
+
+Agora suponha que $Q(\alpha, \beta)$ seja um ponto tal que
+\begin{equation}\label{equacaoauxiliarparabola}
+	\beta^2 = 4p\alpha.
+\end{equation}
+Temos
+\begin{align*}
+	d(Q, r) & = | \alpha + p|                                                                      \\
+	d(Q, F) & = \sqrt{(\alpha - p)^2 + \beta^2} = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2}.
+\end{align*}
+Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
+\begin{align*}
+	d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\ &= \sqrt{\alpha^2 + 2p\alpha +
+	\alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
+\end{align*}
+Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
+
+\begin{proposicao}
+	Um ponto $P(x, y)$ pertence à parábola de foco $F(p, 0)$ e reta diretriz $r : x = -p$ se, e somente se,
+	\begin{equation}\label{equacaoparabola}
+		y^2 = 4px
+	\end{equation}
+\end{proposicao}
 
 A equação \eqref{equacaoparabola} é chamada de \textbf{equação reduzida} da parábola $\mathcal{P}$. Indica-se\index{Parábola!Equação reduzida}
 \[
