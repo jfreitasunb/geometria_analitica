@@ -1131,15 +1131,27 @@ e substituindo $\vec{u_1}$ e $\vec{u_2}$
 \]
 Logo
 \begin{align}
-	 & x = x_1\cos\theta - y_1\sin\theta\label{rotacaoX} \\
-	 & y = x_1\sin\theta + y_1\cos\theta\label{rotacaoY}
+	 & x = x_1\cos\theta - y_1\sin\theta\label{rotacaoX}  \\
+	 & y = x_1\sin\theta + y_1\cos\theta\label{rotacaoY}.
 \end{align}
-e então isolando $x_1$ e $y_1$
-\begin{align*}
-	 & x_1 = x\cos\theta + y\sin\theta   \\
-	 & y_1 = -x\sin\theta + y\cos\theta.
-\end{align*}
-% Portanto para eliminar o termo $xy$ da equação $g(x,y) = 0$, substituímos \eqref{rotacaoX} e \eqref{rotacaoY} em $g(x,y) = 0$ e determinanos o ângulo $\theta$ que elimina o termo $xy$.
+
+Multiplicando a equação \eqref{rotacaoX} por $\cos\theta$, a equação \eqref{rotacaoY} por $\sin\theta$ e somando obtemos:
+\[
+	x_1 = x\cos\theta + y\sin\theta.
+\]
+
+Agora, multiplicando a equação \eqref{rotacaoX} por $\sin\theta$, a equação \eqref{rotacaoY} por $\cos\theta$ e subtraindo obtemos:
+\[
+	y_1 = -x\sin\theta + y\cos\theta
+\]
+
+Com isso para cada ponto $P(x,y)$ as suas coordenadas, após uma rotação no sentido anti-horário de um ângulo $\theta$, serão dadas pelas equações:
+\[
+	\begin{cases}
+		x_1 = x\cos\theta + y\sin\theta \\
+		y_1 = -x\sin\theta + y\cos\theta.
+	\end{cases}
+\]
 
 \begin{exemplos}
 	Seja $P$ o ponto $P(6,4)$. Efetuando-se uma rotação de um ângulo de $\theta = \pi/3$ radianos nos eixos, as coordenadas de $P$ em relação aos novos eixos são
