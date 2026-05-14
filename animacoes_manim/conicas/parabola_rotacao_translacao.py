@@ -36,3 +36,21 @@ class AnimacaoParabola(Scene):
         self.play(Create(parabola), run_time=4, rate_func=smooth)
 
         self.wait(3)
+
+        dot_x = Dot(eixos.c2p(1, 0), color=YELLOW)
+        dot_y = Dot(eixos.c2p(0, 1), color=YELLOW)
+        self.play(FadeIn(dot_x), FadeIn(dot_y))
+        self.play(Indicate(dot_x), Indicate(dot_y))
+        
+        eixos_novos = eixos.copy()
+        
+        self.play(
+            eixos_novos.animate.set_color(GREEN).rotate(
+                45 * DEGREES, 
+                about_point=eixos.c2p(0, 0)
+            ),
+            run_time=2.5
+        )
+        
+        legenda_eixos = Tex("Eixos Rotacionados ($45^\circ$)", color=GREEN, font_size=30).to_corner(UR)
+        self.play(Write(legenda_eixos))
