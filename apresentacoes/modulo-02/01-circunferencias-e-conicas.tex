@@ -425,12 +425,34 @@
 \end{frame}
 
 \begin{frame}
+	Ao rotacionar os eixos, \pause no sentido anti-horário, \pause de um certo ângulo $\theta$ \pause as novas coordenadas de um ponto $P(x,y)$ serão dadas
+	pelas equações:\pause
+	\[
+		\begin{cases}
+			x_1 = x\cos\theta + y\sin\theta \\
+			y_1 = -x\sin\theta + y\cos\theta
+		\end{cases}
+	\]\pause
+
+	De forma semelhante, \pause se conhecemos as coordenadas do ponto $P(x_1, y_1)$ \pause após essa rotação, \pause podemos encontrar as coodernadas originais
+	usando as equações:\pause
+	\[
+		\begin{cases}
+			x = x_1\cos\theta - y_1\sin\theta \\
+			y = x_1\sin\theta + y_1\cos\theta
+		\end{cases}
+	\]
+\end{frame}
+
+\begin{frame}
 	Considere uma cônica de equação
 	\begin{equation}\label{equacao_geral_conica}
-		ax^2 + bxy + cx^2 + dx + ey + f = 0.
-	\end{equation}
+		ax^2 + bxy + cy^2 + dx + ey + f = 0.
+	\end{equation}\pause
 
-	Queremos remover o termo $xy$ da equação \eqref{equacao_geral_conica} para então usar uma translação de eixos, se necessário, e com isso identificar a cônica definida por tal equação. Para isso vamos tentar encontrar um ângulo $\theta$ tal que a equação \eqref{equacao_geral_conica} possa ser transformada numa equação da forma
+	Queremos remover o termo $xy$ \pause da equação \eqref{equacao_geral_conica} \pause para então usar uma translação de eixos, \pause se necessário, \pause e
+	com isso identificar a cônica definida por tal equação. \pause Para isso vamos tentar encontrar um ângulo $\theta$ \pause tal que a equação
+	\eqref{equacao_geral_conica} \pause possa ser transformada numa equação da forma
 	\begin{equation}\label{equacao_rotacionada_conica}
 		a'x_1^2 + c'y_1^2 + d'x_1 + e'y_1 + f' = 0.
 	\end{equation}
@@ -519,26 +541,26 @@
 \end{frame}
 
 \begin{frame}
-    \begin{figure}
-        \centering
-        \caption{Elipse $52x^2 - 72xy + 73y^2 - 400 = 0$}
-        \includegraphics{elipse-rotacionada.pdf}
-    \end{figure}
+	\begin{figure}
+		\centering
+		\caption{Elipse $52x^2 - 72xy + 73y^2 - 400 = 0$}
+		\includegraphics{elipse-rotacionada.pdf}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
-    \begin{figure}
-        \centering
-        \caption{Parábola $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$}
-        \includegraphics{parabola-rotacionada-transladada.pdf}
-    \end{figure}
+	\begin{figure}
+		\centering
+		\caption{Parábola $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$}
+		\includegraphics{parabola-rotacionada-transladada.pdf}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
-    \begin{figure}
-        \centering
-        \caption{Hipérbole $3x^2 +3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$}
-        \includegraphics[scale=0.6]{hiperbole-rotacionada-transladada.pdf}
-    \end{figure}
+	\begin{figure}
+		\centering
+		\caption{Hipérbole $3x^2 +3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$}
+		\includegraphics[scale=0.6]{hiperbole-rotacionada-transladada.pdf}
+	\end{figure}
 \end{frame}
 \end{document}
