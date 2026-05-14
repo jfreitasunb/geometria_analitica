@@ -54,3 +54,27 @@ class AnimacaoParabola(Scene):
         
         legenda_eixos = Tex("Eixos Rotacionados ($45^\circ$)", color=GREEN, font_size=30).to_corner(UR)
         self.play(Write(legenda_eixos))
+
+
+        # Destino: ponto (2, 1) relativo ao sistema rotacionado
+        ponto_destino = eixos_novos.c2p(1/(2*np.sqrt(2)), 0)
+        ponto_origem_verde = eixos_novos.c2p(0, 0)
+        vetor_deslocamento = ponto_destino - ponto_origem_verde
+        
+        eixos_finais = eixos_novos.copy()
+        legenda_translacao = Tex(
+            "Translação: $x''=x'-2, y''=y'-1$", 
+            color=RED, 
+            font_size=30
+        ).next_to(legenda_eixos, DOWN, buff=0.3)
+
+        self.play(
+            eixos_finais.animate.set_color(RED).shift(vetor_deslocamento),
+            Write(legenda_translacao),
+            run_time=3
+        )
+        
+        nova_origem_dot = Dot(ponto_destino, color=RED)
+        self.play(FadeIn(nova_origem_dot))
+        
+        self.wait(3)
