@@ -20,404 +20,292 @@
 \date{}
 
 \begin{document}
-    \begin{frame}
-        \maketitle
-    \end{frame}
+\begin{frame}
+    \maketitle
+\end{frame}
 
-    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
-    \begin{frame}
-      Fixemos um ponto $O$ no espaço, \pause que será denominado como \textbf{origem}. \pause Tomemos três retas \pause duas a duas perpendiculares entre si \pause e concorrentes em $O$, \pause que serão denominados \textbf{eixos coordenados} \pause e serão denotados por $Ox$, \pause $Oy$ \pause e $Oz$.
-    \end{frame}
+\begin{frame}
+    Fixemos um ponto $O$ no espaço, \pause que será denominado como \textbf{origem}. \pause Tomemos três retas \pause duas a duas perpendiculares entre si \pause e concorrentes em $O$, \pause que serão denominados \textbf{eixos coordenados} \pause e serão denotados por $Ox$, \pause $Oy$ \pause e $Oz$.
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}[!h]
+\begin{frame}
+    \begin{figure}[!h]
         \centering
         \caption{Sistema de coordenadas tridimensionais}
         \includegraphics{eixos-coordenados-espaco.pdf}
-      \end{figure}
-    \end{frame}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      Projetando um ponto $P$ \pause do espaço ortogonalmente sobre cada um dos eixos coordenados \pause podemos representar os pontos do espaço por ternas ordenadas $(a,b,c)$ \pause de números reais.
-    \end{frame}
+\begin{frame}
+    Projetando um ponto $P$ \pause do espaço ortogonalmente sobre cada um dos eixos coordenados \pause podemos representar os pontos do espaço por ternas ordenadas $(a,b,c)$ \pause de números reais.
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}[!h]
+\begin{frame}
+    \begin{figure}[!h]
         \centering
         \caption{Coordenadas de um ponto no espaço tridimensional}
         \includegraphics{coordenadas-ponto-espaco.pdf}
-      \end{figure}
-    \end{frame}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      Assim os pontos de $\real^3$ \pause são descritos por\pause
-      \[
+\begin{frame}
+    Assim os pontos de $\real^3$ \pause são descritos por\pause
+    \[
         \real^3 = \{(a,b,c)\pause \mid a,b,c \in \real\}.
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      Sejam $P(x_1,y_1,z_1)$ \pause e $Q(x_2,y_2,z_2)$ \pause dois pontos de $\real^3$. \pause Traçando por $P$ um segmento $PS$ \pause paralelo ao segmento $P_0Q_0$, \pause onde $P_0(x_1,y_1)$ e $Q_0(x_2,y_2)$, \pause obtemos que\pause
-      \[
+\begin{frame}
+    Sejam $P(x_1,y_1,z_1)$ \pause e $Q(x_2,y_2,z_2)$ \pause dois pontos de $\real^3$. \pause Traçando por $P$ um segmento $PS$ \pause paralelo ao segmento $P_0Q_0$, \pause onde $P_0(x_1,y_1)$ e $Q_0(x_2,y_2)$, \pause obtemos que\pause
+    \[
         d(P,Q)^2 = d(P_0,Q_0)^2 + |SQ|^2.
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}
+\begin{frame}
+    \begin{figure}
         \centering
         \caption{Distância entre pontos em $\real^3$}
         \includegraphics{distancia-pontos-espaco.pdf}
-      \end{figure}
-    \end{frame}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      Agora, \pause $|SQ| = |z_2 - z_1|$ \pause e daí\pause
-      \[
+\begin{frame}
+    Agora, \pause $|SQ| = |z_2 - z_1|$ \pause e daí\pause
+    \[
         D(P,Q) = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (z_1 - z_2)^2}.
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      Os vetores e as operações \pause com eles podem ser definidas de forma semelhante ao feito em $\real^2$. \pause Para isso, um ponto $P$ \pause do espaço é representado em $\real^3$ \pause por uma terna de coordenadas $P(x_1, y_1,z_1)$, \pause onde $x_1$, $y_1$, $z_1 \in \real$.\pause
+\begin{frame}
+    Os vetores e as operações \pause com eles podem ser definidas de forma semelhante ao feito em $\real^2$. \pause Para isso, um ponto $P$ \pause do espaço é representado em $\real^3$ \pause por uma terna de coordenadas $P(x_1, y_1,z_1)$, \pause onde $x_1$, $y_1$, $z_1 \in \real$.\pause
 
-      Assim escrevemos
-      \[
+    Assim escrevemos
+    \[
         \vec{u} = (x_1,y_1,z_1).
-      \]\pause
-      para representar um vetor com extremidade inicial no ponto $(0, 0, 0)$ \pause e extremidade final no ponto $(x_1, y_1, z_1)$.\pause
+    \]\pause
+    para representar um vetor com extremidade inicial no ponto $(0, 0, 0)$ \pause e extremidade final no ponto $(x_1, y_1, z_1)$.\pause
 
-      O vetor nulo $\vec{0}$ \pause é escrito como\pause
-      \[
+    O vetor nulo $\vec{0}$ \pause é escrito como\pause
+    \[
         \vec{0} = (0,0,0).
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-        Assim temos:\pause
-        \begin{definicao}
-            Sejam $\alpha \in \real$, \pause $\vec{u} = (x_1, y_1,z_1)$ \pause e $\vec{v} = (x_2, y_2,z_2)$. \pause Então:\pause
-            \begin{enumerate}[label=({\arabic*})]
-                \item $\vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2,z_1 + z_2)$;\pause
-                \item $\alpha \vec{u} = (\alpha x_1, \alpha y_1, \alpha z_1)$.
-            \end{enumerate}
-        \end{definicao}
-    \end{frame}
+\begin{frame}
+    Assim temos:\pause
+    \begin{definicao}
+        Sejam $\alpha \in \real$, \pause $\vec{u} = (x_1, y_1,z_1)$ \pause e $\vec{v} = (x_2, y_2,z_2)$. \pause Então:\pause
+        \begin{enumerate}[label=({\arabic*})]
+            \item $\vec{u} + \vec{v} = (x_1 + x_2, y_1 + y_2,z_1 + z_2)$;\pause
+            \item $\alpha \vec{u} = (\alpha x_1, \alpha y_1, \alpha z_1)$.
+        \end{enumerate}
+    \end{definicao}
+\end{frame}
 
-
-    \begin{frame}
-      Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1,z_1)$ \pause de forma matricial. \pause Para isso escrevemos as componentes de $\vec{u}$ \pause como uma matriz de 1 \pause coluna e três linhas\pause
-      \[
+\begin{frame}
+    Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1,z_1)$ \pause de forma matricial. \pause Para isso escrevemos as componentes de $\vec{u}$ \pause como uma matriz de 1 \pause coluna e três linhas\pause
+    \[
         \vec{u} = \begin{bmatrix}
-          x_1\\y_1\\z_1
+            x_1 \\y_1\\z_1
         \end{bmatrix}.
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      Vimos que a norma de um vetor em $\real^2$ \pause é definida como o comprimento de um segmento orientado que o represente. \pause Com a representação de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:\pause
-      \begin{definicao}
+\begin{frame}
+    Vimos que a norma de um vetor em $\real^2$ \pause é definida como o comprimento de um segmento orientado que o represente. \pause Com a representação de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:\pause
+    \begin{definicao}
         Seja $\vec{u} = (x_1, y_1,z_1)$ \pause um vetor. A \textbf{norma} \pause de $\vec{u}$, \pause denotada por $\norm{\vec{u}}$ \pause é dada por\pause
         \[
-          \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2 + z_1^2}.
+            \norm{\vec{u}} = \sqrt{x_1^2 + y_1^2 + z_1^2}.
         \]
-      \end{definicao}
-    \end{frame}
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      Um vetor de norma 1 \pause é chamado de \textbf{vetor unitário}. \pause Dado um vetor não nulo $\vec{u}$ \pause o vetor\pause
-      \[
+\begin{frame}
+    Um vetor de norma 1 \pause é chamado de \textbf{vetor unitário}. \pause Dado um vetor não nulo $\vec{u}$ \pause o vetor\pause
+    \[
         \vec{v} = \dfrac{\vec{u}}{\norm{\vec{u}}}
-      \]\pause
-      é um vetor unitário \pause na direção de $\vec{u}$.
-    \end{frame}
+    \]\pause
+    é um vetor unitário \pause na direção de $\vec{u}$.
+\end{frame}
 
-    \begin{frame}
-      \begin{proposicao}
+\begin{frame}
+    \begin{proposicao}
         Sejam $\vec{u} = (x_1, y_1,z_1)$ \pause um vetor em $\real^3$ \pause e $\alpha \in \real$. \pause Então:\pause
         \begin{enumerate}[label=({\arabic*})]
-          \item Se $\vec{u} \ne \vec{0}$, \pause então $\norm{\vec{u}} \ne 0$.\pause
-          \item $\norm{\vec{u}} \ne 0$ \pause se, e somente se, \pause $\vec{u} \ne \vec{0}$.\pause
-          \item $\norm{\alpha\vec{u}} = \pause |\alpha|\norm{\vec{u}}$.
+            \item Se $\vec{u} \ne \vec{0}$, \pause então $\norm{\vec{u}} \ne 0$.\pause
+            \item $\norm{\vec{u}} \ne 0$ \pause se, e somente se, \pause $\vec{u} \ne \vec{0}$.\pause
+            \item $\norm{\alpha\vec{u}} = \pause |\alpha|\norm{\vec{u}}$.
         \end{enumerate}
-      \end{proposicao}
-    \end{frame}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
+\begin{frame}
+    \begin{definicao}
         Sejam $\vec{u}$ \pause e $\vec{v}$ \pause vetores não nulos. \pause O \textbf{ângulo} \pause entre $\vec{u}$ e $\vec{v}$ \pause é definido pelo ângulo $\theta$ \pause determinado por $\vec{u}$ e $\vec{v}$ \pause e que satisfaz $0 \le \theta \le \pi$, \pause quando os vetores $\vec{u}$ e $\vec{v}$ \pause são representados com a mesma origem.
-      \end{definicao}
-    \end{frame}
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
+\begin{frame}
+    \begin{definicao}
         Quando o ângulo $\theta$ \pause entre dois vetores $\vec{u}$ e $\vec{v}$ \pause é reto, isto é, $\theta = \pi/2$, \pause ou um deles é o vetor nulo, \pause dizemos que os vetores $\vec{u}$ e $\vec{v}$ são \textbf{ortogonais} \pause ou \textbf{perpendiculares} entre si. \pause Denotamos tal fato, escrevendo $\vec{u} \perp \vec{v}$.
-      \end{definicao}
-    \end{frame}
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}[!h]
-        \centering
-        \caption{ângulo entre vetores em $\real^3$}
-        \includegraphics{angulo-vetores-espaco.pdf}
-     \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}\label{produtointerno-espaco}
+\begin{frame}
+    \begin{definicao}\label{produtointerno-espaco}
         O \textbf{produto escalar} \pause ou \textbf{produto interno} \pause dos vetores $\vec{u}$ \pause e $\vec{v}$, \pause indicado por $\inner{u}{v}$, \pause é o número real tal que\pause
         \begin{enumerate}[label=({\arabic*})]
-          \item Se $\vec{u}$ \pause ou $\vec{v}$ é nulo, \pause então $\inner{u}{v} = 0$.\pause
-          \item Se $\vec{u}$ e $\vec{v}$ \pause não são nulos \pause e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, \pause então
-          \begin{align}\label{produto-interno-espaco}
-            \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
-          \end{align}
+            \item Se $\vec{u}$ \pause ou $\vec{v}$ é nulo, \pause então $\inner{u}{v} = 0$.\pause
+            \item Se $\vec{u}$ e $\vec{v}$ \pause não são nulos \pause e $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$, \pause então
+                  \begin{align}\label{produto-interno-espaco}
+                      \inner{u}{v} = \norm{\vec{u}}\norm{\vec{v}}\cos\theta.
+                  \end{align}
         \end{enumerate}
-      \end{definicao}
-    \end{frame}
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{proposicao}
+\begin{frame}
+    \begin{proposicao}
         Sejam $\vec{u}$ e $\vec{v}$ vetores \pause e $\theta$ o \pause ângulo entre $\vec{u}$ e $\vec{v}$.\pause
         \begin{enumerate}[label=({\arabic*})]
-          \item Se $\vec{u}$ e $\vec{v}$ \pause não são nulos, \pause então\pause
-          \[
-            \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
-          \]\pause
-          \item Qualquer que seja o vetor $\vec{u}$,\pause
-          \[
-            \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
-          \]\pause
-          \item Quaisquer que sejam os vetores $\vec{u}$ \pause e $\vec{v}$, \pause $\vec{u}\perp\vec{v}$ \pause se, e somente se, \pause $\inner{u}{v} = 0$.
-          \end{enumerate}
-      \end{proposicao}
-    \end{frame}
+            \item Se $\vec{u}$ e $\vec{v}$ \pause não são nulos, \pause então\pause
+                  \[
+                      \cos\theta = \dfrac{\inner{u}{v}}{\norm{\vec{u}}\norm{\vec{v}}}.
+                  \]\pause
+            \item Qualquer que seja o vetor $\vec{u}$,\pause
+                  \[
+                      \norm{\vec{u}} = \sqrt{\inner{u}{u}}.
+                  \]\pause
+            \item Quaisquer que sejam os vetores $\vec{u}$ \pause e $\vec{v}$, \pause $\vec{u}\perp\vec{v}$ \pause se, e somente se, \pause $\inner{u}{v} = 0$.
+        \end{enumerate}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      De modo análogo ao caso para vetores no plano, \pause temos:\pause
-      \begin{teorema}
+\begin{frame}
+    De modo análogo ao caso para vetores no plano, \pause temos:\pause
+    \begin{teorema}
         O produto interno de dois vetores \pause $\vec{u} = (x_1, y_1,z_1)$ \pause e $\vec{v} = (x_2, y_2,z_2)$ \pause em $\real^3$ \pause é dado por\pause
         \[
-          \inner{u}{v} = \pause x_1x_2 \pause + y_1y_2 \pause + z_1z_2.
+            \inner{u}{v} = \pause x_1x_2 \pause + y_1y_2 \pause + z_1z_2.
         \]
-      \end{teorema}
-    \end{frame}
+    \end{teorema}
+\end{frame}
 
-    \begin{frame}
-      \begin{proposicao}\label{propriedades-produto-vetorial-espaco}
+\begin{frame}
+    \begin{proposicao}\label{propriedades-produto-vetorial-espaco}
         Quaisquer que sejam os vetores \pause $\vec{u} = (x_1, y_1,z_1)$, \pause $\vec{v} = (x_2, y_2,z_2)$ \pause e $\vec{w} = (x_3, y_3,z_3)$ \pause e qualquer que seja o número real $\lambda$ \pause temos\pause
         \begin{enumerate}[label=({\roman*})]
-          \item\label{linearidade-soma-produto-vetorial-espaco} $\langle\vec{u}, \pause \vec{v} + \vec{w}\rangle \pause = \inner{u}{v} \pause + \inner{u}{w}$\pause
-          \item\label{linearidade-escalar-produto-vetorial-espaco} $\langle\vec{u}, \pause \lambda\vec{v}\rangle \pause = \langle\lambda\vec{u}, \pause \vec{v}\rangle \pause = \lambda \pause \inner{u}{v}$\pause
-          \item $\inner{u}{v} \pause = \inner{v}{u}$\pause
-          \item Se $\vec{u} \ne \vec{0}$, \pause então $\inner{u}{u} > 0$.
+            \item\label{linearidade-soma-produto-vetorial-espaco} $\langle\vec{u}, \pause \vec{v} + \vec{w}\rangle \pause = \inner{u}{v} \pause + \inner{u}{w}$\pause
+            \item\label{linearidade-escalar-produto-vetorial-espaco} $\langle\vec{u}, \pause \lambda\vec{v}\rangle \pause = \langle\lambda\vec{u}, \pause \vec{v}\rangle \pause = \lambda \pause \inner{u}{v}$\pause
+            \item $\inner{u}{v} \pause = \inner{v}{u}$\pause
+            \item Se $\vec{u} \ne \vec{0}$, \pause então $\inner{u}{u} > 0$.
         \end{enumerate}
-      \end{proposicao}
-    \end{frame}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{observacao}
+\begin{frame}
+    \begin{observacao}
         \begin{enumerate}[label=({\alph*})]
-          \item As propriedades \ref{linearidade-soma-produto-vetorial-espaco} \pause e \ref{linearidade-escalar-produto-vetorial-espaco} \pause da Proposição \ref{propriedades-produto-vetorial-espaco} \pause podem ser estendidas para qualquer número de vetores:\pause
-          \[
-            \langle\vec{u}, \pause \lambda_1\vec{v_1} \pause + \lambda_2\vec{v_2} \pause + \cdots \pause + \lambda_n\vec{v_n}\rangle \pause = \lambda_1\inner{u}{v_1} \pause + \lambda_2\inner{u}{v_2} \pause + \cdots \pause + \lambda_n\inner{u}{v_n}.\pause
-          \]
-          \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ \pause não podemos concluir que $\vec{v} = \vec{w}$. \pause Por exemplo, \pause para $\vec{u} = (1, 0, 0)$, \pause $\vec{v} = (2, 1, 1)$ e $\vec{w} = (2, -5, 3)$ \pause temos $\inner{u}{v} = \inner{u}{w}$ \pause e no entanto $\vec{v} \ne \vec{w}$. \pause Mas podemos concluir que \pause $\vec{u}\perp(\vec{v} - \vec{w})$.\pause
+            \item As propriedades \ref{linearidade-soma-produto-vetorial-espaco} \pause e \ref{linearidade-escalar-produto-vetorial-espaco} \pause da Proposição \ref{propriedades-produto-vetorial-espaco} \pause podem ser estendidas para qualquer número de vetores:\pause
+                  \[
+                      \langle\vec{u}, \pause \lambda_1\vec{v_1} \pause + \lambda_2\vec{v_2} \pause + \cdots \pause + \lambda_n\vec{v_n}\rangle \pause = \lambda_1\inner{u}{v_1} \pause + \lambda_2\inner{u}{v_2} \pause + \cdots \pause + \lambda_n\inner{u}{v_n}.\pause
+                  \]
+            \item Na igualdade $\inner{u}{v} = \inner{u}{w}$ \pause não podemos concluir que $\vec{v} = \vec{w}$. \pause Por exemplo, \pause para $\vec{u} = (1, 0, 0)$, \pause $\vec{v} = (2, 1, 1)$ e $\vec{w} = (2, -5, 3)$ \pause temos $\inner{u}{v} = \inner{u}{w}$ \pause e no entanto $\vec{v} \ne \vec{w}$. \pause Mas podemos concluir que \pause $\vec{u}\perp(\vec{v} - \vec{w})$.\pause
 
-          \item De $\inner{u}{v} = 0$ \pause não podemos concluir que $\vec{u} = \vec{0}$ \pause ou $\vec{v} = \vec{0}$. \pause Por exemplo, \pause para $\vec{u} = (2, 1, 1)$ \pause e $\vec{v} = (-2, 4, 0)$ \pause temos $\inner{u}{v} = 0$ \pause e no entanto $\vec{u} \ne \vec{0}$ \pause e $\vec{v} \ne \vec{0}$.
+            \item De $\inner{u}{v} = 0$ \pause não podemos concluir que $\vec{u} = \vec{0}$ \pause ou $\vec{v} = \vec{0}$. \pause Por exemplo, \pause para $\vec{u} = (2, 1, 1)$ \pause e $\vec{v} = (-2, 4, 0)$ \pause temos $\inner{u}{v} = 0$ \pause e no entanto $\vec{u} \ne \vec{0}$ \pause e $\vec{v} \ne \vec{0}$.
         \end{enumerate}
-      \end{observacao}
-    \end{frame}
+    \end{observacao}
+\end{frame}
 
-    \begin{frame}
-      \begin{proposicao}
-          Sejam $\vec{u}$ e $\vec{v}$ vetores.\pause
+\begin{frame}
+    \begin{proposicao}
+        Sejam $\vec{u}$ e $\vec{v}$ vetores.\pause
         \begin{enumerate}[label=({\arabic*})]
-          \item $\mid\inner{u}{v}\mid \pause \le \norm{\vec{u}}\pause \norm{\vec{v}}$ \pause (Desigualdade de Scharwz)\pause
-          \item $\norm{\vec{u} + \vec{v}} \pause \le \norm{\vec{u}} \pause + \norm{\vec{v}}$ \pause (Desigualdade Triangular)\pause
+            \item $\mid\inner{u}{v}\mid \pause \le \norm{\vec{u}}\pause \norm{\vec{v}}$ \pause (Desigualdade de Scharwz)\pause
+            \item $\norm{\vec{u} + \vec{v}} \pause \le \norm{\vec{u}} \pause + \norm{\vec{v}}$ \pause (Desigualdade Triangular)\pause
         \end{enumerate}
-      \end{proposicao}
-   \end{frame}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      Dados vetores $\vec{u} = (a_1,b_1,c_1)$ \pause e $\vec{v} = (a_2,b_2,c_2)$ \pause é possível encontrar um vetor $\vec{w} = (x,y,z)$ \pause que seja simultaneamente \pause ortogonal a $\vec{u}$ \pause e a $\vec{v}$?
-    \end{frame}
+\begin{frame}
+    Dados vetores $\vec{u} = (a_1,b_1,c_1)$ \pause e $\vec{v} = (a_2,b_2,c_2)$ \pause é possível encontrar um vetor $\vec{w} = (x,y,z)$ \pause que seja simultaneamente \pause ortogonal a $\vec{u}$ \pause e a $\vec{v}$?
+\end{frame}
 
-    \begin{frame}
-        O vetor $\vec{w}$ dado por
-      \begin{equation}\label{produtovetorial}
+\begin{frame}
+    O vetor $\vec{w}$ dado por
+    \begin{equation}\label{produtovetorial}
         \vec{w} = (b_1c_2 - b_2c_1, a_2c_1 - a_1c_2, a_1b_2 - b_1a_2).
-      \end{equation}
-      é chamado de \textbf{produto vetorial} de $\vec{u}$ por $\vec{v}$ e é denotado por $\vec{u}\times\vec{v}$.
-    \end{frame}
+    \end{equation}
+    é chamado de \textbf{produto vetorial} de $\vec{u}$ por $\vec{v}$ e é denotado por $\vec{u}\times\vec{v}$.
+\end{frame}
 
-    \begin{frame}
-      Um método alternativo para determinar o vetor $\vec{w}$ é o seguinte: denote por
-      \begin{align*}
-        \vec{i} = (1,0,0)\\
-        \vec{j} = (0,1,0)\\
-        \vec{k} = (0,0,1).
-      \end{align*}
-      Então qualquer vetor $\vec{u} = (a_1,b_1,c_1)$ em $\real^3$ pode ser escrito como
-      \[
-        \vec{u} = (a_1,b_1,c_1) = a_1(1,0,0) + b_1(0,1,0) + c_1(0,0,1) = a_1\vec{i} + b_1\vec{j} + c_1\vec{k}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Dados vetores $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$, seja $\vec{w}$ o produto vetorial de $\vec{u}$ e $\vec{v}$. Considere o determinante
-      \[
-        \det \begin{bmatrix}
-          \vec{i} & \vec{j} & \vec{k}\\
-          a_1 & b_1 & c_1\\
-          a_2 & b_2 & c_2
-        \end{bmatrix}.
-      \]
-      Temos
-      \begin{align*}
-        \det \begin{bmatrix}
-          \vec{i} & \vec{j} & \vec{k}\\
-          a_1 & b_1 & c_1\\
-          a_2 & b_2 & c_2
-        \end{bmatrix} &= b_1c_2\vec{i} + c_1a_2\vec{j} + a_1b_2\vec{k} - b_1a_2\vec{k} - c_1b_2\vec{i} - a_1c_2\vec{j}\\ &= (b_1c_2 - c_1b_2)\vec{i} + (c_1a_2 - c_2a_1)\vec{j} + (a_1b_2 - a_2b_1)\vec{k} \\ &= (b_1c_2 - c_1b_2, c_1a_2 - c_2a_1, a_1b_2 - a_2b_1) = \vec{w}.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$ e $\alpha \in \real$. Temos
+\begin{frame}
+    \begin{proposicao}
+        Sejam $\vec{u}$, \pause $\vec{v}$ \pause e $\vec{w}$ \pause vetores em $\real^3$ \pause e $\alpha \in \real$. \pause Temos\pause
         \begin{enumerate}[label=({\alph*})]
-          \item $\vec{u}\times\vec{v} = -\vec{v}\times\vec{u}$;
-          \item $\vec{u}\times\vec{v} = \vec{0}$ se, e somente se, $\vec{u}\varparallel\vec{v}$;
-          \item $\alpha(\vec{u}\times\vec{v}) = (\alpha\vec{u})\times\vec{v} = \vec{u}\times(\alpha\vec{v})$;
-          \item $\vec{u}\times(\vec{v} + \vec{w}) = \vec{u}\times\vec{v} + \vec{u}\times\vec{w}$.
+            \item $\vec{u}\times\vec{v} \pause = -\vec{v}\times\vec{u}$;\pause
+            \item $\vec{u}\times\vec{v} = \vec{0}$ \pause se, e somente se, \pause $\vec{u}\varparallel\vec{v}$;\pause
+            \item $\alpha(\vec{u}\times\vec{v}) \pause = (\alpha\vec{u})\times\vec{v} \pause = \vec{u}\times(\alpha\vec{v})$;\pause
+            \item $\vec{u}\times(\vec{v} + \vec{w}) \pause = \vec{u}\times\vec{v} \pause + \vec{u}\times\vec{w}$.
         \end{enumerate}
-      \end{proposicao}
-    \end{frame}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{observacao}
-        O sentido de $\vec{u}\times\vec{v}$ é dado pela regra da mão direita: se o ângulo entre $\vec{u}$ e $\vec{v}$ é $\theta$, giramos o vetor $\vec{u}$ de um ângulo $\theta$ até que coincida com o vetor $\vec{v}$ e acompanhamos o movimento com os dedos da mão direita, então o polegar vai apontar no sentido de $\vec{u}\times\vec{v}$.
-      \end{observacao}
-    \end{frame}
+\begin{frame}
+    \begin{observacao}
+        O sentido de $\vec{u}\times\vec{v}$ \pause é dado pela regra da mão direita:\pause se o ângulo entre $\vec{u}$ e $\vec{v}$ \pause é $\theta$, \pause giramos o vetor $\vec{u}$ de um ângulo $\theta$ \pause até que coincida com o vetor $\vec{v}$ \pause e acompanhamos o movimento com os dedos da mão direita, \pause então o polegar vai apontar no sentido de $\vec{u}\times\vec{v}$.
+    \end{observacao}
+\end{frame}
 
-    \begin{frame}
-      \begin{proposicao}\label{normaprodutovetorial}
-        Sejam $\vec{u}$ e $\vec{v}$ vetores no espaço. Então
+\begin{frame}
+    \begin{proposicao}\label{normaprodutovetorial}
+        Sejam $\vec{u}$ e $\vec{v}$ vetores no espaço.\pause Então\pause
         \begin{equation}
-          \norm{\vec{u}\times\vec{v}}^2 = \norm{\vec{u}}^2\norm{\vec{v}}^2 - \inner{u}{v}^2.
+            \norm{\vec{u}\times\vec{v}}^2 \pause = \norm{\vec{u}}^2\pause \norm{\vec{v}}^2\pause  - \inner{u}{v}^2.
         \end{equation}
-      \end{proposicao}
-   \end{frame}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{proposicao}
-        Quaisquer que sejam os vetores não nulos $\vec{u}$ e $\vec{v}$ em $\real^3$, tem-se
+\begin{frame}
+    \begin{proposicao}
+        Quaisquer que sejam os vetores \pause não nulos \pause $\vec{u}$ \pause e $\vec{v}$ \pause em $\real^3$, \pause tem-se\pause
         \[
-          \norm{\vec{u}\times\vec{v}} = \norm{\vec{u}}\norm{\vec{v}}\sin\theta
+            \norm{\vec{u}\times\vec{v}}\pause  = \norm{\vec{u}}\norm{\vec{v}}\sin\theta
         \]
-        onde $\theta$ é o ângulo entre $\vec{u}$ e $\vec{v}$.
-      \end{proposicao}
-   \end{frame}
+        onde $\theta$ \pause é o ângulo entre $\vec{u}$ e $\vec{v}$.
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
-      \begin{figure}[!h]
+\begin{frame}
+    Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
+    \begin{figure}[!h]
         \centering
-        \caption{Interpretação geométrica do produto vetorial}
+        %\caption{Interpretação geométrica do produto vetorial}
         \includegraphics{area-paralelogramo.pdf}
-      \end{figure}
+    \end{figure}
+\end{frame}
 
-      A área $\mathcal{A}$ desse paralelogramo é dado Por
-      \[
-        \mathcal{A} = bh.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Neste caso $b = \norm{\vec{u}}$ e $h = \norm{\vec{v}}\sin\theta$. Logo
-      \[
-        \mathcal{A} = \norm{\vec{u}}\norm{\vec{v}}\sin\theta = \norm{\vec{u}\times\vec{v}}.
-      \]
-      Portanto o vetor $\vec{u}\times\vec{v}$ é tal que seu módulo é numericamente igual à área do paralelogramo definido por $\vec{u}$ e $\vec{v}$.
-    \end{frame}
-
-    \begin{frame}
-      Sejam $\vec{u}$ e $\vec{v}$ vetores de $\real^3$. Como $\vec{u}\times\vec{v}$ é um vetor de $\real^3$ podemos calcular seu produto interno com qualquer outro vetor $\vec{w}$ de $\real^3$. O número real
-      \begin{equation}
-        \langle\vec{u}\times\vec{v}, \vec{w}\rangle
-      \end{equation}
-      é chamado de \textbf{produto misto} dos vetores $\vec{u}$, $\vec{v}$ e $\vec{w}$.\index{Vetores no Espaço!Produto Misto} Se $\vec{u} = (a_1,b_1,c_1)$, $\vec{v} =(a_2,b_2,c_2)$ e $\vec{w} = (a_3,b_3,c_3)$ temos
-      \begin{align*}
-        \langle\vec{u}\times\vec{v}, \vec{w}\rangle &= \langle(b_1c_2 - c_2b_1,a_2c_1 - a_1c_2, a_1b_2 - a_2b_1), (a_3, b_3, c_3)\rangle \\ &= (b_1c_2 - b_2c_1)a_3 + (a_2c_1 - a_1c_2)b_2 + (a_1b_2 - a_2b_1)c_3.
-      \end{align*}
-    \end{frame}
-
-    \begin{frame}
-      Agora,
-      \begin{align*}
-        \det \begin{pmatrix}
-          a_1 & b_1 & c_1\\
-          a_2 & b_2 & c_2\\
-          a_3 & b_3 & c_3
-        \end{pmatrix} & = (-1)^{3+1}a_3\det \begin{pmatrix}
-          b_1 & c_1\\
-          b_2 & c_2
-        \end{pmatrix} \\ &+ (-1)^{3+2}b_3\det \begin{pmatrix}
-          a_1 & c_1\\
-          a_2 & c_2
-        \end{pmatrix} + (-1)^{3+3}c_3\det \begin{pmatrix}
-          a_1 & b_1\\
-          a_2 & b_2
-        \end{pmatrix}\\ &= a_3(b_1c_2 - c_1b_2) - b_3(a_1c_2 - a_2c_1) + c_3(a_1b_2 - a_2b_1).
-      \end{align*}
-
-      Portanto
-      \begin{equation}
-        \langle\vec{u}\times\vec{v}, \vec{w}\rangle = \det \begin{pmatrix}
-          a_1 & b_1 & c_1\\
-          a_2 & b_2 & c_2\\
-          a_3 & b_3 & c_3
-        \end{pmatrix}.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      \begin{proposicao}
-        Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Então
+\begin{frame}
+    \begin{proposicao}
+        Sejam $\vec{u}$, \pause $\vec{v}$ \pause e $\vec{w}$ \pause vetores em $\real^3$. \pause Então \pause
         \begin{enumerate}[label=({\alph*})]
-          \item $\langle\vec{u}\times\vec{v}, \vec{w}\rangle = \langle\vec{v}\times\vec{w}, \vec{u}\rangle$
-          \item $\langle\vec{u}\times\vec{v}, \vec{w}\rangle = \langle\vec{u}, \vec{v}\times\vec{w}\rangle$
+            \item $\langle\vec{u}\times\vec{v}, \vec{w}\rangle \pause = \langle\vec{v}\times\vec{w}, \vec{u}\rangle$ \pause
+            \item $\langle\vec{u}\times\vec{v}, \vec{w}\rangle \pause = \langle\vec{u}, \vec{v}\times\vec{w}\rangle$
         \end{enumerate}
-      \end{proposicao}
-    \end{frame}
+    \end{proposicao}
+\end{frame}
 
-    \begin{frame}
-      Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralelepípedo definido por $\vec{u}$, $\vec{v}$ e $\vec{w}$:
-      \begin{figure}[!h]
+\begin{frame}
+    Sejam $\vec{u}$, \pause $\vec{v}$ \pause e $\vec{w}$ \pause vetores em $\real^3$. \pause Considere o paralelepípedo definido por $\vec{u}$, \pause $\vec{v}$ \pause e $\vec{w}$:
+    \begin{figure}[!h]
         \centering
-        \caption{Interpretação geométrica do produto misto}
+        %\caption{Interpretação geométrica do produto misto}
         \includegraphics{volume-paralelepipedo.pdf}
-      \end{figure}
-    \end{frame}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      A altura $h$ é dada por
-      \begin{align*}
-        h = \norm{\vec{w}}|\cos\theta| = \norm{\vec{w}}\dfrac{|\langle\vec{u}\times\vec{v}, \vec{w}\rangle|}{\norm{\vec{u}\times\vec{v}}\norm{\vec{w}}} = \dfrac{|\langle\vec{u}\times\vec{v}, \vec{w}\rangle|}{\norm{\vec{u}\times\vec{v}}}.
-      \end{align*}
-      O volume do paralelepípedo é
-      \[
-        \mathcal{V} = \norm{\vec{u}\times\vec{v}}h
-      \]
-      daí
-      \[
-        \mathcal{V} = \norm{\vec{u}\times\vec{v}}\dfrac{|\langle\vec{u}\times\vec{v}, \vec{w}\rangle|}{\norm{\vec{u}\times\vec{v}}},
-      \]
-      isto é,
-      \begin{equation}
-        \mathcal{V} = |\langle\vec{u}\times\vec{v}, \vec{w}\rangle|.
-      \end{equation}
-    \end{frame}
 \end{document}
