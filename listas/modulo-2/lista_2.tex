@@ -1,0 +1,35 @@
+%!TEX program = xelatex
+%!TEX encoding = UTF-8
+\def\numeromodulo{2}
+\def\numerolista{1}
+
+\documentclass[12pt]{exam}
+
+\input{../configuracoes_listas/variaveis_listas}
+\input{../configuracoes_listas/pacotes}
+\input{../configuracoes_listas/configuracoes_paginas}
+\input{../configuracoes_listas/comandos_personalizados}
+
+\begin{document}
+
+\Opensolutionfile{ans}[ans1]
+
+\begin{center}
+    {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
+        $\numerolista^a$ Lista de Exercícios -- Módulo \numeromodulo\\ Vetores em $\real^3$}\\ \vspace{9pt} Prof. José Antônio O. Freitas
+\end{center}
+
+\hrule
+
+\vspace{.6cm}
+
+\newpage
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+    {\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
+
+\end{document}
