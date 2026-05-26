@@ -11,7 +11,7 @@
 
 Da Geometria Plana, sabemos que todo plano $\pi$ contém pelo menos três pontos não colineares, digamos $A$, $B$ e $C$. Assim considere os vetores
 \begin{align*}
-    \vec{u} = \vec{AB}\\
+    \vec{u} = \vec{AB} \\
     \vec{v} = \vec{AC}.
 \end{align*}
 Como $\vec{u}$ e $\vec{v}$ não são paralelos, então podemos considerar o vetor $\vec{u}\times\vec{v}\ne \vec{0}$.
@@ -61,150 +61,150 @@ A equação \eqref{equacaoplano} é chamada de \textbf{equação cartesiana do p
     Encontre a equação do plano $\pi$ nas seguintes situações:
     \begin{enumerate}
         \item O vetor normal é $\vec{v} = (1,2,-1)$ e o ponto de $\pi$ é $P_0(1,3,-1)$.
-        \begin{solucao}
-            Se $P(x,y,z)$ pertence a $\pi$, então
-            \begin{align*}
-                &\inner{P_0P}{v} = 0\\
-                &\langle(x - 1, y - 3, z + 1), (1,2,-1)\rangle = 0\\
-                &x - 1 + (y - 3)2 + (z + 1)(-1) = 0.
-            \end{align*}
-            Logo a equação do plano procurado é
-            \[
-                x + 2y - z - 8 = 0.
-            \]
-        \end{solucao}
+              \begin{solucao}
+                  Se $P(x,y,z)$ pertence a $\pi$, então
+                  \begin{align*}
+                       & \inner{P_0P}{v} = 0                               \\
+                       & \langle(x - 1, y - 3, z + 1), (1,2,-1)\rangle = 0 \\
+                       & x - 1 + (y - 3)2 + (z + 1)(-1) = 0.
+                  \end{align*}
+                  Logo a equação do plano procurado é
+                  \[
+                      x + 2y - z - 8 = 0.
+                  \]
+              \end{solucao}
         \item O vetor normal é $\vec{v} = (0,0,1)$ e $P_0(0,0,0)$.
-        \begin{solucao}
-            Se $P(x,y,z)$ pertence a $\pi$, então
-            \begin{align*}
-                &\inner{P_0P}{v} = 0\\
-                &\langle(x, y, z), (0,0,1)\rangle = 0.
-            \end{align*}
-            Logo a equação do plano procurado é
-            \[
-                z = 0.
-            \]
-            \begin{figure}[!h]
-                \centering
-                \caption{Plano $z = 0$}
-                \includegraphics{plano-z=0.pdf}
-                % \definecolor{ffdxqq}{rgb}{1.0,0.8431372549019608,0.0}
-                % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-                %     \clip(-6.0,-5.0) rectangle (6.0,5.0);
-                %     \fill[color=ffdxqq,fill=ffdxqq,fill opacity=0.1] (-1.0991194968553457,1.751698113207547) -- (5.7463471698113215,1.751698113207547) -- (1.2187999999999999,-1.2666666666666666) -- (-5.626666666666666,-1.2666666666666666) -- cycle;
-                %     \draw [->] (0.0,0.0) -- (0.0,3.44);
-                %     \draw [->] (0.0,0.0) -- (4.14,0.0);
-                %     \draw [->] (0.0,0.0) -- (-3.0,-2.0);
-                %     \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (-4.3,0.0);
-                %     \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (0.0,-3.0);
-                %     \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (3.0,2.0);
-                %     \draw [color=ffdxqq] (-1.0991194968553457,1.751698113207547)-- (5.7463471698113215,1.751698113207547);
-                %     \draw [color=ffdxqq] (5.7463471698113215,1.751698113207547)-- (1.2187999999999999,-1.2666666666666666);
-                %     \draw [color=ffdxqq] (1.2187999999999999,-1.2666666666666666)-- (-5.626666666666666,-1.2666666666666666);
-                %     \draw [color=ffdxqq] (-5.626666666666666,-1.2666666666666666)-- (-1.0991194968553457,1.751698113207547);
-                %     \draw (-2.696314847942755,-1.7600000000000011) node[anchor=north west] {$x$};
-                %     \draw (3.759212880143111,-0.060000000000001136) node[anchor=north west] {$y$};
-                %     \draw (-0.4772271914132387,3.659999999999999) node[anchor=north west] {$z$};
-                %     \draw (3.512647584973165,1.759999999999999) node[anchor=north west] {$z=0$};
-                % \end{tikzpicture}
-            \end{figure}
-            Agora, se $\vec{v} = (0,1,0)$ e $P_0(0,0,0)$, então a equação do plano será $y = 0$.
-            \begin{figure}[!h]
-                \centering
-                \caption{Plano $y = 0$}
-                \includegraphics{plano-y=0.pdf}
-                % \definecolor{zzttqq}{rgb}{0.6,0.2,0.0}
-                % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=1.3]
-                %     \clip(-4.3,-6.0) rectangle (4.0,6.0);
-                %     \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-2.36,0.38000000000000017) -- (2.3550000000000004,5.095000000000001) -- (2.3550000000000004,-0.6012666666666663) -- (-2.36,-5.3162666666666665) -- cycle;
-                %     \draw [->] (0.0,0.0) -- (0.0,4.0);
-                %     \draw [->] (0.0,0.0) -- (3.6,0.0);
-                %     \draw [->] (0.0,0.0) -- (-3.0,-3.0);
-                %     \draw [dash pattern=on 5pt off 5pt] (0.0,0.0)-- (-2.84,0.0);
-                %     \draw [dash pattern=on 5pt off 5pt] (0.0,0.0)-- (0.0,-4.82);
-                %     \draw [dash pattern=on 5pt off 5pt] (0.0,0.0)-- (3.0,3.0);
-                %     \draw [color=zzttqq] (-2.36,0.38000000000000017)-- (2.3550000000000004,5.095000000000001);
-                %     \draw [color=zzttqq] (2.3550000000000004,5.095000000000001)-- (2.3550000000000004,-0.6012666666666663);
-                %     \draw [color=zzttqq] (2.3550000000000004,-0.6012666666666663)-- (-2.36,-5.3162666666666665);
-                %     \draw [color=zzttqq] (-2.36,-5.3162666666666665)-- (-2.36,0.38000000000000017);
-                %     \draw (1.4000000000000001,4.219999999999999) node[anchor=north west] {$y = 0$};
-                %     \draw (-3.02,-2.9000000000000012) node[anchor=north west] {$x$};
-                %     \draw (3.42,-0.08000000000000114) node[anchor=north west] {$y$};
-                %     \draw (-0.6,4.199999999999999) node[anchor=north west] {$z$};
-                % \end{tikzpicture}
-            \end{figure}
-            Agora, se $\vec{v} = (1,0,0)$ e $P_0(0,0,0)$, então a equação do plano será $x = 0$.
-            \begin{figure}[!h]
-                \centering
-                \caption{Plano $x = 0$}
-                \includegraphics{plano-x=0.pdf}
-                % \definecolor{zzffqq}{rgb}{0.6,1.0,0.0}
-                % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=1.5]
-                %     \clip(-4.5,-4.0) rectangle (4.5,4.0);
-                %     \fill[color=zzffqq,fill=zzffqq,fill opacity=0.1] (-3.528888888888888,2.6497333333333333) -- (3.36,2.6497333333333333) -- (3.36,-2.66) -- (-3.528888888888888,-2.66) -- cycle;
-                %     \draw [->] (0.0,0.0) -- (0.0,3.34);
-                %     \draw [->] (0.0,0.0) -- (4.0,0.0);
-                %     \draw [->] (0.0,0.0) -- (-3.0,-3.0);
-                %     \draw [dash pattern=on 3pt off 3pt] (0.0,0.0)-- (-4.0,0.0);
-                %     \draw [dash pattern=on 3pt off 3pt] (0.0,0.0)-- (0.0,-3.0);
-                %     \draw [dash pattern=on 3pt off 3pt] (0.0,0.0)-- (2.0,2.0);
-                %     \draw [color=zzffqq] (-3.528888888888888,2.6497333333333333)-- (3.36,2.6497333333333333);
-                %     \draw [color=zzffqq] (3.36,2.6497333333333333)-- (3.36,-2.66);
-                %     \draw [color=zzffqq] (3.36,-2.66)-- (-3.528888888888888,-2.66);
-                %     \draw [color=zzffqq] (-3.528888888888888,-2.66)-- (-3.528888888888888,2.6497333333333333);
-                %     \draw (-2.94,-2.820000000000001) node[anchor=north west] {$x$};
-                %     \draw (3.7600000000000002,-0.04000000000000114) node[anchor=north west] {$y$};
-                %     \draw (-0.54,3.639999999999999) node[anchor=north west] {$z$};
-                %     \draw (2.36,-1.8400000000000012) node[anchor=north west] {$x = 0$};
-                %     \draw (0.0,0.25999999999999884) node[anchor=north west] {$x$};
-                % \end{tikzpicture}
-            \end{figure}
-        \end{solucao}
+              \begin{solucao}
+                  Se $P(x,y,z)$ pertence a $\pi$, então
+                  \begin{align*}
+                       & \inner{P_0P}{v} = 0                   \\
+                       & \langle(x, y, z), (0,0,1)\rangle = 0.
+                  \end{align*}
+                  Logo a equação do plano procurado é
+                  \[
+                      z = 0.
+                  \]
+                  \begin{figure}[!h]
+                      \centering
+                      \caption{Plano $z = 0$}
+                      \includegraphics{plano-z=0.pdf}
+                      % \definecolor{ffdxqq}{rgb}{1.0,0.8431372549019608,0.0}
+                      % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+                      %     \clip(-6.0,-5.0) rectangle (6.0,5.0);
+                      %     \fill[color=ffdxqq,fill=ffdxqq,fill opacity=0.1] (-1.0991194968553457,1.751698113207547) -- (5.7463471698113215,1.751698113207547) -- (1.2187999999999999,-1.2666666666666666) -- (-5.626666666666666,-1.2666666666666666) -- cycle;
+                      %     \draw [->] (0.0,0.0) -- (0.0,3.44);
+                      %     \draw [->] (0.0,0.0) -- (4.14,0.0);
+                      %     \draw [->] (0.0,0.0) -- (-3.0,-2.0);
+                      %     \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (-4.3,0.0);
+                      %     \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (0.0,-3.0);
+                      %     \draw [dash pattern=on 4pt off 4pt] (0.0,0.0)-- (3.0,2.0);
+                      %     \draw [color=ffdxqq] (-1.0991194968553457,1.751698113207547)-- (5.7463471698113215,1.751698113207547);
+                      %     \draw [color=ffdxqq] (5.7463471698113215,1.751698113207547)-- (1.2187999999999999,-1.2666666666666666);
+                      %     \draw [color=ffdxqq] (1.2187999999999999,-1.2666666666666666)-- (-5.626666666666666,-1.2666666666666666);
+                      %     \draw [color=ffdxqq] (-5.626666666666666,-1.2666666666666666)-- (-1.0991194968553457,1.751698113207547);
+                      %     \draw (-2.696314847942755,-1.7600000000000011) node[anchor=north west] {$x$};
+                      %     \draw (3.759212880143111,-0.060000000000001136) node[anchor=north west] {$y$};
+                      %     \draw (-0.4772271914132387,3.659999999999999) node[anchor=north west] {$z$};
+                      %     \draw (3.512647584973165,1.759999999999999) node[anchor=north west] {$z=0$};
+                      % \end{tikzpicture}
+                  \end{figure}
+                  Agora, se $\vec{v} = (0,1,0)$ e $P_0(0,0,0)$, então a equação do plano será $y = 0$.
+                  \begin{figure}[!h]
+                      \centering
+                      \caption{Plano $y = 0$}
+                      \includegraphics{plano-y=0.pdf}
+                      % \definecolor{zzttqq}{rgb}{0.6,0.2,0.0}
+                      % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=1.3]
+                      %     \clip(-4.3,-6.0) rectangle (4.0,6.0);
+                      %     \fill[color=zzttqq,fill=zzttqq,fill opacity=0.1] (-2.36,0.38000000000000017) -- (2.3550000000000004,5.095000000000001) -- (2.3550000000000004,-0.6012666666666663) -- (-2.36,-5.3162666666666665) -- cycle;
+                      %     \draw [->] (0.0,0.0) -- (0.0,4.0);
+                      %     \draw [->] (0.0,0.0) -- (3.6,0.0);
+                      %     \draw [->] (0.0,0.0) -- (-3.0,-3.0);
+                      %     \draw [dash pattern=on 5pt off 5pt] (0.0,0.0)-- (-2.84,0.0);
+                      %     \draw [dash pattern=on 5pt off 5pt] (0.0,0.0)-- (0.0,-4.82);
+                      %     \draw [dash pattern=on 5pt off 5pt] (0.0,0.0)-- (3.0,3.0);
+                      %     \draw [color=zzttqq] (-2.36,0.38000000000000017)-- (2.3550000000000004,5.095000000000001);
+                      %     \draw [color=zzttqq] (2.3550000000000004,5.095000000000001)-- (2.3550000000000004,-0.6012666666666663);
+                      %     \draw [color=zzttqq] (2.3550000000000004,-0.6012666666666663)-- (-2.36,-5.3162666666666665);
+                      %     \draw [color=zzttqq] (-2.36,-5.3162666666666665)-- (-2.36,0.38000000000000017);
+                      %     \draw (1.4000000000000001,4.219999999999999) node[anchor=north west] {$y = 0$};
+                      %     \draw (-3.02,-2.9000000000000012) node[anchor=north west] {$x$};
+                      %     \draw (3.42,-0.08000000000000114) node[anchor=north west] {$y$};
+                      %     \draw (-0.6,4.199999999999999) node[anchor=north west] {$z$};
+                      % \end{tikzpicture}
+                  \end{figure}
+                  Agora, se $\vec{v} = (1,0,0)$ e $P_0(0,0,0)$, então a equação do plano será $x = 0$.
+                  \begin{figure}[!h]
+                      \centering
+                      \caption{Plano $x = 0$}
+                      \includegraphics{plano-x=0.pdf}
+                      % \definecolor{zzffqq}{rgb}{0.6,1.0,0.0}
+                      % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm,scale=1.5]
+                      %     \clip(-4.5,-4.0) rectangle (4.5,4.0);
+                      %     \fill[color=zzffqq,fill=zzffqq,fill opacity=0.1] (-3.528888888888888,2.6497333333333333) -- (3.36,2.6497333333333333) -- (3.36,-2.66) -- (-3.528888888888888,-2.66) -- cycle;
+                      %     \draw [->] (0.0,0.0) -- (0.0,3.34);
+                      %     \draw [->] (0.0,0.0) -- (4.0,0.0);
+                      %     \draw [->] (0.0,0.0) -- (-3.0,-3.0);
+                      %     \draw [dash pattern=on 3pt off 3pt] (0.0,0.0)-- (-4.0,0.0);
+                      %     \draw [dash pattern=on 3pt off 3pt] (0.0,0.0)-- (0.0,-3.0);
+                      %     \draw [dash pattern=on 3pt off 3pt] (0.0,0.0)-- (2.0,2.0);
+                      %     \draw [color=zzffqq] (-3.528888888888888,2.6497333333333333)-- (3.36,2.6497333333333333);
+                      %     \draw [color=zzffqq] (3.36,2.6497333333333333)-- (3.36,-2.66);
+                      %     \draw [color=zzffqq] (3.36,-2.66)-- (-3.528888888888888,-2.66);
+                      %     \draw [color=zzffqq] (-3.528888888888888,-2.66)-- (-3.528888888888888,2.6497333333333333);
+                      %     \draw (-2.94,-2.820000000000001) node[anchor=north west] {$x$};
+                      %     \draw (3.7600000000000002,-0.04000000000000114) node[anchor=north west] {$y$};
+                      %     \draw (-0.54,3.639999999999999) node[anchor=north west] {$z$};
+                      %     \draw (2.36,-1.8400000000000012) node[anchor=north west] {$x = 0$};
+                      %     \draw (0.0,0.25999999999999884) node[anchor=north west] {$x$};
+                      % \end{tikzpicture}
+                  \end{figure}
+              \end{solucao}
         \item Passando pelos pontos $A(3,1,-2)$, $B(5,2,1)$ e $C(2,0,2)$.
-        \begin{solucao}
-            Sejam
-            \begin{align*}
-                \vec{u} = \vec{AB} = (2,1,3)\\
-                \vec{v} = \vec{AC} = (-1,-1,4).
-            \end{align*}
-            Um vetor normal ao plano é dado por $\vec{w} = \vec{u}\times\vec{v}$. Assim
-            \[
-                \vec{w} = \det \begin{bmatrix}
-                    \vec{i} & \vec{j} & \vec{k}\\
-                    2 & 1 & 3\\
-                    -1 & -1 & 4
-                \end{bmatrix} = 4\vec{i} - 3\vec{j} - 2\vec{k} + \vec{k} + 3\vec{i} - 8\vec{j}.
-            \]
-            Assim $\vec{w} = (7,-11,-1)$ e portanto a equação do plano é
-            \[
-                7x - 11y - z - 12 = 0.
-            \]
-        \end{solucao}
+              \begin{solucao}
+                  Sejam
+                  \begin{align*}
+                      \vec{u} = \vec{AB} = (2,1,3) \\
+                      \vec{v} = \vec{AC} = (-1,-1,4).
+                  \end{align*}
+                  Um vetor normal ao plano é dado por $\vec{w} = \vec{u}\times\vec{v}$. Assim
+                  \[
+                      \vec{w} = \det \begin{bmatrix}
+                          \vec{i} & \vec{j} & \vec{k} \\
+                          2       & 1       & 3       \\
+                          -1      & -1      & 4
+                      \end{bmatrix} = 4\vec{i} - 3\vec{j} - 2\vec{k} + \vec{k} + 3\vec{i} - 8\vec{j}.
+                  \]
+                  Assim $\vec{w} = (7,-11,-1)$ e portanto a equação do plano é
+                  \[
+                      7x - 11y - z - 12 = 0.
+                  \]
+              \end{solucao}
     \end{enumerate}
 \end{exemplos}
 
 Dada uma equação da forma
-    \[
-        ax + by + cz + d = 0,
-    \]
+\[
+    ax + by + cz + d = 0,
+\]
 onde $a$, $b$ e $c$ não são simultaneamente nulos, existe um plano $\pi$ representado por esta equação? A resposta é afirmativa. Suponha que $a \ne 0$. Tome $\vec{v} = (a,b,c) \ne 0$ e $P_0(-d/a,0,0)$. A equação do plano com vetor normal $\vec{v}$ e passando por $P_0$ é dada por
-    \begin{align*}
-        &\inner{P_0P}{v} = 0\\
-        &\langle\left(x + \dfrac{d}{a},y,z\right), (a,b,c)\rangle = 0\\
-        &ax + by + cz + d = 0.
-    \end{align*}
+\begin{align*}
+     & \inner{P_0P}{v} = 0                                          \\
+     & \langle\left(x + \dfrac{d}{a},y,z\right), (a,b,c)\rangle = 0 \\
+     & ax + by + cz + d = 0.
+\end{align*}
 Portanto qualquer equação da forma $ax + by + cz + d = 0$, com $a$, $b$ e $c$ não simultaneamente nulos define um plano.
 
 Sejam $\pi_1$ e $\pi_2$ dois planos dados por
-    \begin{align*}
-        \pi_1 : a_1x + b_1y + c_1z + d_1 = 0\\
-        \pi_2 : a_2x + b_2y + c_2z + d_2 = 0.
-    \end{align*}
+\begin{align*}
+    \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
+    \pi_2 : a_2x + b_2y + c_2z + d_2 = 0
+\end{align*}
 onde os vetores normais de $\pi_1$ e $\pi_2$ são, respectivamente,
-    \begin{align*}
-        \vec{v_1} = (a_1, b_1, c_1)\\
-        \vec{v_2} = (a_2, b_2, c_2).
-    \end{align*}
+\begin{align*}
+    \vec{v_1} = (a_1, b_1, c_1) \\
+    \vec{v_2} = (a_2, b_2, c_2).
+\end{align*}
 Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} se, e somente se, $\vec{v_1} \varparallel\vec{v_2}$. Para que $\pi_1$ e $\pi_2$ sejam iguais devemos ter $\vec{v_1}\varparallel\vec{v_2}$  e dados $P_1\in\pi_1$ e $P_2\in\pi_2$ o vetor $\vec{P_1P_2}$ deve ser tal que $\vec{P_1P_2}\perp\vec{v_1}$ ou $\vec{P_1P_2}\perp\vec{v_2}$.
 
 \begin{exemplo}
@@ -212,8 +212,8 @@ Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} se, e somente se, $\vec{v_1}
     \begin{center}
         \begin{tabular}{cc}
             $\pi_1 : 2x - y + 3z = 0$ &
-            $\pi_2 : x - y - 3 = 0$\\
-            $\pi_3 : y - 2x - 3z = 2$ & $\pi_4 : 2x - 2y = 6$\\
+            $\pi_2 : x - y - 3 = 0$                           \\
+            $\pi_3 : y - 2x - 3z = 2$ & $\pi_4 : 2x - 2y = 6$ \\
             $\pi_5 : x = 0$.
         \end{tabular}
     \end{center}
@@ -221,8 +221,8 @@ Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} se, e somente se, $\vec{v_1}
         Os vetores normais a cada plano são
         \begin{center}
             \begin{tabular}{cc}
-                $\vec{v_1} = (2, -1, 3)$ & $\vec{v_2} = (1,-1,0)$\\
-                $\vec{v_3} = (-2, 1, -3)$ & $\vec{v_2} = (2,-2,0)$\\
+                $\vec{v_1} = (2, -1, 3)$  & $\vec{v_2} = (1,-1,0)$ \\
+                $\vec{v_3} = (-2, 1, -3)$ & $\vec{v_2} = (2,-2,0)$ \\
                 $\vec{v_5} = (1, 0, 0)$.
             \end{tabular}
         \end{center}
@@ -252,18 +252,18 @@ Seja $\vec{v}$ um vetor e $A$ um ponto. Sabemos que a reta $r$ passando por $A$ 
 \end{equation}
 onde $t \in \real$ e $P$ é um ponto qualquer de $r$. Sendo $A$ um ponto em $\real^3$ e $\vec{v}$ um vetor de $\real^3$ temos
 \begin{align*}
-    A = (x_0, y_0, z_0)\\
+    A = (x_0, y_0, z_0) \\
     \vec{v} = (a, b, c).
 \end{align*}
-Daí um ponto $P(x, y, z)$ pertence \`a reta $r$ se, e somente se,
+Daí um ponto $P(x, y, z)$ pertence à reta $r$ se, e somente se,
 \[
     \vec{AP} = (x - x_0, y - y_0, z - z_0) = t(a, b, c).
 \]
-Logo $P(x, y, z)$ pertence \`a reta $r$, se e s\'o se, $P(x,y,z)$ satisfaz as equações
+Logo $P(x, y, z)$ pertence à reta $r$, se e só se, $P(x,y,z)$ satisfaz as equações
 \begin{equation}\label{equacoesparametricasretaespaco}
     \begin{cases}
-        x = x_0 + ta\\
-        y = y_0 + tb\\
+        x = x_0 + ta \\
+        y = y_0 + tb \\
         z = z_0 + tc
     \end{cases}; \quad t \in \real.
 \end{equation}
@@ -273,8 +273,8 @@ Tais equações são chamadas de \textbf{equações paramétricas} da reta $r$. 
     As equações paramétricas da reta $r$ passando por $P_0(-3,3/2,4)$ e paralela ao vetor $\vec{v} = (-6,1,4)$ são
     \[
         \begin{cases}
-            x = -3 - 6t\\
-            y = 3/2 + t\\
+            x = -3 - 6t \\
+            y = 3/2 + t \\
             z = 4 + 4t
         \end{cases},\quad t \in \real.
     \]
@@ -293,155 +293,155 @@ que são chamadas de \textbf{equações na forma simétrica} da reta $r$.\index{
 Considere duas retas $r$ e $s$ de equações
 \[
     r: \begin{cases}
-        x = x_0 + ta\\
-        y = y_0 + tb\\
+        x = x_0 + ta \\
+        y = y_0 + tb \\
         z = z_0 + tc
     \end{cases}; \quad s: \begin{cases}
-        x = x_1 + \alpha d\\
-        y = y_1 + \alpha e\\
+        x = x_1 + \alpha d \\
+        y = y_1 + \alpha e \\
         z = z_1 + \alpha f
     \end{cases}; t,\ \alpha \in \real.
 \]
 Os vetores diretores de $r$ e $s$ são $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$ respectivamente.
 \begin{enumerate}
-\item Se $\vec{u}\varparallel\vec{v}$, então $r$ e $s$ são paralelas ou coincidentes. Elas serão coincidentes se, e somente se, possuírem algum ponto em comum.\index{Retas!Paralelas}
-\begin{figure}[h]
-    \centering
-    \caption{Retas Paralelas}
-    \includegraphics{retas-paralelas-espaco.pdf}
-    % \definecolor{ffqqqq}{rgb}{1,0,0}
-    % \definecolor{qqqqff}{rgb}{0,0,1}
-    % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-    %     \clip(1,-4.5) rectangle (9.5,5.5);
-    %     \draw [->] (5,0) -- (5,4);
-    %     \draw [->] (5,0) -- (8,0);
-    %     \draw [->] (5,0) -- (2,-3);
-    %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (2,0);
-    %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (5,-3);
-    %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (7,2);
-    %     \draw [color=qqqqff] (1.99,-3.76)-- (5.88,4.64);
-    %     \draw (2.18,-3.2) node[anchor=north west] {$r$};
-    %     \draw (1.88,-2.06) node[anchor=north west] {$x$};
-    %     \draw (7.52,0.04) node[anchor=north west] {$y$};
-    %     \draw (4.58,4.14) node[anchor=north west] {$z$};
-    %     \draw (6.22,-2.04) node[anchor=north west] {$s$};
-    %     \draw [color=ffqqqq] (5.31,-3.81)-- (8.98,4.11);
-    % \end{tikzpicture}
-\end{figure}
-\item Se os vetores diretores não são paralelos, temos duas possibilidades. Considere os pontos $P_0(x_0,y_0,z_0) \in r$ e $P_1(x_1,y_1,z_1) \in s$.
-\begin{enumerate}
-\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle = 0$ então $r$ e $s$ são concorrentes.\index{Retas!Concorrentes}
-\begin{figure}[h]
-    \centering
-    \caption{Retas Concorrentes}
-    \includegraphics{retas-concorrentes-espaco.pdf}
-    % \definecolor{uququq}{rgb}{0.25,0.25,0.25}
-    % \definecolor{ffqqqq}{rgb}{1,0,0}
-    % \definecolor{qqqqff}{rgb}{0,0,1}
-    % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-    %     \clip(1.5,-4) rectangle (9.5,5);
-    %     \draw [->] (5,0) -- (5,4);
-    %     \draw [->] (5,0) -- (8,0);
-    %     \draw [->] (5,0) -- (2,-3);
-    %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (2,0);
-    %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (5,-3);
-    %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (7,2);
-    %     \draw [color=qqqqff] (1.99,-3.76)-- (5.88,4.64);
-    %     \draw (2.18,-3.2) node[anchor=north west] {$r$};
-    %     \draw (1.88,-2.06) node[anchor=north west] {$x$};
-    %     \draw (7.52,0.04) node[anchor=north west] {$y$};
-    %     \draw (4.58,4.14) node[anchor=north west] {$z$};
-    %     \draw (8.22,-0.84) node[anchor=north west] {$s$};
-    %     \draw [color=ffqqqq] (3.04,1.86)-- (9.22,-2.3);
-    %     \fill [color=uququq] (4.22,1.06) circle (2.0pt);
-    %     \draw (4.2,1.36) node {$P$};
-    % \end{tikzpicture}
-\end{figure}
-\item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão planos diferentes, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle \ne 0$ então $r$ e $s$ são chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
-\begin{figure}[h]
-   \centering
-   \caption{Retas Reversas}
-   \includegraphics{retas-reversas-espaco.pdf}
-   % \definecolor{ffqqqq}{rgb}{1,0,0}
-   %  \definecolor{qqqqff}{rgb}{0,0,1}
-   %  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-   %      \clip(1,-5) rectangle (8.5,6);
-   %      \draw [->] (5,0) -- (5,4);
-   %      \draw [->] (5,0) -- (8,0);
-   %      \draw [->] (5,0) -- (2,-3);
-   %      \draw [dash pattern=on 5pt off 5pt] (5,0)-- (2,0);
-   %      \draw [dash pattern=on 5pt off 5pt] (5,0)-- (5,-3);
-   %      \draw [dash pattern=on 5pt off 5pt] (5,0)-- (7,2);
-   %      \draw [color=qqqqff] (1.99,-3.76)-- (6.03,4.96);
-   %      \draw [color=ffqqqq] (6.78,4.04)-- (6.78,-3.28);
-   %      \draw (2.18,-3.2) node[anchor=north west] {$r$};
-   %      \draw (1.88,-2.06) node[anchor=north west] {$x$};
-   %      \draw (7.72,-0.2) node[anchor=north west] {$y$};
-   %      \draw (4.58,4.14) node[anchor=north west] {$z$};
-   %      \draw (6.94,-2.58) node[anchor=north west] {$s$};
-   %  \end{tikzpicture}
-\end{figure}
-\end{enumerate}
+    \item Se $\vec{u}\varparallel\vec{v}$, então $r$ e $s$ são paralelas ou coincidentes. Elas serão coincidentes se, e somente se, possuírem algum ponto em comum.\index{Retas!Paralelas}
+          \begin{figure}[h]
+              \centering
+              \caption{Retas Paralelas}
+              \includegraphics{retas-paralelas-espaco.pdf}
+              % \definecolor{ffqqqq}{rgb}{1,0,0}
+              % \definecolor{qqqqff}{rgb}{0,0,1}
+              % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+              %     \clip(1,-4.5) rectangle (9.5,5.5);
+              %     \draw [->] (5,0) -- (5,4);
+              %     \draw [->] (5,0) -- (8,0);
+              %     \draw [->] (5,0) -- (2,-3);
+              %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (2,0);
+              %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (5,-3);
+              %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (7,2);
+              %     \draw [color=qqqqff] (1.99,-3.76)-- (5.88,4.64);
+              %     \draw (2.18,-3.2) node[anchor=north west] {$r$};
+              %     \draw (1.88,-2.06) node[anchor=north west] {$x$};
+              %     \draw (7.52,0.04) node[anchor=north west] {$y$};
+              %     \draw (4.58,4.14) node[anchor=north west] {$z$};
+              %     \draw (6.22,-2.04) node[anchor=north west] {$s$};
+              %     \draw [color=ffqqqq] (5.31,-3.81)-- (8.98,4.11);
+              % \end{tikzpicture}
+          \end{figure}
+    \item Se os vetores diretores não são paralelos, temos duas possibilidades. Considere os pontos $P_0(x_0,y_0,z_0) \in r$ e $P_1(x_1,y_1,z_1) \in s$.
+          \begin{enumerate}
+              \item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle = 0$ então $r$ e $s$ são concorrentes.\index{Retas!Concorrentes}
+                    \begin{figure}[h]
+                        \centering
+                        \caption{Retas Concorrentes}
+                        \includegraphics{retas-concorrentes-espaco.pdf}
+                        % \definecolor{uququq}{rgb}{0.25,0.25,0.25}
+                        % \definecolor{ffqqqq}{rgb}{1,0,0}
+                        % \definecolor{qqqqff}{rgb}{0,0,1}
+                        % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+                        %     \clip(1.5,-4) rectangle (9.5,5);
+                        %     \draw [->] (5,0) -- (5,4);
+                        %     \draw [->] (5,0) -- (8,0);
+                        %     \draw [->] (5,0) -- (2,-3);
+                        %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (2,0);
+                        %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (5,-3);
+                        %     \draw [dash pattern=on 4pt off 4pt] (5,0)-- (7,2);
+                        %     \draw [color=qqqqff] (1.99,-3.76)-- (5.88,4.64);
+                        %     \draw (2.18,-3.2) node[anchor=north west] {$r$};
+                        %     \draw (1.88,-2.06) node[anchor=north west] {$x$};
+                        %     \draw (7.52,0.04) node[anchor=north west] {$y$};
+                        %     \draw (4.58,4.14) node[anchor=north west] {$z$};
+                        %     \draw (8.22,-0.84) node[anchor=north west] {$s$};
+                        %     \draw [color=ffqqqq] (3.04,1.86)-- (9.22,-2.3);
+                        %     \fill [color=uququq] (4.22,1.06) circle (2.0pt);
+                        %     \draw (4.2,1.36) node {$P$};
+                        % \end{tikzpicture}
+                    \end{figure}
+              \item Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão planos diferentes, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle \ne 0$ então $r$ e $s$ são chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
+                    \begin{figure}[h]
+                        \centering
+                        \caption{Retas Reversas}
+                        \includegraphics{retas-reversas-espaco.pdf}
+                        % \definecolor{ffqqqq}{rgb}{1,0,0}
+                        %  \definecolor{qqqqff}{rgb}{0,0,1}
+                        %  \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+                        %      \clip(1,-5) rectangle (8.5,6);
+                        %      \draw [->] (5,0) -- (5,4);
+                        %      \draw [->] (5,0) -- (8,0);
+                        %      \draw [->] (5,0) -- (2,-3);
+                        %      \draw [dash pattern=on 5pt off 5pt] (5,0)-- (2,0);
+                        %      \draw [dash pattern=on 5pt off 5pt] (5,0)-- (5,-3);
+                        %      \draw [dash pattern=on 5pt off 5pt] (5,0)-- (7,2);
+                        %      \draw [color=qqqqff] (1.99,-3.76)-- (6.03,4.96);
+                        %      \draw [color=ffqqqq] (6.78,4.04)-- (6.78,-3.28);
+                        %      \draw (2.18,-3.2) node[anchor=north west] {$r$};
+                        %      \draw (1.88,-2.06) node[anchor=north west] {$x$};
+                        %      \draw (7.72,-0.2) node[anchor=north west] {$y$};
+                        %      \draw (4.58,4.14) node[anchor=north west] {$z$};
+                        %      \draw (6.94,-2.58) node[anchor=north west] {$s$};
+                        %  \end{tikzpicture}
+                    \end{figure}
+          \end{enumerate}
 \end{enumerate}
 
 \begin{exemplos}
     Determine se os seguintes pares de retas são paralelas, concorrentes ou reversas:
     \begin{enumerate}
         \item $r: \dfrac{x - 2}{2} = y + 3 = \dfrac{z - 2}{3}$; $s:\dfrac{x}{4} = \dfrac{y+3}{2} = \dfrac{z-2}{6}$
-        \begin{solucao}
-            Como $\vec{u} = (2,1,3)$ e $\vec{v} = (4,2,6)$ são vetores diretores de $r$ e $s$ respectivamente, então $\vec{u}\varparallel\vec{v}$. Mas $P_0(0,-3,2)\in s$ e $P_0\notin r$, logo $r$ e $s$ são paralelas e distintas.
-        \end{solucao}
+              \begin{solucao}
+                  Como $\vec{u} = (2,1,3)$ e $\vec{v} = (4,2,6)$ são vetores diretores de $r$ e $s$ respectivamente, então $\vec{u}\varparallel\vec{v}$. Mas $P_0(0,-3,2)\in s$ e $P_0\notin r$, logo $r$ e $s$ são paralelas e distintas.
+              \end{solucao}
         \item
-        \[
-            r: \begin{cases}
-                x = 1 + 2t\\
-                y = 1 + 2t\\
-                z = 1 + t
-            \end{cases},\quad s: \begin{cases}
-                x = s\\
-                y = s\\
-                z = 0
-            \end{cases}
-        \]
-        \begin{solucao}
-            Como $\vec{u} = (2,2,1)$ e $\vec{v} = (1,1,0)$ são vetores diretores de $r$ e $s$ respectivamente, então $r$ e $s$ são concorrentes ou reversas. Igualando as equações de $r$ e $s$ obtemos
-            \begin{align*}
-                1 + 2t = s\\
-                1 + 2t = s\\
-                1 + t = 0
-            \end{align*}
-            donde $t = -1$ e $s = -1$. Portanto $r$ e $s$ são concorrentes e o ponto de interseção é $P(-1,-1,0)$.
-        \end{solucao}
+              \[
+                  r: \begin{cases}
+                      x = 1 + 2t \\
+                      y = 1 + 2t \\
+                      z = 1 + t
+                  \end{cases},\quad s: \begin{cases}
+                      x = s \\
+                      y = s \\
+                      z = 0
+                  \end{cases}
+              \]
+              \begin{solucao}
+                  Como $\vec{u} = (2,2,1)$ e $\vec{v} = (1,1,0)$ são vetores diretores de $r$ e $s$ respectivamente, então $r$ e $s$ são concorrentes ou reversas. Igualando as equações de $r$ e $s$ obtemos
+                  \begin{align*}
+                      1 + 2t = s \\
+                      1 + 2t = s \\
+                      1 + t = 0
+                  \end{align*}
+                  donde $t = -1$ e $s = -1$. Portanto $r$ e $s$ são concorrentes e o ponto de interseção é $P(-1,-1,0)$.
+              \end{solucao}
         \item
-        \[
-            r: \begin{cases}
-                x = 1 + 2t\\
-                y = 2 + t\\
-                z = -1 + 2t
-            \end{cases},\quad s: \begin{cases}
-                x = 2 + s\\
-                y = 1 + s\\
-                z = -1 + 2s
-            \end{cases}
-        \]
-        \begin{solucao}
-            Como $\vec{u} = (2,1,2)$ e $\vec{v} = (1,1,2)$ são vetores diretores de $r$ e $s$ respectivamente, então $r$ e $s$ são concorrentes ou reversas. Igualando as equações de $r$ e $s$ obtemos
-            \begin{equation}\label{exemploretasreversas}
-                \begin{cases}
-                    1 + 2t = 2 + s\\
-                    2 + t = 1 + s\\
-                    -1 + 2t = -1 + 2s
-                \end{cases}
-            \end{equation}
-            Da primeira e segunda equação obtemos o sistema
-            \[
-                \begin{cases}
-                    2t - s = 1\\
-                    t - s = -1
-                \end{cases}
-            \]
-            Cuja solução é $t = 2$ e $s = 3$. Substituindo esse valores na terceira equação de \eqref{exemploretasreversas} obtemos $3 \ne 5$. Portanto $r$ e $s$ são reversas.
-        \end{solucao}
+              \[
+                  r: \begin{cases}
+                      x = 1 + 2t \\
+                      y = 2 + t  \\
+                      z = -1 + 2t
+                  \end{cases},\quad s: \begin{cases}
+                      x = 2 + s \\
+                      y = 1 + s \\
+                      z = -1 + 2s
+                  \end{cases}
+              \]
+              \begin{solucao}
+                  Como $\vec{u} = (2,1,2)$ e $\vec{v} = (1,1,2)$ são vetores diretores de $r$ e $s$ respectivamente, então $r$ e $s$ são concorrentes ou reversas. Igualando as equações de $r$ e $s$ obtemos
+                  \begin{equation}\label{exemploretasreversas}
+                      \begin{cases}
+                          1 + 2t = 2 + s \\
+                          2 + t = 1 + s  \\
+                          -1 + 2t = -1 + 2s
+                      \end{cases}
+                  \end{equation}
+                  Da primeira e segunda equação obtemos o sistema
+                  \[
+                      \begin{cases}
+                          2t - s = 1 \\
+                          t - s = -1
+                      \end{cases}
+                  \]
+                  Cuja solução é $t = 2$ e $s = 3$. Substituindo esse valores na terceira equação de \eqref{exemploretasreversas} obtemos $3 \ne 5$. Portanto $r$ e $s$ são reversas.
+              \end{solucao}
     \end{enumerate}
 \end{exemplos}
 % subsection entre_retas (end)
@@ -450,15 +450,15 @@ Os vetores diretores de $r$ e $s$ são $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$
 \label{sub:entre_planos}
 Dados três planos $\pi_1$, $\pi_2$ e $\pi_3$ de equações
 \begin{align*}
-    \pi_1 : a_1x + b_1y + c_1z + d_1 = 0\\
-    \pi_2 : a_2x + b_2y + c_2z + d_2 = 0\\
+    \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
+    \pi_2 : a_2x + b_2y + c_2z + d_2 = 0 \\
     \pi_3 : a_3x + b_3y + c_3z + d_3 = 0.
 \end{align*}
-A interseção entre eles será constituída pelos pontos cujas coordenadas sejam as soluções do sistema forma pelas equações de $\pi_1$, $\pi_2$ e $\pi_3$ simultaneamente, ou seja, devem ser soluções do sistema
+A interseção entre eles será constituída pelos pontos cujas coordenadas sejam as soluções do sistema formado pelas equações de $\pi_1$, $\pi_2$ e $\pi_3$ simultaneamente, ou seja, devem ser soluções do sistema
 \[
     \begin{cases}
-        a_1x + b_1y + c_1z + d_1 = 0\\
-        a_2x + b_2y + c_2z + d_2 = 0\\
+        a_1x + b_1y + c_1z + d_1 = 0 \\
+        a_2x + b_2y + c_2z + d_2 = 0 \\
         a_3x + b_3y + c_3z + d_3 = 0.
     \end{cases}
 \]
@@ -565,52 +565,52 @@ A interseção entre eles será constituída pelos pontos cujas coordenadas seja
     Encontre a interseção entre os planos:
     \begin{enumerate}
         \item $\pi_1 : x = y$, $\pi_2 : 2x - z = 0$ e $\pi_3 : 3x + 2y + z + 3 = 0$
-        \begin{solucao}
-            A interseção será dada pela solução do sistema
-            \[
-                \begin{cases}
-                    x - y = 0\\
-                    2x - z = 0\\
-                    3x + 2y + z + 3 = 0.
-                \end{cases}
-            \]
-            Resolvendo tal sistema obtemos que $\pi_1\cap\pi_2\cap\pi_3 = \{(-3/7,-3/7,-6/7)\}$.
-        \end{solucao}
+              \begin{solucao}
+                  A interseção será dada pela solução do sistema
+                  \[
+                      \begin{cases}
+                          x - y = 0  \\
+                          2x - z = 0 \\
+                          3x + 2y + z + 3 = 0.
+                      \end{cases}
+                  \]
+                  Resolvendo tal sistema obtemos que $\pi_1\cap\pi_2\cap\pi_3 = \{(-3/7,-3/7,-6/7)\}$.
+              \end{solucao}
         \item $\pi_1 : x - 2y + 3z = 2$, $\pi_2 : 3x + y - 2z = 1$ e $\pi_3 : 5x - 3y + 4z = 4$
-        \begin{solucao}
-            A interseção será dada pela solução do sistema
-            \[
-                \begin{cases}
-                    x - 2y + 3z = 2\\
-                    3x + y - 2z = 1\\
-                    5x - 3y + 4z = 4
-                \end{cases}.
-            \]
-            Resolvendo tal sistema obtemos que $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$. No entanto $\pi_i \cap \pi_j$ é uma reta para $i \ne j$.
-        \end{solucao}
+              \begin{solucao}
+                  A interseção será dada pela solução do sistema
+                  \[
+                      \begin{cases}
+                          x - 2y + 3z = 2 \\
+                          3x + y - 2z = 1 \\
+                          5x - 3y + 4z = 4
+                      \end{cases}.
+                  \]
+                  Resolvendo tal sistema obtemos que $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$. No entanto $\pi_i \cap \pi_j$ é uma reta para $i \ne j$.
+              \end{solucao}
         \item $\pi_1 : 2x + y = 1$, $\pi_2 : x - y + z = 0$
-        \begin{solucao}
-            A interseção será dada pela solução do sistema
-            \[
-                \begin{cases}
-                    2x + y = 1\\
-                    x - y + z = 0.
-                \end{cases}
-            \]
-            Resolvendo tal sistema obtemos $z = 1 - 3x$ e $y = 1 - 2x$. Logo
-            \[
-                \pi_1\cap\pi_2 = \{(x,1 - 2x,1 - 3x) \mid x \in \real\}.
-            \]
-            Fazendo $x = t$ podemos escrever
-            \[
-                \begin{cases}
-                    x = t\\
-                    y = 1 - 2t\\
-                    z = 1 - 3t
-                \end{cases}; t \in \real
-            \]
-            que é a equação de uma reta passando pelo ponto $P_0(0,1,1)$ e com vetor diretor $\vec{v} = (1,-2,-3)$.
-        \end{solucao}
+              \begin{solucao}
+                  A interseção será dada pela solução do sistema
+                  \[
+                      \begin{cases}
+                          2x + y = 1 \\
+                          x - y + z = 0.
+                      \end{cases}
+                  \]
+                  Resolvendo tal sistema obtemos $z = 1 - 3x$ e $y = 1 - 2x$. Logo
+                  \[
+                      \pi_1\cap\pi_2 = \{(x,1 - 2x,1 - 3x) \mid x \in \real\}.
+                  \]
+                  Fazendo $x = t$ podemos escrever
+                  \[
+                      \begin{cases}
+                          x = t      \\
+                          y = 1 - 2t \\
+                          z = 1 - 3t
+                      \end{cases}; t \in \real
+                  \]
+                  que é a equação de uma reta passando pelo ponto $P_0(0,1,1)$ e com vetor diretor $\vec{v} = (1,-2,-3)$.
+              \end{solucao}
     \end{enumerate}
 \end{exemplos}
 
@@ -683,54 +683,53 @@ Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver
     Encontre a interseção entre a reta $r$ e o plano $\pi$ nos seguintes casos:
     \begin{enumerate}
         \item $r: x = t + 1$, $y = 1$, $z = 1$ e $\pi : 2x - y = 3$.
-        \begin{solucao}
-            Substituindo as equações da reta na do plano obtemos $t = 1$. Logo $r\cap\pi = \{(2,1,1)\}$.
-        \end{solucao}
+              \begin{solucao}
+                  Substituindo as equações da reta na do plano obtemos $t = 1$. Logo $r\cap\pi = \{(2,1,1)\}$.
+              \end{solucao}
         \item
-        \[
-            r: \begin{cases}
-                2x - y + z = 0\\
-                x + y = 1
-            \end{cases};
-        \]
-        $\pi : x - 2y + z = 5$.
-        \begin{solucao}
-            O sistema
-            \[
-                \begin{cases}
-                    2x - y + z = 0\\
-                    x + y = 1\\
-                    x - 2y + z = 5
-                \end{cases}
-            \]
-            não tem solução. Logo $r\cap\pi = \emptyset$.
-        \end{solucao}
+              \[
+                  r: \begin{cases}
+                      2x - y + z = 0 \\
+                      x + y = 1
+                  \end{cases};
+              \]
+              $\pi : x - 2y + z = 5$.
+              \begin{solucao}
+                  O sistema
+                  \[
+                      \begin{cases}
+                          2x - y + z = 0 \\
+                          x + y = 1      \\
+                          x - 2y + z = 5
+                      \end{cases}
+                  \]
+                  não tem solução. Logo $r\cap\pi = \emptyset$.
+              \end{solucao}
         \item
-        \[
-            r: \begin{cases}
-                2x - y + z = 0\\
-                x + y = 1
-            \end{cases};
-        \]
-        $\pi : x - y + 3z = -1$.
-        \begin{solucao}
-            O sistema
-            \[
-                \begin{cases}
-                    2x - y + z = 0\\
-                    x + y = 1\\
-                    x - y + 3z = -1
-                \end{cases}
-            \]
-            tem solução \'unica dada por $x = -3/7$ e $y = 10/7$ e $z = 2/7$. Logo $r\cap\pi = \{(-3/7, 10/7, 2/7)\}$.
-        \end{solucao}
+              \[
+                  r: \begin{cases}
+                      2x - y + z = 0 \\
+                      x + y = 1
+                  \end{cases};
+              \]
+              $\pi : x - y + 3z = -1$.
+              \begin{solucao}
+                  O sistema
+                  \[
+                      \begin{cases}
+                          2x - y + z = 0 \\
+                          x + y = 1      \\
+                          x - y + 3z = -1
+                      \end{cases}
+                  \]
+                  tem solução \'unica dada por $x = -3/7$ e $y = 10/7$ e $z = 2/7$. Logo $r\cap\pi = \{(-3/7, 10/7, 2/7)\}$.
+              \end{solucao}
     \end{enumerate}
 \end{exemplos}
 
 % subsection entre_retas_e_planos (end)
 
 % section intersecoes (end)
-
 
 \section{Distâncias} % (fold)
 \label{sec:distancias}
@@ -790,16 +789,16 @@ Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. E
 \begin{exemplos}
     \begin{enumerate}
         \item A distância entre o plano $\pi: 2x + y - z = 4$ e o ponto $P(1,1,1)$ será
-        \[
-            d(P,\pi) = \dfrac{|2 + 1 - 1 - 4|}{\sqrt{4 + 1 + 1}} = \dfrac{2}{\sqrt{6}}.
-        \]
+              \[
+                  d(P,\pi) = \dfrac{|2 + 1 - 1 - 4|}{\sqrt{4 + 1 + 1}} = \dfrac{2}{\sqrt{6}}.
+              \]
         \item Calcule a distância entre $\pi_1 : 2x - 3y + z - 2 = 0$ e $\pi_2 : 4x - 6y + 2z - 5 = 0$.
-        \begin{solucao}
-            Um vetor normal de $\pi_1$ e $\vec{u} = (2,-3,1)$ e de $\pi_2$ é $\vec{v} = (4,-6,2)$. Como $\vec{u}\varparallel\vec{v}$, então $\pi_1\varparallel\pi_2$ e assim a distância entre $\pi_1$ e $\pi_2$ é dada pela distância de um ponto de $\pi_1$ a $\pi_2$, ou o contrário. Tomando $P_1(1,0,0)\in\pi_1$ temos
-            \[
-                d(\pi_1,\pi_2) = d(P_1,\pi_2) = \dfrac{|4-5|}{\sqrt{4^2 + (-6)^2 + 2^2}} = \dfrac{1}{\sqrt{56}}.
-            \]
-        \end{solucao}
+              \begin{solucao}
+                  Um vetor normal de $\pi_1$ e $\vec{u} = (2,-3,1)$ e de $\pi_2$ é $\vec{v} = (4,-6,2)$. Como $\vec{u}\varparallel\vec{v}$, então $\pi_1\varparallel\pi_2$ e assim a distância entre $\pi_1$ e $\pi_2$ é dada pela distância de um ponto de $\pi_1$ a $\pi_2$, ou o contrário. Tomando $P_1(1,0,0)\in\pi_1$ temos
+                  \[
+                      d(\pi_1,\pi_2) = d(P_1,\pi_2) = \dfrac{|4-5|}{\sqrt{4^2 + (-6)^2 + 2^2}} = \dfrac{1}{\sqrt{56}}.
+                  \]
+              \end{solucao}
     \end{enumerate}
 \end{exemplos}
 
@@ -847,16 +846,16 @@ onde $P_1 \in \pi\cap r$.
     Determinar a distância do ponto $P(1,2,-1)$ \`a reta
     \[
         r: \begin{cases}
-            x = 1 + 2t\\
-            y = 5 - t\\
+            x = 1 + 2t \\
+            y = 5 - t  \\
             z = -2 + 3t.
         \end{cases}
     \]
     \begin{solucao}
         Podemos tomar o vetor $\vec{u} = (2,1,-3)$ como vetor normal ao plano $\pi$ que contém $P$. Daí
         \begin{align*}
-            \pi &: 2(x - 1) - (y - 2) + 3(z - 1) = 0\\
-            \pi &: 2x - y + 3z + 3 = 0.
+            \pi & : 2(x - 1) - (y - 2) + 3(z - 1) = 0 \\
+            \pi & : 2x - y + 3z + 3 = 0.
         \end{align*}
         A interseção de $\pi$ com $r$ é dada por
         \[
@@ -920,12 +919,12 @@ Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\
     Determine a distância entre as retas
     \[
         r: \begin{cases}
-            x = 2 + t\\
-            y = 1 - 3t\\
+            x = 2 + t  \\
+            y = 1 - 3t \\
             z = 1 + 2t
         \end{cases} \quad s: \begin{cases}
-            x = -5 + 4s\\
-            y = 6 - 5s\\
+            x = -5 + 4s \\
+            y = 6 - 5s  \\
             z = 4 + 3s.
         \end{cases}
     \]
@@ -955,7 +954,6 @@ Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\
         \[
             d(r,s) = = \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}} = \dfrac{|-7+25+21|}{\sqrt{1 + 5^2 + 7^2}} = \dfrac{39}{\sqrt{75}}.
         \]
-
 
     \end{solucao}
 \end{exemplo}
