@@ -28,12 +28,13 @@
 \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
 \begin{frame}
-    Da Geometria Plana, sabemos que todo plano $\pi$ contém pelo menos três pontos não colineares, digamos $A$, $B$ e $C$. Assim considere os vetores
+    Da Geometria Plana, \pause sabemos que todo plano $\pi$ \pause contém pelo menos três pontos não colineares, \pause digamos $A$, \pause $B$ e $C$. \pause À
+    partir desses pontos podemos construir os vetores:\pause
     \begin{align*}
         \vec{u} = \vec{AB} \\
         \vec{v} = \vec{AC}.
     \end{align*}
-    Como $\vec{u}$ e $\vec{v}$ não são paralelos, então podemos considerar o vetor $\vec{u}\times\vec{v}\ne \vec{0}$.
+    Como $\vec{u}$ e $\vec{v}$ não são paralelos, \pause então podemos considerar o vetor $\vec{u}\times\vec{v}\ne \vec{0}$.\pause
 \end{frame}
 
 \begin{frame}
@@ -46,58 +47,62 @@
 \end{frame}
 
 \begin{frame}
-    Assim, na Figura \ref{definicao-plano} vemos que um ponto $D$ pertence ao plano $\pi$ se, e somente se, $\vec{u}\times\vec{v} \perp \vec{AD}$. Logo um plano $\pi$ é um conjunto de vetores perpendiculares a um dado vetor.
+    Assim vemos que um ponto $D$ \pause pertence ao plano $\pi$ \pause se, e somente se, \pause $\vec{u}\times\vec{v} \perp \vec{AD}$. \pause
 
-    Fixe então um ponto $P_0$ em $\real^3$ e $\vec{v}\ne \vec{0}$ um vetor. Passando por $P_0$ existe um \'unico plano $\pi$ perpendicular ao vetor $\vec{v}$. Assim um ponto $P$ do espaço pertence ao plano $\pi$ se, e somente se, $\vec{P_0P} \perp \vec{v}$, isto é,
+    Logo um plano $\pi$ é um conjunto de vetores perpendiculares a um dado vetor.\pause
+
+    Fixe então um ponto $P_0$ em $\real^3$ \pause e $\vec{v}\ne \vec{0}$ um vetor. \pause Passando por $P_0$ \pause existe um único plano $\pi$ \pause perpendicular
+    ao vetor $\vec{v}$. \pause Assim um ponto $P$ do espaço pertence ao plano $\pi$ \pause se, e somente se, \pause $\vec{P_0P} \perp \vec{v}$\pause, isto
+    é,\pause
     \begin{equation}\label{equacaoplanovetorial}
         \inner{P_0P}{v} = 0.
     \end{equation}
 \end{frame}
 
 \begin{frame}
-    Sejam $\vec{v} = (a,b,c)$ um vetor, $P_0(x_0, y_0, z_0)$ e $P(x, y, z)$ pontos em $\real^3$. Logo $\vec{P_0P} = (x - x_0, y - y_0, z - z_0)$ e então da equação \eqref{equacaoplanovetorial} obtemos
-    \begin{equation}\label{equacaoplano}
-        (x - x_0)a + (y - y_0)b + (z - z_0)c = 0.
-    \end{equation}
+    \begin{definicao}
+        Sejam $\vec{v} = (a,b,c)$ um vetor e \pause $P_0(x_0, y_0, z_0)$ \pause um ponto em $\real^3$. \pause Da equação
+        \eqref{equacaoplanovetorial} \pause o ponto $P(x, y, z)$ em $\real^3$ \pause pertence ao plano definido por $P_0$ \pause e $\vec{v}$ \pause quando\pause
+        \begin{equation}\label{equacaoplano}
+            (x - x_0)a + (y - y_0)b + (z - z_0)c = 0.\pause
+        \end{equation}
 
-    A equação \eqref{equacaoplano} é chamada de \textbf{equação cartesiana do plano} $\pi$. O vetor $\vec{v}$ é chamado de \textbf{vetor normal} ao plano $\pi$.\index{Plano!Equação Paramétrica}\index{Plano!Vetor Normal}
+        A equação anterior é chamada de \textbf{equação cartesiana do plano} $\pi$. \pause O vetor $\vec{v}$ \pause é chamado de \textbf{vetor normal} \pause ao plano $\pi$.
+    \end{definicao}
 \end{frame}
 
 \begin{frame}
-    Dada uma equação da forma
+    Agora, dada uma equação da forma
     \[
         ax + by + cz + d = 0,
-    \]
-    onde $a$, $b$ e $c$ não são simultaneamente nulos, existe um plano $\pi$ representado por esta equação? A resposta é afirmativa. Suponha que $a \ne 0$. Tome $\vec{v} = (a,b,c) \ne 0$ e $P_0(-d/a,0,0)$. A equação do plano com vetor normal $\vec{v}$ e passando por $P_0$ é dada por
-    \begin{align*}
-         & \inner{P_0P}{v} = 0                                          \\
-         & \langle\left(x + \dfrac{d}{a},y,z\right), (a,b,c)\rangle = 0 \\
-         & ax + by + cz + d = 0.
-    \end{align*}
+    \]\pause
+    onde $a$, $b$ e $c$ \pause não são simultaneamente nulos, \pause existe um plano $\pi$ representado por esta equação?
 \end{frame}
 
 \begin{frame}
-    Portanto qualquer equação da forma $ax + by + cz + d = 0$, com $a$, $b$ e $c$ não simultaneamente nulos define um plano.
-
-    Sejam $\pi_1$ e $\pi_2$ dois planos dados por
-    \begin{align*}
-        \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
-        \pi_2 : a_2x + b_2y + c_2z + d_2 = 0.
-    \end{align*}
-    onde os vetores normais de $\pi_1$ e $\pi_2$ são, respectivamente,
-    \begin{align*}
-        \vec{v_1} = (a_1, b_1, c_1) \\
-        \vec{v_2} = (a_2, b_2, c_2).
-    \end{align*}
-    Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} se, e somente se, $\vec{v_1} \varparallel\vec{v_2}$. Para que $\pi_1$ e $\pi_2$ sejam iguais devemos ter $\vec{v_1}\varparallel\vec{v_2}$  e dados $P_1\in\pi_1$ e $P_2\in\pi_2$ o vetor $\vec{P_1P_2}$ deve ser tal que $\vec{P_1P_2}\perp\vec{v_1}$ ou $\vec{P_1P_2}\perp\vec{v_2}$.
+    \begin{definicao}
+        Sejam $\pi_1$ e $\pi_2$ \pause dois planos dados por\pause
+        \begin{align*}
+            \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
+            \pi_2 : a_2x + b_2y + c_2z + d_2 = 0
+        \end{align*}\pause
+        onde os vetores normais de $\pi_1$ e $\pi_2$ \pause são, respectivamente,\pause
+        \begin{align*}
+            \vec{v_1} = (a_1, b_1, c_1) \\
+            \vec{v_2} = (a_2, b_2, c_2).
+        \end{align*}\pause
+        Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} \pause se, e somente se, \pause $\vec{v_1} \varparallel\vec{v_2}$.
+    \end{definicao}
 \end{frame}
 
 \begin{frame}
-    Seja $\vec{v}$ um vetor e $A$ um ponto. Sabemos que a reta $r$ passando por $A$ e paralela ao vetor $\vec{v}$ tem equação
+    Seja $\vec{v}$ um vetor \pause e $A$ um ponto. \pause Sabemos que a reta $r$ \pause passando por $A$ \pause e com vetor diretor $\vec{v}$ \pause tem
+    equação\pause
     \begin{equation}
         \vec{AP} = t\vec{v}
-    \end{equation}
-    onde $t \in \real$ e $P$ é um ponto qualquer de $r$. Sendo $A$ um ponto em $\real^3$ e $\vec{v}$ um vetor de $\real^3$ temos
+    \end{equation}\pause
+    onde $t \in \real$ \pause e $P$ é um ponto qualquer de $r$. \pause Sendo $A$ um ponto em $\real^3$ \pause e $\vec{v}$ um vetor de $\real^3$ \pause
+    temos\pause
     \begin{align*}
         A = (x_0, y_0, z_0) \\
         \vec{v} = (a, b, c).
@@ -105,48 +110,49 @@
 \end{frame}
 
 \begin{frame}
-    Daí um ponto $P(x, y, z)$ pertence \`a reta $r$ se, e somente se,
+    Daí um ponto $P(x, y, z)$ \pause pertence à reta $r$ \pause se, e somente se,\pause
     \[
-        \vec{AP} = (x - x_0, y - y_0, z - z_0) = t(a, b, c).
-    \]
-    Logo $P(x, y, z)$ pertence \`a reta $r$, se e s\'o se, $P(x,y,z)$ satisfaz as equações
+        \vec{AP} = (x - x_0, y - y_0, z - z_0) \pause = t(a, b, c).
+    \]\pause
+    Logo $P(x, y, z)$ \pause pertence à reta $r$, \pause se e só se, \pause $P(x,y,z)$ satisfaz as equações\pause
     \begin{equation}\label{equacoesparametricasretaespaco}
         \begin{cases}
             x = x_0 + ta \\
             y = y_0 + tb \\
             z = z_0 + tc
         \end{cases}; \quad t \in \real.
-    \end{equation}
-    Tais equações são chamadas de \textbf{equações paramétricas} da reta $r$. O vetor $\vec{v}$ é chamado de \textbf{vetor diretor} de $r$.\index{Reta!Equações Paramétricas}\index{Reta!Vetor Diretor}
+    \end{equation}\pause
+    Tais equações são chamadas de \textbf{equações paramétricas} da reta $r$. \pause O vetor $\vec{v}$ é chamado de \textbf{vetor diretor} de $r$.
 \end{frame}
 
 \begin{frame}
-    De forma análoga ao casa do plano, se $\vec{v} = (a,b,c)$ é tal que $abc \ne 0$, então podemos reescrever \eqref{equacoesparametricasretaespaco} como
+    De forma análoga ao casa do plano, \pause se $\vec{v} = (a,b,c)$ \pause é tal que $abc \ne 0$, \pause então podemos reescrever
+    \eqref{equacoesparametricasretaespaco} como\pause
     \[
         \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b} = \dfrac{z - z_0}{c}
-    \]
-    que são chamadas de \textbf{equações na forma simétrica} da reta $r$.\index{Reta!Equações Simétricas}
+    \]\pause
+    que são chamadas de \textbf{equações na forma simétrica} da reta $r$.
 \end{frame}
 
 \begin{frame}
-    Considere duas retas $r$ e $s$ de equações
+    Considere duas retas $r$ e $s$ \pause de equações\pause
     \[
         r: \begin{cases}
             x = x_0 + ta \\
             y = y_0 + tb \\
             z = z_0 + tc
-        \end{cases}; \quad s: \begin{cases}
+        \end{cases}; \quad \pause s: \begin{cases}
             x = x_1 + \alpha d \\
             y = y_1 + \alpha e \\
             z = z_1 + \alpha f
         \end{cases}; t,\ \alpha \in \real.
-    \]
-    Os vetores diretores de $r$ e $s$ são $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$ respectivamente.
+    \]\pause
+    Os vetores diretores de $r$ e $s$ \pause são $\vec{u} = (a,b,c)$ \pause e $\vec{v} = (d,e,f)$, \pause respectivamente.
 \end{frame}
 
 \begin{frame}
     \begin{enumerate}
-        \item[i)] Se $\vec{u}\varparallel\vec{v}$, então $r$ e $s$ são paralelas ou coincidentes. Elas serão coincidentes se, e somente se, possuírem algum ponto em comum.\index{Retas!Paralelas}
+        \item[i)] Se $\vec{u}\varparallel\vec{v}$, \pause então $r$ e $s$ são paralelas \pause ou coincidentes.
     \end{enumerate}
 \end{frame}
 
@@ -160,9 +166,11 @@
 
 \begin{frame}
     \begin{enumerate}
-        \item[ii)] Se os vetores diretores não são paralelos, temos duas possibilidades. Considere os pontos $P_0(x_0,y_0,z_0) \in r$ e $P_1(x_1,y_1,z_1) \in s$.
+        \item[ii)] Se os vetores diretores não são paralelos, \pause temos duas possibilidades. \pause Considere os pontos $P_0(x_0,y_0,z_0) \in r$ \pause e
+              $P_1(x_1,y_1,z_1) \in s$.\pause
               \begin{enumerate}
-                  \item[1)] Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle = 0$ então $r$ e $s$ são concorrentes.
+                  \item[1)] Se $\vec{P_1P_2}$, \pause $\vec{u}$ \pause e $\vec{v}$ \pause estão no mesmo plano, \pause isto é, $\langle\vec{P_1P_2},
+                            \vec{u}\times\vec{v}\rangle = 0$ \pause então $r$ e $s$ são concorrentes.
               \end{enumerate}
     \end{enumerate}
 \end{frame}
@@ -177,7 +185,8 @@
 
 \begin{frame}
     \begin{enumerate}
-        \item[2)] Se $\vec{P_1P_2}$, $\vec{u}$ e $\vec{v}$ estão planos diferentes, isto é, $\langle\vec{P_1P_2}, \vec{u}\times\vec{v}\rangle \ne 0$ então $r$ e $s$ são chamadas de  \textbf{retas reversas}.\index{Retas! Reversas}
+        \item[2)] Se $\vec{P_1P_2}$, \pause $\vec{u}$ \pause e $\vec{v}$ \pause estão planos diferentes, \pause isto é, \pause $\langle\vec{P_1P_2},
+                  \vec{u}\times\vec{v}\rangle \ne 0$ \pause então $r$ e $s$ são chamadas de \textbf{retas reversas}.
     \end{enumerate}
 \end{frame}
 
@@ -191,7 +200,7 @@
 \end{frame}
 
 \begin{frame}
-    Dados três planos $\pi_1$, $\pi_2$ e $\pi_3$ de equações
+    Dados três planos $\pi_1$, \pause $\pi_2$ \pause e $\pi_3$ de equações\pause
     \begin{align*}
         \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
         \pi_2 : a_2x + b_2y + c_2z + d_2 = 0 \\
@@ -200,7 +209,8 @@
 \end{frame}
 
 \begin{frame}
-    A interseção entre eles será constituída pelos pontos cujas coordenadas sejam as soluções do sistema forma pelas equações de $\pi_1$, $\pi_2$ e $\pi_3$ simultaneamente, ou seja, devem ser soluções do sistema
+    A interseção entre eles \pause será constituída pelos pontos cujas coordenadas sejam as soluções do sistema \pause formado pelas equações de $\pi_1$, \pause
+    $\pi_2$ \pause e $\pi_3$ \pause simultaneamente, \pause ou seja, devem ser soluções do sistema
     \[
         \begin{cases}
             a_1x + b_1y + c_1z + d_1 = 0 \\
@@ -232,10 +242,6 @@
         \caption{$\pi_1\cap\pi_2\cap\pi_3 = \emptyset$}
         {\centering\includegraphics{tres-planos-paralelos.pdf}}
     \end{figure}
-\end{frame}
-
-\begin{frame}
-    Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equações de $r$ e de $\pi$. Se o sistema tiver uma \'unica solução $P_0(x_0, y_0, z_0)$, então $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado então $r\subset \pi$ e se o sistema for impossível então $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
 \end{frame}
 
 \begin{frame}
