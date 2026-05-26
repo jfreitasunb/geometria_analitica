@@ -93,20 +93,6 @@
 \end{frame}
 
 \begin{frame}
-    \begin{exemplo}
-        Dados os seguintes planos, determinar quais são iguais ou paralelos dois a dois:
-        \begin{center}
-            \begin{tabular}{cc}
-                $\pi_1 : 2x - y + 3z = 0$ &
-                $\pi_2 : x - y - 3 = 0$                           \\
-                $\pi_3 : y - 2x - 3z = 2$ & $\pi_4 : 2x - 2y = 6$ \\
-                $\pi_5 : x = 0$.
-            \end{tabular}
-        \end{center}
-    \end{exemplo}
-\end{frame}
-
-\begin{frame}
     Seja $\vec{v}$ um vetor e $A$ um ponto. Sabemos que a reta $r$ passando por $A$ e paralela ao vetor $\vec{v}$ tem equação
     \begin{equation}
         \vec{AP} = t\vec{v}
@@ -132,19 +118,6 @@
         \end{cases}; \quad t \in \real.
     \end{equation}
     Tais equações são chamadas de \textbf{equações paramétricas} da reta $r$. O vetor $\vec{v}$ é chamado de \textbf{vetor diretor} de $r$.\index{Reta!Equações Paramétricas}\index{Reta!Vetor Diretor}
-\end{frame}
-
-\begin{frame}
-    \begin{exemplo}
-        As equações paramétricas da reta $r$ passando por $P_0(-3,3/2,4)$ e paralela ao vetor $\vec{v} = (-6,1,4)$ são
-        \[
-            \begin{cases}
-                x = -3 - 6t \\
-                y = 3/2 + t \\
-                z = 4 + 4t
-            \end{cases},\quad t \in \real.
-        \]
-    \end{exemplo}
 \end{frame}
 
 \begin{frame}
@@ -216,38 +189,6 @@
         \includegraphics[scale=0.85]{retas-reversas-espaco.pdf}
     \end{figure}
 \end{frame}
-\begin{frame}
-    \begin{exemplos}
-        Determine se os seguintes pares de retas são paralelas, concorrentes ou reversas:
-        \begin{enumerate}[label=({\roman*})]
-            \item $r: \dfrac{x - 2}{2} = y + 3 = \dfrac{z - 2}{3}$; $s:\dfrac{x}{4} = \dfrac{y+3}{2} = \dfrac{z-2}{6}$
-            \item
-                  \[
-                      r: \begin{cases}
-                          x = 1 + 2t \\
-                          y = 1 + 2t \\
-                          z = 1 + t
-                      \end{cases},\quad s: \begin{cases}
-                          x = s \\
-                          y = s \\
-                          z = 0
-                      \end{cases}
-                  \]
-            \item
-                  \[
-                      r: \begin{cases}
-                          x = 1 + 2t \\
-                          y = 2 + t  \\
-                          z = -1 + 2t
-                      \end{cases},\quad s: \begin{cases}
-                          x = 2 + s \\
-                          y = 1 + s \\
-                          z = -1 + 2s
-                      \end{cases}
-                  \]
-        \end{enumerate}
-    \end{exemplos}
-\end{frame}
 
 \begin{frame}
     Dados três planos $\pi_1$, $\pi_2$ e $\pi_3$ de equações
@@ -294,17 +235,6 @@
 \end{frame}
 
 \begin{frame}
-    \begin{exemplos}
-        Encontre a interseção entre os planos:
-        \begin{enumerate}[label=({\roman*})]
-            \item $\pi_1 : x = y$, $\pi_2 : 2x - z = 0$ e $\pi_3 : 3x + 2y + z + 3 = 0$
-            \item $\pi_1 : x - 2y + 3z = 2$, $\pi_2 : 3x + y - 2z = 1$ e $\pi_3 : 5x - 3y + 4z = 4$
-            \item $\pi_1 : 2x + y = 1$, $\pi_2 : x - y + z = 0$
-        \end{enumerate}
-    \end{exemplos}
-\end{frame}
-
-\begin{frame}
     Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equações de $r$ e de $\pi$. Se o sistema tiver uma \'unica solução $P_0(x_0, y_0, z_0)$, então $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado então $r\subset \pi$ e se o sistema for impossível então $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
 \end{frame}
 
@@ -330,31 +260,6 @@
         \caption{$r \subset \pi$}
         \includegraphics{reta-contida-no-plano.pdf}
     \end{figure}
-\end{frame}
-
-\begin{frame}
-    \begin{exemplos}
-        Encontre a interseção entre a reta $r$ e o plano $\pi$ nos seguintes casos:
-        \begin{enumerate}[label=({\roman*})]
-            \item $r: x = t + 1$, $y = 1$, $z = 1$ e $\pi : 2x - y = 3$.
-            \item
-                  \[
-                      r: \begin{cases}
-                          2x - y + z = 0 \\
-                          x + y = 1
-                      \end{cases};
-                  \]
-                  $\pi : x - 2y + z = 5$.
-            \item
-                  \[
-                      r: \begin{cases}
-                          2x - y + z = 0 \\
-                          x + y = 1
-                      \end{cases};
-                  \]
-                  $\pi : x - y + 3z = -1$.
-        \end{enumerate}
-    \end{exemplos}
 \end{frame}
 
 \begin{frame}
@@ -429,18 +334,6 @@
 \end{frame}
 
 \begin{frame}
-    \begin{exemplos}
-        \begin{enumerate}[label=({\roman*})]
-            \item A distância entre o plano $\pi: 2x + y - z = 4$ e o ponto $P(1,1,1)$ será
-                  \[
-                      d(P,\pi) = \dfrac{|2 + 1 - 1 - 4|}{\sqrt{4 + 1 + 1}} = \dfrac{2}{\sqrt{6}}.
-                  \]
-            \item Calcule a distância entre $\pi_1 : 2x - 3y + z - 2 = 0$ e $\pi_2 : 4x - 6y + 2z - 5 = 0$.
-        \end{enumerate}
-    \end{exemplos}
-\end{frame}
-
-\begin{frame}
     Seja $P$ um ponto e $r$ uma reta.
     \begin{figure}[h]
         \centering
@@ -456,19 +349,6 @@
         d(P,r) = d(P,P_1)
     \]
     onde $P_1 \in \pi\cap r$.
-\end{frame}
-
-\begin{frame}
-    \begin{exemplo}
-        Determinar a distância do ponto $P(1,2,-1)$ \`a reta
-        \[
-            r: \begin{cases}
-                x = 1 + 2t \\
-                y = 5 - t  \\
-                z = -2 + 3t.
-            \end{cases}
-        \]
-    \end{exemplo}
 \end{frame}
 
 \begin{frame}
@@ -502,20 +382,4 @@
     Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano.
 \end{frame}
 
-\begin{frame}
-    \begin{exemplo}
-        Determine a distância entre as retas
-        \[
-            r: \begin{cases}
-                x = 2 + t  \\
-                y = 1 - 3t \\
-                z = 1 + 2t
-            \end{cases} \quad s: \begin{cases}
-                x = -5 + 4s \\
-                y = 6 - 5s  \\
-                z = 4 + 3s.
-            \end{cases}
-        \]
-    \end{exemplo}
-\end{frame}
 \end{document}
