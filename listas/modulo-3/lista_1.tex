@@ -1,6 +1,6 @@
 %!TEX program = xelatex
 %!TEX encoding = UTF-8
-\def\numeromodulo{3}
+\def\numeromodulo{2}
 \def\numerolista{1}
 
 \documentclass[12pt]{exam}
@@ -11,446 +11,412 @@
 \input{../configuracoes_listas/comandos_personalizados}
 
 \begin{document}
+
+    \Opensolutionfile{ans}[ans1]
+
     \begin{center}
-    {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
-        $\numerolista^a$ Lista de Exercícios -- Módulo \numeromodulo\\ Subanéis, ideais e homomorfismos}\\ \vspace{9pt} Prof. José Antônio O. Freitas
+        {\Large\bf \disciplina\ - Turma \turma\ -- \semestre$^{o}$/\ano} \\ \vspace{9pt} {\large\bf
+            $\numerolista^a$ Lista de Exercícios -- Módulo \numeromodulo\\ Circunferências e Cônicas}\\ \vspace{9pt} Prof. José Antônio O. Freitas
     \end{center}
+
     \hrule
 
     \vspace{.6cm}
 
-    \textbf{Observação: }\textit{Nos casos em que não forem especificadas as operações do anel, considere as operações usuais.}
-
-\vspace{.6cm}
-
-\questao{} Determinar quais dos seguintes subconjuntos de $\rac$ são subanéis:
-\begin{multicols}{2}
+Uma \textbf{esfera} de centro $(x_0,y_0,z_0)$ e raio $r > 0$ \'e o conjunto de pontos $(x,y,z)$ do espa\c{c}o que satisfaz a equa\c{c}\~ao
+\[
+(x - x_0)^2 + (y - y_0)^2 + (z - z_0)^2 = r^2.
+\]
+\begin{exercicio}
+    Determine o centro e o raio das seguintes esferas:
     \begin{enumerate}[label=({\alph*})]
-        \item $\z$
-        \item $B = \{x \in \rac \mid x \notin \z\}$
-        \item $C = \left\{\dfrac{a}{b} \in \rac \mid a \in \z,\ b \in \z,\ 2 |b \right\}$
-        \item $D = \left\{\dfrac{a}{2^n} \in \rac \mid a \in \z \mbox{ e } n \in \z \right\}$
+        \item $x^2 + y^2 + z^2 - 2x - 4y - 2z = 10$
+        \item $2x^2 + 2y^2 + 2z^2 - 2x + 6y = 6$
+        \item $x^2 + y^2 + z^2 = 3$
     \end{enumerate}
-\end{multicols}
+    \begin{solucao}
+        Complete quadrados.
+        \begin{enumerate}[label=({\alph*})]
+            \item $C(1,2,1)$, $r = 4$
+            \item $C(1/2,-3/2,0)$, $r = \sqrt{22}{4}$
+            \item $C(0,0,0)$, $r = \sqrt{3}$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-\vspace{.3cm}
+\begin{exercicio}
+    Determine uma equa\c{c}\~ao da esfera que tem por di\^ametro o segmento de extremos $A(8,0,3)$ e $B(-6,2,5)$.
+    \begin{solucao}
+        $(x - 1)^2 + (y - 1)^2 + (z - 4)^2 = 51$
+    \end{solucao}
+\end{exercicio}
 
-\questao{} No anel $(\z \times \z, \oplus, \otimes)$ onde as operações $\oplus$ e $\otimes$ são definidas por
-\begin{align*}
-    (a, b) \oplus (c, d) = (a + c, b + d)\\
-    (a ,b) \otimes (c, d) = (ac - bd, ad + bc).
-\end{align*}
-Quais dos seguintes conjuntos são subanéis?
-\begin{enumerate}[label=({\alph*})]
-    \item $A = \{(x, y) \in \z \times \z \mid x = 0\}$
-    \item $B = \{(x, y) \in \z \times \z \mid y = 0\}$
-    \item $C = \{(x, y) \in \z \times \z \mid x = y\}$
-    \item $D = \{(x, y) \in \z \times \z \mid x = 2k,\ k \in \z\}$
-    \item $E = \{(x, y) \in \z \times \z \mid y = 3k,\ k \in \z\}$
-    \item $F = \{(x, y) \in \z \times \z \mid x + y = 2k,\ k \in \z\}$
-\end{enumerate}
+\begin{exercicio}
+    Verifique que quaisquer que sejam os valores de $\theta$ e $\alpha$, $0 \le \theta \le 2\pi$ e $0 \le \alpha \le \pi$ o ponto
+    \[
+    (r\sin\alpha\cos\theta, r\sin\alpha\sin\theta, r\cos\alpha)
+    \]
+    pertence \`a esfera de raio $r$ e centro na origem.
+\end{exercicio}
 
-\vspace{.3cm}
+\begin{exercicio}
+    Escreva uma equa\c{c}\~ao do plano:
+    \begin{enumerate}[label=({\alph*})]
+        \item que cont\'em o ponto $(1,1,1)$ e \'e perpendicular ao vetor $(2,-1,8)$;
+        \item que cont\'em os pontos $A(2,-1,3)$, $B(0,2,1)$ e $C(1,3,2)$;
+        \item que cont\'em os pontos $A(0,0,2)$, $B(1,2,2)$ e $C(1,0,2)$;
+        \item contendo o ponto $(2,1,3)$ e a interse\c{c}\~ao do plano $2x - y - z = 2$ com o plano $xy$;
+        \item paralelo ao plano $yz$ e que cont\'em o ponto $(3,4,1)$;
+        \item cujas interse\c{c}\~oes com os eixos coordenados s\~ao os pontos $(3,0,0)$, $(0,-2,0)$ e $(0,0,-3)$.
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $2x - y + 8z = 9$
+            \item $x - z + 1 = 0$
+            \item $z = 2$
+            \item $6x - 3y - z = 6$
+            \item $x = 3$
+            \item $2x - 3y - 2z = 6$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-\questao{} No anel $(\rac, \star, \odot)$ onde as operações $\star$ e $\odot$ em $\rac$ definidas por
-\begin{align*}
-    x \star y = x + y - 6\\
-    x \odot y = x + y - \dfrac{xy}{6}.
-\end{align*}
-Quais dos seguintes subconjuntos são subanéis?
-\begin{enumerate}[label=({\alph*})]
-    \item $A = \z$
-    \item $B = \{2k \mid k \in \z\}$
-    \item $C = \{6k \mid k \in \z\}$
-    \item $D = \{3k \mid k \in \z\}$
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Quais dos conjuntos abaixo são subanéis de $M_2(\real)$?
-\begin{align*}
-    L_1 &= \left\{\begin{pmatrix}
-        a & 0\\
-        b & 0
-    \end{pmatrix} \mid a, b \in \real\right\}\\
-    L_2 &= \left\{\begin{pmatrix}
-        a & b\\
-        0 & c
-    \end{pmatrix} \mid a, b, c \in \real\right\}\\
-    L_3 &= \left\{\begin{pmatrix}
-        a & 0\\
-        0 & b
-    \end{pmatrix} \mid a, b \in \real\right\}\\
-    L_4 &= \left\{\begin{pmatrix}
-        0 & a\\
-        c & b
-    \end{pmatrix} \mid a, b, c \in \real\right\}\\
-    L_5 &= \left\{\begin{pmatrix}
-        0 & a\\
-        0 & b^2 + 1
-    \end{pmatrix} \mid a, b \in \real\right\}
-\end{align*}
-
-\vspace{.3cm}
-
-\questao{} Quais dos conjuntos abaixo são subanéis de $M_2(\z_2)$?
-\begin{align*}
-    L_1 &= \left\{\begin{pmatrix}
-        \overline{a} & \overline{0}\\
-        \overline{b} & \overline{0}
-    \end{pmatrix} \mid a, b \in \z_2\right\}\\
-    L_2 &= \left\{\begin{pmatrix}
-        \overline{a} & \overline{b}\\
-        \overline{0} & \overline{c}
-    \end{pmatrix} \mid a, b, c \in \z_2\right\}\\
-    L_3 &= \left\{\begin{pmatrix}
-        \overline{a} & \overline{0}\\
-        \overline{0} & \overline{b}
-    \end{pmatrix} \mid a, b \in \z_2\right\}\\
-    L_4 &= \left\{\begin{pmatrix}
-        \overline{0} & \overline{a}\\
-        \overline{c} & \overline{b}
-    \end{pmatrix} \mid a, b, c \in \z_2\right\}\\
-    L_5 &= \left\{\begin{pmatrix}
-        \overline{0} & \overline{a}\\
-        \overline{0} & \overline{b}^2 + \overline{1}
-    \end{pmatrix} \mid a, b \in \z_2\right\}
-\end{align*}
-
-\vspace{.3cm}
-
-\questao{} Determine todos os subanéis do anel $(\z_8, \oplus, \otimes)$.
-
-\vspace{.3cm}
-
-\questao{} Determine todos os subanéis do anel $(\z_{16}, \oplus, \otimes)$.
-
-\vspace{.3cm}
-
-\questao{} Mostre que a interseção de dois subanéis de um anel $A$ é ainda um subanel de $A$.
-
-\vspace{.3cm}
-
-\questao{} É verdade que a união de subanéis é um subanel?
-
-\vspace{.3cm}
-
-\questao{} Seja $(A, + , \cdot)$ um anel e $x \in A$ fixo. Mostre que o conjunto
-\[
-    N(x) = \{y \in A \mid xy = yx\}
-\]
-é um subanel de $A$.
+\begin{exercicio}
+    Escreva as equa\c{c}\~oes param\'etricas da reta:
+    \begin{enumerate}[label=({\alph*})]
+        \item contendo os pontos $A(2,1,3)$ e $B(1,3,7)$;
+        \item contendo os pontos $A(1,1,0)$ e $B(2,2,0)$;
+        \item que cont\'em o ponto $A(2,1,0)$ e \'e perpendicular ao plano $2x - y + z = 0$;
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $\begin{cases}
+                x = 2 - t\\
+                y = 1 + 2t\\
+                z = 3 + 4t
+            \end{cases}$
+            \item $\begin{cases}
+                x = 1 + t\\
+                y = 1 + t\\
+                z = 0
+            \end{cases}$
+            \item $\begin{cases}
+                x = 2 + 2t\\
+                y = 1 - t\\
+                z = t
+            \end{cases}$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
 \newpage
 
-\questao{} Verifique se $L = \{ a + b\sqrt{2} \mid a, b \in \rac\}$ é um subanel
-do anel $\mathbb{R}$.
+\begin{exercicio}
+    Deteremine a interse\c{c}\~ao entre os seguintes planos:
+    \begin{enumerate}[label=({\alph*})]
+        \item $\pi_1 : 2x + y - z = 0$ e $\pi_2 : x + y + z = 1$
+        \item $\pi_1 : x + 2y = 1$ e $\pi_2 : z = 2$
+        \item $\pi_1 : x + 2y - 3z = 0$ e $\pi_2 : x - 4y + 2z + 1 = 0$
+        \item $\pi_1 : 2x - y + 4z + 3 = 0$ e $\pi_2 : 4x - 2y + 8z = 0$
+        \item $\pi_1 : x - y = 0$ e $\pi_2 : x + z = 0$
+        \item $\pi_1 : 2x + y + z - 1 = 0$, $\pi_2 : x + 3y + z - 2 = 0$ e $\pi_3 : x + y + 4z - 3 = 0$
+        \item $\pi_1 : x - 2y + z = 0$, $\pi_2 : 2x - 4y + 2z = 1$ e $\pi_3 : x + y = 0$
+        \item $\pi_1 : x - 2y + 3z = 2$, $\pi_2 : 3x + y - 2z = 1$ e $\pi_3 : 5x -3y + 4z = 4$
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $\pi_1 \cap \pi_2 : \begin{cases}
+                x = -1 + 2t\\
+                y = 2 - 3t\\
+                z = t
+            \end{cases}$
+            \item $\pi_1 \cap \pi_2 : \begin{cases}
+                x = 1 + 2t\\
+                y = - t\\
+                z = 2
+            \end{cases}$
+            \item $\pi_1 \cap \pi_2 : \dfrac{x - 4}{-8} = \dfrac{y}{-5} = \dfrac{z}{-6}$
+            \item $\pi_1 \cap \pi_2 = \emptyset$
+            \item $\pi_1 \cap \pi_2 : \dfrac{x - 1}{-1} = \dfrac{y}{-1} = z$
+            \item $\pi_1 \cap \pi_2 \cap \pi_3 = \{(-1/17, 8/17, 11/17)\}$
+            \item $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$; $\pi_1$ e $\pi_2$ s\~ao paralelos distintos; $\pi_3 \cap \pi_1 : x = t,\ y = -t,\ z = -3t$ e $\pi_3 \cap \pi_2 : x = t\ y = -t,\ z = 1/2 - 3t$.
+            \item $\pi_1 \cap \pi_2 \cap \pi_3 = \emptyset$, mas $\pi_1 \cap \pi_2 : x = -4/7 + 43t/7,\ y = -5/7 + 11t/7,\ z = t $, $\pi_1 \cap \pi_3 : x = 2/7 + t/7,\ y = -6/7 + 11t/7,\ z = t$ e $\pi_2 \cap \pi_3 : x = 1/6 - 4t/21,\ y = 1/2 + 11t/7,\ z = t$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-\vspace{.3cm}
-
-\questao{} Seja $d \in \z$ e considere o subconjunto de $M_2(\z)$ dado por
-\[
-    M_2^d(\z) = \left\{\begin{pmatrix} a & db \\ b & a \end{pmatrix} \mid a, b \in \z\right\}.
-\]
-Mostre que $M_2^d(\z)$ é um subanel de $M_2(\z)$.
-
-\vspace{.3cm}
-
-\questao{} Seja $X$ um conjunto infinito. Sabemos que $(\mathcal{P}(X), \Delta, \cap)$ é um anel com unidade. Seja
-\[
-    R = \{A \in \mathcal{P}(X) \mid A \mbox{ é finito}\}.
-\]
-Prove as seguintes afirmações:
-\begin{enumerate}[label=({\alph*})]
-    \item $R$ é um subanel de $\mathcal{P}(X)$.
-
-    \item $R$ não possui unidade.
-
-    \item Para todo $A \in R$, $A \ne \emptyset$ existe $B \in R$, $B \ne \emptyset$, tal que $A \cap B = \emptyset$.
-
-    \item Para todo $A \in \mathcal{P}(X)$, $A \ne X$, $A \ne \emptyset$ existe $B \in \mathcal{P}(X)$, $B \ne \emptyset$, tal que $A \cap B = \emptyset$.
-\end{enumerate}
-
-\vspace{.6cm}
-
-\questao{} Verifique se são ideais:
-\begin{enumerate}[label=({\alph*})]
-    \item  $I = \{\overline{0}, \overline{2}, \overline{4}\}$ no anel $\z_6$;
-
-    \item $I = m\z \times n\z$ no anel $\z \times \z$, em que $m$, $n \in \z$;
-
-    \item $I = \{x \in \z \mid 25 \mbox{ divide } 35x\}$ no anel $\z$;
-
-    \item $I = \{x \in \z \mid x \mbox{ divide } 24\}$ no anel $\z$;
-
-    \item $I = \{x \in \z \mid 6 \mbox{ divide } x \mbox{ e } 24 \mbox{ divide } x^2\}$ no anel $\z$;
-
-    \item $I = \z$ no anel $(\rac, \oplus, \odot)$ em que a $a \oplus b = a + b - 1$ e $a \odot b = a + b - ab$, para todos $a$, $b \in \rac$;
-
-    \item $I = 2\z$ no anel $(\z, +, \cdot)$ em que a adição é a usual e $a \cdot b = 0$, para quaisquer $a$, $b \in \z$.
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Seja $(A, +, \cdot)$ um anel comutativo.
-\begin{enumerate}[label=({\alph*})]
-    \item Mostre que a interseção de quaisquer dois ideais de $A$ é sempre um conjunto não vazio.
-
-    \item Mostre que essa interseção é sempre um ideal.
-
-    \item A união de ideias é ainda um ideal?
-
-    \item Sejam $J_1$, $J_2 \subset A$ ideais tais que $J_1 \subset J_2$. Mostre que $J_1 \cup J_2$ é um ideal de $A$.
-
-    \item Sejam $I$ e $J$ ideais de $A$. Mostre que
+\begin{exercicio}
+    Determine o ponto de interse\c{c}\~ao da reta
     \[
-    I + J = \{x + y \mid x \in I, y \in J\}
+    r: \begin{cases}
+        x = 1 + t\\
+        y = -2\\
+        z = 4 + 2t
+    \end{cases}
     \]
-    é um ideal de $A$.
+    com cada um dos seguintes planos:
+    \begin{enumerate}[label=({\alph*})]
+        \item $x - 2y + 3z = 8$;
+        \item $2x + z = 5$;
+        \item $x = 2$.
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $(-2/7,-2,10/7)$
+            \item $(3/4,-2,7/2)$
+            \item $(2,-2,6)$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-    \item Seja $I$ um ideal de $A$. Considere o conjunto $r(I) = \{x \in A \mid xy = 0_A \mbox{ para todo } y \in I\}$. Mostre que
-    $r(I)$ é um ideal de $A$.
-\end{enumerate}
+\begin{exercicio}
+    Determine os valores de $\alpha$ e $\beta$ para que as retas
+    \[
+    r: \begin{cases}
+        x = 1 + \alpha t\\
+        y = 2 + \beta t\\
+        z = -1 + 2t
+    \end{cases},\quad
+    s: \begin{cases}
+        x = 2 + s\\
+        y = 1 + \beta s\\
+        z = -1 + 2s
+    \end{cases}
+    \]
+    sejam:
+    \begin{enumerate}[label=({\alph*})]
+        \item paralelas;
+        \item concorrentes;
+        \item reversas.
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $\alpha = 1$ e $\beta$ qualquer;
+            \item imposs{\'\i}vel;
+            \item $\alpha \ne 1$ e $\beta$ qualquer.
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-\vspace{.3cm}
+\begin{exercicio}
+    Estude a posi\c{c}\~ao relativa das retas $r$ e $s$.
+    \begin{enumerate}[label=({\alph*})]
+        \item $r: \begin{cases}
+            x = \lambda\\
+            y = - \lambda\\
+            z = 1 + 4\lambda
+        \end{cases} \quad s: \dfrac{x - 1}{3} = \dfrac{y - 5}{3} = \dfrac{2 + z}{5}$;
+        \item $r: \begin{cases}
+            x = 2 - 2\lambda\\
+            y = 4 + \lambda\\
+            z = -3\lambda
+        \end{cases}\quad s: \begin{cases}
+            x = 1 + t\\
+            y = -2t\\
+            z = 2t
+        \end{cases}$
+        \item $r : X = (1,-1,1) + \lambda(-2,1,-1)$, $s : \begin{cases}
+            y + z = 3\\
+            x + y - z = 6
+        \end{cases}$
+        \item $r : \dfrac{x + 1}{2} = \dfrac{y}{3} = \dfrac{z + 1}{2}$, $s : X = (0,0,0) + \lambda(1,2,0)$
+        \item $r : \dfrac{x + 3}{2} = \dfrac{y - 1}{4} = z$. $s : \begin{cases}
+            2x - y + 7 = 0\\
+            x + y - 6z = -2
+        \end{cases}$
+        \item $r : x + 3 = \dfrac{2y - 4}{4} = \dfrac{z - 1}{3}$, $s : X = (0,2,2) + \lambda(1,1,-1)$
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item Concorrentes no ponto $(-2,2,-7)$.
+            \item Concorrentes no ponto $(-2,6,-6)$.
+            \item Paralelas distintas.
+            \item Reversas.
+            \item Coincidentes.
+            \item Reversas.
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-\questao{} Sendo $A$ um anel, não necessariamente comutativo, dizemos que $I \subset A$, $I \ne \emptyset$ é um \textbf{ideal à esquerda} em $A$ se, e somente se:
-\begin{enumerate}[label=({\roman*})]
-    \item Para todos $x$, $y \in I$ temos $x - y \in I$;
+\begin{exercicio}
+    Calcule a dist\^ancia do ponto $P(1,-1,4)$ \`a reta $r : (x - 2)/4 = y/(-3) = (1 - z)/2$.
+    \begin{solucao}
+        $\sqrt{34}/7$
+    \end{solucao}
+\end{exercicio}
 
-    \item Para todo $\alpha \in A$ e todo $x \in I$ temos $\alpha x \in I$.
-\end{enumerate}
+\begin{exercicio}
+    Obtenha os pontos da interse\c{c}\~ao dos planos $\pi_1 : x + y = 2$ e $\pi_2 : x = y + z$ que distam $\sqrt{14/3}$ da reta $s : x = y = z + 1$.
+    \begin{solucao}
+        $(2,0,2)$ e $(0,2,-2)$.
+    \end{solucao}
+\end{exercicio}
 
-Verifique se são ideais à esquerda em $M_2(\real)$:
-\begin{enumerate}[label=({\alph*})]
-    \item $L_1 = \left\{\begin{pmatrix}
-        a & 0\\
-        0 & b
-    \end{pmatrix} \mid a, b \in \real\right\}$.
+\begin{exercicio}
+    Calcule a dist\^ancia do ponto $P$ ao plano $\pi$:
+    \begin{enumerate}[label=({\alph*})]
+        \item $P(0,0,-6)$, $\pi : x - 2y - 2z - 6 = 0$
+        \item $P(1,1,15/6)$, $\pi : 4x - 6y + 12z + 21 = 0$
+        \item $P(1,1,1)$, $\pi : 2x - y + 2z - 3 = 0$
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item 2
+            \item $7/2$
+            \item 0
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-    \item $L_2 = \left\{\begin{pmatrix}
-        a & b\\
-        0 & c
-    \end{pmatrix} \mid a, b, c \in \real\right\}$.
+\begin{exercicio}
+    Calcule a dist\^ancia entre as retas $r$ e $s$:
+    \begin{enumerate}[label=({\alph*})]
+        \item $r : (x + 4)/3 = y/4 = (z + 5)/(-2)$, $s : X = (21,-5,2) + \lambda(6,-4,-1)$
+        \item $r : x = (y - 3)/2 = z - 2$, $s : x - 3 = (y + 1)/2 = z - 2$
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item 13
+            \item $5\sqrt{30}/6$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-    \item $L_3 = \left\{\begin{pmatrix}
-        a & 0\\
-        b & 0
-    \end{pmatrix} \mid a, b \in \real\right\}$.
+\begin{exercicio}
+    Calcule a dist\^ancia entre os planos $\pi_1$ e $\pi_2$:
+    \begin{enumerate}[label=({\alph*})]
+        \item $\pi_1 : x + y + z = 0$, $\pi_2 : x + y + z + 2 = 0$
+        \item $\pi_1 : x + y + z = 0$, $\pi_2 : 2x + y + z + 2 = 0$
+        \item $\pi_1 : 2x - y + 2z + 9 = 0$, $\pi_2 : 4x - 2y + 4z - 21 = 0$
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $2/\sqrt{3}$
+            \item 0
+            \item $39/\sqrt{34}$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-    \item $L_4 = \left\{\begin{pmatrix}
-        a & b\\
-        0 & 0
-    \end{pmatrix} \mid a, b \in \real\right\}$.
-\end{enumerate}
 
-\vspace{.3cm}
+\begin{exercicio}
+    Determine:
+    \begin{enumerate}[label=({\alph*})]
+        \item a dist\^ancia do ponto $(5,4,-7)$ \`a reta
+        \[
+        r: \begin{cases}
+            x = 1 + 5t\\
+            y = 2 - t\\
+            z = t;
+        \end{cases}
+        \]
+        \item a dist\^ancia do ponto $(2,3,5)$ a cada um dos eixos do sistema de coordenadas.
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $\dfrac{\sqrt{47034}}{27}$
+            \item dist\^ancia ao eixo $x$: $\sqrt{34}$, dist\^ancia ao eixo $y$: $\sqrt{29}$, dist\^ancia ao eixo $z$: $\sqrt{13}$.
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-\questao{}  Seja $(A, +, \cdot)$ um anel unitário. Mostre que o inverso multiplicativo de um elemento $x \in A$, se existir, é único.
+\begin{exercicio}
+    Dados os planos $\pi_1 : x - y + z + 1 = 0$ e $\pi_2 : x + y - z - 1 = 0$, determine o plano que cont\'em $\pi_1\cap\pi_2$ e \'e ortogonal ao vetor $\vec{u} = (-1,1,-1)$.
+    \begin{solucao}
+        $x - y + z + 1 = 0$
+    \end{solucao}
+\end{exercicio}
 
-\vspace{.3cm}
+\begin{exercicio}
+    Escreva a equa\c{c}\~ao do plano que cont\'em a reta
+    \[
+    r : \begin{cases}
+        x = 1 + 2t\\
+        y = -2 -3t\\
+        z = 2 + 2t
+    \end{cases}
+    \]
+    e \'e perpendicular ao plano $\alpha$ de equa\c{c}\~ao $3x + 2y - z = 5$.
+    \begin{solucao}
+        $x - 8y - 13z + 9 = 0$
+    \end{solucao}
+\end{exercicio}
 
-\questao{inicioreferencia}{} Verificar se a função $f : A \to B$ é ou não um homomorfismo do anel $A$ no anel $B$, nos seguintes casos:
-\begin{enumerate}[label=({\alph*})]
-    \item $A = \z$, $B = \z$ e $f(x) = x + 1$
+\begin{exercicio}
+    Dadas as retas reversas
+    \[
+    r : \begin{cases}
+        x = 2 - t\\
+        y = 1 + 3t\\
+        z = 5 + t
+    \end{cases} \quad s : \begin{cases}
+        x = \lambda\\
+        y = 4\lambda\\
+        z = 2 + 3\lambda
+    \end{cases}
+    \]
+    determine:
+    \begin{enumerate}[label=({\alph*})]
+        \item a dist\^ancia entre $r$ e $s$;
+        \item as equa\c{c}\~oes param\'etricas da perpendicular comum \`as retas $r$ e $s$.
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}[label=({\alph*})]
+            \item $7/\sqrt{90}$
+            \item $t : \begin{cases}
+                x = 109/90 + 5t\\
+                y = 436/90 + 4t\\
+                z = 507/90 - 7t
+            \end{cases}$
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-    \item $A = \z$, $B = \z$ e $f(x) = 2x$
 
-    \item $A = \z$, $B = \z \times \z$ e $f(x) = (x, 0)$
+Sejam $\pi_1$ e $\pi_2$ dois planos com vetores normais $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$, respectivamente. O \^angulo entre $\pi_1$ e $\pi_2$ \'e definido como sendo o menor \^angulo entre $\vec{u}$ e $\vec{v}$.
+\begin{exercicio}
+    Encontre o \^angulo entre o plano $2x - y + z = 0$ e o plano que passa pelo ponto $P(1,2,3)$ e \'e perpendicular ao vetor $\vec{i} - 2\vec{j} + \vec{k}$.
+    \begin{solucao}
+        $\theta = \arccos(5/6)$
+    \end{solucao}
+\end{exercicio}
 
-    \item $A = \z \times \z$, $B = \z$ e $f(x,y) = x$
+\begin{exercicio}
+    Seja $\pi_1$ o plano que passa pelos pontos $A(1,1,1)$, $B(1,0,1)$, $C(1,1,0)$ e $\pi_2$ o plano que passa pelos pontos $P(0,0,1)$ e $Q(0,0,0)$ e \'e paralelo ao vetor $\vec{i} + \vec{j}$. Ache o \^angulo entre $\pi_1$ e $\pi_2$.
+    \begin{solucao}
+        $\theta = \pi/4$
+    \end{solucao}
+\end{exercicio}
 
-    \item $A = \z \times \z$, $B = \z \times \z$ e $f(x,y) = (y,x)$
+\begin{exercicio}
+    Seja $r$ a reta $r : (x,y,z) = (1,0,1) + t(1,-1,0)$ e $\pi$ o plano $\pi : x + y + z = 0$.
+    \begin{enumerate}[label=({\alph*})]
+        \item Verifique que $r \varparallel \pi$.
+        \item Calcule a dist\^ancia de $r$ a $\pi$.
+        \item Existem retas contidas no plano $\pi$, que s\~ao reversas \`a reta $r$ e distam 2 desta?
+    \end{enumerate}
+    \begin{solucao}
+        \begin{enumerate}
+            \item[(b)] $d(r,\pi) = 2/\sqrt{3}$
+            \item[(c)] N\~ao
+        \end{enumerate}
+    \end{solucao}
+\end{exercicio}
 
-    \item $A = \z$, $B = \z_n$ e $f(x) = \overline{x}$
+\begin{exercicio}
+    Mostre que a dist\^ancia entre dois planos paralelos $\pi_1 : ax + by + cz + d_1 = 0$ e $\pi_2 : ax + by + cz + d_2 = 0$ \'e
+    \[
+    d(\pi_1,\pi_2) = \dfrac{|d_2 - d_1|}{\sqrt{a^2 + b^2 + c^2}}.
+    \]
+\end{exercicio}
 
-    \item $A = \complex$, $B = \complex$ e $f(a + bi) = a - bi$
-
-    \item $A = M_2(\real)$, $B = \real$ e $f\left(\begin{bmatrix}
-        x & y\\z & t
-    \end{bmatrix}\right) = x$
-
-    \item $A = M_2(\real)$, $B = \real$ e $f\left(\begin{bmatrix}
-        x & y\\z & t
-    \end{bmatrix}\right) = x + t$
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Seja $(\z\times\z, +, \cdot)$ um anel com as seguintes operações
-\begin{align*}
-    (a, b) + (c, d) &= (a + c, b + d)\\
-    (a, b)\cdot (c, d) &= (ac, 0)
-\end{align*}
-para todos $(a, b)$, $(c, d) \in \z\times\z$.
-Mostre que $ f : \z\times\z \to \z$ definida por $f(a, b) = a$ é um homomorfismo sobrejetor.
-
-\vspace{.3cm}
-
-\questao{} Seja
-\[
-    T_2(\z) = \left\{\begin{bmatrix}a & b\\ 0 & c\end{bmatrix} \mid a, b, c \in \z\right\}
-\]
-um anel. Defina $f : T_2(\z) \to \z$ por
-\[
-    f\left(\begin{bmatrix}a & b\\ 0 & c\end{bmatrix}\right) = a.
-\]
-Prove que $f$ é um homomorfismo de anéis.
-
-\vspace{.3cm}
-
-\questao{} Seja $(\z\times\z, +, \cdot)$ um anel com as seguintes operações
-\begin{align*}
-    (a, b) + (c, d) &= (a + c, b + d)\\
-    (a, b)\cdot (c, d) &= (ac, ad + bc)
-\end{align*}
-para todos $(a, b)$, $(c, d) \in \z\times\z$.
-Mostre que $ f : \z\times\z \to \z$ definida por $f(a, b) = a$ é um homomorfismo.
-
-\vspace{.3cm}
-
-\questao{} Seja $(\z\times\z, +, \cdot)$ um anel com as seguintes operações
-\begin{align*}
-    (a, b) + (c, d) &= (a + c, b + d)\\
-    (a, b)\cdot (c, d) &= (ac - bd, ad + bc)
-\end{align*}
-para todos $(a, b)$, $(c, d) \in \z\times\z$.
-Mostre que $ f : \z \to \z\times\z$ definida por $f(a) = (a, 0)$ é um homomorfismo.
-
-\vspace{.3cm}
-
-\questao{} Prove que $f : \rac \to M_3(\rac)$ dada por
-\[
-f(x) = \begin{pmatrix}
-    x & 0 & 0\\
-    0 & x & 0\\
-    0 & 0 & x
-\end{pmatrix}
-\]
-é um homomorfismo de anéis.
 
 \newpage
-
-\questao{fimreferencia} Verifique se as seguintes funções são homomorfismos de anéis:
-\begin{enumerate}[label=({\alph*})]
-    \item $f : \z\times\z \to \z\times\z$ dado por $f(x,y) = (0,y)$
-
-    \item $f : \z\times\z \to \z$ dado por $f(x,y) = y$
-
-    \item $f : \z\to \z\times\z$ dado por $f(x) = (2x,0)$
-
-    \item $f : \z\to \z_{12}\times\z_{12}$ dado por $f(x) = (\overline{2x},\overline{0})$
-
-    \item $f : \z\times\z \to \z\times\z$ dado por $f(x,y) = (-y,-x)$
-
-    \item $f : \z_6\times\z_6 \to \z_6\times\z_6$ dado por $f(x,y) = (\overline{5y},\overline{5x})$
-
-    \item $f : \z \to \z\times\z$ dado por $f(x) = (0,x)$
-
-    \item $f : \z \to \z_3\times\z_3$ dado por $f(x) = (\overline{0},\overline{x})$
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Determine o kernel dos homomorfismos dos \textbf{Exercícios de \ref{inicioreferencia} a \ref{fimreferencia}}.
-
-\vspace{.3cm}
-
-\questao{} Nos \textbf{Exercícios de \ref{inicioreferencia} a \ref{fimreferencia}} para as funções que forem homomorfismos determine se elas também são isomorfismos.
-
-\vspace{.3cm}
-
-\questao{} Seja $f : \complex \to M_2(\real)$ dada por
-\[
-    f(a + bi) = \begin{bmatrix}
-        a & -b\\
-        b & a
-    \end{bmatrix}.
-\]
-\begin{enumerate}[label=({\alph*})]
-    \item Mostre que $f$ é um homomorfismo de anéis.
-
-    \item Esse homomorfismo é injetor?
-
-    \item É sobrejetor?
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Seja $f : \z \to M_2(\z_3)$ dada por
-\[
-    f(a) = \begin{bmatrix}
-        \overline{a} & \overline{0}\\
-        \overline{0} & \overline{a}
-    \end{bmatrix}.
-\]
-\begin{enumerate}[label=({\alph*})]
-    \item Mostre que $f$ é um homomorfismo de anéis.
-
-    \item Esse homomorfismo é injetor?
-
-    \item É sobrejetor?
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Seja $f: A \to B$ um homomorfismo de anéis. Mostre que:
-\begin{enumerate}[label=({\alph*})]
-    \item Se $C$  é um subanel de $A$, então $f(C)$ é um subanel de $B$.
-
-    \item Se $D$ é um subanel de $B$, então $f^{-1}(D)$ é um subanel de $A$.
-
-    \item Se $I$ é um ideal de $A$ e $f$ é sobrejetora, então $f(I)$ é um ideal de $B$.
-
-    \item Se $J$ é um ideal de $B$, então $f^{-1}(J)$ é um ideal de $A$.
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Dê um exemplo de anéis $A$ e $B$ e um homomorfismo $f : A \to B$ tal que $f(1_A) \ne 1_B$.
-
-\vspace{.3cm}
-
-\questao{} Sejam os anéis $A = \{ a + b\sqrt{-2} \mid a,\ b \in \z\}$ e $B = M_2(\z_7)$.
-\begin{enumerate}[label=({\alph*})]
-    \item Mostre que $f : A \to B$ dada por
-    \[
-        f(a + b\sqrt{-2}) =
-        \begin{pmatrix}
-            \overline{a} & \overline{5}\overline{b}\\
-            \overline{b} & \overline{a}
-        \end{pmatrix}
-    \]
-    é um homomorfismo.
-
-    \item $f$ é um isomorfismo?
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} Considere o conjunto
-\[
-    M^\sigma(\z) = \{a_1I_2 + a_2\sigma \mid a_1, a_2 \in \z\}
-\]
-onde
-\[
-    I_2 = \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix}, \quad \sigma = \begin{pmatrix} 0 & 1\\ 1 & 0\end{pmatrix}.
-\]
-Este conjunto é um subanel de $M_2(\z)$? Caso afirmativo responda aos itens abaixo:
-\begin{enumerate}[label=({\alph*})]
-    \item Se $f : M^\sigma(\z) \to \z$ é dada por $f(a_1I_2 + a_2\sigma) = a_1 + a_2$, então $f$ é um homomorfismo de anéis? Caso afirmativo, determine $\ker(f)$.
-
-    \item Se $g : M^\sigma(\z) \to \z$ é dada por $g(a_1I_2 + a_2\sigma) = a_1 - a_2$, então $g$ é um homomorfismo de anéis? Caso afirmativo, determine $\ker(g)$.
-\end{enumerate}
-
-\vspace{.3cm}
-
-\questao{} É verdadeiro ou falso: $\z$ e $\z_{m}$ para $m > 1$ são anéis
-isomorfos.
-
-\vspace{.3cm}
-
-\questao{} Considere os seguintes anéis: $(\real, +, \cdot)$ e $(\real, \oplus, \odot)$, sendo $a \oplus b = a + b + 1$ e $a \odot b = a + b + ab$. Mostre que $f : \real \to \real$ dado por $f(x) = x + 1$, para todo $x \in \real$, é um isomorfismos de $(\real, \oplus, \odot)$ em $(\real, +, \cdot)$.
-
-\vspace{.3cm}
+\Closesolutionfile{ans}
+\hrule
+\begin{center}
+    {\large\bf RESPOSTAS}
+\end{center}
+\hrule
+\input{ans1}
 \end{document}
