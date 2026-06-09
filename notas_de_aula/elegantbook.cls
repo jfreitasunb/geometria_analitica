@@ -451,7 +451,7 @@
 	\newcommand{\historyname}{Histórico de versões}
 }{\relax}
 
-\graphicspath{{./figure/}{./figures/}{./image/}{./images/}{./graphics/}{./graphic/}{./pictures/}{./picture/}{./figuras-latex/}}
+\graphicspath{{./figure/}{./figures/}{./image/}{./images/}{./graphics/}{./graphic/}{./pictures/}{./picture/}{./figuras-latex/}{./geogebra/}}
 
 \RequirePackage{tikz} %% load tikz without tikz
 \usetikzlibrary{backgrounds,calc,shadows,positioning,fit}
