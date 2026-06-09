@@ -470,10 +470,10 @@ A interseção entre eles será constituída pelos pontos cujas coordenadas seja
     \end{cases}
 \]
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{$\pi_1\cap\pi_2\cap\pi_3 = \{P\}$}
-    \includegraphics[scale=0.4]{intersecao-tres-planos.png}
+    \includegraphics[scale=0.2]{intersecao-tres-planos.png}
     % \definecolor{qqwwzz}{rgb}{0,0.4,0.6}
     % \definecolor{ttffqq}{rgb}{0.2,1,0}
     % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
@@ -510,10 +510,10 @@ A interseção entre eles será constituída pelos pontos cujas coordenadas seja
     % \end{tikzpicture}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \caption{$\pi_1\cap\pi_2\cap\pi_3 = \emptyset$}
     \centering
-    \includegraphics[scale=0.2]{posicao_planos_tres_planos_dois_a_dois_retas.png}
+    \includegraphics[scale=0.2]{tres_planos_dois_a_dois_retas.png}
     % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
     % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
     %     \clip(0,-5) rectangle (12,2);
@@ -541,7 +541,7 @@ A interseção entre eles será constituída pelos pontos cujas coordenadas seja
     % \end{tikzpicture}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{$\pi_1\cap\pi_2\cap\pi_3 = \emptyset$}
     {\centering\includegraphics[scale=0.2]{tres-planos-paralelos.png}}
@@ -627,7 +627,7 @@ A interseção entre eles será constituída pelos pontos cujas coordenadas seja
 \label{sub:entre_retas_e_planos}
 
 Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equações de $r$ e de $\pi$. Se o sistema tiver uma \'unica solução $P_0(x_0, y_0, z_0)$, então $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado então $r\subset \pi$ e se o sistema for impossível então $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{$r\cap\pi = \{P_0\}$}
     \includegraphics[scale=0.2]{intersecao-reta-plano.png}
@@ -650,7 +650,7 @@ Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver
     % \end{tikzpicture}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{$r\cap\pi= \emptyset$}
     \includegraphics[scale=0.3]{intersecao-reta-plano-vazia.png}
@@ -668,10 +668,10 @@ Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver
     % \end{tikzpicture}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{$r \subset \pi$}
-    \includegraphics[scale=0.3]{reta-contida-no-plano.png}
+    \includegraphics[scale=0.2]{reta-contida-no-plano.png}
     % \definecolor{zzttqq}{rgb}{0.6,0.2,0}
     % \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
     %     \clip(4,-1.5) rectangle (14.6,3.5);
@@ -743,7 +743,7 @@ Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver
 \subsection{Entre ponto e plano} % (fold)
 \label{sub:entre_ponto_e_plano}
 Seja $P_1(x_1,y_1,z_1)$ um ponto e $\pi$ um plano de equação $ax + by + cz + d = 0$.
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Distância entre ponto e plano}
     \includegraphics[scale=0.3]{distancia-ponto-plano.png}
@@ -786,7 +786,7 @@ Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. E
     d(P_1,\pi) = \norm{\proj_{\vec{u}}\vec{P_0P_1}} = \dfrac{|\langle\vec{P_0P_1},\vec{u}\rangle|}{\norm{\vec{u}}}.
 \]
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Distância entre ponto e plano}
     \includegraphics[scale=0.3]{distancia-ponto-plano-vetores.png}
@@ -816,7 +816,7 @@ Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. E
 \label{sub:entre_um_ponto_e_uma_reta}
 
 Seja $P$ um ponto e $r$ uma reta.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{Distância entre ponto e reta}
     \includegraphics[scale=0.3]{distancia-ponto-reta.png}
@@ -884,7 +884,7 @@ Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a distância entre $r$ e $s$
 
 Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no caso em que as retas são concorrentes). Um plano é o que contém $r$ e é paralelo a $s$, que vamos chamar de $\pi_1$. O outro contém $s$ e é paralelo a $r$, que chamaremos de $\pi_2$.
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Distância entre retas reversas}
     \includegraphics[scale=0.3]{distancia-retas-reversas-alternativa.png}
