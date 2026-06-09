@@ -1,12 +1,11 @@
-%!TEX program = xelatex 
-\documentclass[preview]{standalone}%opcao draft remove os links
+%!TEX program = xelatex
+\documentclass[preview]{standalone}
 \usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
 \usepackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{subfigure}
 \usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
 \usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
-\usetkzobj{all}
 \usetikzlibrary{scopes}
 \usetikzlibrary{through}
 \usetikzlibrary{lindenmayersystems}
@@ -14,15 +13,25 @@
 \usetikzlibrary{arrows}
 \usetikzlibrary{intersections,positioning}
 
-
 \begin{document}
     \pagenumbering{gobble}
     \newrgbcolor{zzttqq}{0.6 0.2 0}
-    \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+
+    % ADICIONADO: 'opacity=1' no psset ativa a chave de transparência no xkeyval do PSTricks
+    \psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25,opacity=1}
+
     \begin{pspicture*}(1,-1.96)(12.08,5.79)
+
+        % PLANO 1 - Muito transparente (10% de cor) utilizando a propriedade 'opacity' correta
         \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](2,4)(3.52,4.72)(8.74,-0.54)(7.22,-1.26)
-        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](4.86,-1.61)(11.05,4.02)(10.05,4.54)(3.86,-1.09)
-        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.1](2.32,3.38)(1.42,2.7)(11.54,3.07)(10.78,3.47)
+
+        % PLANO 2 - Transparência média (30% de cor)
+        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.3](4.86,-1.61)(11.05,4.02)(10.05,4.54)(3.86,-1.09)
+
+        % PLANO 3 - Mais visível (60% de cor)
+        \pspolygon[linecolor=zzttqq,fillcolor=zzttqq,fillstyle=solid,opacity=0.6](2.32,3.38)(1.42,2.7)(11.54,3.07)(10.78,3.47)
+
+        % Linhas de contorno e interseções
         \psline[linecolor=zzttqq](2,4)(3.52,4.72)
         \psline[linecolor=zzttqq](3.52,4.72)(8.74,-0.54)
         \psline[linecolor=zzttqq](8.74,-0.54)(7.22,-1.26)
@@ -38,6 +47,7 @@
         \psline[linecolor=zzttqq](10.78,3.47)(2.32,3.38)
         \psline(4.82,3.41)(3.22,2.77)
         \psline(8.86,3.45)(9.95,3.01)
+
         \rput[tl](10.45,3.3){$\pi_1$}
         \rput[tl](9.83,4.3){$\pi_2$}
         \rput[tl](3.14,4.47){$\pi_3$}
