@@ -33,9 +33,8 @@
           ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.
       \end{equation}
 
-      O conjunto de pontos em $\real^3$ satisfazendo uma equação da forma \eqref{equacao_quadrica} é chamado de uma \textbf{quádrica}. Observe que pelo menos um dos números $a$, $b$, $c$, $d$, $e$ ou $f$ deve ser não nulo.\index{Quádricas}
+      O conjunto de pontos em $\real^3$ satisfazendo uma equação da forma \eqref{equacao_quadrica} é chamado de uma \textbf{quádrica} ou \textbf{superfície quádrica}. Pelo menos um dos números $a$, $b$, $c$, $d$, $e$ ou $f$ deve ser não nulo.\index{Quádricas}
 
-      Nosso principal objetivo será tentar simplificar a equação \eqref{equacao_quadrica} de modo que seja possível identificar que objeto tal equação representa.
     \end{frame}
 
     \begin{frame}
@@ -76,33 +75,6 @@
     \end{frame}
 
     \begin{frame}
-      Considere o plano $\pi: z = k$. Qual a interseção de $\pi$ com o elipsoide de equação \eqref{equacao_elipsoide}? A interseção é dada pelo sistema
-      \[
-          \begin{cases}
-              \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1\\
-              z = k,
-          \end{cases}
-      \]
-      isto é, pela equação
-      \begin{equation}\label{intersecao_elipsoide_planoz}
-          \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 - \dfrac{k^2}{c^2}.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Se $k^2 > c^2$, então a equação \eqref{intersecao_elipsoide_planoz} não admite solução pois $1 - k^2/c^2 < 0$. Assim seja $k^2 \le c^2$, isto é, $-c \le k \le c$. Se $k = c$, então a interseção é o ponto $(0,0,c)$ e se $k = -c$ é o ponto $(0,0,-c)$. Então seja $-c < k < c$ e denote $p = 1 - k^2/c^2$. Podemos reescrever \eqref{intersecao_elipsoide_planoz} como
-      \begin{equation}\label{resultado_intersecao_elipsoide_planoz}
-          \dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Se $a = b$, então a equação \eqref{resultado_intersecao_elipsoide_planoz} é uma circunferência. Se $a \ne b$, então a equação \eqref{resultado_intersecao_elipsoide_planoz} descreve uma elipse.
-
-      De modo análogo, se tomarmos $\pi : x = k$ ou $\pi : y = k$, as interseções serão sempre ou conjunto vazio ou um ponto ou uma circunferência ou uma elipse.
-    \end{frame}
-
-    \begin{frame}
       \begin{definicao}
           Sejam $a$ e $b$ números reais positivos a quádrica descrita de equação
           \[
@@ -133,27 +105,6 @@
     \end{frame}
 
     \begin{frame}
-      A interseção do paraboloide
-      \[
-          z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2},
-      \]
-      com o plano $\pi: x = k$ é dada por
-      \[
-          z = \dfrac{k^2}{a^2} + \dfrac{y^2}{b^2},
-      \]
-      que é uma parábola. O mesmo ocorrerá com o plano $\pi: y = k$.
-    \end{frame}
-
-    \begin{frame}
-      Agora a interseção com $z = k$ é dada forma
-      \[
-          \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = k.
-      \]
-
-      Se $k < 0$, então a interseção é vazia. Se $k = 0$, a interseção é o ponto $(0,0,0)$. Se $k > 0$, precisamos analisar o que ocorre com $a$ e $b$: se $a \ne b$, então obtemos uma elipse. Se $a = b$, então a interseção é uma circunferência.
-    \end{frame}
-
-    \begin{frame}
       \begin{definicao}
           Sejam $a$ e $b$ números reais positivos. A quádrica descrita pela equação
           \[
@@ -161,45 +112,6 @@
           \]
           é chamada de um um \textbf{paraboloide hiperbólico}.\index{Quádricas!Parabolóide hiperbólico}
       \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      A interseção do paraboloide hiperbólico com o plano $\pi : z = k$ é dada por
-      \[
-          \begin{cases}
-              \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = k\\
-              z = k
-          \end{cases}.
-      \]
-
-      Se $k = 0$, então obtemos
-      \[
-          \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = \left(\dfrac{y}{b} - \dfrac{x}{a}\right)\left(\dfrac{y}{b} + \dfrac{x}{a}\right) = 0
-      \]
-      que trata-se de duas retas concorrentes na origem:
-      \[
-          r : \begin{cases}
-              \dfrac{y}{b} - \dfrac{x}{a} = 0\\
-              z = 0
-          \end{cases}, \quad s : \begin{cases}
-              \dfrac{y}{b} - \dfrac{x}{a} = 0\\
-              z = 0
-          \end{cases}.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Se $k \ne 0$, podemos escrever
-      \[
-          \dfrac{y^2}{kb^2} - \dfrac{x^2}{ka^2} = 1
-      \]
-      que é uma hipérbole.
-
-      A interseção com o plano $\pi : y = k$ é dada por
-      \[
-          z = \dfrac{k^2}{b^2} - \dfrac{x^2}{a^2}
-      \]
-      que é uma parábola. O mesmo ocorre com o plano $\pi : x = k$.
     \end{frame}
 
     \begin{frame}
@@ -221,59 +133,6 @@
     \end{frame}
 
     \begin{frame}
-      Para o caso do hiperboloide de uma folha a interseção com o plano $\pi : z = k$ é dada pelo sistema
-      \[
-          \begin{cases}
-              \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 + \dfrac{k^2}{c^2}\\
-              z = k.
-          \end{cases}
-      \]
-
-      Denotando $p = 1 + k^2/c^2 > 0$ podemos escrever
-      \begin{equation}\label{resultado_intersecao_hiperboloide_1_folha_planoz}
-          \dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Se $a = b$, então a equação \eqref{resultado_intersecao_hiperboloide_1_folha_planoz} descreve uma circunferência. Se $a \ne b$, então a equação \eqref{resultado_intersecao_hiperboloide_1_folha_planoz} descreve uma elipse.
-
-      Agora a interseção com o plano $\pi : y = k$ é descrita pela equação
-      \begin{equation}\label{intersecao_hiperboloide_1_folha_planoy}
-          \dfrac{x^2}{a^2} - \dfrac{z^2}{c^2} = 1 - \dfrac{k^2}{b^2}.
-      \end{equation}
-      Se $k^2 = b^2$, obtemos
-      \[
-          \dfrac{x^2}{a^2} - \dfrac{z^2}{c^2} = 0,
-      \]
-      isto é,
-      \[
-          \left(\dfrac{x}{a} - \dfrac{z}{c}\right)\left(\dfrac{x}{a} + \dfrac{z}{c}\right).
-      \]
-    \end{frame}
-
-    \begin{frame}
-      Logo a interseção de $\pi$ com o hiperboloide de uma folha é o par de retas concorrentes
-      \[
-          r : \begin{cases}
-              \dfrac{x}{a} - \dfrac{z}{c} = 0\\
-              y = k
-          \end{cases}, \quad s : \begin{cases}
-              \dfrac{x}{a} + \dfrac{z}{c} = 0\\
-              y = k
-          \end{cases}.
-      \]
-
-      Se $k^2 \ne b^2$, então fazendo $p = 1 - k^2/b^2$ podemos escrever a equação \eqref{intersecao_hiperboloide_1_folha_planoy} como
-      \[
-          \dfrac{x^2}{pa^2} - \dfrac{z^2}{pc^2} = 1
-      \]
-      obtendo-se uma hipérbole.
-
-      De modo análogo, obtemos as mesmas interseções se considerarmos o plano $\pi : x = k$.
-    \end{frame}
-
-    \begin{frame}
       \begin{definicao}
           Um \textbf{hiperboloide de duas folhas} é uma quádrica descrita pela equação
           \[
@@ -292,47 +151,6 @@
     \end{frame}
 
     \begin{frame}
-      A interseção do hiperboloide de duas folhas com a plano $\pi: y = k$ é dada por
-      \[
-          \dfrac{z^2}{c^2} - \dfrac{x^2}{a^2} = 1 +  \dfrac{k^2}{b^2}.
-      \]
-      Denotando $p = 1 + k^2/b^2$ podemos escreve a equação anterior como
-      \[
-          \dfrac{z^2}{pc^2} - \dfrac{x^2}{pa^2} = 1
-      \]
-      que representa uma hipérbole.
-    \end{frame}
-
-    \begin{frame}
-      A interseção com o plano $\pi: x = k$ é dada por
-      \[
-          \dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} = 1 +  \dfrac{k^2}{a^2}.
-      \]
-      e fazendo $p = 1 + k^2/a^2$ obtemos
-      \[
-          \dfrac{z^2}{pc^2} - \dfrac{y^2}{pb^2} = 1
-      \]
-      que também é uma hipérbole.
-    \end{frame}
-
-    \begin{frame}
-      Agora a interseção com o plano $\pi : z = k$ é dada por
-      \begin{equation}\label{intersecao_hiperboloide_2_folhas_planoy}
-          \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{k^2}{c^2} - 1.
-      \end{equation}
-
-      Se $k^2 < c^2$, então $k^2/c^2 - 1 < 0$ e daí a equação \eqref{intersecao_hiperboloide_2_folhas_planoy} não admite solução.
-
-      Se $k^2 = c^2$, então a interseção é ou o ponto $(0,k,0)$ ou o ponto $(0,-k,0)$.
-
-      Se $k^2 > c^2$, isto é, $k < -c$ ou $k > c$, então tomando $p = k^2/c^2 - 1 > 0$, podemos escrever \eqref{intersecao_hiperboloide_2_folhas_planoy} como
-      \[
-          \dfrac{x^2}{pa^2} + \dfrac{y^2}{pb^2} = 1.
-      \]
-      Assim se $a = b$, então obtemos uma circunferência e se $a \ne b$, então a interseção é uma elipse.
-    \end{frame}
-
-    \begin{frame}
       \begin{definicao}
           Um \textbf{cone elíptico} é um conjunto de pontos que satisfaz uma equação da forma
           \begin{equation}\label{cone_eliptico}
@@ -343,34 +161,11 @@
     \end{frame}
 
     \begin{frame}
-      \begin{figure}[!hp]
+      \begin{figure}
           \centering
           \caption{Cone elíptico: $z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
           \includegraphics[scale=0.5]{cone_eliptico.pdf}
       \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Seja $k \ne 0$. A interseção do cone elíptico de equação \eqref{cone_eliptico} com o plano $\pi : z = k$ é a elipse de equação
-      \[
-          \dfrac{x^2}{a^2k^2} + \dfrac{y^2}{b^2k^2} = 1.
-      \]
-      Já sua interseção com o plano $\pi : y = k$ é a hipérbole de equação
-      \[
-          \dfrac{z^2}{k^2/b^2} - \dfrac{x^2}{a^2k^2/b^2} = 1
-      \]
-      e com o plano $\pi : x = k$ é a hipérbole de equação
-      \[
-          \dfrac{z^2}{k^2/a^2} - \dfrac{y^2}{b^2k^2/a^2} = 1.
-      \]
-    \end{frame}
-
-    \begin{frame}
-      As equações
-      \[
-          x^2 = \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}\quad \mbox{e}\quad y^2 = \dfrac{x^2}{a^2} + \dfrac{z^2}{c^2}
-      \]
-      também representam cones elípticos.
     \end{frame}
 
     \begin{frame}
@@ -630,7 +425,7 @@
         \[
           ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0,
         \]
-        com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ não simultaneamente nulos. 
+        com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, sendo $a$, $b$, $c$, $d$, $e$ e $f$ não simultaneamente nulos.
       \end{teorema}
     \end{frame}
 
@@ -651,15 +446,5 @@
           \item Se exatamente dois entre $a'$, $b'$ e $c'$ forem nulos, então $\mathcal{S}$ é um cilindro parabólico, um par de planos paralelos ou um plano.
         \end{enumerate}
       \end{teorema}
-    \end{frame}
-
-    \begin{frame}
-      \begin{exemplos}
-          Identifique as seguintes quádricas:
-          \begin{enumerate}[label=({\roman*})]
-              \item $x^2 = 2yz$
-              \item $7x^2 + 10y^2 + 7z^2 - 4xy + 2xz - 4yz - 6 = 0$
-          \end{enumerate}
-      \end{exemplos}
     \end{frame}
 \end{document}
