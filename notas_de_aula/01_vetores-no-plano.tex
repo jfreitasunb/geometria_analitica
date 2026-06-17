@@ -3,22 +3,9 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
 %%Após executar pdflatex arquivo
 
-\chapter{Vetores} % (fold)
-\label{cha:vetores}
+\chapter{Vetores}
 
-% \section{Introdução} % (fold)
-% \label{sec:introducao}
-%
-% A Geometria Analítica é um método para tratar com problemas da Geometria. No caso do plano, tal método consiste em associar os pontos à pares ordenados de números reais, permitindo assim representar curvas do plano por equações em duas variáveis, de modo que a cada curva está associado uma equação, bem definida, do tipo $f(x,y) = 0$ e a cada equação deste tipo associa-se uma curva bem definida no plano. Assim, as propriedades geométricas das curvas podem ser determinadas à partir de informações algébricas e analíticas da equação $f(x, y) = 0$.
-%
-% Por exemplo, a equação $5x^2 - 4xy + 8y^2 - 36 = 0$ representa uma curva em $\real^2$. Nessa forma, não podemos dizer exatamente qual curva esta equação representa. Mas utilizando-se de ferramentas da Álgebra Linear, podemos reescrever tal equação como
-% \[
-%   \dfrac{x'^2}{9} + \dfrac{y'^2}{4} = 1
-% \]
-% que é uma equação de uma elipse.
-
-\section{Plano Cartesiano} % (fold)
-\label{sec:plano_cartesiano}
+\section{Plano Cartesiano}
 
 Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ como abaixo:
 \begin{figure}[!h]
@@ -65,8 +52,7 @@ Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ são iguais se, e somente se
 
 % section plano_cartesiano (end)
 
-\section{Vetores em $\real^2$} % (fold)
-\label{sec:vetores_plano}
+\section{Vetores em $\real^2$}
 
 Vetores surgiram com um meio de caracterizar grandezas físicas que precisam de mais do que sua magnitude para serem completamente determinadas. Por exemplo, grandezas com massa, área e comprimento são caracterizadas simplesmente por um número, tais grandezas são chamadas de \textit{grandezas escalares}. No entanto, grandezas com velocidade, força e impulso só são completamente determinadas se além da magnitude, conhecemos sua direção e sentido. Tais grandezas são chamadas de \textit{grandezas vetoriais}. Um exemplo de uma grandeza vetoriais seria uma força de 4 N atuando sobre um corpo, de modo ascendente na direção que uma um ângulo de $60\degree$ com a horizontal.
 
@@ -148,8 +134,7 @@ Um vetor $\vec{u}$ tal que
     \includegraphics{vetores-unitarios-plano-cartesiano.pdf}
 \end{figure}
 
-\subsection{Operações com Vetores} % (fold)
-\label{sub:operacoes_com_vetores}
+\subsection{Operações com Vetores}
 
 \begin{definicao}
   Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
@@ -347,8 +332,8 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
     Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma direção, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como queríamos.
 \end{prova}
 
-\subsection{Ângulo entre vetores e produto interno} % (fold)
-\label{sub:angulo_entre_vetores_e_produto_interno}
+\subsection{Ângulo entre vetores e produto interno}
+
 \begin{definicao}
   Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
 \end{definicao}
@@ -585,9 +570,8 @@ Acabamos de demonstrar o seguinte teorema:
   \end{enumerate}
 \end{prova}
 
-% subsection angulo_entre_vetores_e_produto_interno (end)
-\subsection{Projeção de Vetores} % (fold)
-\label{sub:projecao_de_vetores}
+\subsection{Projeção de Vetores}
+
 Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores não nulos. Suponha que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é tal que $0 < \theta < \pi/2$.
 \begin{figure}[!h]
   \centering

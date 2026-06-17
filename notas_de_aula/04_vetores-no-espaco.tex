@@ -3,8 +3,7 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
 %%Após executar pdflatex arquivo
 
-\chapter{Vetores no Espaço} % (fold)
-\label{cha:vetores_no_espaco}
+\chapter{Vetores no Espaço}
 
 Fixemos um ponto $O$ no espaço, que será denominado como \textbf{origem}. Tomemos três retas duas a duas perpendiculares entre si e concorrentes em $O$,
 que serão denominados \textbf{eixos coordenados} e serão denotados por $Ox$, $Oy$ e $Oz$.
@@ -254,8 +253,8 @@ Um vetor de norma 1 é chamado de \textbf{vetor unitário}. Dado um vetor não n
     \end{enumerate}
 \end{prova}
 
-\subsection{Ângulo entre vetores e produto interno no espaço} % (fold)
-\label{sub:angulo_entre_vetores_e_produto_interno_no_espaco}
+\subsection{Ângulo entre vetores e produto interno no espaço}
+
 \begin{definicao}
     Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
 \end{definicao}
@@ -390,13 +389,11 @@ De modo análogo ao caso para vetores no plano, temos:
     \end{enumerate}
 \end{proposicao}
 \begin{prova}
-    Análoga \`a prova da Proposição \ref{DesigualdadeTriangular}.
+    Análoga à prova da Proposição \ref{DesigualdadeTriangular}.
 \end{prova}
 
-% subsection angulo_entre_vetores_e_produto_interno_no_espaco (end)
+\subsection{Produto Vetorial}
 
-\subsection{Produto Vetorial} % (fold)
-\label{sub:produto_vetorial}
 Dados vetores $\vec{u} = (a_1,b_1,c_1)$ e $\vec{v} = (a_2,b_2,c_2)$, é possível encontrar um vetor $\vec{w} = (x,y,z)$ que seja simultaneamente ortogonal a $\vec{u}$ e a $\vec{v}$? Para isso devemos ter $\inner{u}{w} = 0$ e $\inner{v}{w} = 0$, ou seja,
 \[
     \begin{cases}
@@ -618,10 +615,8 @@ Portanto o vetor $\vec{u}\times\vec{v}$ é tal que seu módulo é numericamente 
         e como $\vec{u}\times\vec{v} = (10,0,10)$ temos $\mathcal{A} = 5\sqrt{2}$.
     \end{solucao}
 \end{exemplo}
-% subsection produto_vetorial (end)
 
-\subsection{Produto Misto} % (fold)
-\label{sub:produto_misto}
+\subsection{Produto Misto}
 
 Sejam $\vec{u}$ e $\vec{v}$ vetores de $\real^3$. Como $\vec{u}\times\vec{v}$ é um vetor de $\real^3$ podemos calcular seu produto interno com qualquer outro vetor $\vec{w}$ de $\real^3$. O número real
 \begin{equation}
