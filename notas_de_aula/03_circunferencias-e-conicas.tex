@@ -3,11 +3,10 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
 %%Após executar pdflatex arquivo
 
-\chapter{Circunferências e Cônicas} % (fold)
-\label{cha:circunferencias_e_conicas}
+\chapter{Circunferências e Cônicas}
 
-\section{Equações da Circunferência} % (fold)
-\label{sec:equacoes_da_circunferencias}
+\section{Equações da Circunferência}
+
 
 \begin{definicao}
     A circunferência é o conjunto dos pontos do plano que estão a uma mesma distância (denominada \textbf{raio}) de um dado ponto do plano (chamado \textbf{centro}).\index{Circunferência}
@@ -32,7 +31,7 @@ Agora, para os vetores $\vec{CP}$ e $\vec{CB}$, temos $\vec{CP} = (x - x_0, y - 
     \cos\alpha = \dfrac{y - y_0}{r}.
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{Circunferência}\label{circunferencia}
     \includegraphics{circunferencia.pdf}
@@ -203,10 +202,7 @@ Como os ponto $P_1$, $P_2$ e $P_3$ não são colineares, este sistema sempre pos
     \end{enumerate}
 \end{exemplos}
 
-% section equacoes_da_circunferencias (end)
-
-\section{Cônicas} % (fold)
-\label{sec:conicas}
+\section{Cônicas}
 
 \begin{definicao}
     Chama-se \textbf{cônica} o lugar geométrico dos pontos $P(x,y)$ que satisfazem uma equação do segundo grau $g(x,y) = 0$, onde\index{Cônicas}
@@ -231,8 +227,7 @@ A equação \eqref{equacaoconica} pode representar:
 
 Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio, um ponto, retas ou circunferências diremos que a cônica definida é uma \textbf{cônica degenerada}. Aqui vamos estudar as cônicas chamadas de elipse, hipérbole e parábola.
 
-\subsection{Elipse} % (fold)
-\label{sub:elipse}
+\subsection{Elipse}
 
 \begin{definicao}
     Sejam $F_1$ e $F_2$ pontos distintos do plano, $2c$ a distância entre $F_1$ e $F_2$ e $a$ um número real tal que $a > c$. O lugar geométrico $\mathcal{E}$ dos pontos $P$ tais que
@@ -388,7 +383,7 @@ Na equação \eqref{equacaoelipse}, fazendo $y \ge 0$ podemos escrever
     y = \dfrac{b}{a}\sqrt{a^2 - x^2},\quad x \in [0,a].
 \]
 Tal equação é uma função em $x$, contínua, decrescente e com concavidade para baixo em todo seu domínio. Assim seu gráfico é dado pela Figura \ref{GraficoprimeiroquadranteElipse}.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \caption{Gráfico da função $y = \dfrac{b}{a}\sqrt{a^2 - x^2}$}
     \label{GraficoprimeiroquadranteElipse}
@@ -573,10 +568,7 @@ modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/
     e = \dfrac{c}{a}.
 \]
 
-% subsection elipse (end)
-
-\subsection{Hipérbole} % (fold)
-\label{sub:hiperbole}
+\subsection{Hipérbole}
 
 \begin{definicao}
     Sejam $F_1$ e $F_2$ pontos distintos do plano tais que sua distância seja $2c$. Considere um número real $a$ tal que $0 < a < c$. O lugar geométrico $\mathcal{H}$ dos pontos $P(x,y)$ tais que
@@ -820,27 +812,13 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
     \end{enumerate}
 \end{exemplos}
 
-% \begin{observacao}
-%   No caso de uma hipérbole $\mathcal{H}$ com focos no eixo $y$, isto é, com equação
-%   \[
-%     \mathcal{H}: \dfrac{y^2}{a^2} - \dfrac{x^2}{b^2} = 1
-%   \]
-%   as assíntotas terão equações dadas por
-%   \[
-%     x = \pm \dfrac{a}{b}y.
-%   \]
-% \end{observacao}
-
 \begin{figure}[H]
     \centering
     \caption{Hipérbole $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$ com assíntotas $x = -\dfrac{a}{b}y$ e $x = \dfrac{a}{b}y$}
     \includegraphics{hiperbole-focos-eixo-Y.pdf}
 \end{figure}
 
-% subsection hiperbole (end)
-
-\subsection{Parábola} % (fold)
-\label{sub:parabolas}
+\subsection{Parábola}
 
 \begin{definicao}
     Seja $r$ uma reta e $F$ um ponto que não pertence a $r$. O lugar geométrico $\mathcal{P}$ dos pontos equidistantes de $F$ e $r$ chama-se \textbf{parábola}.
@@ -950,11 +928,8 @@ Nos demais casos temos:
 \begin{proposicao}
     As equações $y^2 = qx$ e $x^2 = qy$ descrevem uma parábola se, e somente se, $q \ne 0$.
 \end{proposicao}
-% subsection parabolas (end)
-% section conicas (end)
 
-\section{Rotação e Translação de Eixos} % (fold)
-\label{sec:rotacao_e_translacao_de_eixos}
+\section{Rotação e Translação de Eixos}
 
 Para determinar a cônica representada pela equação
 \[
@@ -962,8 +937,8 @@ Para determinar a cônica representada pela equação
 \]
 iremos utilizar translações e rotações de eixos para simplificar sua equação.
 
-\subsection{Translação de eixos} % (fold)
-\label{sub:translacaoo_de_eixos}
+\subsection{Translação de eixos}
+
 Considere a seguinte cônica
 \begin{equation}\label{conicaexemplo}
     x^2 + 2y^2 - 4x - 4y - 1 = 0.
@@ -1085,10 +1060,8 @@ As mudanças introduzidas pelas equações \eqref{mudancaXgeral} e \eqref{mudanc
               \end{solucao}
     \end{enumerate}
 \end{exemplos}
-% % subsection translacaoo_de_eixos (end)
 
-\subsection{Rotação de eixos} % (fold)
-\label{sub:rotacao_de_eixos}
+\subsection{Rotação de eixos}
 
 Considere o sistema cartesiano com centro em $(0,0)$. Sejam $\vec{e_1} = (1,0)$ e $\vec{e_2} = (0,1)$. Para qualquer vetor $\vec{P} = (x,y)$ podemos escrever
 \begin{align}\label{equacaoxy}
