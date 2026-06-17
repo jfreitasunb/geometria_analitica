@@ -217,7 +217,6 @@ A equação \eqref{equacaoconica} pode representar:
 \begin{enumerate}[label=({\arabic*})]
     \item um conjunto vazio: $x^2 + y^2 = -1$;
     \item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
-          %\item uma reta;
     \item a reunião de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
     \item uma circunferência: $x^2 + y^2 - 13x + y + 10 = 0$;
     \item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
@@ -1130,132 +1129,6 @@ Com isso para cada ponto $P(x,y)$ as suas coordenadas, após uma rotação no se
     Daí no novo sistema $P(3 + 2\sqrt{3}, 2 - 3\sqrt{3})$.
 \end{exemplos}
 
-% \begin{exemplos}
-%   Identifique as cônicas:
-%   \begin{enumerate}
-%     \item $3x^2 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$
-%     \begin{solucao}
-%       Fazendo as mudanças
-%       \begin{align}
-%         x = x_1\cos\theta - y_1\sin\theta\\
-%         x = x_1\sin\theta + y_1\cos\theta
-%       \end{align}
-%       temos
-%       \begin{align*}
-%         &3(x_1\cos\theta - y_1\sin\theta)^2 + 3(x_1\sin\theta + y_1\cos\theta)^2\\ &- 10(x_1\cos\theta - y_1\sin\theta)(x_1\sin\theta + y_1\cos\theta)\\ & + 12\sqrt{2}(x_1\cos\theta - y_1\sin\theta) - 4\sqrt{2}(x_1\sin\theta + y_1\cos\theta)\\ &= (3\cos^2\theta + 3\sin^2\theta - 10\sin\theta\cos\theta)x_1^2 \\ &+ (3\sin^2\theta + 3\cos^2\theta + 10\sin\theta\cos\theta)y_1^2 \\ &+ (6\sin\theta\cos\theta - 10\cos^2\theta + 10\sin^2\theta - 6\sin\theta\cos\theta)x_1y_1 \\ &+ (12\sqrt{2}\cos\theta - 4\sqrt{2}\sin\theta)x_1 + (-12\sqrt{2}\sin\theta - 4\sqrt{2}\cos\theta)y_1 + 32 = 0.
-%       \end{align*}
-%       Assim $\theta$ deve ser tal que
-%       \[
-%         -10\cos^2\theta + 10\sin^2\theta = 0,
-%       \]
-%       isto é, $\theta = \pi/4$. Substituindo esse valor de $\theta$ na equação anterior e simplificando obtemos
-%       \[
-%         x_1^2 - 4y_1^2 - 4x_1 + 8y_1 - 16 = 0.
-%       \]
-%       Nessa nova equação podemos completar quadrados
-%       \begin{align*}
-%         &(x_1^2 - 4x_1 + 4) - 4 - 4(y_1^2 - 2y_1 + 1 - 1) - 16 = 0\\
-%         &(x_1 - 2)^2 - 4(y_1 - 1)^2 = 16.
-%       \end{align*}
-%       Fazendo
-%       \begin{align*}
-%         x_2 = x_1 - 2\\
-%         y_2 = y_1 - 1
-%       \end{align*}
-%       encontramos
-%       \[
-%         \dfrac{x_2^2}{16} - \dfrac{y_2^2}{4} = 1
-%       \]
-%       que é uma hipérbole de vértices no eixo $x_2$.
-%       \begin{figure}[!h]
-%         \centering
-%         \caption{Hipérbole $3x^2 +3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$}
-%         \includegraphics{hiperbole-rotacionada-transladada.pdf}
-%       \end{figure}
-%     \end{solucao}
-%     \item $52x^2 - 72xy + 73y^2 - 400 = 0$
-%     \begin{solucao}
-%       Fazendo as mudanças
-%       \begin{align}
-%         x = x_1\cos\theta - y_1\sin\theta\\
-%         x = x_1\sin\theta + y_1\cos\theta
-%       \end{align}
-%       temos
-%       \begin{align}\label{conicaelipse}
-%         &52(x_1\cos\theta - y_1\sin\theta)^2 + 73(x_1\sin\theta + y_1\cos\theta)^2\nonumber \\ &- 72(x_1\cos\theta - y_1\sin\theta)(x_1\sin\theta + y_1\cos\theta) - 400 = 0\nonumber\\ &(52\cos^2\theta - 72\sin\theta\cos\theta + 73\sin^2\theta)x_1^2 + (52\sin^2\theta + 72\sin\theta\cos\theta + 73\cos^2\theta)y_1^2 \nonumber\\&+ (-104\sin\theta\cos\theta + 72\sin^2\theta - 72\cos^2\theta + 146\sin\theta\cos\theta)x_1y_1 - 400 = 0
-%       \end{align}
-%       Assim devemos ter
-%       \begin{align*}
-%         &-104\sin\theta\cos\theta + 72\sin^2\theta - 72\cos^2\theta + 146\sin\theta\cos\theta = 0\\
-%         &42\sin\theta\cos\theta + 72(\sin^2\theta - \cos^2\theta) = 0\\
-%         &21\sin(2\theta) - 72\cos(2\theta) = 0\\
-%         &\tan(2\theta) = \dfrac{24}{7}.
-%       \end{align*}
-%       Agora
-%       \[
-%         \cos(2\theta) = \dfrac{1}{\sqrt{1 + \tan^2(2\theta)}}
-%       \]
-%       e usando as equações $\cos^2\theta = (1/2)(1 + \cos(2\theta))$ e $\sin^2\theta = (1/2)(1 - \cos(2\theta))$ obtemos
-%       \[
-%         \cos\theta = \dfrac{4}{5} \quad \mbox{e}\quad \sin\theta = \dfrac{3}{5}.
-%       \]
-%       Substituindo na equação \eqref{conicaelipse} obtemos
-%       \begin{align*}
-%         &\left(52\dfrac{16}{25} - 72\dfrac{12}{25} + 73\dfrac{9}{25}\right)x_1^2 + \left(52\dfrac{9}{25} + 72\dfrac{12}{25} + 73\dfrac{16}{25}\right)y_1^2 - 400 = 0\\
-%         &25x_1^2 + 100y_1^2 = 400\\
-%         &\dfrac{x_1^2}{16} + \dfrac{y_1^2}{4} = 1
-%       \end{align*}
-%       que representa uma elipse com focos no eixo $x_1$.
-%       \begin{figure}[!h]
-%         \centering
-%         \caption{Elipse $52x^2 - 72xy + 73y^2 - 400 = 0$}
-%         \includegraphics{elipse-rotacionada.pdf}
-%       \end{figure}
-%     \end{solucao}
-%     \item $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$
-%     \begin{solucao}
-%       Fazendo as mudanças
-%       \begin{align}
-%         x = x_1\cos\theta - y_1\sin\theta\\
-%         x = x_1\sin\theta + y_1\cos\theta
-%       \end{align}
-%       temos
-%       \begin{align}\label{conicaparabola}
-%         &(x_1\cos\theta - y_1\sin\theta)^2 - 2(x_1\cos\theta - y_1\sin\theta)(x_1\sin\theta + y_1\cos\theta)\nonumber \\&+ (x_1\sin\theta + y_1\cos\theta)^2 - 2(x_1\cos\theta - y_1\sin\theta) - 2(x_1\sin\theta + y_1\cos\theta) + 1 = 0\nonumber\\
-%         &(\cos^2\theta - 2\sin\theta\cos\theta + \sin^2\theta)x_1^2 + (\sin^2\theta + 2\sin\theta\cos\theta + \cos^2\theta)y_1^2\nonumber\\ &+ (-2\sin\theta\cos\theta - 2\cos^2\theta + 2\sin^2\theta + 2\sin\theta\cos\theta)x_1y_1\nonumber\\ &+ (-2\cos\theta - 2\sin\theta)x_1 + (2\sin\theta - 2\cos\theta)y_1 + 1 = 0.
-%       \end{align}
-%       Assim devemos ter
-%       \[
-%         -2\cos^2\theta + 2\sin^2\theta = 0,
-%       \]
-%       isto é, $\theta = \pi/4$. Substituindo em \eqref{conicaparabola} obtemos a equação
-%       \[
-%         y_1^2 = \sqrt{2}\left(x_1 - \dfrac{1}{2\sqrt{2}}\right).
-%       \]
-%       Fazendo
-%       \begin{align*}
-%         x_1 - \dfrac{1}{2\sqrt{2}} = x_2\\
-%         y_1 = y_2
-%       \end{align*}
-%       encontramos
-%       \[
-%         y_2^2 = \sqrt{2}x_2
-%       \]
-%       que representa uma parábola com foco no eixo $x_2$ e reta diretriz $x_2 = -\sqrt{2}/4$.
-%       \begin{figure}[!h]
-%         \centering
-%         \caption{Parábola $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$}
-%         \includegraphics{parabola-rotacionada-transladada.pdf}
-%       \end{figure}
-%     \end{solucao}
-%   \end{enumerate}
-% \end{exemplos}
-
-% subsection rotacao_de_eixos (end)
-
-% \section{Rotações de Eixos: método matricial} % (fold)
-% \label{sec:rotacoes_de_eixos_metodo_matricial}
-
 Considere uma cônica de equação
 \begin{equation}\label{equacao_geral_conica}
     ax^2 + bxy + cy^2 + dx + ey + f = 0.
@@ -1758,13 +1631,3 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1\ U_2]
         \item Se $a'c' = 0$, então $\mathcal{C}$ é uma parábola, um par de retas paralelas, uma reta ou o conjunto vazio.
     \end{enumerate}
 \end{teorema}
-% section rotacoes_de_eixos_metodo_matricial (end)
-
-% section rotacao_e_translacao_de_eixos (end)
-
-% \section{Seções Cônicas} % (fold)
-% \label{sec:secoes_conicas}
-% \missingfigure{Figuras de seções cônicas}
-% section secoes_conicas (end)
-
-% chapter circunferencias_e_conicas (end)

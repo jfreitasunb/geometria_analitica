@@ -11,15 +11,6 @@ que serão denominados \textbf{eixos coordenados} e serão denotados por $Ox$, $
     \centering
     \caption{Sistema de coordenadas tridimensionais}
     \includegraphics{eixos-coordenados-espaco.pdf}
-    % \tdplotsetmaincoords{70}{110}
-    % \begin{tikzpicture}[scale=2,tdplot_main_coords]
-    %   \coordinate[label=above left:$O$] (A) at (0,0,0);
-
-    %   %constrói os eixos cartesianos
-    %   \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
-    %   \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
-    %   \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
-    %   \end{tikzpicture}
 \end{figure}
 
 Projetando um ponto $P$ do espaço ortogonalmente sobre cada um dos eixos coordenados podemos representar os pontos do espaço por ternas ordenadas $(a,b,c)$ de números reais.
@@ -28,23 +19,6 @@ Projetando um ponto $P$ do espaço ortogonalmente sobre cada um dos eixos coorde
     \centering
     \caption{Coordenadas de um ponto no espaço tridimensional}
     \includegraphics{coordenadas-ponto-espaco.pdf}
-    % \tdplotsetmaincoords{70}{110}
-    % \begin{tikzpicture}[scale=2,tdplot_main_coords]
-    %   \coordinate[label=above left:$O$] (A) at (0,0,0);
-
-    %   %constrói os eixos cartesianos
-    %   \draw[thick,->,black] (0,0,0) -- (2,0,0) node[anchor=north east]{$x$};
-    %   \draw[thick,->] (0,0,0) -- (0,2,0) node[anchor=north east]{$y$};
-    %   \draw[thick,->] (0,0,0) -- (0,0,2) node[anchor=east]{$z$};
-
-    %   \tdplotsetcoord{P}{2}{45}{60}
-    %   \filldraw (P) circle (1pt) node[above right]{$P(a, b, c)$};
-
-    %   \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$a$};
-    %   \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$b$};
-    %   \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$c$};
-    %   \draw[dashed, color=red] (Pxy) -- (P);
-    %   \end{tikzpicture}
 \end{figure}
 
 Assim os pontos de $\real^3$ são descritos por
@@ -60,37 +34,6 @@ Sejam $P(x_1,y_1,z_1)$ e $Q(x_2,y_2,z_2)$ dois pontos de $\real^3$. Traçando po
     \centering
     \caption{Distância entre pontos em $\real^3$}
     \includegraphics{distancia-pontos-espaco.pdf}
-    % \tdplotsetmaincoords{70}{110}
-    % \begin{tikzpicture}[scale=2,tdplot_main_coords]
-    %   \coordinate[label=above left:$O$] (A) at (0,0,0);
-
-    %   %constrói os eixos cartesianos
-    %   \draw[thick,->,black] (0,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
-    %   \draw[thick,->] (0,0,0) -- (0,2.5,0) node[anchor=north east]{$y$};
-    %   \draw[thick,->] (0,0,0) -- (0,0,2.5) node[anchor=east]{$z$};
-
-    %   \tdplotsetcoord{P}{2}{45}{40}
-    %   \filldraw (P) circle (1pt) node[above right]{$P$};
-    %   \tdplotsetcoord{Q}{2.7}{50}{80}
-    %   \filldraw (Q) circle (1pt) node[above right]{$Q$};
-
-    %   \draw[dashed, color=red] (Px) -- (Pxy) node[at start,left]{$x_1$};
-    %   \draw[dashed, color=red] (Py) -- (Pxy)node[at start,above]{$y_1$};
-    %   \draw[dashed, color=red] (Pz) -- (P)node[at start,left]{$z_1$};
-    %   \draw[dashed, color=red] (Pxy) -- (P);
-    %   \draw[dashed, color=red] (Qx) -- (Qxy) node[at start,left]{$x_2$};
-    %   \draw[dashed, color=red] (Qy) -- (Qxy)node[at start,above]{$y_2$};
-    %   \draw[dashed, color=red] (Qz) -- (Q)node[at start,left]{$z_2$};
-    %   \draw[dashed, color=red] (Qxy) -- (Q);
-
-    %   \filldraw ($(Q)!(P)!(Qxy)$) circle (1pt)node[right]{$S$};
-    %   \draw[color=green] ($(Q)!(P)!(Qxy)$) -- (P);
-    %   \filldraw (Pxy) circle (1pt) node[below]{$P_0$};
-    %   \filldraw (Qxy) circle (1pt) node[below]{$Q_0$};
-
-    %   \draw[color=blue] (P) -- (Q);
-    %   \draw[color=green] (Pxy) -- (Qxy);
-    %   \end{tikzpicture}
 \end{figure}
 
 Agora, $|SQ| = |z_2 - z_1|$ e daí
@@ -126,80 +69,6 @@ Desse modo, podemos reescrever a definição de soma e produto por escalar da se
         \item $\alpha \vec{u} = (\alpha x_1, \alpha y_1, \alpha z_1)$.
     \end{enumerate}
 \end{definicao}
-
-% \begin{center}
-%   \begin{tikzpicture}[scale=2]%soma de vetores no plano
-%     \coordinate (A) at (0,0);
-%     \coordinate (V) at (0.5,1);
-%     \coordinate (W) at (1,0.5);
-%     \coordinate (B) at (0,1);
-%     \coordinate (VW) at ($(V)+(W)$);
-%     %definição das coordenadas dos eixos cartesianos
-%     \coordinate (F) at (-1,0);
-%     \coordinate (G) at (0,-1);
-%     \coordinate (X) at (2,0);
-%     \coordinate (Y) at (0,2);
-%     % Styles
-%     \tikzstyle{axes}=[]
-
-%     \begin{scope}[style=axes]%constrói os eixos cartesianos
-%     \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-%     \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-%     \end{scope}
-
-%     \draw[->,>=triangle 45,color=blue] (A)--(V)
-%       node[above]{$\vec{u}$};
-%     \draw[->,>=triangle 45,color=blue] (A)--(W)
-%       node[below right]{$\vec{v}$};
-%     \draw[->,>=triangle 45,color=red] (A)--(VW)
-%       node[below right]{$\vec{u}+\vec{v}$};
-%     \draw[dashed,>=triangle 45,color=blue] (V)--(VW);
-%     \draw[dashed,>=triangle 45,color=blue] (W)--(VW);
-%     \draw[dashed,color=black] let \p1 = (V) in (\x1,0) -- (\x1,\y1)
-%       node[at start, below]{$x_1$};
-%     \draw[dashed,color=black] let \p1 = (V) in (0,\y1) -- (\x1,\y1)
-%       node[at start, left]{$y_1$};
-%     \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
-%       node[at start, below]{$x_2$};
-%     \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
-%       node[at start, left]{$y_2$};
-%     \draw[dashed,color=black] let \p1 = (VW) in (\x1,0) -- (\x1,\y1)
-%       node[at start, below]{$x_1 + x_2$};
-%     \draw[dashed,color=black] let \p1 = (VW) in (0,\y1) -- (\x1,\y1)
-%       node[at start, left]{$y_1 + y_2$};
-%   \end{tikzpicture}
-
-%   \begin{tikzpicture}[scale=2]%multiplicação por escalar no plano
-%     \coordinate (A) at (0,0);
-%     \coordinate (V) at (0.5,0.5);
-%     \coordinate (W) at ($2*(V)$);
-%     %definição das coordenadas dos eixos cartesianos
-%     \coordinate (F) at (-1,0);
-%     \coordinate (G) at (0,-1);
-%     \coordinate (X) at (2,0);
-%     \coordinate (Y) at (0,2);
-%     % Styles
-%     \tikzstyle{axes}=[]
-
-%     \begin{scope}[style=axes]%constrói os eixos cartesianos
-%     \draw[->] (F) -- (X) node[below] {$x$} coordinate(x axis);
-%     \draw[->] (G) -- (Y) node[left] {$y$} coordinate(y axis);
-%     \end{scope}
-
-%     \draw[->,>=triangle 45,color=blue] (A)--(V)
-%       node[above]{$\vec{u}$};
-%     \draw[->,>=triangle 45,color=red] (A)--(W)
-%       node[below right]{$\alpha \vec{u}$};
-%     \draw[dashed,color=black] let \p1 = (V) in (\x1,0) -- (\x1,\y1)
-%       node[at start, below]{$x_1$};
-%     \draw[dashed,color=black] let \p1 = (V) in (0,\y1) -- (\x1,\y1)
-%       node[at start, left]{$y_1$};
-%     \draw[dashed,color=black] let \p1 = (W) in (\x1,0) -- (\x1,\y1)
-%       node[at start, below]{$\alpha x_1$};
-%     \draw[dashed,color=black] let \p1 = (W) in (0,\y1) -- (\x1,\y1)
-%       node[at start, left]{$\alpha y_1$};
-%   \end{tikzpicture}
-% \end{center}
 
 Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1,z_1)$ de forma matricial. Para isso escrevemos as componentes de $\vec{u}$ como uma matriz de 1 coluna e três linhas
 \[
@@ -268,25 +137,6 @@ Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
     \centering
     \caption{ângulo entre vetores em $\real^3$}
     \includegraphics{angulo-vetores-espaco.pdf}
-    % \begin{tikzpicture}
-    %   \coordinate (A) at (0,0);
-    %   \coordinate (X) at (4,1);
-    %   \coordinate (Y) at (3,3.5);
-
-    %   \draw[->,>=triangle 45] (A) -- (X)
-    %   node[midway,below]{$\vec{v}$};
-    %   \draw[->,>=triangle 45] (A) -- (Y)
-    %   node[midway,above]{$\vec{u}$};
-    %   \draw[dashed,->,>=triangle 45] (X) -- (Y)
-    %   node[midway,above right]{$\vec{u} - \vec{v}$};
-
-    %   % Mark the angle XAY
-    %   \begin{scope}
-    %     \path[clip] (A) -- (X) -- (Y);
-    %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-    %     \node at ($(A)+(30:7mm)$) {$\theta$};
-    %   \end{scope}
-    % \end{tikzpicture}
 \end{figure}
 
 \begin{definicao}\label{produtointerno-espaco}
@@ -563,32 +413,6 @@ Agora considere o paralelogramo formado pelos vetores $\vec{u}$ e $\vec{v}$:
     \centering
     \caption{Interpretação geométrica do produto vetorial}
     \includegraphics{area-paralelogramo.pdf}
-    % \begin{tikzpicture}
-    %   \coordinate (A) at (0,0);
-    %   \coordinate (X) at (4,0);
-    %   \coordinate (Y) at (3,4);
-    %   \coordinate (W) at (0,3.5);
-
-    %   \coordinate[label=right:$D$]  (D) at ($(X)+(Y)$);
-
-    %   \draw[color=red] ($(A)!(Y)!(X)$) -- (Y) node[midway,right]{$h$};
-
-    %   \draw[dashed,thick,color=blue] (X)--(D);
-    %   \draw[dashed,thick,color=blue] (Y)--(D);
-    %   \draw[->,>=triangle 45] (A) -- (X)
-    %     node[midway,below]{$\vec{v}$};
-    %   \draw[->,>=triangle 45] (A) -- (Y)
-    %     node[midway,above]{$\vec{u}$};
-    %   \draw[->,>=triangle 45] (A) -- (W)
-    %     node[midway,left]{$\vec{u}\times\vec{v}$};
-
-    %   % Mark the angle XAY
-    %   \begin{scope}
-    %     \path[clip] (A) -- (X) -- (Y);
-    %     \fill[white, opacity=0.5, draw=black] (A) circle (5mm);
-    %     \node at ($(A)+(30:7mm)$) {$\theta$};
-    %   \end{scope}
-    % \end{tikzpicture}
 \end{figure}
 
 A área $\mathcal{A}$ desse paralelogramo é dado Por
@@ -670,39 +494,6 @@ Sejam $\vec{u}$, $\vec{v}$ e $\vec{w}$ vetores em $\real^3$. Considere o paralel
     \centering
     \caption{Interpretação geométrica do produto misto}
     \includegraphics{volume-paralelepipedo.pdf}
-    % \tdplotsetmaincoords{60}{125}
-    % \begin{tikzpicture}
-    %     [tdplot_main_coords,
-    %       cube/.style={very thick,black},
-    %       grid/.style={very thin,gray},
-    %       axis/.style={->,blue,thick},scale=2]
-
-    %   \coordinate (A) at (2,0,0);
-    %   \coordinate (B) at (2,1,2);
-    %   \coordinate (C) at (2,1,0.5);
-    %   \coordinate (D) at (2,0,2);
-
-    %   %draw the top and bottom of the cube
-    %   \draw[dashed,cube] (0,0,0) -- (0,2,0);
-    %   \draw[dashed,cube] (0,2,0) -- (2,2,0);
-    %   \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,2,0) node[midway,below]{$\vec{u}$};
-    %   \draw[->,>=triangle 45,color=red] (2,0,0) -- (0,0,0) node[midway,left]{$\vec{v}$};
-    %   %\draw[cube] (0,0,0) -- (0,2,0) -- (2,2,0) -- (2,0,0) -- cycle;
-    %   \draw[dashed,cube] (0,1,2) -- (0,3,2) -- (2,3,2) -- (2,1,2) -- cycle;
-    %   \draw[dashed,color=red] (2,1,0.5) -- (2,1,2) node[midway,left]{$h$};
-    %   %draw the edges of the cube
-    %   \draw[dashed,cube] (0,0,0) -- (0,1,2);
-    %   \draw[dashed,cube] (0,2,0) -- (0,3,2);
-    %   \draw[->,>=triangle 45,color=red] (2,0,0) -- (2,1,2) node[midway,left]{$\vec{w}$};
-    %   \draw[->,>=triangle 45,color=blue] (2,0,0) -- (2,0,2) node[midway,left]{$\vec{u}\times\vec{v}$};
-    %   \draw[dashed,cube] (2,2,0) -- (2,3,2);
-
-    %   \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](A,B,C);
-    %   \draw ($(A)+(0.2,1,1.8)$) node[below,font=\small] {$\theta$};
-
-    %   \tkzMarkAngle[fill=orange,size=0.3cm,opacity=.4](B,A,D);
-    %   \draw ($(A)+(-0.2,0,0.6)$) node[below,font=\small] {$\theta$};
-    % \end{tikzpicture}
 \end{figure}
 
 A altura $h$ é dada por
@@ -742,6 +533,3 @@ isto é,
         Logo $P$, $Q$, $R$ e $S$ não definem um paralelepípedo.
     \end{solucao}
 \end{exemplo}
-% subsection produto_misto (end)
-
-% chapter vetores_no_espaco (end)

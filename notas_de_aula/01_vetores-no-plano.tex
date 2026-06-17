@@ -50,7 +50,6 @@ Este número é chamado \textbf{distância} de $P$ a $Q$ e é indicado por $d(P,
 
 Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ são iguais se, e somente se, $x_1 = x_2$ e $y_1 = y_2$.
 
-% section plano_cartesiano (end)
 
 \section{Vetores em $\real^2$}
 
@@ -80,15 +79,6 @@ Esta notação significa que $\vec{u}$ é a seta com início no ponto $O(0,0)$ e
     \caption{Vetor $ \vec{u} = (\alpha, \beta)$.}
     \includegraphics{vetor-coordenadas-plano-cartesiano.pdf}
 \end{figure}
-
-% Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a notação vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e daí escrevemos
-% \[
-%   \vec{u} = (x_1,y_1).
-% \]
-% As coordenadas $(x_1,y_1)$ são chamadas de \textbf{componentes} do vetor $\vec{u}$. Com essa representação, o vetor nulo $\vec{0}$ é escrito como
-% \[
-%   \vec{0} = (0,0).
-% \]
 
 Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ são representados graficamente por:
 \begin{figure}[H]
@@ -237,23 +227,12 @@ Um vetor $\vec{u}$ tal que
     Portanto as propriedades são válidas.
 \end{prova}
 
-% \begin{proposicao}
-%   Quaisquer que sejam o escalar $\alpha$ e o vetor $\vec{u}$, valem as seguintes igualdades:
-%   \begin{enumerate}[label=({\roman*})]
-%     \item $(-\alpha)\vec{u} = -(\alpha\vec{u})$;
-%     \item $\alpha(-\vec{u}) = -(\alpha\vec{u})$;
-%     \item $(-\alpha)(-\vec{u}) = \alpha\vec{u}$.
-%   \end{enumerate}
-% \end{proposicao}
-
 Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1)$ de forma matricial. Para isso escrevemos as componentes de $\vec{u}$ como uma matriz de 1 coluna e duas linhas
 \[
   \vec{u} = \begin{bmatrix}
     x_1\\y_1
   \end{bmatrix}.
 \]
-
-%Vimos que a norma de um vetor é definida como o comprimento de um segmento orientado que o represente. Com a representação de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
 
 \begin{exemplos}
   Seja $\vec{u} = (-2,3)$ um vetor. Então
@@ -262,12 +241,6 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
     \vec{v} &= \dfrac{\vec{u}}{\norm{u}} = \dfrac{1}{\sqrt{13}}(-2,3) = \left(\dfrac{-2}{\sqrt{13}}, \dfrac{3}{\sqrt{13}}\right).
   \end{align*}
 \end{exemplos}
-
-
-% subsection operacoes_com_vetores (end)
-
-
-% section vetores_plano (end)
 
 \begin{proposicao}
   Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Então:
@@ -366,15 +339,6 @@ temos
 \begin{align}\label{equacaonorma}
   \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\norm{\vec{u}}\norm{\vec{v}}\cos\theta.
 \end{align}
-
-% Assim conhecendo as coordenadas dos vetores $\vec{u}$ e $\vec{v}$ podemos determinar facilmente o ângulo entre eles. Além disso, note que se $\vec{u}$ e $\vec{v}$ são vetores ortogonais, então $\theta = \pi/2$ e então a equação \eqref{equacaonorma} torna-se
-% \begin{align}\label{norma-vetores-ortogonais}
-%   \norm{\vec{u} - \vec{v}} = \sqrt{\norm{\vec{u}}^2 + \norm{\vec{v}}^2}.
-% \end{align}
-
-% \begin{observacao}
-%   A equação \eqref{norma-vetores-ortogonais} só é válida para vetores ortogonais entre si.
-% \end{observacao}
 
 \begin{definicao}\label{produtointerno}
   O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que:\index{Vetores!Produto Escalar}
@@ -724,5 +688,3 @@ não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
      \end{solucao}
   \end{enumerate}
 \end{exemplos}
-% subsection projecao_de_vetores (end)
-% chapter vetores (end)
