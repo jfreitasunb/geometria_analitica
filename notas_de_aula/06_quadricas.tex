@@ -16,8 +16,8 @@ O conjunto de pontos em $\real^3$ satisfazendo uma equação da forma \eqref{equ
 Nosso principal objetivo será tentar simplificar a equação \eqref{equacao_quadrica} de modo que seja possível identificar que objeto tal equação representa.
 
 
-\section{Esfera} % (fold)
-\label{sec:esfera}
+\section{Esfera}
+
 \begin{definicao}
     Uma \textbf{esfera} é uma quádrica com equação na forma\index{Quádricas!Esfera}
     \begin{equation}\label{equacao_esfera}
@@ -31,8 +31,8 @@ Nosso principal objetivo será tentar simplificar a equação \eqref{equacao_qua
     \includegraphics[scale=0.35]{esfera.png}
 \end{figure}
 
-\section{Elipsoide} % (fold)
-\label{sec:elipsoide}
+\section{Elipsoide}
+
 \begin{definicao}
     Um \textbf{elipsoide} é uma quádrica descrita pela equação
     \begin{equation}\label{equacao_elipsoide}
@@ -68,17 +68,20 @@ Se $a = b$, então a equação \eqref{resultado_intersecao_elipsoide_planoz} é 
 
 De modo análogo, se tomarmos $\pi : x = k$ ou $\pi : y = k$, as interseções serão sempre ou conjunto vazio ou um ponto ou uma circunferência ou uma elipse.
 
-% \begin{figure}[!h]
-%     \centering
-%     \caption{Contornos do elipsóide $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$ pelo plano $z = k$}
-%     \hspace*{-2cm}
-%     \includegraphics{elipsoide-contornos-eixo-z.pdf}
-% \end{figure}
+Na equação \eqref{equacao_elipsoide} se $z = 0$, a equação torna-se
+\[
+    \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1
+\]
+e a superfície resultante é chamada de \textbf{cilindro elíptico.}\index{Quádricas!Cilindro Elíptico}
 
-% section elipsoide (end)
+\begin{figure}[H]
+    \centering
+    \caption{Cilindro Elíptico: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$}
+    \includegraphics[scale=0.35]{cilindro_eliptico.png}
+\end{figure}
 
-\section{Paraboloides} % (fold)
-\label{sec:paraboloide}
+\section{Paraboloides}
+
 \begin{definicao}
     Sejam $a$ e $b$ números reais positivos a quádrica descrita de equação
     \[
@@ -167,10 +170,8 @@ A interseção com o plano $\pi : y = k$ é dada por
 \]
 que é uma parábola. O mesmo ocorre com o plano $\pi : x = k$.
 
-% section paraboloide (end)
+\section{Hiperboloides}
 
-\section{Hiperboloides} % (fold)
-\label{sec:hiperboloide}
 \begin{definicao}
     Um \textbf{hiperboloide de uma folha} é uma quádrica descrita pela equação
     \[
@@ -280,10 +281,7 @@ Se $k^2 > c^2$, isto é, $k < -c$ ou $k > c$, então tomando $p = k^2/c^2 - 1 > 
 \]
 Assim se $a = b$, então obtemos uma circunferência e se $a \ne b$, então a interseção é uma elipse.
 
-% section hiperboloide (end)
-
-\section{Cone Elíptico} % (fold)
-\label{sec:cone_eliptico}
+\section{Cone Elíptico}
 
 \begin{definicao}
     Um \textbf{cone elíptico} é um conjunto de pontos que satisfaz uma equação da forma
@@ -317,10 +315,8 @@ As equações
     x^2 = \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}\quad \mbox{e}\quad y^2 = \dfrac{x^2}{a^2} + \dfrac{z^2}{c^2}
 \]
 também representam cones elípticos.
-% section cone_eliptico (end)
 
-\section{Identificação de Quádricas} % (fold)
-\label{sec:identificacao_de_quadricas}
+\section{Identificação de Quádricas}
 
 Considere uma quádrica de equação
 \begin{equation}\label{equacao_geral_quadrica}

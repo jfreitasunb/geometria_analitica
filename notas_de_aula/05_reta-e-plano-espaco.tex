@@ -3,11 +3,9 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
 %%Aós executar pdflatex arquivo
 
-\chapter{Reta e Plano no Espaço} % (fold)
-\label{cha:reta_e_plano_no_espaco}
+\chapter{Reta e Plano no Espaço}
 
-\section{Equações do Plano} % (fold)
-\label{sec:equacoes_do_plano}
+\section{Equações do Plano}
 
 Da Geometria Plana, sabemos que todo plano $\pi$ contém pelo menos três pontos não colineares, digamos $A$, $B$ e $C$.
 \begin{figure}[H]
@@ -166,10 +164,7 @@ Os planos $\pi_1$ e $\pi_2$ são \textbf{paralelos} se, e somente se, $\vec{v_1}
     \end{solucao}
 \end{exemplo}
 
-% section equacoes_do_plano (end)
-
-\section{Equações da Reta} % (fold)
-\label{sec:equacoes_da_reta}
+\section{Equações da Reta}
 
 Seja $\vec{v}$ um vetor e $A$ um ponto. Sabemos que a reta $r$ passando por $A$ e paralela ao vetor $\vec{v}$ tem equação
 \begin{equation}
@@ -210,11 +205,10 @@ De forma análoga ao casa do plano, se $\vec{v} = (a,b,c)$ é tal que $abc \ne 0
     \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b} = \dfrac{z - z_0}{c}
 \]
 que são chamadas de \textbf{equações na forma simétrica} da reta $r$.\index{Reta!Equações Simétricas}
-% section equacoes_da_reta (end)
-\section{Interseções} % (fold)
-\label{sec:intersecoes}
-\subsection{Entre retas} % (fold)
-\label{sub:entre_retas}
+
+\section{Interseções}
+
+\subsection{Entre retas}
 Considere duas retas $r$ e $s$ de equações
 \[
     r: \begin{cases}
@@ -312,10 +306,9 @@ Os vetores diretores de $r$ e $s$ são $\vec{u} = (a,b,c)$ e $\vec{v} = (d,e,f)$
               \end{solucao}
     \end{enumerate}
 \end{exemplos}
-% subsection entre_retas (end)
 
-\subsection{Entre planos} % (fold)
-\label{sub:entre_planos}
+\subsection{Entre planos}
+
 Dados três planos $\pi_1$, $\pi_2$ e $\pi_3$ de equações
 \begin{align*}
     \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
@@ -401,12 +394,9 @@ A interseção entre eles será constituída pelos pontos cujas coordenadas seja
     \end{enumerate}
 \end{exemplos}
 
-% subsection entre_planos (end)
+\subsection{Entre retas e planos}
 
-\subsection{Entre retas e planos} % (fold)
-\label{sub:entre_retas_e_planos}
-
-Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equações de $r$ e de $\pi$. Se o sistema tiver uma \'unica solução $P_0(x_0, y_0, z_0)$, então $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado então $r\subset \pi$ e se o sistema for impossível então $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
+Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver o sistema formado pelas equações de $r$ e de $\pi$. Se o sistema tiver uma única solução $P_0(x_0, y_0, z_0)$, então $r \cap \pi = \{P_0\}$. Se o sistema for indeterminado então $r\subset \pi$ e se o sistema for impossível então $r\cap\pi = \emptyset$ e $r \varparallel \pi$.
 \begin{figure}[H]
     \centering
     \caption{$r\cap\pi = \{P_0\}$}
@@ -473,14 +463,10 @@ Para encontrar a interseção de uma reta $r$ com um plano $\pi$, basta resolver
     \end{enumerate}
 \end{exemplos}
 
-% subsection entre_retas_e_planos (end)
+\section{Distâncias}
 
-% section intersecoes (end)
+\subsection{Entre ponto e plano}
 
-\section{Distâncias} % (fold)
-\label{sec:distancias}
-\subsection{Entre ponto e plano} % (fold)
-\label{sub:entre_ponto_e_plano}
 Seja $P_1(x_1,y_1,z_1)$ um ponto e $\pi$ um plano de equação $ax + by + cz + d = 0$.
 \begin{figure}[H]
     \centering
@@ -548,11 +534,7 @@ Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. E
     \end{enumerate}
 \end{exemplos}
 
-% subsection entre_ponto_e_plano (end)
-% section distancias (end)
-
-\subsection{Entre um ponto e uma reta} % (fold)
-\label{sub:entre_um_ponto_e_uma_reta}
+\subsection{Entre um ponto e uma reta}
 
 Seja $P$ um ponto e $r$ uma reta.
 \begin{figure}[H]
@@ -593,12 +575,9 @@ onde $P_1 \in \pi\cap r$.
     \end{solucao}
 \end{exemplo}
 
-% subsection entre_um_ponto_e_uma_reta (end)
+\subsection{Entre retas}
 
-\subsection{Entre retas} % (fold)
-\label{sub:entre_retas}
-
-Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a distância entre $r$ e $s$ é dada pela distância entre um ponto de $r$ e a reta $s$, ou o contrário. Suponha então que $r$ e $s$ são concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
+Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a distância entre $r$ e $s$ é dada pela distância entre um ponto de $r$ e a reta $s$, ou o contrário. Suponha então que $r$ e $s$ são concorrentes ou reversas.
 
 Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no caso em que as retas são concorrentes). Um plano é o que contém $r$ e é paralelo a $s$, que vamos chamar de $\pi_1$. O outro contém $s$ e é paralelo a $r$, que chamaremos de $\pi_2$.
 
