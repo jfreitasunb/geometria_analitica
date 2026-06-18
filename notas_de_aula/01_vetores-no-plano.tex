@@ -3,22 +3,9 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
 %%Após executar pdflatex arquivo
 
-\chapter{Vetores} % (fold)
-\label{cha:vetores}
+\chapter{Vetores}
 
-% \section{Introdução} % (fold)
-% \label{sec:introducao}
-%
-% A Geometria Analítica é um método para tratar com problemas da Geometria. No caso do plano, tal método consiste em associar os pontos à pares ordenados de números reais, permitindo assim representar curvas do plano por equações em duas variáveis, de modo que a cada curva está associado uma equação, bem definida, do tipo $f(x,y) = 0$ e a cada equação deste tipo associa-se uma curva bem definida no plano. Assim, as propriedades geométricas das curvas podem ser determinadas à partir de informações algébricas e analíticas da equação $f(x, y) = 0$.
-%
-% Por exemplo, a equação $5x^2 - 4xy + 8y^2 - 36 = 0$ representa uma curva em $\real^2$. Nessa forma, não podemos dizer exatamente qual curva esta equação representa. Mas utilizando-se de ferramentas da Álgebra Linear, podemos reescrever tal equação como
-% \[
-%   \dfrac{x'^2}{9} + \dfrac{y'^2}{4} = 1
-% \]
-% que é uma equação de uma elipse.
-
-\section{Plano Cartesiano} % (fold)
-\label{sec:plano_cartesiano}
+\section{Plano Cartesiano}
 
 Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ como abaixo:
 \begin{figure}[!h]
@@ -30,7 +17,7 @@ Vamos considerar o plano definido pelo par de retas perpendiculares $x$ e $y$ co
 
 Seja $P$ um ponto qualquer do plano. Por $P$ podemos traçar uma única reta $r$ paralela à reta $x$ e uma única reta $s$ paralela à reta $y$. Estas retas
 interceptam $x$ e $y$ em pontos $P_x$ e $P_y$, respectivamente. Seja $a$ o número real correspondente a $P_x$ e $b$ o número real correspondente a $P_y$.
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Coordenadas do ponto $P$}
     \includegraphics{coordenadas-plano-cartesiano.pdf}
@@ -44,7 +31,7 @@ Denotaremos assim o ponto $P$ por
 \]
 
 Sejam $P(x_1,y_1)$ e $Q(x_2,y_2)$ pontos do plano. A partir de $P$ e $Q$ podemos construir o triângulo retângulo $PQS$ como abaixo:
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Distância entre dois pontos}
     \includegraphics{distancia-pontos-plano-cartesiano.pdf}
@@ -63,16 +50,14 @@ Este número é chamado \textbf{distância} de $P$ a $Q$ e é indicado por $d(P,
 
 Dizemos que dois pontos $P(x_1,y_1)$ e $Q(x_2,y_2)$ são iguais se, e somente se, $x_1 = x_2$ e $y_1 = y_2$.
 
-% section plano_cartesiano (end)
 
-\section{Vetores em $\real^2$} % (fold)
-\label{sec:vetores_plano}
+\section{Vetores em $\real^2$}
 
 Vetores surgiram com um meio de caracterizar grandezas físicas que precisam de mais do que sua magnitude para serem completamente determinadas. Por exemplo, grandezas com massa, área e comprimento são caracterizadas simplesmente por um número, tais grandezas são chamadas de \textit{grandezas escalares}. No entanto, grandezas com velocidade, força e impulso só são completamente determinadas se além da magnitude, conhecemos sua direção e sentido. Tais grandezas são chamadas de \textit{grandezas vetoriais}. Um exemplo de uma grandeza vetoriais seria uma força de 4 N atuando sobre um corpo, de modo ascendente na direção que uma um ângulo de $60\degree$ com a horizontal.
 
 Sabemos que a cada par ordenado $(\alpha, \beta)$ corresponde um ponto do plano. Assim se $(\alpha, \beta) \ne (0,0)$ podemos associar uma seta com origem em $O(0,0)$ e extremidade em $(\alpha,\beta)$ como na figura abaixo:
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Seta representando o ponto $(\alpha, \beta)$.}
     \includegraphics{vetores-plano-cartesiano.pdf}
@@ -89,23 +74,14 @@ Em geral, um objeto ao qual podemos associar os conceitos de direção, sentido 
 \]
 
 Esta notação significa que $\vec{u}$ é a seta com início no ponto $O(0,0)$ e final no ponto $(\alpha, \beta)$.
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Vetor $ \vec{u} = (\alpha, \beta)$.}
     \includegraphics{vetor-coordenadas-plano-cartesiano.pdf}
 \end{figure}
 
-% Assim escrevemos $\vec{u} = \vec{OP}$. Para simplificar a notação vamos identificar o vetor $\vec{u} = \vec{OP}$ com as coordenadas de sua extremidade e daí escrevemos
-% \[
-%   \vec{u} = (x_1,y_1).
-% \]
-% As coordenadas $(x_1,y_1)$ são chamadas de \textbf{componentes} do vetor $\vec{u}$. Com essa representação, o vetor nulo $\vec{0}$ é escrito como
-% \[
-%   \vec{0} = (0,0).
-% \]
-
 Por exemplo, $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$ são representados graficamente por:
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Vetores $\vec{u} = (3,2)$ e $\vec{v} = (-1,-2)$.}
     \includegraphics{exemplo-vetores-plano-cartesiano.pdf}
@@ -120,7 +96,7 @@ Podemos também representar um vetor por uma seta que não parte da origem. Por 
 \[
     \vec{AB} = (x_2 - x_1, y_2 - y_1).
 \]
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Vetor $\vec{AB}$}
     \includegraphics{vetor-AB-plano-cartesiano.pdf}
@@ -142,14 +118,13 @@ Um vetor $\vec{u}$ tal que
     \norm{\vec{u}} = 1
 \]
 é chamado de \textbf{vetor unitário}.
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Vetores unitários: $\norm{\vec{u}} = 1$}
     \includegraphics{vetores-unitarios-plano-cartesiano.pdf}
 \end{figure}
 
-\subsection{Operações com Vetores} % (fold)
-\label{sub:operacoes_com_vetores}
+\subsection{Operações com Vetores}
 
 \begin{definicao}
   Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores. Então:
@@ -158,7 +133,7 @@ Um vetor $\vec{u}$ tal que
   \]
 \end{definicao}
 
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \caption{Soma de vetores}
   \includegraphics{soma-vetores-plano-cartesiano.pdf}
@@ -210,7 +185,7 @@ Um vetor $\vec{u}$ tal que
   \]
 \end{definicao}
 
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \caption{Multiplicação por escalar}
   \includegraphics{multiplicacao-escalar-vetores-plano-cartesiano.pdf}
@@ -252,23 +227,12 @@ Um vetor $\vec{u}$ tal que
     Portanto as propriedades são válidas.
 \end{prova}
 
-% \begin{proposicao}
-%   Quaisquer que sejam o escalar $\alpha$ e o vetor $\vec{u}$, valem as seguintes igualdades:
-%   \begin{enumerate}[label=({\roman*})]
-%     \item $(-\alpha)\vec{u} = -(\alpha\vec{u})$;
-%     \item $\alpha(-\vec{u}) = -(\alpha\vec{u})$;
-%     \item $(-\alpha)(-\vec{u}) = \alpha\vec{u}$.
-%   \end{enumerate}
-% \end{proposicao}
-
 Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, y_1)$ de forma matricial. Para isso escrevemos as componentes de $\vec{u}$ como uma matriz de 1 coluna e duas linhas
 \[
   \vec{u} = \begin{bmatrix}
     x_1\\y_1
   \end{bmatrix}.
 \]
-
-%Vimos que a norma de um vetor é definida como o comprimento de um segmento orientado que o represente. Com a representação de vetores por coordenadas podemos reescrever o conceito de norma da seguinte maneira:
 
 \begin{exemplos}
   Seja $\vec{u} = (-2,3)$ um vetor. Então
@@ -277,12 +241,6 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
     \vec{v} &= \dfrac{\vec{u}}{\norm{u}} = \dfrac{1}{\sqrt{13}}(-2,3) = \left(\dfrac{-2}{\sqrt{13}}, \dfrac{3}{\sqrt{13}}\right).
   \end{align*}
 \end{exemplos}
-
-
-% subsection operacoes_com_vetores (end)
-
-
-% section vetores_plano (end)
 
 \begin{proposicao}
   Sejam $\vec{u} = (x_1, y_1)$ um vetor em $\real^2$ e $\alpha \in \real$. Então:
@@ -321,7 +279,7 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
 \begin{definicao}
     Dois vetores $\vec{u}$ e $\vec{v}$ são \textbf{paralelos} (ou \textbf{colineares}) se a restas que contém estes vetores são paralelas(podendo ser coincidentes).Caso $\vec{u}$ e $\vec{v}$ sejam paralelos, escreveremos $\vec{u}\varparallel\vec{v}$. Neste caso, $\vec{u}$ e $\vec{v}$ têm a mesma direção, mas podem ter sentidos contrários.
 \end{definicao}
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \caption{Vetores paralelos}
     \includegraphics{vetores-paralelos-plano-cartesiano.pdf}
@@ -347,13 +305,13 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
     Portanto $\vec{u}$ e $\lambda\vec{v}$ tem a mesma direção, o mesmo sentido e normas iguais, logo $\vec{u} = \lambda\vec{v}$, como queríamos.
 \end{prova}
 
-\subsection{Ângulo entre vetores e produto interno} % (fold)
-\label{sub:angulo_entre_vetores_e_produto_interno}
+\subsection{Ângulo entre vetores e produto interno}
+
 \begin{definicao}
   Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos. O \textbf{ângulo} entre $\vec{u}$ e $\vec{v}$ é definido pelo ângulo $\theta$ determinado por $\vec{u}$ e $\vec{v}$ e que satisfaz $0 \le \theta \le \pi$, quando os vetores $\vec{u}$ e $\vec{v}$ são representados com a mesma origem.\index{Vetores!ângulo}
 \end{definicao}
 
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \caption{ângulo entre vetores}
   \includegraphics{angulo-vetores-plano-cartesiano.pdf}
@@ -365,14 +323,14 @@ Em alguns casos pode ser mais conveniente representar um vetor $\vec{u} = (x_1, 
 \end{definicao}
 
 Sejam $\vec{u}$ e $\vec{v}$ vetores não nulos e $\theta$ o ângulo entre eles.
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \caption{Determinação de $\theta$}
   \includegraphics{determinacao-angulo-vetores-plano-cartesiano.pdf}
 \end{figure}
 
 Aplicando a Lei dos cossenos no triângulo abaixo
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \caption{Lei dos cossenos}
   \includegraphics{lei-cossenos-vetores-plano-cartesiano.pdf}
@@ -381,15 +339,6 @@ temos
 \begin{align}\label{equacaonorma}
   \norm{\vec{u} - \vec{v}}^2 = \norm{\vec{u}}^2 + \norm{\vec{v}}^2 - 2\norm{\vec{u}}\norm{\vec{v}}\cos\theta.
 \end{align}
-
-% Assim conhecendo as coordenadas dos vetores $\vec{u}$ e $\vec{v}$ podemos determinar facilmente o ângulo entre eles. Além disso, note que se $\vec{u}$ e $\vec{v}$ são vetores ortogonais, então $\theta = \pi/2$ e então a equação \eqref{equacaonorma} torna-se
-% \begin{align}\label{norma-vetores-ortogonais}
-%   \norm{\vec{u} - \vec{v}} = \sqrt{\norm{\vec{u}}^2 + \norm{\vec{v}}^2}.
-% \end{align}
-
-% \begin{observacao}
-%   A equação \eqref{norma-vetores-ortogonais} só é válida para vetores ortogonais entre si.
-% \end{observacao}
 
 \begin{definicao}\label{produtointerno}
   O \textbf{produto escalar} ou \textbf{produto interno} dos vetores $\vec{u}$ e $\vec{v}$, indicado por $\inner{u}{v}$, é o número real tal que:\index{Vetores!Produto Escalar}
@@ -585,11 +534,10 @@ Acabamos de demonstrar o seguinte teorema:
   \end{enumerate}
 \end{prova}
 
-% subsection angulo_entre_vetores_e_produto_interno (end)
-\subsection{Projeção de Vetores} % (fold)
-\label{sub:projecao_de_vetores}
+\subsection{Projeção de Vetores}
+
 Sejam $\vec{u} = (x_1, y_1)$ e $\vec{v} = (x_2, y_2)$ vetores não nulos. Suponha que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ é tal que $0 < \theta < \pi/2$.
-\begin{figure}[!h]
+\begin{figure}[H]
   \centering
   \caption{Projeção ortogonal}
   \includegraphics{projecao-vetores-plano-cartesiano.pdf}
@@ -630,7 +578,7 @@ $\lambda = \norm{\vec{OP}}/\norm{\vec{u}}$ e então
 \]
 
 Esta construção só é válida no caso em que o ângulo $\theta$ entre $\vec{u}$ e $\vec{v}$ satisfaz $0 < \theta < \pi/2$. Nos casos da Figura \ref{vetores_projecao_ortogonal},
-\begin{figure}
+\begin{figure}[H]
   \centering
   \caption{Vetor projeção}
   \label{vetores_projecao_ortogonal}
@@ -668,7 +616,7 @@ não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
 
 \begin{observacao}
   O escalar $\lambda$ encontrado na proposição anterior pode ser negativo ou zero. Ele será negativo quando $\pi/2 \le \theta \le \pi$ e será zero quando $\vec{u}\perp\vec{v}$.
-  \begin{figure}[!h]
+  \begin{figure}[H]
     \centering
     \caption{Possibilidades para $\lambda$}
     \includegraphics{vetores-projecao-escalar-plano-cartesiano.pdf}
@@ -714,7 +662,7 @@ não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
      \end{enumerate}
      \begin{solucao}
        Considere o triângulo abaixo
-       \begin{figure}[!h]
+       \begin{figure}[H]
         \centering
         \caption{Exemplo \ref{exemplosprojecao}, exercício \ref{exemploprojecao2}}
         \includegraphics{exemplo-vetores-projecao-plano-cartesiano.pdf}
@@ -740,5 +688,3 @@ não podemos usar a construção envolvendo o ângulo $\theta$ entre os vetores.
      \end{solucao}
   \end{enumerate}
 \end{exemplos}
-% subsection projecao_de_vetores (end)
-% chapter vetores (end)

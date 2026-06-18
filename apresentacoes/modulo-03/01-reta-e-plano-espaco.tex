@@ -1,9 +1,9 @@
 %!TEX program = xelatex
 %!TEX encoding = UTF-8
-\def\ano{2024}
+\def\ano{2026}
 \def\semestre{1}
-\def\disciplina{Álgebra 1}
-\def\turma{C}
+\def\disciplina{Geometria Analítica}
+\def\turma{1}
 \def\autor{José Antônio O. Freitas}
 \def\instituto{MAT-UnB}
 
@@ -127,27 +127,27 @@
 
 \begin{frame}
     De forma análoga ao casa do plano, \pause se $\vec{v} = (a,b,c)$ \pause é tal que $abc \ne 0$, \pause então podemos reescrever
-    \eqref{equacoesparametricasretaespaco} como\pause
+    \eqref{equacoesparametricasretaespaco} como
     \[
         \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b} = \dfrac{z - z_0}{c}
     \]\pause
-    que são chamadas de \textbf{equações na forma simétrica} da reta $r$.
+    que são chamadas de \textbf{equações na forma simétrica} \pause da reta $r$.
 \end{frame}
 
 \begin{frame}
     Considere duas retas $r$ e $s$ \pause de equações\pause
     \[
         r: \begin{cases}
-            x = x_0 + ta \\
-            y = y_0 + tb \\
-            z = z_0 + tc
-        \end{cases}; \quad \pause s: \begin{cases}
-            x = x_1 + \alpha d \\
-            y = y_1 + \alpha e \\
-            z = z_1 + \alpha f
-        \end{cases}; t,\ \alpha \in \real.
-    \]\pause
-    Os vetores diretores de $r$ e $s$ \pause são $\vec{u} = (a,b,c)$ \pause e $\vec{v} = (d,e,f)$, \pause respectivamente.
+            x = x_0 + \alpha a \\
+            y = y_0 + \alpha b \\
+            z = z_0 + \alpha c
+        \end{cases}; \pause \quad  s: \begin{cases}
+            x = x_1 + \beta d \\
+            y = y_1 + \beta e \\
+            z = z_1 + \beta f
+        \end{cases};\ \alpha,\ \beta \in \real.\pause
+    \]
+    Os vetores diretores de $r$ e $s$ são \pause $\vec{u} = (a,b,c)$ \pause e $\vec{v} = (d,e,f)$, \pause respectivamente.
 \end{frame}
 
 \begin{frame}
@@ -157,7 +157,7 @@
 \end{frame}
 
 \begin{frame}
-    \begin{figure}[h]
+    \begin{figure}
         \centering
         \caption{Retas Paralelas}
         \includegraphics[scale=0.7]{retas-paralelas-espaco.pdf}
@@ -166,17 +166,15 @@
 
 \begin{frame}
     \begin{enumerate}
-        \item[ii)] Se os vetores diretores não são paralelos, \pause temos duas possibilidades. \pause Considere os pontos $P_0(x_0,y_0,z_0) \in r$ \pause e
-              $P_1(x_1,y_1,z_1) \in s$.\pause
+        \item[ii)] Se os vetores diretores não são paralelos, \pause temos duas possibilidades. \pause Considere os pontos $P_0(x_0,y_0,z_0) \in r$ \pause e $P_1(x_1,y_1,z_1) \in s$.\pause
               \begin{enumerate}
-                  \item[1)] Se $\vec{P_1P_2}$, \pause $\vec{u}$ \pause e $\vec{v}$ \pause estão no mesmo plano, \pause isto é, $\langle\vec{P_1P_2},
-                            \vec{u}\times\vec{v}\rangle = 0$ \pause então $r$ e $s$ são concorrentes.
+                  \item[1)] Se $\vec{P_0P_1}$, \pause $\vec{u}$ \pause e $\vec{v}$ \pause estão no mesmo plano, \pause isto é, \pause $\langle\vec{P_0P_1}, \vec{u}\times\vec{v}\rangle = 0$ \pause então $r$ e $s$ são concorrentes.
               \end{enumerate}
     \end{enumerate}
 \end{frame}
 
 \begin{frame}
-    \begin{figure}[h]
+    \begin{figure}
         \centering
         \caption{Retas Concorrentes}
         \includegraphics[scale=0.85]{retas-concorrentes-espaco.pdf}
@@ -185,13 +183,12 @@
 
 \begin{frame}
     \begin{enumerate}
-        \item[2)] Se $\vec{P_1P_2}$, \pause $\vec{u}$ \pause e $\vec{v}$ \pause estão planos diferentes, \pause isto é, \pause $\langle\vec{P_1P_2},
-                  \vec{u}\times\vec{v}\rangle \ne 0$ \pause então $r$ e $s$ são chamadas de \textbf{retas reversas}.
+        \item[2)] Se $\vec{P_0P_1}$, \pause $\vec{u}$ \pause e $\vec{v}$ \pause estão planos diferentes, \pause isto é, \pause $\langle\vec{P_0P_1}, \vec{u}\times\vec{v}\rangle \ne 0$ \pause então $r$ e $s$ são chamadas de \textbf{retas reversas}.
     \end{enumerate}
 \end{frame}
 
 \begin{frame}
-    \begin{figure}[h]
+    \begin{figure}
         \centering
         \caption{Retas Reversas}
         \vspace{-1cm}
@@ -200,7 +197,7 @@
 \end{frame}
 
 \begin{frame}
-    Dados três planos $\pi_1$, \pause $\pi_2$ \pause e $\pi_3$ de equações\pause
+    Dados três planos $\pi_1$, \pause $\pi_2$ \pause e $\pi_3$ \pause de equações\pause
     \begin{align*}
         \pi_1 : a_1x + b_1y + c_1z + d_1 = 0 \\
         \pi_2 : a_2x + b_2y + c_2z + d_2 = 0 \\
@@ -209,8 +206,7 @@
 \end{frame}
 
 \begin{frame}
-    A interseção entre eles \pause será constituída pelos pontos cujas coordenadas sejam as soluções do sistema \pause formado pelas equações de $\pi_1$, \pause
-    $\pi_2$ \pause e $\pi_3$ \pause simultaneamente, \pause ou seja, devem ser soluções do sistema
+    A interseção entre eles \pause será constituída pelos pontos cujas coordenadas \pause sejam as soluções do sistema formado pelas equações de $\pi_1$, \pause $\pi_2$ \pause e $\pi_3$ \pause simultaneamente, \pause ou seja, \pause devem ser soluções do sistema\pause
     \[
         \begin{cases}
             a_1x + b_1y + c_1z + d_1 = 0 \\
@@ -240,7 +236,7 @@
     \begin{figure}[h]
         \centering
         \caption{$\pi_1\cap\pi_2\cap\pi_3 = \emptyset$}
-        {\centering\includegraphics{tres-planos-paralelos.pdf}}
+        {\centering\includegraphics[scale=0.2]{tres-planos-paralelos.png}}
     \end{figure}
 \end{frame}
 
@@ -269,11 +265,11 @@
 \end{frame}
 
 \begin{frame}
-    Seja $P_1(x_1,y_1,z_1)$ um ponto e $\pi$ um plano de equação $ax + by + cz + d = 0$.
+    Seja $P_1(x_1,y_1,z_1)$ um ponto \pause e $\pi$ um plano de equação $ax + by + cz + d = 0$.
 \end{frame}
 
 \begin{frame}
-    \begin{figure}[!h]
+    \begin{figure}
         \centering
         \caption{Distância entre ponto e plano}
         \includegraphics[scale=0.2]{distancia-ponto-plano.png}
@@ -281,62 +277,33 @@
 \end{frame}
 
 \begin{frame}
-    Seja $r$ a reta que contém o ponto $P_1$ é é perpendicular ao plano $\pi$. Denote por $P_2(x_2,y_2,z_2)$ a interseção de $\pi$ com $r$. O ponto $P_2$ é chamado de \textbf{projeção ortogonal} de $P_1$ sobre $\pi$. A norma do vetor $\vec{P_1P_2}$ será a distância de $P_1$ a $\pi$, isto é,
+    Seja $r$ a reta que contém o ponto $P_1$ \pause e é perpendicular ao plano $\pi$. \pause Denote por $P_2(x_2,y_2,z_2)$ \pause  a interseção de $\pi$ com $r$. \pause O ponto $P_2$ \pause é chamado de \textbf{projeção ortogonal} \pause de $P_1$ sobre $\pi$. \pause A norma do vetor $\vec{P_1P_2}$ \pause será a distância de $P_1$ a $\pi$, \pause isto é,\pause
     \[
-        d(P_1,\pi) = \norm{\vec{P_1P_2}}.
+        d(P_1,\pi) \pause = \norm{\vec{P_1P_2}} \pause = \dfrac{|ax_1 + by_1 + cz_1 + d_1|}{\sqrt{a^2 + b^2 + c^2}}.
     \]
 \end{frame}
 
 \begin{frame}
-    Seja $\vec{u} = (a,b,c)$ o vetor normal de $\pi$. Como $\vec{u}\varparallel\vec{P_1P_2}$, existe $t \in \real$ tal que
+    Um outro modo de determinar essa distância é o seguinte: \pause seja $P_0 \in \pi$. \pause Então a distância de $P_1$ a $\pi$ \pause é dada pela norma da projeção ortogonal \pause do vetor $\vec{P_0P_1}$ \pause na direção do vetor normal do plano $\vec{u} = (a,b,c)$. \pause Assim
     \[
-        \vec{P_1P_2} = t\vec{u}.
-    \]
-    Logo
-    \begin{equation}\label{equacaodistanciapontoplano}
-        d(P_1,P_2) = \norm{t(a,b,c)} = |t|\sqrt{a^2 + b^2 + c^2}.
-    \end{equation}
-\end{frame}
-
-\begin{frame}
-    Por outro lado, se $P(x_2, y_2, z_2)$, então
-    \[
-        \vec{P_1P_2} = (x_2 - x_1, y_2 - y_1, z_2 - z_1) = t(a,b,c)
-    \]
-    e como $P_2 \in \pi$ devemos ter
-    \[
-        a(x_1 + ta) + b(y_1 + tb) + c(z_1 + tc) + d = 0
-    \]
-    isto é,
-    \begin{equation}\label{equacaoauxiliardistanciapontoplano}
-        t = -\dfrac{ax_1 + by_1 + cz_1 + d_1}{a^2 + b^2 + c^2}.
-    \end{equation}
-\end{frame}
-
-\begin{frame}
-    Substituindo \eqref{equacaoauxiliardistanciapontoplano} em \eqref{equacaodistanciapontoplano} obtemos
-    \[
-        d(P_1,\pi) = \left|\dfrac{ax_1 + by_1 + cz_1 + d_1}{a^2 + b^2 + c^2}\sqrt{a^2 + b^2 + c^2}\right|
-    \]
-    portanto
-    \[
-        d(P_1,\pi) = \dfrac{|ax_1 + by_1 + cz_1 + d_1|}{\sqrt{a^2 + b^2 + c^2}}.
+        d(P_1,\pi) \pause = \norm{\proj_{\vec{u}}\vec{P_0P_1}} \pause = \dfrac{|\langle\vec{P_0P_1},\vec{u}\rangle|}{\norm{\vec{u}}}.
     \]
 \end{frame}
 
 \begin{frame}
-    Um outro modo de determinar essa distância é o seguinte: seja $P_0 \in \pi$. Então a distância de $P_1$ a $\pi$ é dada pela norma da projeção ortogonal do vetor $\vec{P_0P_1}$ na direção do vetor normal do plano $\vec{u} = (a,b,c)$. Assim
-    \[
-        d(P_1,\pi) = \norm{\proj_{\vec{u}}\vec{P_0P_1}} = \dfrac{|\langle\vec{P_0P_1},\vec{u}\rangle|}{\norm{\vec{u}}}.
-    \]
-\end{frame}
-
-\begin{frame}
-    \begin{figure}[!h]
+    \begin{figure}
         \centering
         \caption{Distância entre ponto e plano}
         \includegraphics[scale=0.2]{distancia-ponto-plano-vetores.png}
     \end{figure}
+\end{frame}
+
+\begin{frame}
+    Dados um ponto $P$ e uma reta $r$ como determinar a distância de $P$ a $r$?
+\end{frame}
+
+\begin{frame}
+    Para determinar $d(P,r)$ \pause primeiro construímos um plano $\pi$ \pause passando por $P$ \pause e com vetor normal \pause paralelo ao vetor diretor de $r$.
 \end{frame}
 
 \begin{frame}
@@ -350,17 +317,35 @@
 \end{frame}
 
 \begin{frame}
-    Para determinar $d(P,r)$ primeiro construímos um plano $\pi$ passando por $P$ e com vetor normal paralelo ao vetor diretor de $r$. Assim
+    Assim
     \[
-        d(P,r) = d(P,P_1)
+    d(P,r) = d(P,P_1)
     \]
     onde $P_1 \in \pi\cap r$.
 \end{frame}
 
 \begin{frame}
-    Sejam $r$ e $s$ retas. Se $r \varparallel s$ então a distância entre $r$ e $s$ é dada pela distância entre um ponto de $r$ e a reta $s$, ou o contrário. Suponha então que $r$ e $s$ são concorrentes ou reversas. %Por um ponto $P$ de $s$ tracemos uma reta $s'$ paralela a $r$.
+    Sejam $r$ e $s$ retas. \pause Se $r \varparallel s$ \pause então a distância entre $r$ e $s$ \pause é dada pela distância entre um ponto de $r$ \pause e a reta $s$, \pause ou o contrário. \pause Suponha então que $r$ e $s$ são concorrentes ou reversas. \pause
 
-    Estas duas retas definem dois planos paralelos (que podem ser coincidentes, no caso em que as retas são concorrentes). Um plano é o que contém $r$ e é paralelo a $s$, que vamos chamar de $\pi_1$. O outro contém $s$ e é paralelo a $r$, que chamaremos de $\pi_2$.
+    \vspace{.5cm}
+
+    Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$.\pause
+
+    \vspace{.5cm}
+
+    Vamos considerar então o caso em que $r$ e $s$ são retas reversas.
+\end{frame}
+
+\begin{frame}
+    Estas duas retas definem dois planos paralelos. \pause
+
+    \vspace{.5cm}
+
+    Um plano é o que contém $r$ e é paralelo a $s$, \pause que vamos chamar de $\pi_1$. \pause
+
+    \vspace{.5cm}
+
+    O outro contém $s$ e é paralelo a $r$, \pause que chamaremos de $\pi_2$.
 \end{frame}
 
 \begin{frame}
@@ -372,20 +357,18 @@
 \end{frame}
 
 \begin{frame}
-    Sejam $\vec{u}$ e $\vec{v}$ os vetores diretores de $r$ e $s$, respectivamente. Então o vetor $\vec{w} = \vec{u}\times\vec{v}$ é normal aos planos $\pi_1$ e $\pi_2$. Assim
+    Sejam $\vec{u}$ \pause e $\vec{v}$ \pause os vetores diretores \pause de $r$ e $s$, \pause respectivamente. Então o vetor $\vec{u}\times\vec{v}$ \pause é normal aos planos $\pi_1$ \pause e $\pi_2$. \pause Assim
     \[
         d(r,s) = d(\pi_1,\pi_2).
-    \]
+    \]\pause
     Mas
     \[
-        d(\pi_1,\pi_2) = d(\pi_1, Q) = \dfrac{|\langle\vec{PQ},\vec{w}\rangle|}{\norm{\vec{w}}} = \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}}
-    \]
-    onde $P \in r$ e $Q \in s$. Portanto,
+        d(\pi_1,\pi_2) = \pause \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}}
+    \]\pause
+    onde $P \in r$ \pause e $Q \in s$. \pause Portanto,
     \[
-        d(r,s) = d(\pi_1, Q) = \dfrac{|\langle\vec{PQ},\vec{w}\rangle|}{\norm{\vec{w}}} = \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}}.
+        d(r,s) \pause = \dfrac{|\langle\vec{PQ},\vec{u}\times\vec{v}\rangle|}{\norm{\vec{u}\times\vec{v}}}.
     \]
-
-    Se $r \cap s \ne \emptyset$, então $d(r,s) = 0$ pois $\vec{PQ}$, $\vec{u}$ e $\vec{v}$ estão no mesmo plano.
 \end{frame}
 
 \end{document}

@@ -3,11 +3,10 @@
 %%Usar makeindex -s indexstyle.ist arquivo.idx no terminal para gerar o índice remissivo agrupado por inicial
 %%Após executar pdflatex arquivo
 
-\chapter{Circunferências e Cônicas} % (fold)
-\label{cha:circunferencias_e_conicas}
+\chapter{Circunferências e Cônicas}
 
-\section{Equações da Circunferência} % (fold)
-\label{sec:equacoes_da_circunferencias}
+\section{Equações da Circunferência}
+
 
 \begin{definicao}
     A circunferência é o conjunto dos pontos do plano que estão a uma mesma distância (denominada \textbf{raio}) de um dado ponto do plano (chamado \textbf{centro}).\index{Circunferência}
@@ -32,7 +31,7 @@ Agora, para os vetores $\vec{CP}$ e $\vec{CB}$, temos $\vec{CP} = (x - x_0, y - 
     \cos\alpha = \dfrac{y - y_0}{r}.
 \end{equation}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \caption{Circunferência}\label{circunferencia}
     \includegraphics{circunferencia.pdf}
@@ -203,10 +202,7 @@ Como os ponto $P_1$, $P_2$ e $P_3$ não são colineares, este sistema sempre pos
     \end{enumerate}
 \end{exemplos}
 
-% section equacoes_da_circunferencias (end)
-
-\section{Cônicas} % (fold)
-\label{sec:conicas}
+\section{Cônicas}
 
 \begin{definicao}
     Chama-se \textbf{cônica} o lugar geométrico dos pontos $P(x,y)$ que satisfazem uma equação do segundo grau $g(x,y) = 0$, onde\index{Cônicas}
@@ -221,7 +217,6 @@ A equação \eqref{equacaoconica} pode representar:
 \begin{enumerate}[label=({\arabic*})]
     \item um conjunto vazio: $x^2 + y^2 = -1$;
     \item um conjunto formado por um ponto: $x^2 + y^2 = 0$;
-          %\item uma reta;
     \item a reunião de duas retas (paralelas ou concorrentes): $x^2 - y^2 - 2x - 6y -8 =0$;
     \item uma circunferência: $x^2 + y^2 - 13x + y + 10 = 0$;
     \item uma elipse: $4x^2 + 9y^2 - 8x - 36y + 4 = 0$;
@@ -231,8 +226,7 @@ A equação \eqref{equacaoconica} pode representar:
 
 Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio, um ponto, retas ou circunferências diremos que a cônica definida é uma \textbf{cônica degenerada}. Aqui vamos estudar as cônicas chamadas de elipse, hipérbole e parábola.
 
-\subsection{Elipse} % (fold)
-\label{sub:elipse}
+\subsection{Elipse}
 
 \begin{definicao}
     Sejam $F_1$ e $F_2$ pontos distintos do plano, $2c$ a distância entre $F_1$ e $F_2$ e $a$ um número real tal que $a > c$. O lugar geométrico $\mathcal{E}$ dos pontos $P$ tais que
@@ -388,7 +382,7 @@ Na equação \eqref{equacaoelipse}, fazendo $y \ge 0$ podemos escrever
     y = \dfrac{b}{a}\sqrt{a^2 - x^2},\quad x \in [0,a].
 \]
 Tal equação é uma função em $x$, contínua, decrescente e com concavidade para baixo em todo seu domínio. Assim seu gráfico é dado pela Figura \ref{GraficoprimeiroquadranteElipse}.
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \caption{Gráfico da função $y = \dfrac{b}{a}\sqrt{a^2 - x^2}$}
     \label{GraficoprimeiroquadranteElipse}
@@ -573,10 +567,7 @@ modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/
     e = \dfrac{c}{a}.
 \]
 
-% subsection elipse (end)
-
-\subsection{Hipérbole} % (fold)
-\label{sub:hiperbole}
+\subsection{Hipérbole}
 
 \begin{definicao}
     Sejam $F_1$ e $F_2$ pontos distintos do plano tais que sua distância seja $2c$. Considere um número real $a$ tal que $0 < a < c$. O lugar geométrico $\mathcal{H}$ dos pontos $P(x,y)$ tais que
@@ -820,27 +811,13 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
     \end{enumerate}
 \end{exemplos}
 
-% \begin{observacao}
-%   No caso de uma hipérbole $\mathcal{H}$ com focos no eixo $y$, isto é, com equação
-%   \[
-%     \mathcal{H}: \dfrac{y^2}{a^2} - \dfrac{x^2}{b^2} = 1
-%   \]
-%   as assíntotas terão equações dadas por
-%   \[
-%     x = \pm \dfrac{a}{b}y.
-%   \]
-% \end{observacao}
-
 \begin{figure}[H]
     \centering
     \caption{Hipérbole $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$ com assíntotas $x = -\dfrac{a}{b}y$ e $x = \dfrac{a}{b}y$}
     \includegraphics{hiperbole-focos-eixo-Y.pdf}
 \end{figure}
 
-% subsection hiperbole (end)
-
-\subsection{Parábola} % (fold)
-\label{sub:parabolas}
+\subsection{Parábola}
 
 \begin{definicao}
     Seja $r$ uma reta e $F$ um ponto que não pertence a $r$. O lugar geométrico $\mathcal{P}$ dos pontos equidistantes de $F$ e $r$ chama-se \textbf{parábola}.
@@ -950,11 +927,8 @@ Nos demais casos temos:
 \begin{proposicao}
     As equações $y^2 = qx$ e $x^2 = qy$ descrevem uma parábola se, e somente se, $q \ne 0$.
 \end{proposicao}
-% subsection parabolas (end)
-% section conicas (end)
 
-\section{Rotação e Translação de Eixos} % (fold)
-\label{sec:rotacao_e_translacao_de_eixos}
+\section{Rotação e Translação de Eixos}
 
 Para determinar a cônica representada pela equação
 \[
@@ -962,8 +936,8 @@ Para determinar a cônica representada pela equação
 \]
 iremos utilizar translações e rotações de eixos para simplificar sua equação.
 
-\subsection{Translação de eixos} % (fold)
-\label{sub:translacaoo_de_eixos}
+\subsection{Translação de eixos}
+
 Considere a seguinte cônica
 \begin{equation}\label{conicaexemplo}
     x^2 + 2y^2 - 4x - 4y - 1 = 0.
@@ -1085,10 +1059,8 @@ As mudanças introduzidas pelas equações \eqref{mudancaXgeral} e \eqref{mudanc
               \end{solucao}
     \end{enumerate}
 \end{exemplos}
-% % subsection translacaoo_de_eixos (end)
 
-\subsection{Rotação de eixos} % (fold)
-\label{sub:rotacao_de_eixos}
+\subsection{Rotação de eixos}
 
 Considere o sistema cartesiano com centro em $(0,0)$. Sejam $\vec{e_1} = (1,0)$ e $\vec{e_2} = (0,1)$. Para qualquer vetor $\vec{P} = (x,y)$ podemos escrever
 \begin{align}\label{equacaoxy}
@@ -1156,132 +1128,6 @@ Com isso para cada ponto $P(x,y)$ as suas coordenadas, após uma rotação no se
     \end{align*}
     Daí no novo sistema $P(3 + 2\sqrt{3}, 2 - 3\sqrt{3})$.
 \end{exemplos}
-
-% \begin{exemplos}
-%   Identifique as cônicas:
-%   \begin{enumerate}
-%     \item $3x^2 + 3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$
-%     \begin{solucao}
-%       Fazendo as mudanças
-%       \begin{align}
-%         x = x_1\cos\theta - y_1\sin\theta\\
-%         x = x_1\sin\theta + y_1\cos\theta
-%       \end{align}
-%       temos
-%       \begin{align*}
-%         &3(x_1\cos\theta - y_1\sin\theta)^2 + 3(x_1\sin\theta + y_1\cos\theta)^2\\ &- 10(x_1\cos\theta - y_1\sin\theta)(x_1\sin\theta + y_1\cos\theta)\\ & + 12\sqrt{2}(x_1\cos\theta - y_1\sin\theta) - 4\sqrt{2}(x_1\sin\theta + y_1\cos\theta)\\ &= (3\cos^2\theta + 3\sin^2\theta - 10\sin\theta\cos\theta)x_1^2 \\ &+ (3\sin^2\theta + 3\cos^2\theta + 10\sin\theta\cos\theta)y_1^2 \\ &+ (6\sin\theta\cos\theta - 10\cos^2\theta + 10\sin^2\theta - 6\sin\theta\cos\theta)x_1y_1 \\ &+ (12\sqrt{2}\cos\theta - 4\sqrt{2}\sin\theta)x_1 + (-12\sqrt{2}\sin\theta - 4\sqrt{2}\cos\theta)y_1 + 32 = 0.
-%       \end{align*}
-%       Assim $\theta$ deve ser tal que
-%       \[
-%         -10\cos^2\theta + 10\sin^2\theta = 0,
-%       \]
-%       isto é, $\theta = \pi/4$. Substituindo esse valor de $\theta$ na equação anterior e simplificando obtemos
-%       \[
-%         x_1^2 - 4y_1^2 - 4x_1 + 8y_1 - 16 = 0.
-%       \]
-%       Nessa nova equação podemos completar quadrados
-%       \begin{align*}
-%         &(x_1^2 - 4x_1 + 4) - 4 - 4(y_1^2 - 2y_1 + 1 - 1) - 16 = 0\\
-%         &(x_1 - 2)^2 - 4(y_1 - 1)^2 = 16.
-%       \end{align*}
-%       Fazendo
-%       \begin{align*}
-%         x_2 = x_1 - 2\\
-%         y_2 = y_1 - 1
-%       \end{align*}
-%       encontramos
-%       \[
-%         \dfrac{x_2^2}{16} - \dfrac{y_2^2}{4} = 1
-%       \]
-%       que é uma hipérbole de vértices no eixo $x_2$.
-%       \begin{figure}[!h]
-%         \centering
-%         \caption{Hipérbole $3x^2 +3y^2 - 10xy + 12\sqrt{2}x - 4\sqrt{2}y + 32 = 0$}
-%         \includegraphics{hiperbole-rotacionada-transladada.pdf}
-%       \end{figure}
-%     \end{solucao}
-%     \item $52x^2 - 72xy + 73y^2 - 400 = 0$
-%     \begin{solucao}
-%       Fazendo as mudanças
-%       \begin{align}
-%         x = x_1\cos\theta - y_1\sin\theta\\
-%         x = x_1\sin\theta + y_1\cos\theta
-%       \end{align}
-%       temos
-%       \begin{align}\label{conicaelipse}
-%         &52(x_1\cos\theta - y_1\sin\theta)^2 + 73(x_1\sin\theta + y_1\cos\theta)^2\nonumber \\ &- 72(x_1\cos\theta - y_1\sin\theta)(x_1\sin\theta + y_1\cos\theta) - 400 = 0\nonumber\\ &(52\cos^2\theta - 72\sin\theta\cos\theta + 73\sin^2\theta)x_1^2 + (52\sin^2\theta + 72\sin\theta\cos\theta + 73\cos^2\theta)y_1^2 \nonumber\\&+ (-104\sin\theta\cos\theta + 72\sin^2\theta - 72\cos^2\theta + 146\sin\theta\cos\theta)x_1y_1 - 400 = 0
-%       \end{align}
-%       Assim devemos ter
-%       \begin{align*}
-%         &-104\sin\theta\cos\theta + 72\sin^2\theta - 72\cos^2\theta + 146\sin\theta\cos\theta = 0\\
-%         &42\sin\theta\cos\theta + 72(\sin^2\theta - \cos^2\theta) = 0\\
-%         &21\sin(2\theta) - 72\cos(2\theta) = 0\\
-%         &\tan(2\theta) = \dfrac{24}{7}.
-%       \end{align*}
-%       Agora
-%       \[
-%         \cos(2\theta) = \dfrac{1}{\sqrt{1 + \tan^2(2\theta)}}
-%       \]
-%       e usando as equações $\cos^2\theta = (1/2)(1 + \cos(2\theta))$ e $\sin^2\theta = (1/2)(1 - \cos(2\theta))$ obtemos
-%       \[
-%         \cos\theta = \dfrac{4}{5} \quad \mbox{e}\quad \sin\theta = \dfrac{3}{5}.
-%       \]
-%       Substituindo na equação \eqref{conicaelipse} obtemos
-%       \begin{align*}
-%         &\left(52\dfrac{16}{25} - 72\dfrac{12}{25} + 73\dfrac{9}{25}\right)x_1^2 + \left(52\dfrac{9}{25} + 72\dfrac{12}{25} + 73\dfrac{16}{25}\right)y_1^2 - 400 = 0\\
-%         &25x_1^2 + 100y_1^2 = 400\\
-%         &\dfrac{x_1^2}{16} + \dfrac{y_1^2}{4} = 1
-%       \end{align*}
-%       que representa uma elipse com focos no eixo $x_1$.
-%       \begin{figure}[!h]
-%         \centering
-%         \caption{Elipse $52x^2 - 72xy + 73y^2 - 400 = 0$}
-%         \includegraphics{elipse-rotacionada.pdf}
-%       \end{figure}
-%     \end{solucao}
-%     \item $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$
-%     \begin{solucao}
-%       Fazendo as mudanças
-%       \begin{align}
-%         x = x_1\cos\theta - y_1\sin\theta\\
-%         x = x_1\sin\theta + y_1\cos\theta
-%       \end{align}
-%       temos
-%       \begin{align}\label{conicaparabola}
-%         &(x_1\cos\theta - y_1\sin\theta)^2 - 2(x_1\cos\theta - y_1\sin\theta)(x_1\sin\theta + y_1\cos\theta)\nonumber \\&+ (x_1\sin\theta + y_1\cos\theta)^2 - 2(x_1\cos\theta - y_1\sin\theta) - 2(x_1\sin\theta + y_1\cos\theta) + 1 = 0\nonumber\\
-%         &(\cos^2\theta - 2\sin\theta\cos\theta + \sin^2\theta)x_1^2 + (\sin^2\theta + 2\sin\theta\cos\theta + \cos^2\theta)y_1^2\nonumber\\ &+ (-2\sin\theta\cos\theta - 2\cos^2\theta + 2\sin^2\theta + 2\sin\theta\cos\theta)x_1y_1\nonumber\\ &+ (-2\cos\theta - 2\sin\theta)x_1 + (2\sin\theta - 2\cos\theta)y_1 + 1 = 0.
-%       \end{align}
-%       Assim devemos ter
-%       \[
-%         -2\cos^2\theta + 2\sin^2\theta = 0,
-%       \]
-%       isto é, $\theta = \pi/4$. Substituindo em \eqref{conicaparabola} obtemos a equação
-%       \[
-%         y_1^2 = \sqrt{2}\left(x_1 - \dfrac{1}{2\sqrt{2}}\right).
-%       \]
-%       Fazendo
-%       \begin{align*}
-%         x_1 - \dfrac{1}{2\sqrt{2}} = x_2\\
-%         y_1 = y_2
-%       \end{align*}
-%       encontramos
-%       \[
-%         y_2^2 = \sqrt{2}x_2
-%       \]
-%       que representa uma parábola com foco no eixo $x_2$ e reta diretriz $x_2 = -\sqrt{2}/4$.
-%       \begin{figure}[!h]
-%         \centering
-%         \caption{Parábola $x^2 - 2xy + y^2 - 2x - 2y + 1 = 0$}
-%         \includegraphics{parabola-rotacionada-transladada.pdf}
-%       \end{figure}
-%     \end{solucao}
-%   \end{enumerate}
-% \end{exemplos}
-
-% subsection rotacao_de_eixos (end)
-
-% \section{Rotações de Eixos: método matricial} % (fold)
-% \label{sec:rotacoes_de_eixos_metodo_matricial}
 
 Considere uma cônica de equação
 \begin{equation}\label{equacao_geral_conica}
@@ -1785,13 +1631,3 @@ Portanto a rotação que elemina o termo $xy$ é dada por $R_\theta = [U_1\ U_2]
         \item Se $a'c' = 0$, então $\mathcal{C}$ é uma parábola, um par de retas paralelas, uma reta ou o conjunto vazio.
     \end{enumerate}
 \end{teorema}
-% section rotacoes_de_eixos_metodo_matricial (end)
-
-% section rotacao_e_translacao_de_eixos (end)
-
-% \section{Seções Cônicas} % (fold)
-% \label{sec:secoes_conicas}
-% \missingfigure{Figuras de seções cônicas}
-% section secoes_conicas (end)
-
-% chapter circunferencias_e_conicas (end)
