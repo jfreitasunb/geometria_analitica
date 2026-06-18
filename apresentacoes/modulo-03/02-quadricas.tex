@@ -30,7 +30,7 @@
     \begin{frame}
       Em $\real^3$ estamos interessados em objetos definidos por uma equação de segundo grau em $x$, $y$ e $z$ da forma\pause
       \begin{equation}\label{equacao_quadrica}
-          ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.\pause
+          ax^2 \pause + by^2 \pause + cz^2 \pause + dxy \pause + exz \pause + fyz \pause + gx \pause + hy \pause + iz \pause + j = 0.\pause
       \end{equation}
 
       O conjunto de pontos em $\real^3$ \pause satisfazendo uma equação da forma \eqref{equacao_quadrica} \pause é chamado de uma \textbf{quádrica} \pause ou \textbf{superfície quádrica}. \pause Nessa equação, \pause pelo menos um dos números \pause $a$, \pause $b$, \pause $c$, \pause $d$, \pause $e$ ou \pause $f$ deve ser não nulo.
@@ -70,6 +70,22 @@
           \caption{Elipsoide: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
           \includegraphics[scale=0.2]{elipsoide.png}
       \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        Na equação do elipsoide \pause se $z = 0$, \pause a equação torna-se\pause
+        \[
+            \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1
+        \]\pause
+        e a superfície resultante é chamada de \textbf{cilindro elíptico.}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}[H]
+            \centering
+            \caption{Cilindro Elíptico: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$}
+            \includegraphics[scale=0.2]{cilindro_eliptico.png}
+        \end{figure}
     \end{frame}
 
     \begin{frame}
@@ -149,11 +165,39 @@
     \end{frame}
 
     \begin{frame}
+        \begin{definicao}
+            Um \textbf{cilindro hiperbólico} \pause é uma quádrica descrita pela equação\pause
+            \[
+            \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1\pause
+            \]
+            onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois \pause deles são distintos.
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
       \begin{figure}
           \centering
-          \caption{Hiperboloide duas folhas: $\dfrac{z^2}{c^2} - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$}
-          \includegraphics[scale=0.2]{hiperboloide_de_duas_folhas.png}
+          \caption{Cilindro hiperbólico: $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
+          \includegraphics[scale=0.2]{cilindro_hiperbolico.png}
       \end{figure}
+    \end{frame}
+
+    \begin{frame}
+        \begin{definicao}
+            Um \textbf{cilindro parabólico} \pause é uma quádrica descrita pela equação\pause
+            \[
+                y = ax^2\pause
+            \]
+            onde $a$ é um número real.
+        \end{definicao}
+    \end{frame}
+
+    \begin{frame}
+        \begin{figure}
+            \centering
+            \caption{Cilindro parabólico: $y = ax^2$}
+            \includegraphics[scale=0.2]{cilindro_parabolico.png}
+        \end{figure}
     \end{frame}
 
     \begin{frame}
