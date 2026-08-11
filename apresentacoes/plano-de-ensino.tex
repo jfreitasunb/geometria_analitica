@@ -10,6 +10,7 @@
 \documentclass{beamer}
 \usetheme{Boadilla}
 \usecolortheme{beaver}
+
 % \mode<presentation>
 \input{configuracoes_latex/pacotes}
 \input{configuracoes_latex/ambientes}
@@ -21,21 +22,116 @@
 \date{}
 
 \begin{document}
-    \begin{frame}
-        \maketitle
-    \end{frame}
+\begin{frame}
+    \maketitle
+\end{frame}
 
-    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
-    \begin{frame}
-        \begin{itemize}
-            \item Curso divido em 3 módulos;
-            \item Principais tópicos:
-            \begin{itemize}
-                \item Objetos geométricos no plano cartesiano
-                \item Objetos geométricos no espaço
-                \item Reconhecimento de objetos no plano e espaço
-            \end{itemize}
-        \end{itemize}
-    \end{frame}
+\begin{frame}
+    \textbf{Principais tópicos:}
+    \begin{itemize}
+        \item[\color{blue}{$\bullet$}] Vetores em $\real^2$ e suas propriedades.\pause
+
+              \vspace{0.7cm}
+
+        \item[\color{blue}{$\bullet$}] Estudo da reta em $\real^2$. \pause Circunferência em $\real^2$. \pause As cônicas em $\real^2$: \pause elipse, hipérbole
+              e parábola. \pause Reconhecimento de cônicas.\pause
+
+              \vspace{0.7cm}
+
+        \item[\color{blue}{$\bullet$}] Vetores em $\real^3$. \pause Equações da reta e do plano. \pause As quádricas em $\real^3$: \pause esfera, cilindro,
+              parabolóide, elipsóide e hiperbolóide. \pause Reconhecimento de quádricas.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+
+    {\bf{BIBLIOGRAFIA:}}
+    \begin{itemize}
+
+        \item[\color{blue}{$\bullet$}] {\it Geometria Analítica: um tratamento vetorial}, Boulos, P.; Camargo, I.; 3$^a$ Edição, São Paulo: Prentice Hall, 2005.
+
+        \item[\color{blue}{$\bullet$}] {\it Geometria Analítica},  Santos, F. J.; Ferreira, S. F.; 1$^{a}$ Edição, Bookman, Companhia Editora, 2009.
+
+        \item[\color{blue}{$\bullet$}] {\it Álgebra Linear e Geometria Analítica}, Machado, A. S.; 2$^a$ Edição, Atual Editora, 1980.
+
+        \item[\color{blue}{$\bullet$}] {\it Geometria Analítica}, Reis, G. L.; Silva, V. V; 2$^a$ Edição, Rio de Janeiro: LTC, 2013.
+
+        \item[\color{blue}{$\bullet$}] {\it Geometria Analítica}, Steinbruch, A.; Winterle, P.; $1^a$ Edição, São Paulo: McGraw-Hill, 1987.
+
+        \item[\color{blue}{$\bullet$}] {\it Matrizes, Vetores e Geometria Analítica}, Santos, R.;  UFMG, 2013, Disponível em \url{https://regijs.github.io/livros.html}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    {\bf{SISTEMA DE AVALIAÇÃO:}} O curso é dividido em três módulos \pause e em cada um será realizada uma prova, as quais são atribuídas as notas $P_1$, $P_2$
+    e $P_3$.\pause
+
+    \vspace{1cm}
+
+    {\bf Prova Substitutiva:} o aluno com falta justificada \pause em (apenas) uma das provas \pause poderá realizar uma prova substitutiva, \pause cuja nota será atribuída à
+    nota da prova perdida no cálculo da NF. \pause O conteúdo da prova substitutiva será referente ao conteúdo da prova perdida.
+\end{frame}
+
+\begin{frame}
+
+    \begin{center}
+        \begin{tabular}{c|c|c}
+            \hline\hline
+            \hspace{1cm}{\bf Prova} & {\bf Data}                          & {\bf Horário} \\
+            \hline\hline
+            $P_1$                   & 10/09/26 (quinta-feira) \phantom{x} & 16:00 - 18:00 \\
+            \hline
+            $P_2$                   & 22/10/26 (quinta-feira) \phantom{x} & 16:00 - 18:00 \\
+            \hline
+            $P_3$                   & 03/12/26 (quinta-feira) \phantom{x} & 16:00 - 18:00 \\
+            \hline
+            $P_{sub}$               & 08/12/26 (terça-feira) \phantom{x}  & 16:00 - 18:00 \\
+            \hline\hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+
+    {\bf Nota Final:} A partir das notas das provas mencionadas neste texto, a nota final ($NF$) de cada estudante é dada
+    por
+    \vspace{-0.15cm}
+    \[
+        NF = \frac{ P_1 + P_2 + 2P_3}{4}
+    \]
+    e será considerado aprovado o estudante que obtiver $NF \geq 5,00$.
+\end{frame}
+
+\begin{frame}
+    {\bf{PÁGINA DA TURMA:}} A página da disciplina está disponível no endereço
+    \begin{center}
+        \href{https://moodle.mat.unb.br/course/view.php?id=65}{https://moodle.mat.unb.br}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    Alguns conhecimentos necessários para o andamento do curso:\pause
+    \begin{itemize}
+        \item[\color{blue}{$\bullet$}] Matrizes e operações básicas com matrizes: soma, multiplicação de um número por uma matriz, multiplicação de
+              matrizes.\pause
+
+        \item[\color{blue}{$\bullet$}] Cálculo de determinante para matrizes de ordem 2 e 3.\pause
+
+        \item[\color{blue}{$\bullet$}] Determinação de raízes de polinômios de graus 2 e 3.\pause
+
+        \item[\color{blue}{$\bullet$}] Resolução de sistemas lineares de 2 e 3 equações:\pause
+              \[\begin{cases}
+                      ax + by = c \\
+                      dx + ey = f
+                  \end{cases},\pause
+                  \begin{cases}
+                      ax + by + cz = d \\
+                      ex + fy + gz = h \\
+                      ix + jy + kz = l
+                  \end{cases}
+              \]
+    \end{itemize}
+\end{frame}
 \end{document}
