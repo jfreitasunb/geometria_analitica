@@ -9,240 +9,240 @@
 
 Seja $r$ uma reta do plano. Dados dois pontos $A$ e $B$ em $r$ podemos considerar o vetor $\vec{u} = \vec{AB}$. Por definição diremos que a reta $r$ e o vetor $\vec{u}$ são paralelos. Assim temos a seguinte definição:
 \begin{definicao}
-  Qualquer vetor não nulo e paralelo a uma dada reta $r$ é chamado de \textbf{vetor diretor} de $r$.\index{Reta no Plano!Vetor diretor}
+    Qualquer vetor não nulo e paralelo a uma dada reta $r$ é chamado de \textbf{vetor diretor} de $r$.\index{Reta no Plano!Vetor diretor}
 \end{definicao}
 
 Seja $\vec{u}$ um vetor diretor de uma reta $r$ e seja $A$ um ponto pertencente à reta $r$. Assim um ponto $X$ pertence a reta $r$ se, e somente se, $\vec{AX}\varparallel\vec{u}$.
 \begin{figure}[H]
-  \centering
-  \caption{Equação vetorial da reta}
-  \includegraphics{equacao-vetorial-reta-plano-cartesiano.pdf}
+    \centering
+    \caption{Equação vetorial da reta}
+    \includegraphics{equacao-vetorial-reta-plano-cartesiano.pdf}
 \end{figure}
 
 Ou seja, se e somente se, existe um número real $\lambda$ tal que
 \begin{equation}\label{equacao_vetorial_reta_plano}
-  \vec{AX} = \lambda\vec{u}.
+    \vec{AX} = \lambda\vec{u}.
 \end{equation}
 
 Assim para cada $\lambda \in \real$ fica definido um ponto $X$ na reta $r$ e se $X$ é um ponto da reta $r$, então existe um número real $\lambda$ tal que $\vec{AX} = \lambda\vec{u}$.
 
 \begin{definicao}\index{Reta no Plano!Equação Vetorial}
-  A equação \eqref{equacao_vetorial_reta_plano} é chamada de \textbf{equação vetorial da reta} $r$ ou \textbf{equação da reta} $r$ \textbf{na forma vetorial}.
+    A equação \eqref{equacao_vetorial_reta_plano} é chamada de \textbf{equação vetorial da reta} $r$ ou \textbf{equação da reta} $r$ \textbf{na forma vetorial}.
 \end{definicao}
 
 \begin{exemplo}
-  Seja $r$ uma reta passando pelos pontos $A(1,2)$ e $B(-1, 3)$. Determine sua equação vetorial.
-  \begin{solucao}
-    Um vetor diretor da reta $r$ pode ser tomado como sendo $\vec{u} = \vec{AB} = (-2, 1)$. Assim a equação vetorial de $r$ será:
-    \[
-      \vec{AX} = \lambda\vec{u} = \lambda(-2,1), \quad \lambda \in \real.
-    \]
-    Podemos também tomar como vetor diretor de $r$ o vetor $\vec{v} = \vec{BA} = (2,-1)$. Daí a equação vetorial de $r$ será
-    \[
-      \vec{AX} = \alpha\vec{v} = \alpha(2, -1), \quad \alpha \in \real.
-    \]
-  \end{solucao}
+    Seja $r$ uma reta passando pelos pontos $A(1,2)$ e $B(-1, 3)$. Determine sua equação vetorial.
+    \begin{solucao}
+        Um vetor diretor da reta $r$ pode ser tomado como sendo $\vec{u} = \vec{AB} = (-2, 1)$. Assim a equação vetorial de $r$ será:
+        \[
+            \vec{AX} = \lambda\vec{u} = \lambda(-2,1), \quad \lambda \in \real.
+        \]
+        Podemos também tomar como vetor diretor de $r$ o vetor $\vec{v} = \vec{BA} = (2,-1)$. Daí a equação vetorial de $r$ será
+        \[
+            \vec{AX} = \alpha\vec{v} = \alpha(2, -1), \quad \alpha \in \real.
+        \]
+    \end{solucao}
 \end{exemplo}
 
 \begin{observacao}
-  Como o ponto e o vetor diretor de uma reta $r$ são escolhidos arbitrariamente, existem infinitas equações vetoriais para uma mesma reta $r$. Por exemplo, se $A$ e $B$ são pontos distintos de uma reta $r$, então $\vec{AB}$ e $\vec{BA}$ são vetores diretores distintos de $r$ e portanto temos as equações vetoriais
-  \begin{align*}
-    \vec{AX} = \lambda\vec{AB}\\
-    \vec{AX} = \alpha\vec{BA}.
-  \end{align*}
-  Na verdade, qualquer vetor múltiplo do vetor $\vec{AB}$ pode ser tomado como vetor diretor de $r$.
+    Como o ponto e o vetor diretor de uma reta $r$ são escolhidos arbitrariamente, existem infinitas equações vetoriais para uma mesma reta $r$. Por exemplo, se $A$ e $B$ são pontos distintos de uma reta $r$, então $\vec{AB}$ e $\vec{BA}$ são vetores diretores distintos de $r$ e portanto temos as equações vetoriais
+    \begin{align*}
+        \vec{AX} & = \lambda\vec{AB} \\
+        \vec{AX} & = \alpha\vec{BA}.
+    \end{align*}
+    Na verdade, qualquer vetor múltiplo do vetor $\vec{AB}$ pode ser tomado como vetor diretor de $r$.
 \end{observacao}
 
 Agora, seja $\vec{u} = (a, b)$ um vetor diretor de uma reta $r$. Dado um ponto $A = (x_0, y_0)$ de $r$ o ponto $X = (x, y)$ pertence a reta $r$ se, e somente se, existe $\lambda \in \real$ tal que
 \begin{align*}
-  \vec{AX} &= \lambda\vec{u}\\
-  (x - x_0, y - y_0) &= (\lambda a, \lambda b).
+    \vec{AX}           & = \lambda\vec{u}          \\
+    (x - x_0, y - y_0) & = (\lambda a, \lambda b).
 \end{align*}
 
 Assim a reta $r$ pode ser descrita pelas equações
 \begin{equation}\label{equacao_parametrica_reta_plano}
-  \begin{cases}
-    x = x_0 + \lambda a\\
-    y = y_0 + \lambda b
-  \end{cases}, \lambda \in \real
+    \begin{cases}
+        x = x_0 + \lambda a \\
+        y = y_0 + \lambda b
+    \end{cases}, \lambda \in \real
 \end{equation}
 
 \begin{definicao}\index{Reta no Plano!Equação Paramétrica}
-  O sistema de equações \eqref{equacao_parametrica_reta_plano} é chamado \textbf{sistema de equações paramétricas da reta} $r$ ou \textbf{sistema de equações da reta} $r$ \textbf{na forma paramétrica}.
+    O sistema de equações \eqref{equacao_parametrica_reta_plano} é chamado \textbf{sistema de equações paramétricas da reta} $r$ ou \textbf{sistema de equações da reta} $r$ \textbf{na forma paramétrica}.
 \end{definicao}
 
 \begin{exemplos}
-  \begin{enumerate}
-    \item O sistema de equações
-    \[
-      \begin{cases}
-        x = 1 + 2\lambda\\
-        y = 2 - 3\lambda
-      \end{cases}, \lambda \in \real
-    \]
-    define uma reta $r$ que passa pelo ponto $A(1,2)$ e que possui vetor diretor $\vec{u} = (2, -3)$.
-    \item Seja $r$ a reta dada pelas equações paramétricas
-    \[
-      \begin{cases}
-        x = 2 + 3t\\
-        y = 1 + 4t
-      \end{cases}, t\in \real.
-    \]
-    O ponto $(11, 13)$ pertence a $r$? E o ponto $(5,6)$?
-    \begin{solucao}
-      Para que o ponto $(11,13)$ pertença a reta $r$ é preciso que exista $t \in \real$ tal que
-      \begin{align*}
-        11 = 2 + 3t\\
-        13 = 1 + 4t.
-      \end{align*}
-    Cuja solução é $t = 3$. Logo o ponto $(11,13)$ pertence a reta $r$.
+    \begin{enumerate}
+        \item O sistema de equações
+              \[
+                  \begin{cases}
+                      x = 1 + 2\lambda \\
+                      y = 2 - 3\lambda
+                  \end{cases}, \lambda \in \real
+              \]
+              define uma reta $r$ que passa pelo ponto $A(1,2)$ e que possui vetor diretor $\vec{u} = (2, -3)$.
+        \item Seja $r$ a reta dada pelas equações paramétricas
+              \[
+                  \begin{cases}
+                      x = 2 + 3t \\
+                      y = 1 + 4t
+                  \end{cases}, t\in \real.
+              \]
+              O ponto $(11, 13)$ pertence a $r$? E o ponto $(5,6)$?
+              \begin{solucao}
+                  Para que o ponto $(11,13)$ pertença a reta $r$ é preciso que exista $t \in \real$ tal que
+                  \begin{align*}
+                      11 & = 2 + 3t  \\
+                      13 & = 1 + 4t.
+                  \end{align*}
+                  Cuja solução é $t = 3$. Logo o ponto $(11,13)$ pertence a reta $r$.
 
-    Para que o ponto $(5,6)$ pertença a reta $r$ é preciso que exista $t \in \real$ tal que
-      \begin{align*}
-        5 = 2 + 3t\\
-        6 = 1 + 4t.
-      \end{align*}
-    Resolvendo, obtemos $t = 1$ e $t = 5/4$. Logo o ponto $(5,6)$ não pertence a reta $r$.
-    \end{solucao}
-  \end{enumerate}
+                  Para que o ponto $(5,6)$ pertença a reta $r$ é preciso que exista $t \in \real$ tal que
+                  \begin{align*}
+                      5 & = 2 + 3t  \\
+                      6 & = 1 + 4t.
+                  \end{align*}
+                  Resolvendo, obtemos $t = 1$ e $t = 5/4$. Logo o ponto $(5,6)$ não pertence a reta $r$.
+              \end{solucao}
+    \end{enumerate}
 \end{exemplos}
 
 Seja $r$ uma reta com vetor diretor $\vec{u} = (a,b)$, onde $ab\ne 0$ e que passa pelo ponto $(x_0, y_0)$. Sabemos que sua equação paramétrica é
 \[
-  \begin{cases}
-    x = x_0 + \lambda a\\
-    y = y_0 + \lambda b.
-  \end{cases}
+    \begin{cases}
+        x = x_0 + \lambda a \\
+        y = y_0 + \lambda b.
+    \end{cases}
 \]
 Isolando $\lambda$ nas duas equações encontramos
 \[
-  \lambda = \dfrac{x - x_0}{a}\quad \lambda = \dfrac{y - y_0}{b},
+    \lambda = \dfrac{x - x_0}{a}\quad \lambda = \dfrac{y - y_0}{b},
 \]
 isto é, a equação
 \begin{equation}\label{equacao_simetrica_reta_plano}
-  \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b}.
+    \dfrac{x - x_0}{a} = \dfrac{y - y_0}{b}.
 \end{equation}
 determina se um ponto pertence a reta $r$ ou não.
 
 \begin{definicao}\index{Reta no Plano!Equação Simétrica}
-  A equação \eqref{equacao_simetrica_reta_plano} é chamada de \textbf{sistema de equações da reta} $r$ \textbf{na forma simétrica} ou por abuso de linguagem, \textbf{equações da reta} $r$ \textbf{na forma simétrica}.
+    A equação \eqref{equacao_simetrica_reta_plano} é chamada de \textbf{sistema de equações da reta} $r$ \textbf{na forma simétrica} ou por abuso de linguagem, \textbf{equações da reta} $r$ \textbf{na forma simétrica}.
 \end{definicao}
 
 \begin{exemplos}
- Encontre a equação simétrica da reta $r$ que passa pelos pontos $A(-1,2)$ e $B(3,4)$. O ponto $(0,5/2)$ está na reta $r$? E o ponto $(1,2)$?
- \begin{solucao}
-   Um vetor diretor para a reta $r$ é dado por $\vec{u} = \vec{AB} = (4,2)$. Assim usando o ponto $A$ a equação simétrica de $r$ é
-   \[
-     \dfrac{x + 1}{4} = \dfrac{y - 2}{2}.
-   \]
- Como
- \[
-    \dfrac{0 + 1}{4} = \dfrac{\dfrac{5}{2} - 2}{2}
- \]
- então o ponto $(0,5/2)$ está na reta $r$. Agora como
- \[
-  \dfrac{1+1}{4} \ne \dfrac{2 - 2}{2}
- \]
- o ponto $(1, 2)$ não está na reta $r$.
+    Encontre a equação simétrica da reta $r$ que passa pelos pontos $A(-1,2)$ e $B(3,4)$. O ponto $(0,5/2)$ está na reta $r$? E o ponto $(1,2)$?
+    \begin{solucao}
+        Um vetor diretor para a reta $r$ é dado por $\vec{u} = \vec{AB} = (4,2)$. Assim usando o ponto $A$ a equação simétrica de $r$ é
+        \[
+            \dfrac{x + 1}{4} = \dfrac{y - 2}{2}.
+        \]
+        Como
+        \[
+            \dfrac{0 + 1}{4} = \dfrac{\dfrac{5}{2} - 2}{2}
+        \]
+        então o ponto $(0,5/2)$ está na reta $r$. Agora como
+        \[
+            \dfrac{1+1}{4} \ne \dfrac{2 - 2}{2}
+        \]
+        o ponto $(1, 2)$ não está na reta $r$.
 
- \end{solucao}
+    \end{solucao}
 \end{exemplos}
 
 \begin{observacao}
-  \begin{enumerate}
-    \item Para que uma equação de uma reta $r$ esteja na forma \eqref{equacao_parametrica_reta_plano} é obrigatório que o coeficiente de $x$ e $y$ sejam 1. Assim, por exemplo a equação na forma
-    \[
-      \begin{cases}
-        2x = 1 - 3\lambda\\
-        -y = 2 + \lambda
-      \end{cases}
-    \]
-    não será considerada como uma equação paramétrica de uma reta. Do mesmo modo, uma equação do tipo
-    \[
-      \dfrac{2x - 7}{3} = \dfrac{y}{2}
-    \]
-    não será considerada uma equação simétrica de uma reta $r$ pois não está na forma \eqref{equacao_simetrica_reta_plano}.
+    \begin{enumerate}
+        \item Para que uma equação de uma reta $r$ esteja na forma \eqref{equacao_parametrica_reta_plano} é obrigatório que o coeficiente de $x$ e $y$ sejam 1. Assim, por exemplo a equação na forma
+              \[
+                  \begin{cases}
+                      2x = 1 - 3\lambda \\
+                      -y = 2 + \lambda
+                  \end{cases}
+              \]
+              não será considerada como uma equação paramétrica de uma reta. Do mesmo modo, uma equação do tipo
+              \[
+                  \dfrac{2x - 7}{3} = \dfrac{y}{2}
+              \]
+              não será considerada uma equação simétrica de uma reta $r$ pois não está na forma \eqref{equacao_simetrica_reta_plano}.
 
-    \item Cada tipo de equação da reta apresenta sua vantagens. A forma vetorial descreve uma reta tanto no plano cartesiano como no espaço tridimensional e mesmo em espaços ``maiores''. A forma paramétrica reduz o número de incógnitas com as quais precisamos trabalhar. Neste tipo de equação lidamos com somente uma incógnita em vez de duas. Já a forma simétrica exibe qual a relação que as coordenadas dos pontos de uma reta devem satisfazer entre si.
-  \end{enumerate}
+        \item Cada tipo de equação da reta apresenta sua vantagens. A forma vetorial descreve uma reta tanto no plano cartesiano como no espaço tridimensional e mesmo em espaços ``maiores''. A forma paramétrica reduz o número de incógnitas com as quais precisamos trabalhar. Neste tipo de equação lidamos com somente uma incógnita em vez de duas. Já a forma simétrica exibe qual a relação que as coordenadas dos pontos de uma reta devem satisfazer entre si.
+    \end{enumerate}
 \end{observacao}
 
 Seja $r$ uma reta que contém o ponto $(x_0, y_0)$ e com vetor diretor $\vec{u} = (a, b)$. Sua equação paramétrica é
-  \begin{numcases}{}
+\begin{numcases}{}
     x = x_0 + \lambda a\label{eq_parametrica1}\\
     y = y_0 + \lambda b.\label{eq_parametrica2}
-  \end{numcases}
+\end{numcases}
 
 Multiplicando a equação \eqref{eq_parametrica1} por $b$ e a equação \eqref{eq_parametrica2} por $a$ obtemos
 \begin{align}
-  bx = bx_0 + \lambda ab\label{eq_parametrica_auxiliar1}\\
-  ay = ay_0 + \lambda ab.\label{eq_parametrica_auxiliar2}
+    bx = bx_0 + \lambda ab\label{eq_parametrica_auxiliar1} \\
+    ay = ay_0 + \lambda ab.\label{eq_parametrica_auxiliar2}
 \end{align}
 
 Fazendo \eqref{eq_parametrica_auxiliar2} - \eqref{eq_parametrica_auxiliar1} obtemos
 \[
-  ay - bx = ay_0 - bx_0.
+    ay - bx = ay_0 - bx_0.
 \]
 
 Agora note que $ay_0 - bx_0$ é uma constante. Assim fazendo, $c = ay_0 - bx_0$ podemos escrever
 \begin{equation}\label{equacao_cartesiana_reta_plano}
-  ay - bx = c
+    ay - bx = c
 \end{equation}
 que é chamada de \textbf{equação cartesiana da reta} $r$.\index{Reta no Plano!Equação Cartesiana}
 
 Observe que se o vetor diretor $\vec{u} = (a,b)$ da reta $r$  é tal que $a = 0$, obtemos a equação $x = x_0$ e a reta $r$ é paralela ao eixo $y$. Caso $b = 0$, obtemos $y = y_0$ e a reta é paralela ao eixo $x$.
 \begin{figure}[H]
-  \centering
-  \caption{Retas paralelas aos eixos}
-  \includegraphics{retas-paralelas-plano-cartesiano.pdf}
+    \centering
+    \caption{Retas paralelas aos eixos}
+    \includegraphics{retas-paralelas-plano-cartesiano.pdf}
 \end{figure}
 
 Se $a \ne 0$, então podemos dividir a equação \eqref{equacao_cartesiana_reta_plano} por $a$ obtendo
 \[
-  y = \dfrac{b}{a}x + \dfrac{c}{a}.
+    y = \dfrac{b}{a}x + \dfrac{c}{a}.
 \]
 Fazendo $m = b/a$ e $k = c/a$ temos a equação
 \[
-  y = mx + k,
+    y = mx + k,
 \]
 onde $m = b/a = \tan \theta$.
 
 Note que o vetor $\vec{v} = (1,m)$ é paralelo à reta $r$ de equação $y = mx + k$. De fato,
 \begin{align*}
-  \vec{v} = (1,m) = \left(1, \dfrac{b}{a}\right) = \dfrac{1}{a}(a,b) = \dfrac{1}{a}\vec{u}.
+    \vec{v} = (1,m) = \left(1, \dfrac{b}{a}\right) = \dfrac{1}{a}(a,b) = \dfrac{1}{a}\vec{u}.
 \end{align*}
 
 \begin{exemplos}
-  Determine as equações paramétricas e cartesianas da reta $r$ definida pelos pontos $A(1,5)$ e $B(2,7)$.
-  \begin{solucao}
-    Um vetor diretor de $r$ é dado por $\vec{u} = \vec{AB} = (1,2)$. Assim $m = b/a$ onde $\vec{u} = (a,b)$ vale $m = 2$. Desse modo temos
-    \[
-      y = 2x + k.
-    \]
-    Como o ponto $A = (1,5)$ pertence a reta $r$ devemos ter
-    \[
-      5 = 2(1) + k
-    \]
-    donde $k = 3$. Portanto a equação cartesiana de $r$ será
-    \[
-      y = 2x + 3.
-    \]
-    A equação paramétrica será
-    \[
-      \begin{cases}
-        x = 1 + \lambda\\
-        y = 5 + 2\lambda
-      \end{cases}, \lambda \in \real
-    \]
-    caso escolhamos o ponto $A$. As equações paramétricas de $r$ também podem ser expressas como
-    \[
-      \begin{cases}
-        x = 2 + \lambda\\
-        y = 7 + 2\lambda
-      \end{cases}, \lambda \in \real
-    \]
-    caso escolhamos o ponto $B$.
-  \end{solucao}
+    Determine as equações paramétricas e cartesianas da reta $r$ definida pelos pontos $A(1,5)$ e $B(2,7)$.
+    \begin{solucao}
+        Um vetor diretor de $r$ é dado por $\vec{u} = \vec{AB} = (1,2)$. Assim $m = b/a$ onde $\vec{u} = (a,b)$ vale $m = 2$. Desse modo temos
+        \[
+            y = 2x + k.
+        \]
+        Como o ponto $A = (1,5)$ pertence a reta $r$ devemos ter
+        \[
+            5 = 2(1) + k
+        \]
+        donde $k = 3$. Portanto a equação cartesiana de $r$ será
+        \[
+            y = 2x + 3.
+        \]
+        A equação paramétrica será
+        \[
+            \begin{cases}
+                x = 1 + \lambda \\
+                y = 5 + 2\lambda
+            \end{cases}, \lambda \in \real
+        \]
+        caso escolhamos o ponto $A$. As equações paramétricas de $r$ também podem ser expressas como
+        \[
+            \begin{cases}
+                x = 2 + \lambda \\
+                y = 7 + 2\lambda
+            \end{cases}, \lambda \in \real
+        \]
+        caso escolhamos o ponto $B$.
+    \end{solucao}
 \end{exemplos}
 
 \section{Ângulo entre retas}
@@ -250,78 +250,78 @@ Note que o vetor $\vec{v} = (1,m)$ é paralelo à reta $r$ de equação $y = mx 
 Sejam $r$ uma reta passando pelo ponto $A(x_1, y_1)$ e com vetor diretor $\vec{u} = (a,b)$ e $s$ uma reta passando pelo ponto $B(x_2, y_2)$ e com vetor diretor $\vec{v} = (c,d)$. O \textbf{ângulo entre duas retas} $r$ e $s$ é definido como o menor ângulo entre o vetor diretor $\vec{u}$ de $r$ e o vetor diretor $\vec{v}$ de $s$.
 
 \begin{figure}[H]
-  \centering
-  \caption{ângulo entre retas}
-  \includegraphics{angulo-retas-plano-cartesiano.pdf}
+    \centering
+    \caption{ângulo entre retas}
+    \includegraphics{angulo-retas-plano-cartesiano.pdf}
 \end{figure}
 
 Assim o ângulo $\theta$ entre $r$ e $s$ é dado por
 \[
-  \cos\theta = \dfrac{\mid\inner{u}{v}\mid}{\norm{\vec{u}}\norm{\vec{v}}},\quad 0 \le \theta \le \dfrac{\pi}{2}
+    \cos\theta = \dfrac{\mid\inner{u}{v}\mid}{\norm{\vec{u}}\norm{\vec{v}}},\quad 0 \le \theta \le \dfrac{\pi}{2}
 \]
 
 \begin{exemplos}
-  Determine o ângulo entre as retas $r$ e $s$ cujas equações são:
-  \begin{align*}
-    r: y = 2x -2\\
-    s: y = -x + 4.
-  \end{align*}
-  \begin{solucao}
-    Temos $m = b/a$, onde $a$ e $b$ são as coordenadas do vetor diretor da reta em questão. Assim podemos tomar $\vec{u} = (1,2)$ como um vetor diretor de $r$ e $\vec{v} = (-1,1)$ como um vetor diretor de $s$. Daí
-    \[
-      \cos\theta = \dfrac{\mid\inner{u}{v}\mid}{\norm{\vec{u}}\norm{\vec{v}}} = \dfrac{1}{\sqrt{10}}.
-    \]
-    Logo $\theta = \arccos\left(\dfrac{\sqrt{10}}{10}\right)$.
-  \end{solucao}
+    Determine o ângulo entre as retas $r$ e $s$ cujas equações são:
+    \begin{align*}
+        r: y = 2x -2 \\
+        s: y = -x + 4.
+    \end{align*}
+    \begin{solucao}
+        Temos $m = b/a$, onde $a$ e $b$ são as coordenadas do vetor diretor da reta em questão. Assim podemos tomar $\vec{u} = (1,2)$ como um vetor diretor de $r$ e $\vec{v} = (-1,1)$ como um vetor diretor de $s$. Daí
+        \[
+            \cos\theta = \dfrac{\mid\inner{u}{v}\mid}{\norm{\vec{u}}\norm{\vec{v}}} = \dfrac{1}{\sqrt{10}}.
+        \]
+        Logo $\theta = \arccos\left(\dfrac{\sqrt{10}}{10}\right)$.
+    \end{solucao}
 \end{exemplos}
 
 \section{Distância de um ponto a uma reta}
 
 A distância de um ponto $P(x_0,y_0)$ à reta $r$ de equação $y = mx + k$ é definida como sendo a distância de $P$ ao ponto $A(x_1, y_1)$, onde $A$ é o pé da perpendicular à reta $r$ passando pelo ponto $P$.
 \begin{figure}[H]
-  \centering
-  \caption{Distância de ponto a reta}
-  \includegraphics{distancia-ponto-reta-plano-cartesiano.pdf}
+    \centering
+    \caption{Distância de ponto a reta}
+    \includegraphics{distancia-ponto-reta-plano-cartesiano.pdf}
 \end{figure}
 Agora note que o vetor $\vec{u} = (1,m)$ é paralelo à reta $r$. Além disso, o vetor $\vec{v} = (-m, 1)$ é tal que $\inner{u}{v} = 0$, isto é, $\vec{u}\perp\vec{v}$. Portanto, $\vec{PA}\varparallel\vec{v}$ e então existe $\lambda \in \real$ tal que
 \[
-  \vec{PA} = \lambda\vec{v}.
+    \vec{PA} = \lambda\vec{v}.
 \]
 Logo
 \begin{equation}\label{distancia_ponto_reta_plano}
-  d(P,r) = \norm{\vec{PA}} = \norm{\lambda\vec{v}} = \mid\lambda\mid \norm{\vec{v}} = \mid\lambda\mid\sqrt{m^2 + 1}.
+    d(P,r) = \norm{\vec{PA}} = \norm{\lambda\vec{v}} = \mid\lambda\mid \norm{\vec{v}} = \mid\lambda\mid\sqrt{m^2 + 1}.
 \end{equation}
 Assim para determinarmos $d(P,r)$ basta conhecer $\lambda$. Agora,
 \[
-  \vec{PA} = (x_1 - x_0, y_1 - y_0) = \lambda(-m, 1)
+    \vec{PA} = (x_1 - x_0, y_1 - y_0) = \lambda(-m, 1)
 \]
 donde
 \begin{align*}
-  x_1 = x_0 - \lambda m\\
-  y_1 = y_0 + \lambda.
+    x_1 = x_0 - \lambda m \\
+    y_1 = y_0 + \lambda.
 \end{align*}
 Como $A(x_1, y_1)$ pertence a reta $r$, devemos ter
 \begin{align*}
-  y_1 = mx_1 + k\\
-  y_0 + \lambda = m(x_0 - \lambda m) + k\\
-  y_0 + \lambda = mx_0 - \lambda m^2 + k\\
-  \lambda = \dfrac{-y_0 + mx_0 + k}{1 + m^2}.
+    y_1 = mx_1 + k                         \\
+    y_0 + \lambda = m(x_0 - \lambda m) + k \\
+    y_0 + \lambda = mx_0 - \lambda m^2 + k \\
+    \lambda = \dfrac{-y_0 + mx_0 + k}{1 + m^2}.
 \end{align*}
 Substituindo $\lambda$ em \eqref{distancia_ponto_reta_plano}
 \[
-  d(P, r) = \left|\dfrac{-y_0 + mx_0 + k}{1 + m^2}\right|\sqrt{m^2 + 1}.
+    d(P, r) = \left|\dfrac{-y_0 + mx_0 + k}{1 + m^2}\right|\sqrt{m^2 + 1}.
 \]
 Portanto
 \[
-  d(P, r) = \dfrac{\mid mx_0 + k - y_0\mid}{\sqrt{m^2 + 1}}
+    d(P, r) = \dfrac{\mid mx_0 + k - y_0\mid}{\sqrt{m^2 + 1}}
 \]
 é a expressão para a distância de um ponto $P(x_0,y_0)$ até uma reta $r$ de equação $y = mx + k$.
 
 \begin{exemplos}
-  Seja $r$ a reta de equação $y = 3x - 1$. Qual a distância do ponto $P(2,2)$ à reta $r$?
-  \begin{solucao}
-    \[
-      d(P,r) = \dfrac{\mid 3(2) - 1 - 2\mid}{\sqrt{3^2 + 1}} = \dfrac{3}{\sqrt{10}}.
-    \]
-  \end{solucao}
+    Seja $r$ a reta de equação $y = 3x - 1$. Qual a distância do ponto $P(2,2)$ à reta $r$?
+    \begin{solucao}
+        \[
+            d(P,r) = \dfrac{\mid 3(2) - 1 - 2\mid}{\sqrt{3^2 + 1}} = \dfrac{3}{\sqrt{10}}.
+        \]
+    \end{solucao}
 \end{exemplos}
