@@ -1,0 +1,27 @@
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+\begin{document}
+
+\newrgbcolor{ududff}{0.3 0.3 1}
+\psset{algebraic=true,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-3.37,-3.12)(7.90,4.79)
+    \psaxes[xAxis=true,yAxis=true,labels=none,Dx=0.5,Dy=0.5,ticksize=0]{->}(0,0)(-3.37,-3.12)(7.90,4.79)[x,140] [y,-40]
+    \rput{-116.56}(0.8,2.1){\psplot[linecolor=blue]{-3.57}{3.57}{x^2/2/0.44}}
+    \psplot[linestyle=dashed,linecolor=red]{-3.37}{7.90}{(--1--2*x)/1}
+    \begin{scriptsize}
+        \psdots[dotsize=7pt 0,dotstyle=*,linecolor=ududff](1,2)
+        \rput[bl](1.17,2.03){\ududff{$F = (1, 2)$}}
+    \end{scriptsize}
+\end{pspicture*}
+\end{document}
