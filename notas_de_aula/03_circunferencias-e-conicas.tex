@@ -7,7 +7,6 @@
 
 \section{Equações da Circunferência}
 
-
 \begin{definicao}
     A circunferência é o conjunto dos pontos do plano que estão a uma mesma distância (denominada \textbf{raio}) de um dado ponto do plano (chamado \textbf{centro}).\index{Circunferência}
 \end{definicao}
@@ -862,7 +861,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\          & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                    & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
@@ -927,6 +926,30 @@ Nos demais casos temos:
 \begin{proposicao}
     As equações $y^2 = qx$ e $x^2 = qy$ descrevem uma parábola se, e somente se, $q \ne 0$.
 \end{proposicao}
+
+\begin{exemplo}
+    Determine a equação da parábola de foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$.
+    \begin{solucao}
+        Um ponto $A(x, y)$ pertence à parábola de foco $F(1,2)$ e reta diretriz $r : y = 2x + 1$ se, e somente se:
+        \begin{align*}
+            d(A, r)                              & = d(A, F)                          \\
+            \dfrac{|2x + 1 - y|}{\sqrt{1 + 2^2}} & = \sqrt{(x - 1)^2 + (y - 1)^2}     \\
+            (2x + 1 - y)^2                       & = 5(x^2 - 2x + 1 + y^2 - 4y + 4)   \\
+            (2x + 1)^2 - 2y(2x + 1) + y^2        & = 5x^2 - 10x + 5 + 5y^2 - 20y + 20 \\
+            4x^2 + 4x + 1 - 4xy - 2y + y^2       & = 5x^2 + 5y^2 - 10x - 20y + 25
+        \end{align*}
+        Logo a parábola procurada tem equação:
+        \[
+            x^2 + 4y^2 + 4xy - 14x - 18y + 24 = 0.
+        \]
+    \end{solucao}
+    \begin{figure}[H]%parábola
+        \centering
+        \caption{Parábola de foco em $F(1,2)$ com reta diretriz $r: y = 2x + 1$}
+        \includegraphics{figuras-latex/conicas/parabola-com-foco-fora-dos-eixos.pdf}
+    \end{figure}
+
+\end{exemplo}
 
 \section{Rotação e Translação de Eixos}
 
