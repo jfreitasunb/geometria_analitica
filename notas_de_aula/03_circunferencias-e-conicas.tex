@@ -235,6 +235,37 @@ Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio
     chama-se \textbf{elipse}. Cada um dos pontos $F_1$ e $F_2$ é chamado \textbf{foco} da elipse. O segmento $F_1F_2$ é chamado \textbf{segmento focal}, seu ponto médio é o \textbf{centro} da elipse e $2c$ é chamado \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ chama-se \textbf{reta focal}.\index{Elipse} \index{Elipse!Focos} \index{Elipse!Centro} \index{Elipse!Reta Focal}
 \end{definicao}
 
+\begin{exemplo}
+    Determine a equação da elipse de focos $F_1 = (-1, 1)$, $F_2 = (3, 4)$ e tal que $a = 3$.
+    \begin{solucao}
+        Da Definição \ref{definicaoelipse} um ponto $P(x, y)$ pertence a essa elipse quando
+        \begin{align*}
+            d(P, F_1)                                   & + d(P, F_2)                                           = 6             \\
+            \sqrt{(x - (-1))^2 + (y - 1)^2}             & + \sqrt{(x - 3)^2 + (y - 4)^2}  = 6                                   \\
+            \sqrt{(x + 1)^2 + (y - 1)^2}                & + \sqrt{(x - 3)^2 + (y - 4)^2}  = 6                                   \\
+            \sqrt{(x + 1)^2 + (y - 1)^2}                & = 6 - \sqrt{(x - 3)^2 + (y - 4)^2}                                    \\
+            \left[\sqrt{(x + 1)^2 + (y - 1)^2}\right]^2 & = \left[6 - \sqrt{(x - 3)^2 + (y - 4)^2}\right]^2                     \\
+            (x + 1)^2 + (y - 1)^2                       & = 36 - 12\sqrt{(x - 3)^2 + (y - 4)^2} + (x - 3)^2 + (y - 4)^2         \\
+            x^2 + 2x + 1 + y^2 - 2y + 1                 & = 36 - 12\sqrt{(x - 3)^2 + (y - 4)^2}  + x^2 - 6x + 9 + y^2 - 8y + 16 \\
+            8x + 6y - 59                                & = -12\sqrt{(x - 3)^2 + (y - 4)^2}                                     \\
+            (8x + 6y - 59) ^2                           & = \left[-12\sqrt{(x - 3)^2 + (y - 4)^2}\right]^2                      \\
+            (8x + 6y)^2 - 118(8x + 6y) + 3481           & = 144(x^2 - 6x + 9 + y^2 - 8y + 16)                                   \\
+            64x^2 + 96xy + 36y^2 - 944x - 708y + 3481   & = 144x^2 - 864x + 1296 + 144y^2 - 1152y + 2304
+        \end{align*}
+
+        Logo a elipse procurada tem equação:
+        \[
+            80x^2 + 108y^2 - 96xy + 80x - 444y + 119 = 0.
+        \]
+        % \begin{figure}[H]
+        %     \centering
+        %     \caption{Elipse com focos $F_1 = (-1, 1)$, $F_2 = (3, 4)$ e $a = 3$}
+        %     \label{FormageralElipse}
+        %     \includegraphics{figuras-latex/conicas/elipse/elipse-com-focos-fora-dos-eixos.pdf}
+        % \end{figure}
+    \end{solucao}
+
+\end{exemplo}
 Para obter a equação que descreve uma elipse vamos fixar os focos $F_1$ e $F_2$ como sendo $F_1(-c,0)$ e $F_2(c,0)$. Com isso o centro dessa elipse estará na
 origem do plano cartesiano. Assim, seja $P(x,y)$ um ponto pertencente à elipse de focos $F_1$ e $F_2$. Então
 \begin{equation}
@@ -861,7 +892,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                    & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                             & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
