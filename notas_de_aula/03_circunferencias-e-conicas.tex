@@ -661,7 +661,15 @@ por\index{Elipse!Excentricidade}
 \begin{exemplo}
     Encontre a equação da hipérbole tal que $F_1(-2, 5)$, $F_2(1, 1)$ e $a = 2$.
     \begin{solucao}
-        Pela definição de hipérbole um ponto $P(x, y)$ pertence à hipérbole quando:
+        Inicialmente temos
+        \begin{align*}
+            2c & = d(F_1, F_2)                   \\
+            2c & = \sqrt{(-2 - 1)^2 + (5 - 1)^2} \\
+            2c & = \sqrt{9 + 16}                 \\
+            c  & = 2,5
+        \end{align*}
+        Como $a = 2 < c$ podemos definir uma hipérbole com focos em $F_1$ e $F_2$ e $a = 2$. Pela Definição \ref{definicaocaohiperbole} um ponto $P(x, y)$
+        pertence à hipérbole de focos $F_1$ e $F_2$ com $a = 2$ quando:
         \begin{align*}
             |d(P, F_1) - d(P, F_2)|                         & = 2\cdot 2                                            \\
             d(P, F_1)                                       & = \pm 4 + d(P, F_2)                                   \\
@@ -992,7 +1000,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                 & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                   & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
