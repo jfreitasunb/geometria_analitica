@@ -240,16 +240,16 @@ Nos casos em que a equação \eqref{equacaoconica} representar um conjunto vazio
     \begin{solucao}
         Da Definição \ref{definicaoelipse} um ponto $P(x, y)$ pertence a essa elipse quando
         \begin{align*}
-            d(P, F_1)                                   & + d(P, F_2)                                           = 6             \\
-            \sqrt{(x - (-1))^2 + (y - 1)^2}             & + \sqrt{(x - 3)^2 + (y - 4)^2}  = 6                                   \\
-            \sqrt{(x + 1)^2 + (y - 1)^2}                & + \sqrt{(x - 3)^2 + (y - 4)^2}  = 6                                   \\
-            \sqrt{(x + 1)^2 + (y - 1)^2}                & = 6 - \sqrt{(x - 3)^2 + (y - 4)^2}                                    \\
-            \left[\sqrt{(x + 1)^2 + (y - 1)^2}\right]^2 & = \left[6 - \sqrt{(x - 3)^2 + (y - 4)^2}\right]^2                     \\
-            (x + 1)^2 + (y - 1)^2                       & = 36 - 12\sqrt{(x - 3)^2 + (y - 4)^2} + (x - 3)^2 + (y - 4)^2         \\
-            x^2 + 2x + 1 + y^2 - 2y + 1                 & = 36 - 12\sqrt{(x - 3)^2 + (y - 4)^2}  + x^2 - 6x + 9 + y^2 - 8y + 16 \\
-            8x + 6y - 59                                & = -12\sqrt{(x - 3)^2 + (y - 4)^2}                                     \\
-            (8x + 6y - 59) ^2                           & = \left[-12\sqrt{(x - 3)^2 + (y - 4)^2}\right]^2                      \\
-            (8x + 6y)^2 - 118(8x + 6y) + 3481           & = 144(x^2 - 6x + 9 + y^2 - 8y + 16)                                   \\
+            d(P, F_1)                                   & + d(P, F_2)                                           = 6 \\
+            \sqrt{(x - (-1))^2 + (y - 1)^2}             & + \sqrt{(x - 3)^2 + (y - 4)^2}  = 6                       \\
+            \sqrt{(x + 1)^2 + (y - 1)^2}                & + \sqrt{(x - 3)^2 + (y - 4)^2}  = 6                       \\
+            \sqrt{(x + 1)^2 + (y - 1)^2}                & = 6 - \sqrt{(x - 3)^2 + (y - 4)^2}                        \\
+            \left[\sqrt{(x + 1)^2 + (y - 1)^2}\right]^2 & = \left[6 - \sqrt{(x - 3)^2 + (y - 4)^2}\right]^2         \\
+            (x + 1)^2 + (y - 1)^2                       & = 36 - 12\sqrt{(x - 3)^2 + (y - 4)^2}                     \\ &+ (x - 3)^2 + (y - 4)^2         \\
+            x^2 + 2x + 1 + y^2 - 2y + 1                 & = 36 - 12\sqrt{(x - 3)^2 + (y - 4)^2}                     \\ &+ x^2 - 6x + 9 + y^2 - 8y + 16 \\
+            8x + 6y - 59                                & = -12\sqrt{(x - 3)^2 + (y - 4)^2}                         \\
+            (8x + 6y - 59) ^2                           & = \left[-12\sqrt{(x - 3)^2 + (y - 4)^2}\right]^2          \\
+            (8x + 6y)^2 - 118(8x + 6y) + 3481           & = 144(x^2 - 6x + 9 + y^2 - 8y + 16)                       \\
             64x^2 + 96xy + 36y^2 - 944x - 708y + 3481   & = 144x^2 - 864x + 1296 + 144y^2 - 1152y + 2304
         \end{align*}
 
@@ -607,6 +607,29 @@ modo a elipse será mais parecida com um circunferência. Por outro lado, se $b/
     chama-se \textbf{hipérbole}. Os pontos $F_1$ e $F_2$ são chamados \textbf{focos} da hipérbole, o segmento $F_1F_2$ é chamado \textbf{segmento focal}, o ponto médio do segmento $F_1F_2$ é chamada de \textbf{centro} da hipérbole e o número $2c$ é chamado de \textbf{distância focal}. A reta passando por $F_1$ e $F_2$ é chamada \textbf{reta focal}.\index{Hipérbole} \index{Hipérbole!Focos} \index{Hipérbole!Segmento Focal} \index{Hipérbole!Centro} \index{Hipérbole!Distância Focal} \index{Hipérbole!Reta Focal}
 \end{definicao}
 
+\begin{exemplo}
+    Encontre a equação da hipérbole tal que $F_1 = (-2, 5)$, $F_2 = (1, 1)$ e $a = 2$.
+    \begin{solucao}
+        Pela definição de hipérbole um ponto $P(x, y)$ pertence à hipérbole quando:
+        \begin{align*}
+            |d(P, F_1) - d(P, F_2)|                         & = 2\cdot 2                                                           \\
+            d(P, F_1)                                       & = \pm 4 + d(P, F_2)                                                  \\
+            \sqrt{(x - (-2))^2 + (y - 5)^2}                 & = \pm 4 - \sqrt{(x - 1)^2 + (y - 1)^2}                               \\
+            \left[ \sqrt{(x - (-2))^2 + (y - 5)^2}\right]^2 & = \left[\pm 4 - \sqrt{(x - 1)^2 + (y - 1)^2}\right]^2                \\
+            \sqrt{(x + 2)^2 + (y - 5)^2}                    & = 16 \pm 8\sqrt{(x - 1)^2 + (y - 1)^2} + (x - 1)^2 + (y - 1)^2       \\
+            x^2 + 4x + 4 + y^2 - 10y + 25                   & = 16 \pm 8\sqrt{(x - 1)^2 + (y - 1)^2} + x^2 - 2x + 1 + y^2 - 2y + 1 \\
+            6x - 8y + 11                                    & = \pm 8\sqrt{(x - 1)^2 + (y - 1)^2}                                  \\
+            (6x - 8y + 11)^2                                & = \left[\pm 8\sqrt{(x - 1)^2 + (y - 1)^2}\right]^2                   \\
+            36x^2 - 96xy + 64y^2 + 132x - 176y + 121        & = 64(x^2 - 2x + 1 + y^2 - 2y + 1)                                    \\
+            36x^2 - 96xy + 64y^2 + 132x - 176y + 121        & = 64x^2 - 128x + 64y^2 - 128y + 128                                  \\
+        \end{align*}
+        Logo a hipérbole procurada tem equação:
+        \[
+            28x^2 - 160x + 96xy + 48y + 7 = 0.
+        \]
+    \end{solucao}
+\end{exemplo}
+
 Vamos fixar $F_1(-c,0)$ e $F_2(c,0)$. Assim um ponto $P(x,y)$ pertence á hipérbole $\mathcal{H}$ de focos $F_1$ e $F_2$ se
 \begin{align*}
      & | d(P,F_1) - d(P,F_2) | = 2a \\
@@ -892,7 +915,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                               & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
