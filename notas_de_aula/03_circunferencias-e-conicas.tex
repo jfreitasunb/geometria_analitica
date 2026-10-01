@@ -421,8 +421,9 @@ Com isso provamos a seguinte proposição:
 \end{proposicao}
 
 \begin{definicao}
-    A equação \eqref{equacao_reduzida_da_elipse} é chamada de \textbf{equação reduzida da elipse} de centro $O(0,0)$ e focos no eixo $x$. Os números $a$, $b$ e $c$ são
-    chamados \textbf{parâmetros geométricos} da elipse. Indicamos tal elipse por\index{Elipse!Parâmetros Geométricos}\index{Elipse!Equação Reduzida}
+    A equação \eqref{equacao_reduzida_da_elipse} é chamada de \textbf{equação reduzida da elipse} de centro $O(0,0)$ e focos no eixo $x$. Os números $a$, $b$
+    e $c$, onde $c^2 = a^2 + b^2$, são chamados \textbf{parâmetros geométricos} da elipse. Indicamos tal elipse por
+    \index{Elipse!Parâmetros Geométricos}\index{Elipse!Equação Reduzida}
     \[
         \mathcal{E}: \elipse{a^2}{b^2}.
     \]
@@ -801,7 +802,7 @@ seguinte proposição:
 \begin{proposicao}
     Um ponto $P(x, y)$ é um ponto da hipérbole
     \[
-        \mathcal{H}:\ \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
+        \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
     \]
     se, e somente se, as distâncias de $P$ aos focos são:
     \begin{align*}
@@ -810,11 +811,14 @@ seguinte proposição:
     \end{align*}
 \end{proposicao}
 
-Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da hipérbole $\mathcal{H}$ e a equação
-\[
-    \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
-\]
-é chamada de \textbf{equação reduzida} da hipérbole.\index{Hipérbole!Parâmetros Geométricos} \index{Hipérbole!Equação Reduzida}
+\begin{definicao}
+    A equação
+    \begin{align}\label{equacao_reduzida_da_hiperbole}
+        \mathcal{H}:\ \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
+    \end{align}
+    é chamada de \textbf{equação reduzida} da hipérbole. Os números $a$, $b$ e $c$, onde $c^2 = a^2 + b^2$, são chamados \textbf{parâmetros geométricos} da
+    hipérbole $\mathcal{H}$. \index{Hipérbole!Parâmetros Geométricos} \index{Hipérbole!Equação Reduzida}
+\end{definicao}
 
 \begin{observacao}
     Seja $\mathcal{H} : \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$ uma hipérbole de focos no eixo $x$.
@@ -1002,7 +1006,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                           & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                 & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
