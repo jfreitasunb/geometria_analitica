@@ -410,9 +410,9 @@ e então o ponto $Q(\alpha,\beta)$ pertence à elipse de focos $F_1(-c,0)$ e $F_
 Com isso provamos a seguinte proposição:
 \begin{proposicao}
     Um ponto $P(x,y)$ é um ponto da elipse de equação
-    \[
+    \begin{align}\label{equacao_reduzida_da_elipse}
         \elipse{a^2}{b^2}
-    \]
+    \end{align}
     se, e somente se, as distâncias de $P$ aos focos $F_1$ e $F_2$ são
     \begin{align*}
         d^2(P,F_1) & = \dfrac{c}{a}\alpha + a  \\
@@ -420,20 +420,21 @@ Com isso provamos a seguinte proposição:
     \end{align*}
 \end{proposicao}
 
-Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da elipse. A equação \eqref{equacaoelipse} é chamada de
-\textbf{equação reduzida da elipse} de centro $O(0,0)$ e focos no eixo $x$. Indicamos tal elipse por\index{Elipse!Parâmetros Geométricos}
-\index{Elipse!Equação Reduzida}
-\[
-    \mathcal{E}: \elipse{a^2}{b^2}.
-\]
+\begin{definicao}
+    A equação \eqref{equacao_reduzida_da_elipse} é chamada de \textbf{equação reduzida da elipse} de centro $O(0,0)$ e focos no eixo $x$. Os números $a$, $b$ e $c$ são
+    chamados \textbf{parâmetros geométricos} da elipse. Indicamos tal elipse por\index{Elipse!Parâmetros Geométricos}\index{Elipse!Equação Reduzida}
+    \[
+        \mathcal{E}: \elipse{a^2}{b^2}.
+    \]
+\end{definicao}
 
 \begin{observacao}
     \begin{enumerate}
-        \item A equação \eqref{equacaoelipse} só é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro, resultarão
+        \item A equação \eqref{equacao_reduzida_da_elipse} só é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro, resultarão
               em uma equação diferente para a elipse.
-        \item Se $(x,y)$ satisfaz a equação \eqref{equacaoelipse}, então $(-x,y)$, $(x,-y)$ e $(-x,-y)$ também satisfazem a mesma equação. Assim a elipse
+        \item Se $(x,y)$ satisfaz a equação \eqref{equacao_reduzida_da_elipse}, então $(-x,y)$, $(x,-y)$ e $(-x,-y)$ também satisfazem a mesma equação. Assim a elipse
               é simétrica em relação ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
-        \item O ponto $(x,0)$ pertence à elipse de equação \eqref{equacaoelipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$. Além disso, o ponto
+        \item O ponto $(x,0)$ pertence à elipse de equação \eqref{equacao_reduzida_da_elipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$. Além disso, o ponto
               $(0,y)$ pertence à elipse de equação \eqref{equacaoelipse} se, e só se, $y = \pm b$. Portanto, a interseção de $\mathcal{E}$ com o eixo $x$ são
               os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interseção com o eixo $y$ são os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) =
                   \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
@@ -443,7 +444,7 @@ Os números $a$, $b$ e $c$ são chamados \textbf{parâmetros geométricos} da el
     \end{enumerate}
 \end{observacao}
 
-Na equação \eqref{equacaoelipse}, fazendo $y \ge 0$ podemos escrever
+Na equação \eqref{equacao_reduzida_da_elipse}, fazendo $y \ge 0$ podemos escrever
 \[
     y = \dfrac{b}{a}\sqrt{a^2 - x^2},\quad x \in [0,a].
 \]
@@ -1001,7 +1002,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                    & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                          & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
