@@ -432,13 +432,13 @@ Com isso provamos a seguinte proposição:
 
 \begin{observacao}
     \begin{enumerate}
-        \item A equação \eqref{equacao_reduzida_da_elipse} só é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro, resultarão
-              em uma equação diferente para a elipse.
-        \item Se $(x,y)$ satisfaz a equação \eqref{equacao_reduzida_da_elipse}, então $(-x,y)$, $(x,-y)$ e $(-x,-y)$ também satisfazem a mesma equação. Assim a elipse
-              é simétrica em relação ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
-        \item O ponto $(x,0)$ pertence à elipse de equação \eqref{equacao_reduzida_da_elipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$. Além disso, o ponto
-              $(0,y)$ pertence à elipse de equação \eqref{equacaoelipse} se, e só se, $y = \pm b$. Portanto, a interseção de $\mathcal{E}$ com o eixo $x$ são
-              os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interseção com o eixo $y$ são os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) =
+        \item A equação \eqref{equacao_reduzida_da_elipse} só é válida para elipses com focos no eixo $x$ e centro na origem. Mudanças nos focos ou no centro,
+              resultarão em uma equação diferente para a elipse.
+        \item Se $(x,y)$ satisfaz a equação \eqref{equacao_reduzida_da_elipse}, então $(-x,y)$, $(x,-y)$ e $(-x,-y)$ também satisfazem a mesma equação.
+              Assim a elipse é simétrica em relação ao eixo $x$, ao eixo $y$ e ao centro do plano cartesiano.
+        \item O ponto $(x,0)$ pertence à elipse de equação \eqref{equacao_reduzida_da_elipse} se, e somente se, $x^2/a^2 = 1$, isto é, $x = \pm a$.
+              Além disso, o ponto $(0,y)$ pertence à elipse de equação \eqref{equacaoelipse} se, e só se, $y = \pm b$. Portanto, a interseção de $\mathcal{E}$
+              com o eixo $x$ são os pontos $A_1(-a,0)$ e $A_2(a,0)$ e a interseção com o eixo $y$ são os pontos $B_1(0,-b)$ e $B_2(0,b)$. Note que $d(B_j,F_i) =
                   \sqrt{c^2 + b^2} = a$, para $i$, $j = 1$, 2.
         \item Não existe circunferência que contenha os pontos $A_1$, $A_2$, $B_1$ e $B_2$. Caso existisse, tal circunferência teria dois diâmetros
               diferentes, cujos comprimentos são dados pelos comprimentos dos segmentos $A_1A_2$ e $B_1B_2$, o que é impossível. Portanto, como esses
@@ -481,6 +481,11 @@ E como a elipse é simétrica, sua forma é dada pela Figura \ref{FormageralElip
               \]
               representa uma elipse onde $a = 3$, $b = 2$. Os focos são $F_1(-c,0)$ e $F_2(c,0)$ onde, $a^2 = b^2 + c^2$. Daí, $c = \sqrt{5}$. Logo
               $F_1(-\sqrt{5},0)$ e $F_2(\sqrt{5},0)$. Os vértices são $A_1(-3,0)$, $A_2(3,0)$, $B_1(0,-2)$ e $B_2(0,2)$.
+              \begin{figure}[H]
+                  \centering
+                  \caption{Elipse de equação: $\elipse{9}{4}$}
+                  \includegraphics{figuras-latex/conicas/elipse/elipse_equacao_reduzida_com_focos_no_eixo-x.pdf}
+              \end{figure}
         \item Encontre a equação da elipse cujos focos são $F_1(-3,0)$ e $F_2(0,4)$ e cujo eixo maior mede 7.
               \begin{solucao}
                   Como os focos não estão sobre o eixo $x$, não podemos usar a equação \eqref{equacaoelipse}. Assim vamos utilizar a definição
@@ -499,6 +504,11 @@ E como a elipse é simétrica, sua forma é dada pela Figura \ref{FormageralElip
                   \[
                       40x^2 + 33y^2 - 24xy + 168x - 168y = 0.
                   \]
+                  \begin{figure}[H]
+                      \centering
+                      \caption{Elipse de equação: $40x^2 + 33y^2 - 24xy + 168x - 168y = 0$}
+                      \includegraphics{figuras-latex/conicas/elipse/elipse_com_focos_no_eixo-x_e_no_eixo-y.pdf}
+                  \end{figure}
               \end{solucao}
         \item Encontre a equação da elipse com focos $F_1(0,-2)$ e $F_2(0,2)$ e tal que $a = 3$.
               \begin{solucao}
@@ -514,6 +524,11 @@ E como a elipse é simétrica, sua forma é dada pela Figura \ref{FormageralElip
                   \[
                       \elipse{5}{9}.
                   \]
+                  \begin{figure}[H]
+                      \centering
+                      \caption{Elipse de equação: $\elipse{5}{9}$}
+                      \includegraphics{figuras-latex/conicas/elipse/elipse_equacao_reduzida_com_focos_no_eixo-y.pdf}
+                  \end{figure}
               \end{solucao}
     \end{enumerate}
 \end{exemplos}
@@ -1013,7 +1028,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                     & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                      & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:

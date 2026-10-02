@@ -1,0 +1,39 @@
+%!TEX program = xelatex
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+
+\newcommand{\norm}[1]{\left\Vert{#1}\right\Vert}
+\newcommand{\eq}{=}
+\begin{document}
+\psset{ticksize=0pt}
+\begin{pspicture*}(-5,-4)(5,4)
+    \psaxes[labels=none]{->}(0,0)(-4,-4)(4,4)
+    \rput{90}(0,0){\psellipse[linecolor=blue](0,0)(3,2.23)}
+    \begin{scriptsize}
+        \psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](-2.23,0)
+        \rput[bl](-2.1,0.18){\blue{$B_{1} = (-\sqrt{5}, 0)$}}
+        \psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](2.236,0)
+        \rput[bl](2.3,0.18){\blue{$B_{2} = (\sqrt{5}, 0)$}}
+        \psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](0,3)
+        \rput[bl](0.2,3.1){\blue{$A_{2} = (0, 3)$}}
+        \psdots[dotsize=4pt 0,dotstyle=*,linecolor=blue](0,-3)
+        \rput[bl](0.2,-3.3){\blue{$A_{1} = (0, -3)$}}
+        \psdots[dotstyle=*,linecolor=red](0,-2)
+        \rput[bl](0.2,-2.15){\red{$F_{1} = (0, -2)$}}
+        \psdots[dotstyle=*,linecolor=red](0,2)
+        \rput[bl](0.2,1.85){\red{$F_{2} = (0, 2)$}}
+    \end{scriptsize}
+\end{pspicture*}
+\end{document}
