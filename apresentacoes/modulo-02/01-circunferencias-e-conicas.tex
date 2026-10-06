@@ -119,7 +119,7 @@
         \[
             \elipse{a^2}{b^2}
         \]\pause
-        se, e somente se, \pause as distâncias de $P$ aos focos $F_1$ e $F_2$ são\pause
+        se, e somente se, \pause as distâncias de $P$ aos focos $F_1(-c, 0)$ e $F_2(c, 0)$ são\pause
         \begin{align*}
             d^2(P,F_1) & = \dfrac{c}{a}\alpha + a  \\
             d^2(P,F_2) & = a - \dfrac{c}{a}\alpha.
@@ -133,7 +133,7 @@
         \begin{align}\label{equacaoelipse}
             \mathcal{E}: \elipse{a^2}{b^2}
         \end{align}\pause
-        é chamada de \textbf{equação reduzida da elipse} \pause de centro $O(0,0)$ \pause e focos no eixo $x$. \pause Os números $a$, \pause $b$ \pause
+        é chamada de \textbf{equação reduzida da elipse} \pause de centro $O(0,0)$ \pause e focos no eixo $x$, onde $F_1(-c, 0)$ e $F_2(c, 0)$ . \pause Os números $a$, \pause $b$ \pause
         e $c$, \pause onde $c^2 = a^2 + b^2$, \pause são chamados de \textbf{parâmetros geométricos} \pause da elipse.
     \end{definicao}
 \end{frame}
@@ -200,8 +200,8 @@
         Sejam $O$ a origem do plano cartesiano, \pause $p$ e $q$ números reais distintos e positivos. \pause Seja $\mathcal{E}$ a elipse de equação
         \eqref{equacaoelipsequasegeral} \pause e parâmetros geométricos $a$ e $b$.\pause
         \begin{enumerate}[label=({\arabic*})]
-            \item Se $p > q$, \pause então $a^2 = p$, $b^2 = q$ \pause e $\mathcal{E}$ tem centro $O$ \pause e focos no eixo $x$.\pause
-            \item Se $q > p$, \pause então $a^2 = q$, $b^2 = p$ \pause e $\mathcal{E}$ tem centro $O$ \pause e focos no eixo $y$.
+            \item Se $p > q$, \pause então $a^2 = p$, $b^2 = q$ \pause e $\mathcal{E}$ tem centro $O$ \pause e focos no eixo $x$, \pause dados por $F_1(-c, 0)$ e $F_2(c, 0)$.\pause
+            \item Se $q > p$, \pause então $a^2 = q$, $b^2 = p$ \pause e $\mathcal{E}$ tem centro $O$ \pause e focos no eixo $y$, \pause dados por $F_1(0, -c)$ e $F_2(0, c)$.
         \end{enumerate}
     \end{corolario}
 \end{frame}
@@ -258,7 +258,7 @@
         \[
             \mathcal{H}:\ \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\pause
         \]
-        se, e somente se, \pause as distâncias de $P$ aos focos são:\pause
+        se, e somente se, \pause as distâncias de $P$ aos focos $F_1(-c, 0)$ e $F_2(c, 0)$\pause são:\pause
         \begin{align*}
             d(A,F_1) = \left|\dfrac{c}{a}\alpha + a\right| \\
             d(A,F_2) = \left|\dfrac{c}{a}\alpha - a\right|.
@@ -272,7 +272,7 @@
         \begin{align}\label{equacao_reduzida_da_hiperbole}
             \mathcal{H}:\ \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
         \end{align}\pause
-        é chamada de \pause \textbf{equação reduzida} da hipérbole. \pause Os números $a$, \pause $b$ \pause e $c$, \pause onde $c^2 = a^2 + b^2$, \pause são
+        é chamada de \pause \textbf{equação reduzida} da hipérbole de focos $F_1(-c, 0)$ \pause e $F_2(c, 0)$. \pause Os números $a$, \pause $b$ \pause e $c$, \pause onde $c^2 = a^2 + b^2$, \pause são
         chamados de \pause \textbf{parâmetros geométricos} da hipérbole $\mathcal{H}$.
     \end{definicao}
 \end{frame}
@@ -324,10 +324,8 @@
         Sejam $p$ e $q$ números reais de sinal contrário \pause e $\mathcal{H}$ a hipérbole de equação \eqref{hiperbolegeral} \pause e parâmetros geométricos
         $a$ e $b$.\pause
         \begin{enumerate}[label=({\arabic*})]
-            \item Se $p > 0$ e $q < 0$, \pause então $a^2 = p$ \pause e $b^2 = -q$, \pause $\mathcal{H}$ tem centro na origem, \pause focos no eixo $x$
-                  \pause e assíntotas dadas por $y = \pm(b/a)x$.\pause
-            \item Se $p < 0$ e $q > 0$, \pause então $a^2 = q$ \pause e $b^2 = -p$, \pause $\mathcal{H}$ tem centro na origem, \pause focos no eixo $y$
-                  \pause e assíntotas dadas por $x = \pm(a/b)y$.\pause
+            \item Se $p > 0$ e $q < 0$, \pause então $a^2 = p$ \pause e $b^2 = -q$, \pause $\mathcal{H}$ tem centro na origem, \pause focos no eixo $x$, \pause dados por $F_1(-c, 0)$ e $F_2(c, 0)$ \pause e assíntotas dadas por $y = \pm(b/a)x$.\pause
+            \item Se $p < 0$ e $q > 0$, \pause então $a^2 = q$ \pause e $b^2 = -p$, \pause $\mathcal{H}$ tem centro na origem, \pause focos no eixo $y$,\pause dados por $F_1(0, -c)$ e $F_2(0, c)$ \pause e assíntotas dadas por $x = \pm(a/b)y$.\pause
         \end{enumerate}
     \end{corolario}
 \end{frame}
@@ -354,6 +352,15 @@
         \caption{Definição da Parábola}
         \includegraphics{conicas/parabola/parabola.pdf}
     \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{proposicao}
+        Um ponto $P(x, y)$ pertence à parábola de foco $F(p, 0)$ \pause e reta diretriz $r : x = -p$ \pause se, \pause e somente se,\pause
+        \[
+            y^2 = 4px.
+        \]
+    \end{proposicao}
 \end{frame}
 
 \begin{frame}
