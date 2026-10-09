@@ -966,35 +966,6 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
     perpendicular á reta diretriz é chamada de \textbf{reta focal}.\index{Parábola!Reta diretriz}\index{Parábola!Reta focal}
 \end{definicao}
 
-\begin{exemplo}
-    Determine a equação da parábola de foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$.
-    \begin{solucao}
-        Inicialmente note que
-        \[
-            2 \ne 2.\cdot 1 + 1
-        \]
-        e com isso o ponto $F(1,2)$ não pertence à reta $r$. Logo podemos definir uma parábola com foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$.
-        Um ponto $P(x, y)$ pertence a tal parábola se:
-        \begin{align*}
-            d(P, r)                              & = d(P, F)                          \\
-            \dfrac{|2x + 1 - y|}{\sqrt{1 + 2^2}} & = \sqrt{(x - 1)^2 + (y - 1)^2}     \\
-            (2x + 1 - y)^2                       & = 5(x^2 - 2x + 1 + y^2 - 4y + 4)   \\
-            (2x + 1)^2 - 2y(2x + 1) + y^2        & = 5x^2 - 10x + 5 + 5y^2 - 20y + 20 \\
-            4x^2 + 4x + 1 - 4xy - 2y + y^2       & = 5x^2 + 5y^2 - 10x - 20y + 25
-        \end{align*}
-        Logo se um ponto $P(x, y)$ pertence à parábola de foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$, então suas coordenadas $x$ e $y$ devem satisfazer a
-        equação:
-        \[
-            x^2 + 4y^2 + 4xy - 14x - 18y + 24 = 0.
-        \]
-    \end{solucao}
-    % \begin{figure}[H]%parábola
-    %     \centering
-    %     \caption{Parábola de foco em $F(1,2)$ com reta diretriz $r: y = 2x + 1$}
-    %     \includegraphics{conicas/parabola/parabola-com-foco-fora-dos-eixos.pdf}
-    % \end{figure}
-\end{exemplo}
-
 Fixemos agora o foco no ponto $F(p,0)$ e a reta diretriz como sendo a reta $r: x = -p$, onde $p > 0$, como na Figura \ref{definicao_parabola}.
 \begin{figure}[H]%parábola
     \centering
@@ -1033,7 +1004,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                                          & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                                           & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
@@ -1100,6 +1071,35 @@ Nos demais casos temos:
 \begin{proposicao}
     As equações $y^2 = qx$ e $x^2 = qy$ descrevem uma parábola se, e somente se, $q \ne 0$.
 \end{proposicao}
+
+\begin{exemplo}
+    Determine a equação da parábola de foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$.
+    \begin{solucao}
+        Inicialmente note que
+        \[
+            2 \ne 2.\cdot 1 + 1
+        \]
+        e com isso o ponto $F(1,2)$ não pertence à reta $r$. Logo podemos definir uma parábola com foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$.
+        Um ponto $P(x, y)$ pertence a tal parábola se:
+        \begin{align*}
+            d(P, r)                              & = d(P, F)                          \\
+            \dfrac{|2x + 1 - y|}{\sqrt{1 + 2^2}} & = \sqrt{(x - 1)^2 + (y - 1)^2}     \\
+            (2x + 1 - y)^2                       & = 5(x^2 - 2x + 1 + y^2 - 4y + 4)   \\
+            (2x + 1)^2 - 2y(2x + 1) + y^2        & = 5x^2 - 10x + 5 + 5y^2 - 20y + 20 \\
+            4x^2 + 4x + 1 - 4xy - 2y + y^2       & = 5x^2 + 5y^2 - 10x - 20y + 25
+        \end{align*}
+        Logo se um ponto $P(x, y)$ pertence à parábola de foco em $F(1,2)$ e reta diretriz $r : y = 2x + 1$, então suas coordenadas $x$ e $y$ devem satisfazer a
+        equação:
+        \[
+            x^2 + 4y^2 + 4xy - 14x - 18y + 24 = 0.
+        \]
+    \end{solucao}
+    \begin{figure}[H]%parábola
+        \centering
+        \caption{Parábola de foco em $F(1,2)$ com reta diretriz $r: y = 2x + 1$}
+        \includegraphics{conicas/parabola/parabola-com-foco-fora-dos-eixos.pdf}
+    \end{figure}
+\end{exemplo}
 
 \section{Rotação e Translação de Eixos}
 
