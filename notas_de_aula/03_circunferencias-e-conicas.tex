@@ -966,12 +966,109 @@ que a forma da hipérbole será dada pela Figura \ref{FormageralHiperbole}.
     perpendicular á reta diretriz é chamada de \textbf{reta focal}.\index{Parábola!Reta diretriz}\index{Parábola!Reta focal}
 \end{definicao}
 
+\begin{exemplos}
+    Encontre a equação que um ponto $P(x, y)$ deve satisfazer para pertencer à parábola dada:
+    \begin{enumerate}
+        \item O foco está no ponto $F(2, 0)$ e a reta diretriz é $r: x = -2$.
+              \begin{solucao}
+                  Nesse caso para que um ponto pertença a essa parábola é preciso que:
+                  \[
+                      d(P, r) = d(P, F).
+                  \]
+                  Mas
+                  \begin{align*}
+                      d(P,r)  & = |x + 2|                \\
+                      d(P, F) & = \sqrt{(x - 2)^2 + y^2}
+                  \end{align*}
+                  Daí devemos ter:
+                  \begin{align*}
+                      |x + 2|      & = \sqrt{(x - 2)^2 + y^2}     \\
+                      (|x + 2|)    & = (\sqrt{(x - 2)^2 + y^2})^2 \\
+                      (x + 2)^2    & = (x - 2)^2 + y^2            \\
+                      x^2 + 4x + 4 & = x^2 - 4x + 4 + y^2         \\
+                  \end{align*}
+                  Logo para que $P(x, y)$ pertença à parábola de foco em $F(2, 0)$ e reta diretriz $r : x = -2$ é preciso que $P(x, y)$ satisfaça a equação
+                  \[
+                      y^2 = 8x.
+                  \]
+              \end{solucao}
+        \item O foco está no ponto $F(-2, 0)$ e a reta diretriz é $r: x = 2$.
+              \begin{solucao}
+                  Nesse caso para que um ponto pertença a essa parábola é preciso que:
+                  \[
+                      d(P, r) = d(P, F).
+                  \]
+                  Mas
+                  \begin{align*}
+                      d(P,r)  & = |x - 2|                \\
+                      d(P, F) & = \sqrt{(x + 2)^2 + y^2}
+                  \end{align*}
+                  Daí devemos ter:
+                  \begin{align*}
+                      |x - 2|      & = \sqrt{(x + 2)^2 + y^2}     \\
+                      (|x - 2|)    & = (\sqrt{(x + 2)^2 + y^2})^2 \\
+                      (x - 2)^2    & = (x + 2)^2 + y^2            \\
+                      x^2 - 4x + 4 & = x^2 + 4x + 4 + y^2         \\
+                  \end{align*}
+                  Logo para que $P(x, y)$ pertença à parábola de foco em $F(-2, 0)$ e reta diretriz $r : x = 2$ é preciso que $P(x, y)$ satisfaça a equação
+                  \[
+                      y^2 = -8x.
+                  \]
+              \end{solucao}
+        \item O foco está no ponto $F(0, -2)$ e a reta diretriz é $r: y = 2$.
+              \begin{solucao}
+                  Nesse caso para que um ponto pertença a essa parábola é preciso que:
+                  \[
+                      d(P, r) = d(P, F).
+                  \]
+                  Mas
+                  \begin{align*}
+                      d(P,r)  & = |y - 2|                \\
+                      d(P, F) & = \sqrt{x^2 + (y + 2)^2}
+                  \end{align*}
+                  Daí devemos ter:
+                  \begin{align*}
+                      |y - 2|      & = \sqrt{x^2 + (y + 2)^2}      \\
+                      (|y - 2|)    & = (\sqrt{x^2 + (y + 2)^2 })^2 \\
+                      (y - 2)^2    & = x^2 + (y + 2)^2             \\
+                      y^2 - 4y + 4 & = x^2 + y^2 + 4y + 4          \\
+                  \end{align*}
+                  Logo para que $P(x, y)$ pertença à parábola de foco em $F(0, -2)$ e reta diretriz $r : y = 2$ é preciso que $P(x, y)$ satisfaça a equação
+                  \[
+                      x^2 = -8y.
+                  \]
+              \end{solucao}
+        \item O foco está no ponto $F(0, 2)$ e a reta diretriz é $r: y = -2$.
+              \begin{solucao}
+                  Nesse caso para que um ponto pertença a essa parábola é preciso que:
+                  \[
+                      d(P, r) = d(P, F).
+                  \]
+                  Mas
+                  \begin{align*}
+                      d(P,r)  & = |y + 2|                \\
+                      d(P, F) & = \sqrt{x^2 + (y - 2)^2}
+                  \end{align*}
+                  Daí devemos ter:
+                  \begin{align*}
+                      |y + 2|      & = \sqrt{x^2 + (y - 2)^2}      \\
+                      (|y + 2|)    & = (\sqrt{x^2 + (y - 2)^2 })^2 \\
+                      (y + 2)^2    & = x^2 + (y - 2)^2             \\
+                      y^2 + 4y + 4 & = x^2 + y^2 - 4y + 4          \\
+                  \end{align*}
+                  Logo para que $P(x, y)$ pertença à parábola de foco em $F(0, -2)$ e reta diretriz $r : y = 2$ é preciso que $P(x, y)$ satisfaça a equação
+                  \[
+                      x^2 = 8y.
+                  \]
+              \end{solucao}
+    \end{enumerate}
+\end{exemplos}
 Fixemos agora o foco no ponto $F(p,0)$ e a reta diretriz como sendo a reta $r: x = -p$, onde $p > 0$, como na Figura \ref{definicao_parabola}.
 \begin{figure}[H]%parábola
     \centering
     \caption{Definição da parábola}
     \label{definicao_parabola}
-    \includegraphics[scale=0.6]{conicas/parabola/parabola.pdf}
+    \includegraphics[scale=0.7]{conicas/parabola/parabola.pdf}
 \end{figure}
 
 Assim seja $P(x,y)$ um ponto pertence à parábola de foco $F$ e reta diretriz $r$. Então
@@ -1004,7 +1101,7 @@ Temos
 \end{align*}
 Mas substituindo \eqref{equacaoauxiliarparabola} na última equação obtemos
 \begin{align*}
-    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                                           & = \sqrt{\alpha^2 + 2p\alpha +
+    d(Q, F) & = \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + \beta^2} \\ &= \sqrt{\alpha^2 - 2p\alpha + \alpha^2 + 4p\alpha} \\                                                                                                                                                & = \sqrt{\alpha^2 + 2p\alpha +
     \alpha^2}                                                   \\ &=	\sqrt{(x + \alpha)^2} \\ &= |\alpha + p|.
 \end{align*}
 Logo, $d(Q, r) = d(Q, F)$ e então o ponto $Q(\alpha, \beta)$ pertence à parábola de foco $F(p,0)$ e reta diretriz $r : x = -p$. Assim provamos que:
