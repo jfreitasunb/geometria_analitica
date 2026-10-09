@@ -21,15 +21,15 @@
     \psset{ticksize=0pt}
     \begin{pspicture*}(-4,-4)(4,4)
         \psaxes[labels=none]{->}(0,0)(-3.5,-3.5)(3.5,3.5)
-        \psline[linestyle=dashed,linecolor=red](-1,-3)(-1,3)
-        \rput(1.2,-0.3){$F(p,0)$}
-        \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](1,0)
-        \rput(2,2.3){$P(x,y)$}
-        \psline[linestyle=dashed,linecolor=blue](1,0)(2,2)
-        \psline[linestyle=dashed,linecolor=blue](-1,2)(2,2)
-        \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](2,2)
-        \rput(-2,3){$r: x = -p$}
-        \rput(3.4,-0.3){$x$}
-        \rput(-0.3,3.4){$y$}
+        \rput(-1.8,-0.3){$F(-2,0)$}
+        \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](-2,0)
+        \rput(-2.9,2.3){$P(x,y)$}
+        \psdot[linecolor=blue,fillcolor=red,dotstyle=o,dotsize=5pt](-2.9,2)
+        \psline[linestyle=dashed,linecolor=red](-2.9,0)(-2.9,2)
+        \rput(-2.9,-0.2){$x$}
+        \psline[linestyle=dashed,linecolor=blue](-2,0)(-2.9,2)
+        \psline[linestyle=dashed,linecolor=blue](-2.9,2)(2,2)
+        \psline[linestyle=dashed,linecolor=red](2,-3)(2,3)
+        \rput(2.8,3){$r: x = -2$}
     \end{pspicture*}
 \end{document}
