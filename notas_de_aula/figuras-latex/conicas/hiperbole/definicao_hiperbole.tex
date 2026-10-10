@@ -1,0 +1,30 @@
+%!TEX program = xelatex
+\documentclass{standalone}%opcao draft remove os links
+\usepackage{amssymb,amsmath,amsfonts,amsthm,amstext,pxfonts}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfigure}
+\usepackage{tikz,tikz-3dplot,tkz-euclide,circuitikz,siunitx,pstricks-add,pst-coil,pst-3dplot}
+\usepackage{pst-plot,pst-func,pst-eucl,pst-solides3d}
+\usetikzlibrary{scopes}
+\usetikzlibrary{through}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usetikzlibrary{arrows}
+\usetikzlibrary{intersections,positioning}
+\begin{document}
+\psset{ticksize=0pt}
+\begin{pspicture*}(-5,-1)(5,5)
+%\psaxes[labels=none]{->}(0,0)(-5.5,-5)(5,5)
+\psline[linestyle=dashed,linecolor=red](-3,0.5)(1.92,3.66)
+\psline[linestyle=dashed,linecolor=red](1.92,3.66)(4,1)
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=blue](-3,0.5)
+\rput[bl](-3.1,0.15){\blue{$F_{1}$}}
+\psdots[dotstyle=*,linecolor=blue](4,1)
+\rput[bl](3.95,0.65){\blue{$F_{2}$}}
+\psdots[dotstyle=*,linecolor=blue](1.92,3.66)
+\rput[bl](2,3.86){\blue{$P(x, y)$}}
+\end{scriptsize}
+\end{pspicture*}
+\end{document}
