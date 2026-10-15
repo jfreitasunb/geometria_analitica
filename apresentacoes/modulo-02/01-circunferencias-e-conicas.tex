@@ -493,6 +493,49 @@
 \end{frame}
 
 \begin{frame}
+    Inicialmente observe que a \eqref{equacao_geral_conica} \pause pode ser escrita na forma\pause
+    \begin{equation*}\label{equacao_matricial_conica}
+        X^tAX \pause + KX \pause + F = [0]\pause
+    \end{equation*}
+    onde\pause
+    \[
+        A = \begin{bmatrix}
+            a   & b/2 \\
+            b/2 & c
+        \end{bmatrix}\pause
+        , \quad K = \begin{bmatrix}
+            d & e
+        \end{bmatrix}, \pause \quad X = \begin{bmatrix}
+            x \\
+            y
+        \end{bmatrix}\pause \quad\mbox{e}\quad F = [f]\pause
+    \]
+    e $t$ denota a matriz transposta. \pause Queremos então encontrar um ângulo $\theta$ \pause tal que a substituição\pause
+    \begin{equation*}
+        X = \begin{bmatrix}
+            \cos\theta & -\sin\theta \\
+            \sin\theta & \cos\theta
+        \end{bmatrix}\pause \begin{bmatrix}
+            x_1 \\y_1
+        \end{bmatrix}\pause
+    \end{equation*}
+    transforma a equação \eqref{equacao_geral_conica} \pause na equação \eqref{equacao_rotacionada_conica}.
+\end{frame}
+
+\begin{frame}
+    \begin{definicao}
+        A matriz
+        \[
+            R_\theta = \begin{bmatrix}
+                \cos\theta & -\sin\theta \\
+                \sin\theta & \cos\theta
+            \end{bmatrix}\pause
+        \]
+        é chamada de \textbf{matriz de rotação}.
+    \end{definicao}
+\end{frame}
+
+\begin{frame}
     \begin{teorema}
         Considere a equação
         \[
