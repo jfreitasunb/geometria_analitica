@@ -132,55 +132,55 @@ Sejam $\vec{i} = (1, 0, 0)$, $\vec{j} = (0, 1, 0)$ e $\vec{k} = (0, 0, 1)$ vetor
     \end{solucao}
 \end{exercicio}
 
-\begin{exercicio}
-    Sejam $\vec{v}$ um vetor não nulo no espaço e $\alpha$, $\beta$ e $\gamma$ os ângulos que $\vec{v}$ formam com os vetores $\vec{i}$, $\vec{j}$ e $\vec{k}$, respectivamente. Demonstre que
-    \[
-        \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1.
-    \]
-\end{exercicio}
+%\begin{exercicio}
+%    Sejam $\vec{v}$ um vetor não nulo no espaço e $\alpha$, $\beta$ e $\gamma$ os ângulos que $\vec{v}$ formam com os vetores $\vec{i}$, $\vec{j}$ e $\vec{k}$, respectivamente. Demonstre que
+%    \[
+%        \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1.
+%    \]
+%\end{exercicio}
+%
+%\begin{exercicio}
+%    Sejam $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ três vetores unitários e dois a dois ortogonais. Se $A = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ é uma matriz $3 \times 3$ cujas colunas são os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$, então $A$ é invertível e $A^{-1} = A^t$. \textit{(Sugestão: mostre que $A^tA = I_3$.)}
+%\end{exercicio}
 
-\begin{exercicio}
-    Sejam $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$ três vetores unitários e dois a dois ortogonais. Se $A = [\vec{U_1}\ \vec{U_2}\ \vec{U_3}]$ é uma matriz $3 \times 3$ cujas colunas são os vetores $\vec{U_1}$, $\vec{U_2}$ e $\vec{U_3}$, então $A$ é invertível e $A^{-1} = A^t$. \textit{(Sugestão: mostre que $A^tA = I_3$.)}
-\end{exercicio}
+%\begin{exercicio}
+%    Sejam $\vec{u} = (x_1, y_1, z_1)$, $\vec{v} = (x_2, y_2, z_2)$ e $\vec{w} = (x_3, y_3, z_3)$ vetores em $\real^3$. Prove a fórmula seguinte para o \textbf{produto vetorial duplo}
+%    \[
+%        \vec{u}\times (\vec{v}\times \vec{w}) = \inner{u}{w}\vec{v} - \inner{u}{v}\vec{w},
+%    \]
+%    seguindo os seguintes passos:
+%    \begin{enumerate}[label=({\alph*})]
+%        \item Prove que
+%              \begin{align*}
+%                  \vec{u} \times (\vec{i}\times\vec{j}) & = \inner{u}{j}\vec{i} - \inner{u}{i}\vec{j} \\
+%                  \vec{u} \times (\vec{j}\times\vec{k}) & = \inner{u}{k}\vec{j} - \inner{u}{j}\vec{k} \\
+%                  \vec{u} \times (\vec{k}\times\vec{i}) & = \inner{u}{i}\vec{k} - \inner{u}{k}\vec{i}
+%              \end{align*}
+%
+%        \item Prove usando o item anterior e as propriedades do produto vetorial que
+%              \begin{align*}
+%                  \vec{u} \times (\vec{v}\times\vec{i}) & = \inner{u}{i}\vec{v} - \inner{u}{v}\vec{i} \\
+%                  \vec{u} \times (\vec{v}\times\vec{j}) & = \inner{u}{j}\vec{v} - \inner{u}{v}\vec{j} \\
+%                  \vec{u} \times (\vec{v}\times\vec{k}) & = \inner{u}{k}\vec{v} - \inner{u}{v}\vec{k}
+%              \end{align*}
+%
+%        \item Prove agora o caso geral usando o item anterior e as propriedades do produto vetorial.
+%    \end{enumerate}
+%\end{exercicio}
 
-\begin{exercicio}
-    Sejam $\vec{u} = (x_1, y_1, z_1)$, $\vec{v} = (x_2, y_2, z_2)$ e $\vec{w} = (x_3, y_3, z_3)$ vetores em $\real^3$. Prove a fórmula seguinte para o \textbf{produto vetorial duplo}
-    \[
-        \vec{u}\times (\vec{v}\times \vec{w}) = \inner{u}{w}\vec{v} - \inner{u}{v}\vec{w},
-    \]
-    seguindo os seguintes passos:
-    \begin{enumerate}[label=({\alph*})]
-        \item Prove que
-              \begin{align*}
-                  \vec{u} \times (\vec{i}\times\vec{j}) & = \inner{u}{j}\vec{i} - \inner{u}{i}\vec{j} \\
-                  \vec{u} \times (\vec{j}\times\vec{k}) & = \inner{u}{k}\vec{j} - \inner{u}{j}\vec{k} \\
-                  \vec{u} \times (\vec{k}\times\vec{i}) & = \inner{u}{i}\vec{k} - \inner{u}{k}\vec{i}
-              \end{align*}
-
-        \item Prove usando o item anterior e as propriedades do produto vetorial que
-              \begin{align*}
-                  \vec{u} \times (\vec{v}\times\vec{i}) & = \inner{u}{i}\vec{v} - \inner{u}{v}\vec{i} \\
-                  \vec{u} \times (\vec{v}\times\vec{j}) & = \inner{u}{j}\vec{v} - \inner{u}{v}\vec{j} \\
-                  \vec{u} \times (\vec{v}\times\vec{k}) & = \inner{u}{k}\vec{v} - \inner{u}{v}\vec{k}
-              \end{align*}
-
-        \item Prove agora o caso geral usando o item anterior e as propriedades do produto vetorial.
-    \end{enumerate}
-\end{exercicio}
-
-\begin{exercicio}
-    Prove usando o exercício anterior que
-    \[
-        [\vec{u}\times (\vec{v}\times \vec{w})] + [\vec{v}\times (\vec{w}\times \vec{u})] + [\vec{w}\times (\vec{u}\times \vec{v})] = \vec{0}.
-    \]
-\end{exercicio}
+%\begin{exercicio}
+%    Prove usando o exercício anterior que
+%    \[
+%        [\vec{u}\times (\vec{v}\times \vec{w})] + [\vec{v}\times (\vec{w}\times \vec{u})] + [\vec{w}\times (\vec{u}\times \vec{v})] = \vec{0}.
+%    \]
+%\end{exercicio}
 
 \begin{exercicio}
     Mostre que não existe $x \in \real$ tal que os vetores $\vec{u} = (x,2,4)$ e $\vec{v} = (x,-2,3)$ são perpendiculares.
 \end{exercicio}
 
 \begin{exercicio}
-    Sejam $\vec{u} = (-1,1,-3)$, $\vec{v} = (1,1,0)$ e $\vec{w} = (2,1,1)$. Calcule $(\vec{u}\times\vec{v})\cdot\vec{w}$.
+    Sejam $\vec{u} = (-1,1,-3)$, $\vec{v} = (1,1,0)$ e $\vec{w} = (2,1,1)$. Calcule $\langle\vec{u}\times\vec{v}, \vec{w}\rangle$.
     \begin{solucao}
         $\langle(\vec{u}\times\vec{v}), \vec{w}\rangle = 1$
     \end{solucao}
