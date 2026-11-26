@@ -21,528 +21,528 @@
 \date{}
 
 \begin{document}
-    \begin{frame}
-        \maketitle
-    \end{frame}
+\begin{frame}
+    \maketitle
+\end{frame}
 
-    \logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
+\logo{\includegraphics[scale=.1]{logo-MAT.png}\vspace*{8.5cm}}
 
-    \begin{frame}
-      Em $\real^3$ estamos interessados em objetos definidos por uma equação de segundo grau em $x$, $y$ e $z$ da forma\pause
-      \begin{equation}\label{equacao_quadrica}
-          ax^2 \pause + by^2 \pause + cz^2 \pause + dxy \pause + exz \pause + fyz \pause + gx \pause + hy \pause + iz \pause + j = 0.\pause
-      \end{equation}
+\begin{frame}
+    Em $\real^3$ estamos interessados em objetos definidos por uma equação de segundo grau em $x$, $y$ e $z$ da forma\pause
+    \begin{equation}\label{equacao_quadrica}
+        ax^2 \pause + by^2 \pause + cz^2 \pause + dxy \pause + exz \pause + fyz \pause + gx \pause + hy \pause + iz \pause + j = 0.\pause
+    \end{equation}
 
-      O conjunto de pontos em $\real^3$ \pause satisfazendo uma equação da forma \eqref{equacao_quadrica} \pause é chamado de uma \textbf{quádrica} \pause ou \textbf{superfície quádrica}. \pause Nessa equação, \pause pelo menos um dos números \pause $a$, \pause $b$, \pause $c$, \pause $d$, \pause $e$ ou \pause $f$ deve ser não nulo.
+    O conjunto de pontos em $\real^3$ \pause satisfazendo uma equação da forma \eqref{equacao_quadrica} \pause é chamado de uma \textbf{quádrica} \pause ou \textbf{superfície quádrica}. \pause Nessa equação, \pause pelo menos um dos números \pause $a$, \pause $b$, \pause $c$, \pause $d$, \pause $e$ ou \pause $f$ deve ser não nulo.
 
-    \end{frame}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
-          Uma \textbf{esfera} é uma quádrica \pause com equação na forma\pause
-          \begin{equation*}
-              x^2 + y^2 + z^2 = r^2.
-          \end{equation*}
-      \end{definicao}
-    \end{frame}
+\begin{frame}
+    \begin{definicao}
+        Uma \textbf{esfera} é uma quádrica \pause com equação na forma\pause
+        \begin{equation*}
+            x^2 + y^2 + z^2 = r^2.
+        \end{equation*}
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}
-          \centering
-          \caption{Esfera: $x^2 + y^2 + z^2 = r^2$}
-          \includegraphics[scale=0.2]{esfera.png}
-      \end{figure}
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Esfera: $x^2 + y^2 + z^2 = r^2$}
+        \includegraphics[scale=0.2]{quadricas/esfera/esfera.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
-          Um \textbf{elipsoide} \pause é uma quádrica descrita pela equação\pause
-          \begin{equation*}
-              \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1\pause
-          \end{equation*}
-          onde os números reais \pause $a$, \pause $b$ e $c$ \pause são positivos \pause e pelo menos dois deles são distintos.
-      \end{definicao}
-    \end{frame}
+\begin{frame}
+    \begin{definicao}
+        Um \textbf{elipsoide} \pause é uma quádrica descrita pela equação\pause
+        \begin{equation*}
+            \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1\pause
+        \end{equation*}
+        onde os números reais \pause $a$, \pause $b$ e $c$ \pause são positivos \pause e pelo menos dois deles são distintos.
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}
-          \centering
-          \caption{Elipsoide: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
-          \includegraphics[scale=0.2]{elipsoide.png}
-      \end{figure}
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Elipsoide: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
+        \includegraphics[scale=0.2]{quadricas/elipsoide/elipsoide.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-        Na equação do elipsoide \pause se $z = 0$, \pause a equação torna-se\pause
+\begin{frame}
+    Na equação do elipsoide \pause se $z = 0$, \pause a equação torna-se\pause
+    \[
+        \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1
+    \]\pause
+    e a superfície resultante é chamada de \textbf{cilindro elíptico.}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[H]
+        \centering
+        \caption{Cilindro Elíptico: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$}
+        \includegraphics[scale=0.2]{quadricas/cilindro/cilindro_eliptico.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{definicao}
+        Sejam $a$ e $b$ números reais positivos \pause a quádrica descrita de equação\pause
         \[
-            \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1
-        \]\pause
-        e a superfície resultante é chamada de \textbf{cilindro elíptico.}
-    \end{frame}
+            z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2},\pause
+        \]
+        é chamada de:\pause
+        \begin{enumerate}[label=({\roman*})]
+            \item um \textbf{paraboloide elíptico} \pause se $a \ne b$;\pause
+            \item um \textbf{paraboloide de rotação} \pause se $a = b$.
+        \end{enumerate}
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-        \begin{figure}[H]
-            \centering
-            \caption{Cilindro Elíptico: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$}
-            \includegraphics[scale=0.2]{cilindro_eliptico.png}
-        \end{figure}
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Paraboloide Elíptico: $z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
+        \includegraphics[scale=0.2]{quadricas/paraboloide/paraboloide_eliptico.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
-          Sejam $a$ e $b$ números reais positivos \pause a quádrica descrita de equação\pause
-          \[
-              z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2},\pause
-          \]
-          é chamada de:\pause
-          \begin{enumerate}[label=({\roman*})]
-              \item um \textbf{paraboloide elíptico} \pause se $a \ne b$;\pause
-              \item um \textbf{paraboloide de rotação} \pause se $a = b$.
-          \end{enumerate}
-      \end{definicao}
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Paraboloide de rotação: $z = \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2}$}
+        \includegraphics[scale=0.2]{quadricas/paraboloide/paraboloide_rotacao.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}
-          \centering
-          \caption{Paraboloide Elíptico: $z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
-          \includegraphics[scale=0.2]{paraboloide_eliptico.png}
-      \end{figure}
-    \end{frame}
+\begin{frame}
+    \begin{definicao}
+        Sejam $a$ e $b$ números reais positivos. \pause A quádrica descrita pela equação\pause
+        \[
+            z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2},\pause
+        \]
+        é chamada de um um \textbf{paraboloide hiperbólico}.
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-        \begin{figure}
-            \centering
-            \caption{Paraboloide de rotação: $z = \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2}$}
-            \includegraphics[scale=0.2]{paraboloide_rotacao.png}
-        \end{figure}
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Paraboloide Hiperbólico: $z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2}$}
+        \includegraphics[scale=0.2]{quadricas/paraboloide/paraboloide_hiperbolico.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
-          Sejam $a$ e $b$ números reais positivos. \pause A quádrica descrita pela equação\pause
-          \[
-              z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2},\pause
-          \]
-          é chamada de um um \textbf{paraboloide hiperbólico}.
-      \end{definicao}
-    \end{frame}
+\begin{frame}
+    \begin{definicao}
+        Um \textbf{hiperboloide de uma folha} \pause é uma quádrica descrita pela equação\pause
+        \[
+            \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1\pause
+        \]
+        onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois deles são distintos.
+    \end{definicao}
+\end{frame}
 
-        \begin{frame}
-        \begin{figure}
-            \centering
-            \caption{Paraboloide Hiperbólico: $z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2}$}
-            \includegraphics[scale=0.2]{paraboloide_hiperbolico.png}
-        \end{figure}
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Hiperboloide de uma folha: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$}
+        \includegraphics[scale=0.2]{quadricas/hiperboloide/hiperboloide_de_uma_folha.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      \begin{definicao}
-          Um \textbf{hiperboloide de uma folha} \pause é uma quádrica descrita pela equação\pause
-          \[
-              \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1\pause
-          \]
-          onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois deles são distintos.
-      \end{definicao}
-    \end{frame}
+\begin{frame}
+    \begin{definicao}
+        Um \textbf{hiperboloide de duas folhas} \pause é uma quádrica descrita pela equação\pause
+        \[
+            \dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1\pause
+        \]
+        onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois \pause deles são distintos.
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      \begin{figure}
-          \centering
-          \caption{Hiperboloide de uma folha: $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$}
-          \includegraphics[scale=0.2]{hiperboloide_de_uma_folha.png}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-          Um \textbf{hiperboloide de duas folhas} \pause é uma quádrica descrita pela equação\pause
-          \[
-              \dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1\pause
-          \]
-          onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois \pause deles são distintos.
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            Um \textbf{cilindro hiperbólico} \pause é uma quádrica descrita pela equação\pause
-            \[
+\begin{frame}
+    \begin{definicao}
+        Um \textbf{cilindro hiperbólico} \pause é uma quádrica descrita pela equação\pause
+        \[
             \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1\pause
-            \]
-            onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois \pause deles são distintos.
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}
-          \centering
-          \caption{Cilindro hiperbólico: $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
-          \includegraphics[scale=0.2]{cilindro_hiperbolico.png}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-        \begin{definicao}
-            Um \textbf{cilindro parabólico} \pause é uma quádrica descrita pela equação\pause
-            \[
-                y = ax^2\pause
-            \]
-            onde $a$ é um número real.
-        \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-        \begin{figure}
-            \centering
-            \caption{Cilindro parabólico: $y = ax^2$}
-            \includegraphics[scale=0.2]{cilindro_parabolico.png}
-        \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      \begin{definicao}
-          Um \textbf{cone elíptico} \pause é um conjunto de pontos que satisfaz uma equação da forma\pause
-          \begin{equation}\label{cone_eliptico}
-              z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}\pause
-          \end{equation}
-          em que $a$ e $b$ são números reais positivos. \pause Se $a = b$, \pause o cone é chamado de \textbf{cone circular}.
-      \end{definicao}
-    \end{frame}
-
-    \begin{frame}
-      \begin{figure}
-          \centering
-          \caption{Cone elíptico: $z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
-          \includegraphics[scale=0.2]{cone_eliptico.png}
-      \end{figure}
-    \end{frame}
-
-    \begin{frame}
-      Considere uma quádrica de equação
-      \begin{equation}\label{equacao_geral_quadrica}
-        ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.\pause
-      \end{equation}
-
-      Queremos remover os termos $xy$, \pause $xz$ \pause e $yz$ \pause da equação \eqref{equacao_geral_quadrica} \pause para então usar uma translação de eixos, \pause se necessário, \pause e com isso identificar a quádrica definida por tal equação.
-    \end{frame}
-
-    \begin{frame}
-      Para isso, vamos tentar encontrar uma matriz $Q \pause = [\vec{U_1}\ \pause \vec{U_2}\ \pause \vec{U_3}]$ \pause onde os vetores $\vec{U_1}$, \pause $\vec{U_2}$ \pause e $\vec{U_3}$ \pause são unitários, \pause ortogonais \pause e tais que a mudança\pause
-      \begin{equation}\label{substituicao_quadrica}
-          \begin{bmatrix}
-              x\\
-              y\\
-              z
-          \end{bmatrix} = Q \begin{bmatrix}
-              x_1\\
-              y_1\\
-              z_1
-          \end{bmatrix}
-      \end{equation}\pause
-      transforma a equação \eqref{equacao_geral_quadrica} \pause numa equação da forma\pause
-      \begin{equation}\label{equacao_rotacionada_quadrica}
-        a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0.
-      \end{equation}
-    \end{frame}
-
-    \begin{frame}
-      Inicialmente observe que a equação \eqref{equacao_geral_quadrica} \pause pode ser escrita na forma\pause
-      \begin{equation}\label{equacao_matricial_quadrica}
-        X^tAX + KX + J = [0]\pause
-      \end{equation}
-      onde
-      \[
-        A = \begin{bmatrix}
-          a & d/2 & e/2\\
-          d/2 & b & f/2\\
-          e/2 & f/2 & c
-        \end{bmatrix}\pause
-      , \quad K = \begin{bmatrix}
-        g & h & i
-      \end{bmatrix}, \pause \quad X = \begin{bmatrix}
-        x\\
-        y\\
-        z
-      \end{bmatrix}\pause \quad\mbox{e}\quad J = [j]
-      \]\pause
-      e $t$ denota a matriz transposta.
-
-    \end{frame}
-
-    \begin{frame}
-      Queremos fazer uma substituição da forma \eqref{substituicao_quadrica}, \pause isto é, $X = QX'$ \pause para com isso obter uma equação na forma\pause
-      \[
-          X_1^tBX_1 + K'X_1 + J = [0]
-      \]\pause
-      onde\pause
-      \[
-            B = \begin{bmatrix}
-              a' & d'/2 & e'/2\\
-              d'/2 & b' & f'/2\\
-              e'/2 & f'/2 & c'
-              \end{bmatrix} = Q^tAQ,\pause
-            K' = \begin{bmatrix}
-              g' & h' & i'
-              \end{bmatrix} = KQ,\pause
-              \]
-              \[
-            X = \begin{bmatrix}
-              x\\y\\z
-          \end{bmatrix},\pause
-          X_1 = \begin{bmatrix}
-              x_1\\y_1\\z_1
-          \end{bmatrix}.
         \]
-    \end{frame}
+        onde os números reais $a$, \pause $b$ \pause e $c$ \pause são positivos \pause e pelo menos dois \pause deles são distintos.
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      Observe que a matriz $Q$ \pause é formada por vetores unitários \pause e ortogonais, \pause daí $Q^tQ = I_3$ \pause e com isso obtemos\pause
-      \[
-        B - \lambda I_3 \pause = Q^t A Q - \lambda I_3 \pause = Q^t A Q - Q^t\lambda I_3 Q \pause = Q^t (A - \lambda I_3)Q\pause
-      \]
-      para todo $\lambda \in \real$. \pause Com isso\pause
-      \[
-        \det(B - \lambda I_3) \pause = \det[Q^t(A - \lambda I_3)Q] = \pause
-      \]
-      \[
-       \det(Q^t)\det(A - \lambda I_3)\det(Q) \pause = \det(A - \lambda I_3).
-      \]
-    \end{frame}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Cilindro hiperbólico: $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
+        \includegraphics[scale=0.2]{quadricas/cilindro/cilindro_hiperbolico.png}
+    \end{figure}
+\end{frame}
 
-    \begin{frame}
-      Assim escolhendo a matriz $Q$ \pause de tal forma que $d' = e' = f' = 0$, \pause o que é sempre possível, \pause obtemos\pause
-      \[
-        \det(A - \lambda I_3) \pause = \det(B - \lambda I_3) \pause = \det \begin{bmatrix}
-          a' - \lambda & 0 & 0\\
-          0 & b' - \lambda & 0\\
-          0 & 0 & c' - \lambda
-        \end{bmatrix} \pause
-        \]
+\begin{frame}
+    \begin{definicao}
+        Um \textbf{cilindro parabólico} \pause é uma quádrica descrita pela equação\pause
         \[
-            = -(\lambda - a')(\lambda - b')(\lambda - c').
+            y = ax^2\pause
         \]
-    \end{frame}
+        onde $a$ é um número real.
+    \end{definicao}
+\end{frame}
 
-    \begin{frame}
-      Logo os coeficientes $a'$, $b'$ e $c'$ \pause são raízes da equação de terceiro grau\pause
-      \[
-        p(\lambda) \pause = \det(A - \lambda I_3) \pause = \det \begin{bmatrix}
-          a - \lambda & d/2 & e/2\\
-          d/2 & b - \lambda & f/2\\
-          e/2 & f/2 & c - \lambda
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Cilindro parabólico: $y = ax^2$}
+        \includegraphics[scale=0.2]{quadricas/cilindro/cilindro_parabolico.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{definicao}
+        Um \textbf{cone elíptico} \pause é um conjunto de pontos que satisfaz uma equação da forma\pause
+        \begin{equation}\label{cone_eliptico}
+            z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}\pause
+        \end{equation}
+        em que $a$ e $b$ são números reais positivos. \pause Se $a = b$, \pause o cone é chamado de \textbf{cone circular}.
+    \end{definicao}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption{Cone elíptico: $z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}
+        \includegraphics[scale=0.2]{quadricas/cone/cone_eliptico.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    Considere uma quádrica de equação
+    \begin{equation}\label{equacao_geral_quadrica}
+        ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0.\pause
+    \end{equation}
+
+    Queremos remover os termos $xy$, \pause $xz$ \pause e $yz$ \pause da equação \eqref{equacao_geral_quadrica} \pause para então usar uma translação de eixos, \pause se necessário, \pause e com isso identificar a quádrica definida por tal equação.
+\end{frame}
+
+\begin{frame}
+    Para isso, vamos tentar encontrar uma matriz $Q \pause = [\vec{U_1}\ \pause \vec{U_2}\ \pause \vec{U_3}]$ \pause onde os vetores $\vec{U_1}$, \pause $\vec{U_2}$ \pause e $\vec{U_3}$ \pause são unitários, \pause ortogonais \pause e tais que a mudança\pause
+    \begin{equation}\label{substituicao_quadrica}
+        \begin{bmatrix}
+            x \\
+            y \\
+            z
+        \end{bmatrix} = Q \begin{bmatrix}
+            x_1 \\
+            y_1 \\
+            z_1
+        \end{bmatrix}
+    \end{equation}\pause
+    transforma a equação \eqref{equacao_geral_quadrica} \pause numa equação da forma\pause
+    \begin{equation}\label{equacao_rotacionada_quadrica}
+        a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0.
+    \end{equation}
+\end{frame}
+
+\begin{frame}
+    Inicialmente observe que a equação \eqref{equacao_geral_quadrica} \pause pode ser escrita na forma\pause
+    \begin{equation}\label{equacao_matricial_quadrica}
+        X^tAX + KX + J = [0]\pause
+    \end{equation}
+    onde
+    \[
+        A = \begin{bmatrix}
+            a   & d/2 & e/2 \\
+            d/2 & b   & f/2 \\
+            e/2 & f/2 & c
+        \end{bmatrix}\pause
+        , \quad K = \begin{bmatrix}
+            g & h & i
+        \end{bmatrix}, \pause \quad X = \begin{bmatrix}
+            x \\
+            y \\
+            z
+        \end{bmatrix}\pause \quad\mbox{e}\quad J = [j]
+    \]\pause
+    e $t$ denota a matriz transposta.
+
+\end{frame}
+
+\begin{frame}
+    Queremos fazer uma substituição da forma \eqref{substituicao_quadrica}, \pause isto é, $X = QX'$ \pause para com isso obter uma equação na forma\pause
+    \[
+        X_1^tBX_1 + K'X_1 + J = [0]
+    \]\pause
+    onde\pause
+    \[
+        B = \begin{bmatrix}
+            a'   & d'/2 & e'/2 \\
+            d'/2 & b'   & f'/2 \\
+            e'/2 & f'/2 & c'
+        \end{bmatrix} = Q^tAQ,\pause
+        K' = \begin{bmatrix}
+            g' & h' & i'
+        \end{bmatrix} = KQ,\pause
+    \]
+    \[
+        X = \begin{bmatrix}
+            x \\y\\z
+        \end{bmatrix},\pause
+        X_1 = \begin{bmatrix}
+            x_1 \\y_1\\z_1
         \end{bmatrix}.
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      Agora para determinar a matriz $Q$ \pause começamos com a equação\pause
-      \[
+\begin{frame}
+    Observe que a matriz $Q$ \pause é formada por vetores unitários \pause e ortogonais, \pause daí $Q^tQ = I_3$ \pause e com isso obtemos\pause
+    \[
+        B - \lambda I_3 \pause = Q^t A Q - \lambda I_3 \pause = Q^t A Q - Q^t\lambda I_3 Q \pause = Q^t (A - \lambda I_3)Q\pause
+    \]
+    para todo $\lambda \in \real$. \pause Com isso\pause
+    \[
+        \det(B - \lambda I_3) \pause = \det[Q^t(A - \lambda I_3)Q] = \pause
+    \]
+    \[
+        \det(Q^t)\det(A - \lambda I_3)\det(Q) \pause = \det(A - \lambda I_3).
+    \]
+\end{frame}
+
+\begin{frame}
+    Assim escolhendo a matriz $Q$ \pause de tal forma que $d' = e' = f' = 0$, \pause o que é sempre possível, \pause obtemos\pause
+    \[
+        \det(A - \lambda I_3) \pause = \det(B - \lambda I_3) \pause = \det \begin{bmatrix}
+            a' - \lambda & 0            & 0            \\
+            0            & b' - \lambda & 0            \\
+            0            & 0            & c' - \lambda
+        \end{bmatrix} \pause
+    \]
+    \[
+        = -(\lambda - a')(\lambda - b')(\lambda - c').
+    \]
+\end{frame}
+
+\begin{frame}
+    Logo os coeficientes $a'$, $b'$ e $c'$ \pause são raízes da equação de terceiro grau\pause
+    \[
+        p(\lambda) \pause = \det(A - \lambda I_3) \pause = \det \begin{bmatrix}
+            a - \lambda & d/2         & e/2         \\
+            d/2         & b - \lambda & f/2         \\
+            e/2         & f/2         & c - \lambda
+        \end{bmatrix}.
+    \]
+\end{frame}
+
+\begin{frame}
+    Agora para determinar a matriz $Q$ \pause começamos com a equação\pause
+    \[
         B = Q^t A Q
-      \]\pause
-      e multiplicamos à esquerda por $Q$ \pause obtendo\pause
-      \[
+    \]\pause
+    e multiplicamos à esquerda por $Q$ \pause obtendo\pause
+    \[
         Q B = AQ.
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      Mas
-      \[
-          AQ \pause = A \begin{bmatrix}
-              \vec{U_1} \pause & \vec{U_2} \pause & \vec{U_3}
-          \end{bmatrix} \pause = \begin{bmatrix}
-              A\vec{U_1} \pause & A\vec{U_2} \pause & A\vec{U_3}
-          \end{bmatrix}
-      \]\pause
-      e\pause
-      \[
-          QB \pause = \begin{bmatrix}
-              \vec{U_1} \pause & \vec{U_2} \pause & \vec{U_3}
-          \end{bmatrix}\pause \begin{bmatrix}
-              a' & 0 & 0\\
-              0 & b' & 0\\
-              0 & 0 & c'
-          \end{bmatrix} \pause = \begin{bmatrix}
-              a'\vec{U_1} \pause & b'\vec{U_2} \pause & c'\vec{U_3}
-          \end{bmatrix}.
-      \]
-    \end{frame}
+\begin{frame}
+    Mas
+    \[
+        AQ \pause = A \begin{bmatrix}
+            \vec{U_1} \pause & \vec{U_2} \pause & \vec{U_3}
+        \end{bmatrix} \pause = \begin{bmatrix}
+            A\vec{U_1} \pause & A\vec{U_2} \pause & A\vec{U_3}
+        \end{bmatrix}
+    \]\pause
+    e\pause
+    \[
+        QB \pause = \begin{bmatrix}
+            \vec{U_1} \pause & \vec{U_2} \pause & \vec{U_3}
+        \end{bmatrix}\pause \begin{bmatrix}
+            a' & 0  & 0  \\
+            0  & b' & 0  \\
+            0  & 0  & c'
+        \end{bmatrix} \pause = \begin{bmatrix}
+            a'\vec{U_1} \pause & b'\vec{U_2} \pause & c'\vec{U_3}
+        \end{bmatrix}.
+    \]
+\end{frame}
 
-    \begin{frame}
-      Daí $\vec{U_1}$, \pause $\vec{U_2}$ \pause e $\vec{U_3}$ \pause devem satisfazer as equações\pause
-      \[
-          A\vec{U_1} \pause = a'\vec{U_1},\pause \quad A\vec{U_2} \pause = b'\vec{U_2} \pause \quad A\vec{U_3} \pause = c'\vec{U_3}.\pause
-      \]
+\begin{frame}
+    Daí $\vec{U_1}$, \pause $\vec{U_2}$ \pause e $\vec{U_3}$ \pause devem satisfazer as equações\pause
+    \[
+        A\vec{U_1} \pause = a'\vec{U_1},\pause \quad A\vec{U_2} \pause = b'\vec{U_2} \pause \quad A\vec{U_3} \pause = c'\vec{U_3}.\pause
+    \]
 
-      Da primeira equação obtemos\pause
-      \begin{align*}
-          A\vec{U_1} = a'I_3\vec{U_1}\\
-          (A - a'I_3)\vec{U_1} = \vec{0}.
-      \end{align*}\pause
+    Da primeira equação obtemos\pause
+    \begin{align*}
+        A\vec{U_1} = a'I_3\vec{U_1} \\
+        (A - a'I_3)\vec{U_1} = \vec{0}.
+    \end{align*}\pause
 
-      Logo $\vec{U_1}$ \pause é uma solução de norma 1 do sistema linear\pause
-      \[
+    Logo $\vec{U_1}$ \pause é uma solução de norma 1 do sistema linear\pause
+    \[
         (A - a'I_3)X = [0].
-      \]
-    \end{frame}
+    \]
+\end{frame}
 
-    \begin{frame}
-      Analogamente, $\vec{U_2}$ \pause é uma solução de norma 1 do sistema linear\pause
-      \[
+\begin{frame}
+    Analogamente, $\vec{U_2}$ \pause é uma solução de norma 1 do sistema linear\pause
+    \[
         (A - b'I_3)X = [0],\pause
-      \]
-      que seja ortogonal a $\vec{U_1}$. \pause O terceiro vetor $\vec{U_3}$ \pause é obtido de forma análoga \pause e deve ser ortogonal tanto a $\vec{U_1}$ \pause quanto a $\vec{U_2}$, \pause assim podemos tomar\pause
-      \[
-          \vec{U_3} = \vec{U_1}\times\vec{U_2}.
-      \]
-    \end{frame}
+    \]
+    que seja ortogonal a $\vec{U_1}$. \pause O terceiro vetor $\vec{U_3}$ \pause é obtido de forma análoga \pause e deve ser ortogonal tanto a $\vec{U_1}$ \pause quanto a $\vec{U_2}$, \pause assim podemos tomar\pause
+    \[
+        \vec{U_3} = \vec{U_1}\times\vec{U_2}.
+    \]
+\end{frame}
 
-    \begin{frame}
-      Como $\vec{U_1}$ \pause e $\vec{U_2}$ \pause são de norma 1, \pause então $\vec{U_3}$ \pause também é de norma 1.\pause
+\begin{frame}
+    Como $\vec{U_1}$ \pause e $\vec{U_2}$ \pause são de norma 1, \pause então $\vec{U_3}$ \pause também é de norma 1.\pause
 
-      Portanto, a mudança que elemina os termos $xy$, \pause $xz$ \pause e $yz$ \pause é dada por \pause $Q = [\vec{U_1}\  \vec{U_2}\ \vec{U_3}]$. \pause Assim temos o seguinte teorema:
-    \end{frame}
+    Portanto, a mudança que elemina os termos $xy$, \pause $xz$ \pause e $yz$ \pause é dada por \pause $Q = [\vec{U_1}\  \vec{U_2}\ \vec{U_3}]$. \pause Assim temos o seguinte teorema:
+\end{frame}
 
-    \begin{frame}
-      \begin{teorema}
+\begin{frame}
+    \begin{teorema}
         Considere a equação\pause
         \[
             ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0
         \]\pause
         com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, \pause sendo $a$, $b$, $c$, $d$, $e$ e $f$ não necessariamente nulos. \pause Então mediante uma mudança da forma\pause
         \[
-          X = Q X_1
+            X = Q X_1
         \]\pause
         onde\pause
         \[
-          X = \begin{bmatrix}
-            x\\y\\z
-          \end{bmatrix}, \quad
-          Q = \begin{bmatrix}
-              \vec{U_1} & \vec{U_2} & \vec{U_3}
-        \end{bmatrix}, \quad\mbox{e}\quad
-        X_1 = \begin{bmatrix}
-          x_1\\y_1\\z_1
-        \end{bmatrix}
+            X = \begin{bmatrix}
+                x \\y\\z
+            \end{bmatrix}, \quad
+            Q = \begin{bmatrix}
+                \vec{U_1} & \vec{U_2} & \vec{U_3}
+            \end{bmatrix}, \quad\mbox{e}\quad
+            X_1 = \begin{bmatrix}
+                x_1 \\y_1\\z_1
+            \end{bmatrix}
         \]\pause
         a equação da geral da quádrica \pause acima pode ser transformada em\pause
         \[
-          a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0
+            a'x_1^2 + b'y_1^2 + c'z_1^2 + g'x_1 + h'y_1 + i'z_1 + j = 0
         \]
-      \end{teorema}
-    \end{frame}
+    \end{teorema}
+\end{frame}
 
-    \begin{frame}
-      \begin{teorema}
+\begin{frame}
+    \begin{teorema}
         em que $a'$, \pause $b'$ \pause e $c'$ \pause são raízes de\pause
         \[
-          p(\lambda) = \det(A - \lambda I_3) = \det \begin{bmatrix}
-            a - \lambda & d/2 & e/2\\
-            d/2 & b - \lambda & f/2\\
-            e/2 & f/2 & c - \lambda
-          \end{bmatrix}.
+            p(\lambda) = \det(A - \lambda I_3) = \det \begin{bmatrix}
+                a - \lambda & d/2         & e/2         \\
+                d/2         & b - \lambda & f/2         \\
+                e/2         & f/2         & c - \lambda
+            \end{bmatrix}.
         \]\pause
 
         Mais ainda, \pause $\vec{U_1}$ \pause é uma solução de norma 1 \pause do sistema linear\pause
         \[
-          \begin{bmatrix}
-            a - a' & d/2 & e/2\\
-            d/2 & b - a' & f/2\\
-            e/2 & f/2 & c - a'
-          \end{bmatrix} \begin{bmatrix}
-            x\\y\\z
-          \end{bmatrix} = \begin{bmatrix}
-            0\\0\\0
-          \end{bmatrix},
+            \begin{bmatrix}
+                a - a' & d/2    & e/2    \\
+                d/2    & b - a' & f/2    \\
+                e/2    & f/2    & c - a'
+            \end{bmatrix} \begin{bmatrix}
+                x \\y\\z
+            \end{bmatrix} = \begin{bmatrix}
+                0 \\0\\0
+            \end{bmatrix},
         \]
-      \end{teorema}
-    \end{frame}
+    \end{teorema}
+\end{frame}
 
-    \begin{frame}
-      \begin{teorema}
+\begin{frame}
+    \begin{teorema}
         $\vec{U_2}$ \pause é uma solução de norma 1 \pause do sistema linear\pause
         \[
-          \begin{bmatrix}
-            a - b' & d/2 & e/2\\
-            d/2 & b - b' & f/2\\
-            e/2 & f/2 & c - b'
-          \end{bmatrix} \begin{bmatrix}
-            x\\y\\z
-          \end{bmatrix} = \begin{bmatrix}
-            0\\0\\0
-          \end{bmatrix},
+            \begin{bmatrix}
+                a - b' & d/2    & e/2    \\
+                d/2    & b - b' & f/2    \\
+                e/2    & f/2    & c - b'
+            \end{bmatrix} \begin{bmatrix}
+                x \\y\\z
+            \end{bmatrix} = \begin{bmatrix}
+                0 \\0\\0
+            \end{bmatrix},
         \]\pause
         e
         \[
             \vec{U_3} = \vec{U_1} \times \vec{U_2}
         \]
-      \end{teorema}
-    \end{frame}
+    \end{teorema}
+\end{frame}
 
-    \begin{frame}
-      \begin{teorema}
+\begin{frame}
+    \begin{teorema}
         Seja $\mathcal{S}$ \pause o conjunto dos pontos do espaço \pause que satisfazem a equação\pause
         \[
-          ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0,\pause
+            ax^2 + by^2 + cz^2 + dxy + exz + fyz + gx + hy + iz + j = 0,\pause
         \]
         com $a$, $b$, $c$, $d$, $e$, $f$, $g$, $h$, $i$, $j \in \real$, \pause sendo $a$, $b$, $c$, $d$, $e$ e $f$ não simultaneamente nulos.
-      \end{teorema}
-    \end{frame}
+    \end{teorema}
+\end{frame}
 
-    \begin{frame}
-      \begin{teorema}
+\begin{frame}
+    \begin{teorema}
         Sejam $a'$, \pause $b'$ \pause e $c'$ \pause raízes de\pause
         \[
-          p(\lambda) = \det \begin{bmatrix}
-            a - \lambda & d/2 & e/2 \\
-            d/2 & b - \lambda & f/2\\
-            e/2 & f/2 & c - \lambda
-          \end{bmatrix}.
+            p(\lambda) = \det \begin{bmatrix}
+                a - \lambda & d/2         & e/2         \\
+                d/2         & b - \lambda & f/2         \\
+                e/2         & f/2         & c - \lambda
+            \end{bmatrix}.
         \]\pause
         \begin{enumerate}[label=({\roman*})]
-          \item Se $a'$, \pause $b'$ \pause e $c'$ \pause tiverem o mesmo sinal, \pause então $\mathcal{S}$ \pause é um elipsoide, \pause um ponto \pause ou o conjunto vazio.\pause
-          \item Se $a'$, \pause $b'$ \pause e $c'$ \pause forem não nulos \pause e não tiverem o mesmo sinal, \pause então $\mathcal{S}$ \pause é um hiperboloide de uma folha, \pause de duas folhas \pause ou um cone elíptico.\pause
-          \item Se apenas um \pause entre $a'$, \pause $b'$ \pause e $c'$ \pause for nulo, \pause então $\mathcal{S}$ \pause é um paraboloide elíptico, \pause hiperbólico, \pause um cilindro elíptico, \pause hiperbólico, \pause dois planos concorrentes, \pause uma reta \pause ou o conjunto vazio.\pause
-          \item Se exatamente dois \pause entre $a'$, \pause $b'$ \pause e $c'$ \pause forem nulos, \pause então $\mathcal{S}$ \pause é um cilindro parabólico, \pause um par de planos paralelos \pause ou um plano.
+            \item Se $a'$, \pause $b'$ \pause e $c'$ \pause tiverem o mesmo sinal, \pause então $\mathcal{S}$ \pause é um elipsoide, \pause um ponto \pause ou o conjunto vazio.\pause
+            \item Se $a'$, \pause $b'$ \pause e $c'$ \pause forem não nulos \pause e não tiverem o mesmo sinal, \pause então $\mathcal{S}$ \pause é um hiperboloide de uma folha, \pause de duas folhas \pause ou um cone elíptico.\pause
+            \item Se apenas um \pause entre $a'$, \pause $b'$ \pause e $c'$ \pause for nulo, \pause então $\mathcal{S}$ \pause é um paraboloide elíptico, \pause hiperbólico, \pause um cilindro elíptico, \pause hiperbólico, \pause dois planos concorrentes, \pause uma reta \pause ou o conjunto vazio.\pause
+            \item Se exatamente dois \pause entre $a'$, \pause $b'$ \pause e $c'$ \pause forem nulos, \pause então $\mathcal{S}$ \pause é um cilindro parabólico, \pause um par de planos paralelos \pause ou um plano.
         \end{enumerate}
-      \end{teorema}
-    \end{frame}
+    \end{teorema}
+\end{frame}
 
-    \begin{frame}
-            \begin{enumerate}[label=({\arabic*})]
-                \item Esfera: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$x^2 + y^2 + z^2 = r^2$}
-                \vspace{.5cm}
-                \item Elipsoide: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
-                \vspace{.5cm}
-                \item Cilindro elíptico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$}
-                \vspace{.5cm}
-                \item Paraboloide elíptico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}, $a \ne b$
-                \seti
-                \end{enumerate}
-            \end{frame}
-        \begin{frame}
-        \begin{enumerate}[label=({\arabic*})]
+\begin{frame}
+    \begin{enumerate}[label=({\arabic*})]
+        \item Esfera: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$x^2 + y^2 + z^2 = r^2$}
+              \vspace{.5cm}
+        \item Elipsoide: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$}
+              \vspace{.5cm}
+        \item Cilindro elíptico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$}
+              \vspace{.5cm}
+        \item Paraboloide elíptico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}, $a \ne b$
+              \seti
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \begin{enumerate}[label=({\arabic*})]
         \conti
-                \item Paraboloide de rotação: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z = \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2}$}
-                \vspace{.5cm}
-                \item Paraboloide hiperbólico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2}$}
-                \vspace{.5cm}
-                \item Hiperboloide de uma folha: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$}
-                \vspace{.5cm}
-                \item Hiperboloide de duas folhas: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
-                \seti
-                \end{enumerate}
-            \end{frame}
-        \begin{frame}
-        \begin{enumerate}[label=({\arabic*})]
+        \item Paraboloide de rotação: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z = \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2}$}
+              \vspace{.5cm}
+        \item Paraboloide hiperbólico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z = \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2}$}
+              \vspace{.5cm}
+        \item Hiperboloide de uma folha: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1$}
+              \vspace{.5cm}
+        \item Hiperboloide de duas folhas: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{z^2}{c^2} - \dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
+              \seti
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \begin{enumerate}[label=({\arabic*})]
         \conti
-                \item Cilindro hiperbólico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
-                \vspace{.5cm}
-                \item Cilindro parabólico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$y = ax^2$}
-                \vspace{.5cm}
-                \item Cone elíptico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}, $a \ne b$
-                \item Cone circular: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2}$}
-            \end{enumerate}
-    \end{frame}
+        \item Cilindro hiperbólico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$}
+              \vspace{.5cm}
+        \item Cilindro parabólico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$y = ax^2$}
+              \vspace{.5cm}
+        \item Cone elíptico: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}$}, $a \ne b$
+        \item Cone circular: \tcbox[colback=blue!5!white, colframe=blue!75!black, nobeforeafter, tcbox raise base]{$z^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{a^2}$}
+    \end{enumerate}
+\end{frame}
 \end{document}
